@@ -1,8 +1,8 @@
 'use strict'
 
-import Swiper, { Scrollbar, Thumbs,  Navigation, EffectFade } from 'swiper';
+import Swiper, { Scrollbar, Thumbs,  Navigation, EffectFade, Autoplay} from 'swiper';
 
-Swiper.use([Scrollbar, Thumbs,EffectFade, Navigation ]);
+Swiper.use([Scrollbar, Thumbs,EffectFade, Navigation, Autoplay ]);
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -217,96 +217,195 @@ if(containerNavScroll){
 	let swiperStatistics;
 	let swiperTabFeature;
 
-	
-	const enableSwiper = function(){
-		if(document.querySelector('.statistics__slider')){
-			swiperStatistics = new Swiper('.statistics__slider',{
-				scrollbar: {
-					el: '.swiper-scrollbar',
-				},
-			});
-		}
-		if(document.querySelector('.kirovets_tabs__features')){
-			swiperTabFeature = new Swiper('.kirovets_tabs__features',{
-				// autoHeight: true,
-				scrollbar: {
-					el: '.swiper-scrollbar',
-				},
-			});
-		}
-		
-	}
 	let swiperTab;
 	let swiperTabThumbs;
+	let swiperNews;
+	let swiperCompanies;
+	let companiesThumbs;
+	let swiperHero;
+	const transitionSlide = 5000;
+
+	const enableSwiper = function(){
+		// document.addEventListener('DOMContentLoaded', function(){
+			if(document.querySelector('.statistics__slider')){
+				swiperStatistics = new Swiper('.statistics__slider',{
+					observer: true,
+					observeParents: true,
+					scrollbar: {
+						el: '.swiper-scrollbar',
+					},
+				});
+			}
+				let tabFeaturesArray = document.querySelectorAll('.kirovets_tabs__features');
+
+				for(let i = 0; i<tabFeaturesArray.length; i++){
+					swiperTabFeature = new Swiper(tabFeaturesArray[i],{
+						observer: true,
+						observeParents: true,
+						scrollbar: {
+							el: '.swiper-scrollbar',
+						},
+					});
+				}
+				
+	}
+		// })
+		
+		
 	
 
-
-	if(document.querySelector('.news__container')){
-		let newNavPrev = document.querySelector('.news__container .swiper-button-next');
-		let newNavNext = document.querySelector('.news__container .swiper-button-prev');
-
-
-		let swiperNews = new Swiper('.news__container',{
-			// autoHeight: true,
-			
-			slidesPerView: 'auto',
-			spaceBetween: 0,
-			scrollbar: {
-				el: '.swiper-scrollbar--news',
-			},
-			navigation: {
-				nextEl: newNavPrev,
-				prevEl: newNavNext,
-			},
-			observer: true, 
-			observeParents: true,
-			// updateOnWindowResize: true,
-			breakpoints: {
-				500: {
-				spaceBetween: 20,
-				
+	
+	document.addEventListener('DOMContentLoaded', function(){
+		if(document.querySelector('.news__container')){
+			let newNavPrev = document.querySelector('.news__container .swiper-button-next');
+			let newNavNext = document.querySelector('.news__container .swiper-button-prev');
+	
+	
+			swiperNews = new Swiper('.news__container',{
+				// autoHeight: true,
+				observer: true,
+					observeParents: true,
+				slidesPerView: 'auto',
+				spaceBetween: 0,
+				scrollbar: {
+					el: '.swiper-scrollbar--news',
 				},
-				767: {
+				navigation: {
+					nextEl: newNavPrev,
+					prevEl: newNavNext,
+				},
+				observer: true, 
+				observeParents: true,
+				// updateOnWindowResize: true,
+				breakpoints: {
+					500: {
 					spaceBetween: 20,
 					
-					
-				},
-				1280:{
-					spaceBetween: 35,
-					
+					},
+					767: {
+						spaceBetween: 20,
+						
+						
+					},
+					1280:{
+						spaceBetween: 35,
+						
+					}
 				}
-			}
-		});
-	}
+			});
+		}
+		if(document.querySelector('.swiper-container--companies')){
+
+			companiesThumbs = new Swiper('.swiper-container--companies-thumbs', {
+				direction: 'vertical',
+				spaceBetween: 20,
+				slidesPerView: 'auto',
+				autoHeight: true,
+				observer: true,
+					observeParents: true,
+				watchSlidesVisibility: true,
+				watchSlidesProgress: true,
+				breakpoints: {
+					1680: {
+					spaceBetween: 45,
+					
+					},
+			
+				},
+			  });
+	
+	
+			swiperCompanies = new Swiper('.swiper-container--companies',{
+				observer: true,
+				observeParents: true,
+				thumbs: {
+					swiper: companiesThumbs
+				},
+				effect: 'fade',
+				fadeEffect: {
+					crossFade: true
+				},
+				scrollbar: {
+					el: '.swiper-scrollbar--companies',
+				},
+			});
+	
+			
+		}
+		if(document.querySelector('.swiper-container--hero')){
 
 
-
-
-
-	if(document.querySelector('.kirovets_tabs__list-wrap')){
-		swiperTabThumbs = new Swiper('.kirovets_tabs__list-wrap', {
-
-			slidesPerView: 2,
-
-			watchSlidesVisibility: true,
-			watchSlidesProgress: true,
-		});
-	}
-
-	if(document.querySelector('.kirovets_tabs__container')){
-		swiperTab = new Swiper('.kirovets_tabs__container',{
 		
-			thumbs: {
-				swiper: swiperTabThumbs
-			},
-			effect: 'fade',
-			fadeEffect: {
-				crossFade: true
-			},
-		});
+			swiperHero = new Swiper('.swiper-container--hero',{
+			   autoplay: {
+				   delay: transitionSlide,
+				   disableOnInteraction: true,
+				 },
+   
+			   // navigation: {
+			   // 	nextEl: newNavPrev,
+			   // 	prevEl: newNavNext,
+			   // },
+			   observer: true,
+					observeParents: true,
+			   effect: 'fade',
+			   fadeEffect: {
+				   crossFade: true
+			   },
+		   
+		   });
+	   }
+	   if(document.querySelector('.kirovets_tabs__list-wrap')){
+			swiperTabThumbs = new Swiper('.kirovets_tabs__list-wrap', {
+				observer: true,
+					observeParents: true,
+				slidesPerView: 2,
+
+				watchSlidesVisibility: true,
+				watchSlidesProgress: true,
+			});
+		}
+		if(document.querySelector('.kirovets_tabs__container')){
+			swiperTab = new Swiper('.kirovets_tabs__container',{
+				observer: true,
+					observeParents: true,
+				thumbs: {
+					swiper: swiperTabThumbs
+				},
+				effect: 'fade',
+				fadeEffect: {
+					crossFade: true
+				},
+			});
+		}
+	})
+
+	
+
+	
+	
+	
+	
+
+	function updateSlider(slider){
+		if(slider!= undefined){
+			slider.update();
+		}
 	}
 
-
+	window.addEventListener("resize", function(){
+		updateSlider(swiperStatistics);
+		updateSlider(swiperTabFeature);
+		updateSlider(swiperTab);
+		updateSlider(swiperTabThumbs);
+		updateSlider(swiperNews);
+		updateSlider(swiperCompanies);
+		updateSlider(companiesThumbs);
+		updateSlider(swiperHero);
+		
+		breakpoint.addListener(breakpointChecker);
+		breakpointChecker();
+	});
 
 	function setMainSwiperMouseOver() {
 		swiperTab.detachEvents();
@@ -316,29 +415,39 @@ if(containerNavScroll){
 	function setMainSwiperMouseOut() {
 		swiperTab.attachEvents();
 		// swiperTab.mousewheel.enable();
+
+			
 	}
 
 
 
 	let InnerSliders = document.querySelectorAll('.kirovets_tabs__features');
 
-	
+
+	console.log(InnerSliders);
 
 	const breakpointChecker = function() {
 		// if larger viewport and multi-row layout needed
 		if ( breakpoint.matches === true ) {
 			
-			if (swiperStatistics != null) {
-				swiperStatistics.destroy(true, true);
-				}
 
-				if (swiperTabFeature != null) {
-					swiperTabFeature.destroy(true, true);
+				if (swiperStatistics != null) {
+					swiperStatistics.destroy(true, true);
+					swiperStatistics.update();
 				}
-
+			
+				
+					
+					if (swiperTabFeature != null) {
+						swiperTabFeature.destroy(true, true);
+						swiperTabFeature.update();
+						
+					}
 				for(let i = 0; i<InnerSliders.length; i++){
+				
 					InnerSliders[i].removeEventListener('mouseover', setMainSwiperMouseOver);
-					InnerSliders[i].removeEventListener('mouseout', setMainSwiperMouseOut);		  	
+					InnerSliders[i].removeEventListener('mouseout', setMainSwiperMouseOut);		
+					
 				}
 
 					// Анимация элементов
@@ -372,7 +481,7 @@ if(containerNavScroll){
 				InnerSliders[i].addEventListener('mouseout', setMainSwiperMouseOut);		  	
 			}
 				
-			return enableSwiper();
+			enableSwiper();
 
 			btnMore = document.querySelectorAll('.traktors__text-wrap--tablet .button-more--traktors');
 
@@ -616,6 +725,18 @@ if(containerNavScroll){
 
 	
 
+gsap.utils.toArray('.button-more').forEach(element => {
+	ScrollTrigger.create({
+		trigger: element,
+		start: 'bottom bottom',
+		scrub: true,
+		toggleClass: 'is-inview-line',
+		// this toggles the class again when you scroll back up:
+		toggleActions: 'play none none none',
+		// this removes the class when the scrolltrigger is passed:
+		// once: true,
+	});
+});
 
 gsap.utils.toArray('.button-more').forEach(element => {
 	ScrollTrigger.create({
