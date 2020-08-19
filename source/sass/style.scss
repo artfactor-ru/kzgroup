@@ -1,0 +1,201 @@
+@import 'utils/font';
+@import 'utils/_variables';
+@import 'utils/_extend';
+@import 'utils/_mixin';
+
+
+@import 'libs/swiperbundle';
+
+@import 'common/social-btn';
+
+@import 'common/footer';
+
+@import 'common/header';
+
+// @import 'common/nav';
+@import 'common/nav2';
+@import 'common/about';
+
+
+
+@import 'pages/main/frame';
+@import 'pages/kirovets/main';
+
+
+@import 'pages/kirovets/about-kirovets';
+@import 'pages/main/about-main';
+
+
+@import 'pages/kirovets/advant';
+@import 'pages/kirovets/zavod';
+@import 'pages/main/zavod-main';
+
+@import 'pages/kirovets/statistics';
+@import 'pages/main/statistics.scss';
+
+@import 'pages/kirovets/tabs';
+@import 'pages/kirovets/traktors';
+@import 'pages/kirovets/popup';
+
+
+
+@import 'pages/company_group/_company-group';
+
+@import 'pages/actioners/actioners';
+
+@import 'pages/rent/card';
+@import 'pages/rent/main';
+@import 'pages/rent/pagination';
+@import 'pages/rent/navigation';
+@import 'pages/rent/header';
+
+
+@import 'pages/rent_noinfo/main';
+
+@import 'pages/contacts/contacts';
+@import 'pages/main/hero';
+@import 'pages/main/companies';
+@import 'pages/main/geography-style';
+@import 'pages/main/geography-media';
+
+
+@import 'common/news';
+
+
+@import 'pages/main/geography-style';
+@import 'pages/main/geography-media';
+
+@import 'pages/vacancies/vacancies';
+
+
+@import 'common/news';
+
+body{
+	margin: 0;
+	padding: 0;
+	min-width: 320px;
+	background-color: #ffffff;
+	
+}
+.scroll{
+	width: 100vw;
+
+	height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+	-webkit-overflow-scrolling: touch;
+}
+.scrollbar-track{
+	z-index: 11000 !important;
+}
+
+a {
+	text-decoration: none;
+}
+
+.has-nav-open .scroll .scrollbar-track{
+	display: none !important;
+}
+.visually-hidden{
+ position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+svg{
+	max-width: 100%;
+	height: auto;
+}
+
+figure{
+	margin: 0;
+	padding: 0;
+}
+// Контейтер
+.scrollbar-track-y{
+	display: none !important;
+}
+.scrollbar-track-x{
+	display: none !important;
+}
+.container{
+
+	padding-left: 4%;
+	padding-right: 4%;
+	box-sizing: border-box;
+	// box-sizing: border-box;
+}
+
+
+@media(min-width: 767px){
+	.container{
+		
+		padding-left: 8%;
+		padding-right: 8%;
+		max-width: 1280px;
+		margin: 0 auto;
+	}
+	.scrollbar-track-y{
+		display: block !important;
+	}
+	
+}
+@media(min-width: 1280px){
+	.container{
+		
+		padding-left: 8%;
+		padding-right: 8%;
+		max-width: 1920px;
+		margin: 0 auto;
+	}
+	
+}
+
+@media(min-width: 1680px){
+	.container{
+		
+		padding-left: 9%;
+		padding-right: 9%;
+		max-width: 1920px;
+		margin: 0 auto;
+	}
+	
+}
+
+.red-accent{
+	color: $red-color;
+}
+
+[data-scroll] {
+	will-change: transform;
+}
+.parallax__item{
+	position: relative;
+	overflow: hidden;
+}
+
+.parallax__img-wrap{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	will-change: transform;
+	// perspective: 1000px;
+	
+}
+
+.parallax__img{
+	// position: absolute;
+
+	width: 100%;
+	height: 100%;
+}
+

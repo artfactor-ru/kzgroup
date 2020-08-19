@@ -1,0 +1,233 @@
+.kirovets_about{
+	min-height: 370px;
+	position: relative;
+	background-image: url(../img/bg-about.svg);
+	background-size: contain;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+}
+
+.kirovets_about__title{
+	@extend %block-title;
+	padding-top: 45px;
+	width: 100%;
+	position: relative;
+}
+.kirovets_about__desc{
+	@extend %upper-text;
+	padding-top: 35px;
+	width: 90%;
+	position: relative;
+}
+
+
+.parallax__img--kirovets_about{
+
+	background-position: bottom center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+ 
+  position: absolute;
+	// z-index: -1;
+	height: 370px;
+	// background-size: 100% auto;
+}
+
+.kirovets_about{
+	position: relative;
+	overflow: hidden;
+
+
+}
+
+@media(min-width: 767px){
+	.kirovets_about{
+		min-height: 505px;
+	}
+	.kirovets_about__title{
+		padding-top: 100px;
+		width: 90%;
+	}
+	.kirovets_about__desc{
+		
+		padding-top: 20px;
+		width: 85%;
+	}
+
+	
+	.parallax__img--kirovets_about{
+
+		background-position: bottom center;
+		background-size: auto 505px;
+		background-repeat: no-repeat;
+		width: 100%;
+		position: absolute;
+		z-index: -1;
+		height: 505px;
+
+	}
+
+}
+
+@media(min-width: 1280px){
+	.kirovets_about{
+		min-height: 660px;
+		position: relative;
+		background-image: none;
+	}
+	.parallax__img--kirovets_about{
+
+		background-position: bottom  center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		width: 100%;
+		position: absolute;
+		z-index: -1;
+		
+		// --overflow: -200px;
+		// height: calc(660px + (2 * var(--overflow)));
+		// top: calc( -1 * var(--overflow));
+		// height: 660px;
+		
+	}
+	.parallax__img--kirovets_about-1{
+		background-image: url(../img/img-parallax-1.svg);
+		background-position: bottom  center;
+		--overflow: -150px;
+		// --overflow: -20%;
+		height: calc(660px + (2 * var(--overflow)));
+		top: calc( -1 * var(--overflow));
+		
+	}
+	.parallax__img--kirovets_about-2{
+		background-image: url(../img/img-parallax-2.svg);
+		// --overflow: -15%;
+		--overflow: -150px;
+		height: calc(660px + (2 * var(--overflow)));
+		top: calc( -1 * var(--overflow));
+		
+	}
+	.parallax__img--kirovets_about-3{
+		background-image: url(../img/img-parallax-3.svg);
+		// --overflow: -150px;
+		--overflow: -200px;
+		// --overflow: -50%;
+		height: calc(660px + (2 * var(--overflow)));
+		top: calc( -1 * var(--overflow));
+	
+	}
+	.parallax__img--kirovets_about-4{
+		background-image: url(../img/img-parallax-4.svg);
+		// --overflow: -25%;
+		--overflow: -150px;
+		height: calc(660px + (2 * var(--overflow)));
+		top: calc( -1 * var(--overflow));
+	}
+
+
+	.kirovets_about__title{
+		padding-top: 125px;
+		width: 75%;
+	}
+	.kirovets_about__desc{
+		
+		padding-top: 30px;
+		width: 92%;
+	}
+	
+
+}
+
+@media(min-width: 1680px){
+	.kirovets_about{
+		min-height: 960px;
+	}
+	.parallax__img--kirovets_about{
+	
+		height: 960px;
+		// background-size: 100% auto;
+	}
+
+
+	.kirovets_about__title{
+		padding-top: 215px;
+		// padding-left: 70px;
+		width: 82%;
+	}
+	.kirovets_about__desc{
+		
+		padding-top: 35px;
+		// padding-left: 70px;
+		width: 70%;
+	}
+
+
+
+	.parallax__img--kirovets_about-1{
+		background-image: url(../img/img-parallax-1.svg);
+		background-position: bottom  center;
+		// --overflow: -250px;
+		// --overflow: -20%;
+		// height: calc(960px + (2 * var(--overflow)));
+		// top: calc( -1 * var(--overflow));
+		
+	}
+	.parallax__img--kirovets_about-2{
+		background-image: url(../img/img-parallax-2.svg);
+		// --overflow: -12%;
+		// height: calc(960px + (2 * var(--overflow)));
+		// top: calc( -1 * var(--overflow));
+		
+	}
+	.parallax__img--kirovets_about-3{
+		background-image: url(../img/img-parallax-3.svg);
+		// --overflow: -150px;
+		// --overflow: -40%;
+		// height: calc(960px + (2 * var(--overflow)));
+		// top: calc( -1 * var(--overflow));
+	
+	}
+	.parallax__img--kirovets_about-4{
+		background-image: url(../img/img-parallax-4.svg);
+		// --overflow: -20%;
+		// height: calc(960px + (2 * var(--overflow)));
+		// top: calc( -1 * var(--overflow));
+	}
+
+	.parallax__img--kirovets_about-1{
+		background-image: url(../img/img-parallax-1.svg);
+		background-position: bottom  center;
+		--overflow: -150px;
+		// --overflow: -20%;
+		height: calc(660px + (2 * var(--overflow)));
+		top: calc( -1 * var(--overflow));
+		
+	}
+	.parallax__img--kirovets_about-2{
+		background-image: url(../img/img-parallax-2.svg);
+		// --overflow: -15%;
+		--overflow: -150px;
+		height: calc(660px + (2 * var(--overflow)));
+		top: calc( -1 * var(--overflow));
+		
+	}
+	.parallax__img--kirovets_about-3{
+		background-image: url(../img/img-parallax-3.svg);
+		// --overflow: -150px;
+		--overflow: -300px;
+		// --overflow: -50%;
+		height: calc(660px + (2 * var(--overflow)));
+		top: calc( -1 * var(--overflow));
+	
+	}
+	.parallax__img--kirovets_about-4{
+		background-image: url(../img/img-parallax-4.svg);
+		// --overflow: -25%;
+		--overflow: -200px;
+		height: calc(660px + (2 * var(--overflow)));
+		top: calc( -1 * var(--overflow));
+	}
+
+
+}
