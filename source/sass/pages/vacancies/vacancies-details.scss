@@ -1,0 +1,144 @@
+.vacancies-d__hero {
+  padding: 125px 0;
+  min-height: 500px;
+}
+
+.vacancies-d__breadcrumb {
+  font-family: $font-regular;
+  font-size: 18px;
+  color: #616161;
+  transition: .4s;
+  svg path {
+    transition: .4s;
+  }
+  &:hover {
+    color: #000000;
+  }
+  &:hover svg path {
+    fill: #000;
+  }
+}
+
+.vacancies-d__title {
+  @extend %block-title;
+  width: 45%;
+  margin: 50px 0 20px 0;
+}
+
+.vacancies-d__date {
+  font-family: $font-regular;
+  font-size: 18px;
+  color: #67676A;
+  opacity: 0.45;
+  margin-bottom: 60px;
+  display: block;
+}
+
+.vacancies-d__name {
+  font-family: $font-regular;
+  font-size: 18px;
+  color: #1A1D29;
+}
+
+.vacancies-d__list {
+  list-style: none;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.vacancies-d__item {
+  font-family: $font-text-light;
+  color: #3C3D40;
+  font-size: 18px;
+  display: flex;
+  margin-left: 190px;
+  & p {
+    margin: 10px 0 10px 10px;
+    position: relative;
+    width: 80%;
+    &:before {
+      position: absolute;
+      display: block;
+      content: "—";
+      left: -25px;
+    }
+  }
+  & h6 {
+    position: absolute;
+    left: 0;
+    top: 9px;
+  }
+}
+
+.vacancies-d__description {
+  display: flex;
+}
+
+.vacancies-d__buttons {
+  margin-left: 170px;
+}
+
+.vacancies-d__response {
+  border: 1px solid #171C28;
+  color: #171C28;
+  font-family: $font-text-regular;
+  font-weight: 500;
+  padding: 25px 75px;
+}
+
+.vacancies-d__download {
+  cursor: pointer;
+  font-family: $font-regular;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #616161;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #616161;
+  margin-left: 50px;
+  transition: .3s;
+  &:hover {
+    color: #0F0F0F;
+    border-bottom: 1px solid #0F0F0F;
+  }
+}
+
+.vacancies-d__contacts {
+  background-color: #F2F2F2;
+  padding: 80px 0 50px 0;
+  &-title {
+    font-family: $font-regular;
+    font-size: 36px;
+    color: #1A1D29;
+    margin-bottom: 40px;
+  }
+  &-content {
+    display: flex;
+  }
+  &-list {
+    list-style: none;
+    width: 50%;
+  }
+  &-item {
+    width: 70%;
+    margin-bottom: 25px;
+  }
+  &-link {
+    color: #171C28;
+    font-size: 24px;
+    font-family: $font-text-regular;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: end;
+  }
+  &-icon {
+    margin-right: 20px;
+  }
+  &-map {
+    width: 50%;
+  }
+}
+
+.vacancies-d__main-building {
+  margin-top: 40px;
+}
