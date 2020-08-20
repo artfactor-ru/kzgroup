@@ -1,3 +1,4 @@
 *.min.*
 
 node_modules
+.idea
