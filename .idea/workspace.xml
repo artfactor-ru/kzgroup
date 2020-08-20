@@ -20,13 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c63ba0fc-bd07-4675-8f81-411853f3cf3d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/vacancies.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/vacancies.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/img/vacancies/press-location-icon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/source/img/vacancies/vacancies-location-icon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/img/vacancies/press-pencil-icon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/source/img/vacancies/vacancies-pencil-icon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/img/vacancies/press-phone-icon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/source/img/vacancies/vacancies-phone-icon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/img/vacancies/press_arrow.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/source/sass/pages/vacancies/vacancies.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/sass/pages/vacancies/vacancies.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/vacancies.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/vacancies.html" afterDir="false" />
     </list>
@@ -71,7 +66,8 @@
       <option name="presentableId" value="Default" />
       <updated>1597833531247</updated>
       <workItem from="1597833532876" duration="16330000" />
-      <workItem from="1597905567364" duration="14761000" />
+      <workItem from="1597905567364" duration="15540000" />
+      <workItem from="1597926824859" duration="996000" />
     </task>
     <servers />
   </component>
@@ -88,6 +84,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="461" y="165" key="SettingsEditor" timestamp="1597906954825">
