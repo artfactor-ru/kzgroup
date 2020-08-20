@@ -97,12 +97,16 @@ function headerShowAndHideDesktop() {
 	let traktorsContainer = document.querySelector('.traktors__container');
 	let twoScreen = document.querySelector('.two-screen');
 	
-	if(getCoords(twoScreen).top < scrollbar.offset.y){
-		videoMain.pause();
+		if(videoMain){
+		
+			if(getCoords(twoScreen).top < scrollbar.offset.y){
+				videoMain.pause();
+			
+			}else if(getCoords(twoScreen).top >= scrollbar.offset.y){
+				videoMain.play();
+			}
+		}
 	
-	}else if(getCoords(twoScreen).top >= scrollbar.offset.y){
-		videoMain.play();
-	}
 	
 	if(getCoords(header).top > 50 && getCoords(twoScreen).top >= scrollbar.offset.y){
 		header.classList.add('hide')
@@ -826,8 +830,8 @@ if(containerNavScroll){
 	if(videoMain){
 		let btnPlay = document.querySelector('.button__video-controls--play');
 	
-		
-
+	
+	
 
 		function playPauseMedia() {
 			if(videoMain.paused) {
