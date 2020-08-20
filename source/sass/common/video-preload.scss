@@ -1,0 +1,42 @@
+// .index .forheader{
+//     opacity: 1;
+// }
+.video__load{
+    display: none;
+}
+
+@media(min-width: 1280px){
+    .video__load{
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
+        z-index: 20000;
+        overflow: hidden;
+    }
+    .section__video{
+        display: block;
+        position: absolute;
+        // height: 100%;
+        
+        top:-10%;
+        left:0;
+        bottom: 0;
+        right:0;
+        width: 100%;
+    }
+    
+}
+
+
+// .section__video{
+//     // width: 100%;
+//     height: 100%;
+//     // he
+//     position: absolute;
+//     top:-10%;
+//     left: 0;
+//     right:0;
+//     bottom: 0;
+// }

@@ -172,7 +172,7 @@
 
 	.kirovets_tabs__slide{
 		padding-top: 505px;
-		background-size: 90%;
+		background-size: 80%;
 
 	}
 	.kirovets_tabs__features-list{
@@ -201,7 +201,9 @@
 	.kirovets_tabs__features-item{
 		padding-bottom: 20px;
 	}
-
+	.kirovets_swiper-scrollbar--tabs.swiper-scrollbar {
+		display: none;
+	}
 }
 
 @media(min-width: 1280px){

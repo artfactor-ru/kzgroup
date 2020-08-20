@@ -1,14 +1,39 @@
-.zavod{
+.zavod--main{
     background-color: #ffffff;
+    position: relative;
+    padding-bottom: 30px;
 }
 .button-more--zavod {
     @extend %button-more;
     margin-top: 10px;
+    position: relative;
+    z-index: 10;
 }
 
 
 
-.zavod-text--main p:not(:first-child){
+.zavod-text--main {
+    max-height: 170px;
+    overflow: hidden;
+    margin-top: 5px;
+   transition: all 3s ease;
+   
+}
+.zavod-text--main.show {
+    max-height: 100vh;
+    overflow: hidden;
+ 
+}
+
+.zavod::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    background: linear-gradient(1.92deg, #FFFFFF 50.07%, rgba(255, 255, 255, 0) 112.43%);
+}
+.zavod.active::after{
     display: none;
 }
 .zavod-img-wrap--main{
@@ -35,6 +60,17 @@
 }
 
 @media(min-width: 767px){
+    .zavod--main{
+        padding-bottom: 60px;
+        padding-top: 60px;
+    }
+    .zavod-text--main {
+        max-height: none
+       
+    }
+    .zavod::after{
+        display: none;
+    }
     .zavod-img--main{
         width: 105px;
         height: 105px;
@@ -54,6 +90,10 @@
 }
 
 @media(min-width: 1280px){
+    .zavod--main{
+        padding-bottom: 80px;
+        padding-top: 140px;
+    }
     .zavod-img-wrap--main{
        flex-direction: column;
        justify-content: center;
@@ -74,6 +114,10 @@
     }
 }
 @media(min-width: 1680px){
+    .zavod--main{
+        padding-bottom: 140px;
+        padding-top: 170px;
+    }
     .zavod-img-wrap--main{
         margin-top: 0;
 

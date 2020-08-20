@@ -1,0 +1,31 @@
+.parallax__img--about_main{
+	background-image: url(../img/about/bg-about.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.main__title--about{
+	font-size: 30px;
+}
+
+@media(min-width: 767px){
+	.main__title--about{
+		font-size: 48px;
+		line-height: 48px;
+	}
+}
+
+@media(min-width: 1280px){
+	.main__title--about{
+		font-size: 64px;
+		line-height: 64px;
+	}
+}
+
+@media(min-width: 1680px){
+	.main__title--about{
+		font-size: 90px;
+		line-height: 90px;
+	}
+}
