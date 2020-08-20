@@ -1,0 +1,39 @@
+.strategy_about{
+    padding-bottom: 130px;
+}
+.strategy_about__title{
+    padding-bottom: 5px;
+}
+.strategy_about__desc{
+    @extend %block-text;
+    text-transform: none;
+    padding-top: 10px;
+}
+
+@media(min-width:767px){
+    .strategy_about{
+        padding-bottom: 10px;
+    }
+    .strategy_about__desc{
+        width: 90%;
+     }
+}
+
+@media(min-width:1280px){
+    .strategy_about{
+        padding-bottom: 90px;
+    }
+    .strategy_about__desc{
+        width: 80%;
+     }
+}
+
+@media(min-width:1680px){
+    .strategy_about{
+        min-height: 900px;
+        padding-bottom: 0px;
+    }
+    .strategy_about__desc{
+        width: 55%;
+     }
+}

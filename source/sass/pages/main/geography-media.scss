@@ -77,12 +77,12 @@
     display: block;
   }
   .section-geography__map-planet {
-    width: 500px;
-    height: 500px;
+    width: 560px;
+    height: 560px;
   }
     .section-geography__map {
-    width: 500px;
-    height: 500px;
+    width: 560px;
+    height: 560px;
     padding: 0;
   
   }
@@ -110,6 +110,7 @@
   .section-geography__footer .section-geography__desc {
     width: 100%;
   }
+
   .section-geography__desc p {
     font-size: 22px;
     line-height: 32px;
@@ -188,25 +189,25 @@
 }
 /*2 макет от 768 до 1023*/
 
-@media (max-width: 960px) {
-  .section-geography__map-planet {
-    width: 640px;
-    height: 640px;
-    margin: 0 auto;
- }
-  .section-geography__map {
-    width: 100%;
-    height: 100%;
-    display: block;
-    margin: 0 auto;
-    padding: 0;
-  }
-  .section-geography__wrapper {
-    display: block;
-    max-width: 680px;
-    margin: 0 auto;
-  }
-}
+// @media (max-width: 960px) {
+//   .section-geography__map-planet {
+//     width: 640px;
+//     height: 640px;
+//     margin: 0 auto;
+//  }
+//   .section-geography__map {
+//     width: 100%;
+//     height: 100%;
+//     display: block;
+//     margin: 0 auto;
+//     padding: 0;
+//   }
+//   .section-geography__wrapper {
+//     display: block;
+//     max-width: 680px;
+//     margin: 0 auto;
+//   }
+// }
 
 
 /*1 макет от 375 до 767*/
@@ -263,18 +264,24 @@
   }
   .section-geography__desc p {
     font-size: 14px;
-    line-height: 20px;
+    line-height: 26px;
     font-style: normal;
     font-weight: bold;
     font-family: $font-bold-2-title;
     font-size: 18px;
+
     width: 100%;
     padding-top: 15px;
   }
-  .section-geography__desc span > span {
-    font-size: 42px;
-    line-height: 52px;
+  .section-geography__desc span{
+    font-size: 18px;
+    line-height: 144.1%;
   }
+  .section-geography__desc span > span {
+    font-size: 68px;
+    line-height: 85px;
+  }
+
   .section-geography__wrapper {
     padding-left: 0px;
     padding-right: 0px;
@@ -414,21 +421,19 @@
   .section-geography__title-wrapper {
     padding: 0 10px;
   }
-}
-@media (max-width: 375px) and (orientation: portrait) {
-  .section-geography__map, 
-  .section-geography__map-planet {
-    width: 300px;
-    height: 300px;
+  .section-geography__desc p:before {
+    width: 70px;
+    left: calc(50% - 35px);
+    height: 3px;
+ 
   }
-}
-@media (max-width: 320px) and (orientation: portrait) {
   .section-geography__map, 
   .section-geography__map-planet {
     width: 260px;
     height: 260px;
   }
 }
+
 @media (max-height: 850px) and (orientation: portrait) {
   .section-geography__body {
     height: 45%;

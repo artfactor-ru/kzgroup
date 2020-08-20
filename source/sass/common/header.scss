@@ -65,6 +65,12 @@
 	position: relative;
 	
 	transition: all 1s ease;
+	&:hover{
+		opacity: 0.7;
+	}
+}
+.header__logo--university{
+	align-items: flex-end;
 }
 .header.js-scroll-hide .header__logo{
 	transform: translateY(-200%);
@@ -252,6 +258,7 @@ background: transparent;
 }
 .header__wrapper--university{
 	display: block;
+	
 }
 @media(max-width: 360px){
 	.header__wrapper--university{
@@ -303,7 +310,7 @@ background: transparent;
 	}
 	.header{
 		padding-top: 25px;
-		padding-bottom: 25px;
+		// padding-bottom: 25px;
 	}
 	.header.js-scroll{
 		padding-top: 15px;
@@ -327,7 +334,7 @@ background: transparent;
 	}
 	.header__logo-text{
 
-		font-size: 14px;
+		font-size: 16px;
 		line-height: 100%;
 
 		padding-left: 10px;
@@ -356,7 +363,7 @@ background: transparent;
 	}
 	.header{
 		padding-top: 40px;
-		padding-bottom: 40px;
+		// padding-bottom: 40px;
 	}
 	.header.js-scroll{
 		padding-top: 20px;
@@ -366,7 +373,7 @@ background: transparent;
 	
 		width: 50px;
 		height: 30px;
-		margin-right: 65px;
+		margin-right: 35px;
 	}
 	.c-nav-button_line {
 		height: 2px;

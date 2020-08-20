@@ -14,6 +14,16 @@
     padding-bottom: 35px;
     transition: all 2s ease !important;
 }
+
+.swiper-slide--companies{
+    transition: opacity 3s ease !important;
+    
+    // transition-delay: 2s;
+}
+.swiper-slide--companies .swiper-slide-active{
+    transition: opacity 3s ease 1s!important;
+    z-index: 20;
+}
 .swiper-slide--companies-bg{
     position: absolute;
     width: 100%;
@@ -30,16 +40,21 @@
 }
 .companies__title{
     @extend %block-title-light;
+    font-weight: bold;
     color: #FFFFFF;
     position: relative;
+    perspective: 600px;
+	overflow:hidden
 }
+
 .companies__desc{
     @extend %block-text;
     color: #FFFFFF;
     padding-top: 10px;
     padding-bottom: 40px;
     position: relative;
-    width: 90%;
+    width: 80%;
+   
 }
 .button-more--companies{
     display: none;
@@ -65,6 +80,18 @@
 .companies__thumbs{
     display: none;
 }
+.swiper-slide--companies .parallax__img-wrap{
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.swiper-slide--companies .parallax__img{
+    --overflow: 180px;
+	
+	height: calc(100% + (2 * var(--overflow))) !important; 
+	top: calc( -1 * var(--overflow));
+}
 @media(min-width:767px){
     .companies{
         margin-top: 60px;
@@ -88,7 +115,7 @@
 
         color: #FFFFFF;
         padding-top: 30px;
-        padding-bottom: 30px;
+        padding-bottom: 25px;
         position: relative;
         width: 80%;
         line-height: 22px;
@@ -118,6 +145,7 @@
         
         padding-top: 380px;
         padding-bottom: 35px;
+ 
        
     }
     .swiper-container--companies- .swiper-wrapper{
@@ -128,7 +156,7 @@
    
         color: #FFFFFF;
         position: relative;
-        width: 50%;
+        // width: 50%;
     }
     .companies__desc{
 
@@ -184,7 +212,7 @@
         padding-left: 35px;
 
         color: #FFFFFF;
-        padding-bottom: 40px;
+        padding-bottom: 25px;
     }
     .swiper-slide--thumbs{
         margin: 0;
@@ -195,7 +223,7 @@
         font-size: 14px;
         line-height: 117.6%;
         /* or 16px */
-
+        box-sizing: border-box;
         padding-left: 35px;
         color: #949494;
         margin-bottom: 10px;
@@ -243,7 +271,7 @@
    
         color: #FFFFFF;
         position: relative;
-        width: 50%;
+        // width: 50%;
     }
     .companies__desc{
 

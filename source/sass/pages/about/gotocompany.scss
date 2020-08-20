@@ -1,0 +1,181 @@
+.gotocompany{
+    background-color: $blue-color;
+    padding-bottom: 80px;
+    overflow: hidden;
+    position: relative;
+}
+
+.gotocompany__title{
+    @extend %block-title;
+    color: $light-grey-color;
+    padding-top: 40px;
+
+}
+.gotocompany__desc{
+    @extend %block-text;
+    color: $light-grey-color;
+    padding-top: 15px;
+}
+
+.button--gotocompany{
+    color: $light-grey-color;
+    max-width: 210px;
+    margin-top: 200px;
+    &::after{
+        background: $light-grey-color;
+    }
+    &:hover{
+		color: $blue-color;
+    }
+    & .button-line--first{
+        &::before{
+            background-color: $light-grey-color;
+        }
+        &::after{
+            background-color: $light-grey-color;
+        }
+    }
+    & .button-line--two{
+        &::before{
+            background-color: $light-grey-color;
+        }
+        &::after{
+            background-color: $light-grey-color;
+        }
+    }
+}
+
+.gotocompany__pic{
+    position: absolute;
+    width: 585px;
+    height: 360px;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: none !important;
+
+    fill: #ffffff;
+    // fill: none;
+	// stroke: #ffffff;
+	
+	// stroke-width: 0.5px;
+	// stroke-dasharray: 4000;
+	// 	stroke-dashoffset: 4000;
+}
+
+@media(min-width: 767px){
+    .gotocompany{
+   
+        padding-bottom: 105px;
+        
+    }
+    
+    .gotocompany__title{
+    
+        padding-top: 70px;
+    
+    }
+    .gotocompany__desc{
+       
+     
+        padding-top: 50px;
+    }
+    
+    .button--gotocompany{
+        padding: 20px 15px;
+        max-width: none;
+        margin-top: 40px;
+       
+    }
+    
+    .gotocompany__pic{
+        position: absolute;
+        width: 585px;
+        height: 360px;
+        bottom: 60px;
+        left: auto;
+        transform: translateX(-0%);
+        right: -130px;
+       
+    
+    }
+}
+
+
+@media(min-width: 1280px){
+    .gotocompany{
+   
+        padding-bottom: 280px;
+        
+    }
+    
+    .gotocompany__title{
+    
+        padding-top: 110px;
+        width: 90%;
+    
+    }
+    .gotocompany__desc{
+       
+        width: 75%;
+        padding-top: 25px;
+    }
+    
+    .button--gotocompany{
+        padding: 32px 52px;
+        max-width: none;
+        margin-top: 65px;
+       
+    }
+    
+    .gotocompany__pic{
+        position: absolute;
+        width: 945px;
+        height: 585px;
+        bottom: 35px;
+        left: auto;
+        transform: translateX(-0%);
+        right: -60px;
+       
+    
+    }
+}
+
+@media(min-width: 1680px){
+    .gotocompany{
+   
+        padding-bottom: 375px;
+        
+    }
+    
+    .gotocompany__title{
+    
+        padding-top: 125px;
+        width: 90%;
+    
+    }
+    .gotocompany__desc{
+       
+        width: 60%;
+        padding-top: 25px;
+    }
+    
+    .button--gotocompany{
+        padding: 20px 60px;
+        max-width: none;
+        margin-top: 85px;
+       
+    }
+    
+    .gotocompany__pic{
+        position: absolute;
+        width: 1145px;
+        height: 705px;
+        bottom: 75px;
+        left: auto;
+        transform: translateX(-0%);
+        right: -40px;
+       
+    
+    }
+}

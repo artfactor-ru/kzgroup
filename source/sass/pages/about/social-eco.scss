@@ -1,0 +1,90 @@
+.social-eco{
+    padding-bottom: 60px;
+}
+
+.parallax__img-wrap--social-eco{
+    --overflow: 50px;
+    height: calc(100% + (2 * var(--overflow))) !important; 
+    top: calc( -1 * var(--overflow));
+}
+.parallax__img--social-eco{
+    display: block;
+    background: url(../img/about/social-eco.jpg); 
+  
+   
+    background-size: cover;
+    background-position: 80% center;
+    
+}
+.social-eco__title{
+    @extend %block-title;
+    color: #ffffff;
+    padding-top: 50px;
+    position: relative;
+    perspective: 600px;
+	
+}
+.social-eco__desc{
+    position: relative;
+    @extend %block-text;
+    color: $light-grey-color;
+    padding-top: 20px;
+}
+
+@media(min-width: 767px){
+    .social-eco{
+        padding-bottom: 70px;
+    }
+    
+
+    .social-eco__title{
+    
+        padding-top: 50px;
+     
+    }
+    .social-eco__desc{
+ 
+        padding-top: 30px;
+    }
+    
+}
+
+
+
+@media(min-width: 1280px){
+    .social-eco{
+        padding-bottom: 200px;
+    }
+    
+
+    .social-eco__title{
+    
+        padding-top: 70px;
+     
+    }
+    .social-eco__desc{
+ 
+        padding-top: 35px;
+        width: 95%;
+    }
+    
+}
+
+@media(min-width: 1680px){
+    .social-eco{
+        padding-bottom: 160px;
+    }
+    
+
+    .social-eco__title{
+    
+        padding-top: 107px;
+     
+    }
+    .social-eco__desc{
+ 
+        padding-top: 35px;
+        width: 85%;
+    }
+    
+}
