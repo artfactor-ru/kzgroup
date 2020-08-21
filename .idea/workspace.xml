@@ -21,8 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c63ba0fc-bd07-4675-8f81-411853f3cf3d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/vacancies-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/vacancies-details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/vacancies.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/vacancies.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/sass/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/sass/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/sass/pages/vacancies/vacancies-details.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/sass/pages/vacancies/vacancies-details.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/vacancies-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/vacancies-details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/vacancies.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/vacancies.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +59,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.HTML" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -69,7 +71,8 @@
       <updated>1597833531247</updated>
       <workItem from="1597833532876" duration="16330000" />
       <workItem from="1597905567364" duration="15540000" />
-      <workItem from="1597926824859" duration="8694000" />
+      <workItem from="1597926824859" duration="8939000" />
+      <workItem from="1597992709156" duration="7329000" />
     </task>
     <servers />
   </component>
@@ -89,10 +92,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="461" y="165" key="SettingsEditor" timestamp="1597906954825">
+    <state x="619" y="163" key="SettingsEditor" timestamp="1597993108417">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597906954825" />
+    <state x="619" y="163" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597993108417" />
     <state x="612" y="104" width="583" height="936" key="find.popup" timestamp="1597932100727">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
