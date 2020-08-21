@@ -104,13 +104,23 @@ function headerShowAndHideDesktop() {
 =======
 	let twoScreen = document.querySelector('.two-screen');
 	
-	if(getCoords(twoScreen).top < scrollbar.offset.y){
-		videoMain.pause();
+		if(videoMain){
+		
+			if(getCoords(twoScreen).top < scrollbar.offset.y){
+				videoMain.pause();
+			
+			}else if(getCoords(twoScreen).top >= scrollbar.offset.y){
+				videoMain.play();
+			}
+		}
 	
+<<<<<<< HEAD
 	}else if(getCoords(twoScreen).top >= scrollbar.offset.y){
 		videoMain.play();
 	}
 >>>>>>> origin/all-page
+=======
+>>>>>>> 20f7783fa825798cc36ffb3033a5672419f12335
 	
 	if(getCoords(header).top > 50 && getCoords(twoScreen).top >= scrollbar.offset.y){
 		header.classList.add('hide')
@@ -964,9 +974,14 @@ if(containerNavScroll){
 =======
 		let btnPlay = document.querySelector('.button__video-controls--play');
 	
+<<<<<<< HEAD
 		
 >>>>>>> origin/all-page
 
+=======
+	
+	
+>>>>>>> 20f7783fa825798cc36ffb3033a5672419f12335
 
 		function playPauseMedia() {
 			if(videoMain.paused) {
@@ -1299,6 +1314,18 @@ gsap.utils.toArray('.button-line').forEach(element => {
 		});
 		
 
+gsap.utils.toArray('.button-more').forEach(element => {
+	ScrollTrigger.create({
+		trigger: element,
+		start: 'bottom bottom',
+		scrub: true,
+		toggleClass: 'is-inview-line',
+		// this toggles the class again when you scroll back up:
+		toggleActions: 'play none none none',
+		// this removes the class when the scrolltrigger is passed:
+		// once: true,
+	});
+});
 
 	gsap.utils.toArray('.button-more').forEach(element => {
 		ScrollTrigger.create({
