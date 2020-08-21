@@ -3,6 +3,9 @@
 	height: 435px;
     position: relative;
     background-color: #171C28;
+<<<<<<< HEAD
+}
+=======
 
 }
 
@@ -33,6 +36,7 @@
     background-image: url(../img/companies/hero-bg-video.jpg);
 }
 
+>>>>>>> origin/all-page
 .swiper-container--hero{
     width: 100%;
     height: 100%;
@@ -48,12 +52,18 @@
 }
 .swiper-slide--hero{
     transition: opacity 3s ease !important;
+<<<<<<< HEAD
+=======
     
+>>>>>>> origin/all-page
     // transition-delay: 2s;
 }
 .swiper-container--hero .swiper-slide-active{
     transition: opacity 3s ease 1s!important;
+<<<<<<< HEAD
+=======
     z-index: 20;
+>>>>>>> origin/all-page
 }
 .swiper-container--hero .parallax__img-wrap{
 
@@ -86,6 +96,11 @@
     padding-bottom: 25px;
 
     font-size: 16px;
+<<<<<<< HEAD
+    line-height: 16px;
+}
+
+=======
     line-height: 18px;
     perspective: 600px;
 	overflow:hidden
@@ -116,10 +131,17 @@
     font-size: 22px;
     line-height: 28px;
 }
+>>>>>>> origin/all-page
 .button__video-controls-wrap--hero{
     z-index: 20;
     display: none;
 }
+<<<<<<< HEAD
+.hero__slider-controls{
+    display: none;
+}
+
+=======
 .button__video-controls-wrap--other{
     display: none;
 }
@@ -139,6 +161,7 @@
     display: none;
 
  }
+>>>>>>> origin/all-page
 .hero__slide-line{
     position: relative;
     width: 100%;
@@ -157,7 +180,11 @@
 .swiper-container--hero .swiper-slide-active .hero__slide-line-time{
     width: 0%;
     animation-name: animate-line;
+<<<<<<< HEAD
+    animation-duration: 5000ms;
+=======
     animation-duration: 15000ms;
+>>>>>>> origin/all-page
     animation-delay: 3s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
@@ -168,6 +195,9 @@
     background-image: url(../img/companies/hero-bg.jpg);
 }
 .swiper-slide--hero__bg--2{
+<<<<<<< HEAD
+    background-image: url(../img/bg-main-mobile-2.jpg);
+=======
     background-image: url(../img/companies/hero-bg-2.jpg);
 }
 .swiper-slide--hero__bg--3{
@@ -184,6 +214,7 @@
 }
 .swiper-slide--hero__bg--7{
     background-image: url(../img/companies/hero-bg-7.jpg);
+>>>>>>> origin/all-page
 }
 @keyframes animate-line{
     100%{
@@ -192,12 +223,15 @@
 }
 
 @media(min-width:768px){
+<<<<<<< HEAD
+=======
     .swiper-slide--hero-video{
         display: block;
     }
     .button__video-controls-wrap--other{
         display: block;
     }
+>>>>>>> origin/all-page
     .main__hero{
 
         height: 512px;
@@ -208,6 +242,11 @@
         position: relative;
         padding-bottom: 40px;
         font-size: 32px;
+<<<<<<< HEAD
+        line-height: 39px;
+    }
+    
+=======
         line-height: 32px;
     }
     .hero__title--first{
@@ -222,6 +261,7 @@
      
         padding-bottom: 15px;
     }
+>>>>>>> origin/all-page
     .button__video-controls-wrap--hero{
         z-index: 20;
         display: block;
@@ -246,6 +286,11 @@
     .swiper-slide--hero__bg--1{
         background-image: url(../img/companies/hero-bg-tablet.jpg);
     }
+<<<<<<< HEAD
+    .swiper-slide--hero__bg--2{
+        background-image: url(../img/bg-main-tablet.jpg);
+    }
+=======
 
     .button__video-controls--other{
         @include btn-destroy;
@@ -257,6 +302,7 @@
         background-size: 30px 30px;
     }
  
+>>>>>>> origin/all-page
 
 }
 @media(min-width:1280px){
@@ -266,6 +312,15 @@
 
     }
 
+<<<<<<< HEAD
+    .hero__title{
+        position: relative;
+        padding-bottom: 85px;
+        font-size: 48px;
+        line-height: 73px;
+    }
+    
+=======
    
     .hero__title{
         position: relative;
@@ -284,6 +339,7 @@
         line-height: 28px;
         padding-bottom: 10px;
     }
+>>>>>>> origin/all-page
 
     .hero__slide-line{
         position: relative;
@@ -296,6 +352,11 @@
     .swiper-slide--hero__bg--1{
         background-image: url(../img/companies/hero-bg-laptop.jpg);
     }
+<<<<<<< HEAD
+    .swiper-slide--hero__bg--2{
+        background-image: url(../img/bg-main-laptop.jpg);
+    }
+=======
   
     .hero__slider-controls{
         display: block;
@@ -359,6 +420,7 @@
 		background-size: 35px 35px;
     }
    
+>>>>>>> origin/all-page
 }
 
 @media(min-width:1680px){
@@ -372,6 +434,12 @@
         position: relative;
         padding-bottom: 42px;
         font-size: 72px;
+<<<<<<< HEAD
+        line-height: 73px;
+    }
+    
+
+=======
         line-height: 72px;
     }
     .hero__title--first{
@@ -380,6 +448,7 @@
         line-height: 87px;
     }
     
+>>>>>>> origin/all-page
     .hero__slide-line{
         position: relative;
         width: 535px;
@@ -390,6 +459,12 @@
     .swiper-slide--hero__bg--1{
         background-image: url(../img/companies/hero-bg-desktop.jpg);
     }
+<<<<<<< HEAD
+    .swiper-slide--hero__bg--2{
+        background-image: url(../img/bg-main-desktop.jpg);
+    }
+
+=======
  
 
     .hero__subtitle{
@@ -410,4 +485,5 @@
 		height: 65px;
 		background-size: 65px 65px;
     }
+>>>>>>> origin/all-page
 }

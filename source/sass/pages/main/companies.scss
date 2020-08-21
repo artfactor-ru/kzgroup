@@ -14,6 +14,8 @@
     padding-bottom: 35px;
     transition: all 2s ease !important;
 }
+<<<<<<< HEAD
+=======
 
 .swiper-slide--companies{
     transition: opacity 3s ease !important;
@@ -24,6 +26,7 @@
     transition: opacity 3s ease 1s!important;
     z-index: 20;
 }
+>>>>>>> origin/all-page
 .swiper-slide--companies-bg{
     position: absolute;
     width: 100%;
@@ -40,6 +43,11 @@
 }
 .companies__title{
     @extend %block-title-light;
+<<<<<<< HEAD
+    color: #FFFFFF;
+    position: relative;
+}
+=======
     font-weight: bold;
     color: #FFFFFF;
     position: relative;
@@ -47,14 +55,19 @@
 	overflow:hidden
 }
 
+>>>>>>> origin/all-page
 .companies__desc{
     @extend %block-text;
     color: #FFFFFF;
     padding-top: 10px;
     padding-bottom: 40px;
     position: relative;
+<<<<<<< HEAD
+    width: 90%;
+=======
     width: 80%;
    
+>>>>>>> origin/all-page
 }
 .button-more--companies{
     display: none;
@@ -80,6 +93,8 @@
 .companies__thumbs{
     display: none;
 }
+<<<<<<< HEAD
+=======
 .swiper-slide--companies .parallax__img-wrap{
     top:0;
     left: 0;
@@ -92,6 +107,7 @@
 	height: calc(100% + (2 * var(--overflow))) !important; 
 	top: calc( -1 * var(--overflow));
 }
+>>>>>>> origin/all-page
 @media(min-width:767px){
     .companies{
         margin-top: 60px;
@@ -115,7 +131,11 @@
 
         color: #FFFFFF;
         padding-top: 30px;
+<<<<<<< HEAD
+        padding-bottom: 30px;
+=======
         padding-bottom: 25px;
+>>>>>>> origin/all-page
         position: relative;
         width: 80%;
         line-height: 22px;
@@ -145,7 +165,10 @@
         
         padding-top: 380px;
         padding-bottom: 35px;
+<<<<<<< HEAD
+=======
  
+>>>>>>> origin/all-page
        
     }
     .swiper-container--companies- .swiper-wrapper{
@@ -156,7 +179,11 @@
    
         color: #FFFFFF;
         position: relative;
+<<<<<<< HEAD
+        width: 50%;
+=======
         // width: 50%;
+>>>>>>> origin/all-page
     }
     .companies__desc{
 
@@ -212,7 +239,11 @@
         padding-left: 35px;
 
         color: #FFFFFF;
+<<<<<<< HEAD
+        padding-bottom: 40px;
+=======
         padding-bottom: 25px;
+>>>>>>> origin/all-page
     }
     .swiper-slide--thumbs{
         margin: 0;
@@ -223,7 +254,11 @@
         font-size: 14px;
         line-height: 117.6%;
         /* or 16px */
+<<<<<<< HEAD
+
+=======
         box-sizing: border-box;
+>>>>>>> origin/all-page
         padding-left: 35px;
         color: #949494;
         margin-bottom: 10px;
@@ -271,7 +306,11 @@
    
         color: #FFFFFF;
         position: relative;
+<<<<<<< HEAD
+        width: 50%;
+=======
         // width: 50%;
+>>>>>>> origin/all-page
     }
     .companies__desc{
 

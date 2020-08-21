@@ -12,8 +12,11 @@ gsap.registerPlugin(ScrollTrigger);
 import ScrollbarSmoth from 'smooth-scrollbar';
 
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/all-page
 //  высота вьюпорта
 let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
@@ -95,6 +98,10 @@ function socialInteraction() {
 
 function headerShowAndHideDesktop() {
 	let traktorsContainer = document.querySelector('.traktors__container');
+<<<<<<< HEAD
+	let twoScreen = document.querySelector('.about');
+	
+=======
 	let twoScreen = document.querySelector('.two-screen');
 	
 		if(videoMain){
@@ -107,6 +114,16 @@ function headerShowAndHideDesktop() {
 			}
 		}
 	
+<<<<<<< HEAD
+<<<<<<< HEAD
+	}else if(getCoords(twoScreen).top >= scrollbar.offset.y){
+		videoMain.play();
+	}
+>>>>>>> origin/all-page
+=======
+>>>>>>> 20f7783fa825798cc36ffb3033a5672419f12335
+=======
+>>>>>>> 20f7783fa825798cc36ffb3033a5672419f12335
 	
 	if(getCoords(header).top > 50 && getCoords(twoScreen).top >= scrollbar.offset.y){
 		header.classList.add('hide')
@@ -146,16 +163,28 @@ function hideAndShowHeaderMobile() {
 // Инициализация плавного скролла
 
 let options  = {
+<<<<<<< HEAD
+	damping: 0.02,
+	delegateTo: document
+}
+let options2  = {
+	damping: 0.02,
+=======
 	damping: 0.04,
 	delegateTo: document
 }
 let options2  = {
 	damping: 0.04,
+>>>>>>> origin/all-page
 	continuousScrolling: false
 	// delegateTo: document
 }
 let options3  = {
+<<<<<<< HEAD
+	damping: 0.02,
+=======
 	damping: 0.04,
+>>>>>>> origin/all-page
 	continuousScrolling: false
 	// delegateTo: document
 }
@@ -214,7 +243,11 @@ for(let i=0; i<popupWrap.length; i++){
 	let scrollbarPopup = ScrollbarSmoth.init(popupWrap[i], options2);
 	scrollbarPopup.addListener(ScrollTrigger.update);
 }
+<<<<<<< HEAD
+let containerNavScroll = document.querySelector('.scroll');
+=======
 let containerNavScroll = document.querySelector('.nav_list-wrap');
+>>>>>>> origin/all-page
 let scrollbarNav;
 if(containerNavScroll){
 	scrollbarNav = ScrollbarSmoth.init(containerNavScroll, options3);
@@ -227,15 +260,24 @@ if(containerNavScroll){
 
 // Инициализация свайперов
 	let swiperStatistics;
+<<<<<<< HEAD
+	let swiperTabFeature;
+
+=======
 	let swiperTabFeature1;
 	let swiperTabFeature2;
+>>>>>>> origin/all-page
 	let swiperTab;
 	let swiperTabThumbs;
 	let swiperNews;
 	let swiperCompanies;
 	let companiesThumbs;
 	let swiperHero;
+<<<<<<< HEAD
+	const transitionSlide = 5000;
+=======
 	const transitionSlide = 15000;
+>>>>>>> origin/all-page
 
 	const enableSwiper = function(){
 		// document.addEventListener('DOMContentLoaded', function(){
@@ -248,6 +290,12 @@ if(containerNavScroll){
 					},
 				});
 			}
+<<<<<<< HEAD
+				let tabFeaturesArray = document.querySelectorAll('.kirovets_tabs__features');
+
+				for(let i = 0; i<tabFeaturesArray.length; i++){
+					swiperTabFeature = new Swiper(tabFeaturesArray[i],{
+=======
 			if(document.querySelector('.kirovets_tabs__features--1')){
 				let tabFeatures1 = document.querySelector('.kirovets_tabs__features--1');
 
@@ -265,14 +313,19 @@ if(containerNavScroll){
 				let tabFeatures2 = document.querySelector('.kirovets_tabs__features--2');
 
 					swiperTabFeature2 = new Swiper(tabFeatures2,{
+>>>>>>> origin/all-page
 						observer: true,
 						observeParents: true,
 						scrollbar: {
 							el: '.swiper-scrollbar',
 						},
 					});
+<<<<<<< HEAD
+				}
+=======
 				
 			}
+>>>>>>> origin/all-page
 				
 	}
 		// })
@@ -303,6 +356,16 @@ if(containerNavScroll){
 				observer: true, 
 				observeParents: true,
 				// updateOnWindowResize: true,
+<<<<<<< HEAD
+				breakpoints: {
+					500: {
+					spaceBetween: 20,
+					
+					},
+					767: {
+						spaceBetween: 20,
+						
+=======
 				slidesOffsetAfter: 0,
 				breakpoints: {
 					500: {
@@ -312,16 +375,23 @@ if(containerNavScroll){
 					767: {
 						spaceBetween: 20,
 						slidesOffsetAfter: 200,
+>>>>>>> origin/all-page
 						
 					},
 					1280:{
 						spaceBetween: 35,
+<<<<<<< HEAD
+=======
 						slidesOffsetAfter: 200,
+>>>>>>> origin/all-page
 						
 					}
 				}
 			});
+<<<<<<< HEAD
+=======
 			
+>>>>>>> origin/all-page
 		}
 		if(document.querySelector('.swiper-container--companies')){
 
@@ -347,7 +417,10 @@ if(containerNavScroll){
 			swiperCompanies = new Swiper('.swiper-container--companies',{
 				observer: true,
 				observeParents: true,
+<<<<<<< HEAD
+=======
 				autoHeight: true,
+>>>>>>> origin/all-page
 				thumbs: {
 					swiper: companiesThumbs
 				},
@@ -359,6 +432,16 @@ if(containerNavScroll){
 					el: '.swiper-scrollbar--companies',
 				},
 			});
+<<<<<<< HEAD
+	
+			
+		}
+		if(document.querySelector('.swiper-container--hero')){
+
+
+		
+			swiperHero = new Swiper('.swiper-container--hero',{
+=======
 
 
 			swiperCompanies.on('slidePrevTransitionStart', function () {
@@ -450,15 +533,23 @@ if(containerNavScroll){
 		
 			swiperHero = new Swiper('.swiper-container--hero',{
 				loop: true,
+>>>>>>> origin/all-page
 			   autoplay: {
 				   delay: transitionSlide,
 				   disableOnInteraction: true,
 				 },
    
+<<<<<<< HEAD
+			   // navigation: {
+			   // 	nextEl: newNavPrev,
+			   // 	prevEl: newNavNext,
+			   // },
+=======
 			   navigation: {
 			   	nextEl: '.hero__slider-controls .swiper-button-prev',
 			   	prevEl: '.hero__slider-controls .swiper-button-next',
 			   },
+>>>>>>> origin/all-page
 			   observer: true,
 					observeParents: true,
 			   effect: 'fade',
@@ -467,6 +558,8 @@ if(containerNavScroll){
 			   },
 		   
 		   });
+<<<<<<< HEAD
+=======
 
 		   swiperHero.on('slidePrevTransitionStart', function () {
 			checkActiveSlideForVideo();
@@ -566,6 +659,7 @@ if(containerNavScroll){
 		
 
 		
+>>>>>>> origin/all-page
 	   }
 	   if(document.querySelector('.kirovets_tabs__list-wrap')){
 			swiperTabThumbs = new Swiper('.kirovets_tabs__list-wrap', {
@@ -590,12 +684,20 @@ if(containerNavScroll){
 				},
 			});
 		}
+<<<<<<< HEAD
+	})
+
+	
+
+	
+=======
 
 	
 	})
 
 	
 
+>>>>>>> origin/all-page
 	
 	
 	
@@ -608,8 +710,12 @@ if(containerNavScroll){
 
 	window.addEventListener("resize", function(){
 		updateSlider(swiperStatistics);
+<<<<<<< HEAD
+		updateSlider(swiperTabFeature);
+=======
 		updateSlider(swiperTabFeature1);
 		updateSlider(swiperTabFeature2);
+>>>>>>> origin/all-page
 		updateSlider(swiperTab);
 		updateSlider(swiperTabThumbs);
 		updateSlider(swiperNews);
@@ -638,6 +744,10 @@ if(containerNavScroll){
 	let InnerSliders = document.querySelectorAll('.kirovets_tabs__features');
 
 
+<<<<<<< HEAD
+	console.log(InnerSliders);
+=======
+>>>>>>> origin/all-page
 
 	const breakpointChecker = function() {
 		// if larger viewport and multi-row layout needed
@@ -648,6 +758,22 @@ if(containerNavScroll){
 					swiperStatistics.destroy(true, true);
 					swiperStatistics.update();
 				}
+<<<<<<< HEAD
+			
+				
+					
+					if (swiperTabFeature != null) {
+						swiperTabFeature.destroy(true, true);
+						swiperTabFeature.update();
+						
+					}
+				for(let i = 0; i<InnerSliders.length; i++){
+				
+					InnerSliders[i].removeEventListener('mouseover', setMainSwiperMouseOver);
+					InnerSliders[i].removeEventListener('mouseout', setMainSwiperMouseOut);		
+					
+				}
+=======
 				if(document.querySelector('.statistics__slider')){
 					document.querySelector('.statistics__slider').classList.remove('swiper-container');
 					document.querySelector('.statistics__list').classList.remove('swiper-wrapper');
@@ -684,6 +810,7 @@ if(containerNavScroll){
 					}
 				}
 				
+>>>>>>> origin/all-page
 
 					// Анимация элементов
 				gsap.utils.toArray('.is-animate').forEach(element => {
@@ -691,7 +818,11 @@ if(containerNavScroll){
 					let parallax = element.getAttribute('data-speed');
 					let speed = parallax * 100 + '%';
 					gsap.fromTo(element, {
+<<<<<<< HEAD
+						duration: 5,
+=======
 						// duration: 5,
+>>>>>>> origin/all-page
 						y: speed
 					}, {
 						y: "0%",
@@ -709,6 +840,16 @@ if(containerNavScroll){
 		} else if ( breakpoint.matches === false ) {
 			
 	
+<<<<<<< HEAD
+
+
+			for(let i = 0; i<InnerSliders.length; i++){
+				InnerSliders[i].addEventListener('mouseover', setMainSwiperMouseOver);
+				InnerSliders[i].addEventListener('mouseout', setMainSwiperMouseOut);		  	
+			}
+				
+			enableSwiper();
+=======
 			if(document.querySelector('.kirovets_tabs__container')){
 
 				for(let i = 0; i<InnerSliders.length; i++){
@@ -736,6 +877,7 @@ if(containerNavScroll){
 			}
 				enableSwiper();
 			
+>>>>>>> origin/all-page
 
 			btnMore = document.querySelectorAll('.traktors__text-wrap--tablet .button-more--traktors');
 
@@ -828,10 +970,26 @@ if(containerNavScroll){
 	let videoMain = document.querySelector('.parallax__img-video');
 
 	if(videoMain){
+<<<<<<< HEAD
+		let btnPlay = document.querySelector('.kirovets_button__video-controls--play');
+	
+		let btnSound = document.querySelector('.kirovets_button__video-controls--sound');
+=======
 		let btnPlay = document.querySelector('.button__video-controls--play');
 	
+<<<<<<< HEAD
+<<<<<<< HEAD
+		
+>>>>>>> origin/all-page
+
+=======
 	
 	
+>>>>>>> 20f7783fa825798cc36ffb3033a5672419f12335
+=======
+	
+	
+>>>>>>> 20f7783fa825798cc36ffb3033a5672419f12335
 
 		function playPauseMedia() {
 			if(videoMain.paused) {
@@ -842,6 +1000,23 @@ if(containerNavScroll){
 			} else {
 				videoMain.pause();
 				btnPlay.classList.remove('active');
+<<<<<<< HEAD
+			}
+		}
+
+		function soundOnOffMedia(){
+			if(videoMain.muted){
+				videoMain.muted = false;
+				btnSound.classList.remove('active');
+			}else{
+				videoMain.muted = true;
+				btnSound.classList.add('active');
+			}
+		}
+
+		btnSound.addEventListener('click', soundOnOffMedia);
+		btnPlay.addEventListener('click', playPauseMedia);
+=======
 			
 			}
 		}
@@ -861,15 +1036,23 @@ if(containerNavScroll){
 				videoMain.currentTime = 0;
 			})
 		}
+>>>>>>> origin/all-page
 	}
 	
 
 
+<<<<<<< HEAD
+
+
+	// Анимация
+
+=======
 	
 
 
 	// Анимация
 	document.addEventListener('DOMContentLoaded', function(){
+>>>>>>> origin/all-page
 		gsap.utils.toArray('.traktors__number-icon').forEach(element => {
 			ScrollTrigger.create({
 				trigger: element,
@@ -882,6 +1065,16 @@ if(containerNavScroll){
 			});
 		});
 
+<<<<<<< HEAD
+		gsap.utils.toArray('.traktors__info-wrap').forEach(element => {
+			ScrollTrigger.create({
+				trigger: element,
+				start: 'bottom bottom',
+				scrub: true,
+				toggleClass: 'is-inview-line',
+				// this toggles the class again when you scroll back up:
+				toggleActions: 'play none none none',
+=======
 		gsap.utils.toArray('.property__pic').forEach(element => {
 			ScrollTrigger.create({
 				trigger: element,
@@ -889,10 +1082,17 @@ if(containerNavScroll){
 				toggleClass: 'is-inview',
 				// this toggles the class again when you scroll back up:
 				// toggleActions: 'play none none none',
+>>>>>>> origin/all-page
 				// this removes the class when the scrolltrigger is passed:
 				// once: true,
 			});
 		});
+<<<<<<< HEAD
+	
+
+	gsap.utils.toArray('.title--inner-main').forEach(element => {
+		gsap.fromTo(element,{
+=======
 
 			gsap.utils.toArray('.traktors__info-wrap').forEach(element => {
 				ScrollTrigger.create({
@@ -929,6 +1129,7 @@ if(containerNavScroll){
 
 		gsap.utils.toArray('.title--inner').forEach(element => {
 			gsap.fromTo(element,{
+>>>>>>> origin/all-page
 			y: '130%',
 			rotateX: "-40deg",
 			opacity: 0 
@@ -941,6 +1142,114 @@ if(containerNavScroll){
 				stagger: .13,
 				ease: "power3.out",
 				delay: .2,
+<<<<<<< HEAD
+
+			}
+		);
+    });
+
+	gsap.utils.toArray('.title--inner').forEach(element => {
+		gsap.fromTo(element,{
+		y: '130%',
+		rotateX: "-40deg",
+		opacity: 0 
+			}, {
+				y: "0%",
+			rotateX: 0,
+			opacity: 1,
+
+			duration: 2,
+			stagger: .13,
+			ease: "power3.out",
+			delay: .2,
+			// force3D: true,
+			scrollTrigger: {
+				trigger: ".title--inner",
+				// scrub: true,
+				start: "bottom bottom"
+			} 
+			}
+		);
+	});
+
+		gsap.fromTo(".footer__outer",{
+			y: '-20%',
+			}, {
+			y: "0%",
+			duration: 0.3,
+
+			ease: "none",
+			// pin: true,
+			// force3D: true,
+			scrollTrigger: {
+				trigger: ".footer",
+				start: 'top bottom',
+				// pin: true,
+				toggleActions: "play reverse play reverse"
+				// scrub: true,
+				// pinSpacing: false
+				// start: "top c"
+			} 
+		}
+		);
+
+
+	gsap.utils.toArray('.statictics--inner').forEach(element => {
+		gsap.fromTo(element, {
+			opacity: 0,
+			y: "25px"
+		}, {
+			y: "0%",
+			duration: 1,
+			opacity: 1 ,
+			stagger: .2,
+			// ease: "ease",
+			scrollTrigger: {
+				trigger: element,
+				// scrub: true,
+				start: "bottom bottom"
+			} 
+		});
+	});
+
+
+
+
+	
+
+gsap.utils.toArray('.button-more').forEach(element => {
+	ScrollTrigger.create({
+		trigger: element,
+		start: 'bottom bottom',
+		scrub: true,
+		toggleClass: 'is-inview-line',
+		// this toggles the class again when you scroll back up:
+		toggleActions: 'play none none none',
+		// this removes the class when the scrolltrigger is passed:
+		// once: true,
+	});
+});
+
+gsap.utils.toArray('.button-more').forEach(element => {
+	ScrollTrigger.create({
+		trigger: element,
+		start: 'bottom bottom',
+		scrub: true,
+		toggleClass: 'is-inview-line',
+		// this toggles the class again when you scroll back up:
+		toggleActions: 'play none none none',
+		// this removes the class when the scrolltrigger is passed:
+		// once: true,
+	});
+});
+
+gsap.utils.toArray('.button-line').forEach(element => {
+	ScrollTrigger.create({
+		trigger: element,
+		toggleClass: 'is-inview',
+	});
+});
+=======
 				// force3D: true,
 				scrollTrigger: {
 					trigger: element,
@@ -1013,6 +1322,18 @@ if(containerNavScroll){
 		});
 		
 
+gsap.utils.toArray('.button-more').forEach(element => {
+	ScrollTrigger.create({
+		trigger: element,
+		start: 'bottom bottom',
+		scrub: true,
+		toggleClass: 'is-inview-line',
+		// this toggles the class again when you scroll back up:
+		toggleActions: 'play none none none',
+		// this removes the class when the scrolltrigger is passed:
+		// once: true,
+	});
+});
 
 	gsap.utils.toArray('.button-more').forEach(element => {
 		ScrollTrigger.create({
@@ -1035,6 +1356,7 @@ if(containerNavScroll){
 	});
 	})
 
+>>>>>>> origin/all-page
 
 let socialContainer = document.querySelector('.social__btn-list');
 if(socialContainer){
@@ -1051,20 +1373,33 @@ if(burger){
 	let dropList = document.querySelectorAll('.js-dropdown');
 
 	let navList = document.querySelector('.nav_list');
+<<<<<<< HEAD
+	let navLink = navList.querySelectorAll('.nav_link');
+=======
 
 	let navLink = navList.querySelectorAll('.js-dropdown-toggle');
 	let navItem = navList.querySelectorAll('.js-dropdown');
+>>>>>>> origin/all-page
 
 	burger.addEventListener('click', function(){
 		document.body.classList.toggle('has-nav-open');
 		document.body.classList.remove('has-search-open');
 
+<<<<<<< HEAD
+		for (let i = 0; i < navLink.length; i++) {
+			navLink[i].addEventListener('mouseover', function() {
+				navLink[i].classList.add('active');
+			})
+			navLink[i].addEventListener('mouseleave', function() {
+				navLink[i].classList.remove('active');
+=======
 		for (let i = 0; i < navItem.length; i++) {
 			navItem[i].addEventListener('mouseover', function() {
 				navItem[i].querySelector('.js-dropdown-toggle').classList.add('active');
 			})
 			navItem[i].addEventListener('mouseleave', function() {
 				navItem[i].querySelector('.js-dropdown-toggle').classList.remove('active');
+>>>>>>> origin/all-page
 			})
 			
 		}
@@ -1077,6 +1412,17 @@ if(burger){
 	if ( window.screen.width < 1199 ) {
 
 		for(let i = 0; i<dropList.length; i++){
+<<<<<<< HEAD
+			dropList[i].addEventListener('click', function(event){
+				
+				// this.querySelector('.c-nav_dropdown').classList.add('active');
+				this.querySelector('.nav_dropdown').classList.toggle('active');
+
+				if(!this.contains(event.target)){
+					this.classList.remove('active');
+					this.querySelector('.js-dropdown-list').classList.remove('active');
+				}
+=======
 			navItem[i].addEventListener('click', function(event){
 				navLink[i].classList.toggle('active');
 				navItem[i].classList.toggle('active');
@@ -1088,6 +1434,7 @@ if(burger){
 				// 	navItem[i].querySelector('.nav_dropdown').classList.remove('active');
 				// 	navLink[i].classList.remove('active');
 				// }
+>>>>>>> origin/all-page
 			})
 		}
 	}	
@@ -1136,6 +1483,8 @@ let popup = document.querySelectorAll('.popup_kirovets');
 
 
 
+<<<<<<< HEAD
+=======
 // Добавление видимость параграфам 
 
 
@@ -1155,6 +1504,7 @@ let wrapper = document.querySelector('.zavod');
 	}
 	
 }
+>>>>>>> origin/all-page
 
 
 
@@ -1217,6 +1567,63 @@ for (i = 0; i < navItem.length; i++) {
 
 
 
+<<<<<<< HEAD
+
+//Добавление класса active к городам section-geography__map-item в рандомном порядке 
+var toggleActiveClass = function () {
+	var elements = document.querySelectorAll('.section-geography__map-item');
+	for (var i = 0; i < elements.length; i++) {
+  
+	  if (elements[i].classList.contains('active')) {
+		elements[i].classList.remove('active');
+		var nextActive = Math.floor(Math.random() * elements.length);
+		while (nextActive == i) {
+		  nextActive = Math.floor(Math.random() * elements.length);
+		}
+		elements[nextActive].classList.add('active');
+		break;
+	  }
+  
+	}
+  }
+  
+  var elements = document.querySelectorAll('.section-geography__map-item');
+  var startTogglingActiveClass = function () {
+	
+	elements[0].classList.add('active');
+	 return setInterval (toggleActiveClass, 2000);
+  }
+  
+  var intervalID = startTogglingActiveClass();
+  
+  // onhover -> clearInterval(intervalID);
+  // onhover off -> ;
+  
+  
+  
+  // elements.addEventListener('onmouseover', function () {
+  //   clearInterval(intervalID);
+  // });
+  // elements.addEventListener('onmouseover', clearInterval(intervalID));
+  // elements.addEventListener('onmouseout', function () {
+  //   intervalID = startTogglingActiveClass();
+  // });
+  
+  // for (var i = 0; i < elements.length; i++) {
+  // elements[i].addEventListener('mouseenter', function () {
+  //   console.log("stop toggling");
+  //   clearInterval(intervalID);
+  // });
+  
+  // elements[i].addEventListener('mouseleave', function () {
+  //   console.log("start toggling again");
+  //   intervalID = startTogglingActiveClass();
+  // });
+  // }
+  
+  
+  
+=======
 if(document.querySelector('.geography')){
 	//Добавление класса active к городам section-geography__map-item в рандомном порядке 
 	var toggleActiveClass = function () {
@@ -1250,3 +1657,4 @@ if(document.querySelector('.geography')){
 
   
 	
+>>>>>>> origin/all-page
