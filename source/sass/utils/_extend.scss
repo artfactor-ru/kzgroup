@@ -221,7 +221,11 @@
 	font-style: normal;
 	font-weight: 300;
 	font-size: 14px;
+<<<<<<< HEAD
 	line-height: 20px;
+=======
+	line-height: 22px;
+>>>>>>> origin/all-page
 
 	color: $grey-text-paragraf;
 
@@ -586,4 +590,28 @@
 		font-size: 36px;
 		line-height: 39px;
 	}
+<<<<<<< HEAD
 }
+=======
+}
+
+
+// Кнопки управления слайдером как в новостях
+@media(min-width: 767px){
+	%btn-slider{
+		width: 35px;
+        height: 35px;
+		border: 1px solid #A29797;
+	
+		
+	}
+}
+
+@media(min-width: 1280px){
+	%btn-slider{
+		width: 50px;
+		height: 50px;
+	
+	}
+}
+>>>>>>> origin/all-page

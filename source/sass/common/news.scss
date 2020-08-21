@@ -1,7 +1,11 @@
 .news__title{
     
     @extend %block-title;
+<<<<<<< HEAD
     padding-top: 35px;
+=======
+    padding-top: 20px;
+>>>>>>> origin/all-page
 }
 .news__container{
     margin-top: 25px;
@@ -51,6 +55,10 @@
    color: $black-grey;
    font-family: $font-text-regular;
    padding-bottom: 60px;
+<<<<<<< HEAD
+=======
+   transition: all 0.5s ease;
+>>>>>>> origin/all-page
 }
 
 .swiper-container-horizontal>.swiper-scrollbar.swiper-scrollbar--news {
@@ -91,10 +99,21 @@
     transform: scale(1.1);
     transform-origin: center;
 }
+<<<<<<< HEAD
+=======
+
+.news__link:hover  ~ .news__subtitle{
+    color: $red-color;
+}
+.news__container .swiper-wrapper{
+    transition: transform 1s ease !important;
+}
+>>>>>>> origin/all-page
 @media(min-width: 500px){
     .news__item{
         width: 315px;
     }
+<<<<<<< HEAD
 }
 @media(min-width: 767px){
     .news__title{
@@ -102,6 +121,16 @@
     }
     .news__container{
         margin-top: 50px;
+=======
+  
+}
+@media(min-width: 767px){
+    .news__title{
+        padding-top: 40px;
+    }
+    .news__container{
+        margin-top: 40px;
+>>>>>>> origin/all-page
         display: flex;
 
         box-sizing: border-box;
@@ -137,12 +166,40 @@
         bottom: auto;
         left: 20%;
         right: auto;
+<<<<<<< HEAD
         width: 35px;
         height: 35px;
         border: 1px solid #A29797;
     
 
     }
+=======
+        @extend %btn-slider;
+        overflow: hidden;
+    
+
+    }
+     .news__controls .swiper-button-next::before,.news__controls .swiper-button-prev::before{
+         transition: all 0.5s ease;
+         content: "";
+         position: absolute;
+         width: 0%;
+         left: 0;
+         height: 100%;
+         background-color: #A29797;
+
+     }
+    .news__controls .swiper-button-next:hover::before,.news__controls .swiper-button-prev:hover::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #A29797;
+        z-index: 1;
+
+    }
+  
+>>>>>>> origin/all-page
     .news__controls .swiper-button-prev{
         top: 160px;
     }
@@ -150,11 +207,25 @@
        display: none;
 
     }
+<<<<<<< HEAD
     .news__controls-icon{
         width: 10px;
         height: 10px;
     }
 
+=======
+
+    .news__controls-icon{
+        width: 10px;
+        height: 10px;
+        fill: #B3B2B3;
+        z-index: 5;
+        position: relative;
+    }
+    .news__controls .swiper-button-next:hover .news__controls-icon, .news__controls .swiper-button-prev:hover .news__controls-icon{
+        fill: #ffffff;
+    }
+>>>>>>> origin/all-page
     .news__date{
      
         padding-top: 15px;
@@ -167,17 +238,41 @@
      
        color: $black-grey;
        font-family: $font-text-regular;
+<<<<<<< HEAD
        padding-bottom: 80px;
        padding-top: 10px;
     }
   
+=======
+       padding-bottom: 40px;
+       padding-top: 10px;
+    }
+  
+    .news__item::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 0%;
+        height: 4px;
+        background-color: $red-color;
+        transition: all 0.5s ease;
+    }
+    .news__item:hover::after{
+        width: 100%;
+
+    }
+>>>>>>> origin/all-page
    
  
 }
 
 @media(min-width: 1280px){
     .news__title{
+<<<<<<< HEAD
         padding-top: 95px;
+=======
+        padding-top: 75px;
+>>>>>>> origin/all-page
     }
     .news__container{
         margin-top: 60px;
@@ -203,8 +298,12 @@
         position: relative;
         top: 150px;
        
+<<<<<<< HEAD
         width: 55px;
         height: 55px;
+=======
+     
+>>>>>>> origin/all-page
     
 
     }
@@ -229,7 +328,11 @@
 
 @media(min-width: 1680px){
     .news__title{
+<<<<<<< HEAD
         padding-top: 105px;
+=======
+        padding-top: 30px;
+>>>>>>> origin/all-page
     }
     .news__container{
         margin-top: 50px;
@@ -260,14 +363,19 @@
         position: relative;
         top: 260px;
        
+<<<<<<< HEAD
         width: 55px;
         height: 55px;
+=======
+    
+>>>>>>> origin/all-page
     
 
     }
     .news__controls .swiper-button-prev{
         top: 220px;
     }
+<<<<<<< HEAD
     .news__controls-icon{
         width: 15px;
         height: 15px;
@@ -275,6 +383,12 @@
     .news__subtitle{
      
         padding-bottom: 130px;
+=======
+   
+    .news__subtitle{
+     
+        padding-bottom: 35px;
+>>>>>>> origin/all-page
         font-size: 24px;
         line-height: 34px;     
     }

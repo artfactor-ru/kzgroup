@@ -1,0 +1,259 @@
+.personnel-policy{
+    background-color: $blue-color;
+    padding-top: 35px;
+    padding-bottom: 95px;
+    box-sizing: border-box;
+    
+}
+.parallax__img--personnel-policy{
+    display: none;
+}
+.personnel-policy__title{
+    @extend %block-title;
+    color: #ffffff;
+    position: relative;
+    
+}
+.personnel-policy__desc{
+    @extend %block-text;
+    color: #ffffff;
+    padding-top: 10px;
+    position: relative;
+}
+
+.personnel-policy__statisctics{
+    @include list-destroy;
+    color: #FFFFFF;
+    position: relative;
+
+}
+.personnel-policy__statisctics-item{
+    margin-top: 35px;
+}
+.personnel-policy__statisctics-number{
+    font-size: 94px;
+    line-height: 94px;  
+    letter-spacing: -0.055em;
+    font-family: $font-for-number;
+    color: #FFFFFF;
+}
+.personnel-policy__statisctics-percent{
+    font-size: 94px;
+    line-height: 94px;  
+    letter-spacing: -0.055em;
+    font-family: $font-for-number-light;
+    color: #FFFFFF;
+    font-weight: 300;
+}
+.personnel-policy__subtitle{
+    @extend %block-text;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.button--about{
+    color: $light-grey-color;
+    font-size: 10px;
+    padding: 15px;
+    width: auto;
+    margin-top: 25px;
+    &::after{
+        background: $light-grey-color;
+    }
+    &:hover{
+		color: $blue-color;
+    }
+    & .button-line--first{
+        &::before{
+            background-color: $light-grey-color;
+        }
+        &::after{
+            background-color: $light-grey-color;
+        }
+    }
+    & .button-line--two{
+        &::before{
+            background-color: $light-grey-color;
+        }
+        &::after{
+            background-color: $light-grey-color;
+        }
+    }
+}
+
+@media(min-width:767px){
+        
+    .personnel-policy{
+        background-color: $blue-color;
+        padding-top: 70px;
+        padding-bottom: 45px;
+    }
+    .parallax__img-wrap--personnel-policy{
+        --overflow: 50px;
+        height: calc(100% + (2 * var(--overflow))) !important; 
+        top: calc( -1 * var(--overflow));
+    }
+    .parallax__img--personnel-policy{
+        display: block;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.23)), linear-gradient(95.91deg, #000000 13.39%, rgba(0, 0, 0, 0) 107.28%), url(../img/about/bg-pers-policy.jpg); 
+        background-blend-mode: multiply, normal, normal;
+       
+        background-size: cover;
+        background-position: center 40%;
+        
+    }
+   
+    .personnel-policy__desc{
+ 
+        padding-top: 10px;
+    }
+
+    .personnel-policy__statisctics{
+       display: flex;
+       
+
+    }
+    .personnel-policy__statisctics-item{
+        margin-top: 35px;
+        
+    }
+    .personnel-policy__statisctics-item:first-child{
+        margin-right: 105px;
+    }
+    .personnel-policy__statisctics-number{
+        font-size: 94px;
+        line-height: 94px;  
+      
+    }
+    .personnel-policy__statisctics-percent{
+        font-size: 94px;
+        line-height: 94px;  
+     
+    }
+    .personnel-policy__subtitle{
+    
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .button--about{
+        padding: 20px 15px;
+        max-width: none;
+        font-size: 10px;
+        margin-top: 25px;
+       
+    }
+
+}
+
+
+@media(min-width:1280px){
+        
+    .personnel-policy{
+     
+        padding-top: 80px;
+        padding-bottom: 50px;
+    }
+    .parallax__img-wrap--personnel-policy{
+        --overflow: 50px;
+        height: calc(100% + (2 * var(--overflow))) !important; 
+        top: calc( -1 * var(--overflow));
+    }
+    .parallax__img--personnel-policy{
+      
+        background-position: center ;
+        
+    }
+   
+    .personnel-policy__desc{
+ 
+        padding-top: 20px;
+        width: 75%;
+    }
+
+   
+    .personnel-policy__statisctics-item{
+        margin-top: 35px;
+        
+    }
+    .personnel-policy__statisctics-item:first-child{
+        margin-right: 80px;
+    }
+    .personnel-policy__statisctics-number{
+        font-size: 125px;
+        line-height: 125px;
+      
+    }
+    .personnel-policy__statisctics-percent{
+        font-size: 125px;
+        line-height: 125px;
+     
+    }
+    .personnel-policy__subtitle{
+    
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .button--about{
+        padding: 32px 52px;
+        max-width: none;
+        font-size: 12px;
+        margin-top: 25px;
+       
+    }
+    
+}
+
+
+
+@media(min-width:1680px){
+        
+    .personnel-policy{
+     
+        padding-top: 90px;
+        padding-bottom: 125px;
+    }
+  
+   
+   
+    .personnel-policy__desc{
+ 
+        padding-top: 25px;
+        width: 65%;
+    }
+
+   
+    .personnel-policy__statisctics-item{
+        margin-top: 40px;
+        
+    }
+    .personnel-policy__statisctics-item:first-child{
+        margin-right: 135px;
+    }
+    .personnel-policy__statisctics-number{
+        font-size: 149px;
+        line-height: 149px;
+      
+    }
+    .personnel-policy__statisctics-percent{
+        font-size: 149px;
+        line-height: 149px;
+     
+    }
+    .personnel-policy__subtitle{
+    
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .button--about{
+        padding: 32px 52px;
+        max-width: none;
+        font-size: 14px;
+        margin-top: 40px;
+       
+    }
+    
+}

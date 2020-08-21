@@ -1,18 +1,47 @@
 @font-face {
   font-family: 'HeliosExtBlack';
+<<<<<<< HEAD
   src: url("../fonts/HeliosExtBlack_22347.ttf");
+=======
+  src: url("../fonts/heliosextblack_22347-webfont.eot");
+  src: local('HeliosExtBlack'), local('HeliosExtBlack'),
+    url('../fonts/heliosextblack_22347-webfont?#iefix') format('embedded-opentype'),
+    url('../fonts/heliosextblack_22347-webfont.woff2') format('woff2'),
+    url('../fonts/heliosextblack_22347-webfont.woff') format('woff'),
+    url('../fonts/HeliosExtBlack_22347.ttf') format('truetype');
+
+>>>>>>> origin/all-page
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: 'HeliosExtBold';
+<<<<<<< HEAD
   src: url("../fonts/HeliosExt-Bold.ttf");
+=======
+  src: url("../fonts/heliosext-bold-webfont.eot");
+  src: local('HeliosExtBold'), local('HeliosExtBold'),
+  url('../fonts/heliosext-bold-webfont?#iefix') format('embedded-opentype'),
+  url('../fonts/heliosext-bold-webfont.woff2') format('woff2'),
+  url('../fonts/heliosext-bold-webfont.woff') format('woff'),
+  url('../fonts/HeliosExt-Bold.ttf') format('truetype');
+
+>>>>>>> origin/all-page
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'HeliosExt';
+<<<<<<< HEAD
   src: url('../fonts/HeliosExt.ttf');
+=======
+  src: url("../../fonts/heliosext-webfont.eot");
+  src: local('HeliosExt'), local('HeliosExt'),
+    url('../fonts/heheliosext-webfont?#iefix') format('embedded-opentype'),
+    url('../fonts/heliosext-webfont.woff2') format('woff2'),
+    url('../fonts/heliosext-webfont.woff') format('woff'),
+    url('../fonts/HeliosExt.ttf') format('truetype');
+>>>>>>> origin/all-page
   font-weight: normal;
   font-style: normal;
 }

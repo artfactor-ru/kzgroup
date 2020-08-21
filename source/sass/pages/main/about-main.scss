@@ -3,7 +3,11 @@
 
 .main_about{
 
+<<<<<<< HEAD
 	// background-image: url(../img/bg-about.svg);
+=======
+	background-image: url(../img/main/about-main-bg.svg);
+>>>>>>> origin/all-page
 }
 
 
@@ -64,7 +68,11 @@
         background-image: none;
     }
 	
+<<<<<<< HEAD
 	.parallax__img--main_about{
+=======
+	.parallax__img--main{
+>>>>>>> origin/all-page
 
 		background-position: bottom  center;
 		background-size: contain;
@@ -96,36 +104,64 @@
 
 
 
+<<<<<<< HEAD
 	.parallax__img--main_about-1{
 		background-image: url(../img/img-parallax-1.svg);
 		background-position: bottom  center;
 		--overflow: -150px;
+=======
+	.parallax__img--main-1{
+		background-image: url(../img/main/img-parallax-1-main.svg);
+		background-position: bottom  center;
+		--overflow: -50px;
+>>>>>>> origin/all-page
 		// --overflow: -20%;
 		height: calc(660px + (2 * var(--overflow)));
 		top: calc( -1 * var(--overflow));
 		
 	}
+<<<<<<< HEAD
 	.parallax__img--main_about-2{
 		background-image: url(../img/img-parallax-2.svg);
 		// --overflow: -15%;
 		--overflow: -150px;
+=======
+	.parallax__img--main-2{
+		background-image: url(../img/main/img-parallax-2-main.svg);
+		// --overflow: -15%;
+		// --overflow: -150px;
+>>>>>>> origin/all-page
 		height: calc(660px + (2 * var(--overflow)));
 		top: calc( -1 * var(--overflow));
 		
 	}
+<<<<<<< HEAD
 	.parallax__img--main_about-3{
 		background-image: url(../img/img-parallax-3.svg);
 		// --overflow: -150px;
 		--overflow: -200px;
+=======
+	.parallax__img--main-3{
+		background-image: url(../img/main/img-parallax-3-main.svg);
+		--overflow: -50px;
+		// --overflow: 50px;
+>>>>>>> origin/all-page
 		// --overflow: -50%;
 		height: calc(660px + (2 * var(--overflow)));
 		top: calc( -1 * var(--overflow));
 	
 	}
+<<<<<<< HEAD
 	.parallax__img--main_about-4{
 		background-image: url(../img/img-parallax-4.svg);
 		// --overflow: -25%;
 		--overflow: -150px;
+=======
+	.parallax__img--main-4{
+		background-image: url(../img/main/img-parallax-4-main.svg);
+		// --overflow: -25%;
+		// --overflow: -150px;
+>>>>>>> origin/all-page
 		height: calc(660px + (2 * var(--overflow)));
 		top: calc( -1 * var(--overflow));
 	}
@@ -168,6 +204,7 @@
 		// background-size: 100% auto;
 	}
 
+<<<<<<< HEAD
 	.parallax__img--main_about-1{
 		background-image: url(../img/img-parallax-1.svg);
 		background-position: bottom  center;
@@ -201,6 +238,41 @@
 		height: calc(660px + (2 * var(--overflow)));
 		top: calc( -1 * var(--overflow));
 	}
+=======
+	// .parallax__img--main_about-1{
+	// 	background-image: url(../img/img-parallax-1.svg);
+	// 	background-position: bottom  center;
+	// 	--overflow: -150px;
+	// 	// --overflow: -20%;
+	// 	height: calc(660px + (2 * var(--overflow)));
+	// 	top: calc( -1 * var(--overflow));
+		
+	// }
+	// .parallax__img--main_about-2{
+	// 	background-image: url(../img/img-parallax-2.svg);
+	// 	// --overflow: -15%;
+	// 	--overflow: -0px;
+	// 	height: calc(960px + (2 * var(--overflow)));
+	// 	top: calc( -1 * var(--overflow));
+		
+	// }
+	// .parallax__img--main_about-3{
+	// 	background-image: url(../img/img-parallax-3.svg);
+	// 	// --overflow: -150px;
+	// 	--overflow: -300px;
+	// 	// --overflow: -50%;
+	// 	height: calc(960px + (2 * var(--overflow)));
+	// 	top: calc( -1 * var(--overflow));
+	
+	// }
+	// .parallax__img--main_about-4{
+	// 	background-image: url(../img/img-parallax-4.svg);
+	// 	// --overflow: -25%;
+	// 	--overflow: -200px;
+	// 	height: calc(960px + (2 * var(--overflow)));
+	// 	top: calc( -1 * var(--overflow));
+	// }
+>>>>>>> origin/all-page
 
 
 }
