@@ -115,10 +115,13 @@ function headerShowAndHideDesktop() {
 		}
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 	}else if(getCoords(twoScreen).top >= scrollbar.offset.y){
 		videoMain.play();
 	}
 >>>>>>> origin/all-page
+=======
+>>>>>>> 20f7783fa825798cc36ffb3033a5672419f12335
 =======
 >>>>>>> 20f7783fa825798cc36ffb3033a5672419f12335
 	
@@ -975,9 +978,14 @@ if(containerNavScroll){
 		let btnPlay = document.querySelector('.button__video-controls--play');
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 		
 >>>>>>> origin/all-page
 
+=======
+	
+	
+>>>>>>> 20f7783fa825798cc36ffb3033a5672419f12335
 =======
 	
 	
