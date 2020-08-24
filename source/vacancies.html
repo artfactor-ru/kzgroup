@@ -9,8 +9,37 @@
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
-<div class="scroll">
-    <div class="vacancies_wrapper">
+
+    <style>
+		.preloader{
+			background-color: #ffffff;
+			width: 100vw;
+			z-index: 20000;
+			height: 100vh;
+			height: calc(var(--vh, 1vh) * 100);
+			position: fixed;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		
+		}
+		.preloader__icon{
+			width: 130px;
+			height: 130px;
+			fill: none;
+			stroke-dasharray: 1000;
+			stroke-dashoffset: 1000;
+			animation: dash 6s linear 3s forwards infinite alternate;
+		}
+	</style>
+	<div class="preloader">
+		<svg class="preloader__icon"><use xlink:href="./img/sprite.svg#icon-logo-company"></use></svg>
+    </div>
+    
+    <header class="header"></header>
+    
+    <div class="scroll">
+      <div class="vacancies_wrapper two-screen">
         <section class="vacancies_hero">
             <div class="container">
                 <div class="vacancies_hero__block">

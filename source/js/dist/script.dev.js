@@ -987,7 +987,7 @@ document.onreadystatechange = function () {
           toggleClass: 'is-inview'
         });
       });
-    }, 9000);
+    }, 6000);
   }
 };
 
