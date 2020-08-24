@@ -33,21 +33,22 @@
                     </ul>
                 </nav>
         
-                <div class="press__content-container">
                     <section class="news">
-                        <div class="press-searchbar-container">
-                            <input type="text" placeholder="Поиск по всем событиям" name="search" class="press-searchbar">
-                        </div>     
-                        <div class="contain">
-                            <h2 class="news__title">Последние новости </h2>
+                        <div class="container press-news-title-container">
+                            <div class="press-searchbar-container">
+                                <input type="text" placeholder="Поиск по всем событиям" name="search" class="press-searchbar">
+                            </div>  
+                        </div>       
+                        <div class="container press-news-title-container">
+                            <h4 class="news__title press-news__title">Последние новости </h4>
                         </div>
                         
-                        <div class="container container--news ">
+                        <div class="container container--news">
                     
-                            <div class="swiper-container news__container" "="">
+                            <div class="swiper-container news__container">
 
                                 
-                                    <div class="swiper-wrapper press__news-wrapper">
+                                    <div class="swiper-wrapper press__news-wrapper ">
                                         <!-- Slides -->
                                         <div class="swiper-slide news__item press__news-item press-news__hover-item">
                                             <a class="news__link press-news__hover " href="#"></a>
@@ -100,17 +101,15 @@
                             </a>
                         </div>
                     </section>
-                </div>
             </div>
 
 
             <div class="press-video-container">
                 <div class="press-container">
                     <div class="press-video">
-                        <div class="press__content-container">
                             <section class="news">
                                                 
-                                <div class="contain ">
+                                <div class="container press-news-title-container">
                                     <h2 class="news__title press-video-font">Видео</h2>
                                 </div>
                                 
@@ -166,18 +165,18 @@
                                     
                                     </div>
                                 </div>
+                                <div class="press-button-more">
+                                    <a href="#" class="button-more--companies button-more is-inview-line press-button-more__video">
+                                        <span>смотреть все</span>
+                                    </a>
+                                </div>
                             </section>
-                        </div>
                     </div>
                 </div>
-                <div class="press-button-more">
-                    <a href="#" class="button-more--companies button-more is-inview-line press-button-more__video">
-                        <span>смотреть все</span>
-                    </a>
-                </div>
+                
             </div>
 
-            <div class="press-container">
+            <div class="container">
                 <div class="press-about-container">
                     <div class="press-about">
                         <div class="press-about__title"><h4>Пресса о нас</h4></div>
@@ -208,29 +207,20 @@
                             <p class="press-instagram__title-item">мы в instagram</p>
                         </div>
                         <a class="press-instagram__follow-us" href="https://www.instagram.com/kirovskyzavod/">#кировскийзавод</a>
-                        <div class="press-instagram__min-resolution-hide">
-                            <iframe src="https://averin.pro/widget.php?l=kirovskyzavod&style=1&width=250&gallery=1&s=80&icc=3&icr=4&t=0&tt=Мы в Инстаграм&h=0&ttcolor=FFFFFF&th=c3c3c3&bw=f9f9f9&bscolor=FFFFFF&bs=FF0000&ts=Подписаться&ch=utf8" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:350px; height: 490px"></iframe>
+                        <!--<div class="press-intagram__gallery-container">
+                            <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                            <div class="elfsight-app-e92c2104-8b26-4dea-8d02-20d934967c91"></div>
+                        </div> !-->
+
+
+
+                        <!--<div class="press-instagram__min-resolution">
+                            <iframe src="https://averin.pro/widget.php?l=kirovskyzavod&style=1&width=300&gallery=1&s=100&icc=3&icr=4&t=0&tt=Мы в Инстаграм&h=0&ttcolor=FFFFFF&th=c3c3c3&bw=f9f9f9&bscolor=FFFFFF&bs=FF0000&ts=Подписаться&ch=utf8" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:360px; height: 490px" ></iframe>
                         </div>
-                        <div class="press-instagram__min-resolution press-instagram__micro-resolution-hide">
-                            <!--<iframe src="https://averin.pro/widget.php?l=kirovskyzavod&style=1&width=250&gallery=1&s=100&icc=3&icr=2&t=0&tt=Мы в Инстаграм&h=0&ttcolor=FFFFFF&th=c3c3c3&bw=f9f9f9&bscolor=FFFFFF&bs=FF0000&ts=Подписаться&ch=utf8" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:350px; height: 490px" ></iframe> !-->
-                            <script>
-                                (function ($) {
-                                    $(window).on('load', function () {
-                                        $.instagramFeed({
-                                            'username': 'instagram', //Имя пользователя
-                                            'container': "#instafeed", //Контейнер для изображений
-                                            'display_profile': false, //Отображение профиля
-                                            'display_biography': false, //Отображение биографии
-                                            'display_gallery': true, //Отображение галереи
-                                            'styling': true, //Стандартные стили библиотеки
-                                            'items': 8, //Количество изображений в галереи
-                                            'items_per_row': 4, //Количество изображений в ряд
-                                            'margin': 0.5 //Отступ между изображениями
-                                        });
-                                    });
-                                })(jQuery);
-                            </script>
-                        </div>
+                        <div class="press-instagram__micro-resolution">
+                            <iframe src="https://averin.pro/widget.php?l=kirovskyzavod&style=1&width=300&gallery=1&s=120&icc=5&icr=2&t=0&tt=Мы в Инстаграм&h=0&ttcolor=FFFFFF&th=c3c3c3&bw=f9f9f9&bscolor=FFFFFF&bs=FF0000&ts=Подписаться&ch=utf8" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;" ></iframe>!
+                            <iframe src="https://averin.pro/widget.php?l=kirovskyzavod&style=1&width=350&gallery=1&s=150&icc=5&icr=2&t=0&tt=Мы в Инстаграм&h=0&ttcolor=FFFFFF&th=c3c3c3&bw=f9f9f9&bscolor=FFFFFF&bs=FF0000&ts=Подписаться&ch=utf8" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:600px; height: 250px" ></iframe>
+                        </div>!-->
                     </div>
                 </div>
             </div>
@@ -241,7 +231,7 @@
                 <div class="press__content-container">
                     <section class="news">
                                         
-                        <div class="contain ">
+                        <div class="container press-news-title-container">
                             <h2 class="news__title press-container-photo-title">Фото</h2>
                         </div>
                         
@@ -297,14 +287,14 @@
                                     
                             </div>
                         </div>
-                        <div class="press-button-more press-button-more__about">
+                        <div class="press-button-more press-button-more__news">
                             <a href="#" class="button-more--companies button-more is-inview-line press-button-more__news">
                                 <span>смотреть все</span>
                             </a>
                         </div>
                         <div class="press-photo-subscribe">
                             <button class="press-photo-subscribe-button">
-                                ПОДПИСАТЬСЯ НА НОВОСТИ
+                                подписаться на новости
                             </button>
                         </div>
                     </section>
@@ -320,7 +310,10 @@
                     <div class="press-contacts-field">
                         <div class="press-contacts__title"><p>Контакты</p> <p>пресс-центра</p></div>
                         <div class="press-contacts__name">Ключникова Екатерина Николаевна</div>
-                        <div class="press-contacts__phone"><a href="tel:+7(812)702-02-07">+7(812)702-02-07</a></div>
+                        <div class="press-contacts__phone">
+                            <p class="press-contacts__phone-title">Телефон/Факс:</p>
+                            <a href="tel:+7(812)702-02-07">+7(812)702-02-07</a>
+                        </div>
                         <div class="press-contacts__mail">
                             <a href="mailto:pr@kzgroup.ru">pr@kzgroup.ru</a><br>
                             <a href="mailto:Ekaterina.Klyuchnikova@kzgroup.ru">Ekaterina.Klyuchnikova@kzgroup.ru</a>
@@ -338,8 +331,8 @@
                                 <input type="tel" class="press-contact-us__form-phone" placeholder="Ваш телефон">
                                 <input type="text" class="press-contact-us__form-text" placeholder="Сообщение"><br>
                                 <div class="press-contact-us__form-button-container">
-                                    <input type="submit" class="press-contact-us__form-button" value="ОТПРАВИТЬ"> 
-                                    <p class="press-contact-us__form-button-description">Нажимая на кнопку "Отправить" вы принимаете<br> согласие на обработку персанальных данных</p>
+                                    <button class="press-contact-us__form-button">ОТПРАВИТЬ</button>
+                                    <p class="press-contact-us__form-button-description">Нажимая на кнопку "Отправить" вы принимаете согласие на обработку персанальных данных</p>
                                 </div>
 
                             </form>
@@ -349,7 +342,5 @@
             </div>
         </div>
         <script src="./js/script.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="js/jquery.instagramFeed.min.js"></script>
     </body>
 </html>
