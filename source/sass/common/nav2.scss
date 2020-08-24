@@ -141,6 +141,7 @@
 .nav_dropdown_list{
 	@include list-destroy;
 	padding-left: 20px;
+	padding-right: 20px;
 	padding-bottom: 10px;
 }
 .nav_dropdown_link{
@@ -148,7 +149,7 @@
 	font-family: $font-regular;
   color: #fff;
   text-decoration: none;
-  padding-bottom:10px;
+  padding-bottom:20px;
 	transition: transform .3s cubic-bezier(.4,0,.2,1);
 	font-size: 12px;
 	line-height: 14px;

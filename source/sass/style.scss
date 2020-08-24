@@ -26,6 +26,7 @@
 @import 'pages/kirovets/about-kirovets';
 @import 'pages/main/about-main';
 @import 'pages/about/about-strategy';
+@import 'pages/about/about-aboutcompany';
 
 
 @import 'pages/kirovets/advant';
@@ -51,7 +52,7 @@
 @import 'pages/about/property';
 @import 'pages/about/social-eco';
 
-
+@import 'pages/company_group/main-company-group';
 @import 'pages/company_group/_company-group';
 
 
@@ -74,9 +75,8 @@
 @import 'pages/vacancies/vacancies';
 @import 'pages/vacancies/vacancies-details';
 
-
-
 @import 'pages/press/press';
+
 body{
 	margin: 0;
 	padding: 0;

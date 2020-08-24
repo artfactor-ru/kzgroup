@@ -312,7 +312,8 @@
     overflow: hidden;
     width: 640px;
     height: 640px;
-    position: relative;
+	position: relative;
+	-webkit-mask-image: -webkit-radial-gradient(white, black);
    /* margin: 0 auto;*/
    /* z-index: 5;*/
 }

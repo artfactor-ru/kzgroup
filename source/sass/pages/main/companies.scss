@@ -17,11 +17,11 @@
 
 .swiper-slide--companies{
     transition: opacity 3s ease !important;
-    
+    overflow: visible !important;
     // transition-delay: 2s;
 }
 .swiper-slide--companies .swiper-slide-active{
-    transition: opacity 3s ease 1s!important;
+    transition: opacity 3s ease!important;
     z-index: 20;
 }
 .swiper-slide--companies-bg{
@@ -92,6 +92,11 @@
 	height: calc(100% + (2 * var(--overflow))) !important; 
 	top: calc( -1 * var(--overflow));
 }
+
+// .button-more--inner::before{
+//     transition-delay: 3s;
+// }
+
 @media(min-width:767px){
     .companies{
         margin-top: 60px;

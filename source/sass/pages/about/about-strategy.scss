@@ -15,17 +15,57 @@
         padding-bottom: 10px;
     }
     .strategy_about__desc{
-        width: 90%;
+        width: 95%;
      }
 }
 
 @media(min-width:1280px){
     .strategy_about{
         padding-bottom: 90px;
+        background-image: none;
     }
     .strategy_about__desc{
         width: 80%;
      }
+
+     .parallax__img--strategy{
+
+		background-position: bottom  center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		width: 100%;
+		position: absolute;
+		z-index: -1;
+	
+		
+	}
+
+     .parallax__img--strategy-1{
+		background-image: url(../img/about/about-parallax-2.2.svg);
+		background-position: bottom  center;
+		// --overflow: -70px;
+		// --overflow: -20%;
+		// height: calc(660px + (2 * var(--overflow)));
+		// top: calc( -1 * var(--overflow));
+		
+	}
+	.parallax__img--strategy-2{
+		background-image: url(../img/about/about-parallax-2.1.svg);
+		// --overflow: -15%;
+		// --overflow: 150px;
+		// height: calc(660px + (2 * var(--overflow)));
+		// top: calc( -1 * var(--overflow));
+		
+	}
+	// .parallax__img--aboutcompany-3{
+	// 	background-image: url(../img/about/about-parallax-first-3.svg);
+	// 	// --overflow: -150px;
+	// 	// --overflow: -200px;
+	// 	// --overflow: -50%;
+	// 	height: calc(660px + (2 * var(--overflow)));
+	// 	top: calc( -1 * var(--overflow));
+	
+	// }
 }
 
 @media(min-width:1680px){

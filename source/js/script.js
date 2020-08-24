@@ -97,15 +97,17 @@ function headerShowAndHideDesktop() {
 	let traktorsContainer = document.querySelector('.traktors__container');
 	let twoScreen = document.querySelector('.two-screen');
 	
-		if(videoMain){
+		// if(videoMain){
 		
-			if(getCoords(twoScreen).top < scrollbar.offset.y){
-				videoMain.pause();
+		// 	if(getCoords(twoScreen).top < scrollbar.offset.y){
+		// 		videoMain.pause();
 			
-			}else if(getCoords(twoScreen).top >= scrollbar.offset.y){
-				videoMain.play();
-			}
-		}
+		// 	}else if(getCoords(twoScreen).top >= scrollbar.offset.y){
+		// 		if(document.querySelector('.button__video-controls--play').classList.contains('active')) {
+		// 			videoMain.play();
+		// 		}
+		// 	}
+		// }
 	
 	
 	if(getCoords(header).top > 50 && getCoords(twoScreen).top >= scrollbar.offset.y){
@@ -289,8 +291,8 @@ if(containerNavScroll){
 	
 			swiperNews = new Swiper('.news__container',{
 				// autoHeight: true,
-				observer: true,
-					observeParents: true,
+				// observer: true,
+				// 	observeParents: true,
 				slidesPerView: 'auto',
 				spaceBetween: 0,
 				scrollbar: {
@@ -330,8 +332,8 @@ if(containerNavScroll){
 				spaceBetween: 20,
 				slidesPerView: 'auto',
 				autoHeight: true,
-				observer: true,
-					observeParents: true,
+				// observer: true,
+				// 	observeParents: true,
 				watchSlidesVisibility: true,
 				watchSlidesProgress: true,
 				breakpoints: {
@@ -345,9 +347,9 @@ if(containerNavScroll){
 	
 	
 			swiperCompanies = new Swiper('.swiper-container--companies',{
-				observer: true,
-				observeParents: true,
-				autoHeight: true,
+				// observer: true,
+				// observeParents: true,
+				// autoHeight: true,
 				thumbs: {
 					swiper: companiesThumbs
 				},
@@ -371,32 +373,87 @@ if(containerNavScroll){
 			
 			
 				gsap.utils.toArray('.swiper-slide-active .companies__title .title--inner').forEach(element => {
+					gsap.fromTo(element,{
+					y: '130%',
+					rotateX: "-40deg",
+					opacity: 0 
+						}, {
+							y: "0%",
+						rotateX: 0,
+						opacity: 1,
+			
+						duration: 1,
+						stagger: .13,
+						ease: "power3.out",
+						delay: 0,
 					
-						gsap.fromTo(element,{
+						}
+					);
+				});
+
+				gsap.utils.toArray('.swiper-slide:not(.swiper-slide-active) .companies__title .title--inner').forEach(element => {
+					gsap.fromTo(element,{
+					y: '0%',
+					rotateX: 0,
+					opacity: 1 
+						}, {
 							y: '130%',
-							rotateX: "-40deg",
-							opacity: 0 
-								}, {
-									y: "0%",
-								rotateX: 0,
-								opacity: 1,
+						rotateX: '-40deg',
+						opacity: 0,
+			
+						duration: 1,
+						stagger: .13,
+						ease: "power3.out",
+						delay: 0,
 					
-								duration: 1,
-								stagger: .13,
-								ease: "power3.out",
-								delay: 3,
-							
-								}
-							);
-						
+						}
+					);
+				});
+
+				gsap.utils.toArray('.swiper-slide-active .companies__desc').forEach(element => {
+					gsap.fromTo(element,{
+					// y: '-50%',
+					// rotateX: "-40deg",
+					opacity: 0 
+						}, {
+							// y: "0%",
+						// rotateX: 0,
+						opacity: 1,
+			
+						duration: 2,
+						stagger: .13,
+						ease: "power3.out",
+						delay: 2,
+					
+						}
+					);
 				});
 	
+				gsap.utils.toArray('.swiper-slide-active .button-more--inner').forEach(element => {
+					gsap.fromTo(element,{
+					// y: '-50%',
+					// rotateX: "-40deg",
+					opacity: 0 
+						}, {
+							// y: "0%",
+						// rotateX: 0,
+						opacity: 1,
+			
+						duration: 2,
+						stagger: .13,
+						ease: "power3.out",
+						delay: 2,
+					
+						}
+					);
+				});
 
 			});
 			swiperCompanies.on('slideNextTransitionStart', function () {
 				let btnCompanies = document.querySelectorAll('.swiper-slide-active .button-more--inner');
 				for(let i = 0; i<btnCompanies.length; i++){
 					btnCompanies[i].classList.add('is-inview-line');
+
 				}
 				
 				gsap.utils.toArray('.swiper-slide-active .companies__title .title--inner').forEach(element => {
@@ -412,36 +469,74 @@ if(containerNavScroll){
 						duration: 1,
 						stagger: .13,
 						ease: "power3.out",
-						delay: 3,
+						delay: 0,
+					
+						}
+					);
+				});
+
+
+
+				gsap.utils.toArray('.swiper-slide:not(.swiper-slide-active) .companies__title .title--inner').forEach(element => {
+					gsap.fromTo(element,{
+					y: '0%',
+					rotateX: 0,
+					opacity: 1 
+						}, {
+							y: '130%',
+						rotateX: '-40deg',
+						opacity: 0,
+			
+						duration: 1,
+						stagger: .13,
+						ease: "power3.out",
+						delay: 0,
 					
 						}
 					);
 				});
 				
-	
+				gsap.utils.toArray('.swiper-slide-active .companies__desc').forEach(element => {
+					gsap.fromTo(element,{
+					// y: '-50%',
+					// rotateX: "-40deg",
+					opacity: 0 
+						}, {
+							// y: "0%",
+						// rotateX: 0,
+						opacity: 1,
+			
+						duration: 2,
+						stagger: .13,
+						ease: "power3.out",
+						delay: 2,
+					
+						}
+					);
+				});
+				
+				gsap.utils.toArray('.swiper-slide-active .button-more--inner').forEach(element => {
+					gsap.fromTo(element,{
+					// y: '-50%',
+					// rotateX: "-40deg",
+					opacity: 0 
+						}, {
+							// y: "0%",
+						// rotateX: 0,
+						opacity: 1,
+			
+						duration: 2,
+						stagger: .13,
+						ease: "power3.out",
+						delay: 2,
+					
+						}
+					);
+				});
 			
 			
 			});
-			// swiperCompanies.on('slideChangeTransitionStart', function () {
-			// 	gsap.utils.toArray('.companies__title .title--inner').forEach(element => {
-			// 		gsap.fromTo(element,{
-			// 		y: '130%',
-			// 		rotateX: "-40deg",
-			// 		opacity: 0 
-			// 			}, {
-			// 				y: "0%",
-			// 			rotateX: 0,
-			// 			opacity: 1,
 			
-			// 			duration: 4,
-			// 			stagger: .13,
-			// 			ease: "power3.out",
-			// 			delay: 1,
-					
-			// 			}
-			// 		);
-			// 	});
-			// });
 			
 		}
 		if(document.querySelector('.swiper-container--hero')){
@@ -871,6 +966,18 @@ if(containerNavScroll){
 	// Анимация
 	document.addEventListener('DOMContentLoaded', function(){
 		gsap.utils.toArray('.traktors__number-icon').forEach(element => {
+			ScrollTrigger.create({
+				trigger: element,
+				scrub: true,
+				toggleClass: 'is-inview',
+				// this toggles the class again when you scroll back up:
+				toggleActions: 'play none none none',
+				// this removes the class when the scrolltrigger is passed:
+				// once: true,
+			});
+		});
+
+		gsap.utils.toArray('.company_group__item-icon').forEach(element => {
 			ScrollTrigger.create({
 				trigger: element,
 				scrub: true,
