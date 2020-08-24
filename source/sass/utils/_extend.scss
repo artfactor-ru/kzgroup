@@ -607,3 +607,33 @@
 	
 	}
 }
+
+
+.hover-underline-example {
+	position: relative;
+	cursor: pointer;
+	font-family: $font-regular;
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #616161;
+	border: none;
+	background-color: transparent;
+	margin-left: 50px;
+	transition: .8s;
+	padding-bottom: 12px;
+}
+
+.hover-underline-example:before {
+	content:'';
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 0;
+	height: 1px;
+	background: #616161;
+	transition: all 0.6s ease;
+}
+
+.hover-underline-example:hover:before {
+	width: 100%;
+}
