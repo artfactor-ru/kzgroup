@@ -823,167 +823,174 @@ if (videoMain) {
 } // Анимация
 
 
-document.addEventListener('DOMContentLoaded', function () {
-  _gsap.gsap.utils.toArray('.traktors__number-icon').forEach(function (element) {
-    _ScrollTrigger.ScrollTrigger.create({
-      trigger: element,
-      scrub: true,
-      toggleClass: 'is-inview',
-      // this toggles the class again when you scroll back up:
-      toggleActions: 'play none none none' // this removes the class when the scrolltrigger is passed:
-      // once: true,
+document.onreadystatechange = function () {
+  if (document.readyState === "complete") {
+    setTimeout(function () {
+      document.querySelector('.preloader').style.display = "none";
 
-    });
-  });
+      _gsap.gsap.utils.toArray('.traktors__number-icon').forEach(function (element) {
+        _ScrollTrigger.ScrollTrigger.create({
+          trigger: element,
+          scrub: true,
+          toggleClass: 'is-inview',
+          // this toggles the class again when you scroll back up:
+          toggleActions: 'play none none none' // this removes the class when the scrolltrigger is passed:
+          // once: true,
 
-  _gsap.gsap.utils.toArray('.company_group__item-icon').forEach(function (element) {
-    _ScrollTrigger.ScrollTrigger.create({
-      trigger: element,
-      scrub: true,
-      toggleClass: 'is-inview',
-      // this toggles the class again when you scroll back up:
-      toggleActions: 'play none none none' // this removes the class when the scrolltrigger is passed:
-      // once: true,
+        });
+      });
 
-    });
-  });
+      _gsap.gsap.utils.toArray('.company_group__item-icon').forEach(function (element) {
+        _ScrollTrigger.ScrollTrigger.create({
+          trigger: element,
+          scrub: true,
+          toggleClass: 'is-inview',
+          // this toggles the class again when you scroll back up:
+          toggleActions: 'play none none none' // this removes the class when the scrolltrigger is passed:
+          // once: true,
 
-  _gsap.gsap.utils.toArray('.property__pic').forEach(function (element) {
-    _ScrollTrigger.ScrollTrigger.create({
-      trigger: element,
-      // scrub: true,
-      toggleClass: 'is-inview' // this toggles the class again when you scroll back up:
-      // toggleActions: 'play none none none',
-      // this removes the class when the scrolltrigger is passed:
-      // once: true,
+        });
+      });
 
-    });
-  });
+      _gsap.gsap.utils.toArray('.property__pic').forEach(function (element) {
+        _ScrollTrigger.ScrollTrigger.create({
+          trigger: element,
+          // scrub: true,
+          toggleClass: 'is-inview' // this toggles the class again when you scroll back up:
+          // toggleActions: 'play none none none',
+          // this removes the class when the scrolltrigger is passed:
+          // once: true,
 
-  _gsap.gsap.utils.toArray('.traktors__info-wrap').forEach(function (element) {
-    _ScrollTrigger.ScrollTrigger.create({
-      trigger: element,
-      start: 'bottom bottom',
-      scrub: true,
-      toggleClass: 'is-inview-line',
-      // this toggles the class again when you scroll back up:
-      toggleActions: 'play none none none' // this removes the class when the scrolltrigger is passed:
-      // once: true,
+        });
+      });
 
-    });
-  });
+      _gsap.gsap.utils.toArray('.traktors__info-wrap').forEach(function (element) {
+        _ScrollTrigger.ScrollTrigger.create({
+          trigger: element,
+          start: 'bottom bottom',
+          scrub: true,
+          toggleClass: 'is-inview-line',
+          // this toggles the class again when you scroll back up:
+          toggleActions: 'play none none none' // this removes the class when the scrolltrigger is passed:
+          // once: true,
 
-  _gsap.gsap.utils.toArray('.title--inner-main').forEach(function (element) {
-    _gsap.gsap.fromTo(element, {
-      y: '130%',
-      rotateX: "-40deg",
-      opacity: 0
-    }, {
-      y: "0%",
-      rotateX: 0,
-      opacity: 1,
-      duration: 2,
-      stagger: .13,
-      ease: "power3.out",
-      delay: .2
-    });
-  });
+        });
+      });
 
-  _gsap.gsap.utils.toArray('.title--inner').forEach(function (element) {
-    _gsap.gsap.fromTo(element, {
-      y: '130%',
-      rotateX: "-40deg",
-      opacity: 0
-    }, {
-      y: "0%",
-      rotateX: 0,
-      opacity: 1,
-      duration: 2,
-      stagger: .13,
-      ease: "power3.out",
-      delay: .2,
-      // force3D: true,
-      scrollTrigger: {
-        trigger: element,
-        // scrub: true,
-        start: "bottom bottom"
-      }
-    });
-  });
+      _gsap.gsap.utils.toArray('.title--inner-main').forEach(function (element) {
+        _gsap.gsap.fromTo(element, {
+          y: '130%',
+          rotateX: "-40deg",
+          opacity: 0
+        }, {
+          y: "0%",
+          rotateX: 0,
+          opacity: 1,
+          duration: 2,
+          stagger: .13,
+          ease: "power3.out",
+          delay: .2
+        });
+      });
 
-  _gsap.gsap.fromTo(".footer__outer", {
-    y: '-20%'
-  }, {
-    y: "0%",
-    duration: 0.3,
-    ease: "none",
-    // pin: true,
-    // force3D: true,
-    scrollTrigger: {
-      trigger: ".footer",
-      start: 'top bottom',
-      // pin: true,
-      toggleActions: "play reverse play reverse" // scrub: true,
-      // pinSpacing: false
-      // start: "top c"
+      _gsap.gsap.utils.toArray('.title--inner').forEach(function (element) {
+        _gsap.gsap.fromTo(element, {
+          y: '130%',
+          rotateX: "-40deg",
+          opacity: 0
+        }, {
+          y: "0%",
+          rotateX: 0,
+          opacity: 1,
+          duration: 2,
+          stagger: .13,
+          ease: "power3.out",
+          delay: .2,
+          // force3D: true,
+          scrollTrigger: {
+            trigger: element,
+            // scrub: true,
+            start: "bottom bottom"
+          }
+        });
+      });
 
-    }
-  });
+      _gsap.gsap.fromTo(".footer__outer", {
+        y: '-20%'
+      }, {
+        y: "0%",
+        duration: 0.3,
+        ease: "none",
+        // pin: true,
+        // force3D: true,
+        scrollTrigger: {
+          trigger: ".footer",
+          start: 'top bottom',
+          // pin: true,
+          toggleActions: "play reverse play reverse" // scrub: true,
+          // pinSpacing: false
+          // start: "top c"
 
-  _gsap.gsap.utils.toArray('.statictics--inner').forEach(function (element) {
-    _gsap.gsap.fromTo(element, {
-      opacity: 0,
-      y: "25px"
-    }, {
-      y: "0%",
-      duration: 1,
-      opacity: 1,
-      // stagger: .2,
-      // ease: "ease",
-      scrollTrigger: {
-        trigger: element,
-        // scrub: true,
-        start: "bottom bottom"
-      }
-    });
-  });
+        }
+      });
 
-  _gsap.gsap.utils.toArray('.hero__subtitle').forEach(function (element) {
-    _gsap.gsap.fromTo(element, {
-      y: '-50%',
-      // rotateX: "-40deg",
-      opacity: 0
-    }, {
-      y: "0%",
-      // rotateX: 0,
-      opacity: 1,
-      duration: 2,
-      // stagger: .13,
-      ease: "power3.out",
-      delay: 2
-    });
-  });
+      _gsap.gsap.utils.toArray('.statictics--inner').forEach(function (element) {
+        _gsap.gsap.fromTo(element, {
+          opacity: 0,
+          y: "25px"
+        }, {
+          y: "0%",
+          duration: 1,
+          opacity: 1,
+          // stagger: .2,
+          // ease: "ease",
+          scrollTrigger: {
+            trigger: element,
+            // scrub: true,
+            start: "bottom bottom"
+          }
+        });
+      });
 
-  _gsap.gsap.utils.toArray('.button-more').forEach(function (element) {
-    _ScrollTrigger.ScrollTrigger.create({
-      trigger: element,
-      start: 'bottom bottom',
-      scrub: true,
-      toggleClass: 'is-inview-line',
-      // this toggles the class again when you scroll back up:
-      toggleActions: 'play none none none' // this removes the class when the scrolltrigger is passed:
-      // once: true,
+      _gsap.gsap.utils.toArray('.hero__subtitle').forEach(function (element) {
+        _gsap.gsap.fromTo(element, {
+          y: '-50%',
+          // rotateX: "-40deg",
+          opacity: 0
+        }, {
+          y: "0%",
+          // rotateX: 0,
+          opacity: 1,
+          duration: 2,
+          // stagger: .13,
+          ease: "power3.out",
+          delay: 2
+        });
+      });
 
-    });
-  });
+      _gsap.gsap.utils.toArray('.button-more').forEach(function (element) {
+        _ScrollTrigger.ScrollTrigger.create({
+          trigger: element,
+          start: 'bottom bottom',
+          scrub: true,
+          toggleClass: 'is-inview-line',
+          // this toggles the class again when you scroll back up:
+          toggleActions: 'play none none none' // this removes the class when the scrolltrigger is passed:
+          // once: true,
 
-  _gsap.gsap.utils.toArray('.button-line').forEach(function (element) {
-    _ScrollTrigger.ScrollTrigger.create({
-      trigger: element,
-      toggleClass: 'is-inview'
-    });
-  });
-});
+        });
+      });
+
+      _gsap.gsap.utils.toArray('.button-line').forEach(function (element) {
+        _ScrollTrigger.ScrollTrigger.create({
+          trigger: element,
+          toggleClass: 'is-inview'
+        });
+      });
+    }, 9000);
+  }
+};
+
 var socialContainer = document.querySelector('.social__btn-list');
 
 if (socialContainer) {
@@ -1053,8 +1060,8 @@ var _loop5 = function _loop5(_i16) {
 
   var numbers = number.querySelectorAll('.traktors__number-icon');
 
-  for (var _i17 = 0; _i17 < numbers.length; _i17++) {
-    numbers[_i17].classList.remove('is-inview');
+  for (var _i18 = 0; _i18 < numbers.length; _i18++) {
+    numbers[_i18].classList.remove('is-inview');
   }
 
   btnMore[_i16].addEventListener('click', function (event) {
@@ -1062,8 +1069,8 @@ var _loop5 = function _loop5(_i16) {
 
     popup[_i16].classList.add('active');
 
-    for (var _i18 = 0; _i18 < numbers.length; _i18++) {
-      numbers[_i18].classList.add('is-inview');
+    for (var _i19 = 0; _i19 < numbers.length; _i19++) {
+      numbers[_i19].classList.add('is-inview');
     }
 
     var btnBack = popup[_i16].querySelector('.popup_kirovets__back');
@@ -1071,8 +1078,8 @@ var _loop5 = function _loop5(_i16) {
     btnBack.addEventListener('click', function (event) {
       popup[_i16].classList.remove('active');
 
-      for (var _i19 = 0; _i19 < numbers.length; _i19++) {
-        numbers[_i19].classList.remove('is-inview');
+      for (var _i20 = 0; _i20 < numbers.length; _i20++) {
+        numbers[_i20].classList.remove('is-inview');
       }
     });
 
@@ -1081,8 +1088,8 @@ var _loop5 = function _loop5(_i16) {
     btnClose.addEventListener('click', function (event) {
       popup[_i16].classList.remove('active');
 
-      for (var _i20 = 0; _i20 < numbers.length; _i20++) {
-        numbers[_i20].classList.remove('is-inview');
+      for (var _i21 = 0; _i21 < numbers.length; _i21++) {
+        numbers[_i21].classList.remove('is-inview');
       }
     });
   });
@@ -1186,3 +1193,24 @@ if (document.querySelector('.geography')) {
 
   var intervalID = startTogglingActiveClass();
 }
+
+if (screen.width >= 1280) {
+  (function () {
+    var body = document.body;
+    var parallaxHor = document.querySelectorAll(".parallax__img--horizontal");
+
+    var _loop6 = function _loop6(_i17) {
+      body.addEventListener('mousemove', function (e) {
+        var speed = parallaxHor[_i17].getAttribute('data-speed');
+
+        var x = -(e.pageX + this.offsetLeft) / speed;
+        parallaxHor[_i17].style.transform = 'translate3d(' + x + 'px,' + '0px, 0px)'; // blobs[0].style.transform = 'translate3d(' + -x + 'px,' + -y + 'px, 0px)';
+      });
+    };
+
+    for (var _i17 = 0; _i17 < parallaxHor.length; _i17++) {
+      _loop6(_i17);
+    }
+  })();
+} // let preloader = document.querySelector('.preloader');
+// preloader.classList.add('animate');

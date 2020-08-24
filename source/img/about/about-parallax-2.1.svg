@@ -1,6 +1,6 @@
 <svg width="2500" height="960" viewBox="0 0 2500 960" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0)">
-<rect width="2500" height="960" fill="white"/>
+<rect width="2500" height="960" fill="transparent"/>
 <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="849" y="196" width="1057" height="528">
 <rect x="849.5" y="196" width="1056" height="528" fill="#C4C4C4"/>
 </mask>
