@@ -3,19 +3,15 @@
   height: 100%;
 }
 
+
 .vacancies-d__breadcrumb {
+  display: block;
   font-family: $font-regular;
   font-size: 18px;
   color: #616161;
   transition: .4s;
   svg path {
     transition: .4s;
-  }
-  &:hover {
-    color: #000000;
-  }
-  &:hover svg path {
-    fill: #000;
   }
 }
 
@@ -268,12 +264,21 @@
     margin-bottom: 15px;
     display: flex;
     align-items: end;
+    transition: .4s;
+    &:hover {
+      opacity: 0.5;
+    }
     & div p {
       margin-top: 20px;
     }
   }
   &-icon {
     margin-right: 20px;
+    width: 20px;
+    height: 20px;
+    &:first-child {
+      width: 30px;
+    }
   }
   &-map {
     width: 50%;
@@ -542,7 +547,7 @@
   }
   .vacancies-d__form {
     width: 100%;
-    height: 100vh;
+    height: 85%;
   }
   .vacancies-d__form-label input {
     width: 320px;
@@ -599,6 +604,9 @@
 }
 
 @media screen and (max-width: 415px) {
+  .vacancies-d__form {
+    height: 95%;
+  }
   .vacancies-d__build-point {
     width: 69px;
     right: 13%;
@@ -645,6 +653,31 @@
   .vacancies-d__form-label input {
     height: 35px;
     width: 98%;
+  }
+}
+
+@media screen and (max-width: 361px) {
+  .vacancies-d__form  {
+    height: 650px;
+    & h2 {
+      font-size: 18px;
+      margin-left: 0;
+      width: 100%;
+      padding-left: 35px;
+    }
+  }
+  .vacancies-d__download-status {
+    font-size: 10px;
+  }
+  .vacancies-d__form-buttons--block .vacancies-d__download {
+    margin-right: 30px;
+    padding-bottom: 5px;
+  }
+  .vacancies-d__response {
+    padding: 15px 55px;
+  }
+  .vacancies-d__form-buttons--block:first-child {
+    margin-bottom: 15px;
   }
 }
 
