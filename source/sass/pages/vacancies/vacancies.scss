@@ -335,12 +335,12 @@
 }
 
 @media screen and (max-width: 1441px) {
-  .vacancies_tabs button, .vacancies_vacancy-desc {
+  .tabs-common button, .vacancies_vacancy-desc {
     font-size: 20px;
   }
 }
 @media screen and (max-width: 1367px) {
-  .vacancies_tabs button, .vacancies_vacancy-desc, .vacancies_vacancy-desc h5 {
+  .tabs-common button, .vacancies_vacancy-desc, .vacancies_vacancy-desc h5 {
     font-size: 20px;
   }
   .vacancies_info__item {
@@ -361,7 +361,7 @@
   .vacancies_care__desc {
     font-size: 16px;
   }
-  .vacancies_tabs button {
+  .tabs-common button {
     font-size: 18px;
   }
   .vacancies_hero__title {
@@ -385,7 +385,7 @@
   .vacancies_hero__btn {
     padding: 20px 40px;
   }
-  .vacancies_tabs button {
+  .tabs-common button {
     font-size: 14px;
   }
   .vacancies_vacancy-desc, .vacancies_vacancy-desc h5 {
@@ -394,7 +394,7 @@
   .vacancies_vacancy-desc {
     padding: 30px 0;
   }
-  .vacancies_tabs button {
+  .tabs-common button {
     padding-bottom: 20px;
   }
   .vacancies_pagination__link {
@@ -441,6 +441,9 @@
 }
 
 @media screen and (max-width: 769px) {
+  .vacancies_hero__btn {
+    width: 310px;
+  }
   .vacancies_hero {
     height: 508px;
   }
@@ -471,18 +474,21 @@
   .vacancies_vacancies {
     padding-bottom: 0;
   }
-  .vacancies_tabs {
+  .tabs-common {
     position: relative;
     height: 42px;
     overflow-x: scroll;
   }
-  .vacancies_tabs-container {
+  .tabs-common-container {
     width: 900px;
     position: absolute;
   }
 }
 
 @media screen and (max-width: 481px) {
+  .vacancies_hero__btn {
+    width: unset;
+  }
   .vacancies_hero__title {
     font-size: 32px;
     margin-bottom: 0;
@@ -508,7 +514,7 @@
   .vacancies_info__icon {
     margin-right: 10px;
   }
-  .vacancies_tabs button {
+  .tabs-common button {
     font-size: 12px;
     padding-bottom: 10px;
   }
@@ -538,11 +544,11 @@
   .vacancies_care__name {
     margin: 10px 0;
   }
-  .vacancies_tabs-container {
+  .tabs-common-container {
     width: 750px;
   }
 
-  .vacancies_tabs {
+  .tabs-common {
     height: 32px;
   }
 }
@@ -557,17 +563,17 @@
   .vacancies_info__link {
     font-size: 14px;
   }
-  .vacancies_tabs button.active, .vacancies_tabs button:hover {
+  .tabs-common button.active, .tabs-common button:hover {
     border-bottom: 4px solid #c30215;
   }
-  .vacancies_tabs-container {
+  .tabs-common-container {
     width: 700px;
   }
 
 }
 
 @media screen and (max-width: 376px) {
-  .vacancies_tabs {
+  .tabs-common {
     height: 30px;
   }
 }
