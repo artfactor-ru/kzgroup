@@ -17,6 +17,167 @@
                 вернуться к списку вакансий
             </a>
             <h1 class="vac-d__main-title">Контролер станочных и слесарных работ</h1>
+            <div class="vac-d__content">
+                <div class="vad-d__nav">
+                    <ul class="vad-d__nav-list">
+                        <li class="vac-d__nav-item">Личные данные</li>
+                        <li class="vac-d__nav-item">Образование</li>
+                        <li class="vac-d__nav-item">Опыт работы</li>
+                    </ul>
+                </div>
+                <form class="vac-d__form">
+                    <div class="vac-d__form-desc">Уважаемый кандидат, заполните, пожалуйста, приведенную ниже форму. Благодарим Вас за проявленный интерес к нашей компании.
+                        Ваше резюме будет обязательно рассмотрено в ближайшее время.
+                        Если уровень квалификации соответствует имеющимся на данный момент вакансиям, то сотрудник дирекции по персоналу обязательно с Вами свяжется.
+                    </div>
+                    <div class="vac-d__form-block">
+                        <h5 class="vac-d__form-title">1. Личные данные</h5>
+                        <label class="vac-d__form-label">
+                            <span>Фамилия</span>
+                            <input type="text" placeholder="Петров" required="required">
+                        </label>
+                        <label class="vac-d__form-label">
+                            <span>Имя</span>
+                            <input type="text" placeholder="Андрей">
+                        </label>
+                        <label class="vac-d__form-label">
+                            <span>Отчество</span>
+                            <input type="text" placeholder="Петрович">
+                        </label>
+                        <label class="vac-d__form-label">
+                            <span>Город проживания</span>
+                            <input type="text" placeholder="Санкт-Петербург">
+                        </label>
+                        <label class="vac-d__form-label">
+                            <span>Гражданство</span>
+                            <input type="text" placeholder="РФ">
+                        </label>
+                        <label class="vac-d__form-label">
+                            <span>E-mail</span>
+                            <input type="email" placeholder="Санкт-Петербург">
+                        </label>
+                        <label class="vac-d__form-label">
+                            <span>Телефон</span>
+                            <input type="number" placeholder="+7 (___)___-__-__">
+                        </label>
+                    </div>
+                    <div class="vac-d__form-block">
+                        <h5 class="vac-d__form-title">2. Образование</h5>
+                        <label class="vac-d__form-label">
+                            <span>Образование</span>
+                            <select name="education">
+                                <option value="school">Общее</option>
+                                <option value="middle">Среднее</option>
+                                <option value="middle-prof">Среднее профессиональное</option>
+                                <option value="high">Высшее</option>
+                            </select>
+                        </label>
+                        <label class="vac-d__form-label">
+                            <span>Учебное заведение </span>
+                            <input type="text">
+                        </label>
+                        <label class="vac-d__form-label">
+                            <span>Факультет</span>
+                            <input type="text">
+                        </label>
+                        <label class="vac-d__form-label">
+                            <span>Специализация</span>
+                            <input type="text">
+                        </label>
+                        <label class="vac-d__form-label">
+                            <span>Год окончания</span>
+                            <input type="text">
+                        </label>
+                        <button class="vad-d__form-education-btn">Указать ещё одно место обучения</button>
+                    </div>
+                    <div class="vac-d__form-block">
+                        <h5 class="vac-d__form-title">3. Опыт работы</h5>
+
+                        <label class="vac-d__form-label">
+                            <span>Профессиональный стаж</span>
+                            <input type="text">
+                        </label>
+                        <label class="vac-d__form-label">
+                            <span>Начало работы</span>
+                            <div class="vac-d__form-date">
+                                <select name="work-month" class="vac-d__form-date__month">
+                                    <option value="january">Январь</option>
+                                    <option value="february">Феварь</option>
+                                    <option value="march">Март</option>
+                                    <option value="april">Апрель</option>
+                                    <option value="may">Май</option>
+                                    <option value="june">Июнь</option>
+                                    <option value="july">Июль</option>
+                                    <option value="august">Август</option>
+                                    <option value="september">Сентябрь</option>
+                                    <option value="october">Октябрь</option>
+                                    <option value="november">Ноябрь</option>
+                                    <option value="december">Декабрь</option>
+                                </select>
+                                <input type="text" placeholder="Год">
+                            </div>
+                        </label>
+                        <label for="">
+                            <input type="checkbox" name="current-time" id="">
+                            <span>По настоящее время</span>
+                        </label>
+                        <label class="vac-d__form-label">
+                            <span>Окончание</span>
+                            <div class="vac-d__form-date">
+                                <select name="work-month" class="vac-d__form-date__month">
+                                    <option value="january">Январь</option>
+                                    <option value="february">Феварь</option>
+                                    <option value="march">Март</option>
+                                    <option value="april">Апрель</option>
+                                    <option value="may">Май</option>
+                                    <option value="june">Июнь</option>
+                                    <option value="july">Июль</option>
+                                    <option value="august">Август</option>
+                                    <option value="september">Сентябрь</option>
+                                    <option value="october">Октябрь</option>
+                                    <option value="november">Ноябрь</option>
+                                    <option value="december">Декабрь</option>
+                                </select>
+                                <input type="text" placeholder="Год">
+                            </div>
+                        </label>
+                        <label class="vac-d__form-label">
+                            <span>Организация</span>
+                            <input type="text">
+                        </label>
+                        <label class="vac-d__form-label">
+                            <span>Должность</span>
+                            <input type="text">
+                        </label>
+                        <label class="vac-d__form-label">
+                            <span>Обязанности на работе</span>
+                            <textarea></textarea>
+                        </label>
+                        <button class="vad-d__form-education-btn">Добавить место работы</button>
+                        <label class="vac-d__form-label">
+                            <span>Ключевые навыки</span>
+                            <textarea></textarea>
+                        </label>
+                        <label class="vac-d__form-label">
+                            <span>Дополнительная информация</span>
+                            <textarea></textarea>
+                        </label>
+                        <div class="vacancies-d__form-buttons--block">
+                            <button class="vacancies-d__download">Загрузить резюме</button>
+                            <p class="vacancies-d__download-status">Файл не выбран</p>
+                        </div>
+                        <div class="vacancies-d__form-buttons--block">
+                            <button class="button vacancies-d__response vacancies-d__submit" type="submit">
+                                Откликнуться
+                                <div class=" button-line button-line--first"></div>
+                                <div class=" button-line button-line--two"></div>
+                            </button>
+                            <p class="vacancies-d__license">Нажимая на кнопку откликнуться, вы принимаете <a href="#0">согласие на обработку персональных данных</a></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
         </div>
     </div>
 </div>
