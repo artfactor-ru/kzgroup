@@ -1,7 +1,7 @@
 .aboutcompany_about {
   background-image: url(../img/about/about-parallax-fisrt-bg.svg);
   padding-bottom: 80px;
-  background-size: contain;
+  background-size: cover;
 }
 
 .parallax__img--aboutcompany {
@@ -14,6 +14,10 @@
 }
 
 @media (min-width: 767px) {
+  .aboutcompany_about {
+    background-size: cover;
+  }
+
   .parallax__img--aboutcompany {
     background-position: bottom center;
     background-size: auto 505px;

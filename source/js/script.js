@@ -780,24 +780,7 @@ if(containerNavScroll){
 				}
 				
 			
-					// Анимация элементов
-				gsap.utils.toArray('.is-animate').forEach(element => {
-
-					let parallax = element.getAttribute('data-speed');
-					let speed = parallax * 100 + '%';
-					gsap.fromTo(element, {
-						// duration: 5,
-						y: speed
-					}, {
-						y: "0%",
-						force3D: true,
-						scrollTrigger: {
-							trigger: element,
-							scrub: true,
-							// start: "top top"
-						} 
-					});
-				});
+					
 
 				btnMore = document.querySelectorAll('.traktors__text-wrap--desktop .button-more--traktors');
 
@@ -1041,7 +1024,7 @@ if(containerNavScroll){
 		
 				gsap.utils.toArray('.title--inner').forEach(element => {
 					gsap.fromTo(element,{
-					y: '130%',
+					y: '110%',
 					rotateX: "-40deg",
 					opacity: 0 
 						}, {
@@ -1381,6 +1364,26 @@ if(screen.width>=1280){
 			// blobs[0].style.transform = 'translate3d(' + -x + 'px,' + -y + 'px, 0px)';
 		})
 	}
+
+
+	// Анимация элементов
+	gsap.utils.toArray('.is-animate').forEach(element => {
+
+		let parallax = element.getAttribute('data-speed');
+		let speed = parallax * 100 + '%';
+		gsap.fromTo(element, {
+			// duration: 5,
+			y: speed
+		}, {
+			y: "0%",
+			force3D: true,
+			scrollTrigger: {
+				trigger: element,
+				scrub: true,
+				// start: "top top"
+			} 
+		});
+	});
 }
 
 

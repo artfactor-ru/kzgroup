@@ -672,26 +672,7 @@ var breakpointChecker = function breakpointChecker() {
 
         InnerSliders[_i8].removeEventListener('mouseout', setMainSwiperMouseOut);
       }
-    } // Анимация элементов
-
-
-    _gsap.gsap.utils.toArray('.is-animate').forEach(function (element) {
-      var parallax = element.getAttribute('data-speed');
-      var speed = parallax * 100 + '%';
-
-      _gsap.gsap.fromTo(element, {
-        // duration: 5,
-        y: speed
-      }, {
-        y: "0%",
-        force3D: true,
-        scrollTrigger: {
-          trigger: element,
-          scrub: true // start: "top top"
-
-        }
-      });
-    });
+    }
 
     btnMore = document.querySelectorAll('.traktors__text-wrap--desktop .button-more--traktors');
   } else if (breakpoint.matches === false) {
@@ -895,7 +876,7 @@ document.onreadystatechange = function () {
 
       _gsap.gsap.utils.toArray('.title--inner').forEach(function (element) {
         _gsap.gsap.fromTo(element, {
-          y: '130%',
+          y: '110%',
           rotateX: "-40deg",
           opacity: 0
         }, {
@@ -1210,7 +1191,26 @@ if (screen.width >= 1280) {
 
     for (var _i17 = 0; _i17 < parallaxHor.length; _i17++) {
       _loop6(_i17);
-    }
+    } // Анимация элементов
+
+
+    _gsap.gsap.utils.toArray('.is-animate').forEach(function (element) {
+      var parallax = element.getAttribute('data-speed');
+      var speed = parallax * 100 + '%';
+
+      _gsap.gsap.fromTo(element, {
+        // duration: 5,
+        y: speed
+      }, {
+        y: "0%",
+        force3D: true,
+        scrollTrigger: {
+          trigger: element,
+          scrub: true // start: "top top"
+
+        }
+      });
+    });
   })();
 } // let preloader = document.querySelector('.preloader');
 // preloader.classList.add('animate');
