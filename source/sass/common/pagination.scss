@@ -5,6 +5,7 @@
   align-items: baseline;
   justify-content: center;
   margin: 30px 0;
+  margin-bottom: 95px;
 }
 
 .common-pagination__item {
@@ -54,7 +55,7 @@
 }
 
 
-@media screen and (max-width: 1281px) {
+@media screen and (max-width: 1680px) {
   .common-pagination__link {
     font-size: 28px;
     width: 50px;
@@ -62,10 +63,14 @@
   }
   .common-pagination__list {
     align-items: center;
+    margin-bottom: 70px;
   }
+ 
 }
 
 @media screen and (max-width: 1025px) {
+  
+  
   .common-pagination__link {
     font-size: 20px;
     width: 40px;
