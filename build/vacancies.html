@@ -54,17 +54,16 @@
         </section>
         <section class="vacancies_vacancies">
             <div class="container">
-                <div class="vacancies_tabs">
-                    <div class="vacancies_tabs-container">
-                        <button class="vacancies_tablinks" onclick="openList(event, 'Workers')" id="defaultOpen">Рабочие</button>
-                        <button class="vacancies_tablinks" onclick="openList(event, 'Ing')">Инженерно-технические работники</button>
-                        <button class="vacancies_tablinks" onclick="openList(event, 'Managers')">Руквоводители и специалисты</button>
-                        <button class="vacancies_tablinks" onclick="openList(event, 'All')">Все вакансии</button>
+                <div class="tabs-common">
+                    <div class="tabs-common-container">
+                        <button class="tabs-common-links" onclick="openList(event, 'Workers')" id="defaultOpen">Рабочие</button>
+                        <button class="tabs-common-links" onclick="openList(event, 'Ing')">Инженерно-технические работники</button>
+                        <button class="tabs-common-links" onclick="openList(event, 'Managers')">Руквоводители и специалисты</button>
+                        <button class="tabs-common-links" onclick="openList(event, 'All')">Все вакансии</button>
                     </div>
 
                 </div>
-
-                <div id="Workers" class="vacancies_tabcontent">
+                <div id="Workers" class="tabs-common-content">
                     <a href="vacancies-details.html" class="vacancies_vacancy-desc">
                         <h5 class="vacancies_vacancy-name">Слесарь-ремонтник электродвигателей
                             и насосного оборудования</h5>
@@ -96,7 +95,7 @@
                         <span class="vacancies_vacancy-date">21.11.2019</span>
                     </a>
                 </div>
-                <div id="Ing" class="vacancies_tabcontent">
+                <div id="Ing" class="tabs-common-content">
                     <a href="#0" class="vacancies_vacancy-desc">
                         <h5 class="vacancies_vacancy-name">Слесарь-ремонтник электродвигателей
                             и насосного оборудования</h5>
@@ -118,7 +117,7 @@
                         <span class="vacancies_vacancy-date">21.11.2019</span>
                     </a>
                 </div>
-                <div id="Managers" class="vacancies_tabcontent">
+                <div id="Managers" class="tabs-common-content">
                     <a href="#0" class="vacancies_vacancy-desc">
                         <h5 class="vacancies_vacancy-name">Слесарь-ремонтник электродвигателей
                             и насосного оборудования</h5>
@@ -136,7 +135,7 @@
                     </a>
 
                 </div>
-                <div id="All" class="vacancies_tabcontent">
+                <div id="All" class="tabs-common-content">
                     <a href="#0" class="vacancies_vacancy-desc">
                         <h5 class="vacancies_vacancy-name">Слесарь-ремонтник электродвигателей
                             и насосного оборудования</h5>
@@ -219,11 +218,11 @@
 <script>
     function openList(evt, cityName) {
         var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("vacancies_tabcontent");
+        tabcontent = document.getElementsByClassName("tabs-common-content");
         for (i = 0; i < tabcontent.length; i++) {
             tabcontent[i].style.display = "none";
         }
-        tablinks = document.getElementsByClassName("vacancies_tablinks");
+        tablinks = document.getElementsByClassName("tabs-common-links");
         for (i = 0; i < tablinks.length; i++) {
             tablinks[i].className = tablinks[i].className.replace(" active", "");
         }
@@ -232,8 +231,6 @@
     }
 
     document.getElementById("defaultOpen").click();
-
-
 </script>
 <script src="./js/script.min.js"></script>
 </body>
