@@ -1,0 +1,82 @@
+
+.common-pagination__list {
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.common-pagination__item {
+  margin: 0 15px;
+  font-family: $font-for-number-light;
+}
+
+.common-pagination__link {
+  font-size: 34px;
+  color: #A6A2A2;
+  border-radius: 50%;
+  width: 63px;
+  height: 63px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .5s;
+  &--active {
+    color: #fff;
+    background-color: #171C28;
+  }
+}
+
+.common-pagination__link:hover {
+  color: #fff;
+  background-color: #171C28;
+  transition: .5s;
+}
+
+.common-pagination__arrow {
+  width: 14px;
+  height: 22px;
+  display: block;
+}
+
+.common-pagination__svg path {
+  fill: #D1D0D0;
+  transition: .3s;
+}
+
+.common-pagination__svg:hover path {
+  fill: #000;
+}
+
+.common-pagination__svg--rotate {
+  transform: rotate(180deg);
+}
+
+
+@media screen and (max-width: 1281px) {
+  .common-pagination__link {
+    font-size: 28px;
+    width: 50px;
+    height: 50px;
+  }
+  .common-pagination__list {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .common-pagination__link {
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+  }
+  .common-pagination__svg {
+    height: 16px;
+  }
+  .common-pagination__list {
+    align-items: baseline;
+  }
+}
+
+
