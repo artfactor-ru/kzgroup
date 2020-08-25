@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 import Swiper, { Scrollbar, Thumbs,  Navigation, EffectFade, Autoplay} from 'swiper';
 
@@ -1286,35 +1286,46 @@ let actionerNavItem = document.getElementsByClassName('akcioner-navigation-list_
 let contactsMenuItem = document.getElementsByClassName('contacts-navigation-list__item-active');
 let contactsMenu = document.getElementsByClassName("contacts-menu-container");
 
-let i;
-			
-			
 
-for (i = 0; i < acc.length; i++) {
+acc.forEach(function(item, i, acc) {
+	item.addEventListener('click', function(e) {
+		//show new thingy;
+		this.classList.add('active');
+		//hide old thingy
+		if (activePanel) {
+			activePanel.classList.remove('panel-active');
+		}
+		//update thingy
+		activePanel = (activePanel === this) ? 0 : this;
+	});
+});
+
+
+for (let i = 0; i < acc.length; i++) {
 	acc[i].addEventListener("click", function() {
 		this.classList.toggle("active");
 	});
 }
 
-for (i = 0; i < menu.length; i++) {
+for (let i = 0; i < menu.length; i++) {
 	menu[i].addEventListener("click", function() {
 		this.classList.toggle("active");
 	});
 }
 
-for (i = 0; i < contactsMenuItem.length; i++) {
+for (let i = 0; i < contactsMenuItem.length; i++) {
 	contactsMenuItem[i].addEventListener("click", function() {
 		this.classList.toggle("active");
 	});
 }
 
-for (i = 0; i < actionerNavItem.length; i++) {
+for (let i = 0; i < actionerNavItem.length; i++) {
 	actionerNavItem[i].addEventListener("click", function() {
 		this.classList.toggle("active");
 	});
 }
 
-for (i = 0; i < contactNavItem.length; i++) {
+for (let i = 0; i < contactNavItem.length; i++) {
 	contactNavItem[i].addEventListener("click", function() {
 		let current = document.getElementsByClassName("active");
 		current[0].className = current[0].className.replace(" active", "");
@@ -1322,7 +1333,7 @@ for (i = 0; i < contactNavItem.length; i++) {
 	});
 }
 
-for (i = 0; i < navItem.length; i++) {
+for (let i = 0; i < navItem.length; i++) {
 	navItem[i].addEventListener("click", function() {
 		let current = document.getElementsByClassName("contacts-navigation-list__item-active");
 		current[0].className = current[0].className.replace(" contacts-navigation-list__item-active", "");

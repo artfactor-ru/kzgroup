@@ -9,7 +9,32 @@
 
 
 <body class="about">
-    	
+		
+	<style>
+		.preloader{
+			background-color: #ffffff;
+			width: 100vw;
+			z-index: 20000;
+			height: 100vh;
+			height: calc(var(--vh, 1vh) * 100);
+			position: fixed;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		
+		}
+		.preloader__icon{
+			width: 130px;
+			height: 130px;
+			fill: none;
+			stroke-dasharray: 1000;
+			stroke-dashoffset: 1000;
+			animation: dash 6s linear 3s forwards infinite alternate;
+		}
+	</style>
+	<div class="preloader">
+		<svg class="preloader__icon"><use xlink:href="./img/sprite.svg#icon-logo-company"></use></svg>
+	</div>
 
 	<div class="forheader">
 
@@ -457,9 +482,11 @@
                 <!-- <div class="parallax__img parallax__img--strategy parallax__img--strategy-4" data-type="parallax" data-speed = "-60"></div>
                 <div class="parallax__img parallax__img--strategy parallax__img--strategy-3" data-type="parallax" data-speed = "-45">	</div> -->
                     
-                    <div class="parallax__img parallax__img--strategy parallax__img--strategy-2" data-type="parallax"></div>
+                    <div class="parallax__img--horizontal parallax__img--strategy parallax__img--strategy-2" data-type="parallax" data-speed="20">
+						
+					</div>
                     
-                    <div class="parallax__img parallax__img--strategy parallax__img--strategy-1" data-type="parallax"></div>  
+                    <div class="parallax__img--horizontal parallax__img--strategy parallax__img--strategy-1" data-type="parallax" data-speed="-20"></div>  
                 
                 <div class="container">
                     <h2 class="strategy_about__title about__title is-animate" data-speed="0.3">
