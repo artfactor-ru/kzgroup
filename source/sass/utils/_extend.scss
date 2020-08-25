@@ -607,3 +607,32 @@
 	
 	}
 }
+
+//кнопка с нижним подчёркиванием
+
+%button_underline{
+	position: relative;
+	cursor: pointer;
+	font-family: $font-regular;
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #616161;
+	border: none;
+	background-color: transparent;
+	transition: .8s;
+	padding-bottom: 12px;
+	width: fit-content;
+	&:before {
+		content:'';
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 0;
+		height: 1px;
+		background: #616161;
+		transition: all 0.6s ease;
+	}
+	&:hover:before {
+		width: 100%;
+	}
+}
