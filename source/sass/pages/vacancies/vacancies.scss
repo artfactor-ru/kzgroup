@@ -13,6 +13,14 @@
   position: relative;
 }
 
+.hero-vacancies {
+  height: 100vh;
+  background-image: url(../img/vacancies/vacancies-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-color: grey;
+  position: relative;
+}
 
 .vacancies_vacancy-desc {
   font-size: 24px;
