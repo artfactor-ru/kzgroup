@@ -8,8 +8,34 @@
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
+
+    <style>
+		.preloader{
+			background-color: #ffffff;
+			width: 100vw;
+			z-index: 20000;
+			height: 100vh;
+			height: calc(var(--vh, 1vh) * 100);
+			position: fixed;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		
+		}
+		.preloader__icon{
+			width: 130px;
+			height: 130px;
+			fill: none;
+			stroke-dasharray: 1000;
+			stroke-dashoffset: 1000;
+			animation: dash 6s linear 3s forwards infinite alternate;
+		}
+	</style>
+	<div class="preloader">
+		<svg class="preloader__icon"><use xlink:href="./img/sprite.svg#icon-logo-company"></use></svg>
+	</div>
 <div class="scroll">
-    <div class="vacancies-d__wrapper">
+    <div class="vacancies-d__wrapper two-screen">
 
         <div class="vacancies-d__hero">
             <div class="container">
@@ -207,7 +233,7 @@
 
             </div>
             <div class="vacancies-d__form-buttons--block">
-                <button class="button vacancies-d__response vacancies-d__submit">
+                <button class="button vacancies-d__response vacancies-d__submit" type="submit">
                     Отправить
                     <div class=" button-line button-line--first"></div>
                     <div class=" button-line button-line--two"></div>
