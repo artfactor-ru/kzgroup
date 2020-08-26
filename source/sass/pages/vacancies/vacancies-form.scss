@@ -9,6 +9,44 @@
   margin-top: 50px;
 }
 
+#checkbox{
+  display: none;
+}
+
+.checkbox-text {
+  width: 200px;
+  display: inline-table;
+  margin-left: 40px;
+  margin-top: 13px;
+}
+
+#checkbox + label{
+  display: flex;
+  width: 42px;
+  height: 42px;
+  background: #F2F4F7;
+  text-align: center;
+  border: 1px solid #CECECE;
+  position: relative;
+  border-radius: 3px;
+}
+#checkbox + label:before{
+  content: '✔';
+  color: #F2F4F7;
+  font-size: 20px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#checkbox:checked + label{
+  display: block;
+  border: 1px solid #0F0F0F;
+}
+#checkbox:checked + label:before{
+  color: black;
+}
+
 .vac-f__content {
   display: flex;
   justify-content: space-between;
@@ -229,6 +267,7 @@
 }
 
 .vac-f__form-checkbox {
+  width: 300px;
   display: flex;
   align-items: center;
   margin-bottom: 15px;
