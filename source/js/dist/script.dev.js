@@ -1241,41 +1241,44 @@ if (screen.width >= 1280) {
 }
 
 var tabsEvent = document.getElementById('tabs_event');
-tabsEvent.addEventListener('click', openList);
 
-function openList(e) {
-  if (e.target.className === "tabs-common-links") {
-    var removeActivity = function removeActivity(arrCollection) {
-      var _iteratorNormalCompletion = true;
-      var _didIteratorError = false;
-      var _iteratorError = undefined;
+if (tabsEvent) {
+  var openList = function openList(e) {
+    if (e.target.className === "tabs-common-links") {
+      var removeActivity = function removeActivity(arrCollection) {
+        var _iteratorNormalCompletion = true;
+        var _didIteratorError = false;
+        var _iteratorError = undefined;
 
-      try {
-        for (var _iterator = arrCollection[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-          var item = _step.value;
-          item.classList.remove('active');
-        }
-      } catch (err) {
-        _didIteratorError = true;
-        _iteratorError = err;
-      } finally {
         try {
-          if (!_iteratorNormalCompletion && _iterator["return"] != null) {
-            _iterator["return"]();
+          for (var _iterator = arrCollection[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            var item = _step.value;
+            item.classList.remove('active');
           }
+        } catch (err) {
+          _didIteratorError = true;
+          _iteratorError = err;
         } finally {
-          if (_didIteratorError) {
-            throw _iteratorError;
+          try {
+            if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+              _iterator["return"]();
+            }
+          } finally {
+            if (_didIteratorError) {
+              throw _iteratorError;
+            }
           }
         }
-      }
-    };
+      };
 
-    var tabcontent = document.getElementsByClassName("tabs-common-content"),
-        tablinks = document.getElementsByClassName("tabs-common-links");
-    removeActivity(tablinks);
-    removeActivity(tabcontent);
-    e.currentTarget.className += " active";
-    document.getElementById(e.target.dataset.tab).classList.add('active');
-  }
+      var tabcontent = document.getElementsByClassName("tabs-common-content"),
+          tablinks = document.getElementsByClassName("tabs-common-links");
+      removeActivity(tablinks);
+      removeActivity(tabcontent);
+      e.currentTarget.className += " active";
+      document.getElementById(e.target.dataset.tab).classList.add('active');
+    }
+  };
+
+  tabsEvent.addEventListener('click', openList);
 }
