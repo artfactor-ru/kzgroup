@@ -1,4 +1,2 @@
 *.min.*
 /node_modules/
-/.idea/
-/build/
