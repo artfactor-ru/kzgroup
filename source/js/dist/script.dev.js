@@ -962,6 +962,21 @@ document.onreadystatechange = function () {
         });
       });
 
+      scrollbar.addListener(function () {
+        _gsap.gsap.utils.toArray('.button-more').forEach(function (element) {
+          _ScrollTrigger.ScrollTrigger.create({
+            trigger: element,
+            start: 'bottom bottom',
+            scrub: true,
+            toggleClass: 'is-inview-line',
+            // this toggles the class again when you scroll back up:
+            toggleActions: 'play none none none' // this removes the class when the scrolltrigger is passed:
+            // once: true,
+
+          });
+        });
+      });
+
       _gsap.gsap.utils.toArray('.button-line').forEach(function (element) {
         _ScrollTrigger.ScrollTrigger.create({
           trigger: element,
@@ -1212,5 +1227,4 @@ if (screen.width >= 1280) {
       });
     });
   })();
-} // let preloader = document.querySelector('.preloader');
-// preloader.classList.add('animate');
+}
