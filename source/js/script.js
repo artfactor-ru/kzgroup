@@ -1287,23 +1287,26 @@ let contactsMenuItem = document.getElementsByClassName('contacts-navigation-list
 let contactsMenu = document.getElementsByClassName("contacts-menu-container");
 
 
-acc.forEach(function(item, i, acc) {
-	item.addEventListener('click', function(e) {
-		//show new thingy;
-		this.classList.add('active');
-		//hide old thingy
-		if (activePanel) {
-			activePanel.classList.remove('panel-active');
-		}
-		//update thingy
-		activePanel = (activePanel === this) ? 0 : this;
-	});
-});
+// acc.onclick=function(e){
+// 	for(let i = 0; i < acc.length; i++){
+// 		acc[i].classList.remove('active');
+// 	}
+// 	e.target.classList.add('active');
+//
+// }
 
+// function accordion() {
+// 	for (let i = 0; i < acc.length; i++) {
+// 		acc[i].addEventListener("click", function() {
+// 			this.classList.remove("active");
+// 		});
+// 	}
+//
+// }
 
 for (let i = 0; i < acc.length; i++) {
 	acc[i].addEventListener("click", function() {
-		this.classList.toggle("active");
+		this.classList.remove("active");
 	});
 }
 
