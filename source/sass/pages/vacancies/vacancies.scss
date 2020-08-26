@@ -13,6 +13,43 @@
   position: relative;
 }
 
+.vac-f__form-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  &-basic {
+    display: none;
+  }
+  &--style {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #000;
+    background-color: #fff;
+    border-radius: 2px;
+    float: left;
+    margin-right: 5px;
+    margin-top: -2px;
+    vertical-align: middle;
+    &::before {
+      content: "";
+      position: absolute;
+      background: url('https://cdn3.iconfinder.com/data/icons/basic-web-elements/48/checkmark1-512.png') center center no-repeat;
+      top: 0;
+      left: 0;
+      width: 32px;
+      height: 32px;
+      transform: scale(0);
+      transition: .4s;
+    }
+  }
+}
+
+.vac-f__form-checkbox-basic:checked+.vac-f__form-checkbox--style::before {
+  transform: scale(1);
+}
+
+
 
 .vacancies_vacancy-desc {
   font-size: 24px;
