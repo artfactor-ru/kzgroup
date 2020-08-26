@@ -1059,7 +1059,7 @@ if(containerNavScroll){
 							trigger: ".footer",
 							start: 'top bottom',
 							// pin: true,
-							toggleActions: "play reverse play reverse"
+							// toggleActions: "play reverse play reverse"
 							// scrub: true,
 							// pinSpacing: false
 							// start: "top c"
@@ -1136,6 +1136,7 @@ if(containerNavScroll){
 					});
 				});
 			});
+				
 		
 			gsap.utils.toArray('.button-line').forEach(element => {
 				ScrollTrigger.create({
