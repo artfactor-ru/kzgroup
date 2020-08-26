@@ -1416,3 +1416,22 @@ if(screen.width>=1280){
 }
 
 
+let tabsEvent = document.getElementById('tabs_event');
+
+tabsEvent.addEventListener('click', openList)
+function openList(e) {
+	if (e.target.className === "tabs-common-links") {
+		let tabcontent = document.getElementsByClassName("tabs-common-content"),
+			tablinks = document.getElementsByClassName("tabs-common-links");
+		function removeActivity (arrCollection) {
+			for (let item of arrCollection) {
+				item.classList.remove('active');
+			}
+		}
+		removeActivity(tablinks);
+		removeActivity(tabcontent);
+		e.currentTarget.className += " active";
+		document.getElementById(e.target.dataset.tab).classList.add('active')
+
+	}
+}

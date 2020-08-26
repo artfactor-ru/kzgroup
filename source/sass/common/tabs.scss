@@ -56,9 +56,78 @@
   display: none;
   font-family: $font-regular;
   animation: fadeEffect 1s;
+  &.active {
+    display: block;
+  }
 }
 
 @keyframes fadeEffect {
   from {opacity: 0;}
   to {opacity: 1;}
+}
+
+@media screen and (max-width: 1441px) {
+  .tabs-common button {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1367px) {
+  .tabs-common button {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1281px) {
+  .tabs-common button {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .tabs-common button {
+    font-size: 14px;
+  }
+  .tabs-common button {
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .tabs-common {
+    position: relative;
+    height: 42px;
+    overflow-x: scroll;
+  }
+  .tabs-common-container {
+    width: 900px;
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 481px) {
+  .tabs-common button {
+    font-size: 12px;
+    padding-bottom: 10px;
+  }
+  .tabs-common-container {
+    width: 750px;
+  }
+  .tabs-common {
+    height: 32px;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .tabs-common button.active, .tabs-common button:hover {
+    border-bottom: 4px solid #c30215;
+  }
+  .tabs-common-container {
+    width: 700px;
+  }
+
+}
+
+@media screen and (max-width: 376px) {
+  .tabs-common {
+    height: 30px;
+  }
 }

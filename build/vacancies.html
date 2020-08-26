@@ -55,15 +55,14 @@
         <section class="vacancies_vacancies">
             <div class="container">
                 <div class="tabs-common">
-                    <div class="tabs-common-container">
-                        <button class="tabs-common-links" onclick="openList(event, 'Workers')" id="defaultOpen">Рабочие</button>
-                        <button class="tabs-common-links" onclick="openList(event, 'Ing')">Инженерно-технические работники</button>
-                        <button class="tabs-common-links" onclick="openList(event, 'Managers')">Руквоводители и специалисты</button>
-                        <button class="tabs-common-links" onclick="openList(event, 'All')">Все вакансии</button>
+                    <div id="tabs_event" class="tabs-common-container">
+                        <button class="tabs-common-links active" data-tab="Workers" id="defaultOpen">Рабочие</button>
+                        <button class="tabs-common-links" data-tab="Ing">Инженерно-технические работники</button>
+                        <button class="tabs-common-links" data-tab="Managers">Руквоводители и специалисты</button>
+                        <button class="tabs-common-links" data-tab="All">Все вакансии</button>
                     </div>
-
                 </div>
-                <div id="Workers" class="tabs-common-content">
+                <div id="Workers" class="tabs-common-content active">
                     <a href="vacancies-details.html" class="vacancies_vacancy-desc">
                         <h5 class="vacancies_vacancy-name">Слесарь-ремонтник электродвигателей
                             и насосного оборудования</h5>
@@ -216,24 +215,10 @@
         </section>
     </div>
 </div>
-
-<script>
-    function openList(evt, cityName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabs-common-content");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tabs-common-links");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.className += " active";
-    }
-
-    document.getElementById("defaultOpen").click();
-</script>
 <script src="./js/script.min.js"></script>
+<script>
+
+</script>
+
 </body>
 </html>
