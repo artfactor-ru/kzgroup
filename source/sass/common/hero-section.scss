@@ -1,0 +1,263 @@
+//common styles for hero section (section.hero-common html)
+
+.parallax__img-inner--hero{
+  background-position: center;
+  background-size: cover;
+  background-color: grey;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-common {
+  height: 100vh;
+
+  background-position: center;
+  background-size: cover;
+  background-color: grey;
+  position: relative;
+}
+
+.hero-common__layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-common__block  {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+}
+
+.hero-common__title {
+  @extend %title-main-screen;
+  font-size: 90px;
+  margin-bottom: 70px;
+  perspective: 600px;
+}
+
+.hero-common__btn {
+  @extend %btn-bordered;
+  font-family: $font-text-regular;
+  color: $light-grey-color;
+  font-size: 14px;
+  padding: 28px 38px;
+  margin: 0;
+
+  color: $light-grey-color;
+
+  &::after{
+      background: $light-grey-color;
+  }
+  &:hover{
+  color: #000;
+  }
+  & .button-line--first{
+      &::before{
+          background-color: $light-grey-color;
+      }
+      &::after{
+          background-color: $light-grey-color;
+      }
+  }
+  & .button-line--two{
+      &::before{
+          background-color: $light-grey-color;
+      }
+      &::after{
+          background-color: $light-grey-color;
+      }
+  
+  }
+}
+
+.hero-common__info {
+  height: 122px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: transparent;
+  background-blend-mode: multiply;
+  backdrop-filter: blur(20px);
+}
+
+.hero-common_info__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+  list-style: none;
+}
+
+.hero-common_info__item {
+  // margin-right: 90px;
+  display: flex;
+  align-items: center;
+  &:hover a {
+    opacity: 0.6;
+  }
+  &:hover svg {
+    opacity: 0.6;
+  }
+}
+.hero-common_info__item:not(:last-child){
+  margin-right: 90px;
+}
+.hero-common_info__item:last-child{
+  margin-left: 50px;
+}
+
+.hero-common_info__icon {
+  margin-right: 15px;
+  transition: .4s;
+  width: 18px;
+  height: 18px;
+}
+
+.hero-common_info__link {
+  transition: .4s;
+  font-family: $font-text-light;
+  color: #E0E0E0;
+}
+
+@media screen and (max-width: 1680px) {
+  .hero-common__title {
+    font-size: 64px;
+    margin-bottom: 45px;
+  }
+  .hero-common__btn {
+   
+    padding: 28px 30px;
+    font-size: 14px;
+  
+  }
+  .hero-common__info{
+    height: 95px;
+  }
+  .hero-common_info__icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+  }
+  .hero-common_info__item:not(:last-child) {
+    margin-right: 40px;
+  }
+  .hero-common_info__item:last-child{
+    margin-left: 35px;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .hero-common__block  {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-bottom: 125px;
+    
+    box-sizing: border-box;
+  }
+ 
+  .hero-common {
+    height: 520px;
+    
+  }
+  .hero-common__title {
+    font-size: 48px;
+    margin-bottom: 40px;
+    
+  }
+
+  .hero-common_info__item {
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .hero-common_info__link {
+    font-size: 14px;
+  }
+  .hero-common_info__icon {
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+  }
+
+ 
+  
+  .hero-common__btn {
+    padding: 23px 32px;
+    font-size: 12px;
+  }
+  .hero-common_info__item {
+    margin-right: 40px;
+    &:last-child {
+      display: none;
+    }
+  }
+  .hero-common_info__link {
+    font-size: 18px;
+  }
+  .hero-common_info__icon {
+    margin-right: 15px;
+  }
+
+  .hero-common__info {
+    height: 68px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero-common {
+    height: 435px;
+    background-position: center 30%;
+  }
+  .hero-common__block  {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-bottom: 100px;
+    
+    box-sizing: border-box;
+  }
+  .hero-common__title {
+    font-size: 32px;
+    margin: 0;
+    padding-bottom: 15px;
+   
+    z-index: 1;
+  }
+  .hero-common__btn {
+    padding: 15px 0;
+    font-size: 10px;
+    display: block;
+    width: 216px;
+
+  }
+  .hero-common__layer {
+    background-color: #0f0f0f85;
+  }
+  .hero-common__info{
+    backdrop-filter: blur(0px);
+  }
+  .hero-common_info__list {
+    justify-content: space-between;
+  }
+  .hero-common_info__item:not(:last-child) {
+    margin-right: 0px;
+  }
+  .hero-common_info__icon {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .hero-common_info__link {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,218 @@
+.press-photo-gallery {
+    display: flex;
+    flex-direction: row;
+
+    &-main{
+
+        &-container {
+            width: 70%;
+            margin-right: 5%;
+            //display: flex;
+        }
+    }
+
+    /*&-container {
+        display: flex;
+        flex-direction: row;
+
+    }*/
+
+    &-flex-item-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    &-item {
+        list-style: none;
+        width: 45.5%;
+        margin-right:35px;
+        margin-left: 0;
+        //margin-bottom: 90px;
+        margin-bottom: 8.5%;
+
+       /* @media only screen and(min-width: 1400px) {
+            width: 30%;
+        }*/
+
+        &-img {
+            width: 100%;
+        }
+
+        &-date {
+            font-family: 'MullerRegular';
+            font-size: 18px;
+            line-height: 26px;
+            color: rgba(60, 61, 64, 0.39);
+            margin-bottom: 5px;
+            margin-top: 20px;
+
+           /* @media only screen and(max-width: 1280px) {
+                font-size: 16px;
+            }*/
+
+        }
+
+        &-description {
+            font-family: 'HeliosExt';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 125.1%;
+            color: #171C28;
+
+           /* @media only screen and(max-width: 1280px) {
+                font-size: 20px;
+            }*/
+        }
+    }
+
+    &-common-pagination__link {
+        border-radius: 6px;
+    }
+}
+
+.press-rigt-side-bar {
+    display: flex;
+    flex-direction: column;
+    width: 27%;
+    background-color: $bg-color-light-grey;
+    margin-left: auto;
+    padding-right: 8% !important;
+    
+
+    &-filters {
+        height: 700px;
+    }
+
+    &-filters-date {
+        display: flex;
+        flex-direction: column;
+        padding-top: 40px;
+        border-bottom: 1px solid #E2E2E2;
+        padding-bottom: 15px;
+    }
+
+    &-filters-theme {
+        padding-top: 100px;
+    }
+
+    &-theme {
+        height: 45%;
+
+        &-list {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+        align-items: flex-start;
+        border-bottom: 1px solid #E2E2E2;
+        padding-bottom: 15px;
+        }
+
+        &-button {
+            font-family: 'HeliosExt';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 120%;
+            border:none; 
+            padding:0; 
+            margin:0; 
+            color: #616161;
+            background-color:transparent; 
+            border-radius: 50px;
+            width: 300px;
+            text-align: left;
+            margin-left: 20px;
+            margin-bottom: 23px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                display: block;
+                left: 0;
+                width: 3px;
+                height: 0;
+                transition: height .8s;
+                background-color: $red-color;
+            }
+
+            &:active {
+                color: #c30215;
+                &::before {
+                    height:100%;
+                }
+            }
+
+
+
+            &:hover {
+                color: #c30215 ;
+                -webkit-transition: 0.5s;
+                transition: 0.5s;
+            }
+        }
+    }
+
+
+
+}
+
+.photo-gallery-container {
+    display: flex;
+    flex-direction: row;
+    padding-right: 0% !important;
+}
+
+.press-search-bar-photo-gallery {
+    padding: 12px 58px 12px 65px;
+    background-position: 30px center;
+    width: 36%;
+
+
+}
+
+.press-search-bar-photo-gallery-container {
+    width: 145%;
+    margin-bottom: 80px;
+    margin-top: 65px;
+}
+
+.press-photo-gallery-pagination-subscribe {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -20px;
+    padding-left: 2%;
+    padding-right: 5%;
+    margin-bottom: 200px;
+}
+.press-photo-gallery-pagination-container {
+    height: 60px;
+}
+
+.press-photo-gallery-pagination__list {
+    margin: 0% ;
+}
+
+.instagram2 {
+    width: 100% !important;
+}
+
+.press-photo-gallery-subscribe-button {
+    @extend %btn-bordered;
+    padding-bottom: 20px;
+
+    /*&-container {
+        //margin-bottom: 60px;
+    }*/
+}
+
+.press-right-side-bar-instagram {
+    width: 105%;
+    margin-right: 0%;
+    margin-left: 5%;
+    margin-top: 22%;
+}
