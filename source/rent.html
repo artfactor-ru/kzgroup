@@ -410,19 +410,28 @@
                     </section>
                 </div>
                  <div class="rent__wrapper">
+                    <div class="tabs-common__wrapper">
+
+                     
+                        <div class="container">
+                            <div class="tabs-common">
+                        
+                                <div id="tabs_event" class="tabs-common-container tabs-common-container--rent">
+                                    <button class="tabs-common-links active" data-tab="Production" id="defaultOpen">Производственные и складские помещения</button>
+                                    <button class="tabs-common-links" data-tab="Office">Офисные и торговые помещения</button>
+                                </div>
+                            
+                            
+                        </div>
+                        </div>
+                     </div>
                     <div class="container">
 
-                        <div class="tabs-common">
-                            <div class="tabs-common-container">
-                                <button class="tabs-common-links" onclick="openList(event, 'Production')" id="defaultOpen">Производственные и складские помещения</button>
-                                <button class="tabs-common-links" onclick="openList(event, 'Office')">Офисные и торговые помещения</button>
-                            </div>
-    
-                        </div>
+                      
                         
                          <main class="rent__list two-screen" >
             
-                                <div id="Production" class="tabs-common-content">
+                                <div id="Production" class="tabs-common-content active">
                                     <div class="rent_card">
                                         <div class="parallax__item--rent parallax__item">
                                             <div class="parallax__img-wrap">
@@ -745,6 +754,7 @@
                                 </div>
                                 
                                 <div id="Office" class="tabs-common-content">
+                                    
                                     <div class="rent_card">
                                         <div class="parallax__item--rent parallax__item">
                                             <div class="parallax__img-wrap">
@@ -1216,23 +1226,6 @@
             </div>
         </div>
 
-        <script>
-            function openList(evt, cityName) {
-                var i, tabcontent, tablinks;
-                tabcontent = document.getElementsByClassName("tabs-common-content");
-                for (i = 0; i < tabcontent.length; i++) {
-                    tabcontent[i].style.display = "none";
-                }
-                tablinks = document.getElementsByClassName("tabs-common-links");
-                for (i = 0; i < tablinks.length; i++) {
-                    tablinks[i].className = tablinks[i].className.replace(" active", "");
-                }
-                document.getElementById(cityName).style.display = "block";
-                evt.currentTarget.className += " active";
-            }
-        
-            document.getElementById("defaultOpen").click();
-        </script>
         <script src="./js/script.min.js"></script>
     </body>
 </html>

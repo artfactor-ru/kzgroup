@@ -210,6 +210,13 @@ var scrollbarNav;
 if (containerNavScroll) {
   scrollbarNav = _smoothScrollbar["default"].init(containerNavScroll, options3);
   scrollbarNav.addListener(_ScrollTrigger.ScrollTrigger.update);
+}
+
+var containerTabsScroll = document.querySelector('.tabs-common');
+var scrollbarTabs;
+
+if (containerTabsScroll) {
+  scrollbarTabs = _smoothScrollbar["default"].init(containerTabsScroll, options3);
 } // Инициализация свайперов
 
 
