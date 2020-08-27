@@ -30,6 +30,7 @@
     display: flex;
     margin-bottom: 100px;
     position: relative;
+    will-change: transform;
    
   @media (max-width:1680px) { 
     display: flex;
@@ -39,13 +40,13 @@
   @media (max-width:1280px) { 
     margin-bottom: 50px;
   }
-  
+  @media(max-width: 670px){
+    flex-direction: column;
+  }
 
 }
 
-.rent_card:hover{
 
-}
 
 .parallax__item--rent {
 
@@ -252,4 +253,20 @@
  
 }
 
+.tabs-common-container--rent{
+  justify-content: flex-start;
+
+}
+.tabs-common-container--rent .tabs-common-links:not(:last-child){
+  margin-right: 190px;
+  @media(max-width:1680px){
+    margin-right: 55px;
+  }
+  @media(max-width:1279px){
+    margin-right: 35px;
+  }
+  @media(max-width:767px){
+    margin-right: 20px;
+  }
+}
 

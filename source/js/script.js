@@ -223,7 +223,11 @@ if(containerNavScroll){
 	scrollbarNav.addListener(ScrollTrigger.update);
 }
 
-
+let containerTabsScroll = document.querySelector('.tabs-common');
+let scrollbarTabs;
+if(containerTabsScroll){
+	scrollbarTabs = ScrollbarSmoth.init(containerTabsScroll, options3);
+}
 
 
 
@@ -1419,7 +1423,8 @@ if(screen.width>=1280){
 
 let tabsEvent = document.getElementById('tabs_event');
 
-if(tabsEvent){
+
+	if(tabsEvent){
 
 
 	tabsEvent.addEventListener('click', openList)
@@ -1442,3 +1447,4 @@ if(tabsEvent){
 		}
 	}
 }
+
