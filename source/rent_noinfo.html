@@ -365,7 +365,8 @@
                     <section class="hero-common parallax__item">
                         <div class="parallax__img-wrap parallax__img-wrap--hero-inner">
                             <div class="parallax__img" data-speed="-40">
-                               <div class="parallax__img-inner--hero" style="background-image: url(./img/rent/bg-rent.png);"></div>
+                               <div class="parallax__img-inner--hero parallax__img-inner--hero--desktop" style="background-image: url(./img/rent/bg-rent.png);"></div>
+                               <div class="parallax__img-inner--hero parallax__img-inner--hero--mobile" style="background-image: url(./img/rent/bg-rent.png);"></div>
                             </div>
                         </div>
                         <div class="container">
@@ -375,7 +376,7 @@
                                     <div class="title--inner">помещений</div>
                                 </h1>
                                 <a href="vacancies-form.html" class="button--details hero-common__btn">
-                                    Заполнить анкету соискателя
+                                    Заявка на подбор помещения
                                     <div class=" button-line button-line--first"></div>
                                     <div class=" button-line button-line--two"></div>
                                 </a>
@@ -411,52 +412,58 @@
                         </div>
                     </section>
                 </div>
-                 <div class="rent__wrapper">
-                    <div class="container">
+                 <div class="rent__wrapper rent__wrapper--noinfo">
+                   
+                        <div class="tabs-common__wrapper">
+                            <div class="container">
 
-                        <div class="tabs-common">
-                            <div class="tabs-common-container">
-                                <button class="tabs-common-links" onclick="openList(event, 'Production')" id="defaultOpen">Производственные и складские помещения</button>
-                                <button class="tabs-common-links" onclick="openList(event, 'Office')">Офисные и торговые помещения</button>
-                            </div>
-    
-                        </div>
-                        
-                         <main class="rent__list two-screen" >
-            
-                                <div id="Production" class="tabs-common-content">
-                                    <h2 class="rent_noinfo-heading">Имущественный комплекс Кировского завода включает около 400 га земельных участков, а также здания и сооружения общей площадью порядка 1,5 млн кв. м.</h2>
-                                    <p class="rent_noinfo-paragraph">Объекты расположены в Санкт-Петербурге, Ленинградской области, на юге   России.
-                                      <span class="rent_noinfo-span"> Постоянный процесс модернизации оборудования и технологий приводит к высвобождению производственных и складских помещений.</span>
-                                      <span class="rent_noinfo-span"> Объекты недвижимости, не используемые для профильной деятельности Кировского завода и его дочерних обществ, сдаются в аренду.</span>
-                                      <span class="rent_noinfo-span"> Управление недвижимым имуществом ПАО «Кировский завод» осуществляет дирекция по управлению активами</span>
-                                    </p>
-                                    <div class="rent_noinfo-contact">
-                                      <h4>Связаться с нами по вопросам аренды помещений Вы можете одним из удобных Вам способов:</h4>
-                                      <ul>
-                                        <li>Позвонить по телефону 921-71-64 </li>
-                                        <li>Отправить письмо или техническое задание на e-mail arenda@kzgroup.ru.</li>
-                                      </ul>
-                                      <a href="vacancies-form.html" class="button--details">
-                                        Заполнить анкету соискателя
-                                        <div class=" button-line button-line--first"></div>
-                                        <div class=" button-line button-line--two"></div>
-                                    </a>  
+                            
+                                <div class="tabs-common">
+                                    <div id="tabs_event" class="tabs-common-container tabs-common-container--rent">
+                                        <div class="tabs-common-container">
+                                            <a href="#production" class="tabs-common-links active" data-tab="Production" id="defaultOpen">Производственные и складские помещения</a>
+                                            <a href="#office" class="tabs-common-links" data-tab="Office">Офисные и торговые помещения</ф>
+                                        </div>
                                     </div>
-                                    <p class="rent_noinfo-paragraph">Предложение, соответствующее Вашему запросу, с подробным описанием, фотографиями и планом помещения будет оперативно направлено на указанный Вами e-mail.</p>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <main class="rent__list two-screen" >
+                
+                                    <div id="Production" class="tabs-common-content active">
+                                        <h2 class="rent_noinfo-heading">Имущественный комплекс Кировского завода включает около 400 га земельных участков, а также здания и сооружения общей площадью порядка 1,5 млн кв. м.</h2>
+                                        <p class="rent_noinfo-paragraph">Объекты расположены в Санкт-Петербурге, Ленинградской области, на юге   России.<br>
+                                        Постоянный процесс модернизации оборудования и технологий приводит к высвобождению производственных и складских помещений.<br>
+                                        Объекты недвижимости, не используемые для профильной деятельности Кировского завода и его дочерних обществ, сдаются в аренду.<br>
+                                        Управление недвижимым имуществом ПАО «Кировский завод» осуществляет дирекция по управлению активами
+                                        </p>
+                                        <div class="rent_noinfo-contact">
+                                        <h4>Связаться с нами по вопросам аренды помещений Вы можете одним из удобных Вам способов:</h4>
+                                        <ul>
+                                            <li>Позвонить по телефону 921-71-64 </li>
+                                            <li>Отправить письмо или техническое задание на e-mail arenda@kzgroup.ru.</li>
+                                        </ul>
+                                        <a href="#" class="button--details button--rent">
+                                            Оставить заявку
+                                            <div class=" button-line button-line--first"></div>
+                                            <div class=" button-line button-line--two"></div>
+                                        </a>  
+                                        </div>
+                                        <p class="rent_noinfo-paragraph">Предложение, соответствующее Вашему запросу, с подробным описанием, фотографиями и планом помещения будет оперативно направлено на указанный Вами e-mail.</p>
+                                    </div>
+                                    
+                                    <div id="Office" class="tabs-common-content">
+                                    
+                                    
                                 
-                                <div id="Office" class="tabs-common-content">
-                                 
-                                   
-                             
-                                </div>
-                          
-                     
-                     
-                         </main>
+                                    </div>
+                            
                         
-                    </div>
+                        
+                            </main>
+                        </div>
+                  
                  </div>
                
         

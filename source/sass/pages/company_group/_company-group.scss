@@ -120,10 +120,9 @@
       font-style: normal;
       line-height: 28px;
       margin-bottom: 20px;
+      transition: all 0.5s ease;
 
-      &:hover{
-        color: $black-grey;
-      }
+   
       @media screen and (max-width: 1680px) {
         font-size: 16px;
         line-height: 24px;
@@ -140,8 +139,9 @@
         margin-bottom: 10px;
       }
     }
+    
   }
-
+ 
   &__contacts {
     &-container {
       width: 100%;
@@ -297,4 +297,8 @@
   @media screen and (max-width: 767px) {
     margin-top: 15px;
   }
+}
+
+.company_group__contacts-list--item-text:hover{
+  color: $black-grey;
 }

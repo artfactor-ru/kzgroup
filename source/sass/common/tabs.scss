@@ -15,12 +15,14 @@
   border: none;
   outline: none;
   cursor: pointer;
+  white-space: nowrap;
   transition: 0.3s;
   font-size: 24px;
   font-family: $font-regular;
   padding-bottom: 30px;
   color: #616161;
   border-bottom: 6px solid transparent;
+  transition: all 0.5s ease;
 }
 
 .tabs-common a.active {
@@ -51,7 +53,7 @@
 }
 
 .tabs-common-container {
-  width: 100%;
+  // width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -70,71 +72,59 @@
   to {opacity: 1;}
 }
 
-@media screen and (max-width: 1441px) {
-  .tabs-common a {
-    font-size: 20px;
-  }
-}
-@media screen and (max-width: 1367px) {
-  .tabs-common a {
-    font-size: 20px;
-  }
-}
-@media screen and (max-width: 1281px) {
+@media screen and (max-width: 1680px) {
   .tabs-common a {
     font-size: 18px;
+    padding-bottom: 25px;
   }
 }
 
-@media screen and (max-width: 1025px) {
+
+
+@media screen and (max-width: 1279px) {
   .tabs-common a {
     font-size: 14px;
   }
   .tabs-common a {
     padding-bottom: 20px;
   }
-}
-
-@media screen and (max-width: 769px) {
   .tabs-common {
     position: relative;
-    height: 42px;
+    height: 45px;
     // overflow-x: scroll;
-    // width: 100%;
+    width: 100%;
     overflow: hidden;
-    margin-bottom: -5px;
+    margin-bottom: -6px;
   }
-  .tabs-common-container {
-    width: 900px;
-    position: absolute;
+  .tabs-common-links:not(:last-child){
+    margin-right: 20px;
   }
+
 }
 
-@media screen and (max-width: 481px) {
+@media screen and (max-width: 767px) {
   .tabs-common a {
     font-size: 12px;
     padding-bottom: 10px;
   }
-  .tabs-common-container {
-    width: 750px;
-  }
+
   .tabs-common {
     height: 35px;
   }
-}
-
-@media screen and (max-width: 415px) {
-  // .tabs-common button.active, .tabs-common button:hover {
-  //   border-bottom: 4px solid #c30215;
-  // }
-  .tabs-common-container {
-    width: 700px;
+  .tabs-common-links:not(:last-child){
+    margin-right: 20px;
   }
+  .tabs-common a.active {
+    border-bottom: 4px solid $red-color;
+  }
+  .tabs-common-links:before {
+   
+    height: 4px;
 
-}
-
-@media screen and (max-width: 376px) {
-  .tabs-common {
-    height: 35px;
+  }
+  .tabs-common a {
+   
+    border-bottom: 4px solid transparent;
+  
   }
 }
