@@ -17,13 +17,10 @@
   position: relative;
 }
 
-.vac-f__nav {
-  width: 30%;
-}
 
 .vac-f__nav {
   width: 30%;
-  padding-top: 20px;
+  padding-top: 13px;
   &-list {
     position: fixed;
     list-style: none;
@@ -53,7 +50,7 @@
       height: 41px;
       border: 1px solid #000;
       border-radius: 50%;
-      margin-right: 20px;
+      margin-right: 38px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -119,11 +116,11 @@
 
 
 .vac-f__form {
-  width: 70%;
+  width: 66%;
   &-desc {
     font-family: $font-text-light;
     font-size: 24px;
-    line-height: 38px;
+    line-height: 42px;
     color: #3C3D40;
     margin-bottom: 38px;
   }
@@ -137,13 +134,19 @@
   &-block {
     display: flex;
     flex-direction: column;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
   }
   &-label {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 14px 0;
+    &--high {
+      align-items: flex-start;
+      & span {
+        margin-top: 15px;
+      }
+    }
     &--short {
       & div div {
         height: 100%;
@@ -151,7 +154,7 @@
       }
     }
     & input {
-      width: 95%;
+      width: 100%;
       height: 97%;
       padding: 0 12px;
       font-family: $font-text-regular;
@@ -159,6 +162,7 @@
       border-radius: 3px;
       border: 1px solid #DCE0E3;
       background: #F6F6F6;
+      box-sizing: border-box;
     }
     & select {
       width: 100%;
@@ -180,17 +184,18 @@
       font-size: 18px;
       display: block;
       max-width: 240px;
+      line-height: 25px;
     }
   }
 }
 
 .vac-f__main-form {
-  width: 85%;
+  width: 75%;
 }
 
 .vac-f__form-education-btn {
   @extend %button_underline;
-  margin: 20px 30px 20px 0;
+  margin: 0 30px 20px 0;
 }
 
 .vac-f__form-select-arrow {
@@ -203,14 +208,14 @@
 
 .vac-f__form-date {
   display: flex;
-  width: 502px;
+  width: 505px;
   & select {
     width: 33%;
     height: 100%;
   }
   & input {
     width: 33%;
-    height: 96%;
+    height: 100%;
   }
 }
 
@@ -274,13 +279,14 @@
 }
 
 .vac-f__form-label textarea {
-  width: 94%;
+  width: 100%;
   height: 81%;
   padding: 14px;
   font-family: $font-text-regular;
   resize: none;
   border: 1px solid #DCE0E3;
   background: #F6F6F6;
+  box-sizing: border-box;
   border-radius: 3px;
 }
 
@@ -290,7 +296,7 @@
 }
 
 .vac-f__license {
-  margin-top: 35px;
+  margin-top: 11px;
   color: #616161;
   & a {
     color: #616161;
@@ -318,156 +324,9 @@
   }
 }
 
-@media screen and (max-width: 1561px) {
+@media screen and (max-width: 1681px) {
   .vac-f__main-form {
-    width: 100%;
-  }
-  .vac-f__form-label span {
-    max-width: 270px;
-  }
-}
-
-@media screen and (max-width: 1281px) {
-  .vac-f__form-label span {
-    max-width: 200px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .vac-f__input-container {
-    width: 314px !important;
-  }
-  .vac-f__form-desc {
-    font-size: 18px;
-    line-height: 30px;
-  }
-  .vac-f__form-title {
-    font-size: 20px;
-  }
-  .vac-f__form {
-    width: 75%;
-  }
-  .vac-f__nav {
-    width: 25%;
-  }
-  .vac-f__main-title {
-    font-size: 28px;
-  }
-  .vac-f__form-date {
-    width: 314px;
-  }
-  .vac-f__input-container--separate2 {
-    width: 314px !important;
-  }
-  .vac-f__input-container--separate {
-    width: 314px !important;
-  }
-  .vac-f__form-education-btn {
-    margin-right: 0;
-    text-align: left;
-    font-size: 12px;
-  }
-  .vac-f__form-download-status {
-    font-size: 12px;
-  }
-  .vac-f__resume {
-    & button {
-      margin-right: 20px;
-    }
-  }
-  .vac-f__click {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .vac-f__form-submit {
-    margin-top: 10px;
-    padding: 20px 78px;
-  }
-  .vac-f__form-select {
-    width: 103% !important;
-  }
-}
-
-@media screen and (max-width: 801px) {
-  .vac-f__form-desc {
-    font-size: 14px;
-    line-height: 24px;
-  }
-  .vac-f__form-label span {
-    font-size: 12px;
-  }
-  .vac-f__form-label input, .vac-f__form-label select {
-    font-size: 14px;
-  }
-
-}
-
-@media screen and (max-width: 769px) {
-  .vac-f__main-title {
-    margin: 35px 0 0;
-  }
-  .vac-f__form-date {
-    display: flex;
-  }
-  .vac-f__form-label span {
-    max-width: 140px;
-  }
-  .vac-f__form-date__month {
-    width: 142px !important;
-  }
-  .vac-f__form-date__input {
-    width: 142px !important;
-  }
-  .vac-f__form-label input {
-    width: 93%;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .vac-f__nav {
-    display: none;
-  }
-  .vac-f__form {
-    width: 100%;
-  }
-  .vac-f__form-label {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .vac-f__content {
-    margin-top: 30px;
-  }
-  .vac-f__form-title {
-    font-size: 14px;
-  }
-  .vac-f__input-container {
-    width: 100% !important;
-    height: 50px;
-  }
-  .vac-f__form-label span {
-    margin-bottom: 10px;
-  }
-  .vac-f__form-select {
-    width: 100% !important;
-  }
-  .vac-f__form-select-arrow {
-    right: 6%;
-    top: 55%;
-  }
-  .vac-f__form-block {
-    margin-bottom: 30px;
-  }
-  select.vac-f__form-date__month {
-    width: 46% !important;
-  }
-  .vac-f__form-date__input {
-    width: 46% !important;
-  }
-  .vac-f__form-date {
-    width: 100%;
-  }
-  .vac-f__form-label select {
-    padding: 8px 14px;
+    width: 90%;
   }
 }
 
@@ -482,14 +341,42 @@
 
 @media screen and (max-width: 1281px) {
   .vac-f__form-label span {
-    max-width: 200px;
+    max-width: 110px;
   }
   .vac-f__nav-item__circle {
     margin-right: 10px;
   }
+  .vac-f__form {
+    width: 69%;
+  }
+  .vac-f__form-desc {
+    font-size: 18px;
+    line-height: 36px;
+    margin-bottom: 68px;
+  }
+  .vac-f__form-education-btn {
+    margin: 20px 30px 20px 0;
+  }
+  .vac-f__form-block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+  }
+  .vac-f__form-works-btn {
+    margin-top: 10px;
+  }
+  .vac-f__click {
+    margin-top: 15px;
+  }
+  .vac-f__form-label textarea {
+    height: 100%;
+  }
 }
 
 @media screen and (max-width: 1024px) {
+  .vac-f__form-label span {
+    max-width: 200px;
+  }
   .vac-f__nav-item__circle {
     width: 31px;
     height: 31px;
@@ -564,10 +451,12 @@
   .vac-f__nav-item a {
     font-size: 12px;
   }
-
 }
 
 @media screen and (max-width: 801px) {
+  .vac-f__form-label span {
+    max-width: 140px;
+  }
   .vac-f__nav-item a {
     font-size: 10px;
   }
@@ -593,7 +482,7 @@
 
 @media screen and (max-width: 769px) {
   .vac-f__main-title {
-    margin: 35px 0 0;
+    margin: 43px 0 0;
   }
   .vac-f__form-date {
     display: flex;
@@ -609,6 +498,25 @@
   }
   .vac-f__input-container {
     display: flex;
+  }
+  .vac-form__wrapper {
+    padding: 85px 0;
+  }
+  .vac-f__content {
+    margin-top: 37px;
+  }
+  .vac-f__nav-item__circle {
+    width: 25px;
+    height: 25px;
+  }
+  .vac-f__nav-item__circle span {
+    font-size: 10px;
+  }
+  .vac-f__form-submit {
+    margin-top: 0;
+  }
+  .vac-f__click {
+    margin-top: 0;
   }
 }
 
@@ -688,5 +596,35 @@
   .vac-f__form-submit {
     margin-top: 0;
     padding: 15px 78px;
+  }
+}
+
+@media screen and (max-width: 481px) {
+  .vac-f__main-title {
+    margin-top: 0;
+  }
+  .vac-f__form-label {
+    margin: 5px 0;
+  }
+  .vac-f__form-works-btn {
+    margin-bottom: 0;
+  }
+  .vac-f__input-container--adding {
+    height: 50px;
+  }
+  .vac-f__form-works-btn {
+    margin-top: 20px;
+  }
+  .vac-f__license {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 481px) {
+  .vac-f__form-desc {
+    margin-bottom: 30px;
+  }
+  .vac-f__form-title {
+    margin-bottom: 10px;
   }
 }
