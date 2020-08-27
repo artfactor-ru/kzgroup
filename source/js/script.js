@@ -1424,6 +1424,7 @@ if(tabsEvent){
 
 	tabsEvent.addEventListener('click', openList)
 	function openList(e) {
+		e.stopPropagation();
 		if (e.target.className === "tabs-common-links") {
 			let tabcontent = document.getElementsByClassName("tabs-common-content"),
 				tablinks = document.getElementsByClassName("tabs-common-links");
@@ -1434,7 +1435,8 @@ if(tabsEvent){
 			}
 			removeActivity(tablinks);
 			removeActivity(tabcontent);
-			e.currentTarget.className += " active";
+			console.log(e.target);
+			e.target.classList.add('active');
 			document.getElementById(e.target.dataset.tab).classList.add('active')
 
 		}
