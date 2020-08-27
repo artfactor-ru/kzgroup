@@ -1278,10 +1278,8 @@ let wrapper = document.querySelector('.zavod');
 }
 
 
-
-
 // accordion
-let acc = document.getElementsByClassName("akcioner-info__accordion-item");
+let accordion = document.querySelector('.akcioner-info__accordion')
 let menu = document.getElementsByClassName("akcioner-info__menu-icon");
 let contactNavItem = document.getElementsByClassName("contacts-sidebar__nav-item");
 let navItem = document.getElementsByClassName("contacts-navigation-list__item");
@@ -1290,22 +1288,15 @@ let contactsMenuItem = document.getElementsByClassName('contacts-navigation-list
 let contactsMenu = document.getElementsByClassName("contacts-menu-container");
 
 
-// acc.onclick=function(e){
-// 	for(let i = 0; i < acc.length; i++){
-// 		acc[i].classList.remove('active');
-// 	}
-// 	e.target.classList.add('active');
-//
-// }
+accordion.addEventListener('click', function(e) {
+	let accordionItems = document.querySelectorAll('.akcioner-info__accordion-item'),
+			target = e.target;
 
-// function accordion() {
-// 	for (let i = 0; i < acc.length; i++) {
-// 		acc[i].addEventListener("click", function() {
-// 			this.classList.remove("active");
-// 		});
-// 	}
-//
-// }
+	Array.from(accordionItems).forEach(item => {
+		item.classList.remove('active')
+	})
+	target.classList.add('active')
+})
 
 for (let i = 0; i < acc.length; i++) {
 	acc[i].addEventListener("click", function() {
