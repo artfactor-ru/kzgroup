@@ -19,6 +19,10 @@
 
 @import 'common/news';
 
+@import 'common/hero-section';
+@import 'common/tabs';
+@import 'common/pagination';
+
 @import 'pages/main/frame';
 
 @import 'pages/about/main-about';
@@ -60,10 +64,6 @@
 @import 'pages/actioners/actioners';
 
 @import 'pages/rent/card';
-@import 'pages/rent/main';
-@import 'pages/rent/pagination';
-@import 'pages/rent/navigation';
-@import 'pages/rent/header';
 
 
 @import 'pages/rent_noinfo/main';
@@ -74,6 +74,7 @@
 
 @import 'pages/vacancies/vacancies';
 @import 'pages/vacancies/vacancies-details';
+@import 'pages/vacancies/vacancies-form';
 
 @import 'pages/press/press';
 
@@ -146,6 +147,7 @@ figure{
 	padding-left: 4%;
 	padding-right: 4%;
 	box-sizing: border-box;
+	height: 100%;
 	// box-sizing: border-box;
 }
 

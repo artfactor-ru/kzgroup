@@ -78,7 +78,18 @@
 	// padding: 60px 10% 20px 18%;
 	
 }
-
+.nav_list-scroll{
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.nav_list-left{
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.nav_list-content{
+	box-sizing: border-box;
+	overflow: hidden;
+}
 .nav_item{
 	cursor: pointer;
 	margin-bottom: 20px;

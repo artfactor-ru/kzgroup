@@ -223,7 +223,11 @@ if(containerNavScroll){
 	scrollbarNav.addListener(ScrollTrigger.update);
 }
 
-
+let containerTabsScroll = document.querySelector('.tabs-common');
+let scrollbarTabs;
+if(containerTabsScroll){
+	scrollbarTabs = ScrollbarSmoth.init(containerTabsScroll, options3);
+}
 
 
 
@@ -780,24 +784,7 @@ if(containerNavScroll){
 				}
 				
 			
-					// Анимация элементов
-				gsap.utils.toArray('.is-animate').forEach(element => {
-
-					let parallax = element.getAttribute('data-speed');
-					let speed = parallax * 100 + '%';
-					gsap.fromTo(element, {
-						// duration: 5,
-						y: speed
-					}, {
-						y: "0%",
-						force3D: true,
-						scrollTrigger: {
-							trigger: element,
-							scrub: true,
-							// start: "top top"
-						} 
-					});
-				});
+					
 
 				btnMore = document.querySelectorAll('.traktors__text-wrap--desktop .button-more--traktors');
 
@@ -1041,7 +1028,7 @@ if(containerNavScroll){
 		
 				gsap.utils.toArray('.title--inner').forEach(element => {
 					gsap.fromTo(element,{
-					y: '130%',
+					y: '110%',
 					rotateX: "-40deg",
 					opacity: 0 
 						}, {
@@ -1076,7 +1063,7 @@ if(containerNavScroll){
 							trigger: ".footer",
 							start: 'top bottom',
 							// pin: true,
-							toggleActions: "play reverse play reverse"
+							// toggleActions: "play reverse play reverse"
 							// scrub: true,
 							// pinSpacing: false
 							// start: "top c"
@@ -1138,6 +1125,22 @@ if(containerNavScroll){
 					// once: true,
 				});
 			});
+
+			scrollbar.addListener(() => {
+				gsap.utils.toArray('.button-more').forEach(element => {
+					ScrollTrigger.create({
+						trigger: element,
+						start: 'bottom bottom',
+						scrub: true,
+						toggleClass: 'is-inview-line',
+						// this toggles the class again when you scroll back up:
+						toggleActions: 'play none none none',
+						// this removes the class when the scrolltrigger is passed:
+						// once: true,
+					});
+				});
+			});
+				
 		
 			gsap.utils.toArray('.button-line').forEach(element => {
 				ScrollTrigger.create({
@@ -1275,10 +1278,8 @@ let wrapper = document.querySelector('.zavod');
 }
 
 
-
-
 // accordion
-let acc = document.getElementsByClassName("akcioner-info__accordion-item");
+let accordion = document.querySelector('.akcioner-info__accordion')
 let menu = document.getElementsByClassName("akcioner-info__menu-icon");
 let contactNavItem = document.getElementsByClassName("contacts-sidebar__nav-item");
 let navItem = document.getElementsByClassName("contacts-navigation-list__item");
@@ -1287,22 +1288,15 @@ let contactsMenuItem = document.getElementsByClassName('contacts-navigation-list
 let contactsMenu = document.getElementsByClassName("contacts-menu-container");
 
 
-// acc.onclick=function(e){
-// 	for(let i = 0; i < acc.length; i++){
-// 		acc[i].classList.remove('active');
-// 	}
-// 	e.target.classList.add('active');
-//
-// }
+accordion.addEventListener('click', function(e) {
+	let accordionItems = document.querySelectorAll('.akcioner-info__accordion-item'),
+			target = e.target;
 
-// function accordion() {
-// 	for (let i = 0; i < acc.length; i++) {
-// 		acc[i].addEventListener("click", function() {
-// 			this.classList.remove("active");
-// 		});
-// 	}
-//
-// }
+	Array.from(accordionItems).forEach(item => {
+		item.classList.remove('active')
+	})
+	target.classList.add('active')
+})
 
 for (let i = 0; i < acc.length; i++) {
 	acc[i].addEventListener("click", function() {
@@ -1395,10 +1389,53 @@ if(screen.width>=1280){
 			// blobs[0].style.transform = 'translate3d(' + -x + 'px,' + -y + 'px, 0px)';
 		})
 	}
+
+
+	// Анимация элементов
+	gsap.utils.toArray('.is-animate').forEach(element => {
+
+		let parallax = element.getAttribute('data-speed');
+		let speed = parallax * 100 + '%';
+		gsap.fromTo(element, {
+			// duration: 5,
+			y: speed
+		}, {
+			y: "0%",
+			force3D: true,
+			scrollTrigger: {
+				trigger: element,
+				scrub: true,
+				// start: "top top"
+			} 
+		});
+	});
 }
 
 
+let tabsEvent = document.getElementById('tabs_event');
 
-// let preloader = document.querySelector('.preloader');
 
-// preloader.classList.add('animate');
+	if(tabsEvent){
+
+
+	tabsEvent.addEventListener('click', openList)
+	function openList(e) {
+		e.stopPropagation();
+		if (e.target.className === "tabs-common-links") {
+			let tabcontent = document.getElementsByClassName("tabs-common-content"),
+				tablinks = document.getElementsByClassName("tabs-common-links");
+			function removeActivity (arrCollection) {
+				for (let item of arrCollection) {
+					item.classList.remove('active');
+				}
+			}
+			removeActivity(tablinks);
+			removeActivity(tabcontent);
+			console.log(e.target);
+			e.target.classList.add('active');
+			document.getElementById(e.target.dataset.tab).classList.add('active')
+
+		}
+	}
+}
+

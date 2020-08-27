@@ -1,0 +1,692 @@
+.vac-form__wrapper {
+  padding: 125px 0;
+  height: 100%;
+  font-family: $font-text-regular;
+}
+
+.vac-f__main-title {
+  @extend %block-title;
+  margin-top: 50px;
+}
+
+
+.vac-f__content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 58px;
+  position: relative;
+}
+
+.vac-f__nav {
+  width: 30%;
+}
+
+.vac-f__nav {
+  width: 30%;
+  padding-top: 20px;
+  &-list {
+    position: fixed;
+    list-style: none;
+  }
+  &-item {
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: .4s;
+    &:hover {
+      & a {
+        color: #000;
+      }
+      & .vac-f__nav-item__circle {
+        background-color: #F34542;
+        border-color: #F34542;
+        transition: .4s;
+        & span {
+          color: #fff;
+        }
+      }
+    }
+    &__circle {
+      width: 41px;
+      height: 41px;
+      border: 1px solid #000;
+      border-radius: 50%;
+      margin-right: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      &:after {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 50px;
+        height: 1px;
+        background-color: #000;
+        transform: rotate(90deg);
+        bottom: -27px;
+      }
+    }
+    & a {
+      color: #67676A;
+      font-size: 18px;
+    }
+  }
+}
+
+.vac-f__nav-list li:last-child div::after {
+  display: none;
+}
+
+.vac-f__nav-item--active  {
+  & a {
+    color: #000;
+  }
+  & .vac-f__nav-item__circle {
+    background-color: #F34542;
+    border-color: #F34542;
+    & span {
+      color: #fff;
+    }
+  }
+}
+
+
+.vac-f__input-container {
+  width: 505px !important;
+  height: 64px;
+  position: relative;
+  &--area {
+    height: 160px;
+  }
+  &--separate {
+    display: flex;
+    width: 505px !important;
+    height: 64px;
+    align-self: flex-end;
+    align-items: baseline;
+  }
+  &--separate2 {
+    display: flex;
+    width: 505px !important;
+    height: 64px;
+    align-items: center;
+    align-self: flex-end;
+  }
+}
+
+
+.vac-f__form {
+  width: 70%;
+  &-desc {
+    font-family: $font-text-light;
+    font-size: 24px;
+    line-height: 38px;
+    color: #3C3D40;
+    margin-bottom: 38px;
+  }
+  &-title {
+    font-family: $font-regular;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 26px;
+    color: #000000;
+  }
+  &-block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+  }
+  &-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 14px 0;
+    &--short {
+      & div div {
+        height: 100%;
+        width: 45%;
+      }
+    }
+    & input {
+      width: 95%;
+      height: 97%;
+      padding: 0 12px;
+      font-family: $font-text-regular;
+      font-size: 18px;
+      border-radius: 3px;
+      border: 1px solid #DCE0E3;
+      background: #F6F6F6;
+    }
+    & select {
+      width: 100%;
+      position: relative;
+      display: inline-block;
+      padding: 21px 14px;
+      font-family: $font-text-regular;
+      font-size: 18px;
+      border-radius: 3px;
+      border: 1px solid #DCE0E3;
+      background: #F6F6F6;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+    & span {
+      text-transform: uppercase;
+      color: #616161;
+      font-size: 18px;
+      display: block;
+      max-width: 240px;
+    }
+  }
+}
+
+.vac-f__main-form {
+  width: 85%;
+}
+
+.vac-f__form-education-btn {
+  @extend %button_underline;
+  margin: 20px 30px 20px 0;
+}
+
+.vac-f__form-select-arrow {
+  position: absolute;
+  right: 4%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.vac-f__form-date {
+  display: flex;
+  width: 502px;
+  & select {
+    width: 33%;
+    height: 100%;
+  }
+  & input {
+    width: 33%;
+    height: 96%;
+  }
+}
+
+.vac-f__form-checkbox-label {
+  & span {
+    font-size: 18px;
+    font-family: $font-text-regular;
+    color: #616161;
+  }
+  & input {
+    width: 42px;
+    height: 42px;
+    background-color: #F2F4F7;
+    border: 1px solid #CECECE;
+    border-radius: 3px;
+  }
+}
+
+.vac-f__form-checkbox {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  cursor: pointer;
+  &--basic {
+    display: none;
+  }
+  &--style {
+    position: relative;
+    margin-right: 25px;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #CECECE;
+    background-color: #F2F4F7;
+    border-radius: 3px;
+    float: left;
+    margin-top: -2px;
+    vertical-align: middle;
+    & span {
+      font-size: 18px;
+      color: #616161;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      background: url(../img/vacancies/vac-f-accept.svg) center center no-repeat;
+      background-size: contain;
+      top: 7px;
+      left: 9px;
+      width: 26px;
+      height: 26px;
+      transform: scale(0);
+      transition: .4s;
+    }
+  }
+}
+
+.vac-f__form-checkbox--basic:checked + .vac-f__form-checkbox--style::before {
+  transform: scale(1);
+}
+
+.vac-f__form-label textarea {
+  width: 94%;
+  height: 81%;
+  padding: 14px;
+  font-family: $font-text-regular;
+  resize: none;
+  border: 1px solid #DCE0E3;
+  background: #F6F6F6;
+  border-radius: 3px;
+}
+
+.vac-f__form-submit {
+  padding: 28px 83px;
+  margin-right: 20px;
+}
+
+.vac-f__license {
+  margin-top: 35px;
+  color: #616161;
+  & a {
+    color: #616161;
+    text-decoration: underline;
+  }
+}
+
+.vac-f__information {
+  padding-top: 130px;
+  & div {
+    margin-bottom: 37px;
+  }
+  & h3 {
+    font-size: 24px;
+    font-family: $font-regular;
+    color: #3C3D40;
+    margin-bottom: 12px;
+  }
+  & p {
+    font-size: 18px;
+    color: #3C3D40;
+  }
+  & a {
+    color: #3C3D40;
+  }
+}
+
+@media screen and (max-width: 1561px) {
+  .vac-f__main-form {
+    width: 100%;
+  }
+  .vac-f__form-label span {
+    max-width: 270px;
+  }
+}
+
+@media screen and (max-width: 1281px) {
+  .vac-f__form-label span {
+    max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .vac-f__input-container {
+    width: 314px !important;
+  }
+  .vac-f__form-desc {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .vac-f__form-title {
+    font-size: 20px;
+  }
+  .vac-f__form {
+    width: 75%;
+  }
+  .vac-f__nav {
+    width: 25%;
+  }
+  .vac-f__main-title {
+    font-size: 28px;
+  }
+  .vac-f__form-date {
+    width: 314px;
+  }
+  .vac-f__input-container--separate2 {
+    width: 314px !important;
+  }
+  .vac-f__input-container--separate {
+    width: 314px !important;
+  }
+  .vac-f__form-education-btn {
+    margin-right: 0;
+    text-align: left;
+    font-size: 12px;
+  }
+  .vac-f__form-download-status {
+    font-size: 12px;
+  }
+  .vac-f__resume {
+    & button {
+      margin-right: 20px;
+    }
+  }
+  .vac-f__click {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .vac-f__form-submit {
+    margin-top: 10px;
+    padding: 20px 78px;
+  }
+  .vac-f__form-select {
+    width: 103% !important;
+  }
+}
+
+@media screen and (max-width: 801px) {
+  .vac-f__form-desc {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .vac-f__form-label span {
+    font-size: 12px;
+  }
+  .vac-f__form-label input, .vac-f__form-label select {
+    font-size: 14px;
+  }
+
+}
+
+@media screen and (max-width: 769px) {
+  .vac-f__main-title {
+    margin: 35px 0 0;
+  }
+  .vac-f__form-date {
+    display: flex;
+  }
+  .vac-f__form-label span {
+    max-width: 140px;
+  }
+  .vac-f__form-date__month {
+    width: 142px !important;
+  }
+  .vac-f__form-date__input {
+    width: 142px !important;
+  }
+  .vac-f__form-label input {
+    width: 93%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .vac-f__nav {
+    display: none;
+  }
+  .vac-f__form {
+    width: 100%;
+  }
+  .vac-f__form-label {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .vac-f__content {
+    margin-top: 30px;
+  }
+  .vac-f__form-title {
+    font-size: 14px;
+  }
+  .vac-f__input-container {
+    width: 100% !important;
+    height: 50px;
+  }
+  .vac-f__form-label span {
+    margin-bottom: 10px;
+  }
+  .vac-f__form-select {
+    width: 100% !important;
+  }
+  .vac-f__form-select-arrow {
+    right: 6%;
+    top: 55%;
+  }
+  .vac-f__form-block {
+    margin-bottom: 30px;
+  }
+  select.vac-f__form-date__month {
+    width: 46% !important;
+  }
+  .vac-f__form-date__input {
+    width: 46% !important;
+  }
+  .vac-f__form-date {
+    width: 100%;
+  }
+  .vac-f__form-label select {
+    padding: 8px 14px;
+  }
+}
+
+@media screen and (max-width: 1561px) {
+  .vac-f__main-form {
+    width: 100%;
+  }
+  .vac-f__form-label span {
+    max-width: 270px;
+  }
+}
+
+@media screen and (max-width: 1281px) {
+  .vac-f__form-label span {
+    max-width: 200px;
+  }
+  .vac-f__nav-item__circle {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .vac-f__nav-item__circle {
+    width: 31px;
+    height: 31px;
+  }
+  .vac-f__nav-item a {
+    color: #67676a;
+    font-size: 15px;
+  }
+  .vac-f__nav-item {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  .vac-f__nav-item__circle:after {
+    width: 30px;
+    bottom: -17px;
+  }
+  .vac-f__nav {
+    padding-top: 0;
+  }
+  .vac-f__input-container {
+    width: 314px !important;
+  }
+  .vac-f__form-desc {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .vac-f__form-title {
+    font-size: 20px;
+  }
+  .vac-f__form {
+    width: 75%;
+  }
+  .vac-f__nav {
+    width: 25%;
+  }
+  .vac-f__main-title {
+    font-size: 28px;
+  }
+  .vac-f__form-date {
+    width: 314px;
+  }
+  .vac-f__input-container--separate2 {
+    width: 314px !important;
+  }
+  .vac-f__input-container--separate {
+    width: 314px !important;
+  }
+  .vac-f__form-education-btn {
+    margin-right: 0;
+    text-align: left;
+    font-size: 12px;
+  }
+  .vac-f__form-download-status {
+    font-size: 12px;
+  }
+  .vac-f__resume {
+    & button {
+      margin-right: 20px;
+    }
+  }
+  .vac-f__click {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .vac-f__form-submit {
+    margin-top: 10px;
+    padding: 20px 78px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .vac-f__nav-item a {
+    font-size: 12px;
+  }
+
+}
+
+@media screen and (max-width: 801px) {
+  .vac-f__nav-item a {
+    font-size: 10px;
+  }
+  .vac-f__nav-item {
+    margin-bottom: 20px;
+  }
+  .vac-f__nav-item__circle:after {
+    width: 20px;
+    bottom: -12px;
+  }
+  .vac-f__form-desc {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .vac-f__form-label span {
+    font-size: 12px;
+  }
+  .vac-f__form-label input, .vac-f__form-label select {
+    font-size: 14px;
+  }
+
+}
+
+@media screen and (max-width: 769px) {
+  .vac-f__main-title {
+    margin: 35px 0 0;
+  }
+  .vac-f__form-date {
+    display: flex;
+  }
+  .vac-f__form-label span {
+    max-width: 100px;
+  }
+  .vac-f__form-date__month {
+    width: 156px !important;
+  }
+  .vac-f__form-date__input {
+    width: 156px !important;
+  }
+  .vac-f__input-container {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .vac-f__nav {
+    display: none;
+  }
+  .vac-f__form {
+    width: 100%;
+  }
+  .vac-f__form-label {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .vac-f__content {
+    margin-top: 30px;
+  }
+  .vac-f__form-title {
+    font-size: 14px;
+  }
+  .vac-f__input-container {
+    width: 100% !important;
+    height: 50px;
+  }
+  .vac-f__form-label span {
+    margin-bottom: 10px;
+    max-width: 100%;
+  }
+  .vac-f__form-select {
+    width: 100% !important;
+  }
+  .vac-f__form-block {
+    margin-bottom: 30px;
+  }
+  select.vac-f__form-date__month {
+    width: 50% !important;
+  }
+  .vac-f__form-date__input {
+    width: 50% !important;
+  }
+  .vac-f__form-date {
+    width: 100%;
+  }
+  .vac-f__form-label select {
+    padding: 8px 14px;
+  }
+  .vac-f__input-container--separate {
+    align-self: flex-start;
+  }
+  .vac-f__input-container--separate2 {
+    align-self: flex-start;
+  }
+  .vac-f__input-container--area {
+    height: 90px;
+  }
+  .vac-f__form-addwork-btn {
+    margin-top: 30px;
+  }
+  .vac-f__form-download-btn {
+    font-size: 14px;
+  }
+  .vac-f__click {
+    width: 100% !important;
+  }
+  .vac-f__information {
+    padding-top: 70px;
+  }
+  .vac-form__wrapper {
+    padding: 80px 0;
+  }
+  .vac-f__information h3 {
+    font-size: 18px;
+  }
+  .vac-f__information p {
+    font-size: 14px;
+  }
+  .vac-f__form-submit {
+    margin-top: 0;
+    padding: 15px 78px;
+  }
+}
