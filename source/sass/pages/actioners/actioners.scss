@@ -441,6 +441,8 @@
         }
 
         &--title {
+          position: relative;
+          z-index: -1;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -781,7 +783,7 @@
 .akcioner-info__accordion-item {
   &.active, &:active {
     &>ul {
-      max-height: 300px;
+      max-height: 100%;
     }
   }
 
