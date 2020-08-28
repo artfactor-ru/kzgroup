@@ -8,18 +8,19 @@ address {
 }
 
 .contacts {
-
   &-container {
+    box-sizing: border-box;
     position: relative;
-    padding: 0 0 0 10%;
-    margin: 0;
+    padding-left: 10%;
+    max-width: 1920px;
+    margin: 0 auto;
 
     @media only screen and(max-width: 1280px) {
-      padding: 0 0 0 5%;
+      padding-left: 5%;
     }
 
     @media only screen and(max-width: 768px) {
-      padding-right: 0;
+      padding-right: 8%;
       padding-left: 0;
     }
 
@@ -419,6 +420,8 @@ address {
       }
 
       &__pressc {
+        margin-bottom: 60px;
+
         & > h3 {
           font-family: $font-regular;
           font-style: normal;
@@ -1183,6 +1186,56 @@ address {
     }
   }
 
+  &_hotline {
+    &_text {
+      padding-bottom: 15px;
+      & p {
+        font-family: $font-text-light;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 1.5;
+        color: $grey-text-paragraf;
+        margin-bottom: 20px;
+
+        @media only screen and(max-width: 1280px) {
+          font-size: 16px;
+        }
+
+        @media only screen and(max-width: 768px) {
+          font-size: 14px;
+        }
+
+        @media only screen and(max-width: 640px) {
+          font-size: 12px;
+        }
+      }
+    }
+
+    &_attention {
+      font-family: $font-text-light;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 1.8;
+      color: $red-color;
+      text-transform: uppercase;
+      padding-top: 10px;
+
+      @media only screen and(max-width: 1280px) {
+        font-size: 16px;
+      }
+
+      @media only screen and(max-width: 768px) {
+        font-size: 14px;
+      }
+
+      @media only screen and(max-width: 640px) {
+        font-size: 12px;
+      }
+    }
+  }
+
 }
 
 .contacts-info__menu {
@@ -1250,7 +1303,8 @@ address {
 }
 
 //Активация табов
-#contacts-main, #management, #press-center {
+#contacts-main, #management, #press-center,
+#group, #employment, #rent, #museum {
   max-width: 0;
   max-height: 0;
   overflow: hidden;
@@ -1261,9 +1315,13 @@ address {
   opacity: 0;
 }
 
-#label4,
-#label5,
-#label6 {
+#labelnav1,
+#labelnav2,
+#labelnav3,
+#labelnav4,
+#labelnav5,
+#labelnav6,
+#labelnav7 {
   display: block;
   font-style: normal;
   font-weight: normal;
@@ -1275,7 +1333,11 @@ address {
 
 #tab1:checked ~ #contacts-main,
 #tab2:checked ~ #management,
-#tab3:checked ~ #press-center {
+#tab3:checked ~ #press-center,
+#tab4:checked ~ #group,
+#tab5:checked ~ #employment,
+#tab6:checked ~ #rent,
+#tab7:checked ~ #museum {
   max-width: inherit;
   max-height: inherit;
   padding-right: 2%;
@@ -1301,7 +1363,11 @@ address {
 
 #tab1:checked  ~ .contacts-sidebar > nav > #label1,
 #tab2:checked  ~ .contacts-sidebar > nav > #label2,
-#tab3:checked  ~ .contacts-sidebar > nav > #label3 {
+#tab3:checked  ~ .contacts-sidebar > nav > #label3,
+#tab4:checked  ~ .contacts-sidebar > nav > #label4,
+#tab5:checked  ~ .contacts-sidebar > nav > #label5,
+#tab6:checked  ~ .contacts-sidebar > nav > #label6,
+#tab7:checked  ~ .contacts-sidebar > nav > #label7 {
   color: $red-color;
   &::before {
     height: 100%;
