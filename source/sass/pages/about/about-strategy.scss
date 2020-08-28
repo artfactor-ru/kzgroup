@@ -59,6 +59,21 @@
 		// top: calc( -1 * var(--overflow));
 		
 	}
+
+	.parallax__img--strategy-3{
+		background-image: url(../img/about/about-parallax-2.3.svg);
+		background-position: bottom  center;
+	
+		
+	}
+	.parallax__img--strategy-4{
+		background-image: url(../img/about/about-parrallax-2.4.svg);
+		// --overflow: 180px;
+
+		// height: calc(100% + (2 * var(--overflow)));
+		// top: calc( -1 * var(--overflow));
+		
+	}
 	// .parallax__img--aboutcompany-3{
 	// 	background-image: url(../img/about/about-parallax-first-3.svg);
 	// 	// --overflow: -150px;

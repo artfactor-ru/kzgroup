@@ -899,26 +899,26 @@ document.onreadystatechange = function () {
             start: "bottom bottom"
           }
         });
-      });
+      }); // gsap.fromTo(".footer__outer",{
+      // 	y: '-20%',
+      // 	}, {
+      // 	y: "0%",
+      // 	duration: 0.3,
+      // 	ease: "none",
+      // 	// pin: true,
+      // 	// force3D: true,
+      // 	scrollTrigger: {
+      // 		trigger: ".footer",
+      // 		start: 'top bottom',
+      // 		// pin: true,
+      // 		// toggleActions: "play reverse play reverse"
+      // 		// scrub: true,
+      // 		// pinSpacing: false
+      // 		// start: "top c"
+      // 	} 
+      // }
+      // );
 
-      _gsap.gsap.fromTo(".footer__outer", {
-        y: '-20%'
-      }, {
-        y: "0%",
-        duration: 0.3,
-        ease: "none",
-        // pin: true,
-        // force3D: true,
-        scrollTrigger: {
-          trigger: ".footer",
-          start: 'top bottom' // pin: true,
-          // toggleActions: "play reverse play reverse"
-          // scrub: true,
-          // pinSpacing: false
-          // start: "top c"
-
-        }
-      });
 
       _gsap.gsap.utils.toArray('.statictics--inner').forEach(function (element) {
         _gsap.gsap.fromTo(element, {
@@ -1113,69 +1113,6 @@ if (window.screen.width < 767) {
       wrapper.classList.add('active');
     });
   }
-} // accordion
-
-
-var acc = document.getElementsByClassName("akcioner-info__accordion-item");
-var menu = document.getElementsByClassName("akcioner-info__menu-icon");
-var contactNavItem = document.getElementsByClassName("contacts-sidebar__nav-item");
-var navItem = document.getElementsByClassName("contacts-navigation-list__item");
-var actionerNavItem = document.getElementsByClassName('akcioner-navigation-list__item-active');
-var contactsMenuItem = document.getElementsByClassName('contacts-navigation-list__item-active');
-var contactsMenu = document.getElementsByClassName("contacts-menu-container"); // acc.onclick=function(e){
-// 	for(let i = 0; i < acc.length; i++){
-// 		acc[i].classList.remove('active');
-// 	}
-// 	e.target.classList.add('active');
-//
-// }
-// function accordion() {
-// 	for (let i = 0; i < acc.length; i++) {
-// 		acc[i].addEventListener("click", function() {
-// 			this.classList.remove("active");
-// 		});
-// 	}
-//
-// }
-
-for (var _i14 = 0; _i14 < acc.length; _i14++) {
-  acc[_i14].addEventListener("click", function () {
-    this.classList.remove("active");
-  });
-}
-
-for (var _i15 = 0; _i15 < menu.length; _i15++) {
-  menu[_i15].addEventListener("click", function () {
-    this.classList.toggle("active");
-  });
-}
-
-for (var _i16 = 0; _i16 < contactsMenuItem.length; _i16++) {
-  contactsMenuItem[_i16].addEventListener("click", function () {
-    this.classList.toggle("active");
-  });
-}
-
-for (var _i17 = 0; _i17 < actionerNavItem.length; _i17++) {
-  actionerNavItem[_i17].addEventListener("click", function () {
-    this.classList.toggle("active");
-  });
-}
-
-for (var _i18 = 0; _i18 < contactNavItem.length; _i18++) {
-  contactNavItem[_i18].addEventListener("click", function () {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-
-for (var _i19 = 0; _i19 < navItem.length; _i19++) {
-  navItem[_i19].addEventListener("click", function () {
-    var current = document.getElementsByClassName("contacts-navigation-list__item-active");
-    current[0].className = current[0].className.replace(" contacts-navigation-list__item-active", "");
-    this.className += " contacts-navigation-list__item-active";
-  });
 }
 
 if (document.querySelector('.geography')) {
@@ -1213,17 +1150,17 @@ if (screen.width >= 1280) {
     var body = document.body;
     var parallaxHor = document.querySelectorAll(".parallax__img--horizontal");
 
-    var _loop6 = function _loop6(_i20) {
+    var _loop6 = function _loop6(_i14) {
       body.addEventListener('mousemove', function (e) {
-        var speed = parallaxHor[_i20].getAttribute('data-speed');
+        var speed = parallaxHor[_i14].getAttribute('data-speedhor');
 
         var x = -(e.pageX + this.offsetLeft) / speed;
-        parallaxHor[_i20].style.transform = 'translate3d(' + x + 'px,' + '0px, 0px)'; // blobs[0].style.transform = 'translate3d(' + -x + 'px,' + -y + 'px, 0px)';
+        parallaxHor[_i14].style.transform = 'translate3d(' + x + 'px,' + '0px, 0px)'; // blobs[0].style.transform = 'translate3d(' + -x + 'px,' + -y + 'px, 0px)';
       });
     };
 
-    for (var _i20 = 0; _i20 < parallaxHor.length; _i20++) {
-      _loop6(_i20);
+    for (var _i14 = 0; _i14 < parallaxHor.length; _i14++) {
+      _loop6(_i14);
     } // Анимация элементов
 
 
@@ -1251,6 +1188,8 @@ var tabsEvent = document.getElementById('tabs_event');
 
 if (tabsEvent) {
   var openList = function openList(e) {
+    e.stopPropagation();
+
     if (e.target.className === "tabs-common-links") {
       var removeActivity = function removeActivity(arrCollection) {
         var _iteratorNormalCompletion = true;
@@ -1282,10 +1221,71 @@ if (tabsEvent) {
           tablinks = document.getElementsByClassName("tabs-common-links");
       removeActivity(tablinks);
       removeActivity(tabcontent);
-      e.currentTarget.className += " active";
+      console.log(e.target);
+      e.target.classList.add('active');
       document.getElementById(e.target.dataset.tab).classList.add('active');
     }
   };
 
   tabsEvent.addEventListener('click', openList);
+} // accordion
+
+
+var accordion = document.querySelector('.akcioner-info__accordion');
+
+if (accordion) {
+  var menu = document.getElementsByClassName("akcioner-info__menu-icon");
+  var contactNavItem = document.getElementsByClassName("contacts-sidebar__nav-item");
+  var navItem = document.getElementsByClassName("contacts-navigation-list__item");
+  var actionerNavItem = document.getElementsByClassName('akcioner-navigation-list__item-active');
+  var contactsMenuItem = document.getElementsByClassName('contacts-navigation-list__item-active');
+  var contactsMenu = document.getElementsByClassName("contacts-menu-container");
+  accordion.addEventListener('click', function (e) {
+    var accordionItems = document.querySelectorAll('.akcioner-info__accordion-item'),
+        target = e.target;
+    Array.from(accordionItems).forEach(function (item) {
+      item.classList.remove('active');
+    });
+    target.classList.add('active');
+  });
+
+  for (var _i15 = 0; _i15 < acc.length; _i15++) {
+    acc[_i15].addEventListener("click", function () {
+      this.classList.remove("active");
+    });
+  }
+
+  for (var _i16 = 0; _i16 < menu.length; _i16++) {
+    menu[_i16].addEventListener("click", function () {
+      this.classList.toggle("active");
+    });
+  }
+
+  for (var _i17 = 0; _i17 < contactsMenuItem.length; _i17++) {
+    contactsMenuItem[_i17].addEventListener("click", function () {
+      this.classList.toggle("active");
+    });
+  }
+
+  for (var _i18 = 0; _i18 < actionerNavItem.length; _i18++) {
+    actionerNavItem[_i18].addEventListener("click", function () {
+      this.classList.toggle("active");
+    });
+  }
+
+  for (var _i19 = 0; _i19 < contactNavItem.length; _i19++) {
+    contactNavItem[_i19].addEventListener("click", function () {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+
+  for (var _i20 = 0; _i20 < navItem.length; _i20++) {
+    navItem[_i20].addEventListener("click", function () {
+      var current = document.getElementsByClassName("contacts-navigation-list__item-active");
+      current[0].className = current[0].className.replace(" contacts-navigation-list__item-active", "");
+      this.className += " contacts-navigation-list__item-active";
+    });
+  }
 }
