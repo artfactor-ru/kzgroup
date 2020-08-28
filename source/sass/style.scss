@@ -14,15 +14,20 @@
 
 @import 'common/nav2';
 @import 'common/about';
+@import 'common/hero-section';
 @import 'common/main';
 
 
 @import 'common/news';
 
-@import 'common/hero-section';
+
 @import 'common/tabs';
 @import 'common/pagination';
 @import 'common/custom-select';
+
+@import 'common/video-block';
+
+@import 'common/block-text';
 
 @import 'pages/main/frame';
 
@@ -80,6 +85,9 @@
 
 
 @import 'common/preloader';
+
+
+@import 'pages/energy/energy-about';
 
 body{
 	margin: 0;

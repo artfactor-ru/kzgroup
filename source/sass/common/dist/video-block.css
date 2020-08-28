@@ -1,0 +1,19 @@
+.video-block {
+  height: 220px;
+}
+
+@media (min-width: 767px) {
+  .video-block {
+    height: 280px;
+  }
+}
+@media (min-width: 1280px) {
+  .video-block {
+    height: 415px;
+  }
+}
+@media (min-width: 1680px) {
+  .video-block {
+    height: 510px;
+  }
+}

@@ -44,12 +44,12 @@
 
 .hero-common__btn {
   @extend %btn-bordered;
-  margin: 0 !important;
+  // margin: 0 !important;
   font-family: $font-text-regular;
   color: $light-grey-color;
   font-size: 14px;
   padding: 28px 38px;
-  margin: 0;
+  // margin: 0;
 
   color: $light-grey-color;
 

@@ -212,6 +212,41 @@
 }
 
 
+%block-title-light{
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 26px;
+	text-transform: none;
+	color: #FFFFFF;
+	font-family: $font-regular;
+	color: $light-grey-color;
+}
+
+@media(min-width: 767px){
+	%block-title-light{
+
+		font-size: 24px;
+		line-height: 26px;
+	}
+}
+
+@media(min-width: 1280px){
+	%block-title-light{
+
+		font-size: 36px;
+		line-height: 48px;
+	}
+}
+
+@media(min-width: 1680px){
+	%block-title-light{
+
+		font-size: 36px;
+		line-height: 49px;
+	}
+}
+
 // Текстовый блок , параграф
 
 %block-text{
@@ -636,3 +671,29 @@
 		width: 100%;
 	}
 }
+
+
+%block-title-inlist{
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	line-height: 24px;
+	font-family: $font-regular;
+	font-style: normal;
+	font-weight: normal;
+	color: #000;
+	@media(min-width: 768px){
+		font-size: 20px;
+		line-height: 39px;
+	}
+	@media(min-width: 1280px){
+		font-size: 24px;
+		line-height: 39px;
+	}
+	@media(min-width: 1680px){
+		font-size: 30px;
+		line-height: 39px;		
+	}
+}
+
+

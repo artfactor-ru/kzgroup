@@ -938,13 +938,43 @@ if(containerTabsScroll){
 
 		
 			btnsPlaySlider[i].addEventListener('click', function(){
-				console.log('hi');
 				swiperHero.slideToLoop(0, 100, true);
 				videoMain.currentTime = 0;
 			})
 		}
 	}
 	
+
+	// Видео внутреннее
+	// let videoInner = document.querySelector('.parallax__img--inner-video');
+
+	// if(videoInner){
+	// 	let btnPlayInner = document.querySelector('.button__video-controls--inner');
+	
+	
+	
+
+	// 	function playPauseMedia() {
+	// 		if(videoInner.paused) {
+	// 			videoInner.style.display = "block";
+	// 			videoInner.style.zIndex = "5";
+	// 			videoInner.play();
+			
+	// 			btnPlayInner.classList.add('active');
+	// 		} else {
+	// 			videoInner.pause();
+	// 			btnPlayInner.classList.remove('active');
+	// 			videoInner.style.zIndex = "-1";
+			
+	// 		}
+	// 	}
+
+
+		
+	// 	btnPlayInner.addEventListener('click', playPauseMedia);
+
+	
+	// }
 
 // Анимация
 	document.onreadystatechange = function () {

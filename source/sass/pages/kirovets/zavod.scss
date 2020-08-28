@@ -5,8 +5,15 @@
 	padding-bottom: 70px;
 }
 
+
 .zavod-img-wrap{
 	display: none;
+}
+
+.zavod-img-wrap--inner{
+	width: 55px;
+	height: 55px;
+	margin-bottom: 25px;
 }
 .zavod__title--desktop{
 	display: none;
@@ -52,9 +59,15 @@
 		margin-top: 25px;
 
 	}
+	.zavod-img-wrap--inner{
+		display: none !important;
+	}
 }
 
 @media(min-width: 1280px){
+	.zavod-img-wrap--inner{
+		display: block !important;
+	}
 	.zavod{
 		padding-top: 70px;
 		padding-bottom: 85px;

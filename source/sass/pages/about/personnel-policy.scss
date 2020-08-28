@@ -36,6 +36,11 @@
     letter-spacing: -0.055em;
     font-family: $font-for-number;
     color: #FFFFFF;
+    white-space: nowrap;
+}
+.personnel-policy__statisctics-data--inner .personnel-policy__statisctics-number{
+    font-size: 76px;
+    line-height: 81px; 
 }
 .personnel-policy__statisctics-percent{
     font-size: 94px;
@@ -53,6 +58,9 @@
 }
 
 .button--about{
+    @extend %btn-bordered;
+    position: relative;
+    display: inline-block;
     color: $light-grey-color;
     font-size: 10px;
     padding: 15px;
@@ -81,6 +89,11 @@
         }
     }
 }
+.parallax__img-wrap--personnel-policy{
+    --overflow: 50px;
+    height: calc(100% + (2 * var(--overflow))) !important; 
+    top: calc( -1 * var(--overflow));
+}
 
 @media(min-width:767px){
         
@@ -96,12 +109,8 @@
     }
     .parallax__img--personnel-policy{
         display: block;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.23)), linear-gradient(95.91deg, #000000 13.39%, rgba(0, 0, 0, 0) 107.28%), url(../img/about/bg-pers-policy.jpg); 
-        background-blend-mode: multiply, normal, normal;
-       
-        background-size: cover;
-        background-position: center 40%;
-        
+        width: 100%;
+        height: 100%;
     }
    
     .personnel-policy__desc{
@@ -118,8 +127,8 @@
         margin-top: 35px;
         
     }
-    .personnel-policy__statisctics-item:first-child{
-        margin-right: 105px;
+    .personnel-policy__statisctics-item:not(:last-child){
+        margin-right: 60px;
     }
     .personnel-policy__statisctics-number{
         font-size: 94px;
@@ -143,6 +152,10 @@
         font-size: 10px;
         margin-top: 25px;
        
+    }
+    .personnel-policy__statisctics-data--inner .personnel-policy__statisctics-number{
+        font-size: 64px;
+        line-height: 64px;
     }
 
 }
@@ -179,7 +192,7 @@
         margin-top: 35px;
         
     }
-    .personnel-policy__statisctics-item:first-child{
+    .personnel-policy__statisctics-item:not(:last-child){
         margin-right: 80px;
     }
     .personnel-policy__statisctics-number{
@@ -204,6 +217,10 @@
         font-size: 12px;
         margin-top: 25px;
        
+    }
+    .personnel-policy__statisctics-data--inner .personnel-policy__statisctics-number{
+        font-size: 115px;
+        line-height: 100px;
     }
     
 }
@@ -233,7 +250,7 @@
         margin-top: 40px;
         
     }
-    .personnel-policy__statisctics-item:first-child{
+    .personnel-policy__statisctics-item:not(:last-child){
         margin-right: 135px;
     }
     .personnel-policy__statisctics-number{
@@ -259,5 +276,8 @@
         margin-top: 40px;
        
     }
-    
+    .personnel-policy__statisctics-data--inner .personnel-policy__statisctics-number{
+        font-size: 136px;
+        line-height:  136px;
+    }
 }
