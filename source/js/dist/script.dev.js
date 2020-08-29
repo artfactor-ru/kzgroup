@@ -136,16 +136,19 @@ function hideAndShowHeaderMobile() {
 
 
 var options = {
-  damping: 0.04,
+  damping: 0.09,
+  renderByPixels: true,
   delegateTo: document
 };
 var options2 = {
-  damping: 0.04,
+  damping: 0.09,
+  renderByPixels: true,
   continuousScrolling: false // delegateTo: document
 
 };
 var options3 = {
-  damping: 0.04,
+  damping: 0.09,
+  renderByPixels: true,
   continuousScrolling: false // delegateTo: document
 
 };

@@ -223,3 +223,9 @@ figure{
 	height: 100%;
 }
 
+.swiper-wrapper{
+	will-change: transform;
+}
+.swiper-slide{
+	will-change: transform, opacity;
+}

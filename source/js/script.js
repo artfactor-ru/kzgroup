@@ -148,16 +148,19 @@ function hideAndShowHeaderMobile() {
 // Инициализация плавного скролла
 
 let options  = {
-	damping: 0.04,
+	damping: 0.09,
+	renderByPixels: true,
 	delegateTo: document
 }
 let options2  = {
-	damping: 0.04,
+	damping: 0.09,
+	renderByPixels: true,
 	continuousScrolling: false
 	// delegateTo: document
 }
 let options3  = {
-	damping: 0.04,
+	damping: 0.09,
+	renderByPixels: true,
 	continuousScrolling: false
 	// delegateTo: document
 }
