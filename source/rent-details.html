@@ -14,7 +14,7 @@
 <div class="scroll">
     <div class="rent-details">
         <div class="container">
-            <a href="rent.html" class="popup_kirovets__back vacancies-d__breadcrumb">
+            <a href="rent.html" class="popup_kirovets__back vacancies-d__breadcrumb rent-details__breadcrumb">
                 <svg class="popup_kirovets__back-icon"><use xlink:href="./img/sprite.svg#icon-arrow-popup"></use></svg>
                 вернуться в каталог объектов
             </a>
@@ -23,7 +23,39 @@
             <div class="rent-details__content">
                 <div class="rent-details__content--left">
                     <div class="rent-details__slider">
-                        <img src="./img/rent-details/rent-details-slide.png" alt="слайд помещений" class="rent-details__slider-img">
+<!--                        <img src="./img/rent-details/rent-details-slide.png" alt="слайд помещений" class="rent-details__slider-img">-->
+
+                        <div class="swiper-container gallery-top">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next swiper-button-white"></div>
+                            <div class="swiper-button-prev swiper-button-white"></div>
+                        </div>
+                        <div class="swiper-container gallery-thumbs">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="rent-details__map">
                         <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae7fed85698d0cc663bd62dd2585ab7c9d2babbbd04d0a522a0a9580a37b15a0c&amp;source=constructor" width="100%" height="240" frameborder="0"></iframe>
@@ -63,7 +95,7 @@
                         <div class="rent-details__desc-condition">Помещение в хорошем состоянии</div>
                     </div>
                     <button class="button  rent-details__button" type="submit">
-                        Отправить
+                        Оставить заявку
                         <div class=" button-line button-line--first"></div>
                         <div class=" button-line button-line--two"></div>
                     </button>
@@ -73,11 +105,63 @@
                         <a href="mailto:arenda@kzgroup.ru" class="rent-details__contacts-link">e-mail: arenda@kzgroup.ru</a>
                     </div>
                 </div>
+                <ul class="social__btn-list rent-details__socials">
+                    <li class="social__btn-item social__btn-item--share">
+                        <button class="social__btn" style="background-image: url(./img/social-share.svg);"></button>
+
+                        <div class="social__dropdown">
+                            <h5 class="social__title">Поделиться:</h5>
+                            <ul class="social__link-list">
+                                <li class="social__link-item">
+                                    <a class="social__link" href="" target="_blank">
+                                        <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-vk"></use></svg>
+                                        <span class="visually-hidden">Vk</span>
+                                    </a>
+                                </li>
+                                <li class="social__link-item">
+                                    <a class="social__link" href="" target="_blank">
+                                        <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-inst"></use></svg>
+                                        <span class="visually-hidden">Instagram</span>
+                                    </a>
+                                </li>
+                                <li class="social__link-item">
+                                    <a class="social__link" href="" target="_blank">
+                                        <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-fb"></use></svg>
+                                        <span class="visually-hidden">Facebook</span>
+                                    </a>
+                                </li>
+
+                                <li class="social__link-item">
+                                    <a class="social__link" href="" target="_blank">
+                                        <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-youtube"></use></svg>
+                                        <span class="visually-hidden">Youtube</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="social__btn-item social__btn-item--message">
+                        <button class="social__btn" style="background-image: url(./img/social-message.svg);"></button>
+                        <div class="social__dropdown">
+                            <h5 class="social__title">Подписаться на новости</h5>
+                            <ul class="social__link-list">
+                                <li class="social__link-item">
+                                    <a class="social__link" href="" target="_blank">
+                                        <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-news"></use></svg>
+                                        <span class="visually-hidden">Подписаться</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                </ul>
             </div>
         </div>
     </div>
 </div>
 
 <script src="./js/script.min.js"></script>
+
 </body>
 </html>

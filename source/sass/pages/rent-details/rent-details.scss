@@ -25,6 +25,7 @@
   width: 100%;
   height: 100%;
   display: flex;
+  position: relative;
   &--left {
     width: 55%;
     min-height: 500px;
@@ -36,13 +37,19 @@
   }
 }
 
+.rent-details__socials {
+  right: -4%;
+  top: 0%;
+}
+
 .rent-details__button {
-  padding: 27px 97px;
+  padding: 27px 72px;
   border: 1px solid black;
 }
 
 .rent-details__slider {
   height: 550px;
+  position: relative;
   margin-bottom: 35px;
   &-img {
     width: 100%;
@@ -99,5 +106,179 @@
       opacity: 0.5;
     }
   }
+}
 
+@media screen and (max-width: 1561px) {
+  .rent-details__socials {
+    top: -13%;
+  }
+}
+
+@media screen and (max-width: 1361px) {
+  .rent-details {
+    padding: 90px 0 65px 0;
+  }
+  .rent-details__title {
+    font-size: 36px;
+    line-height: 45px;
+    margin-top: 43px;
+    margin-bottom: 15px;
+  }
+  .rent-details__desc-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .rent-details__desc-item {
+    font-size: 16px;
+    margin: 16px 0;
+  }
+  .rent-details__desc-condition {
+    margin-top: 30px;
+  }
+  .rent-details__button {
+    margin-top: 0;
+    padding: 21px 55px;
+  }
+  .rent-details__contacts {
+    font-size: 18px;
+    margin-top: 40px;
+  }
+  .rent-details__contacts a {
+    margin-bottom: 5px;
+  }
+  .rent-details__contacts-subtitle {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .rent-details__title {
+    width: 60%;
+    font-size: 26px;
+    line-height: 38px;
+    margin-top: 25px;
+  }
+  .rent-details__content {
+    flex-direction: column;
+  }
+  .rent-details__content--left {
+    width: 100%;
+  }
+  .rent-details__content--right {
+    width: 100%;
+  }
+  .rent-details__slider {
+    margin-bottom: 15px;
+  }
+  .rent-details {
+    padding: 70px 0 55px;
+  }
+  .rent-details__date {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  .rent-details__content--right {
+    padding: 40px 0 0 0;
+  }
+  .rent-details__desc-item {
+    padding-right: 40%;
+  }
+  .rent-details__socials {
+    top: -8%;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .rent-details__title {
+    width: 80%;
+  }
+  .rent-details__socials {
+    display: none;
+  }
+  .rent-details__desc-item {
+    font-size: 14px;
+    margin: 13px 0;
+    padding-right: 30%;
+  }
+  .rent-details__desc-condition {
+    font-size: 14px;
+    margin: 20px 0;
+  }
+  .rent-details__button {
+    padding: 17px 55px;
+  }
+  .rent-details__contacts {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+  .rent-details__content--right {
+    min-height: unset;
+  }
+  .rent-details__button {
+    width: unset;
+    font-size: 10px;
+    padding: 14px 30px;
+  }
+}
+
+@media screen and (max-width: 481px) {
+  .rent-details__breadcrumb {
+    display: block !important;
+    & svg {
+      margin-right: 0 !important;
+    }
+  }
+  .rent-details {
+    padding: 60px 0 55px;
+  }
+  .rent-details__title {
+    width: 100%;
+    line-height: 130%;
+  }
+  .rent-details__desc-title {
+    font-size: 18px;
+  }
+  .rent-details__desc-item {
+    padding-right: 10%;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .rent-details__breadcrumb {
+    font-size: 13px !important;
+  }
+}
+
+
+.swiper-container {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery-top {
+  height: 80%;
+  width: 100%;
+}
+
+.gallery-thumbs {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.gallery-thumbs .swiper-slide {
+  height: 100%;
+  opacity: 0.4;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
 }

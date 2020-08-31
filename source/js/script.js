@@ -232,6 +232,29 @@ if(containerTabsScroll){
 	scrollbarTabs = ScrollbarSmoth.init(containerTabsScroll, options3);
 }
 
+if(document.querySelector('.rent-details__slider')){
+	let galleryThumbs = new Swiper('.gallery-thumbs', {
+		spaceBetween: 10,
+		slidesPerView: 4,
+		loop: true,
+		freeMode: true,
+		loopedSlides: 5, //looped slides should be the same
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+	});
+	let galleryTop = new Swiper('.gallery-top', {
+		spaceBetween: 10,
+		loop: true,
+		loopedSlides: 5, //looped slides should be the same
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		thumbs: {
+			swiper: galleryThumbs,
+		},
+	});
+}
 
 
 // Инициализация свайперов
@@ -1406,7 +1429,6 @@ let tabsEvent = document.getElementById('tabs_event');
 			}
 			removeActivity(tablinks);
 			removeActivity(tabcontent);
-			console.log(e.target);
 			e.target.classList.add('active');
 			document.getElementById(e.target.dataset.tab).classList.add('active')
 
