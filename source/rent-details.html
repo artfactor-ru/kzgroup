@@ -165,7 +165,57 @@
         </div>
     </div>
 </div>
+<div class="vacancies-d__form-wrapper">
+    <div class="vacancies-d__form-layer"></div>
+    <form class="vacancies-d__form">
+        <svg class="vacancies-d__form-close" width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7109 15.1292L0.355601 29.4845L1.06271 30.1916L15.418 15.8363L29.0663 29.4845L29.7734 28.7774L16.1251 15.1292L29.7756 1.47873L29.0685 0.771619L15.418 14.4221L1.06049 0.0645121L0.353381 0.771619L14.7109 15.1292Z" fill="black"/>
+        </svg>
+        <h2>Заявка на Производственное
+            помещение в ЦОК (ц 280)</h2>
+        <div class="vacancies-d__form-inputs">
+            <label class="vacancies-d__form-label">
+                <span>Имя</span>
+                <input type="text">
+            </label>
+            <label class="vacancies-d__form-label">
+                <span>Телефон</span>
+                <input type="text">
+            </label>
+            <label class="vacancies-d__form-label">
+                <span>E-mail</span>
+                <input type="text">
+            </label>
+            <label class="vacancies-d__form-label">
+                <span>Сообщение</span>
+                <textarea></textarea>
+            </label>
+        </div>
+        <div class="vacancies-d__form-buttons">
+            <div class="vacancies-d__form-buttons--block">
+                <button class="button vacancies-d__response vacancies-d__submit" type="submit">
+                    Отправить
+                    <div class=" button-line button-line--first"></div>
+                    <div class=" button-line button-line--two"></div>
+                </button>
+                <p class="vacancies-d__license">Нажимая на кнопку откликнуться, вы принимаете <a href="#0">согласие на обработку персональных данных</a></p>
+            </div>
 
+
+        </div>
+    </form>
+</div>
+<script>
+    let vacanciesForm = document.querySelector('.vacancies-d__form-wrapper');
+    let vacanciesClose = document.querySelector('.vacancies-d__form-close');
+    let vacanciesBtnResponse = document.querySelector('.rent-details__button');
+    vacanciesBtnResponse.addEventListener('click', function () {
+        vacanciesForm.style.display = 'block';
+    });
+    vacanciesClose.addEventListener('click', function () {
+        vacanciesForm.style.display = 'none';
+    })
+</script>
 <script src="./js/script.min.js"></script>
 
 </body>
