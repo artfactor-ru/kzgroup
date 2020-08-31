@@ -231,28 +231,31 @@ let scrollbarTabs;
 if(containerTabsScroll){
 	scrollbarTabs = ScrollbarSmoth.init(containerTabsScroll, options3);
 }
-
+//slider rent detail page
 if(document.querySelector('.rent-details__slider')){
 	let galleryThumbs = new Swiper('.gallery-thumbs', {
-		spaceBetween: 10,
-		slidesPerView: 4,
+		spaceBetween: 20,
+		slidesPerView: 5,
 		loop: true,
 		freeMode: true,
-		loopedSlides: 5, //looped slides should be the same
+		loopedSlides: 1, //looped slides should be the same
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
 	});
 	let galleryTop = new Swiper('.gallery-top', {
 		spaceBetween: 10,
 		loop: true,
-		loopedSlides: 5, //looped slides should be the same
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.rent-details__slider-next-arrow',
+			prevEl: '.rent-details__slider-prev-arrow',
 		},
 		thumbs: {
 			swiper: galleryThumbs,
 		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+		}
 	});
 }
 
