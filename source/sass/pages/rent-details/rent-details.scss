@@ -1,0 +1,103 @@
+.rent-details {
+  padding: 120px 0;
+  font-family: $font-regular;
+}
+
+.rent-details__title {
+  font-size: 46px;
+  line-height: 54px;
+  color: #171C28;
+  margin-top: 50px;
+  margin-bottom: 45px;
+  width: 60%;
+  font-family: $font-bold-2-title;
+}
+
+.rent-details__date {
+  font-family: $font-text-regular;
+  font-size: 18px;
+  color: #A6A2A2;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.rent-details__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  &--left {
+    width: 55%;
+    min-height: 500px;
+  }
+  &--right {
+    width: 45%;
+    min-height: 500px;
+    padding: 0 0 50px 50px;
+  }
+}
+
+.rent-details__button {
+  padding: 27px 97px;
+  border: 1px solid black;
+}
+
+.rent-details__slider {
+  height: 550px;
+  margin-bottom: 35px;
+  &-img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.rent-details__desc {
+
+  &-title {
+    font-size: 24px;
+    color: #18213D;
+    margin-bottom: 30px;
+  }
+}
+
+.rent-details__desc-item {
+  font-family: $font-text-regular;
+  display: flex;
+  font-size: 18px;
+  margin: 20px 0;
+  & p {
+    color: #A6A2A2;
+    width: 50%;
+  }
+  & span {
+    color: #18213D;
+    width: 50%;
+  }
+}
+
+.rent-details__desc-condition {
+  font-family: $font-text-regular;
+  color: #18213D;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.rent-details__contacts {
+  font-size: 24px;
+  color: #171C28;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  &-subtitle {
+    margin-bottom: 20px;
+  }
+  & a {
+    color: #171C28;
+    transition: .3s;
+    margin-bottom: 8px;
+    &:hover {
+      text-decoration: underline;
+      opacity: 0.5;
+    }
+  }
+
+}
