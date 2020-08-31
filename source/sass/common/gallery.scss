@@ -1,0 +1,109 @@
+.gallery{
+    padding-top: 50px;
+    padding-bottom: 65px;
+    @media(min-width:768px){
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @media(min-width:1280px){
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+.gallery__title{
+    @extend %block-title;
+    padding-bottom: 20px;
+    @media(min-width:768px){
+        padding-bottom: 25px;
+    }
+    @media(min-width:1280px){
+        padding-bottom: 40px;
+    }
+    @media(min-width:1680px){
+        padding-bottom: 75px;
+    }
+}
+.swiper-container--gallery{
+    margin-left: 4%;
+    @media(min-width:768px){
+        position: relative;
+        margin-left: 0%;
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #e6e6e6;
+            
+        }
+       
+    }
+}
+.swiper-slide--gallery{
+    width: auto;
+    max-width: 305px;
+    @media(min-width:768px){
+        max-width: 390px;
+    }
+    @media(min-width:1280px){
+        max-width: 560px;
+    }
+    @media(min-width:1680px){
+        max-width: 815px;
+    }
+}
+.gallery__img{
+    height: 275px;
+    @media(min-width:768px){
+        height: 280px;
+    }
+    @media(min-width:1280px){
+        height: 400px;
+    }
+    @media(min-width:1680px){
+        height: 580px;
+    }
+}
+
+.gallery__desc{
+    @extend %block-text;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    @media(min-width: 768px){
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    @media(min-width: 1280px){
+        padding-top: 25px;
+        padding-bottom: 25px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    @media(min-width: 1680px){
+        padding-top: 35px;
+        padding-bottom: 60px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+.swiper-container-horizontal>.swiper-scrollbar.swiper-scrollbar--gallery {
+    @extend %scroll-line;
+    bottom: 0px;
+    
+    box-sizing: border-box;
+  
+    @media(min-width: 1280px){
+        left: 8%;
+        width: 84%;
+    }
+    @media(min-width: 1680px){
+        left: 9%;
+        width: 82%;
+    }
+    
+}
+.swiper-scrollbar--gallery .swiper-scrollbar-drag{
+	@extend %scroll-drag;
+}

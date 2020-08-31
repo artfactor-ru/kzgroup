@@ -244,6 +244,7 @@ if(containerTabsScroll){
 	let swiperCompanies;
 	let companiesThumbs;
 	let swiperHero;
+	let swiperGallery;
 	const transitionSlide = 15000;
 
 	const enableSwiper = function(){
@@ -284,12 +285,8 @@ if(containerTabsScroll){
 			}
 				
 	}
-		// })
-		
-		
 	
 
-	
 	document.addEventListener('DOMContentLoaded', function(){
 		if(document.querySelector('.news__container')){
 			let newNavPrev = document.querySelector('.news__container .swiper-button-next');
@@ -692,15 +689,27 @@ if(containerTabsScroll){
 				},
 			});
 		}
+		if(document.querySelector('.swiper-container--gallery')){
+			swiperGallery = new Swiper('.swiper-container--gallery',{
+				slidesPerView: 'auto',
+				spaceBetween: 22,
+				// loop:true,
+				grabCursor: true,
+				scrollbar: {
+					el: '.swiper-scrollbar--gallery',
+				},
+				breakpoints: {
+					1280: {
+					spaceBetween: 15,
+					
+					},
+			
+				},
+			});
+		}
 
 	
 	})
-
-	
-
-	
-	
-	
 
 	function updateSlider(slider){
 		if(slider!= undefined){
@@ -718,21 +727,19 @@ if(containerTabsScroll){
 		updateSlider(swiperCompanies);
 		updateSlider(companiesThumbs);
 		updateSlider(swiperHero);
-		
+		updateSlider(swiperGallery);
 		breakpoint.addListener(breakpointChecker);
 		breakpointChecker();
 	});
 
 	function setMainSwiperMouseOver() {
 		swiperTab.detachEvents();
-		// swiperTab.mousewheel.disable();
+
 	}
 
 	function setMainSwiperMouseOut() {
 		swiperTab.attachEvents();
-		// swiperTab.mousewheel.enable();
-
-			
+	
 	}
 
 

@@ -29,6 +29,9 @@
 
 @import 'common/block-text';
 
+@import 'common/gallery';
+@import 'common/contact-block';
+
 @import 'pages/main/frame';
 
 @import 'pages/about/main-about';
@@ -90,6 +93,8 @@
 
 
 @import 'pages/energy/energy-about';
+
+@import 'pages/ptz/clients';
 
 body{
 	margin: 0;
