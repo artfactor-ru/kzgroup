@@ -70,6 +70,7 @@
 .history__photos{
     display: flex;
     flex-direction: column;
+    padding-left: 26px;
 }
 
 .history__photos__item{
@@ -100,7 +101,7 @@
     font-family: $font-text-light;
     color: $grey-text-paragraf;
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.2;
 }
 
 @media(min-width: 767px){
@@ -120,6 +121,9 @@
         margin: 40px 0 20px;
         font-size: 30px;
         line-height: 36px;
+    }
+    .history__photos{
+        padding-left: 0;
     }
     .history__photos__item{
         margin-bottom: 0;

@@ -427,12 +427,11 @@
 	margin: 0;
 	padding: 0px 26px;
 	left: -26px;
-	top: -34px;
+	top: -28px;
 	color: #C26063;
 	font-family: $font-bold-2-title;
 	font-size: 14px;
-	line-height: 38px;
-	outline: none;
+	line-height: 32px;
 	position: absolute;
 	z-index: -1;
 	&::after{
@@ -523,6 +522,10 @@
 	&.pic__frame-3{
 		height: 90%;
 		width: 90%;
+	}
+	@media(min-width: 1280px){
+		top: -34px;
+		line-height: 38px;
 	}
 }
 
