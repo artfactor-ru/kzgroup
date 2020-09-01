@@ -29,7 +29,7 @@
   &--left {
     width: 55%;
     min-height: 500px;
-    margin-right: 40px;
+    margin-right: 55px;
   }
   &--right {
     width: 45%;
@@ -70,14 +70,14 @@
   font-family: $font-text-regular;
   display: flex;
   font-size: 18px;
-  margin: 20px 0;
+  margin: 17px 0;
   & p {
     color: #A6A2A2;
-    width: 50%;
+    width: 40%;
   }
   & span {
     color: #18213D;
-    width: 50%;
+    width: 60%;
   }
 }
 
@@ -343,6 +343,17 @@
   }
 }
 
+@media screen and (max-width: 1281px) {
+  .rent-details__date {
+    margin-bottom: 12px;
+  }
+  .rent-details__desc-item p {
+    width: 45%;
+  }
+  .rent-details__desc-item span {
+    width: 55%;
+  }
+}
 
 @media screen and (max-width: 1025px) {
   .rent-details__title {
@@ -520,6 +531,7 @@
   }
 }
 
+
 @media screen and (max-width: 415px) {
   .rent-details__form-label {
     font-size: 13px;
@@ -539,6 +551,19 @@
   }
   .rent-details__license {
     font-size: 13px;
+  }
+}
+
+
+@media screen and (max-width: 361px) {
+  .vacancies-d__breadcrumb {
+    font-size: 14px !important;
+  }
+  .rent-details__title {
+    font-size: 22px;
+  }
+  .rent-details__desc-item p {
+    width: 62%;
   }
 }
 
