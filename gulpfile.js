@@ -89,24 +89,24 @@ gulp.task("minifyjs", function () {
 // Оптимизация изображений
 gulp.task("image", function () {
   return gulp.src("./build/img/**/*.{png,jpg,svg}")
-    .pipe(imagemin([
-      imagemin.optipng({
-        optimizationLevel: 3  // уровень оптимизации
-      }),
-      imagemin.jpegtran({
-        progressive: true // прогрессивная загрузка картинки
-      }),
-      imagemin.svgo(
-        {
-        plugins: [
-          {cleanupIDs: false},
-          {removeUselessDefs: false},
-          {removeViewBox: true},
-          {removeComments: true}
-        ]
-      }
-      )
-    ]))
+    // .pipe(imagemin([
+    //   imagemin.optipng({
+    //     optimizationLevel: 3  // уровень оптимизации
+    //   }),
+    //   imagemin.jpegtran({
+    //     progressive: true // прогрессивная загрузка картинки
+    //   }),
+    //   imagemin.svgo(
+    //     {
+    //     plugins: [
+    //       {cleanupIDs: false},
+    //       {removeUselessDefs: false},
+    //       {removeViewBox: true},
+    //       {removeComments: true}
+    //     ]
+    //   }
+    //   )
+    // ]))
     .pipe(gulp.dest("./build/img"));
 });
 

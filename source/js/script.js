@@ -124,7 +124,7 @@ function socialInteraction() {
 let twoScreen = document.querySelector('.two-screen');
 document.addEventListener('DOMContentLoaded', function(){
 	
-	if(!document.querySelector('.main') && !document.querySelector('.hero-common')){
+	if(!document.querySelector('.main') && !document.querySelector('.hero-common') && !document.querySelector('.main__hero')){
 		header.classList.add('js-scroll');
 	}
 });
