@@ -9,12 +9,356 @@
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
+<style>
+    .preloader{
+        background-color: #ffffff;
+        width: 100vw;
+        z-index: 20000;
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
+    }
+    .preloader__icon{
+        width: 130px;
+        height: 130px;
+        fill: none;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: dash 6s linear 3s forwards infinite alternate;
+    }
+</style>
+<div class="preloader">
+    <svg class="preloader__icon"><use xlink:href="./img/sprite.svg#icon-logo-company"></use></svg>
+</div>
+
+<header class="header">
+    <div class="container--header container--header--main">
+
+        <div class="header__wrapper">
+
+            <button class="c-nav-button js-nav-toggle" type="button">
+                <div class="c-nav-button_wrap">
+                    <div class="c-nav-button_icon">
+                        <span class="c-nav-button_line"></span>
+                        <span class="c-nav-button_line"></span>
+                        <span class="c-nav-button_line"></span>
+                    </div>
+                </div>
+            </button>
+            <a class="header__logo" href="">
+                <svg class="header__logo-icon"  viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                        <path d="M29.684 17.9667L17.9667 29.684L6.32028 17.9667L17.9667 6.32028L29.684 17.9667ZM27.7666 8.16666L23.3637 0H12.5696L8.16666 8.16666L0 12.5696V23.3637L8.16666 27.7666L12.5696 35.9333H23.3637L27.7666 27.7666L35.9333 23.3637V12.5696L27.7666 8.16666Z" fill="#ED1C24"/>
+                        <path d="M20.4522 6.32031L34.087 13.7058V19.9551L20.4522 6.32031ZM22.2986 34.158H16.0493L29.6841 20.5232L22.2986 34.158ZM1.77539 22.2986V15.9783L15.4102 29.613L1.77539 22.2986ZM13.6348 1.77539H19.8841L6.32031 15.4812L13.6348 1.77539Z" fill="#FFDD00"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0">
+                            <rect width="35.9333" height="35.9333" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+
+                <p class="header__logo-text">Кировский<br> завод</p>
+            </a>
+        </div>
+
+
+
+
+
+
+    </div>
+</header>
+
+<nav class="nav">
+    <div class="nav_background"></div>
+
+
+    <div class="nav_list-wrap">
+        <article class="nav_list-scroll">
+            <div class="nav_list-left scrollbar-inner">
+                <div class="nav_list-content">
+
+
+                    <div class="js-search-button">
+                        <div class="js-search-text">Поиск</div>
+                    </div>
+                    <ul class="nav_list">
+                        <li class="nav_item -dropdown js-dropdown">
+                            <div class="nav_link js-nav-link js-dropdown-toggle">
+                                <span class="nav_link_text">Компания</span>
+                                <svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+
+                            </div>
+                            <span class="nav_link_line"></span>
+                            <div class="nav_dropdown js-dropdown-list">
+                                <div class="nav_dropdown_wrap">
+                                    <ul class="nav_dropdown_list">
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Руководство</a>
+                                        </li>
+
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">История</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Музей</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Производственная система</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Охрана труда</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Профсоюз</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Реквизиты</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav_item -dropdown js-dropdown">
+                            <div class="nav_link js-nav-link js-dropdown-toggle">
+                                <span class="nav_link_text">Дочерние предприятия</span>
+                                <svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+
+                            </div>
+                            <span class="nav_link_line"></span>
+                            <div class="nav_dropdown js-dropdown-list">
+                                <div class="nav_dropdown_wrap">
+                                    <ul class="nav_dropdown_list">
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Петербургский тракторный завод завод «Петросталь»</a>
+                                        </li>
+
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Завод буровых технологий</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Кировский завод Газовые технологии</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Энергетический комплекс</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Тетрамет</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Локомотив</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#"> Проектно-конструкторское бюро «Автоматика»</a>
+                                        </li>
+
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#"> Центр метрологии, испытаний и охраны труда</a>
+                                        </li>
+
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#"> Предприятия социальной сферы</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <li class="nav_item">
+                            <a class="nav_link js-nav-link" href="#">
+                                <span class="nav_link_text">Корпоративный университет</span>
+                                <span class="nav_link_line"></span>
+                            </a>
+                        </li>
+
+                        <li class="nav_item">
+                            <a class="nav_link js-nav-link" href="#">
+                                <span class="nav_link_text">Вакансии</span>
+                                <span class="nav_link_line"></span>
+                            </a>
+                        </li>
+
+                        <li class="nav_item -dropdown js-dropdown">
+
+
+                            <div class="nav_link js-nav-link js-dropdown-toggle">
+                                <span class="nav_link_text">Пресс-Центр</span>
+                                <svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+                            </div>
+                            <div class="nav_dropdown js-dropdown-list">
+                                <div class="nav_dropdown_wrap">
+                                    <ul class="nav_dropdown_list">
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Новости</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Видеогалерея</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Пресса о нас</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Фотогалерея</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Контакты</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav_item -dropdown js-dropdown">
+
+
+                            <div class="nav_link js-nav-link js-dropdown-toggle">
+                                <span class="nav_link_text">Акционерам и инвесторам</span>
+                                <svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+                            </div>
+                            <div class="nav_dropdown js-dropdown-list">
+                                <div class="nav_dropdown_wrap">
+                                    <ul class="nav_dropdown_list">
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Информация, подлежащая раскрытию</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Раскрытие информации дочерними обществами</a>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+
+
+                        <li class="nav_item">
+                            <a class="nav_link js-nav-link" href="#">
+                                <span class="nav_link_text">Продажа активов</span>
+                                <span class="nav_link_line"></span>
+                            </a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav_link js-nav-link" href="#">
+                                <span class="nav_link_text">Тендеры</span>
+                                <span class="nav_link_line"></span>
+                            </a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav_link js-nav-link" href="#">
+                                <span class="nav_link_text">Аренда помещений	</span>
+                                <span class="nav_link_line"></span>
+                            </a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav_link js-nav-link" href="#">
+                                <span class="nav_link_text">Контакты</span>
+                                <span class="nav_link_line"></span>
+                            </a>
+                        </li>
+
+
+
+                        <li class="nav_item">
+                            <a class="nav_link nav_link--policy js-nav-link" href="#">
+                                <span class="nav_link_text">Использование сайта</span>
+                                <span class="nav_link_line"></span>
+                            </a>
+                        </li>
+                    </ul>
+
+
+                    <div class="nav_lang nav_lang--mobile">
+                        <div class="nav_lang-wrap">
+                            <ul class="nav_lang-list">
+                                <li class="nav_lang-item">
+                                    <a class="nav_lang-link" href="">En</a>
+                                </li>
+                                <li class="nav_lang-item">
+                                    <a class="nav_lang-link" href="">Ru</a>
+                                </li>
+                                <li class="nav_lang-item">
+                                    <a class="nav_lang-link" href="">De</a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </article>
+
+
+
+    </div>
+    <div class="nav_search">
+        <article class="search-wrap">
+            <div class="search">
+                <input class="search_input o-input -search js-search-input" type="text" placeholder="Поиск" value="">
+                <div class="search_results js-search-results"></div>
+            </div>
+        </article>
+    </div>
+    <aside class="nav_aside">
+        <ul class="nav_social">
+            <li class="nav_social_item">
+                <a class="nav_social_link" href="#" target="_blank">
+
+
+                    <svg class="nav_social_icon" ><use xlink:href="./img/sprite.svg#icon-fb"></use></svg>
+                </a>
+            </li>
+            <li class="nav_social_item">
+                <a class="nav_social_link" href="#" target="_blank">
+                    <svg class="nav_social_icon" ><use xlink:href="./img/sprite.svg#icon-vk"></use></svg>
+
+                </a>
+            </li>
+            <li class="nav_social_item">
+                <a class="nav_social_link" href="#" target="_blank">
+                    <svg class="nav_social_icon" ><use xlink:href="./img/sprite.svg#icon-youtube"></use></svg>
+
+                </a>
+            </li>
+            <li class="nav_social_item">
+                <a class="nav_social_link" href="#" target="_blank">
+
+                    <svg class="nav_social_icon" ><use xlink:href="./img/sprite.svg#icon-inst"></use></svg>
+                </a>
+            </li>
+        </ul>
+        <div class="nav_lang nav_lang--desktop">
+            <div class="nav_lang-wrap">
+                <ul class="nav_lang-list">
+                    <li class="nav_lang-item">
+                        <a class="nav_lang-link" href="">Ru</a>
+                    </li>
+                    <li class="nav_lang-item">
+                        <a class="nav_lang-link" href="">En</a>
+                    </li>
+                    <li class="nav_lang-item">
+                        <a class="nav_lang-link" href="">De</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </aside>
+</nav>
 
 <div class="scroll">
-    <div class="rent-details">
+    <div class="rent-details two-screen">
         <div class="container">
-            <a href="rent.html" class="popup_kirovets__back vacancies-d__breadcrumb">
+            <a href="rent.html" class="popup_kirovets__back vacancies-d__breadcrumb rent-details__breadcrumb">
                 <svg class="popup_kirovets__back-icon"><use xlink:href="./img/sprite.svg#icon-arrow-popup"></use></svg>
                 вернуться в каталог объектов
             </a>
@@ -23,7 +367,47 @@
             <div class="rent-details__content">
                 <div class="rent-details__content--left">
                     <div class="rent-details__slider">
-                        <img src="./img/rent-details/rent-details-slide.png" alt="слайд помещений" class="rent-details__slider-img">
+                        <div class="swiper-container gallery-top">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" style="background-image: linear-gradient(0deg, rgba(16, 18, 14, 0.88) 1.27%, rgba(16, 18, 14, 0) 39.79%), url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image: linear-gradient(0deg, rgba(16, 18, 14, 0.88) 1.27%, rgba(16, 18, 14, 0) 39.79%), url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image: linear-gradient(0deg, rgba(16, 18, 14, 0.88) 1.27%, rgba(16, 18, 14, 0) 39.79%), url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image: linear-gradient(0deg, rgba(16, 18, 14, 0.88) 1.27%, rgba(16, 18, 14, 0) 39.79%), url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image: linear-gradient(0deg, rgba(16, 18, 14, 0.88) 1.27%, rgba(16, 18, 14, 0) 39.79%), url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image: linear-gradient(0deg, rgba(16, 18, 14, 0.88) 1.27%, rgba(16, 18, 14, 0) 39.79%), url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image: linear-gradient(0deg, rgba(16, 18, 14, 0.88) 1.27%, rgba(16, 18, 14, 0) 39.79%), url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image: linear-gradient(0deg, rgba(16, 18, 14, 0.88) 1.27%, rgba(16, 18, 14, 0) 39.79%), url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image: linear-gradient(0deg, rgba(16, 18, 14, 0.88) 1.27%, rgba(16, 18, 14, 0) 39.79%), url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image: linear-gradient(0deg, rgba(16, 18, 14, 0.88) 1.27%, rgba(16, 18, 14, 0) 39.79%), url(./img/rent-details/rent-details-slide.png)"></div>
+                            </div>
+                            <div class="rent-details__slider-prev-arrow">
+                                <svg width="44" height="8" viewBox="0 0 44 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M43.3536 4.35355C43.5488 4.15829 43.5488 3.8417 43.3536 3.64644L40.1716 0.464463C39.9763 0.2692 39.6597 0.2692 39.4645 0.464463C39.2692 0.659725 39.2692 0.976307 39.4645 1.17157L42.2929 4L39.4645 6.82842C39.2692 7.02369 39.2692 7.34027 39.4645 7.53553C39.6597 7.73079 39.9763 7.73079 40.1716 7.53553L43.3536 4.35355ZM4.37114e-08 4.5L43 4.5L43 3.5L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <div class="rent-details__slider-next-arrow">
+                                <svg width="44" height="8" viewBox="0 0 44 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M43.3536 4.35355C43.5488 4.15829 43.5488 3.8417 43.3536 3.64644L40.1716 0.464463C39.9763 0.2692 39.6597 0.2692 39.4645 0.464463C39.2692 0.659725 39.2692 0.976307 39.4645 1.17157L42.2929 4L39.4645 6.82842C39.2692 7.02369 39.2692 7.34027 39.4645 7.53553C39.6597 7.73079 39.9763 7.73079 40.1716 7.53553L43.3536 4.35355ZM4.37114e-08 4.5L43 4.5L43 3.5L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <div class="rent-details__swiper-pagination-container">
+                                <div class="rent-details__swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-container gallery-thumbs">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(./img/rent-details/rent-details-slide.png)"></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="rent-details__map">
                         <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae7fed85698d0cc663bd62dd2585ab7c9d2babbbd04d0a522a0a9580a37b15a0c&amp;source=constructor" width="100%" height="240" frameborder="0"></iframe>
@@ -63,7 +447,7 @@
                         <div class="rent-details__desc-condition">Помещение в хорошем состоянии</div>
                     </div>
                     <button class="button  rent-details__button" type="submit">
-                        Отправить
+                        Оставить заявку
                         <div class=" button-line button-line--first"></div>
                         <div class=" button-line button-line--two"></div>
                     </button>
@@ -73,11 +457,100 @@
                         <a href="mailto:arenda@kzgroup.ru" class="rent-details__contacts-link">e-mail: arenda@kzgroup.ru</a>
                     </div>
                 </div>
+                <ul class="social__btn-list rent-details__socials">
+                    <li class="social__btn-item social__btn-item--share">
+                        <button class="social__btn" style="background-image: url(./img/social-share.svg);"></button>
+
+                        <div class="social__dropdown">
+                            <h5 class="social__title">Поделиться:</h5>
+                            <ul class="social__link-list">
+                                <li class="social__link-item">
+                                    <a class="social__link" href="" target="_blank">
+                                        <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-vk"></use></svg>
+                                        <span class="visually-hidden">Vk</span>
+                                    </a>
+                                </li>
+                                <li class="social__link-item">
+                                    <a class="social__link" href="" target="_blank">
+                                        <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-inst"></use></svg>
+                                        <span class="visually-hidden">Instagram</span>
+                                    </a>
+                                </li>
+                                <li class="social__link-item">
+                                    <a class="social__link" href="" target="_blank">
+                                        <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-fb"></use></svg>
+                                        <span class="visually-hidden">Facebook</span>
+                                    </a>
+                                </li>
+
+                                <li class="social__link-item">
+                                    <a class="social__link" href="" target="_blank">
+                                        <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-youtube"></use></svg>
+                                        <span class="visually-hidden">Youtube</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="social__btn-item social__btn-item--message">
+                        <button class="social__btn" style="background-image: url(./img/social-message.svg);"></button>
+                        <div class="social__dropdown">
+                            <h5 class="social__title">Подписаться на новости</h5>
+                            <ul class="social__link-list">
+                                <li class="social__link-item">
+                                    <a class="social__link" href="" target="_blank">
+                                        <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-news"></use></svg>
+                                        <span class="visually-hidden">Подписаться</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                </ul>
             </div>
         </div>
     </div>
 </div>
+<div class="vacancies-d__form-wrapper rent-details__form-wrapper">
+    <div class="vacancies-d__form-layer"></div>
+    <form class="rent-details__form">
+        <svg class="vacancies-d__form-close" width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7109 15.1292L0.355601 29.4845L1.06271 30.1916L15.418 15.8363L29.0663 29.4845L29.7734 28.7774L16.1251 15.1292L29.7756 1.47873L29.0685 0.771619L15.418 14.4221L1.06049 0.0645121L0.353381 0.771619L14.7109 15.1292Z" fill="black"/>
+        </svg>
+        <h2>Заявка на Производственное
+            помещение в ЦОК (ц 280)</h2>
+        <div class="rent-details__form-fields">
+            <label class="rent-details__form-label">
+                <span>Имя</span>
+                <input type="text">
+            </label>
+            <label class="rent-details__form-label">
+                <span>Телефон</span>
+                <input type="text">
+            </label>
+            <label class="rent-details__form-label">
+                <span>E-mail</span>
+                <input type="text">
+            </label>
+            <label class="rent-details__form-label">
+                <span>Сообщение</span>
+                <textarea></textarea>
+            </label>
+        </div>
+        <div class="rent-details__form-buttons">
+            <button class="button rent-details__form-submit" type="submit">
+                Отправить
+                <div class=" button-line button-line--first"></div>
+                <div class=" button-line button-line--two"></div>
+            </button>
+            <p class="rent-details__license">Нажимая на кнопку откликнуться, вы принимаете <a href="#0">согласие на обработку персональных данных</a>
+            </p>
+        </div>
+    </form>
+</div>
 
 <script src="./js/script.min.js"></script>
+
 </body>
 </html>

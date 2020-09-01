@@ -25,24 +25,30 @@
   width: 100%;
   height: 100%;
   display: flex;
+  position: relative;
   &--left {
     width: 55%;
     min-height: 500px;
+    margin-right: 55px;
   }
   &--right {
     width: 45%;
     min-height: 500px;
-    padding: 0 0 50px 50px;
   }
 }
 
+.rent-details__socials {
+  right: -4%;
+  top: 0%;
+}
+
 .rent-details__button {
-  padding: 27px 97px;
-  border: 1px solid black;
+  padding: 27px 72px;
 }
 
 .rent-details__slider {
   height: 550px;
+  position: relative;
   margin-bottom: 35px;
   &-img {
     width: 100%;
@@ -63,14 +69,14 @@
   font-family: $font-text-regular;
   display: flex;
   font-size: 18px;
-  margin: 20px 0;
+  margin: 17px 0;
   & p {
     color: #A6A2A2;
-    width: 50%;
+    width: 40%;
   }
   & span {
     color: #18213D;
-    width: 50%;
+    width: 60%;
   }
 }
 
@@ -99,5 +105,496 @@
       opacity: 0.5;
     }
   }
+}
+
+
+.rent-details__slider-next-arrow, .rent-details__slider-prev-arrow {
+  z-index: 900;
+  color: white;
+  font-size: 23px;
+  position: absolute;
+  bottom: 64px;
+  cursor: pointer;
+  display: flex;
+}
+
+.rent-details__slider-prev-arrow svg {
+  transform: rotate(180deg);
+}
+
+.rent-details__slider-next-arrow {
+  right: 1%;
+}
+.rent-details__slider-prev-arrow {
+  left: 1%;
+}
+
+//slider styles
+.rent-details__slider .swiper-container {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rent-details__slider .swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.rent-details__slider .gallery-top {
+  height: 100%;
+  width: 100%;
+}
+
+.rent-details__slider .gallery-thumbs {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+  width: 80%;
+  bottom: 125px;
+}
+
+.rent-details__slider .gallery-thumbs .swiper-slide {
+  height: 100%;
+  opacity: 0.7;
+}
+
+.rent-details__slider .gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.rent-details__swiper-pagination {
+  display: none;
+}
+
+.rent-details__form-wrapper h2 {
+  font-family: $font-bold-2-title;
+  font-size: 36px;
+  line-height: 49px;
+  text-align: center;
+  color: #171C28;
+  margin-bottom: 50px;
+  width: 80%;
+}
+
+.rent-details__form-submit {
+  border: 1px solid #000;
+  margin-top: 0;
+  height: 58px;
+}
+
+.rent-details__form-buttons {
+  display: flex;
+  flex-direction: row;
+  padding-left: 335px;
+}
+
+.rent-details__form-fields {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  justify-content: space-between;
+}
+
+.rent-details__form-label {
+  justify-content: space-between;
+  display: flex;
+  font-family: $font-text-regular;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 34px;
+  align-items: center;
+  color: #616161;
+  & input {
+    font-family: $font-text-regular;
+    width: 505px;
+    height: 64px;
+    padding: 10px;
+    font-size: 18px;
+    background: #F6F6F6;
+    border: 1px solid #DCE0E3;
+    box-sizing: border-box;
+    border-radius: 3px;
+  }
+  & textarea {
+    background: #F6F6F6;
+    border: 1px solid #DCE0E3;
+    box-sizing: border-box;
+    border-radius: 3px;
+    width: 505px;
+    height: 160px;
+    resize: none;
+    padding: 10px;
+    font-size: 18px;
+  }
+}
+
+.rent-details__license {
+  color: #616161;
+  width: 300px;
+  margin-left: 30px;
+  & a {
+    color: #616161;
+    text-decoration: underline;
+    transition: .5s;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+.rent-details__form {
+  font-family: $font-text-regular;
+  width: 1100px;
+  min-height: 700px;
+  background-color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 500;
+  transform: translate(-50%,-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 65px 0;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1561px) {
+  .rent-details__socials {
+    top: -13%;
+  }
+  .rent-details__form {
+    min-height: 660px;
+    padding: 30px 0;
+  }
+}
+
+@media screen and (max-width: 1361px) {
+  .rent-details {
+    padding: 90px 0 65px 0;
+  }
+  .rent-details__form {
+    width: 900px;
+    min-height: 500px;
+  }
+  .rent-details__title {
+    font-size: 36px;
+    line-height: 45px;
+    margin-top: 43px;
+    margin-bottom: 15px;
+  }
+  .rent-details__form-wrapper h2 {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 20px;
+  }
+  .rent-details__form-fields {
+    width: 80%;
+  }
+  .rent-details__form-label {
+    font-size: 16px;
+    margin-bottom: 20px;
+    & input {
+      height: 50px;
+    }
+    & label {
+      height: 120px;
+    }
+  }
+  .rent-details__form-buttons {
+    display: flex;
+    flex-direction: row;
+    padding-left: 285px;
+  }
+    .rent-details__desc-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .rent-details__desc-item {
+    font-size: 16px;
+    margin: 16px 0;
+  }
+  .rent-details__desc-condition {
+    margin-top: 30px;
+  }
+  .rent-details__button {
+    margin-top: 0;
+    padding: 21px 55px;
+  }
+  .rent-details__contacts {
+    font-size: 18px;
+    margin-top: 40px;
+  }
+  .rent-details__contacts a {
+    margin-bottom: 5px;
+  }
+  .rent-details__contacts-subtitle {
+    margin-bottom: 15px;
+  }
+  .rent-details__slider {
+    height: 400px;
+  }
+  .rent-details__slider .gallery-thumbs {
+    bottom: 107px;
+  }
+}
+
+@media screen and (max-width: 1281px) {
+  .rent-details__date {
+    margin-bottom: 12px;
+  }
+  .rent-details__desc-item p {
+    width: 45%;
+  }
+  .rent-details__desc-item span {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .rent-details__title {
+    width: 60%;
+    font-size: 26px;
+    line-height: 38px;
+    margin-top: 25px;
+  }
+  .rent-details__content {
+    flex-direction: column;
+  }
+  .rent-details__content--left {
+    width: 100%;
+  }
+  .rent-details__content--right {
+    width: 100%;
+  }
+  .rent-details__slider {
+    margin-bottom: 15px;
+  }
+  .rent-details {
+    padding: 70px 0 55px;
+  }
+  .rent-details__date {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  .rent-details__content--right {
+    padding: 40px 0 0 0;
+  }
+  .rent-details__desc-item {
+    padding-right: 40%;
+  }
+  .rent-details__socials {
+    top: -8%;
+  }
 
 }
+
+@media screen and (max-width: 769px) {
+  .rent-details__form {
+    width: 700px;
+  }
+  .rent-details__form-wrapper h2 {
+    font-size: 22px;
+  }
+  .rent-details__form-label input,
+  .rent-details__form-label textarea {
+    width: 395px;
+  }
+  .rent-details__license {
+    width: 200px;
+  }
+  .rent-details__form-buttons {
+    padding-left: 206px;
+    align-items: center;
+  }
+  .rent-details__title {
+    width: 80%;
+  }
+  .rent-details__socials {
+    display: none;
+  }
+  .rent-details__desc-item {
+    font-size: 14px;
+    margin: 13px 0;
+    padding-right: 30%;
+  }
+  .rent-details__desc-condition {
+    font-size: 14px;
+    margin: 20px 0;
+  }
+  .rent-details__button {
+    padding: 17px 55px;
+  }
+  .rent-details__contacts {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+  .rent-details__content--right {
+    min-height: unset;
+  }
+  .rent-details__button {
+    width: unset;
+    font-size: 10px;
+    padding: 14px 30px;
+  }
+}
+
+
+@media screen and (max-width: 481px) {
+  .rent-details__form {
+    width: 100%;
+  }
+  .rent-details__form-wrapper h2 {
+    width: 90%;
+  }
+  .rent-details__form-label {
+    flex-direction: column;
+    align-items: start;
+    & span {
+      margin-bottom: 10px;
+    }
+  }
+  .rent-details__form-fields {
+    width: 90%;
+  }
+  .rent-details__form-label input, .rent-details__form-label textarea {
+    width: 100%;
+  }
+  .rent-details__form-buttons {
+    padding-left: 0;
+    width: 90%;
+    flex-direction: column;
+  }
+  .rent-details__license {
+    width: 100%;
+    padding: 0;
+    margin: 10px 0 0 0;
+    text-align: center;
+  }
+  .rent-details__form-submit {
+    height: 50px;
+  }
+  .rent-details__form {
+    padding: 42px 0;
+  }
+  .rent-details__swiper-pagination-container {
+    bottom: 10px;
+    z-index: 100;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+  }
+  .rent-details__swiper-pagination {
+    display: block;
+    color: white;
+    font-family: $font-text-regular;
+    font-size: 13px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.46);
+    backdrop-filter: blur(6px);
+    border-radius: 11px;
+    padding: 5px;
+    width: 50px;
+  }
+  .rent-details__breadcrumb {
+    display: block !important;
+    & svg {
+      margin-right: 0 !important;
+    }
+  }
+  .swiper-container.gallery-thumbs {
+    display: none;
+  }
+  .rent-details__slider-next-arrow, .rent-details__slider-prev-arrow {
+    display: none;
+  }
+  .rent-details__slider {
+    height: 240px;
+  }
+  .rent-details {
+    padding: 60px 0 55px;
+  }
+  .rent-details__title {
+    width: 100%;
+    line-height: 130%;
+  }
+  .rent-details__desc-title {
+    font-size: 18px;
+  }
+  .rent-details__desc-item {
+    padding-right: 10%;
+    font-size: 13px;
+  }
+}
+
+
+@media screen and (max-width: 415px) {
+  .rent-details__form-label {
+    font-size: 13px;
+  }
+  .rent-details__form {
+    padding: 0;
+    height: 100%;
+  }
+  .rent-details__form-wrapper h2 {
+    line-height: 26px;
+  }
+  .rent-details__form-label input {
+    height: 40px;
+  }
+  .rent-details__form-label textarea {
+    height: 110px;
+  }
+  .rent-details__license {
+    font-size: 13px;
+  }
+}
+
+
+@media screen and (max-width: 361px) {
+  .vacancies-d__breadcrumb {
+    font-size: 14px !important;
+  }
+  .rent-details__title {
+    font-size: 22px;
+  }
+  .rent-details__desc-item p {
+    width: 62%;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .rent-details__form-wrapper h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+}
+
+
+@media screen and (max-width: 321px) {
+  .rent-details__breadcrumb {
+    font-size: 13px !important;
+  }
+  .rent-details__form-label span {
+    font-size: 11px;
+  }
+  .rent-details__form-label textarea {
+    height: 80px;
+  }
+  .rent-details__form-label input {
+    height: 35px;
+  }
+  .rent-details__form-label {
+    margin-bottom: 10px;
+  }
+  .rent-details__form-wrapper h2 {
+    line-height: 20px;
+  }
+  .rent-details__form-buttons {
+    margin-top: 10px;
+  }
+}
+

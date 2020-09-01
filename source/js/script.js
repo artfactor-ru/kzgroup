@@ -1,8 +1,8 @@
 'use strict';
 
-import Swiper, { Scrollbar, Thumbs,  Navigation, EffectFade, Autoplay} from 'swiper';
+import Swiper, { Scrollbar, Thumbs,  Navigation, Pagination, EffectFade, Autoplay} from 'swiper';
 
-Swiper.use([Scrollbar, Thumbs,EffectFade, Navigation, Autoplay ]);
+Swiper.use([Scrollbar, Thumbs,EffectFade, Pagination, Navigation, Autoplay ]);
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -323,6 +323,117 @@ if(containerTabsScroll){
 	scrollbarTabs = ScrollbarSmoth.init(containerTabsScroll, options3);
 }
 
+//Кастомный select и option
+if(document.querySelector('.vac-f__form-selector')) {
+	$('.select').each(function() {
+		const _this = $(this),
+			selectOption = _this.find('option'),
+			selectOptionLength = selectOption.length,
+			selectedOption = selectOption.filter(':selected'),
+			duration = 450; // длительность анимации
+
+		_this.hide();
+		_this.wrap('<div class="select"></div>');
+		$('<div>', {
+			class: 'new-select',
+			text: _this.children('option:disabled').text()
+		}).insertAfter(_this);
+
+		const selectHead = _this.next('.new-select');
+		$('<div>', {
+			class: 'new-select__list'
+		}).insertAfter(selectHead);
+
+		const selectList = selectHead.next('.new-select__list');
+		for (let i = 1; i < selectOptionLength; i++) {
+			$('<div>', {
+				class: 'new-select__item',
+				html: $('<span>', {
+					text: selectOption.eq(i).text()
+				})
+			})
+				.attr('data-value', selectOption.eq(i).val())
+				.appendTo(selectList);
+		}
+
+		const selectItem = selectList.find('.new-select__item');
+		selectList.slideUp(0);
+		selectHead.on('click', function() {
+			if ( !$(this).hasClass('on') ) {
+				$(this).addClass('on');
+				selectList.slideDown(duration);
+
+				selectItem.on('click', function() {
+					let chooseItem = $(this).data('value');
+
+					$('select').val(chooseItem).attr('selected', 'selected');
+					selectHead.text( $(this).find('span').text() );
+
+					selectList.slideUp(duration);
+					selectHead.removeClass('on');
+				});
+
+			} else {
+				$(this).removeClass('on');
+				selectList.slideUp(duration);
+			}
+		});
+	});
+}
+
+
+//вызов формы на детальной страницы аренды помещений
+if(document.querySelector('.rent-details__form-wrapper')) {
+    let vacanciesForm = document.querySelector('.vacancies-d__form-wrapper');
+    let vacanciesClose = document.querySelector('.vacancies-d__form-close');
+    let vacanciesBtnResponse = document.querySelector('.rent-details__button');
+    vacanciesBtnResponse.addEventListener('click', function () {
+        vacanciesForm.style.display = 'block';
+    });
+    vacanciesClose.addEventListener('click', function () {
+        vacanciesForm.style.display = 'none';
+    });
+}
+//вызов формы на детальной страницы вакансий
+if(document.querySelector('.vacancies-d__form-container')) {
+	let vacanciesForm = document.querySelector('.vacancies-d__form-wrapper');
+	let vacanciesClose = document.querySelector('.vacancies-d__form-close');
+	let vacanciesBtnResponse = document.querySelector('.vacancies-d__response-btn');
+	vacanciesBtnResponse.addEventListener('click', function () {
+		vacanciesForm.style.display = 'block';
+	});
+	vacanciesClose.addEventListener('click', function () {
+		vacanciesForm.style.display = 'none';
+	});
+}
+
+//slider rent detail page
+if(document.querySelector('.rent-details__slider')){
+	let galleryThumbs = new Swiper('.gallery-thumbs', {
+		spaceBetween: 20,
+		slidesPerView: 5,
+		loop: true,
+		freeMode: true,
+		loopedSlides: 1, //looped slides should be the same
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+	});
+	let galleryTop = new Swiper('.gallery-top', {
+		spaceBetween: 10,
+		loop: true,
+		navigation: {
+			nextEl: '.rent-details__slider-next-arrow',
+			prevEl: '.rent-details__slider-prev-arrow',
+		},
+		thumbs: {
+			swiper: galleryThumbs,
+		},
+		pagination: {
+			el: '.rent-details__swiper-pagination',
+			type: 'fraction',
+		},
+	});
+}
 
 
 // Инициализация свайперов
@@ -1556,7 +1667,6 @@ let tabsEvent = document.getElementById('tabs_event');
 			}
 			removeActivity(tablinks);
 			removeActivity(tabcontent);
-			// console.log(e.target);
 			e.target.classList.add('active');
 			document.getElementById(e.target.dataset.tab).classList.add('active')
 
