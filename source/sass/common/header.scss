@@ -65,6 +65,7 @@
 	position: relative;
 	
 	transition: all 1s ease;
+
 	&:hover{
 		opacity: 0.7;
 	}
@@ -231,7 +232,8 @@ background: transparent;
 	transform: translateY(-2px);
 }
 .has-nav-open .header__logo{
-	display: none;
+	opacity: 0;
+	pointer-events: none;
 }
 .has-nav-open .c-nav-button_line::before,.has-nav-open .c-nav-button_line::after{
 	background-color: #ffffff !important;

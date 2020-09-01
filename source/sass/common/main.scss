@@ -15,6 +15,7 @@
 	height: 100%;
 	position: absolute;
 	background-size: cover;
+	will-change: transform;
 }
 .parallax__img--inner--mobile{
 	display: block;

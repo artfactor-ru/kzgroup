@@ -11,19 +11,33 @@ gsap.registerPlugin(ScrollTrigger);
 
 import ScrollbarSmoth from 'smooth-scrollbar';
 
+// import $ from "jquery";
+var $ = require( "jquery" );
+window.jQuery = $;
+
+var fancybox = require("@fancyapps/fancybox");
 
 
+$('[data-fancybox="gallery"]').fancybox({
+	// Options will go here
+});
+
+$('[data-fancybox]').fancybox({
+    youtube : {
+        controls : 0,
+        showinfo : 0
+    },
+    vimeo : {
+        color : 'f00'
+    }
+});
 
 //  высота вьюпорта
 let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-window.addEventListener('resize', () => {
-  // We execute the same script as before
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-});
+
 
 // Функция получения координат элемента
 function getCoords(elem) {
@@ -46,21 +60,36 @@ function scrollToTop( element) {
 
 // Паралакс эффект на картинках
 
-
-function parallax() {
-	let layers = document.getElementsByClassName("parallax__img");
-	let layer, speed, yPos;
+function parallax(items) {
+	let layers = items;
+	let speed;
 
 	for (let i = 0; i < layers.length; i++) {
-		layer = layers[i];
-		let top = scrollbar.offset.y- getCoords(layer).top;
+		let layer = layers[i];
 	
-		speed = layer.getAttribute('data-speed');
-		let yPos = -(top * speed / 100);
+	
 		
-		layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
+
+		speed = layer.getAttribute('data-speed');
+
+		
+			let top = scrollbar.offset.y- getCoords(layer).top;
+			let yPos = -(top * speed / 100);
+			if(scrollbar.isVisible(layer)){
+				layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
+			}
+
+
+		// if(getCoords(layer).top - 500<=scrollbar.offset.y && getCoords(layer).bottom + 500>=scrollbar.offset.y){
+			// layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
+		// }
+		
 	}
+
+	
+	
 }
+
 
 // Соц.сети
 
@@ -171,6 +200,7 @@ const header = document.querySelector('.header');
 
 // Кнопка для вызова попапа на стр кировец
 let btnMore;
+
 // Определения координат для GSAP относительно плавного скролла
 ScrollTrigger.scrollerProxy(document.body, {
   scrollTop(value) {
@@ -184,6 +214,12 @@ ScrollTrigger.scrollerProxy(document.body, {
   }
 });
 
+
+
+
+
+
+
 let containerScroll = document.querySelector('.scroll');
 let scrollbar;
 	if(containerScroll){
@@ -192,28 +228,83 @@ let scrollbar;
 
 
 		scrollbar.addListener(() => {
-			parallax();
-			showAndHideYearNav()
-		})
-		if ( breakpoint.matches === true ) {
-			scrollbar.addListener(() => {
-				
-				if(header){	
-	
-					headerShowAndHideDesktop();
-
-				}
-			})
-		}else if ( breakpoint.matches === false ) {
-			scrollbar.addListener(() => {
-				hideAndShowHeaderMobile();
-			})
-		}
+			
+				// Анимация для кнопки подробнее нужно инициализировать чтобы появлялась при клике на табе
+				gsap.utils.toArray('.button-more').forEach(element => {
+					ScrollTrigger.create({
+						trigger: element,
+						start: 'bottom bottom',
+						scrub: true,
+						toggleClass: 'is-inview-line',
+						// this toggles the class again when you scroll back up:
+						toggleActions: 'play none none none',
+						// this removes the class when the scrolltrigger is passed:
+						// once: true,
+					});
+				});
+			
+			// scrollbar.isVisible(content);
+			
+			parallax(document.querySelectorAll('.parallax__img'));
+			parallax(document.querySelectorAll('.parallax__img--slide'));
 		
+			
+	
+			if(videoMain){
+
+				if(!scrollbar.isVisible(videoMain)){
+					if(!videoMain.paused) {
+						videoMain.pause();
+
+						console.log('Видео на паузе');
+					}
+					
+				}else{
+					if(videoMain.paused) {
+						videoMain.play();
+						console.log('Видео на играет');
+					}
+				}
+			}
+			
+			if(document.querySelector('.swiper-container--hero')){
+				if(scrollbar.isVisible(document.querySelector('.swiper-container--hero'))){
+					swiperHero.autoplay.start();
+					
+				
+				}else{
+					swiperHero.autoplay.stop();
+				}
+			}
+
+			
+			
+		
+
+			// Года на тракторе
+			showAndHideYearNav()
+		
+
+			// Взаимодействие с шапкой
+			if ( breakpoint.matches === true ) {
+				
+					
+					if(header){	
+		
+						headerShowAndHideDesktop();
+
+					}
+				
+			}else if ( breakpoint.matches === false ) {
+					if(header){	
+						hideAndShowHeaderMobile();
+					}
+			}
+		})
 		
 	}
 
-
+// Инициализация плавных скроллов на странице
 let popupWrap = document.querySelectorAll('.scroll-popup');
 for(let i=0; i<popupWrap.length; i++){
 	let scrollbarPopup = ScrollbarSmoth.init(popupWrap[i], options2);
@@ -245,14 +336,15 @@ if(containerTabsScroll){
 	let companiesThumbs;
 	let swiperHero;
 	let swiperGallery;
+	let activeSlideHero;
 	const transitionSlide = 15000;
 
 	const enableSwiper = function(){
 		// document.addEventListener('DOMContentLoaded', function(){
 			if(document.querySelector('.statistics__slider')){
 				swiperStatistics = new Swiper('.statistics__slider',{
-					observer: true,
-					observeParents: true,
+					// observer: true,
+					// observeParents: true,
 					scrollbar: {
 						el: '.swiper-scrollbar',
 					},
@@ -263,8 +355,8 @@ if(containerTabsScroll){
 
 			
 				swiperTabFeature1 = new Swiper(tabFeatures1,{
-					observer: true,
-					observeParents: true,
+					// observer: true,
+					// observeParents: true,
 					scrollbar: {
 						el: '.swiper-scrollbar',
 					},
@@ -275,8 +367,8 @@ if(containerTabsScroll){
 				let tabFeatures2 = document.querySelector('.kirovets_tabs__features--2');
 
 					swiperTabFeature2 = new Swiper(tabFeatures2,{
-						observer: true,
-						observeParents: true,
+						// observer: true,
+						// observeParents: true,
 						scrollbar: {
 							el: '.swiper-scrollbar',
 						},
@@ -306,8 +398,8 @@ if(containerTabsScroll){
 					nextEl: newNavPrev,
 					prevEl: newNavNext,
 				},
-				observer: true, 
-				observeParents: true,
+				// observer: true, 
+				// observeParents: true,
 				// updateOnWindowResize: true,
 				slidesOffsetAfter: 0,
 				breakpoints: {
@@ -549,23 +641,27 @@ if(containerTabsScroll){
 		
 			swiperHero = new Swiper('.swiper-container--hero',{
 				loop: true,
+				
 			   autoplay: {
-				   delay: transitionSlide,
-				   disableOnInteraction: true,
-				 },
+					delay: transitionSlide,
+					disableOnInteraction: true,
+
+			   },
    
 			   navigation: {
 			   	nextEl: '.hero__slider-controls .swiper-button-prev',
 			   	prevEl: '.hero__slider-controls .swiper-button-next',
 			   },
-			   observer: true,
-					observeParents: true,
+			//    observer: true,
+			// 		observeParents: true,
 			   effect: 'fade',
 			   fadeEffect: {
 				   crossFade: true
 			   },
 		   
 		   });
+
+		  
 
 		   swiperHero.on('slidePrevTransitionStart', function () {
 			checkActiveSlideForVideo();
@@ -668,8 +764,8 @@ if(containerTabsScroll){
 	   }
 	   if(document.querySelector('.kirovets_tabs__list-wrap')){
 			swiperTabThumbs = new Swiper('.kirovets_tabs__list-wrap', {
-				observer: true,
-					observeParents: true,
+				// observer: true,
+				// 	observeParents: true,
 				slidesPerView: 2,
 
 				watchSlidesVisibility: true,
@@ -678,8 +774,8 @@ if(containerTabsScroll){
 		}
 		if(document.querySelector('.kirovets_tabs__container')){
 			swiperTab = new Swiper('.kirovets_tabs__container',{
-				observer: true,
-					observeParents: true,
+				// observer: true,
+				// 	observeParents: true,
 				thumbs: {
 					swiper: swiperTabThumbs
 				},
@@ -730,8 +826,13 @@ if(containerTabsScroll){
 		updateSlider(swiperGallery);
 		breakpoint.addListener(breakpointChecker);
 		breakpointChecker();
+
+		let vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
 	});
 
+
+	// Функциии для слайдеров внутри слайдеров
 	function setMainSwiperMouseOver() {
 		swiperTab.detachEvents();
 
@@ -745,8 +846,6 @@ if(containerTabsScroll){
 
 
 	let InnerSliders = document.querySelectorAll('.kirovets_tabs__features');
-
-
 
 	const breakpointChecker = function() {
 		// if larger viewport and multi-row layout needed
@@ -1166,20 +1265,7 @@ if(containerTabsScroll){
 				});
 			});
 
-			scrollbar.addListener(() => {
-				gsap.utils.toArray('.button-more').forEach(element => {
-					ScrollTrigger.create({
-						trigger: element,
-						start: 'bottom bottom',
-						scrub: true,
-						toggleClass: 'is-inview-line',
-						// this toggles the class again when you scroll back up:
-						toggleActions: 'play none none none',
-						// this removes the class when the scrolltrigger is passed:
-						// once: true,
-					});
-				});
-			});
+		
 				
 		
 			gsap.utils.toArray('.button-line').forEach(element => {
@@ -1303,8 +1389,8 @@ let popup = document.querySelectorAll('.popup_kirovets');
 
 if(window.screen.width< 767){
 	let paragraph = document.querySelector('.zavod-text--main');
-let paragraphBtnMore = document.querySelector('.button-more--zavod ');
-let wrapper = document.querySelector('.zavod');
+	let paragraphBtnMore = document.querySelector('.button-more--zavod ');
+	let wrapper = document.querySelector('.zavod');
 	if(paragraph){
 		paragraphBtnMore.addEventListener('click', function(){
 			
@@ -1391,6 +1477,9 @@ if(screen.width>=1280){
 			} 
 		});
 	});
+
+
+
 }
 
 
@@ -1413,13 +1502,13 @@ let tabsEvent = document.getElementById('tabs_event');
 			}
 			removeActivity(tablinks);
 			removeActivity(tabcontent);
-			console.log(e.target);
+			// console.log(e.target);
 			e.target.classList.add('active');
 			document.getElementById(e.target.dataset.tab).classList.add('active')
 
 		}
 	}
-}
+	}
 
 
 

@@ -44,6 +44,12 @@
 
 }
 
+.about__descsmall{
+	@extend %block-text;
+	margin-top: 25px;
+	margin-bottom: 32px;
+}
+
 @media(min-width: 767px){
 	.about{
 		min-height: 505px;

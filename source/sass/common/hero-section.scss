@@ -119,12 +119,16 @@
   transition: .4s;
   width: 18px;
   height: 18px;
+  flex-shrink: 0;
 }
 
 .hero-common_info__link {
   transition: .4s;
   font-family: $font-text-light;
   color: #E0E0E0;
+
+  font-size: 16px;
+  line-height: 100%;
 }
 
 @media screen and (max-width: 1680px) {
@@ -151,6 +155,15 @@
   }
   .hero-common_info__item:last-child{
     margin-left: 35px;
+  }
+  .hero-common_info__item{
+    width: 320px;
+  }
+  .hero-common_info__link {
+
+  
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 
@@ -182,7 +195,7 @@
     }
   }
   .hero-common_info__link {
-    font-size: 14px;
+    font-size: 12px;
   }
   .hero-common_info__icon {
     margin-right: 5px;
@@ -211,6 +224,9 @@
 
   .hero-common__info {
     height: 68px;
+  }
+  .hero-common_info__item{
+    width: auto;
   }
 }
 
