@@ -30,9 +30,6 @@
 
 @import 'common/block-text';
 
-@import 'common/gallery';
-@import 'common/contact-block';
-
 @import 'pages/main/frame';
 
 @import 'pages/about/main-about';
@@ -41,6 +38,8 @@
 @import 'pages/main/about-main';
 @import 'pages/about/about-strategy';
 @import 'pages/about/about-aboutcompany';
+
+@import 'pages/leadership/leadership';
 
 
 @import 'pages/kirovets/advant';
@@ -74,8 +73,6 @@
 
 @import 'pages/rent/card';
 
-@import 'pages/rent-details/rent-details';
-
 
 
 @import 'pages/rent_noinfo/main';
@@ -97,8 +94,6 @@
 
 
 @import 'pages/energy/energy-about';
-
-@import 'pages/ptz/clients';
 
 body{
 	margin: 0;
