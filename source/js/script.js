@@ -1279,7 +1279,7 @@ let wrapper = document.querySelector('.zavod');
 
 
 // accordion
-let accordion = document.querySelector('.akcioner-info__accordion')
+let accordion = document.querySelector('.akcioner-info__accordion');
 let menu = document.getElementsByClassName("akcioner-info__menu-icon");
 let contactNavItem = document.getElementsByClassName("contacts-sidebar__nav-item");
 let navItem = document.getElementsByClassName("contacts-navigation-list__item");
