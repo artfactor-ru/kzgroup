@@ -121,10 +121,18 @@ function socialInteraction() {
 
 
 // Шапка
+let twoScreen = document.querySelector('.two-screen');
+document.addEventListener('DOMContentLoaded', function(){
+	
+	if(!document.querySelector('.main') && !document.querySelector('.hero-common')){
+		header.classList.add('js-scroll');
+	}
+});
+
 
 function headerShowAndHideDesktop() {
 	let traktorsContainer = document.querySelector('.traktors__container');
-	let twoScreen = document.querySelector('.two-screen');
+	
 	
 		// if(videoMain){
 		
@@ -143,12 +151,15 @@ function headerShowAndHideDesktop() {
 		header.classList.add('hide')
 	}else if(getCoords(header).top < 0  || getCoords(header).top > 100 && getCoords(twoScreen).top <= scrollbar.offset.y){
 		header.classList.remove('hide')
-	
-		
 	}
 	if(getCoords(twoScreen).top >= scrollbar.offset.y){
+		
 		header.classList.remove('js-scroll');
 	}else if(getCoords(header).top > 50 && getCoords(twoScreen).top <= scrollbar.offset.y){
+		header.classList.add('js-scroll');
+	}
+
+	if(getCoords(twoScreen).top<= 0){
 		header.classList.add('js-scroll');
 	}
 	
