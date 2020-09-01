@@ -1404,6 +1404,60 @@ if(window.screen.width< 767){
 }
 
 
+// accordion
+let accordion = document.querySelector('.akcioner-info__accordion');
+if(accordion){
+
+	let menu = document.getElementsByClassName("akcioner-info__menu-icon");
+	let contactNavItem = document.getElementsByClassName("contacts-sidebar__nav-item");
+	let navItem = document.getElementsByClassName("contacts-navigation-list__item");
+	let actionerNavItem = document.getElementsByClassName('akcioner-navigation-list__item-active');
+	let contactsMenuItem = document.getElementsByClassName('contacts-navigation-list__item-active');
+	let contactsMenu = document.getElementsByClassName("contacts-menu-container");
+
+
+	accordion.addEventListener('click', function(e) {
+		let accordionItems = document.querySelectorAll('.akcioner-info__accordion-item'),
+				target = e.target;
+
+		Array.from(accordionItems).forEach(item => {
+			item.classList.remove('active')
+		})
+		target.classList.add('active')
+	})
+
+	for (let i = 0; i < acc.length; i++) {
+		acc[i].addEventListener("click", function() {
+			this.classList.remove("active");
+		});
+	}
+
+	for (let i = 0; i < menu.length; i++) {
+		menu[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+		});
+	}
+
+	for (let i = 0; i < contactsMenuItem.length; i++) {
+		contactsMenuItem[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+		});
+	}
+
+	for (let i = 0; i < actionerNavItem.length; i++) {
+		actionerNavItem[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+		});
+	}
+
+	for (let i = 0; i < contactNavItem.length; i++) {
+		contactNavItem[i].addEventListener("click", function() {
+			let current = document.getElementsByClassName("active");
+			current[0].className = current[0].className.replace(" active", "");
+			this.className += " active";
+		});
+	}
+}
 
 
 
@@ -1512,66 +1566,4 @@ let tabsEvent = document.getElementById('tabs_event');
 
 
 
-// accordion
-let accordion = document.querySelector('.akcioner-info__accordion');
-if(accordion){
-	let menu = document.getElementsByClassName("akcioner-info__menu-icon");
-	let contactNavItem = document.getElementsByClassName("contacts-sidebar__nav-item");
-	let navItem = document.getElementsByClassName("contacts-navigation-list__item");
-	let actionerNavItem = document.getElementsByClassName('akcioner-navigation-list__item-active');
-	let contactsMenuItem = document.getElementsByClassName('contacts-navigation-list__item-active');
-	let contactsMenu = document.getElementsByClassName("contacts-menu-container");
 
-
-	accordion.addEventListener('click', function(e) {
-		let accordionItems = document.querySelectorAll('.akcioner-info__accordion-item'),
-				target = e.target;
-
-		Array.from(accordionItems).forEach(item => {
-			item.classList.remove('active')
-		})
-		target.classList.add('active')
-	})
-
-	for (let i = 0; i < acc.length; i++) {
-		acc[i].addEventListener("click", function() {
-			this.classList.remove("active");
-		});
-	}
-
-	for (let i = 0; i < menu.length; i++) {
-		menu[i].addEventListener("click", function() {
-			this.classList.toggle("active");
-		});
-	}
-
-	for (let i = 0; i < contactsMenuItem.length; i++) {
-		contactsMenuItem[i].addEventListener("click", function() {
-			this.classList.toggle("active");
-		});
-	}
-
-	for (let i = 0; i < actionerNavItem.length; i++) {
-		actionerNavItem[i].addEventListener("click", function() {
-			this.classList.toggle("active");
-		});
-	}
-
-	for (let i = 0; i < contactNavItem.length; i++) {
-		contactNavItem[i].addEventListener("click", function() {
-			let current = document.getElementsByClassName("active");
-			current[0].className = current[0].className.replace(" active", "");
-			this.className += " active";
-		});
-	}
-
-	for (let i = 0; i < navItem.length; i++) {
-		navItem[i].addEventListener("click", function() {
-			let current = document.getElementsByClassName("contacts-navigation-list__item-active");
-			current[0].className = current[0].className.replace(" contacts-navigation-list__item-active", "");
-			this.className += " contacts-navigation-list__item-active";
-		});
-	}
-
-
-}
