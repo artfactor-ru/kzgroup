@@ -1,8 +1,8 @@
 'use strict';
 
-import Swiper, { Scrollbar, Thumbs,  Navigation, EffectFade, Autoplay} from 'swiper';
+import Swiper, { Scrollbar, Thumbs,  Navigation, Pagination, EffectFade, Autoplay} from 'swiper';
 
-Swiper.use([Scrollbar, Thumbs,EffectFade, Navigation, Autoplay ]);
+Swiper.use([Scrollbar, Thumbs,EffectFade, Pagination, Navigation, Autoplay ]);
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -231,6 +231,32 @@ let scrollbarTabs;
 if(containerTabsScroll){
 	scrollbarTabs = ScrollbarSmoth.init(containerTabsScroll, options3);
 }
+
+//вызов формы на детальной страницы аренды помещений
+if(document.querySelector('.rent-details__form-wrapper')) {
+    let vacanciesForm = document.querySelector('.vacancies-d__form-wrapper');
+    let vacanciesClose = document.querySelector('.vacancies-d__form-close');
+    let vacanciesBtnResponse = document.querySelector('.rent-details__button');
+    vacanciesBtnResponse.addEventListener('click', function () {
+        vacanciesForm.style.display = 'block';
+    });
+    vacanciesClose.addEventListener('click', function () {
+        vacanciesForm.style.display = 'none';
+    });
+}
+//вызов формы на детальной страницы вакансий
+if(document.querySelector('.vacancies-d__form-container')) {
+	let vacanciesForm = document.querySelector('.vacancies-d__form-wrapper');
+	let vacanciesClose = document.querySelector('.vacancies-d__form-close');
+	let vacanciesBtnResponse = document.querySelector('.vacancies-d__response-btn');
+	vacanciesBtnResponse.addEventListener('click', function () {
+		vacanciesForm.style.display = 'block';
+	});
+	vacanciesClose.addEventListener('click', function () {
+		vacanciesForm.style.display = 'none';
+	});
+}
+
 //slider rent detail page
 if(document.querySelector('.rent-details__slider')){
 	let galleryThumbs = new Swiper('.gallery-thumbs', {
@@ -253,9 +279,9 @@ if(document.querySelector('.rent-details__slider')){
 			swiper: galleryThumbs,
 		},
 		pagination: {
-			el: '.swiper-pagination',
-			type: 'bullets',
-		}
+			el: '.rent-details__swiper-pagination',
+			type: 'fraction',
+		},
 	});
 }
 

@@ -201,7 +201,7 @@
         </div>
     </div>
 </div>
-<div class="vacancies-d__form-wrapper">
+<div class="vacancies-d__form-wrapper vacancies-d__form-container">
     <div class="vacancies-d__form-layer"></div>
     <form class="vacancies-d__form">
         <svg class="vacancies-d__form-close" width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -240,22 +240,10 @@
                 </button>
                 <p class="vacancies-d__license">Нажимая на кнопку откликнуться, вы принимаете <a href="#0">согласие на обработку персональных данных</a></p>
             </div>
-
-
         </div>
     </form>
 </div>
-<script>
-    let vacanciesForm = document.querySelector('.vacancies-d__form-wrapper');
-    let vacanciesClose = document.querySelector('.vacancies-d__form-close');
-    let vacanciesBtnResponse = document.querySelector('.vacancies-d__response-btn');
-    vacanciesBtnResponse.addEventListener('click', function () {
-        vacanciesForm.style.display = 'block';
-    });
-    vacanciesClose.addEventListener('click', function () {
-        vacanciesForm.style.display = 'none';
-    })
-</script>
+
 <script src="./js/script.min.js"></script>
 </body>
 </html>
