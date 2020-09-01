@@ -1,0 +1,1022 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="./css/style.min.css">
+	<title>История</title>
+</head>
+
+<body class="leadership">
+	<style>
+		.preloader {
+			background-color: #ffffff;
+			width: 100vw;
+			z-index: 20000;
+			height: 100vh;
+			height: calc(var(--vh, 1vh) * 100);
+			position: fixed;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+		}
+
+		.preloader__icon {
+			width: 130px;
+			height: 130px;
+			fill: none;
+			stroke-dasharray: 1000;
+			stroke-dashoffset: 1000;
+			animation: dash 6s linear 3s forwards infinite alternate;
+		}
+	</style>
+	<!-- <div class="preloader">
+        <svg class="preloader__icon"><use xlink:href="./img/sprite.svg#icon-logo-company"></use></svg>
+    </div> -->
+	<div class="forheader">
+
+		<header class="header">
+			<div class="container--header container--header--main">
+
+				<div class="header__wrapper">
+
+					<button class="c-nav-button js-nav-toggle" type="button">
+						<div class="c-nav-button_wrap">
+							<div class="c-nav-button_icon">
+								<span class="c-nav-button_line"></span>
+								<span class="c-nav-button_line"></span>
+								<span class="c-nav-button_line"></span>
+							</div>
+						</div>
+					</button>
+					<a class="header__logo" href="">
+						<svg class="header__logo-icon" viewBox="0 0 36 36" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<g clip-path="url(#clip0)">
+								<path
+									d="M29.684 17.9667L17.9667 29.684L6.32028 17.9667L17.9667 6.32028L29.684 17.9667ZM27.7666 8.16666L23.3637 0H12.5696L8.16666 8.16666L0 12.5696V23.3637L8.16666 27.7666L12.5696 35.9333H23.3637L27.7666 27.7666L35.9333 23.3637V12.5696L27.7666 8.16666Z"
+									fill="#ED1C24" />
+								<path
+									d="M20.4522 6.32031L34.087 13.7058V19.9551L20.4522 6.32031ZM22.2986 34.158H16.0493L29.6841 20.5232L22.2986 34.158ZM1.77539 22.2986V15.9783L15.4102 29.613L1.77539 22.2986ZM13.6348 1.77539H19.8841L6.32031 15.4812L13.6348 1.77539Z"
+									fill="#FFDD00" />
+							</g>
+							<defs>
+								<clipPath id="clip0">
+									<rect width="35.9333" height="35.9333" fill="white" />
+								</clipPath>
+							</defs>
+						</svg>
+
+						<p class="header__logo-text">Кировский<br> завод</p>
+					</a>
+				</div>
+
+
+
+
+
+
+			</div>
+		</header>
+
+		<nav class="nav">
+			<div class="nav_background"></div>
+
+
+			<div class="nav_list-wrap">
+				<article class="nav_list-scroll">
+					<div class="nav_list-left scrollbar-inner">
+						<div class="nav_list-content">
+
+
+							<div class="js-search-button">
+								<div class="js-search-text">Поиск</div>
+							</div>
+							<ul class="nav_list">
+								<li class="nav_item -dropdown js-dropdown">
+									<div class="nav_link js-nav-link js-dropdown-toggle">
+										<span class="nav_link_text">Компания</span>
+										<svg class="nav_link__icon">
+											<use xlink:href="./img/sprite.svg#icon-arrow"></use>
+										</svg>
+
+									</div>
+									<span class="nav_link_line"></span>
+									<div class="nav_dropdown js-dropdown-list">
+										<div class="nav_dropdown_wrap">
+											<ul class="nav_dropdown_list">
+												<li class="nav_dropdown_item">
+													<a class="nav_dropdown_link" href="#">Руководство</a>
+												</li>
+
+												<li class="nav_dropdown_item">
+													<a class="nav_dropdown_link" href="#">История</a>
+												</li>
+												<li class="nav_dropdown_item">
+													<a class="nav_dropdown_link" href="#">Музей</a>
+												</li>
+												<li class="nav_dropdown_item">
+													<a class="nav_dropdown_link" href="#">Производственная система</a>
+												</li>
+												<li class="nav_dropdown_item">
+													<a class="nav_dropdown_link" href="#">Охрана труда</a>
+												</li>
+												<li class="nav_dropdown_item">
+													<a class="nav_dropdown_link" href="#">Профсоюз</a>
+												</li>
+												<li class="nav_dropdown_item">
+													<a class="nav_dropdown_link" href="#">Реквизиты</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="nav_item -dropdown js-dropdown">
+									<div class="nav_link js-nav-link js-dropdown-toggle">
+										<span class="nav_link_text">Дочерние предприятия</span>
+										<svg class="nav_link__icon">
+											<use xlink:href="./img/sprite.svg#icon-arrow"></use>
+										</svg>
+
+									</div>
+									<span class="nav_link_line"></span>
+									<div class="nav_dropdown js-dropdown-list">
+										<div class="nav_dropdown_wrap">
+											<ul class="nav_dropdown_list">
+												<li class="nav_dropdown_item">
+													<a class="nav_dropdown_link" href="#">Петербургский тракторный завод
+														завод «Петросталь»</a>
+												</li>
+
+												<li class="nav_dropdown_item">
+													<a class="nav_dropdown_link" href="#">Завод буровых технологий</a>
+												</li>
+												<li class="nav_dropdown_item">
+													<a class="nav_dropdown_link" href="#">Кировский завод Газовые
+														технологии</a>
+												</li>
+												<li class="nav_dropdown_item">
+													<a class="nav_dropdown_link" href="#">Энергетический комплекс</a>
+												</li>
+												<li class="nav_dropdown_item">
+													<a class="nav_dropdown_link" href="#">Тетрамет</a>
+												</li>
+												<li class="nav_dropdown_item">
+													<a class="nav_dropdown_link" href="#">Локомотив</a>
+												</li>
+												<li class="nav_dropdown_item">
+													<a class="nav_dropdown_link" href="#"> Проектно-конструкторское бюро
+														«Автоматика»</a>
+												</li>
+
+												<li class="nav_dropdown_item">
+													<a class="nav_dropdown_link" href="#"> Центр метрологии, испытаний и
+														охраны труда</a>
+												</li>
+
+												<li class="nav_dropdown_item">
+													<a class="nav_dropdown_link" href="#"> Предприятия социальной
+														сферы</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+
+
+								<li class="nav_item">
+									<a class="nav_link js-nav-link" href="#">
+										<span class="nav_link_text">Корпоративный университет</span>
+										<span class="nav_link_line"></span>
+									</a>
+								</li>
+
+								<li class="nav_item">
+									<a class="nav_link js-nav-link" href="#">
+										<span class="nav_link_text">Вакансии</span>
+										<span class="nav_link_line"></span>
+									</a>
+								</li>
+
+								<li class="nav_item -dropdown js-dropdown">
+
+
+									<div class="nav_link js-nav-link js-dropdown-toggle">
+										<span class="nav_link_text">Пресс-Центр</span>
+										<svg class="nav_link__icon">
+											<use xlink:href="./img/sprite.svg#icon-arrow"></use>
+										</svg>
+									</div>
+									<div class="nav_dropdown js-dropdown-list">
+										<div class="nav_dropdown_wrap">
+											<ul class="nav_dropdown_list">
+												<li class="nav_dropdown_item">
+													<a class="nav_dropdown_link" href="#">Новости</a>
+												</li>
+												<li class="nav_dropdown_item">
+													<a class="nav_dropdown_link" href="#">Видеогалерея</a>
+												</li>
+												<li class="nav_dropdown_item">
+													<a class="nav_dropdown_link" href="#">Пресса о нас</a>
+												</li>
+												<li class="nav_dropdown_item">
+													<a class="nav_dropdown_link" href="#">Фотогалерея</a>
+												</li>
+												<li class="nav_dropdown_item">
+													<a class="nav_dropdown_link" href="#">Контакты</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+
+								<li class="nav_item -dropdown js-dropdown">
+
+
+									<div class="nav_link js-nav-link js-dropdown-toggle">
+										<span class="nav_link_text">Акционерам и инвесторам</span>
+										<svg class="nav_link__icon">
+											<use xlink:href="./img/sprite.svg#icon-arrow"></use>
+										</svg>
+									</div>
+									<div class="nav_dropdown js-dropdown-list">
+										<div class="nav_dropdown_wrap">
+											<ul class="nav_dropdown_list">
+												<li class="nav_dropdown_item">
+													<a class="nav_dropdown_link" href="#">Информация, подлежащая
+														раскрытию</a>
+												</li>
+												<li class="nav_dropdown_item">
+													<a class="nav_dropdown_link" href="#">Раскрытие информации дочерними
+														обществами</a>
+												</li>
+
+
+											</ul>
+										</div>
+									</div>
+								</li>
+
+
+
+								<li class="nav_item">
+									<a class="nav_link js-nav-link" href="#">
+										<span class="nav_link_text">Продажа активов</span>
+										<span class="nav_link_line"></span>
+									</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav_link js-nav-link" href="#">
+										<span class="nav_link_text">Тендеры</span>
+										<span class="nav_link_line"></span>
+									</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav_link js-nav-link" href="#">
+										<span class="nav_link_text">Аренда помещений </span>
+										<span class="nav_link_line"></span>
+									</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav_link js-nav-link" href="#">
+										<span class="nav_link_text">Контакты</span>
+										<span class="nav_link_line"></span>
+									</a>
+								</li>
+
+
+
+								<li class="nav_item">
+									<a class="nav_link nav_link--policy js-nav-link" href="#">
+										<span class="nav_link_text">Использование сайта</span>
+										<span class="nav_link_line"></span>
+									</a>
+								</li>
+							</ul>
+
+
+							<div class="nav_lang nav_lang--mobile">
+								<div class="nav_lang-wrap">
+									<ul class="nav_lang-list">
+										<li class="nav_lang-item">
+											<a class="nav_lang-link" href="">En</a>
+										</li>
+										<li class="nav_lang-item">
+											<a class="nav_lang-link" href="">Ru</a>
+										</li>
+										<li class="nav_lang-item">
+											<a class="nav_lang-link" href="">De</a>
+										</li>
+
+									</ul>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</article>
+
+
+
+			</div>
+			<div class="nav_search">
+				<article class="search-wrap">
+					<div class="search">
+						<input class="search_input o-input -search js-search-input" type="text" placeholder="Поиск"
+							value="">
+						<div class="search_results js-search-results"></div>
+					</div>
+				</article>
+			</div>
+			<aside class="nav_aside">
+				<ul class="nav_social">
+					<li class="nav_social_item">
+						<a class="nav_social_link" href="#" target="_blank">
+
+
+							<svg class="nav_social_icon">
+								<use xlink:href="./img/sprite.svg#icon-fb"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="nav_social_item">
+						<a class="nav_social_link" href="#" target="_blank">
+							<svg class="nav_social_icon">
+								<use xlink:href="./img/sprite.svg#icon-vk"></use>
+							</svg>
+
+						</a>
+					</li>
+					<li class="nav_social_item">
+						<a class="nav_social_link" href="#" target="_blank">
+							<svg class="nav_social_icon">
+								<use xlink:href="./img/sprite.svg#icon-youtube"></use>
+							</svg>
+
+						</a>
+					</li>
+					<li class="nav_social_item">
+						<a class="nav_social_link" href="#" target="_blank">
+
+							<svg class="nav_social_icon">
+								<use xlink:href="./img/sprite.svg#icon-inst"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+				<div class="nav_lang nav_lang--desktop">
+					<div class="nav_lang-wrap">
+						<ul class="nav_lang-list">
+							<li class="nav_lang-item">
+								<a class="nav_lang-link" href="">Ru</a>
+							</li>
+							<li class="nav_lang-item">
+								<a class="nav_lang-link" href="">En</a>
+							</li>
+							<li class="nav_lang-item">
+								<a class="nav_lang-link" href="">De</a>
+							</li>
+
+						</ul>
+					</div>
+
+				</div>
+			</aside>
+		</nav>
+
+
+		<div class="scroll">
+			<section class="main parallax__item">
+				<div class="parallax__img-wrap">
+					<div class="parallax__img parallax__img--company_group " data-speed="-40">
+						<div class="parallax__img--inner" style="background-image: url(./img/history/bg-history.jpg);
+                        background-position: center;
+                        background-size: cover;">
+
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="main__wrapper">
+						<h1 class="main__title main__title--about">
+							<div class="title--inner-main">История</div>
+						</h1>
+					</div>
+				</div>
+			</section>
+			<main class="leadership-container two-screen">
+				<section class="about history-about two-screen">
+					<div class="container">
+						<h2 class="about__title about__title is-animate" data-speed="0.3">
+							<span class="red-accent">220-летняя история</span>
+							Кировского завода отражает развитие российской промышленности и самого государства
+						</h2>
+					</div>
+					<ul class="social__btn-list">
+						<li class="social__btn-item social__btn-item--share">
+							<button class="social__btn" style="background-image: url(./img/social-share.svg);"></button>
+
+							<div class="social__dropdown">
+								<h5 class="social__title">Поделиться:</h5>
+								<ul class="social__link-list">
+									<li class="social__link-item">
+										<a class="social__link" href="" target="_blank">
+											<svg class="social__icon">
+												<use xlink:href="./img/sprite.svg#icon-vk"></use>
+											</svg>
+											<span class="visually-hidden">Vk</span>
+										</a>
+									</li>
+									<li class="social__link-item">
+										<a class="social__link" href="" target="_blank">
+											<svg class="social__icon">
+												<use xlink:href="./img/sprite.svg#icon-inst"></use>
+											</svg>
+											<span class="visually-hidden">Instagram</span>
+										</a>
+									</li>
+									<li class="social__link-item">
+										<a class="social__link" href="" target="_blank">
+											<svg class="social__icon">
+												<use xlink:href="./img/sprite.svg#icon-fb"></use>
+											</svg>
+											<span class="visually-hidden">Facebook</span>
+										</a>
+									</li>
+
+									<li class="social__link-item">
+										<a class="social__link" href="" target="_blank">
+											<svg class="social__icon">
+												<use xlink:href="./img/sprite.svg#icon-youtube"></use>
+											</svg>
+											<span class="visually-hidden">Youtube</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="social__btn-item social__btn-item--message">
+							<button class="social__btn"
+								style="background-image: url(./img/social-message.svg);"></button>
+							<div class="social__dropdown">
+								<h5 class="social__title">Подписаться на новости</h5>
+								<ul class="social__link-list">
+									<li class="social__link-item">
+										<a class="social__link" href="" target="_blank">
+											<svg class="social__icon">
+												<use xlink:href="./img/sprite.svg#icon-news"></use>
+											</svg>
+											<span class="visually-hidden">Подписаться</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</section>
+				<section class="history_light">
+					<div class="container">
+						<span class="history__year">1801</span>
+						<div class="history__entry--text">
+							<h2 class="history__entry--text-title">Начало <span>истории</span></h2>
+							<p class="history__entry--text-content">21 марта по ст. стилю 1801 года был основан
+								Санкт-Петербургский чугунолитейный завод. Тогда предприятие выполняло заказы по
+								производству артиллерийских боеприпасов. Первым директором завода стал Чарльз
+								Гаскойн –
+								на тот момент один из ведущих инженеров и промышленников Великобритании.<br><br>С
+								1812
+								года завод начал изготавливать паровые машины и развивать машиностроительное
+								направление. В это же время специалисты завода осваивают художественно-литейное
+								производство. Выполняются работы по созданию скульптур и архитектурных ансамблей
+								для Петербурга и его пригородов: литье для Нарвских триумфальных воротах, скульптуры
+								и
+								литье для Львиного и Банковского мостиков и другие. Продукция того времени и сейчас
+								украшает улицы Северной Пальмиры.<br><br>В 1824 году завод был практически разрушен
+								после масштабного наводнения. Эти события описал А. С. Пушкин в поэме «Медный
+								всадник».
+								Следующие сорок лет стали для завода периодом борьбы за выживание.</p>
+						</div>
+						<div class="history__photos">
+							<div class="history__photos__item history__photos__item-1">
+								<div class="history__photos__item-pic">
+									<span class="history__photos__item-year pic__frame pic__frame-1">
+										1801
+										<div class="pic__frame--line pic__frame--line-first is-inview"></div>
+										<div class="pic__frame--line pic__frame--line-two is-inview"></div>
+									</span>
+									<img src="./img/history/photos/yadra.jpg" alt="yadra">
+								</div>
+								<p class="history__photos__item-descr">Артиллерийские боеприпасы. 3 апреля 1801 года
+									было отлито первое пушечное ядро. Именно этот день считается днем рождения
+									завода</p>
+							</div>
+							<div class="history__photos__item history__photos__item-2">
+								<div class="history__photos__item-pic">
+									<span class="history__photos__item-year pic__frame pic__frame-2">
+										1801
+										<div class="pic__frame--line pic__frame--line-first is-inview"></div>
+										<div class="pic__frame--line pic__frame--line-two is-inview"></div>
+									</span>
+									<img src="./img/history/person/charles_gaskoin.jpg" alt="Gaskoin">
+								</div>
+								<p class="history__photos__item-descr">Чарльз (Карл) Гаскойн (1737–1806)
+									Шотландский и российский архитектор, механик, оружейник, изобретатель,
+									действительный статский советник. Руководил Санкт-Петербургским чугунолитейным
+									заводом до 1806 года</p>
+							</div>
+							<div class="history__photos__item history__photos__item-3">
+								<div class="history__photos__item-pic">
+									<span class="history__photos__item-year pic__frame pic__frame-3">
+										1834
+										<div class="pic__frame--line pic__frame--line-first is-inview"></div>
+										<div class="pic__frame--line pic__frame--line-two is-inview"></div>
+									</span>
+									<img src="./img/history/photos/narvskie_vorota.jpg" alt="vorota">
+								</div>
+								<p class="history__photos__item-descr">Нарвские триумфальные ворота.
+									Художественно-литейное производство Санкт-Петербургского чугунолитейного завода</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="history_dark">
+					<div class="container">
+						<span class="history__year">1868</span>
+						<div class="history__entry--text">
+							<h2 class="history__entry--text-title">Путиловский <span>завод</span></h2>
+							<p class="history__entry--text-content">В 1868 году завод приобрел известный российский
+								инженер и предприниматель Николай Иванович Путилов. За 12 лет он значительно увеличил
+								объемы производства завода и расширил ассортимент продукции. с 1868 по 1922 год
+								предприятие носит имя «Путиловский завод».<br><br>Завод стал основным поставщиком
+								рельсов для железных дорог России, выплавлял качественные стали, производил боеприпасы,
+								вагоны, пушки, орудийные башни для военных кораблей, крупногабаритные
+								металлоконструкции. Многие виды продукции производились по собственной
+								технологии.<br><br>При Путилове были заложены основы многоотраслевого производства и
+								высокого профессионального мастерства. Открылись больница, столовая, библиотека, разбит
+								парк и построен театр.</p>
+							<h3 class="history__entry--text-subtitle">Первые рельсы Путиловского завода</h3>
+							<p class="history__entry--text-content">Рельсы, которые изготавливал Н. И. Путилов, имели
+								оригинальную конструкцию: на старые изношенные рельсы наваривалась прочная стальная
+								головка, и рельс снова пускался в дело. 3 февраля 1868 года состоялись показательные
+								испытания. Чугунную «бабу» весом в 32 пуда уронили на путиловский рельс – рельс
+								выдержал. «Теперь давай английский», – приказал Путилов. Английский рельс треснул сразу.
+								Победу над Англией праздновали прямо в цехах.</p>
+						</div>
+						<div class="history__photos">
+							<div class="history__photos__item history__photos__item-1">
+								<div class="history__photos__item-pic">
+									<span class="history__photos__item-year pic__frame pic__frame-1">
+										1869
+										<div class="pic__frame--line pic__frame--line-first is-inview"></div>
+										<div class="pic__frame--line pic__frame--line-two is-inview"></div>
+									</span>
+									<img src="./img/history/photos/listovka.jpg" alt="yadra">
+								</div>
+								<p class="history__photos__item-descr">Листовка «Железо-прокатный и механический завод
+									Н. И. Путилова»</p>
+							</div>
+							<div class="history__photos__item history__photos__item-2">
+								<div class="history__photos__item-pic">
+									<span class="history__photos__item-year pic__frame pic__frame-2">
+										1868
+										<div class="pic__frame--line pic__frame--line-first is-inview"></div>
+										<div class="pic__frame--line pic__frame--line-two is-inview"></div>
+									</span>
+									<img src="./img/history/person/nikolai_putilov.jpg" alt="Gaskoin">
+								</div>
+								<p class="history__photos__item-descr">Николай Иванович Путилов (1820-1880)
+									Русский математик, инженер, предприниматель, учредитель Общества Путиловских заводов
+									в Санкт-Петербурге. Действительный статский советник</p>
+							</div>
+							<div class="history__photos__item history__photos__item-3">
+								<div class="history__photos__item-pic">
+									<span class="history__photos__item-year pic__frame pic__frame-3">
+										1894
+										<div class="pic__frame--line pic__frame--line-first is-inview"></div>
+										<div class="pic__frame--line pic__frame--line-two is-inview"></div>
+									</span>
+									<img src="./img/history/photos/tramvai.jpg" alt="reklama_zavoda">
+								</div>
+								<p class="history__photos__item-descr">Рекламное объявление Путиловского завода в
+									Санкт-Петербурге.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="hystory_achieves">
+					<div class="container">
+						<h2 class="hystory_heroes--title">Галерея славы</h2>
+						<p class="hystory_heroes--subtitle">Трудовые и боевые заслуги кировцев достойно оценены
+							государством. На знамени предприятия семь орденов:</p>
+						<ul class="hystory_achieves--list">
+							<li class="hystory_achieves--list-item">
+								<img src="./img/history/achieves/achieve-1.jpg" alt="achieve">
+							</li>
+							<li class="hystory_achieves--list-item">
+								<img src="./img/history/achieves/achieve-2.jpg" alt="achieve">
+							</li>
+							<li class="hystory_achieves--list-item">
+								<img src="./img/history/achieves/achieve-3.jpg" alt="achieve">
+							</li>
+							<li class="hystory_achieves--list-item">
+								<img src="./img/history/achieves/achieve-4.jpg" alt="achieve">
+							</li>
+							<li class="hystory_achieves--list-item">
+								<img src="./img/history/achieves/achieve-5.jpg" alt="achieve">
+							</li>
+							<li class="hystory_achieves--list-item">
+								<img src="./img/history/achieves/achieve-6.jpg" alt="achieve">
+							</li>
+							<li class="hystory_achieves--list-item">
+								<img src="./img/history/achieves/achieve-7.jpg" alt="achieve">
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="hystory_heroes">
+					<div class="container">
+						<h2 class="hystory_heroes--title">Галерея славы</h2>
+						<p class="hystory_heroes--subtitle">За успехами и многочисленными передовыми разработками
+							Кировского завода стоят известные всему миру ученые, инженеры, конструкторы, руководители.
+							Их совместный труд обеспечил заводу репутацию флагмана российской промышленности:</p>
+						<ul class="hystory_heroes--list">
+							<li class="hystory_heroes--list-item">
+								<a href="#" class="hystory_heroes--list-item-link">
+									<div class="hystory_heroes--list-item-pic">
+										<img src="./img/history/heroes/gaskoin-1.jpg" alt="gaskoin">
+									</div>
+									<p class="hystory_heroes--list-item-descr">Чарльз (Карл) Гаскойн (1737 - 1806) —
+										первый директор завода</p>
+								</a>
+							</li>
+							<li class="hystory_heroes--list-item">
+								<a href="#" class="hystory_heroes--list-item-link">
+									<div class="hystory_heroes--list-item-pic">
+										<img src="./img/history/heroes/putilov-2.jpg" alt="putilov">
+									</div>
+									<p class="hystory_heroes--list-item-descr">Николай Иванович Путилов (1820 - 1880) -
+										директор в 1868 - 1880 годах</p>
+								</a>
+							</li>
+							<li class="hystory_heroes--list-item">
+								<a href="#" class="hystory_heroes--list-item-link">
+									<div class="hystory_heroes--list-item-pic">
+										<img src="./img/history/heroes/iznoskov-3.jpg" alt="iznoskov">
+									</div>
+									<p class="hystory_heroes--list-item-descr">Александр Александрович Износков (1845 –
+										1911) — основатель мартеновского производства на Путиловском заводе</p>
+								</a>
+							</li>
+							<li class="hystory_heroes--list-item">
+								<a href="#" class="hystory_heroes--list-item-link">
+									<div class="hystory_heroes--list-item-pic">
+										<img src="./img/history/heroes/putilov-4.jpg" alt="putilov">
+									</div>
+									<p class="hystory_heroes--list-item-descr">Алексей Иванович Путилов (1866 — 1940) —
+										директор завода в 1913 — 1916 годах</p>
+								</a>
+							</li>
+							<li class="hystory_heroes--list-item">
+								<a href="#" class="hystory_heroes--list-item-link">
+									<div class="hystory_heroes--list-item-pic">
+										<img src="./img/history/heroes/lender-5.jpg" alt="lender">
+									</div>
+									<p class="hystory_heroes--list-item-descr">Фран Францевич Лендер (1881 — 1927) —
+										выдающийся конструктор, профессор, педагог и ученый</p>
+								</a>
+							</li>
+							<li class="hystory_heroes--list-item">
+								<a href="#" class="hystory_heroes--list-item-link">
+									<div class="hystory_heroes--list-item-pic">
+										<img src="./img/history/heroes/bobrov-6.jpg" alt="bobrov">
+									</div>
+									<p class="hystory_heroes--list-item-descr">Иван Иванович Бобров
+										(1882 — 1960) — советский инженер-кораблестроитель, директор Путиловского завода
+									</p>
+								</a>
+							</li>
+							<li class="hystory_heroes--list-item">
+								<a href="#" class="hystory_heroes--list-item-link">
+									<div class="hystory_heroes--list-item-pic">
+										<img src="./img/history/heroes/ots-7.jpg" alt="ots">
+									</div>
+									<p class="hystory_heroes--list-item-descr">Карл Мартович Отс (1892 — 1937) —
+										директор Кировского завода в 1930 — 1936 годах</p>
+								</a>
+							</li>
+							<li class="hystory_heroes--list-item">
+								<a href="#" class="hystory_heroes--list-item-link">
+									<div class="hystory_heroes--list-item-pic">
+										<img src="./img/history/heroes/frumkin-8.jpg" alt="frumkin">
+									</div>
+									<p class="hystory_heroes--list-item-descr">Борис Соломонович Фрумкин (1897 — 1989) —
+										главный конструктор первых турбозубчатых агрегатов</p>
+								</a>
+							</li>
+							<li class="hystory_heroes--list-item">
+								<a href="#" class="hystory_heroes--list-item-link">
+									<div class="hystory_heroes--list-item-pic">
+										<img src="./img/history/heroes/berg-9.jpg" alt="berg">
+									</div>
+									<p class="hystory_heroes--list-item-descr">Вульф Эльевич Берг (1899 — 1965) —
+										главный конструктор турбин </p>
+								</a>
+							</li>
+							<li class="hystory_heroes--list-item">
+								<a href="#" class="hystory_heroes--list-item-link">
+									<div class="hystory_heroes--list-item-pic">
+										<img src="./img/history/heroes/isaev-10.jpg" alt="isaev">
+									</div>
+									<p class="hystory_heroes--list-item-descr">Иван Сергеевич Исаев (1899 — 1992) —
+										директор Кировского завода в 1954 — 1965 годах</p>
+								</a>
+							</li>
+							<li class="hystory_heroes--list-item">
+								<a href="#" class="hystory_heroes--list-item-link">
+									<div class="hystory_heroes--list-item-pic">
+										<img src="./img/history/heroes/lebedev-11.jpg" alt="lebedev">
+									</div>
+									<p class="hystory_heroes--list-item-descr">Сергей Максимович Лебедев (1902 – 1961) –
+										новатор и организатор сталелитейного производства</p>
+								</a>
+							</li>
+							<li class="hystory_heroes--list-item">
+								<a href="#" class="hystory_heroes--list-item-link">
+									<div class="hystory_heroes--list-item-pic">
+										<img src="./img/history/heroes/starostenko-12.jpg" alt="starostenko">
+									</div>
+									<p class="hystory_heroes--list-item-descr">Александр Хрисанфович Старостенко (1903 —
+										1973) — ученый, инженер, конструктор турбин, доктор технических наук</p>
+								</a>
+							</li>
+							<li class="hystory_heroes--list-item">
+								<a href="#" class="hystory_heroes--list-item-link">
+									<div class="hystory_heroes--list-item-pic">
+										<img src="./img/history/heroes/muzrukov-13.jpg" alt="muzrukov">
+									</div>
+									<p class="hystory_heroes--list-item-descr">Борис Глебович Музруков (1904 — 1979) —
+										крупный организатор оборонной и ядерной промышленности</p>
+								</a>
+							</li>
+							<li class="hystory_heroes--list-item">
+								<a href="#" class="hystory_heroes--list-item-link">
+									<div class="hystory_heroes--list-item-pic">
+										<img src="./img/history/heroes/duhov-14.jpg" alt="duhov">
+									</div>
+									<p class="hystory_heroes--list-item-descr">Николай Леонидович Духов (1904 — 1964) —
+										главный конструктор танков</p>
+								</a>
+							</li>
+							<li class="hystory_heroes--list-item">
+								<a href="#" class="hystory_heroes--list-item-link">
+									<div class="hystory_heroes--list-item-pic">
+										<img src="./img/history/heroes/zaltsman-15.jpg" alt="zaltsman">
+									</div>
+									<p class="hystory_heroes--list-item-descr">Исаак Моисеевич Зальцман (1905 — 1988) —
+										организатор танкостроения, директор завода в 1941 — 1949 годах </p>
+								</a>
+							</li>
+							<li class="hystory_heroes--list-item">
+								<a href="#" class="hystory_heroes--list-item-link">
+									<div class="hystory_heroes--list-item-pic">
+										<img src="./img/history/heroes/gorlitski-16.jpg" alt="gorlitski">
+									</div>
+									<p class="hystory_heroes--list-item-descr">Лев Израилевич Горлицкий (1906 — 2003) —
+										главный конструктор бронетехники в 1936 — 1976 годах</p>
+								</a>
+							</li>
+							<li class="hystory_heroes--list-item">
+								<a href="#" class="hystory_heroes--list-item-link">
+									<div class="hystory_heroes--list-item-pic">
+										<img src="./img/history/heroes/sinev-17.jpg" alt="sinev">
+									</div>
+									<p class="hystory_heroes--list-item-descr">Николай Михайлович Синев (1906 — 1991) —
+										главный конструктор ОКБ в 1944 — 1961 годах</p>
+								</a>
+							</li>
+							<li class="hystory_heroes--list-item">
+								<a href="#" class="hystory_heroes--list-item-link">
+									<div class="hystory_heroes--list-item-pic">
+										<img src="./img/history/heroes/dlugach-18.jpg" alt="dlugach">
+									</div>
+									<p class="hystory_heroes--list-item-descr">Моисей Абрамович Длугач (1907 — 1951) —
+										директор Кировского завода в 1941 — 1951 годах</p>
+								</a>
+							</li>
+							<li class="hystory_heroes--list-item">
+								<a href="#" class="hystory_heroes--list-item-link">
+									<div class="hystory_heroes--list-item-pic">
+										<img src="./img/history/heroes/kotin-19.jpg" alt="kotin">
+									</div>
+									<p class="hystory_heroes--list-item-descr">Жозеф Яковлевич Котин (1908 — 1979) —
+										главный конструктор Кировского завода 1937 — 1941 и 1946 — 1968 годах</p>
+								</a>
+							</li>
+							<li class="hystory_heroes--list-item">
+								<a href="#" class="hystory_heroes--list-item-link">
+									<div class="hystory_heroes--list-item-pic">
+										<img src="./img/history/heroes/kazak-20.jpg" alt="kazak">
+									</div>
+									<p class="hystory_heroes--list-item-descr">Манфред Антонович Казак (1908 — 1998) —
+										конструктор турбин, лауреат Ленинской премии</p>
+								</a>
+							</li>
+							<li class="hystory_heroes--list-item">
+								<a href="#" class="hystory_heroes--list-item-link">
+									<div class="hystory_heroes--list-item-pic">
+										<img src="./img/history/heroes/kurin-21.jpg" alt="kurin">
+									</div>
+									<p class="hystory_heroes--list-item-descr">Николай Васильевич Курин (1908 — 1989) —
+										конструктор артиллерийской техники и тракторов</p>
+								</a>
+							</li>
+							<li class="hystory_heroes--list-item">
+								<a href="#" class="hystory_heroes--list-item-link">
+									<div class="hystory_heroes--list-item-pic">
+										<img src="./img/history/heroes/lubchenko-22.jpg" alt="lubchenko">
+									</div>
+									<p class="hystory_heroes--list-item-descr">Александр Александрович Любченко (1913 –
+										1996) — директор Кировского завода в 1965 — 1972 годах</p>
+								</a>
+							</li>
+							<li class="hystory_heroes--list-item">
+								<a href="#" class="hystory_heroes--list-item-link">
+									<div class="hystory_heroes--list-item-pic">
+										<img src="./img/history/heroes/polyachenko-23.jpg" alt="polyachenko">
+									</div>
+									<p class="hystory_heroes--list-item-descr">Виталий Александрович Поляченко (1916 —
+										1968) — инженер и заместитель главного конструктора в 1940 — 1968 годах</p>
+								</a>
+							</li>
+							<li class="hystory_heroes--list-item">
+								<a href="#" class="hystory_heroes--list-item-link">
+									<div class="hystory_heroes--list-item-pic">
+										<img src="./img/history/heroes/ulybin-24.jpg" alt="ulybin">
+									</div>
+									<p class="hystory_heroes--list-item-descr">Василий Иванович Улыбин (1916 — 2007) —
+										директор Кировского завода в 1972 — 1976 годах</p>
+								</a>
+							</li>
+							<li class="hystory_heroes--list-item">
+								<a href="#" class="hystory_heroes--list-item-link">
+									<div class="hystory_heroes--list-item-pic">
+										<img src="./img/history/heroes/granin-25.jpg" alt="granin">
+									</div>
+									<p class="hystory_heroes--list-item-descr">Чарльз (Карл) Гаскойн (1737 - 1806) —
+										первый директор завода</p>
+								</a>
+							</li>
+							<li class="hystory_heroes--list-item">
+								<a href="#" class="hystory_heroes--list-item-link">
+									<div class="hystory_heroes--list-item-pic">
+										<img src="./img/history/heroes/popov-26.jpg" alt="popov">
+									</div>
+									<p class="hystory_heroes--list-item-descr">Николай Сергеевич Попов
+										(1931 — 2008) — главный конструктор Кировского завода в 1968 — 1984 годах</p>
+								</a>
+							</li>
+							<li class="hystory_heroes--list-item">
+								<a href="#" class="hystory_heroes--list-item-link">
+									<div class="hystory_heroes--list-item-pic">
+										<img src="./img/history/heroes/chernov-27.jpg" alt="chernov">
+									</div>
+									<p class="hystory_heroes--list-item-descr">Станислав Павлович Чернов (1937 — 2016) —
+										директор Кировского завода в 1984 — 1987 годах</p>
+								</a>
+							</li>
+							<li class="hystory_heroes--list-item">
+								<a href="#" class="hystory_heroes--list-item-link">
+									<div class="hystory_heroes--list-item-pic">
+										<img src="./img/history/heroes/semenenko-28.jpg" alt="semenenko">
+									</div>
+									<p class="hystory_heroes--list-item-descr">Петр Георгиевич Семененко (1946 — 2005) —
+										директор Кировского завода в 1987 — 2005 годах</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</main>
+			<footer class="footer">
+
+				<div class="footer__outer">
+					<div class="container">
+
+						<div class="footer__row">
+							<nav class="footer__nav">
+								<ul class="footer__nav-list">
+									<li class="footer__nav-item">
+										<a class="footer__nav-link" href="">Компания</a>
+									</li>
+									<li class="footer__nav-item">
+										<a class="footer__nav-link" href="">Деятельность</a>
+									</li>
+									<li class="footer__nav-item">
+										<a class="footer__nav-link" href="">Карта сайта</a>
+									</li>
+
+									<li class="footer__nav-item">
+										<a class="footer__nav-link" href="">Пресс-центр</a>
+									</li>
+									<li class="footer__nav-item">
+										<a class="footer__nav-link" href="">Акционерам и инвесторам</a>
+									</li>
+									<li class="footer__nav-item">
+										<a class="footer__nav-link" href="">Контакты</a>
+									</li>
+									<li class="footer__nav-item">
+										<a class="footer__nav-link" href="">Вакансии</a>
+									</li>
+									<li class="footer__nav-item">
+										<a class="footer__nav-link" href="">Тендеры</a>
+									</li>
+									<li class="footer__nav-item">
+										<a class="footer__nav-link" href="">Аренда помещений</a>
+									</li>
+
+
+									<li class="footer__nav-item">
+										<a class="footer__nav-link" href="">Реквизиты</a>
+									</li>
+									<li class="footer__nav-item footer__nav-item--last">
+
+									</li>
+								</ul>
+
+								<p class="footer__adress">198097, Россия, Санкт-Петербург, пр. Стачек, 47</p>
+							</nav>
+
+
+							<div class="footer__contact">
+
+								<div class="footer__contact-feedback">
+									<h6 class="footer__contact-title">Подписаться на наши новости</h6>
+									<form class="footer__contact-form" action="">
+										<div class="footer__contact-form__wrap">
+											<input class="footer__contact-input" type="mail" placeholder="E-mail">
+											<button class="footer__contact-submit" type="submit"><svg
+													class="footer__contact-submit-icon" width="40">
+													<use xlink:href="./img/sprite.svg#icon-mail-submit"></use>
+												</svg></button>
+										</div>
+									</form>
+
+								</div>
+
+								<ul class="footer__social-list">
+									<li class="footer__social-item"
+										style="background-image: url(./img/social-youtube.svg);">
+										<a class="footer__social-link" href="">
+											<span class="visually-hidden">Youtube</span>
+										</a>
+									</li>
+
+									<li class="footer__social-item" style="background-image: url(./img/social-vk.svg);">
+										<a class="footer__social-link" href="">
+											<span class="visually-hidden">Vk</span>
+										</a>
+									</li>
+
+									<li class="footer__social-item"
+										style="background-image: url(./img/social-inst.svg);">
+										<a class="footer__social-link" href="">
+											<span class="visually-hidden">Instagram</span>
+										</a>
+									</li>
+
+									<li class="footer__social-item" style="background-image: url(./img/social-fb.svg);">
+										<a class="footer__social-link" href="">
+											<span class="visually-hidden">Facebook</span>
+										</a>
+									</li>
+								</ul>
+
+
+							</div>
+
+
+						</div>
+
+
+
+
+						<section class="copyright">
+							<h6 class="copyright__title">Copyrights © ПАО "Кировский завод"</h6>
+							<a class="copyright__link" href="">Правила использования сайта</a>
+							<a class="copyright__link" href="">Политика в области обработки персональных данных</a>
+						</section>
+
+					</div>
+
+				</div>
+			</footer>
+		</div>
+	</div>
+	<script src="./js/script.min.js"></script>
+</body>
+
+</html>
