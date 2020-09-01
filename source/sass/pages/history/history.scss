@@ -1,0 +1,84 @@
+.history-about{
+    min-height: auto;
+    margin-bottom: 40px;
+    & .social__btn-list{
+        top: 50px;
+    }
+}
+
+.history__year{
+    color: rgba(255, 255, 255, 0.56);
+}
+
+.history__entry--text{
+    margin-bottom: 63px;
+}
+
+.history__entry--text-title{
+    font-family: $font-bold-2-title;
+    color: #000;
+    margin-bottom: 20px;
+    font-size: 26px;
+    line-height: 1.2;
+    & span{
+        background-color: $accent-text-bg-color;
+        display: inline-block;
+        color: #fff;
+        padding: 5px 8px;
+    }
+}
+
+.history__entry--text-content{
+    font-family: $font-text-light;
+    color: $grey-text-paragraf;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.history__photos{
+    display: flex;
+    flex-direction: column;
+}
+
+.history__photos__item{
+    margin-bottom: 30px;
+    &.history__photos__item-1{
+        max-width: 202px;
+    }
+    &.history__photos__item-2{
+        max-width: 260px;
+    }
+    &.history__photos__item-3{
+        max-width: 314px;
+    }
+}
+
+.history__photos__item-descr{
+    font-family: $font-text-light;
+    color: $grey-text-paragraf;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+@media(min-width: 767px){
+    .history-about{
+        & .social__btn-list{
+            top: 110px;
+        }
+    }
+    .history__entry--text-title{
+        font-size: 30px;
+    }
+}
+
+@media(min-width: 1280px){
+    .history-about{
+        & .social__btn-list{
+            top: 110px;
+        }
+    }
+}
+
+@media(min-width: 1680px){
+
+}
