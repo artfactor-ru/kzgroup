@@ -216,3 +216,33 @@
     margin-left: 5%;
     margin-top: 22%;
 }
+
+.press-photo-gallery-link:hover ~ .parallax__item--news .parallax__img-wrap{
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
+.press-photo-gallery-link{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    z-index: 200;
+}
+
+.press-photo-gallery-link:hover ~ .press-photo-gallery-item-description {
+    color: #c30215;
+}
+
+.rigt-side-bar-theme-button-active {
+    color: #c30215;
+     &::before {
+         content: '';
+         position: absolute;
+         width: 2px;
+         height: 100%;
+         background: #c30215;
+         transition: all .4s ease;
+     }
+}

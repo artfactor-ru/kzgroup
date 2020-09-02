@@ -171,3 +171,17 @@
 /*.press-nav-bar-video-gallery {
     width: ;
 }*/
+
+.rigt-side-bar-theme-button-active {
+  color: #c30215;
+   &::before {
+       content: '';
+       position: absolute;
+       width: 3px;
+       height: 15px;
+       background: #c30215;
+       transition: height .8s ease;
+       display: block;
+       left: 0%;
+   }
+}

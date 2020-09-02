@@ -22,7 +22,7 @@
                     <li class="press-nav-bar-list__item">
                         <a href="#">Видеогалерея</a>
                     </li>
-                    <li class="press-nav-bar-list__item">
+                    <li class="press-nav-bar-list__item press-nav-bar-list__item-active">
                         <a href="#">Пресса о нас</a>
                     </li>
                     <li class="press-nav-bar-list__item">
@@ -34,7 +34,7 @@
                 </ul>
             </nav>
         </div>
-        <div class="container video-gallery-container">
+        <div class="container video-gallery-container main-content">
             <div class="press-video-gallery-main-container content">
                 <div class="theiaStickySidebar">
                 <div class="press-searchbar-container press-search-bar-video-gallery-container">    <!--???-->
@@ -165,11 +165,11 @@
                 </div>
             </div>
             <aside class="press-rigt-side-bar sidebar">
-                <div class="theiaStickySidebar">
+                <div class="sidebar__inner">
                     <div class="press-rigt-side-bar-filters">
                         <div class="press-rigt-side-bar-filters-theme">
                             <div class="press-rigt-side-bar-theme-list">
-                                <button class="press-rigt-side-bar-theme-button">ВСЕ</button>
+                                <button class="press-rigt-side-bar-theme-button rigt-side-bar-theme-button-active">ВСЕ</button>
                                 <button class="press-rigt-side-bar-theme-button">ПРОИЗВОДСТВО</button>
                                 <button class="press-rigt-side-bar-theme-button">ФИНАНСЫ</button>
                                 <button class="press-rigt-side-bar-theme-button">ИННОВАЦИИ</button>
@@ -182,7 +182,7 @@
                             </div>
                         </div>
                         <div class="press-rigt-side-bar-filters-date">
-                            <button class="press-rigt-side-bar-theme-button">2020</button>
+                            <button class="press-rigt-side-bar-theme-button rigt-side-bar-theme-button-active">2020</button>
                             <button class="press-rigt-side-bar-theme-button">2019</button>
                             <button class="press-rigt-side-bar-theme-button">2018</button>
                             <button class="press-rigt-side-bar-theme-button">все годы</button>
@@ -243,14 +243,12 @@
         </div>
     </div>
     <script src="./js/script.min.js"></script>
-    <script src="./js/ResizeSensor.js"></script>
-    <script src="./js/theia-sticky-sidebar.js"></script>
-    <script>
-        $(document).ready(function() {		
-        $('.content .sidebar').theiaStickySidebar({
-        additionalMarginTop: 30,
-        additionalMarginBottom: 30
+    <script type="text/javascript">
+        var sidebar = new StickySidebar('.sidebar', {
+            topSpacing: 20,
+            bottomSpacing: 20,
+            containerSelector:'.main-content',
+            innerWrapperSelector: '.sidebar__inner'
         });
-        });		
     </script>
 </body>
