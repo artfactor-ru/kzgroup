@@ -24,6 +24,8 @@
     }
 
     &-item {
+        display: block;
+        position: relative;
         list-style: none;
         width: 45.5%;
         margin-right:35px;
