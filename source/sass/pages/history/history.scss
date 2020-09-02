@@ -32,7 +32,8 @@
 }
 
 .history__year{
-    color: rgba(255, 255, 255, 0.56);
+    height: 120px;
+    display: block;
 }
 
 .history__entry--text{
@@ -114,6 +115,9 @@
     .history_dark{
         padding: 60px 0;
     }
+    .history__year{
+        height: 210px;
+    }
     .history__entry--text-title{
         font-size: 30px;
     }
@@ -151,6 +155,9 @@
     .history_light,
     .history_dark{
         padding: 70px 0 150px;
+    }
+    .history__year{
+        height: 330px;
     }
     .history__entry--text{
         max-width: 612px;
@@ -192,6 +199,9 @@
 }
 
 @media(min-width: 1680px){
+    .history__year{
+        height: 420px;
+    }
     .history__entry--text-title{
         font-size: 46px;
         line-height: 42px;
@@ -222,3 +232,6 @@
         }
     }
 }
+
+@import "./history-achieves";
+@import "./history-heroes";
