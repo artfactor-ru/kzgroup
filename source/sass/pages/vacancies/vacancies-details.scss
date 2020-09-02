@@ -1,5 +1,9 @@
 .vacancies-d__hero {
+<<<<<<< HEAD
   padding: 129px 0;
+=======
+  padding: 125px 0;
+>>>>>>> press
   height: 100%;
 }
 
@@ -40,7 +44,10 @@
   list-style: none;
   position: relative;
   margin-bottom: 30px;
+<<<<<<< HEAD
   width: 100%;
+=======
+>>>>>>> press
 }
 
 .vacancies-d__item {
@@ -48,9 +55,15 @@
   color: #3C3D40;
   font-size: 18px;
   display: flex;
+<<<<<<< HEAD
   margin-left: 292px;
   & p {
     margin: 5px 0 5px 10px;
+=======
+  margin-left: 190px;
+  & p {
+    margin: 10px 0 10px 10px;
+>>>>>>> press
     position: relative;
     width: 80%;
     line-height: 1.4;
@@ -58,7 +71,11 @@
       position: absolute;
       display: block;
       content: "—";
+<<<<<<< HEAD
       left: -35px;
+=======
+      left: -25px;
+>>>>>>> press
     }
   }
   & h6 {
@@ -73,16 +90,25 @@
 }
 
 .vacancies-d__buttons {
+<<<<<<< HEAD
   margin-left: 265px;
+=======
+  margin-left: 170px;
+>>>>>>> press
 }
 
 .vacancies-d__response {
   color: #171C28;
   font-family: $font-text-regular;
   font-weight: bold;
+<<<<<<< HEAD
   font-size: 14px;
   margin-top: 11px;
   padding: 28px 80px;
+=======
+  padding: 25px 75px;
+  font-size: 14px;
+>>>>>>> press
 }
 
 //hover кнопки загрузить резюме
@@ -194,14 +220,20 @@
       height: 42px;
       border-radius: 3px;
       background-color: #F6F6F6;
+<<<<<<< HEAD
       box-sizing: border-box;
+=======
+>>>>>>> press
       border: 1px solid #DCE0E3;
       padding-left: 10px;
       font-family: $font-text-regular;
       font-size: 18px;
     }
     & textarea {
+<<<<<<< HEAD
       box-sizing: border-box;
+=======
+>>>>>>> press
       width: 468px;
       height: 105px;
       border-radius: 3px;
@@ -282,20 +314,30 @@
     display: flex;
     align-items: end;
     transition: .4s;
+<<<<<<< HEAD
     line-height: 34px;
     width: 84%;
+=======
+>>>>>>> press
     &:hover {
       opacity: 0.5;
     }
     & div p {
+<<<<<<< HEAD
       margin-top: 30px;
+=======
+      margin-top: 20px;
+>>>>>>> press
     }
   }
   &-icon {
     margin-right: 20px;
     width: 20px;
     height: 20px;
+<<<<<<< HEAD
     margin-top: 5px;
+=======
+>>>>>>> press
   }
   &-map {
     width: 50%;
@@ -305,7 +347,10 @@
 .vacancies-d__contacts-icon--locate {
   height: 22px;
   width: 41px;
+<<<<<<< HEAD
   margin-right: 18px;
+=======
+>>>>>>> press
 }
 
 .vacancies-d__main-building {
@@ -336,17 +381,22 @@
   }
 }
 
+<<<<<<< HEAD
 
 @media screen and (max-width: 1561px) {
   .vacancies-d__form {
     height: 600px;
   }
+=======
+@media screen and (max-width: 1561px) {
+>>>>>>> press
   .vacancies-d__build-point {
     right: 18%;
   }
 }
 
 @media screen and (max-width: 1281px) {
+<<<<<<< HEAD
   .vacancies-d__hero {
     padding: 90px 0;
   }
@@ -363,6 +413,12 @@
   }
   .vacancies-d__buttons {
     margin-left: 187px;
+=======
+  .vacancies-d__title {
+    font-size: 36px;
+    width: 60%;
+    margin: 40px 0 20px;
+>>>>>>> press
   }
   .vacancies-d__item p {
     width: 100%;
@@ -384,9 +440,12 @@
     padding-left: 281px;
     padding-right: 138px;
   }
+<<<<<<< HEAD
   .vacancies-d__contacts-title {
     margin-bottom: 27px;
   }
+=======
+>>>>>>> press
 }
 
 @media screen and (max-width: 1025px) {
@@ -415,12 +474,15 @@
   }
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 992px) {
   .vacancies-d__form {
     height: 550px;
   }
 }
 
+=======
+>>>>>>> press
 @media screen and (max-width: 801px) {
   .vacancies-d__response {
     padding: 20px 50px;
@@ -463,6 +525,7 @@
   .vacancies-d__title {
     font-size: 26px;
     width: 85%;
+<<<<<<< HEAD
     margin: 40px 0 42px;
   }
   .vacancies-d__date {
@@ -471,6 +534,12 @@
   }
   .vacancies-d__breadcrumb {
     font-size: 16px;
+=======
+  }
+  .vacancies-d__breadcrumb {
+    font-size: 16px;
+    display: flex;
+>>>>>>> press
     display: block;
     align-items: center;
     & svg {
@@ -478,9 +547,12 @@
       margin-right: 10px;
     }
   }
+<<<<<<< HEAD
   .vacancies-d__name {
     font-size: 14px;
   }
+=======
+>>>>>>> press
   .vacancies-d__response {
     padding: 18px 55px;
   }
@@ -493,6 +565,7 @@
   }
   .vacancies-d__contacts-link {
     font-size: 14px;
+<<<<<<< HEAD
     width: 100%;
     line-height: 30px;
     margin-bottom: 5px;
@@ -506,17 +579,27 @@
   .vacancies-d__contacts-item {
     width: 95%;
     margin: 0;
+=======
+  }
+  .vacancies-d__contacts-item {
+    width: 95%;
+    margin-top: 5px;
+>>>>>>> press
   }
   .vacancies-d__yandex-map {
     height: 217px;
   }
   .vacancies-d__item p {
     margin: 10px 0 5px 10px;
+<<<<<<< HEAD
     font-size: 14px;
+=======
+>>>>>>> press
   }
   .vacancies-d__main-building {
     margin-top: 10px;
   }
+<<<<<<< HEAD
   .vacancies-d__buttons {
     margin-left: 150px;
   }
@@ -545,13 +628,22 @@
   .vacancies-d__item p:before {
     left: -25px;
   }
+=======
+}
+
+@media screen and (max-width: 481px) {
+>>>>>>> press
   .vacancies-d__contacts-icon--locate {
     height: 22px;
     width: 28px;
   }
   .vacancies-d__contacts-icon--locate {
     margin-right: 18px;
+<<<<<<< HEAD
     width: 32px;
+=======
+    width: 37px;
+>>>>>>> press
   }
   .vacancies-d__title {
     font-size: 22px;
@@ -559,9 +651,15 @@
   }
   .vacancies-d__date {
     font-size: 14px;
+<<<<<<< HEAD
     margin-bottom: 16px;
   }
     .vacancies-d__item {
+=======
+    margin-bottom: 40px;
+  }
+  .vacancies-d__item {
+>>>>>>> press
     margin-left: 14px;
     font-size: 14px;
 
@@ -597,7 +695,10 @@
   }
   .vacancies-d__response {
     margin-top: 0;
+<<<<<<< HEAD
     padding: 19px 55px;
+=======
+>>>>>>> press
   }
   .vacancies-d__download {
     margin: 20px auto 0 auto;
@@ -660,14 +761,22 @@
     align-items: start;
     flex-direction: column;
     & input {
+<<<<<<< HEAD
       width: 100%;
+=======
+      width: 98%;
+>>>>>>> press
     }
     & span {
       margin-bottom: 10px;
       font-size: 14px;
     }
     & textarea {
+<<<<<<< HEAD
       width: 100%;
+=======
+      width: 98%;
+>>>>>>> press
     }
   }
   .vacancies-d__form-buttons {
@@ -707,10 +816,13 @@
   .vacancies-d__form {
     height: 95%;
   }
+<<<<<<< HEAD
   .vacancies-d__contacts-icon--locate {
     margin-right: 21px;
     width: 40px;
   }
+=======
+>>>>>>> press
   .vacancies-d__build-point {
     width: 69px;
     right: 13%;
@@ -732,6 +844,15 @@
   .vacancies-d__response {
     padding: 15px 55px;
   }
+<<<<<<< HEAD
+=======
+  .vacancies-d__form-label input {
+    width: 97%;
+  }
+  .vacancies-d__form-label textarea {
+    width: 97%;
+  }
+>>>>>>> press
 }
 
 @media screen and (max-width: 376px) {
@@ -748,8 +869,17 @@
   .vacancies-d__download {
     font-size: 12px;
   }
+<<<<<<< HEAD
   .vacancies-d__form-label input {
     height: 35px;
+=======
+  .vacancies-d__response {
+    padding: 10px 55px;
+  }
+  .vacancies-d__form-label input {
+    height: 35px;
+    width: 98%;
+>>>>>>> press
   }
 }
 
@@ -773,6 +903,12 @@
     margin-right: 30px;
     padding-bottom: 5px;
   }
+<<<<<<< HEAD
+=======
+  .vacancies-d__response {
+    padding: 15px 55px;
+  }
+>>>>>>> press
   .vacancies-d__form-buttons--block:first-child {
     margin-bottom: 15px;
   }
@@ -795,11 +931,16 @@
   }
   .vacancies-d__form-label input {
     height: 28px;
+<<<<<<< HEAD
+=======
+    width: 98%;
+>>>>>>> press
     font-size: 12px;
   }
   .vacancies-d__download-status {
     font-size: 12px;
   }
+<<<<<<< HEAD
   .vacancies-d__response {
     padding: 10px 55px;
   }
@@ -807,3 +948,6 @@
     height: 80px;
   }
 }
+=======
+}
+>>>>>>> press
