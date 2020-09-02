@@ -390,7 +390,9 @@ if(document.querySelector('.rent-details__slider')){
 	let companiesThumbs;
 	let swiperHero;
 	let swiperGallery;
-	let activeSlideHero;
+	let swiperAchieves;
+	// let swiperHistory1;
+	// let swiperHistory2;
 	const transitionSlide = 15000;
 
 	const enableSwiper = function(){
@@ -428,6 +430,15 @@ if(document.querySelector('.rent-details__slider')){
 						},
 					});
 				
+			}
+			if (document.querySelector('.history_slider')) {
+				swiperAchieves = new Swiper('.history_slider', {
+					observer: true,
+					observeParents: true,
+					scrollbar: {
+						el: '.swiper-scrollbar',
+					},
+				});
 			}
 				
 	}
@@ -926,7 +937,47 @@ if(document.querySelector('.rent-details__slider')){
 						statSlides[i].classList.remove('swiper-slide');
 					}
 				}
-			
+				if (swiperAchieves != null) {
+					swiperAchieves.destroy(true, true);
+					swiperAchieves.update();
+				}
+				if (document.querySelector('.history_slider')) {
+					document.querySelector('.history_slider').classList.remove('swiper-container');
+					document.querySelector('.history_achieves--list').classList.remove('swiper-wrapper');
+					let statSlides = document.querySelectorAll('.history_achieves--list-item');
+					for (let i = 0; i < statSlides.length; i++) {
+		
+						statSlides[i].classList.remove('swiper-slide');
+					}
+				}
+		
+		
+				// if (swiperHistory1 != null) {
+				// 	swiperHistory1.destroy(true, true);
+				// 	swiperHistory1.update();
+				// }
+				// if (document.querySelector('.history__photos-1')) {
+				// 	document.querySelector('.history__photos-1').classList.remove('swiper-container');
+				// 	document.querySelector('.history__photos-1 .history__photos--container').classList.remove('swiper-wrapper');
+				// 	let statSlides = document.querySelectorAll('.history__photos-1 .history__photos__item');
+				// 	for (let i = 0; i < statSlides.length; i++) {
+				// 		statSlides[i].classList.remove('swiper-slide');
+				// 	}
+				// }
+		
+				// if (swiperHistory2 != null) {
+				// 	swiperHistory2.destroy(true, true);
+				// 	swiperHistory2.update();
+				// }
+				// if (document.querySelector('.history__photos-2')) {
+				// 	document.querySelector('.history__photos-2').classList.remove('swiper-container');
+				// 	document.querySelector('.history__photos-2 .history__photos--container').classList.remove('swiper-wrapper');
+				// 	let statSlides = document.querySelectorAll('.history__photos-2 .history__photos__item');
+				// 	for (let i = 0; i < statSlides.length; i++) {
+				// 		statSlides[i].classList.remove('swiper-slide');
+				// 	}
+				// }
+		
 				if(document.querySelector('.kirovets_tabs__container')){
 					if (swiperTabFeature1 != null) {
 						swiperTabFeature1.destroy(true, true);
@@ -986,6 +1037,34 @@ if(document.querySelector('.rent-details__slider')){
 					statSlides[i].classList.add('swiper-slide');
 				}
 			}
+
+			if (document.querySelector('.history_slider')) {
+				document.querySelector('.history_slider').classList.add('swiper-container');
+				document.querySelector('.history_achieves--list').classList.add('swiper-wrapper');
+				let statSlides = document.querySelectorAll('.history_achieves--list-item');
+				for (let i = 0; i < statSlides.length; i++) {
+	
+					statSlides[i].classList.add('swiper-slide');
+				}
+			}
+	
+			// if (document.querySelector('.history__photos-1')) {
+			// 	document.querySelector('.history__photos-1').classList.add('swiper-container');
+			// 	document.querySelector('.history__photos-1 .history__photos--container').classList.add('swiper-wrapper');
+			// 	let statSlides = document.querySelectorAll('.history__photos-1 .history__photos__item');
+			// 	for (let i = 0; i < statSlides.length; i++) {
+			// 		statSlides[i].classList.add('swiper-slide');
+			// 	}
+			// }
+	
+			// if (document.querySelector('.history__photos-2')) {
+			// 	document.querySelector('.history__photos-2').classList.add('swiper-container');
+			// 	document.querySelector('.history__photos-2 .history__photos--container').classList.add('swiper-wrapper');
+			// 	let statSlides = document.querySelectorAll('.history__photos-2 .history__photos__item');
+			// 	for (let i = 0; i < statSlides.length; i++) {
+			// 		statSlides[i].classList.add('swiper-slide');
+			// 	}
+			// }
 				enableSwiper();
 			
 
