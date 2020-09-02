@@ -32,24 +32,35 @@
 }
 
 .history__year{
-    color: rgba(255, 255, 255, 0.56);
+    height: 120px;
+    display: block;
 }
 
 .history__entry--text{
     margin-bottom: 63px;
+    & ul{
+        list-style-type: '—';
+        font-family: $font-text-light;
+        font-size: 14px;
+        line-height: 1.6;
+        padding-left: 10px;
+        & li{
+            padding-left: 10px;
+        }
+    }
 }
 
 .history__entry--text-title{
     font-family: $font-bold-2-title;
     color: #000;
     margin-bottom: 20px;
-    font-size: 26px;
+    font-size: 19px;
     line-height: 1.2;
     & span{
         background-color: $accent-text-bg-color;
         display: inline-block;
         color: #fff;
-        padding: 5px 8px;
+        padding: 0px 8px 3px 8px;
     }
 }
 
@@ -68,6 +79,10 @@
 }
 
 .history__photos{
+    
+}
+
+.history__photos--container{
     display: flex;
     flex-direction: column;
     padding-left: 26px;
@@ -114,32 +129,99 @@
     .history_dark{
         padding: 60px 0;
     }
+    .history__year{
+        height: 210px;
+    }
     .history__entry--text-title{
         font-size: 30px;
+        & span{
+            padding: 5px 8px;
+        }
     }
     .history__entry--text-subtitle{
         margin: 40px 0 20px;
         font-size: 30px;
         line-height: 36px;
     }
+    .history__photos--container{
+        padding-left: 0px;
+    }
     .history__photos{
-        padding-left: 0;
+        & .history__photos__item{
+            margin-bottom: 0;
+            &.history__photos__item-1{
+                max-width: 200px;
+            }
+            &.history__photos__item-2{
+                align-self: flex-end;
+                margin-top: -220px;
+                max-width: 200px;
+            }
+            &.history__photos__item-3{
+                margin-top: -65px;
+                max-width: 315px;
+            }
+            &.history__photos__item-4{
+                margin-top: -65px;
+                max-width: 315px;
+            }
+        }
+        &.history__photos-2{
+            & .history__photos--container{
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            & .history__photos__item{
+                &:nth-child(odd){
+                    max-width: 260px;
+                }
+                &.history__photos__item-2{
+                    max-width: 260px;
+                    margin-top: 0;
+                    margin-bottom: 100px;
+                    & img{
+                        max-width: 200px;
+                    }
+                }
+                &.history__photos__item-4{
+                    margin-top: 0px;
+                }
+                &.history__photos__item-6{
+                    max-width: 260px;
+                    margin-top: 180px;
+                }
+            }
+        }
+        &.history__photos-3{
+            & .history__photos--container{
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            & .history__photos__item{
+                &:nth-child(odd){
+                    max-width: 260px;
+                }
+                &.history__photos__item-2{
+                    max-width: 260px;
+                    margin-top: 0;
+                    margin-bottom: 100px;
+                    & img{
+                        max-width: 200px;
+                    }
+                }
+                &.history__photos__item-4{
+                    margin-top: 0px;
+                }
+                &.history__photos__item-6{
+                    max-width: 260px;
+                    margin-top: 180px;
+                }
+            }
+        }
     }
-    .history__photos__item{
-        margin-bottom: 0;
-        &.history__photos__item-1{
-            max-width: 200px;
-        }
-        &.history__photos__item-2{
-            align-self: flex-end;
-            margin-top: -300px;
-            max-width: 200px;
-        }
-        &.history__photos__item-3{
-            margin-top: -65px;
-            max-width: 315px;
-        }
-    }
+    
 }
 
 @media(min-width: 1280px){
@@ -151,6 +233,9 @@
     .history_light,
     .history_dark{
         padding: 70px 0 150px;
+    }
+    .history__year{
+        height: 330px;
     }
     .history__entry--text{
         max-width: 612px;
@@ -165,33 +250,47 @@
         line-height: 36px;
     }
     .history__photos{
-        align-items: flex-end;
         margin-top: -240px;
     }
-    .history__photos__item{
-        &.history__photos__item-1{
-            max-width: 340px;
-            order: 2;
-            align-self: flex-start;
-            margin-top: -150px;
-        }
-        &.history__photos__item-2{
-            max-width: 340px;
-            order: 1;
-            margin-top: 0;
-            & img{
-                max-width: 250px;
+    .history__photos--container{
+        align-items: flex-end;
+    }
+    .history__photos{
+        & .history__photos__item{
+            &.history__photos__item-1{
+                max-width: 340px;
+                order: 2;
+                align-self: flex-start;
+                margin-top: -120px;
+            }
+            &.history__photos__item-2{
+                max-width: 340px;
+                order: 1;
+                margin-top: 0;
+                margin-right: 50px;
+                & img{
+                    max-width: 250px;
+                }
+            }
+            &.history__photos__item-3{
+                max-width: 500px;
+                margin-top: -230px;
+                order:3;
+            }
+            &.history__photos__item-4{
+                margin-top: -100px;
+                max-width: 500px;
+                order: 4;
             }
         }
-        &.history__photos__item-3{
-            max-width: 500px;
-            margin-top: -230px;
-            order:3;
-        }
     }
+    
 }
 
 @media(min-width: 1680px){
+    .history__year{
+        height: 420px;
+    }
     .history__entry--text-title{
         font-size: 46px;
         line-height: 42px;
@@ -205,20 +304,25 @@
     }
     .history__photos{
         margin-top: -200px;
-    }
-    .history__photos__item{
-        &.history__photos__item-1{
-            max-width: 458px;
-        }
-        &.history__photos__item-2{
-            max-width: 442px;
-            & img{
-                max-width: 320px;
+        & .history__photos__item{
+            &.history__photos__item-1{
+                max-width: 458px;
+            }
+            &.history__photos__item-2{
+                max-width: 442px;
+                & img{
+                    max-width: 320px;
+                }
+            }
+            &.history__photos__item-3{
+                max-width: 639px;
+                margin-top: -330px;
+            }
+            &.history__photos__item-4{
+                max-width: 639px;
+                margin-top: -230px;
             }
         }
-        &.history__photos__item-3{
-            max-width: 639px;
-            margin-top: -330px;
-        }
     }
+    
 }
