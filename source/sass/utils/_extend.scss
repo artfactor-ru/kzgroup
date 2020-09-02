@@ -508,8 +508,8 @@
 		
 	}
 	&.pic__frame-1{
-		height: 55%;
-		width: 60%;
+		height: 75%;
+		width: 80%;
 	}
 	&.pic__frame-2{
 		height: 97%;
@@ -523,9 +523,20 @@
 		height: 90%;
 		width: 90%;
 	}
+	&.pic__frame-4{
+		height: 70%;
+		width: 70%;
+	}
+	&.pic__frame-5{
+		height: 80%;
+		width: 70%;
+	}
 	@media(min-width: 1280px){
 		top: -34px;
 		line-height: 38px;
+		&.pic__frame-3{
+			width: 87%;
+		}
 	}
 }
 
