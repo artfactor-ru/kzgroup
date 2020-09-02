@@ -114,11 +114,13 @@
 }
 .contact-block__icon{
     display: none;
+    
     @media(min-width: 768px){
         display: block;
         width: 18px;
         height: 18px;
         padding-right: 25px;
+        flex-shrink: 0;
         
     }
     @media(min-width: 1280px){

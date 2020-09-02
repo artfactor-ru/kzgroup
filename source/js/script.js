@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 function headerShowAndHideDesktop() {
 	let traktorsContainer = document.querySelector('.traktors__container');
-	
+	let museumContainer = document.querySelector('.museum-zal__wrap');
 	
 		// if(videoMain){
 		
@@ -169,6 +169,18 @@ function headerShowAndHideDesktop() {
 			header.classList.add('js-scroll-hide');
 			
 		}else if(getCoords(header).top < getCoords(traktorsContainer).top || getCoords(header).bottom > getCoords(traktorsContainer).bottom){
+			header.classList.remove('js-hide');
+			header.classList.remove('js-scroll-hide');
+		}
+	}
+
+
+	if(museumContainer){
+		if(getCoords(header).bottom +120 > getCoords(museumContainer).top && getCoords(header).bottom < getCoords(museumContainer).bottom){
+			header.classList.add('js-hide');
+			header.classList.add('js-scroll-hide');
+			
+		}else if(getCoords(header).bottom  < getCoords(museumContainer).top || getCoords(header).bottom  > getCoords(museumContainer).bottom){
 			header.classList.remove('js-hide');
 			header.classList.remove('js-scroll-hide');
 		}
@@ -225,6 +237,24 @@ ScrollTrigger.scrollerProxy(document.body, {
   }
 });
 
+// Инициализация плавных скроллов на странице
+let popupWrap = document.querySelectorAll('.scroll-popup');
+for(let i=0; i<popupWrap.length; i++){
+	let scrollbarPopup = ScrollbarSmoth.init(popupWrap[i], options2);
+	scrollbarPopup.addListener(ScrollTrigger.update);
+}
+let containerNavScroll = document.querySelector('.nav_list-wrap');
+let scrollbarNav;
+if(containerNavScroll){
+	scrollbarNav = ScrollbarSmoth.init(containerNavScroll, options3);
+	scrollbarNav.addListener(ScrollTrigger.update);
+}
+
+let containerTabsScroll = document.querySelector('.tabs-common');
+let scrollbarTabs;
+if(containerTabsScroll){
+	scrollbarTabs = ScrollbarSmoth.init(containerTabsScroll, options3);
+}
 
 
 
@@ -293,7 +323,9 @@ let scrollbar;
 		
 
 			// Года на тракторе
-			showAndHideYearNav()
+			showAndHideYearNav('.traktors__container', '.traktors__nav', '.traktors', '.traktors__nav-link.active',  '.traktors__nav-link');
+
+			showAndHideYearNav('.museum-zal__wrap', '.museum-nav', '.museum-zal', '.museum-nav__link.active',  '.museum-nav__link');
 		
 
 			// Взаимодействие с шапкой
@@ -315,108 +347,8 @@ let scrollbar;
 		
 	}
 
-// Инициализация плавных скроллов на странице
-let popupWrap = document.querySelectorAll('.scroll-popup');
-for(let i=0; i<popupWrap.length; i++){
-	let scrollbarPopup = ScrollbarSmoth.init(popupWrap[i], options2);
-	scrollbarPopup.addListener(ScrollTrigger.update);
-}
-let containerNavScroll = document.querySelector('.nav_list-wrap');
-let scrollbarNav;
-if(containerNavScroll){
-	scrollbarNav = ScrollbarSmoth.init(containerNavScroll, options3);
-	scrollbarNav.addListener(ScrollTrigger.update);
-}
-
-let containerTabsScroll = document.querySelector('.tabs-common');
-let scrollbarTabs;
-if(containerTabsScroll){
-	scrollbarTabs = ScrollbarSmoth.init(containerTabsScroll, options3);
-}
-
-//Кастомный select и option
-if(document.querySelector('.vac-f__form-selector')) {
-	$('.select').each(function() {
-		const _this = $(this),
-			selectOption = _this.find('option'),
-			selectOptionLength = selectOption.length,
-			selectedOption = selectOption.filter(':selected'),
-			duration = 450; // длительность анимации
-
-		_this.hide();
-		_this.wrap('<div class="select"></div>');
-		$('<div>', {
-			class: 'new-select',
-			text: _this.children('option:disabled').text()
-		}).insertAfter(_this);
-
-		const selectHead = _this.next('.new-select');
-		$('<div>', {
-			class: 'new-select__list'
-		}).insertAfter(selectHead);
-
-		const selectList = selectHead.next('.new-select__list');
-		for (let i = 1; i < selectOptionLength; i++) {
-			$('<div>', {
-				class: 'new-select__item',
-				html: $('<span>', {
-					text: selectOption.eq(i).text()
-				})
-			})
-				.attr('data-value', selectOption.eq(i).val())
-				.appendTo(selectList);
-		}
-
-		const selectItem = selectList.find('.new-select__item');
-		selectList.slideUp(0);
-		selectHead.on('click', function() {
-			if ( !$(this).hasClass('on') ) {
-				$(this).addClass('on');
-				selectList.slideDown(duration);
-
-				selectItem.on('click', function() {
-					let chooseItem = $(this).data('value');
-
-					$('select').val(chooseItem).attr('selected', 'selected');
-					selectHead.text( $(this).find('span').text() );
-
-					selectList.slideUp(duration);
-					selectHead.removeClass('on');
-				});
-
-			} else {
-				$(this).removeClass('on');
-				selectList.slideUp(duration);
-			}
-		});
-	});
-}
 
 
-//вызов формы на детальной страницы аренды помещений
-if(document.querySelector('.rent-details__form-wrapper')) {
-    let vacanciesForm = document.querySelector('.vacancies-d__form-wrapper');
-    let vacanciesClose = document.querySelector('.vacancies-d__form-close');
-    let vacanciesBtnResponse = document.querySelector('.rent-details__button');
-    vacanciesBtnResponse.addEventListener('click', function () {
-        vacanciesForm.style.display = 'block';
-    });
-    vacanciesClose.addEventListener('click', function () {
-        vacanciesForm.style.display = 'none';
-    });
-}
-//вызов формы на детальной страницы вакансий
-if(document.querySelector('.vacancies-d__form-container')) {
-	let vacanciesForm = document.querySelector('.vacancies-d__form-wrapper');
-	let vacanciesClose = document.querySelector('.vacancies-d__form-close');
-	let vacanciesBtnResponse = document.querySelector('.vacancies-d__response-btn');
-	vacanciesBtnResponse.addEventListener('click', function () {
-		vacanciesForm.style.display = 'block';
-	});
-	vacanciesClose.addEventListener('click', function () {
-		vacanciesForm.style.display = 'none';
-	});
-}
 
 //slider rent detail page
 if(document.querySelector('.rent-details__slider')){
@@ -908,22 +840,29 @@ if(document.querySelector('.rent-details__slider')){
 			});
 		}
 		if(document.querySelector('.swiper-container--gallery')){
-			swiperGallery = new Swiper('.swiper-container--gallery',{
-				slidesPerView: 'auto',
-				spaceBetween: 22,
-				// loop:true,
-				grabCursor: true,
-				scrollbar: {
-					el: '.swiper-scrollbar--gallery',
-				},
-				breakpoints: {
-					1280: {
-					spaceBetween: 15,
-					
+
+			let gallerySlider = document.querySelectorAll('.swiper-container--gallery');
+		
+			for(let i = 0; i<gallerySlider.length; i++){
+				let galleryScroll = gallerySlider[i].querySelector('.swiper-scrollbar--gallery');
+				swiperGallery = new Swiper(gallerySlider[i],{
+					slidesPerView: 'auto',
+					spaceBetween: 22,
+					// loop:true,
+					grabCursor: true,
+					scrollbar: {
+						el: galleryScroll,
 					},
+					breakpoints: {
+						1280: {
+						spaceBetween: 15,
+						
+						},
+				
+					},
+				});
+			}
 			
-				},
-			});
 		}
 
 	
@@ -1064,9 +1003,9 @@ if(document.querySelector('.rent-details__slider')){
 
 
 // Плавный ссылки в годах
-	const makeNavLinksSmooth = ( ) => {
-		const navLinks = document.querySelectorAll( '.traktors__nav-link' );
-		const section  = document.querySelectorAll('.traktors');
+	const makeNavLinksSmooth = (sec, alllink) => {
+		const navLinks = document.querySelectorAll( alllink);
+		const section  = document.querySelectorAll(sec);
 		for ( let n = 0; n<navLinks.length; n++ ) {
 			// if ( navLinks.hasOwnProperty( n ) ) {
 				navLinks[ n ].addEventListener( 'click', e => {
@@ -1082,8 +1021,8 @@ if(document.querySelector('.rent-details__slider')){
 	}
 	
 // Наблюдение за ссылками при скролле
-	const spyScrolling = ( ) => {
-		const sections = document.querySelectorAll( '.traktors' );
+	const spyScrolling = (container, link) => {
+		const sections = document.querySelectorAll(container);
 	
 			const scrollPos = scrollbar.offset.y
 	
@@ -1092,7 +1031,9 @@ if(document.querySelector('.rent-details__slider')){
 				if ( sections.hasOwnProperty( s ) && getCoords(sections[ s ]).top-100  <= scrollPos ) {
 
 					const id = sections[ s ].id;
-					document.querySelector( '.traktors__nav-link.active' ).classList.remove( 'active' );
+					document.querySelector( link ).classList.remove( 'active' );
+
+
 					document.querySelector( `a[href*=${ id }]` ).classList.add( 'active' );
 
 				}
@@ -1101,31 +1042,44 @@ if(document.querySelector('.rent-details__slider')){
 
 
 	// Скрытие / открытие навигации по годам
-	function showAndHideYearNav() {
-		let yearNav = document.querySelector('.traktors__nav');
+	function showAndHideYearNav(showincontainer, nav, sectionToScroll, navLinkActive, navLink) {
+		let yearNav = document.querySelector(nav);
 		if(yearNav){
 			document.addEventListener('DOMContentLoaded', function(){
 				yearNav.style.opacity = "0";
+
+				yearNav.classList.add('hidden');
 			})
-			let containerNav = document.querySelector('.traktors__container');
+			let containerNav = document.querySelector(showincontainer);
 			let yearNavTopY = getCoords(yearNav).top;
 			let yearNavBottomY = getCoords(yearNav).bottom;		
 			let containerNavTopY = getCoords(containerNav).top;
 			let containerNavBottomY = getCoords(containerNav).bottom;
 	
-			if(yearNavTopY >= containerNavTopY && yearNavBottomY < containerNavBottomY){
+	
+
+			if(yearNavBottomY  > containerNavTopY && yearNavBottomY < containerNavBottomY){
 				yearNav.style.opacity = "1";
 				yearNav.style.pointerEvents = "auto";
 				yearNav.style.zIndex = "5";
-				spyScrolling( );
+
+				yearNav.classList.remove('hidden');
+				spyScrolling(sectionToScroll, navLinkActive);
+
+				console.log('Слайдер видно');
 		
-			}else if(yearNavTopY <= containerNavTopY || yearNavBottomY >= containerNavBottomY){
-				yearNav.style.opacity = "0";
+			}else if(yearNavBottomY < containerNavTopY || yearNavBottomY > containerNavBottomY){
+				yearNav.classList.add('hidden');
+				// yearNav.style.opacity = "0";
 				yearNav.style.pointerEvents = "none";
-				yearNav.style.zIndex = "-1";
+				// yearNav.style.zIndex = "-1";
+
+				
+
+				console.log('Слайдер опять стало невидно');
 			}
 			
-			makeNavLinksSmooth( );
+			makeNavLinksSmooth(sectionToScroll, navLink);
 
 		}
 	}
@@ -1207,7 +1161,7 @@ if(document.querySelector('.rent-details__slider')){
 	
 	// }
 
-// Анимация
+// Анимация и прелоадер
 	document.onreadystatechange = function () {
 	
 		if (document.readyState === "complete") {
@@ -1688,3 +1642,86 @@ let tabsEvent = document.getElementById('tabs_event');
 
 
 
+//Кастомный select и option
+if(document.querySelector('.vac-f__form-selector')) {
+	$('.select').each(function() {
+		const _this = $(this),
+			selectOption = _this.find('option'),
+			selectOptionLength = selectOption.length,
+			selectedOption = selectOption.filter(':selected'),
+			duration = 450; // длительность анимации
+
+		_this.hide();
+		_this.wrap('<div class="select"></div>');
+		$('<div>', {
+			class: 'new-select',
+			text: _this.children('option:disabled').text()
+		}).insertAfter(_this);
+
+		const selectHead = _this.next('.new-select');
+		$('<div>', {
+			class: 'new-select__list'
+		}).insertAfter(selectHead);
+
+		const selectList = selectHead.next('.new-select__list');
+		for (let i = 1; i < selectOptionLength; i++) {
+			$('<div>', {
+				class: 'new-select__item',
+				html: $('<span>', {
+					text: selectOption.eq(i).text()
+				})
+			})
+				.attr('data-value', selectOption.eq(i).val())
+				.appendTo(selectList);
+		}
+
+		const selectItem = selectList.find('.new-select__item');
+		selectList.slideUp(0);
+		selectHead.on('click', function() {
+			if ( !$(this).hasClass('on') ) {
+				$(this).addClass('on');
+				selectList.slideDown(duration);
+
+				selectItem.on('click', function() {
+					let chooseItem = $(this).data('value');
+
+					$('select').val(chooseItem).attr('selected', 'selected');
+					selectHead.text( $(this).find('span').text() );
+
+					selectList.slideUp(duration);
+					selectHead.removeClass('on');
+				});
+
+			} else {
+				$(this).removeClass('on');
+				selectList.slideUp(duration);
+			}
+		});
+	});
+}
+
+
+//вызов формы на детальной страницы аренды помещений
+if(document.querySelector('.rent-details__form-wrapper')) {
+    let vacanciesForm = document.querySelector('.vacancies-d__form-wrapper');
+    let vacanciesClose = document.querySelector('.vacancies-d__form-close');
+    let vacanciesBtnResponse = document.querySelector('.rent-details__button');
+    vacanciesBtnResponse.addEventListener('click', function () {
+        vacanciesForm.style.display = 'block';
+    });
+    vacanciesClose.addEventListener('click', function () {
+        vacanciesForm.style.display = 'none';
+    });
+}
+//вызов формы на детальной страницы вакансий
+if(document.querySelector('.vacancies-d__form-container')) {
+	let vacanciesForm = document.querySelector('.vacancies-d__form-wrapper');
+	let vacanciesClose = document.querySelector('.vacancies-d__form-close');
+	let vacanciesBtnResponse = document.querySelector('.vacancies-d__response-btn');
+	vacanciesBtnResponse.addEventListener('click', function () {
+		vacanciesForm.style.display = 'block';
+	});
+	vacanciesClose.addEventListener('click', function () {
+		vacanciesForm.style.display = 'none';
+	});
+}

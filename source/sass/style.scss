@@ -31,6 +31,7 @@
 @import 'common/block-text';
 
 @import 'common/contact-block';
+@import 'common/contact-block-more3';
 @import 'common/gallery';
 
 @import 'pages/main/frame';
@@ -97,13 +98,16 @@
 @import 'pages/press/press';
 
 
-@import 'common/preloader';
+
 
 
 @import 'pages/energy/energy-about';
 
 @import 'pages/ptz/clients';
 
+@import 'pages/museum/museum-nav';
+@import 'pages/museum/museum-section';
+@import 'pages/museum/museum-history';
 
 body{
 	margin: 0;
@@ -259,4 +263,8 @@ figure{
 }
 .swiper-slide{
 	will-change: transform, opacity;
+}
+
+.fancybox-caption__body{
+	font-family: $font-text-regular;
 }

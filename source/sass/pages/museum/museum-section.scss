@@ -1,0 +1,65 @@
+.museum-zal{
+    padding-top: 140px;
+    // padding-bottom: 70px;
+}
+
+.muzeum-zal__title{
+    @extend %block-title;
+    padding-bottom: 20px;
+}
+.muzeum-zal__desc{
+    @extend %block-text;
+    padding-bottom: 60px;
+}
+
+@media(min-width:768px){
+    .museum-zal{
+        padding-top: 120px;
+        // padding-bottom: 120px;
+    }
+    
+    .muzeum-zal__title{
+        width: 90%;
+        padding-bottom: 10px;
+    }
+    .muzeum-zal__desc{
+ 
+        padding-bottom: 50px;
+    }
+    
+}
+
+
+@media(min-width:1280px){
+    .museum-zal{
+        padding-top: 130px;
+        // padding-bottom: 120px;
+    }
+    
+    .muzeum-zal__title{
+        width: 75%;
+        padding-bottom: 20px;
+    }
+    .muzeum-zal__desc{
+ 
+        padding-bottom: 60px;
+    }
+    
+}
+
+@media(min-width:1680px){
+    .museum-zal{
+        padding-top: 120px;
+        // padding-bottom: 120px;
+    }
+    
+    .muzeum-zal__title{
+        width: 70%;
+        padding-bottom: 35px;
+    }
+    .muzeum-zal__desc{
+ 
+        padding-bottom: 100px;
+    }
+    
+}

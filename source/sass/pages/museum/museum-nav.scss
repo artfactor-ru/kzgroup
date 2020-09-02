@@ -1,0 +1,224 @@
+.museum-nav{
+    // padding-top: 20px;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+  
+    z-index: 2000;
+    transition: opacity 0.1s linear;
+    opacity: 0;
+    pointer-events: none;
+   
+   
+  
+}
+.museum-nav-wrap{
+    transition:  transform 0.2s ease 0.1s;
+    background-color: #fff;
+    transform: translateY(0%);
+    padding-bottom: 20px;
+}
+.museum-nav.hidden .museum-nav-wrap{
+    transform: translateY(-100%);
+}
+.museum-nav.hidden{
+    transition: opacity 0.1s linear;
+}
+
+.museum-nav .container{
+    display: flex;
+    flex-direction: column;
+}
+.museum-nav__title{
+    @extend %block-title;
+    padding-bottom: 15px;
+}
+.museum-nav__title br{
+    display: none;
+}
+.museum-nav__list{
+    @include list-destroy;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $red-color;
+}
+
+.museum-nav__link-number-wrap{
+    position: relative;
+}
+.museum-nav__link-number, .museum-nav__link-number-active{
+    font-family: $font-for-number-light;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 48px;
+    text-transform: uppercase;
+
+    color: rgba(139, 143, 152, 0.58);
+    position: relative;
+
+}
+.museum-nav__link-number-active{
+    color: $red-color;
+}
+.museum-nav__link-number-wrap-active{
+    top: 0;
+    position: absolute;
+    overflow: hidden;
+    // max-height: 0;
+    max-width: 0;
+    transition: all 0.7s ease;
+}
+.museum-nav__item:hover .museum-nav__link-number-wrap-active{
+    // max-width: 40px;
+    max-width: 100%;
+}
+ .active .museum-nav__link-number-wrap-active{
+    // max-width: 40px;
+    max-width: 100%;
+}
+.museum-nav__link-year{
+    display: none;
+}
+@media(min-width: 768px){
+  
+    .museum-nav-wrap{
+   
+        padding-bottom: 30px;
+    }
+    .museum-nav__title{
+        
+        padding-bottom: 20px;
+    }
+    .museum-nav__list{
+      
+        padding-bottom: 10px;
+        border-bottom: 3px solid $red-color;
+    }
+   
+    .museum-nav__link-number, .museum-nav__link-number-active{
+     
+        font-size: 48px;
+        line-height: 48px;
+  
+    }
+  
+    .museum-nav__link-year{
+        display: block;
+
+        font-family: $font-regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 12px;
+        /* or 11px */
+
+
+        color: #8B8F98;
+        position: relative;
+        bottom: 12px;
+
+        transition: all 0.7s ease;
+    } 
+    .museum-nav__link{
+        display: flex;
+        align-items: baseline;
+    }
+    .museum-nav__item:hover .museum-nav__link-year{
+        color: $red-color;
+    }
+    .active .museum-nav__link-year{
+        color: $red-color;
+    }
+}
+
+
+@media(min-width: 1280px){
+    .museum-nav-wrap{
+   
+        padding-bottom: 35px;
+    }
+    .museum-nav .container{
+        flex-direction: row;
+        align-items: flex-end;
+        
+        
+    }
+    .museum-nav__title{
+        
+        padding-bottom: 0px;
+        margin-right: 35px;
+        flex-shrink: 0;
+
+    }
+    .museum-nav__title br{
+        display: block;
+    }
+    .museum-nav__list{
+        flex-basis: 100%;
+        padding-bottom: 0px;
+        border-bottom: 3px solid $red-color;
+    }
+   
+    .museum-nav__link-number, .museum-nav__link-number-active{
+     
+        font-size: 90px;
+        line-height: 90px;
+  
+    }
+  
+    .museum-nav__link-year{
+       
+        font-size: 16px;
+        line-height: 16px;
+        /* or 11px */
+
+
+        color: #8B8F98;
+        position: relative;
+        bottom: 18px;
+
+        transition: all 0.7s ease;
+    } 
+    .museum-nav__link{
+        display: flex;
+        align-items: baseline;
+    }
+    .museum-nav__item:hover .museum-nav__link-year{
+        color: $red-color;
+    }
+}
+@media(min-width: 1680px){
+    .museum-nav-wrap{
+   
+        padding-bottom: 80px;
+    }
+   
+    .museum-nav__title{
+    
+        margin-right: 55px;
+    }
+ 
+   
+   
+    .museum-nav__link-number, .museum-nav__link-number-active{
+     
+        font-size: 120px;
+        line-height: 120px;
+  
+    }
+  
+    .museum-nav__link-year{
+       
+        font-size: 18px;
+        line-height: 18px;
+   
+        bottom: 18px;
+
+    } 
+
+}
