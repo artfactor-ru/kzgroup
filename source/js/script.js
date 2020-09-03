@@ -1804,3 +1804,5 @@ if(document.querySelector('.vacancies-d__form-container')) {
 		vacanciesForm.style.display = 'none';
 	});
 }
+
+

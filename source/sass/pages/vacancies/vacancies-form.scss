@@ -278,9 +278,21 @@
   transform: scale(1);
 }
 
+.rent-form__radio--style-none::before {
+  transform: scale(0) !important;
+}
+
+.jd-branch-basic {
+  display: none;
+}
+
+.jd-branch-style {
+  position: relative;
+}
+
 .vac-f__form-label textarea {
   width: 100%;
-  height: 81%;
+  height: 100%;
   padding: 14px;
   font-family: $font-text-regular;
   resize: none;
@@ -288,6 +300,11 @@
   background: #F6F6F6;
   box-sizing: border-box;
   border-radius: 3px;
+  font-size: 18px;
+}
+
+.vac-f__checkbox-custom {
+  margin-left: auto;
 }
 
 .vac-f__form-submit {
@@ -321,6 +338,10 @@
   }
   & a {
     color: #3C3D40;
+    transition: .4s;
+    &:hover {
+      opacity: 0.6;
+    }
   }
 }
 
