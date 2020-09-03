@@ -281,9 +281,110 @@
                 }
                 &.history__photos__item-4{
                     width: 40%;
-                    margin-right: 10%;
+                    margin-right: 5%;
                     margin-top: 70px;
                 }
+            }
+        }
+        &.history__photos-6{
+            margin-top: 0;
+            & .history__photos--container{
+                flex-direction: row;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            & .history__photos__item{
+                &:nth-child(even){
+                    max-width: 100%;
+                    width: 40%;
+                }
+                &.history__photos__item-1{
+                    order: 2;
+                    margin-bottom: 80px;
+                    max-width: 100%;
+                }
+                &.history__photos__item-2{
+                    margin-top: 0;
+                    margin-bottom: 0px;
+                    order: 1;
+                    align-self: flex-start;
+                }
+                &.history__photos__item-3{
+                    margin-top: 0px;
+                    order: 4;
+                    width: 39%;
+                }
+                &.history__photos__item-4{
+                    margin-top: 90px;
+                    order: 3;
+                    width: 30%;
+                    margin-left: 10%;
+                }
+            }
+        }
+        &.history__photos-7{
+            & .history__photos--container{
+                align-items: flex-end;
+            }
+            & .history__photos__item-1{
+                width: 41%;
+            }
+            & .history__photos__item-2{
+                align-self: flex-start;
+                margin-top: -100px;
+                width: 40%;
+            }
+            & .history__photos__item-3{
+                width: 31%;
+                margin-top: -40px;
+            }
+        }
+        &.history__photos-8{
+            & .history__photos--container{
+                align-items: flex-end;
+            }
+            & .history__photos__item:nth-child(even){
+                align-self: flex-start;
+            }
+            & .history__photos__item-1{
+                width: 41%;
+            }
+            & .history__photos__item-2{
+                align-self: flex-start;
+                margin-top: -100px;
+                width: 44%;
+            }
+            & .history__photos__item-3{
+                width: 31%;
+                margin-top: 0px;
+            }
+            & .history__photos__item-4{
+                width: 31%;
+                margin-top: -80px;
+            }
+        }
+        &.history__photos-9{
+            & .history__photos--container{
+                align-items: flex-end;
+            }
+            & .history__photos__item:nth-child(even){
+                align-self: flex-start;
+            }
+            & .history__photos__item-1{
+                width: 41%;
+            }
+            & .history__photos__item-2{
+                margin-top: -100px;
+                width: 35%;
+            }
+            & .history__photos__item-3{
+                width: 50%;
+                margin-top: -10px;
+            }
+            & .history__photos__item-4{
+                width: 40%;
+                margin-top: -80px;
             }
         }
     }
@@ -467,12 +568,13 @@
                     margin-right: 0;
                 }
                 &.history__photos__item-3{
-                    margin-top: -320px;
+                    margin-top: -290px;
                     width: 36%;
                 }
             }
         }
         &.history__photos-5{
+            margin-top: -110px;
             & .history__photos--container{
                 flex-direction: column;
                 align-items: flex-end;
@@ -480,24 +582,132 @@
             & .history__photos__item{
                 &.history__photos__item-1{
                     align-self: flex-end;
+                    order: 1;
                     & .history__photos__item-pic{
-                        width: 40%;
+                        width: 70%;
                     }
                 }
                 &.history__photos__item-2{
-                    align-self: flex-start;
-                    width: 45%;
-                    margin-top: 100px;
+                    order: 2;
+                    max-width: 100%;
+                    margin-right: 0;
+                    margin-top: 120px;
+                    & img{
+                        max-width: 100%;
+                    }
                 }
                 &.history__photos__item-3{
-                    margin-top: -290px;
-                    width: 40%;
+                    width: 36%;
+                    margin-top: -390px;
                 }
                 &.history__photos__item-4{
-                    width: 40%;
-                    margin-right: 10%;
-                    margin-top: 70px;
+                    margin-top: 100px;
                 }
+            }
+        }
+        &.history__photos-6{
+            margin-top: 0;
+            & .history__photos--container{
+                flex-direction: row;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            & .history__photos__item{
+                &:nth-child(even){
+                    max-width: 100%;
+                    width: 40%;
+                }
+                &.history__photos__item-2{
+                    & img{
+                        max-width: 100%;
+                    }
+                }
+                &.history__photos__item-3{
+                    margin-top: 0px;
+                    order: 4;
+                }
+                &.history__photos__item-4{
+                    margin-top: 90px;
+                    order: 3;
+                    width: 30%;
+                    margin-left: 10%;
+                }
+            }
+        }
+        &.history__photos-7{
+            margin-top: -60px;
+            & .history__photos__item-1{
+                order: 1;
+                align-self: flex-end;
+                max-width: 100%;
+                width: 38%;
+            }
+            & .history__photos__item-2{
+                order: 2;
+                margin-right: 0;
+                max-width: 100%;
+                & img{
+                    max-width: 100%;
+                }
+            }
+            & .history__photos__item-3{
+                width: 31%;
+                margin-top: -120px;
+            }
+        }
+        &.history__photos-8{
+            margin-top: -50px;
+            & .history__photos__item-1{
+                order: 1;
+                align-self: flex-end;
+                max-width: 100%;
+                width: 39%;
+            }
+            & .history__photos__item-2{
+                order: 2;
+                max-width: 100%;
+                margin-top: -150px;
+                & img{
+                    max-width: 100%;
+                }
+            }
+            & .history__photos__item-3{
+                order: 3;
+                margin-top: -80px;
+            }
+            & .history__photos__item-4{
+                order: 4;
+                width: 35%;
+            }
+        }
+        &.history__photos-9{
+            margin-top: -330px;
+            & .history__photos__item-1{
+                align-self: flex-end;
+                order: 1;
+                margin-top: 0;
+                max-width: 100%;
+                width: 35%;
+            }
+            & .history__photos__item-2{
+                order: 2;
+                margin-top: 100px;
+                margin-right: 0;
+                max-width: 100%;
+                width: 38%;
+                & img{
+                    max-width: 100%;
+                }
+            }
+            & .history__photos__item-3{
+                margin-top: -160px;
+                max-width: 100%;
+            }
+            & .history__photos__item-4{
+                width: 41%;
+                margin-top: 0px;
+                max-width: 100%;
             }
         }
     }
@@ -570,6 +780,71 @@
                 }
             }
         }
+        &.history__photos-5{
+            margin-top: -140px;
+            & .history__photos__item{
+                &.history__photos__item-3{
+                    margin-top: -470px;
+                }
+            }
+        }
+        &.history__photos-7{
+            & .history__photos__item-1{
+                max-width: 100%;
+                & img{
+                    max-width: 100%;
+                }
+            }
+            & .history__photos__item-2{
+                max-width: 100%;
+                margin-top: -150px;
+                & img{
+                    max-width: 100%;
+                }
+            }
+            & .history__photos__item-3{
+                margin-top: -180px;
+            }
+        }
+        &.history__photos-8{
+            & .history__photos__item-1{
+                max-width: 100%;
+            }
+            & .history__photos__item-2{
+                max-width: 100%;
+                & img{
+                    max-width: 100%;
+                }
+            }
+            & .history__photos__item-3{
+                margin-top: -80px;
+            }
+            & .history__photos__item-4{
+                max-width: 100%;
+                width: 35%;
+                margin-top: -130px;
+            }
+        }
+        &.history__photos-9{
+            margin-top: -430px;
+            & .history__photos__item-1{
+                max-width: 100%;
+                width: 40%;
+            }
+            & .history__photos__item-2{
+                max-width: 100%;
+                & img{
+                    max-width: 100%;
+                }
+            }
+            & .history__photos__item-3{
+                max-width: 100%;
+                margin-top: -280px;
+            }
+            & .history__photos__item-4{
+                max-width: 100%;
+                margin-top: 0;
+            }
+        }
     }
-    
 }
