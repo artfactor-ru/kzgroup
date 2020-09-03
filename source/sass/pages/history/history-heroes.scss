@@ -79,10 +79,11 @@
     .history_heroes--subtitle{
         font-size: 26px;
         line-height: 30px;
+        margin-bottom: px;
     }
     .history_heroes--list-item{
-        width: 23.5%;
-        margin-right: 2%;
+        width: 22%;
+        margin-right: 5%;
         &:nth-child(2n){
             margin-right: 2%;
         }

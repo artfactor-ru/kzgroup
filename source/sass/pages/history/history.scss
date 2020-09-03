@@ -134,6 +134,8 @@
     }
     .history__entry--text-title{
         font-size: 30px;
+        letter-spacing: 0;
+        padding-left: 0;
         & span{
             padding: 5px 8px 8px;
         }
@@ -154,12 +156,12 @@
             }
             &.history__photos__item-2{
                 align-self: flex-end;
-                margin-top: -220px;
-                width: 29%;
+                margin-top: -204px;
+                width: 40%;
             }
             &.history__photos__item-3{
-                margin-top: -65px;
-                width: 43%;
+                margin-top: -5px;
+                width: 48%;
             }
             &.history__photos__item-4{
                 margin-top: -65px;
@@ -169,7 +171,7 @@
         &.history__photos-1{
             & .history__photos__item-2{
                 & .history__photos__item-pic{
-                    padding-right: 30px;
+                    padding-right: 55px;
                 }
             }
         }
@@ -188,11 +190,14 @@
                     margin-top: 0;
                     margin-bottom: 100px;
                     & .history__photos__item-pic{
-                        padding-right: 80px;
+                        padding-right: 55px;
                     }
                 }
+                &.history__photos__item-3{
+                    margin-top: -66px;
+                }
                 &.history__photos__item-4{
-                    margin-top: 0px;
+                    margin-top: 50px;
                     width: 49%;
                     max-width: inherit;
                 }
