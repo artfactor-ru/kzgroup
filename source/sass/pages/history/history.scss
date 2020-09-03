@@ -53,14 +53,17 @@
 .history__entry--text-title{
     font-family: $font-bold-2-title;
     color: #000;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
     font-size: 19px;
-    line-height: 1.2;
+    line-height: 1.25;
+    letter-spacing: 2.2px;
+    padding-left: 7px;
     & span{
         background-color: $accent-text-bg-color;
         display: inline-block;
         color: #fff;
-        padding: 0px 8px 3px 8px;
+        padding: 0px 12px 3px;
+        margin-left: -13px;
     }
 }
 
@@ -86,6 +89,7 @@
 
 .history__photos__item{
     margin-bottom: 70px;
+    width: 68%;
     &.history__photos__item-1{
         // max-width: 341px;
     }
@@ -770,6 +774,20 @@
                 }
                 &.history__photos__item-5{
                     margin-top: -90px;
+                }
+            }
+        }
+        &.history__photos-3{
+            margin-top: -120px;
+            
+            & .history__photos__item{
+                &.history__photos__item-1{
+                    margin-top: 0px;
+                    max-width: 100%;
+                }
+                &.history__photos__item-2{
+                    margin-top: -100px;
+                    max-width: 100%;
                 }
             }
         }
