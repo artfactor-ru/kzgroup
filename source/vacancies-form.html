@@ -399,13 +399,18 @@
                                 <label class="vac-f__form-label">
                                     <span>Фамилия</span>
                                     <div class="vac-f__input-container">
-                                        <input class="vac-f__second-name" type="text" placeholder="Петров">
+                                        <input onkeyup="this.value = this.value.replace(/[0-9]/i, '')" class="vac-f__second-name" type="text" placeholder="Петров">
                                     </div>
                                 </label>
                                 <label class="vac-f__form-label">
                                     <span>Имя</span>
                                     <div class="vac-f__input-container">
-                                        <input name="input-name" type="text" placeholder="Андрей" class="form-name-input" id="form-name-input">
+                                        <input  name="input-name"
+                                                onkeyup="this.value = this.value.replace(/[0-9]/i, '')"
+                                                type="text"
+                                                placeholder="Андрей"
+                                                class="form-name-input"
+                                                id="form-name-input">
                                     </div>
                                 </label>
                                 <label class="vac-f__form-label">
@@ -629,11 +634,63 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js"></script>
 <script>
+    let customSelectFunc = function () {
+        $('.select').each(function() {
+            const _this = $(this),
+                selectOption = _this.find('option'),
+                selectOptionLength = selectOption.length,
+                selectedOption = selectOption.filter(':selected'),
+                duration = 450; // длительность анимации
 
-    let submitButton = $('.vac-f__form-submit');
+            _this.hide();
+            _this.wrap('<div class="select"></div>');
+            $('<div>', {
+                class: 'new-select',
+                text: _this.children('option:disabled').text()
+            }).insertAfter(_this);
 
-    let vacForm = document.querySelector("#vac-form");
+            const selectHead = _this.next('.new-select');
+            $('<div>', {
+                class: 'new-select__list'
+            }).insertAfter(selectHead);
 
+            const selectList = selectHead.next('.new-select__list');
+            for (let i = 1; i < selectOptionLength; i++) {
+                $('<div>', {
+                    class: 'new-select__item',
+                    html: $('<span>', {
+                        text: selectOption.eq(i).text()
+                    })
+                })
+                    .attr('data-value', selectOption.eq(i).val())
+                    .appendTo(selectList);
+            }
+
+            const selectItem = selectList.find('.new-select__item');
+            selectList.slideUp(0);
+            selectHead.on('click', function() {
+                if ( !$(this).hasClass('on') ) {
+                    $(this).addClass('on');
+                    selectList.slideDown(duration);
+
+                    selectItem.on('click', function() {
+                        let chooseItem = $(this).data('value');
+
+                        $('select').val(chooseItem).attr('selected', 'selected');
+                        selectHead.text( $(this).find('span').text() );
+
+                        selectList.slideUp(duration);
+                        selectHead.removeClass('on');
+                    });
+
+                } else {
+                    $(this).removeClass('on');
+                    selectList.slideUp(duration);
+                }
+            });
+        });
+    };
+    //form validate
     $(document).ready(function () {
         let validName = false;
         let validSecName = false;
@@ -703,20 +760,10 @@
     });
 
     $('.vac-f__form-education-btn').on('click', function () {
-
-       let copy = $('#education-block').clone();-
+        customSelectFunc();
+        let copy = $('#education-block').clone();-
        copy.appendTo('.more-education');
     });
-
-
-    // function validate() {
-    //     let userName = document.getElementById("form-name-input");
-    //     if(!userName.value) {
-    //         userName.style.border = "2px solid red";
-    //         return false;
-    //     }
-    //     return true;
-    // }
 
     $('.input-phone-field').inputmask("+7 (999)999-99-99");
     // добавляем правило для валидации телефона
@@ -733,9 +780,6 @@
             checkMaskPhone: true,
         }
     });
-
-
-
 
 </script>
 </body>

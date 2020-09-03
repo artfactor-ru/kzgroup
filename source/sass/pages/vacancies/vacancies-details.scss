@@ -346,6 +346,28 @@
   }
 }
 
+@media screen and (max-width: 1366px) {
+  .vacancies-d__form {
+    height: 530px;
+    width: 860px;
+  }
+  .vacancies-d__form-label textarea {
+    height: 80px;
+  }
+  .vacancies-d__form-label input, .vacancies-d__form-label textarea {
+    width: 433px;
+  }
+  .vacancies-d__form-buttons--block:first-child {
+    margin-bottom: 10px;
+  }
+  .vacancies-d__submit {
+    margin-right: 20px;
+  }
+  .vacancies-d__form-label {
+    margin-bottom: 20px;
+  }
+}
+
 @media screen and (max-width: 1281px) {
   .vacancies-d__hero {
     padding: 90px 0;

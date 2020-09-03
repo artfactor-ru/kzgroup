@@ -362,6 +362,16 @@
   }
 }
 
+@media screen and (max-width: 1366px) {
+  .vac-f__nav-item__circle {
+    margin-right: 15px !important;
+  }
+  .vac-f__nav-item a {
+    font-size: 14px;
+  }
+
+}
+
 @media screen and (max-width: 1281px) {
   .vac-f__form-label span {
     max-width: 110px;

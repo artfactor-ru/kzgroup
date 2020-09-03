@@ -395,7 +395,11 @@
                             <label class="vac-f__form-label rent-form__main-label">
                                 <span>Имя/Компания</span>
                                 <div class="vac-f__input-container">
-                                    <input name="fname" type="text" placeholder="Андрей" id="validation-name" required>
+                                    <input name="name"
+                                           onkeyup="this.value = this.value.replace(/[0-9]/i, '')"
+                                           type="text"
+                                           placeholder="Андрей"
+                                           class="rent-form-name">
                                 </div>
                             </label>
                             <label class="vac-f__form-label rent-form__main-label">
@@ -612,16 +616,53 @@
         })
     });
 
-    let rentForm = document.querySelector('.rent-form__main-form');
-    let submitForm = rentForm.querySelector('.rent-form__submit');
-    submitForm.addEventListener('click', function () {
-        console.log('wewew');
-    });
 
-    rentForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        console.log('clicked validate');
-    })
+    $(document).ready(function () {
+        let validName = false;
+        let validPhone = false;
+        $('.rent-form__main-form').submit(function (event) {
+            event.preventDefault();
+
+            let name = $('.rent-form-name');
+            let number = $('.rent-details-number');
+
+            if (number.val() === "") {
+                number.css('border' , '1px solid #C30215');
+                if (number.next().is('.form-invalid-error') === false) {
+                    $("<div class='form-invalid-error'>обязательное поле<div/>").insertAfter($(number));
+                    $('html, body').animate({ scrollTop: $(".rent-details-number").offset().top - 70 }, 500);
+                    validPhone = false;
+                } else if (number.next().is('.form-invalid-error') === true && number.val() === "") {
+                    $('html, body').animate({ scrollTop: $(".rent-details-number").offset().top - 70 }, 500);
+                }
+            } else {
+                number.next('.form-invalid-error').remove();
+                number.css('border' , '1px solid #dce0e3');
+                validPhone = true;
+            }
+
+            if (name.val() === "") {
+                name.css('border' , '1px solid #C30215');
+                if (name.next().is('.form-invalid-error') === false) {
+                    $("<div class='form-invalid-error'>обязательное поле<div/>").insertAfter($(name));
+                    $('html, body').animate({ scrollTop: $(".rent-form-name").offset().top - 70 }, 300);
+                    validName = false;
+                } else if (name.next().is('.form-invalid-error') === true && name.val() === "") {
+                    $('html, body').animate({ scrollTop: $(".rent-form-name").offset().top - 70 }, 300);
+                }
+            } else {
+                name.next('.form-invalid-error').remove();
+                name.css('border' , '1px solid #dce0e3');
+                validName = true;
+            }
+
+
+
+            if(validName === true  && validPhone === true) {
+                $(".rent-form__main-form").unbind('submit').submit();
+            }
+        })
+    });
 
     $('.rent-details-number').inputmask("+7 (999) 999-99-99");
     // добавляем правило для валидации телефона
