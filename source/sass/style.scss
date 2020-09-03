@@ -5,6 +5,7 @@
 
 
 @import 'libs/swiperbundle';
+@import 'libs/fancybox';
 
 @import 'common/social-btn';
 
@@ -14,10 +15,23 @@
 
 @import 'common/nav2';
 @import 'common/about';
+@import 'common/hero-section';
 @import 'common/main';
 
 
 @import 'common/news';
+
+
+@import 'common/tabs';
+@import 'common/pagination';
+@import 'common/custom-select';
+
+@import 'common/video-block';
+
+@import 'common/block-text';
+
+@import 'common/contact-block';
+@import 'common/gallery';
 
 @import 'pages/main/frame';
 
@@ -26,6 +40,9 @@
 @import 'pages/kirovets/about-kirovets';
 @import 'pages/main/about-main';
 @import 'pages/about/about-strategy';
+@import 'pages/about/about-aboutcompany';
+
+@import 'pages/leadership/leadership';
 
 
 @import 'pages/kirovets/advant';
@@ -51,6 +68,7 @@
 @import 'pages/about/property';
 @import 'pages/about/social-eco';
 
+@import 'pages/history/history';
 
 @import 'pages/company_group/_company-group';
 
@@ -59,10 +77,7 @@
 @import 'pages/actioners/actioners';
 
 @import 'pages/rent/card';
-@import 'pages/rent/main';
-@import 'pages/rent/pagination';
-@import 'pages/rent/navigation';
-@import 'pages/rent/header';
+
 
 
 @import 'pages/rent_noinfo/main';
@@ -71,7 +86,32 @@
 
 
 
+@import 'pages/vacancies/vacancies';
+@import 'pages/vacancies/vacancies-details';
+@import 'pages/vacancies/vacancies-form';
 
+
+@import 'pages/rent-details/rent-details';
+@import 'pages/rent-details/rent-form';
+
+@import 'pages/press/press';
+@import 'pages/press/press-about-us';
+@import 'pages/press/press-contacts';
+@import 'pages/press/press-gallery';
+@import 'pages/press/press-news';
+@import 'pages/press/press-photogallery-in';
+@import 'pages/press/press-search';
+@import 'pages/press/press-videogallery-in';
+@import 'pages/press/press-videogallery';
+@import 'pages/press/press-news-in';
+
+
+@import 'common/preloader';
+
+
+@import 'pages/energy/energy-about';
+
+@import 'pages/ptz/clients';
 
 
 body{
@@ -80,13 +120,17 @@ body{
 	min-width: 320px;
 	background-color: #ffffff;
 	
+	
 }
+
+
 .scroll{
 	width: 100vw;
 
 	height: 100vh; /* Fallback for browsers that do not support Custom Properties */
   height: calc(var(--vh, 1vh) * 100);
 	-webkit-overflow-scrolling: touch;
+	will-change: transform;
 }
 .scrollbar-track{
 	z-index: 11000 !important;
@@ -140,6 +184,7 @@ figure{
 	padding-left: 4%;
 	padding-right: 4%;
 	box-sizing: border-box;
+	height: 100%;
 	// box-sizing: border-box;
 }
 
@@ -190,20 +235,37 @@ figure{
 	position: relative;
 	overflow: hidden;
 }
+.parallax__item--slide{
+	position: relative;
+	overflow: hidden;
+}
 
 .parallax__img-wrap{
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	will-change: transform;
+	
 	// perspective: 1000px;
 	
 }
 
 .parallax__img{
-	// position: absolute;
+	position: absolute;
 
 	width: 100%;
 	height: 100%;
+	will-change: transform;
+}
+.parallax__img--slide{
+	width: 100%;
+	height: 100%;
+	will-change: transform;
+	// position: absolute;
 }
 
+.swiper-wrapper{
+	will-change: transform;
+}
+.swiper-slide{
+	will-change: transform, opacity;
+}
