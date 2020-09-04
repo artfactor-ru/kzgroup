@@ -101,7 +101,6 @@
     transition: .3s;
     margin-bottom: 8px;
     &:hover {
-      text-decoration: underline;
       opacity: 0.5;
     }
   }
@@ -248,7 +247,7 @@
 .rent-details__form {
   font-family: $font-text-regular;
   width: 1100px;
-  min-height: 700px;
+  height: 650px;
   background-color: #fff;
   position: fixed;
   top: 50%;
@@ -272,13 +271,17 @@
   }
 }
 
-@media screen and (max-width: 1361px) {
+@media screen and (max-width: 1366px) {
+  .rent-details__form-label textarea {
+    height: 80px;
+  }
   .rent-details {
     padding: 90px 0 65px 0;
   }
   .rent-details__form {
-    width: 900px;
-    min-height: 500px;
+    width: 770px;
+    min-height: unset;
+    height: 490px;
   }
   .rent-details__title {
     font-size: 36px;
@@ -286,9 +289,17 @@
     margin-top: 43px;
     margin-bottom: 15px;
   }
+  .rent-details__form-submit {
+    padding: 13px 63px;
+  }
+  .rent-details__license {
+    width: 100%;
+    font-size: 13px;
+    margin-left: 15px;
+  }
   .rent-details__form-wrapper h2 {
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 25px;
+    line-height: 30px;
     margin-bottom: 20px;
   }
   .rent-details__form-fields {
@@ -298,16 +309,20 @@
     font-size: 16px;
     margin-bottom: 20px;
     & input {
-      height: 50px;
+      height: 40px;
+      width: 425px;
     }
-    & label {
-      height: 120px;
+    & textarea {
+      width: 425px;
     }
   }
   .rent-details__form-buttons {
     display: flex;
     flex-direction: row;
-    padding-left: 285px;
+    padding-left: 269px;
+  }
+  .vacancies-d__form-close {
+    top: 6%;
   }
     .rent-details__desc-title {
     font-size: 20px;
@@ -390,6 +405,20 @@
     top: -8%;
   }
 
+}
+
+
+.form-invalid-error {
+  color: #C30215;
+  font-size: 14px;
+  font-family: $font-text-regular;
+  padding-top: 5px;
+}
+
+@media screen and (max-width: 801px) {
+  .rent-details__form {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 769px) {

@@ -137,17 +137,6 @@
     width: 28%;
   }
 }
-
-@media screen and (max-width: 1441px) {
-  .vacancies_vacancy-desc {
-    font-size: 20px;
-  }
-}
-@media screen and (max-width: 1367px) {
-  .vacancies_vacancy-desc, .vacancies_vacancy-desc h5 {
-    font-size: 20px;
-  }
-}
 @media screen and (max-width: 1680px) {
   .vacancies_vacancy-desc {
     padding: 50px 0;
@@ -168,6 +157,18 @@
   }
   .vacancies-hero__title {
     margin: 0;
+  }
+}
+
+
+@media screen and (max-width: 1441px) {
+  .vacancies_vacancy-desc {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1367px) {
+  .vacancies_vacancy-desc, .vacancies_vacancy-desc h5 {
+    font-size: 20px;
   }
 }
 

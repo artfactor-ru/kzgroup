@@ -1735,6 +1735,9 @@ let tabsEvent = document.getElementById('tabs_event');
 
 
 //Кастомный select и option
+
+
+
 if(document.querySelector('.vac-f__form-selector')) {
 	$('.select').each(function() {
 		const _this = $(this),
@@ -1793,6 +1796,8 @@ if(document.querySelector('.vac-f__form-selector')) {
 }
 
 
+
+
 //вызов формы на детальной страницы аренды помещений
 if(document.querySelector('.rent-details__form-wrapper')) {
     let vacanciesForm = document.querySelector('.vacancies-d__form-wrapper');
@@ -1817,3 +1822,5 @@ if(document.querySelector('.vacancies-d__form-container')) {
 		vacanciesForm.style.display = 'none';
 	});
 }
+
+
