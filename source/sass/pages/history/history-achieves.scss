@@ -1,7 +1,17 @@
 .history_achieves{
-    padding: 50px 0;
+    padding: 50px 0 35px;
     & .history__entry--text-title{
         font-size: 22px;
+    }
+    & .history__entry--text-title{
+        letter-spacing: 0;
+    }
+    & 
+    & .history__entry--text{
+        margin-bottom: 30px;
+    }
+    & .history__entry--text-subtitle{
+        margin-bottom: 30px;
     }
 }
 
@@ -40,7 +50,7 @@
     justify-content: center;
     & img{
         display: inline-block;
-        max-width: 116px;
+        max-width: 90px;
     }
 }
 
@@ -52,7 +62,17 @@
 
 @media(min-width: 767px){
     .history_achieves{
-        padding: 80px 0 30px;
+        padding: 80px 0;
+        & .history__entry--text{
+            margin-bottom: 60px;
+        }
+        & .history__entry--text-title{
+            font-size: 30px;
+            margin-bottom: 23px;
+        }
+        & .history_achieves--text-subtitle{
+            margin-bottom: 40px;
+        }
     }
     .history_achieves--list{
         flex-wrap: wrap;
@@ -60,12 +80,19 @@
     }
     .history_achieves--list-item{
         width: 25%;
-        margin-bottom: 50px;
+        margin-bottom: 0px;
     }
     .history_achieves--text-subtitle{
         font-size: 26px;
         line-height: 30px;
         margin-bottom: 75px;
+    }
+    .history_achieves--list-item-pic{
+        margin-bottom: 0;
+        & img{
+            display: inline-block;
+            max-width: 100px;
+        }
     }
 }
 
