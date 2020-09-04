@@ -622,10 +622,8 @@
         let validPhone = false;
         $('.rent-form__main-form').submit(function (event) {
             event.preventDefault();
-
             let name = $('.rent-form-name');
             let number = $('.rent-details-number');
-
             if (number.val() === "") {
                 number.css('border' , '1px solid #C30215');
                 if (number.next().is('.form-invalid-error') === false) {
@@ -640,7 +638,6 @@
                 number.css('border' , '1px solid #dce0e3');
                 validPhone = true;
             }
-
             if (name.val() === "") {
                 name.css('border' , '1px solid #C30215');
                 if (name.next().is('.form-invalid-error') === false) {
@@ -655,9 +652,6 @@
                 name.css('border' , '1px solid #dce0e3');
                 validName = true;
             }
-
-
-
             if(validName === true  && validPhone === true) {
                 $(".rent-form__main-form").unbind('submit').submit();
             }

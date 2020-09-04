@@ -100,6 +100,7 @@
   margin-left: 50px;
   transition: .8s;
   padding-bottom: 12px;
+  outline: none;
 }
 
 .vacancies-d__download:before {
@@ -214,6 +215,14 @@
       padding-top: 10px;
     }
   }
+}
+
+
+.vac-d-form__input-container {
+  width: 468px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 .vacancies-d__submit {
@@ -347,6 +356,9 @@
 }
 
 @media screen and (max-width: 1366px) {
+  .vac-d-form__input-container {
+    width: 433px;
+  }
   .vacancies-d__form {
     height: 530px;
     width: 860px;
@@ -444,6 +456,9 @@
 }
 
 @media screen and (max-width: 801px) {
+  .vac-d-form__input-container {
+    width: 425px;
+  }
   .vacancies-d__response {
     padding: 20px 50px;
   }
@@ -469,7 +484,7 @@
     width: 425px;
   }
   .vacancies-d__form-buttons {
-    padding-left: 181px;
+    padding-left: 193px;
     padding-right: 32px;
   }
   .vacancies-d__form h2 {
@@ -561,9 +576,18 @@
   .vacancies-d__form-label input, .vacancies-d__form-label textarea {
     width: 390px;
   }
+  .vac-d-form__input-container {
+    width: 390px;
+  }
+  .vacancies-d__form-buttons {
+    padding-left: 180px;
+  }
 }
 
 @media screen and (max-width: 481px) {
+  .vac-d-form__input-container {
+    width: 100%;
+  }
   .vacancies-d__item p:before {
     left: -25px;
   }
@@ -808,7 +832,6 @@
     & h2 {
       font-size: 17px;
       align-self: start;
-      margin-left: 17px;
     }
   }
   .vacancies-d__form-buttons--block .vacancies-d__download {
@@ -827,5 +850,8 @@
   }
   .vacancies-d__form-label textarea {
     height: 80px;
+  }
+  .vacancies-d__form-close {
+    top: 8%;
   }
 }

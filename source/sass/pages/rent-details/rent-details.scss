@@ -107,6 +107,21 @@
 }
 
 
+.rent-d-form__input-container {
+  width: 505px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.form-invalid-error {
+  color: #C30215;
+  font-size: 14px;
+  font-family: $font-text-regular;
+  padding-top: 5px;
+  text-transform: lowercase;
+}
+
 .rent-details__slider-next-arrow, .rent-details__slider-prev-arrow {
   z-index: 900;
   color: white;
@@ -266,12 +281,21 @@
     top: -13%;
   }
   .rent-details__form {
-    min-height: 660px;
+    height: 650px;
     padding: 30px 0;
+  }
+  .rent-details__form-label textarea {
+    height: 105px;
+  }
+  .rent-details__form-wrapper h2 {
+    margin-bottom: 20px;
   }
 }
 
 @media screen and (max-width: 1366px) {
+  .rent-d-form__input-container {
+    width: 425px;
+  }
   .rent-details__form-label textarea {
     height: 80px;
   }
@@ -321,7 +345,7 @@
     flex-direction: row;
     padding-left: 269px;
   }
-  .vacancies-d__form-close {
+  .rent-d__form-close {
     top: 6%;
   }
     .rent-details__desc-title {
@@ -407,14 +431,6 @@
 
 }
 
-
-.form-invalid-error {
-  color: #C30215;
-  font-size: 14px;
-  font-family: $font-text-regular;
-  padding-top: 5px;
-}
-
 @media screen and (max-width: 801px) {
   .rent-details__form {
     width: 100%;
@@ -433,7 +449,7 @@
     width: 395px;
   }
   .rent-details__license {
-    width: 200px;
+    width: 206px;
   }
   .rent-details__form-buttons {
     padding-left: 206px;
@@ -469,12 +485,30 @@
     font-size: 10px;
     padding: 14px 30px;
   }
+  .rent-d-form__input-container {
+    width: 395px;
+  }
+
+  .rent-details__form-submit {
+    padding: 13px 26px;
+    width: 220px;
+  }
+  .rent-details__form-buttons {
+    padding-left: 210px;
+  }
 }
 
 
 @media screen and (max-width: 481px) {
+  .rent-d-form__input-container {
+    width: 100%;
+  }
   .rent-details__form {
     width: 100%;
+    padding: 113px 0;
+  }
+  .rent-d__form-close {
+    top: 4%;
   }
   .rent-details__form-wrapper h2 {
     width: 90%;
@@ -505,9 +539,7 @@
   }
   .rent-details__form-submit {
     height: 50px;
-  }
-  .rent-details__form {
-    padding: 42px 0;
+    width: 100%;
   }
   .rent-details__swiper-pagination-container {
     bottom: 10px;
@@ -580,6 +612,21 @@
   .rent-details__license {
     font-size: 13px;
   }
+  .rent-d__form-close {
+    top: 3%;
+  }
+}
+
+
+@media screen and (max-width: 376px) {
+  .rent-details__form-wrapper h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  .rent-d__form-close {
+    top: 3%;
+  }
 }
 
 
@@ -595,12 +642,6 @@
   }
 }
 
-@media screen and (max-width: 376px) {
-  .rent-details__form-wrapper h2 {
-    margin-bottom: 10px;
-    font-size: 18px;
-  }
-}
 
 
 @media screen and (max-width: 321px) {
@@ -621,9 +662,13 @@
   }
   .rent-details__form-wrapper h2 {
     line-height: 20px;
+    margin-top: 27px;
   }
   .rent-details__form-buttons {
     margin-top: 10px;
+  }
+  .rent-d__form-close {
+    top: 3%;
   }
 }
 
