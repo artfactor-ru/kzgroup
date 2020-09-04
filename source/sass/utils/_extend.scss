@@ -510,6 +510,14 @@
 	&.pic__frame-1{
 		height: 80%;
 		width: 85%;
+		@media(min-width: 1280px){
+			height: 77%;
+			width: 80%;
+		}
+		@media(min-width: 1680px){
+			height: 56%;
+			width: 60%;
+		}
 	}
 	&.pic__frame-2{
 		height: 90%;
@@ -519,8 +527,8 @@
 			width: 74%;
 		}
 		@media(min-width: 1280px){
-			height: 80%;
-			width: 75%;
+			height: 88%;
+			width: 70%;
 		}
 	}
 	&.pic__frame-3{
@@ -530,18 +538,261 @@
 			height: 100%;
 			width: 92%;
 		}
+		@media(min-width: 1280px){
+			height: 86%;
+			width: 87%;
+		}
 	}
 	&.pic__frame-4{
 		height: 70%;
 		width: 70%;
 		@media(min-width: 1280px){
-			height: 70%;
-			width: 75%;
+			height: 82%;
+			width: 74%;
+		}
+		@media(min-width: 1680px){
+			height: 78%;
+			width: 70%;
 		}
 	}
 	&.pic__frame-5{
 		height: 80%;
 		width: 70%;
+		@media(min-width: 1280px){
+			height: 80%;
+			width: 62%;
+		}
+	}
+	&.pic__frame-6{
+		height: 70%;
+		width: 70%;
+		@media(min-width: 1280px){
+			height: 75%;
+			width: 85%;
+		}
+		@media(min-width: 1680px){
+			height: 69%;
+			width: 79%;
+		}
+	}
+	&.pic__frame-7{
+		height: 80%;
+		width: 70%;
+		@media(min-width: 1280px){
+			height: 95%;
+			width: 63%;
+		}
+		@media(min-width: 1680px){
+			height: 90%;
+			width: 60%;
+		}
+	}
+	&.pic__frame-8{
+		height: 70%;
+		width: 70%;
+		@media(min-width: 1280px){
+			height: 92%;
+			width: 81%;
+		}
+		@media(min-width: 1680px){
+			height: 90%;
+			width: 78%;
+		}
+	}
+	&.pic__frame-9{
+		height: 80%;
+		width: 70%;
+		@media(min-width: 1280px){
+			height: 99%;
+			width: 62%;
+		}
+		@media(min-width: 1680px){
+			height: 93%;
+			width: 59%;
+		}
+	}
+	&.pic__frame-10{
+		height: 80%;
+		width: 85%;
+		@media(min-width: 1680px){
+			height: 89%;
+			width: 82%;
+		}
+	}
+	&.pic__frame-11{
+		height: 90%;
+		width: 74%;
+		@media(min-width: 1680px){
+			height: 92%;
+		}
+	}
+	&.pic__frame-12{
+		height: 90%;
+		width: 85%;
+		@media(min-width: 1680px){
+			height: 93%;
+			width: 84%;
+		}
+	}
+	&.pic__frame-13{
+		height: 90%;
+		width: 85%;
+		@media(min-width: 1680px){
+			height: 74%;
+			width: 74%;
+		}
+	}
+	&.pic__frame-14{
+		height: 90%;
+		width: 85%;
+		@media(min-width: 1680px){
+			height: 60%;
+			width: 66%;
+		}
+	}
+	&.pic__frame-15{
+		height: 90%;
+		width: 90%;
+		@media(min-width: 1680px){
+			height: 100%;
+			width: 77%;
+		}
+	}
+	&.pic__frame-16{
+		height: 90%;
+		width: 90%;
+		@media(min-width: 1680px){
+			height: 59%;
+			width: 47%;
+		}
+	}
+	&.pic__frame-17{
+		height: 90%;
+		width: 90%;
+		@media(min-width: 1680px){
+			height: 97%;
+			width: 65%;
+		}
+	}
+	&.pic__frame-18{
+		height: 80%;
+		width: 85%;
+		@media(min-width: 1680px){
+			height: 58%;
+			width: 75%;
+		}
+	}
+	&.pic__frame-19{
+		height: 80%;
+		width: 85%;
+		@media(min-width: 1680px){
+			height: 81%;
+			width: 82%;
+		}
+	}
+	&.pic__frame-20{
+		height: 80%;
+		width: 85%;
+		@media(min-width: 1680px){
+			height: 75%;
+			width: 62%;
+		}
+	}
+	&.pic__frame-21{
+		height: 90%;
+		width: 90%;
+		@media(min-width: 1280px){
+			height: 59%;
+			width: 82%;
+		}
+	}
+	&.pic__frame-22{
+		height: 80%;
+		width: 85%;
+		@media(min-width: 1680px){
+			height: 62%;
+			width: 42%;
+		}
+	}
+	&.pic__frame-23{
+		height: 80%;
+		width: 85%;
+		@media(min-width: 1680px){
+			height: 85%;
+			width: 60%;
+		}
+	}
+	&.pic__frame-24{
+		height: 90%;
+		width: 90%;
+		@media(min-width: 1680px){
+			height: 82%;
+			width: 41%;
+		}
+	}
+	&.pic__frame-25{
+		height: 80%;
+		width: 85%;
+		@media(min-width: 1680px){
+			height: 85%;
+			width: 61%;
+		}
+	}
+	&.pic__frame-26{
+		height: 90%;
+		width: 85%;
+		@media(min-width: 1680px){
+			height: 88%;
+			width: 60%;
+		}
+	}
+	&.pic__frame-27{
+		height: 90%;
+		width: 90%;
+		@media(min-width: 1280px){
+			height: 71%;
+			width: 87%;
+		}
+	}
+	&.pic__frame-28{
+		height: 90%;
+		width: 90%;
+		@media(min-width: 1280px){
+			height: 100%;
+			width: 71%;
+		}
+	}
+	&.pic__frame-29{
+		height: 80%;
+		width: 85%;
+		@media(min-width: 1680px){
+			height: 72%;
+			width: 60%;
+		}
+	}
+	&.pic__frame-30{
+		height: 90%;
+		width: 85%;
+		@media(min-width: 1680px){
+			height: 56%;
+			width: 85%;
+		}
+	}
+	&.pic__frame-31{
+		height: 90%;
+		width: 90%;
+		@media(min-width: 1280px){
+			height: 66%;
+			width: 66%;
+		}
+	}
+	&.pic__frame-32{
+		height: 90%;
+		width: 90%;
+		@media(min-width: 1280px){
+			height: 62%;
+			width: 62%;
+		}
 	}
 	@media(min-width: 1280px){
 		top: -34px;

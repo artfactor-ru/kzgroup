@@ -1,45 +1,51 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/style.min.css">
-    <title>Руководство</title>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="./css/style.min.css">
+	<title>Руководство</title>
 </head>
+
 <body class="leadership">
-    <style>
-        .preloader{
-            background-color: #ffffff;
-            width: 100vw;
-            z-index: 20000;
-            height: 100vh;
-            height: calc(var(--vh, 1vh) * 100);
-            position: fixed;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        
-        }
-        .preloader__icon{
-            width: 130px;
-            height: 130px;
-            fill: none;
-            stroke-dasharray: 1000;
-            stroke-dashoffset: 1000;
-            animation: dash 6s linear 3s forwards infinite alternate;
-        }
-    </style>
-    <div class="preloader">
-        <svg class="preloader__icon"><use xlink:href="./img/sprite.svg#icon-logo-company"></use></svg>
-    </div>
-    <div class="forheader">
+	<style>
+		.preloader {
+			background-color: #ffffff;
+			width: 100vw;
+			z-index: 20000;
+			height: 100vh;
+			height: calc(var(--vh, 1vh) * 100);
+			position: fixed;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+		}
+
+		.preloader__icon {
+			width: 130px;
+			height: 130px;
+			fill: none;
+			stroke-dasharray: 1000;
+			stroke-dashoffset: 1000;
+			animation: dash 6s linear 3s forwards infinite alternate;
+		}
+	</style>
+	<div class="preloader">
+		<svg class="preloader__icon">
+			<use xlink:href="./img/sprite.svg#icon-logo-company"></use>
+		</svg>
+	</div>
+	<div class="forheader">
 
 		<header class="header">
 			<div class="container--header container--header--main">
 
 				<div class="header__wrapper">
-					
+
 					<button class="c-nav-button js-nav-toggle" type="button">
 						<div class="c-nav-button_wrap">
 							<div class="c-nav-button_icon">
@@ -50,35 +56,39 @@
 						</div>
 					</button>
 					<a class="header__logo" href="">
-						<svg class="header__logo-icon"  viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg class="header__logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<g clip-path="url(#clip0)">
-								<path d="M29.684 17.9667L17.9667 29.684L6.32028 17.9667L17.9667 6.32028L29.684 17.9667ZM27.7666 8.16666L23.3637 0H12.5696L8.16666 8.16666L0 12.5696V23.3637L8.16666 27.7666L12.5696 35.9333H23.3637L27.7666 27.7666L35.9333 23.3637V12.5696L27.7666 8.16666Z" fill="#ED1C24"/>
-								<path d="M20.4522 6.32031L34.087 13.7058V19.9551L20.4522 6.32031ZM22.2986 34.158H16.0493L29.6841 20.5232L22.2986 34.158ZM1.77539 22.2986V15.9783L15.4102 29.613L1.77539 22.2986ZM13.6348 1.77539H19.8841L6.32031 15.4812L13.6348 1.77539Z" fill="#FFDD00"/>
+								<path
+									d="M29.684 17.9667L17.9667 29.684L6.32028 17.9667L17.9667 6.32028L29.684 17.9667ZM27.7666 8.16666L23.3637 0H12.5696L8.16666 8.16666L0 12.5696V23.3637L8.16666 27.7666L12.5696 35.9333H23.3637L27.7666 27.7666L35.9333 23.3637V12.5696L27.7666 8.16666Z"
+									fill="#ED1C24" />
+								<path
+									d="M20.4522 6.32031L34.087 13.7058V19.9551L20.4522 6.32031ZM22.2986 34.158H16.0493L29.6841 20.5232L22.2986 34.158ZM1.77539 22.2986V15.9783L15.4102 29.613L1.77539 22.2986ZM13.6348 1.77539H19.8841L6.32031 15.4812L13.6348 1.77539Z"
+									fill="#FFDD00" />
 							</g>
 							<defs>
 								<clipPath id="clip0">
-									<rect width="35.9333" height="35.9333" fill="white"/>
+									<rect width="35.9333" height="35.9333" fill="white" />
 								</clipPath>
 							</defs>
 						</svg>
-	
+
 						<p class="header__logo-text">Кировский<br> завод</p>
 					</a>
 				</div>
 
-				
-			
 
-			
+
+
+
 
 			</div>
 		</header>
-		
-		 <nav class="nav">
+
+		<nav class="nav">
 			<div class="nav_background"></div>
 
 
-		 	<div class="nav_list-wrap">
+			<div class="nav_list-wrap">
 				<article class="nav_list-scroll">
 					<div class="nav_list-left scrollbar-inner">
 						<div class="nav_list-content">
@@ -91,8 +101,10 @@
 								<li class="nav_item -dropdown js-dropdown">
 									<div class="nav_link js-nav-link js-dropdown-toggle">
 										<span class="nav_link_text">Компания</span>
-										<svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
-										
+										<svg class="nav_link__icon">
+											<use xlink:href="./img/sprite.svg#icon-arrow"></use>
+										</svg>
+
 									</div>
 									<span class="nav_link_line"></span>
 									<div class="nav_dropdown js-dropdown-list">
@@ -101,7 +113,7 @@
 												<li class="nav_dropdown_item">
 													<a class="nav_dropdown_link" href="#">Руководство</a>
 												</li>
-											
+
 												<li class="nav_dropdown_item">
 													<a class="nav_dropdown_link" href="#">История</a>
 												</li>
@@ -127,8 +139,10 @@
 								<li class="nav_item -dropdown js-dropdown">
 									<div class="nav_link js-nav-link js-dropdown-toggle">
 										<span class="nav_link_text">Дочерние предприятия</span>
-										<svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
-										
+										<svg class="nav_link__icon">
+											<use xlink:href="./img/sprite.svg#icon-arrow"></use>
+										</svg>
+
 									</div>
 									<span class="nav_link_line"></span>
 									<div class="nav_dropdown js-dropdown-list">
@@ -137,7 +151,7 @@
 												<li class="nav_dropdown_item">
 													<a class="nav_dropdown_link" href="#">Петербургский тракторный завод завод «Петросталь»</a>
 												</li>
-											
+
 												<li class="nav_dropdown_item">
 													<a class="nav_dropdown_link" href="#">Завод буровых технологий</a>
 												</li>
@@ -176,20 +190,22 @@
 										<span class="nav_link_line"></span>
 									</a>
 								</li>
-								
+
 								<li class="nav_item">
 									<a class="nav_link js-nav-link" href="#">
 										<span class="nav_link_text">Вакансии</span>
 										<span class="nav_link_line"></span>
 									</a>
 								</li>
-						
+
 								<li class="nav_item -dropdown js-dropdown">
 
-								
+
 									<div class="nav_link js-nav-link js-dropdown-toggle">
 										<span class="nav_link_text">Пресс-Центр</span>
-										<svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+										<svg class="nav_link__icon">
+											<use xlink:href="./img/sprite.svg#icon-arrow"></use>
+										</svg>
 									</div>
 									<div class="nav_dropdown js-dropdown-list">
 										<div class="nav_dropdown_wrap">
@@ -200,7 +216,7 @@
 												<li class="nav_dropdown_item">
 													<a class="nav_dropdown_link" href="#">Видеогалерея</a>
 												</li>
-													<li class="nav_dropdown_item">
+												<li class="nav_dropdown_item">
 													<a class="nav_dropdown_link" href="#">Пресса о нас</a>
 												</li>
 												<li class="nav_dropdown_item">
@@ -216,10 +232,12 @@
 
 								<li class="nav_item -dropdown js-dropdown">
 
-								
+
 									<div class="nav_link js-nav-link js-dropdown-toggle">
 										<span class="nav_link_text">Акционерам и инвесторам</span>
-										<svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+										<svg class="nav_link__icon">
+											<use xlink:href="./img/sprite.svg#icon-arrow"></use>
+										</svg>
 									</div>
 									<div class="nav_dropdown js-dropdown-list">
 										<div class="nav_dropdown_wrap">
@@ -230,14 +248,14 @@
 												<li class="nav_dropdown_item">
 													<a class="nav_dropdown_link" href="#">Раскрытие информации дочерними обществами</a>
 												</li>
-													
-										
+
+
 											</ul>
 										</div>
 									</div>
 								</li>
 
-							
+
 
 								<li class="nav_item">
 									<a class="nav_link js-nav-link" href="#">
@@ -253,7 +271,7 @@
 								</li>
 								<li class="nav_item">
 									<a class="nav_link js-nav-link" href="#">
-										<span class="nav_link_text">Аренда помещений	</span>
+										<span class="nav_link_text">Аренда помещений </span>
 										<span class="nav_link_line"></span>
 									</a>
 								</li>
@@ -263,7 +281,7 @@
 										<span class="nav_link_line"></span>
 									</a>
 								</li>
-							
+
 
 
 								<li class="nav_item">
@@ -287,10 +305,10 @@
 										<li class="nav_lang-item">
 											<a class="nav_lang-link" href="">De</a>
 										</li>
-								
+
 									</ul>
 								</div>
-							
+
 							</div>
 						</div>
 					</div>
@@ -302,7 +320,7 @@
 			<div class="nav_search">
 				<article class="search-wrap">
 					<div class="search">
-						<input class="search_input o-input -search js-search-input" type="text" placeholder="Поиск" value=""> 
+						<input class="search_input o-input -search js-search-input" type="text" placeholder="Поиск" value="">
 						<div class="search_results js-search-results"></div>
 					</div>
 				</article>
@@ -311,27 +329,35 @@
 				<ul class="nav_social">
 					<li class="nav_social_item">
 						<a class="nav_social_link" href="#" target="_blank">
-							
 
-							<svg class="nav_social_icon" ><use xlink:href="./img/sprite.svg#icon-fb"></use></svg>
+
+							<svg class="nav_social_icon">
+								<use xlink:href="./img/sprite.svg#icon-fb"></use>
+							</svg>
 						</a>
 					</li>
 					<li class="nav_social_item">
 						<a class="nav_social_link" href="#" target="_blank">
-							<svg class="nav_social_icon" ><use xlink:href="./img/sprite.svg#icon-vk"></use></svg>
-							
+							<svg class="nav_social_icon">
+								<use xlink:href="./img/sprite.svg#icon-vk"></use>
+							</svg>
+
 						</a>
 					</li>
 					<li class="nav_social_item">
 						<a class="nav_social_link" href="#" target="_blank">
-							<svg class="nav_social_icon" ><use xlink:href="./img/sprite.svg#icon-youtube"></use></svg>
-						
+							<svg class="nav_social_icon">
+								<use xlink:href="./img/sprite.svg#icon-youtube"></use>
+							</svg>
+
 						</a>
 					</li>
 					<li class="nav_social_item">
 						<a class="nav_social_link" href="#" target="_blank">
-							
-							<svg class="nav_social_icon" ><use xlink:href="./img/sprite.svg#icon-inst"></use></svg>
+
+							<svg class="nav_social_icon">
+								<use xlink:href="./img/sprite.svg#icon-inst"></use>
+							</svg>
 						</a>
 					</li>
 				</ul>
@@ -347,111 +373,119 @@
 							<li class="nav_lang-item">
 								<a class="nav_lang-link" href="">De</a>
 							</li>
-						
+
 						</ul>
 					</div>
-				
+
 				</div>
 			</aside>
-		</nav>  
-
-
+		</nav>
 		<div class="scroll">
+			<section class="main parallax__item">
+				<div class="parallax__img-wrap">
+					<div class="parallax__img parallax__img--company_group " data-speed="-40">
+						<div class="parallax__img--inner" style="background-image: url(./img/companies-group/bg-companygroup.jpg);
+													background-position: center;
+													background-size: cover;">
 
-            <section class="main parallax__item">
-                <div class="parallax__img-wrap">
-                    <div class="parallax__img parallax__img--company_group " data-speed="-40">
-                        <div class="parallax__img--inner" style="background-image: url(./img/companies-group/bg-companygroup.jpg);
-                        background-position: center;
-                        background-size: cover;">
+						</div>
+					</div>
+				</div>
 
-                        </div>
-                    </div>
-                </div>
+				<div class="container">
+					<div class="main__wrapper">
+						<h1 class="main__title main__title--about">
+							<div class="title--inner-main">Основные предприятия</div>
+							<div class="title--inner-main">группы компаний</div>
+							<div class="title--inner-main">«Кировский завод»</div>
+						</h1>
+					</div>
+				</div>
 
-                <div class="container">
-                    <div class="main__wrapper">
-                        <h1 class="main__title main__title--about">
-                            <div class="title--inner-main">Основные предприятия</div>
-                            <div class="title--inner-main">группы компаний</div>
-                            <div class="title--inner-main">«Кировский завод»</div>
-                        </h1>
-                    </div>
-                </div>
 
-               
-                
-            </section>  
-            <main class="leadership-container two-screen">
-                
+
+			</section>
+			<main class="leadership-container two-screen">
+
 				<section class="about about two-screen">
 					<!-- <div class="parallax__img parallax__img--about parallax__img--about-4" data-type="parallax" data-speed="-60"></div>
-					<div class="parallax__img parallax__img--about parallax__img--about-3" data-type="parallax" data-speed="-55">	</div>
-					<div class="parallax__img parallax__img--about parallax__img--about-2" data-type="parallax" data-speed="-25"></div>
-					<div class="parallax__img parallax__img--about parallax__img--about-1" data-type="parallax" data-speed="0"></div>   -->
+						<div class="parallax__img parallax__img--about parallax__img--about-3" data-type="parallax" data-speed="-55">	</div>
+						<div class="parallax__img parallax__img--about parallax__img--about-2" data-type="parallax" data-speed="-25"></div>
+						<div class="parallax__img parallax__img--about parallax__img--about-1" data-type="parallax" data-speed="0"></div>   -->
 					<div class="container">
-									<h2 class="about__title about__title is-animate" data-speed="0.3">
-										<span class="red-accent">«Кировец»</span>
-										– легендарный трактор, выпускается на Кировском заводе с 1962 года
-									</h2>
+						<h2 class="about__title about__title is-animate" data-speed="0.3">
+							<span class="red-accent">«Кировец»</span>
+							– легендарный трактор, выпускается на Кировском заводе с 1962 года
+						</h2>
 
-									<p class="about__desc about__desc is-animate" data-speed="0.8">Предназначен для выполнения сельскохозяйственных, транспортных, дорожно-строительных и других работ.</p>
-								</div>
+						<p class="about__desc about__desc is-animate" data-speed="0.8">Предназначен для выполнения
+							сельскохозяйственных, транспортных, дорожно-строительных и других работ.</p>
+					</div>
 
-								<ul class="social__btn-list">
-									<li class="social__btn-item social__btn-item--share">
-										<button class="social__btn" style="background-image: url(./img/social-share.svg);"></button>
-										
-										<div class="social__dropdown">
-											<h5 class="social__title">Поделиться:</h5>
-											<ul class="social__link-list">
-												<li class="social__link-item">
-													<a class="social__link" href="" target="_blank">
-														<svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-vk"></use></svg>
-														<span class="visually-hidden">Vk</span>
-													</a>
-												</li>
-												<li class="social__link-item">
-													<a class="social__link" href="" target="_blank">
-														<svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-inst"></use></svg>
-														<span class="visually-hidden">Instagram</span>
-													</a>
-												</li>
-												<li class="social__link-item">
-													<a class="social__link" href="" target="_blank">
-														<svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-fb"></use></svg>
-														<span class="visually-hidden">Facebook</span>
-													</a>
-												</li>
+					<ul class="social__btn-list">
+						<li class="social__btn-item social__btn-item--share">
+							<button class="social__btn" style="background-image: url(./img/social-share.svg);"></button>
 
-												<li class="social__link-item">
-													<a class="social__link" href="" target="_blank">
-														<svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-youtube"></use></svg>
-														<span class="visually-hidden">Youtube</span>
-													</a>
-												</li>
-											</ul>
-										</div>
+							<div class="social__dropdown">
+								<h5 class="social__title">Поделиться:</h5>
+								<ul class="social__link-list">
+									<li class="social__link-item">
+										<a class="social__link" href="" target="_blank">
+											<svg class="social__icon">
+												<use xlink:href="./img/sprite.svg#icon-vk"></use>
+											</svg>
+											<span class="visually-hidden">Vk</span>
+										</a>
 									</li>
-									<li class="social__btn-item social__btn-item--message">
-										<button class="social__btn" style="background-image: url(./img/social-message.svg);"></button>
-										<div class="social__dropdown">
-											<h5 class="social__title">Подписаться на новости</h5>
-											<ul class="social__link-list">
-												<li class="social__link-item">
-													<a class="social__link" href="" target="_blank">
-														<svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-news"></use></svg>
-														<span class="visually-hidden">Подписаться</span>
-													</a>
-												</li>
-											</ul>
-										</div>
+									<li class="social__link-item">
+										<a class="social__link" href="" target="_blank">
+											<svg class="social__icon">
+												<use xlink:href="./img/sprite.svg#icon-inst"></use>
+											</svg>
+											<span class="visually-hidden">Instagram</span>
+										</a>
+									</li>
+									<li class="social__link-item">
+										<a class="social__link" href="" target="_blank">
+											<svg class="social__icon">
+												<use xlink:href="./img/sprite.svg#icon-fb"></use>
+											</svg>
+											<span class="visually-hidden">Facebook</span>
+										</a>
 									</li>
 
+									<li class="social__link-item">
+										<a class="social__link" href="" target="_blank">
+											<svg class="social__icon">
+												<use xlink:href="./img/sprite.svg#icon-youtube"></use>
+											</svg>
+											<span class="visually-hidden">Youtube</span>
+										</a>
+									</li>
 								</ul>
-							</section>
-            </main>
-            <footer class="footer">
+							</div>
+						</li>
+						<li class="social__btn-item social__btn-item--message">
+							<button class="social__btn" style="background-image: url(./img/social-message.svg);"></button>
+							<div class="social__dropdown">
+								<h5 class="social__title">Подписаться на новости</h5>
+								<ul class="social__link-list">
+									<li class="social__link-item">
+										<a class="social__link" href="" target="_blank">
+											<svg class="social__icon">
+												<use xlink:href="./img/sprite.svg#icon-news"></use>
+											</svg>
+											<span class="visually-hidden">Подписаться</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+
+					</ul>
+				</section>
+			</main>
+			<footer class="footer">
 
 				<div class="footer__outer">
 					<div class="container">
@@ -468,7 +502,7 @@
 									<li class="footer__nav-item">
 										<a class="footer__nav-link" href="">Карта сайта</a>
 									</li>
-								
+
 									<li class="footer__nav-item">
 										<a class="footer__nav-link" href="">Пресс-центр</a>
 									</li>
@@ -487,13 +521,13 @@
 									<li class="footer__nav-item">
 										<a class="footer__nav-link" href="">Аренда помещений</a>
 									</li>
-							
-							
+
+
 									<li class="footer__nav-item">
 										<a class="footer__nav-link" href="">Реквизиты</a>
 									</li>
 									<li class="footer__nav-item footer__nav-item--last">
-									
+
 									</li>
 								</ul>
 
@@ -508,46 +542,49 @@
 									<form class="footer__contact-form" action="">
 										<div class="footer__contact-form__wrap">
 											<input class="footer__contact-input" type="mail" placeholder="E-mail">
-											<button class="footer__contact-submit" type="submit"><svg class="footer__contact-submit-icon" width="40"><use xlink:href="./img/sprite.svg#icon-mail-submit"></use></svg></button>
+											<button class="footer__contact-submit" type="submit"><svg class="footer__contact-submit-icon"
+													width="40">
+													<use xlink:href="./img/sprite.svg#icon-mail-submit"></use>
+												</svg></button>
 										</div>
 									</form>
-									
+
 								</div>
-									
-									<ul class="footer__social-list">
-										<li class="footer__social-item" style="background-image: url(./img/social-youtube.svg);">
-											<a class="footer__social-link" href="">
-												<span class="visually-hidden">Youtube</span>
-											</a>
-										</li>
-	
-										<li class="footer__social-item" style="background-image: url(./img/social-vk.svg);">
-											<a class="footer__social-link" href="">
-												<span class="visually-hidden">Vk</span>
-											</a>
-										</li>
-	
-										<li class="footer__social-item" style="background-image: url(./img/social-inst.svg);">
-											<a class="footer__social-link" href="">
-												<span class="visually-hidden">Instagram</span>
-											</a>
-										</li>
-	
-										<li class="footer__social-item" style="background-image: url(./img/social-fb.svg);">
-											<a class="footer__social-link" href="">
-												<span class="visually-hidden">Facebook</span>
-											</a>
-										</li>
-									</ul>
-								
-						
+
+								<ul class="footer__social-list">
+									<li class="footer__social-item" style="background-image: url(./img/social-youtube.svg);">
+										<a class="footer__social-link" href="">
+											<span class="visually-hidden">Youtube</span>
+										</a>
+									</li>
+
+									<li class="footer__social-item" style="background-image: url(./img/social-vk.svg);">
+										<a class="footer__social-link" href="">
+											<span class="visually-hidden">Vk</span>
+										</a>
+									</li>
+
+									<li class="footer__social-item" style="background-image: url(./img/social-inst.svg);">
+										<a class="footer__social-link" href="">
+											<span class="visually-hidden">Instagram</span>
+										</a>
+									</li>
+
+									<li class="footer__social-item" style="background-image: url(./img/social-fb.svg);">
+										<a class="footer__social-link" href="">
+											<span class="visually-hidden">Facebook</span>
+										</a>
+									</li>
+								</ul>
+
+
 							</div>
 
 
 						</div>
-					
-					
-			
+
+
+
 
 						<section class="copyright">
 							<h6 class="copyright__title">Copyrights © ПАО "Кировский завод"</h6>
@@ -556,11 +593,12 @@
 						</section>
 
 					</div>
-				
+
 				</div>
 			</footer>
-        </div>
-    </div>
-    <script src="./js/script.min.js"></script>
+		</div>
+	</div>
+	<script src="./js/script.min.js"></script>
 </body>
+
 </html>

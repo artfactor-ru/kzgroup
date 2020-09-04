@@ -43,7 +43,7 @@
 
 .history_heroes--list-item{
     width: 46%;
-    margin-right: 5%;
+    margin-right: 8%;
     margin-bottom: 33px;
     font-family: $font-text-regular;
     &:nth-child(2n){
@@ -79,13 +79,13 @@
     .history_heroes--subtitle{
         font-size: 26px;
         line-height: 30px;
-        margin-bottom: px;
+        margin-bottom: 74px;
     }
     .history_heroes--list-item{
         width: 22%;
         margin-right: 5%;
         &:nth-child(2n){
-            margin-right: 2%;
+            margin-right: 5%;
         }
         &:nth-child(4n){
             margin-right: 0;
@@ -94,11 +94,18 @@
 }
 
 @media(min-width: 1280px){
+    .history_heroes{
+        padding: 107px 0 25px;
+    }
     .history_heroes--list-item{
-        width: 15%;
-        margin-right: 2%;
+        width: 14%;
+        margin-right: 3.1%;
+        margin-bottom: 20px;
+        &:nth-child(2n){
+            margin-right: 3.1%;
+        }
         &:nth-child(4n){
-            margin-right: 2%;
+            margin-right: 3.1%;
         }
         &:nth-child(6n){
             margin-right: 0;
@@ -107,6 +114,7 @@
     .history_heroes--title{
         font-size: 36px;
         line-height: 30px;
+        margin-bottom: 53px;
     }
     .history_heroes--subtitle{
         font-size: 30px;
