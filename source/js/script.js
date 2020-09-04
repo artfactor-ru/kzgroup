@@ -11,6 +11,79 @@ gsap.registerPlugin(ScrollTrigger);
 
 import ScrollbarSmoth from 'smooth-scrollbar';
 
+
+import barba from '@barba/core';
+
+
+
+
+
+
+	if(document.querySelector('.barbapage')){
+
+		barba.init({
+			transitions: [{
+				name: 'opacity-transition',
+				leave(data) {
+				return gsap.to(data.current.container, {
+					opacity: 0
+				});
+				},
+				enter(data) {
+				return gsap.from(data.next.container, {
+					opacity: 0
+				});
+				}
+			}],
+
+		});
+		barba.hooks.enter(() => {
+			initSlider();
+
+			initAnimation();
+
+			if(socialContainer){
+				socialInteraction()
+			}
+					
+		
+
+			breakpointChecker();
+
+			
+			checkUrl('.tabs-common-links--barba');
+			
+			
+			if(containerScroll){
+				scrollbar = ScrollbarSmoth.init(containerScroll, options);
+				scrollbar.addListener(ScrollTrigger.update);
+		
+				eventOnScroll();
+			
+				
+			}
+			// Взаимодействие с шапкой
+				if ( breakpoint.matches === true ) {
+					
+						
+					if(header){	
+
+						headerShowAndHideDesktop();
+						console.log("ШАпка");
+					}
+				
+			}else if ( breakpoint.matches === false ) {
+					if(header){	
+						hideAndShowHeaderMobile();
+					}
+			}
+		});
+	}
+
+
+
+
+
 // import $ from "jquery";
 var $ = require( "jquery" );
 window.jQuery = $;
@@ -38,6 +111,24 @@ let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 
+function checkUrl(links){
+	let barbalink = document.querySelectorAll(links);
+			
+	for(let i = 0; i<barbalink.length; i++){
+		// barbalink[i].addEventListener('click', function(){
+
+			if(barbalink[i].href == window.location.href){
+				removeActivity(barbalink);
+				barbalink[i].classList.add('active');
+				
+			}
+		// });
+	}
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+	checkUrl('.tabs-common-links--barba');
+})
 
 // Функция получения координат элемента
 function getCoords(elem) {
@@ -56,6 +147,13 @@ function scrollToTop( element) {
 
 	scrollbar.scrollTo(0, elementTopPosition, 600);
 
+}
+// Скролл к определенному элементу музей
+function scrollToTopMuseum( element) {
+	let museumNavHeight = document.querySelector('.museum-nav').offsetHeight;
+	let elementTopPosition = getCoords(element).top;
+
+	scrollbar.scrollTo(0, elementTopPosition - (museumNavHeight/2), 600);
 }
 
 // Паралакс эффект на картинках
@@ -126,25 +224,16 @@ document.addEventListener('DOMContentLoaded', function(){
 	
 	if(!document.querySelector('.main') && !document.querySelector('.hero-common') && !document.querySelector('.main__hero')){
 		header.classList.add('js-scroll');
+
 	}
 });
 
 
 function headerShowAndHideDesktop() {
+	let twoScreen = document.querySelector('.two-screen');
 	let traktorsContainer = document.querySelector('.traktors__container');
 	let museumContainer = document.querySelector('.museum-zal__wrap');
-	
-		// if(videoMain){
-		
-		// 	if(getCoords(twoScreen).top < scrollbar.offset.y){
-		// 		videoMain.pause();
-			
-		// 	}else if(getCoords(twoScreen).top >= scrollbar.offset.y){
-		// 		if(document.querySelector('.button__video-controls--play').classList.contains('active')) {
-		// 			videoMain.play();
-		// 		}
-		// 	}
-		// }
+
 	
 	
 	if(getCoords(header).top > 50 && getCoords(twoScreen).top >= scrollbar.offset.y){
@@ -197,6 +286,16 @@ function hideAndShowHeaderMobile() {
 
 	}
 }
+
+// Фикс меню
+function fixedNav(offsetscroll, navigation){
+	
+	let fixed = document.querySelector(navigation); 
+	if(fixed){
+		fixed.style.top = offsetscroll.y + 'px';
+		fixed.style.left = offsetscroll.x + 'px';
+	}
+}
 // Инициализация плавного скролла
 
 let options  = {
@@ -216,7 +315,12 @@ let options3  = {
 	continuousScrolling: false
 	// delegateTo: document
 }
-
+let options4  = {
+	damping: 0.09,
+	renderByPixels: true,
+	continuousScrolling: false
+	// delegateTo: document
+}
 
 const breakpoint = window.matchMedia( '(min-width:767px)' );
 const header = document.querySelector('.header');
@@ -253,12 +357,86 @@ if(containerNavScroll){
 let containerTabsScroll = document.querySelector('.tabs-common');
 let scrollbarTabs;
 if(containerTabsScroll){
-	scrollbarTabs = ScrollbarSmoth.init(containerTabsScroll, options3);
+	scrollbarTabs = ScrollbarSmoth.init(containerTabsScroll, options4);
 }
 
 
 
-
+function eventOnScroll(){
+	scrollbar.addListener(({ offset }) => {
+			
+		// Анимация для кнопки подробнее нужно инициализировать чтобы появлялась при клике на табе
+		gsap.utils.toArray('.button-more').forEach(element => {
+			ScrollTrigger.create({
+				trigger: element,
+				start: 'bottom bottom',
+				scrub: true,
+				toggleClass: 'is-inview-line',
+				// this toggles the class again when you scroll back up:
+				toggleActions: 'play none none none',
+				// this removes the class when the scrolltrigger is passed:
+				// once: true,
+			});
+		});
+	
+	
+	
+	parallax(document.querySelectorAll('.parallax__img'));
+	parallax(document.querySelectorAll('.parallax__img--slide'));
+	
+	
+	
+	if(videoMain){
+	
+		if(!scrollbar.isVisible(videoMain)){
+			if(!videoMain.paused) {
+				videoMain.pause();
+	
+			}
+			
+		}else{
+			if(videoMain.paused) {
+				videoMain.play();
+			}
+		}
+	}
+	
+	if(document.querySelector('.swiper-container--hero')){
+		if(scrollbar.isVisible(document.querySelector('.swiper-container--hero'))){
+			swiperHero.autoplay.start();
+			
+		
+		}else{
+			swiperHero.autoplay.stop();
+		}
+	}
+	
+	
+	
+	
+	makeNavLinksSmooth('.traktors','.traktors__nav-link');
+	makeNavLinksSmoothMuseum('.museum-zal','.museum-nav__link' );
+	spyScrolling ('.museum-zal' , '.museum-nav__link.active');
+	spyScrolling ('.traktors' , '.traktors__nav-link.active');
+	fixedNav(offset, '.museum-nav');
+	fixedNav(offset, '.traktors__nav');
+	// Взаимодействие с шапкой
+	if ( breakpoint.matches === true ) {
+		
+			
+			if(header){	
+	
+				headerShowAndHideDesktop();
+	
+			}
+		
+	}else if ( breakpoint.matches === false ) {
+			if(header){	
+				hideAndShowHeaderMobile();
+			}
+	}
+	})
+}
 
 
 let containerScroll = document.querySelector('.scroll');
@@ -267,116 +445,16 @@ let scrollbar;
 		scrollbar = ScrollbarSmoth.init(containerScroll, options);
 		scrollbar.addListener(ScrollTrigger.update);
 
-
-		scrollbar.addListener(() => {
-			
-				// Анимация для кнопки подробнее нужно инициализировать чтобы появлялась при клике на табе
-				gsap.utils.toArray('.button-more').forEach(element => {
-					ScrollTrigger.create({
-						trigger: element,
-						start: 'bottom bottom',
-						scrub: true,
-						toggleClass: 'is-inview-line',
-						// this toggles the class again when you scroll back up:
-						toggleActions: 'play none none none',
-						// this removes the class when the scrolltrigger is passed:
-						// once: true,
-					});
-				});
-			
-			// scrollbar.isVisible(content);
-			
-			parallax(document.querySelectorAll('.parallax__img'));
-			parallax(document.querySelectorAll('.parallax__img--slide'));
-		
-			
+		eventOnScroll();
 	
-			if(videoMain){
-
-				if(!scrollbar.isVisible(videoMain)){
-					if(!videoMain.paused) {
-						videoMain.pause();
-
-						console.log('Видео на паузе');
-					}
-					
-				}else{
-					if(videoMain.paused) {
-						videoMain.play();
-						console.log('Видео на играет');
-					}
-				}
-			}
-			
-			if(document.querySelector('.swiper-container--hero')){
-				if(scrollbar.isVisible(document.querySelector('.swiper-container--hero'))){
-					swiperHero.autoplay.start();
-					
-				
-				}else{
-					swiperHero.autoplay.stop();
-				}
-			}
-
-			
-			
-		
-
-			// Года на тракторе
-			showAndHideYearNav('.traktors__container', '.traktors__nav', '.traktors', '.traktors__nav-link.active',  '.traktors__nav-link');
-
-			showAndHideYearNav('.museum-zal__wrap', '.museum-nav', '.museum-zal', '.museum-nav__link.active',  '.museum-nav__link');
-		
-
-			// Взаимодействие с шапкой
-			if ( breakpoint.matches === true ) {
-				
-					
-					if(header){	
-		
-						headerShowAndHideDesktop();
-
-					}
-				
-			}else if ( breakpoint.matches === false ) {
-					if(header){	
-						hideAndShowHeaderMobile();
-					}
-			}
-		})
 		
 	}
 
-
+	
 
 
 //slider rent detail page
-if(document.querySelector('.rent-details__slider')){
-	let galleryThumbs = new Swiper('.gallery-thumbs', {
-		spaceBetween: 20,
-		slidesPerView: 5,
-		loop: true,
-		freeMode: true,
-		loopedSlides: 1, //looped slides should be the same
-		watchSlidesVisibility: true,
-		watchSlidesProgress: true,
-	});
-	let galleryTop = new Swiper('.gallery-top', {
-		spaceBetween: 10,
-		loop: true,
-		navigation: {
-			nextEl: '.rent-details__slider-next-arrow',
-			prevEl: '.rent-details__slider-prev-arrow',
-		},
-		thumbs: {
-			swiper: galleryThumbs,
-		},
-		pagination: {
-			el: '.rent-details__swiper-pagination',
-			type: 'fraction',
-		},
-	});
-}
+
 
 
 // Инициализация свайперов
@@ -442,9 +520,39 @@ if(document.querySelector('.rent-details__slider')){
 			}
 				
 	}
-	
+	function updateSlider(slider){
+		if(slider!= undefined){
+			slider.update();
+		}
+	}
+	const initSlider = function(){
 
-	document.addEventListener('DOMContentLoaded', function(){
+		if(document.querySelector('.rent-details__slider')){
+			let galleryThumbs = new Swiper('.gallery-thumbs', {
+				spaceBetween: 20,
+				slidesPerView: 5,
+				loop: true,
+				freeMode: true,
+				loopedSlides: 1, //looped slides should be the same
+				watchSlidesVisibility: true,
+				watchSlidesProgress: true,
+			});
+			let galleryTop = new Swiper('.gallery-top', {
+				spaceBetween: 10,
+				loop: true,
+				navigation: {
+					nextEl: '.rent-details__slider-next-arrow',
+					prevEl: '.rent-details__slider-prev-arrow',
+				},
+				thumbs: {
+					swiper: galleryThumbs,
+				},
+				pagination: {
+					el: '.rent-details__swiper-pagination',
+					type: 'fraction',
+				},
+			});
+		}
 		if(document.querySelector('.news__container')){
 			let newNavPrev = document.querySelector('.news__container .swiper-button-next');
 			let newNavNext = document.querySelector('.news__container .swiper-button-prev');
@@ -504,7 +612,7 @@ if(document.querySelector('.rent-details__slider')){
 					},
 			
 				},
-			  });
+			});
 	
 	
 			swiperCompanies = new Swiper('.swiper-container--companies',{
@@ -707,28 +815,28 @@ if(document.querySelector('.rent-details__slider')){
 			swiperHero = new Swiper('.swiper-container--hero',{
 				loop: true,
 				
-			   autoplay: {
+			autoplay: {
 					delay: transitionSlide,
 					disableOnInteraction: true,
 
-			   },
-   
-			   navigation: {
-			   	nextEl: '.hero__slider-controls .swiper-button-prev',
-			   	prevEl: '.hero__slider-controls .swiper-button-next',
-			   },
+			},
+
+			navigation: {
+				nextEl: '.hero__slider-controls .swiper-button-prev',
+				prevEl: '.hero__slider-controls .swiper-button-next',
+			},
 			//    observer: true,
 			// 		observeParents: true,
-			   effect: 'fade',
-			   fadeEffect: {
-				   crossFade: true
-			   },
-		   
-		   });
+			effect: 'fade',
+			fadeEffect: {
+				crossFade: true
+			},
+		
+		});
 
-		  
+		
 
-		   swiperHero.on('slidePrevTransitionStart', function () {
+		swiperHero.on('slidePrevTransitionStart', function () {
 			checkActiveSlideForVideo();
 			gsap.utils.toArray('.swiper-slide-active .hero__title .title--inner').forEach(element => {
 				
@@ -826,8 +934,8 @@ if(document.querySelector('.rent-details__slider')){
 		
 
 		
-	   }
-	   if(document.querySelector('.kirovets_tabs__list-wrap')){
+		}
+		if(document.querySelector('.kirovets_tabs__list-wrap')){
 			swiperTabThumbs = new Swiper('.kirovets_tabs__list-wrap', {
 				// observer: true,
 				// 	observeParents: true,
@@ -876,14 +984,12 @@ if(document.querySelector('.rent-details__slider')){
 			
 		}
 
-	
+	}
+	document.addEventListener('DOMContentLoaded', function(){
+		initSlider();
 	})
 
-	function updateSlider(slider){
-		if(slider!= undefined){
-			slider.update();
-		}
-	}
+	
 
 	window.addEventListener("resize", function(){
 		updateSlider(swiperStatistics);
@@ -1112,6 +1218,23 @@ if(document.querySelector('.rent-details__slider')){
 		}
 	}
 	
+// Плавный ссылки в годах
+const makeNavLinksSmoothMuseum = (sec, alllink) => {
+	const navLinks = document.querySelectorAll( alllink);
+	const section  = document.querySelectorAll(sec);
+	for ( let n = 0; n<navLinks.length; n++ ) {
+		// if ( navLinks.hasOwnProperty( n ) ) {
+			navLinks[ n ].addEventListener( 'click', e => {
+				// const id = section[ n ].id;
+				e.preventDefault( );
+			
+		
+				scrollToTopMuseum(section[n]);
+			
+			} );
+		// }
+	}
+}
 // Наблюдение за ссылками при скролле
 	const spyScrolling = (container, link) => {
 		const sections = document.querySelectorAll(container);
@@ -1120,7 +1243,7 @@ if(document.querySelector('.rent-details__slider')){
 	
 			// считывает или устанавливает количество пикселей, прокрученных от верха элемент 
 			for ( let s in sections )
-				if ( sections.hasOwnProperty( s ) && getCoords(sections[ s ]).top-100  <= scrollPos ) {
+				if ( sections.hasOwnProperty( s ) && getCoords(sections[ s ]).top - 200  <= scrollPos ) {
 
 					const id = sections[ s ].id;
 					document.querySelector( link ).classList.remove( 'active' );
@@ -1132,55 +1255,6 @@ if(document.querySelector('.rent-details__slider')){
 		
 	}
 
-
-	// Скрытие / открытие навигации по годам
-	function showAndHideYearNav(showincontainer, nav, sectionToScroll, navLinkActive, navLink) {
-		let yearNav = document.querySelector(nav);
-		if(yearNav){
-			document.addEventListener('DOMContentLoaded', function(){
-				yearNav.style.opacity = "0";
-
-				yearNav.classList.add('hidden');
-			})
-			let containerNav = document.querySelector(showincontainer);
-			let yearNavTopY = getCoords(yearNav).top;
-			let yearNavBottomY = getCoords(yearNav).bottom;		
-			let containerNavTopY = getCoords(containerNav).top;
-			let containerNavBottomY = getCoords(containerNav).bottom;
-	
-	
-
-			if(yearNavBottomY  > containerNavTopY && yearNavBottomY < containerNavBottomY){
-				yearNav.style.opacity = "1";
-				yearNav.style.pointerEvents = "auto";
-				yearNav.style.zIndex = "5";
-
-				yearNav.classList.remove('hidden');
-				spyScrolling(sectionToScroll, navLinkActive);
-
-				console.log('Слайдер видно');
-		
-			}else if(yearNavBottomY < containerNavTopY || yearNavBottomY > containerNavBottomY){
-				yearNav.classList.add('hidden');
-				// yearNav.style.opacity = "0";
-				yearNav.style.pointerEvents = "none";
-				// yearNav.style.zIndex = "-1";
-
-				
-
-				console.log('Слайдер опять стало невидно');
-			}
-			
-			makeNavLinksSmooth(sectionToScroll, navLink);
-
-		}
-	}
-	
-		
-	
-
-
-	
 
 
 	// Видео
@@ -1253,174 +1327,45 @@ if(document.querySelector('.rent-details__slider')){
 	
 	// }
 
-// Анимация и прелоадер
-	document.onreadystatechange = function () {
-	
-		if (document.readyState === "complete") {
-	
-			setTimeout(function () {
-				document.querySelector('.preloader').style.display = "none";
-				
 
+let initAnimation = function(){
+		gsap.utils.toArray('.traktors__number-icon').forEach(element => {
+			ScrollTrigger.create({
+				trigger: element,
+				scrub: true,
+				toggleClass: 'is-inview',
+				// this toggles the class again when you scroll back up:
+				toggleActions: 'play none none none',
+				// this removes the class when the scrolltrigger is passed:
+				// once: true,
+			});
+		});
 
+		gsap.utils.toArray('.company_group__item-icon').forEach(element => {
+			ScrollTrigger.create({
+				trigger: element,
+				scrub: true,
+				toggleClass: 'is-inview',
+				// this toggles the class again when you scroll back up:
+				toggleActions: 'play none none none',
+				// this removes the class when the scrolltrigger is passed:
+				// once: true,
+			});
+		});
 
-				gsap.utils.toArray('.traktors__number-icon').forEach(element => {
-					ScrollTrigger.create({
-						trigger: element,
-						scrub: true,
-						toggleClass: 'is-inview',
-						// this toggles the class again when you scroll back up:
-						toggleActions: 'play none none none',
-						// this removes the class when the scrolltrigger is passed:
-						// once: true,
-					});
-				});
-		
-				gsap.utils.toArray('.company_group__item-icon').forEach(element => {
-					ScrollTrigger.create({
-						trigger: element,
-						scrub: true,
-						toggleClass: 'is-inview',
-						// this toggles the class again when you scroll back up:
-						toggleActions: 'play none none none',
-						// this removes the class when the scrolltrigger is passed:
-						// once: true,
-					});
-				});
-		
-				gsap.utils.toArray('.property__pic').forEach(element => {
-					ScrollTrigger.create({
-						trigger: element,
-						// scrub: true,
-						toggleClass: 'is-inview',
-						// this toggles the class again when you scroll back up:
-						// toggleActions: 'play none none none',
-						// this removes the class when the scrolltrigger is passed:
-						// once: true,
-					});
-				});
-		
-					gsap.utils.toArray('.traktors__info-wrap').forEach(element => {
-						ScrollTrigger.create({
-							trigger: element,
-							start: 'bottom bottom',
-							scrub: true,
-							toggleClass: 'is-inview-line',
-							// this toggles the class again when you scroll back up:
-							toggleActions: 'play none none none',
-							// this removes the class when the scrolltrigger is passed:
-							// once: true,
-						});
-					});
-				
-		
-				gsap.utils.toArray('.title--inner-main').forEach(element => {
-					gsap.fromTo(element,{
-						y: '130%',
-						rotateX: "-40deg",
-						opacity: 0 
-							}, {
-								y: "0%",
-							rotateX: 0,
-							opacity: 1,
-		
-							duration: 2,
-							stagger: .13,
-							ease: "power3.out",
-							delay: .2,
-		
-						}
-					);
-				});
-		
-				gsap.utils.toArray('.title--inner').forEach(element => {
-					gsap.fromTo(element,{
-					y: '110%',
-					rotateX: "-40deg",
-					opacity: 0 
-						}, {
-							y: "0%",
-						rotateX: 0,
-						opacity: 1,
-		
-						duration: 2,
-						stagger: .13,
-						ease: "power3.out",
-						delay: .2,
-						// force3D: true,
-						scrollTrigger: {
-							trigger: element,
-							// scrub: true,
-							start: "bottom bottom"
-						} 
-						}
-					);
-				});
-		
-					// gsap.fromTo(".footer__outer",{
-					// 	y: '-20%',
-					// 	}, {
-					// 	y: "0%",
-					// 	duration: 0.3,
-		
-					// 	ease: "none",
-					// 	// pin: true,
-					// 	// force3D: true,
-					// 	scrollTrigger: {
-					// 		trigger: ".footer",
-					// 		start: 'top bottom',
-					// 		// pin: true,
-					// 		// toggleActions: "play reverse play reverse"
-					// 		// scrub: true,
-					// 		// pinSpacing: false
-					// 		// start: "top c"
-					// 	} 
-					// }
-					// );
-		
-		
-				gsap.utils.toArray('.statictics--inner').forEach(element => {
-					gsap.fromTo(element, {
-						opacity: 0,
-						y: "25px"
-					}, {
-						y: "0%",
-						duration: 1,
-						opacity: 1 ,
-						// stagger: .2,
-						// ease: "ease",
-						scrollTrigger: {
-							trigger: element,
-							// scrub: true,
-							start: "bottom bottom"
-						} 
-					});
-				});
-		
-		
-		
-				gsap.utils.toArray('.hero__subtitle').forEach(element => {
-					gsap.fromTo(element,{
-					y: '-50%',
-					// rotateX: "-40deg",
-					opacity: 0 
-						}, {
-							y: "0%",
-						// rotateX: 0,
-						opacity: 1,
-		
-						duration: 2,
-						// stagger: .13,
-						ease: "power3.out",
-						delay: 2,
-					
-						}
-					);
-				});
-				
-		
-		
-			gsap.utils.toArray('.button-more').forEach(element => {
+		gsap.utils.toArray('.property__pic').forEach(element => {
+			ScrollTrigger.create({
+				trigger: element,
+				// scrub: true,
+				toggleClass: 'is-inview',
+				// this toggles the class again when you scroll back up:
+				// toggleActions: 'play none none none',
+				// this removes the class when the scrolltrigger is passed:
+				// once: true,
+			});
+		});
+
+			gsap.utils.toArray('.traktors__info-wrap').forEach(element => {
 				ScrollTrigger.create({
 					trigger: element,
 					start: 'bottom bottom',
@@ -1432,16 +1377,169 @@ if(document.querySelector('.rent-details__slider')){
 					// once: true,
 				});
 			});
+		
+
+		gsap.utils.toArray('.title--inner-main').forEach(element => {
+			gsap.fromTo(element,{
+				y: '130%',
+				rotateX: "-40deg",
+				opacity: 0 
+					}, {
+						y: "0%",
+					rotateX: 0,
+					opacity: 1,
+
+					duration: 2,
+					stagger: .13,
+					ease: "power3.out",
+					delay: .2,
+
+				}
+			);
+		});
+
+		gsap.utils.toArray('.title--inner').forEach(element => {
+			gsap.fromTo(element,{
+			y: '110%',
+			rotateX: "-40deg",
+			opacity: 0 
+				}, {
+					y: "0%",
+				rotateX: 0,
+				opacity: 1,
+
+				duration: 2,
+				stagger: .13,
+				ease: "power3.out",
+				delay: .2,
+				// force3D: true,
+				scrollTrigger: {
+					trigger: element,
+					// scrub: true,
+					start: "bottom bottom"
+				} 
+				}
+			);
+		});
+
+			// gsap.fromTo(".footer__outer",{
+			// 	y: '-20%',
+			// 	}, {
+			// 	y: "0%",
+			// 	duration: 0.3,
+
+			// 	ease: "none",
+			// 	// pin: true,
+			// 	// force3D: true,
+			// 	scrollTrigger: {
+			// 		trigger: ".footer",
+			// 		start: 'top bottom',
+			// 		// pin: true,
+			// 		// toggleActions: "play reverse play reverse"
+			// 		// scrub: true,
+			// 		// pinSpacing: false
+			// 		// start: "top c"
+			// 	} 
+			// }
+			// );
+
+
+		gsap.utils.toArray('.statictics--inner').forEach(element => {
+			gsap.fromTo(element, {
+				opacity: 0,
+				y: "25px"
+			}, {
+				y: "0%",
+				duration: 1,
+				opacity: 1 ,
+				// stagger: .2,
+				// ease: "ease",
+				scrollTrigger: {
+					trigger: element,
+					// scrub: true,
+					start: "bottom bottom"
+				} 
+			});
+		});
+
+
+
+		gsap.utils.toArray('.hero__subtitle').forEach(element => {
+			gsap.fromTo(element,{
+			y: '-50%',
+			// rotateX: "-40deg",
+			opacity: 0 
+				}, {
+					y: "0%",
+				// rotateX: 0,
+				opacity: 1,
+
+				duration: 2,
+				// stagger: .13,
+				ease: "power3.out",
+				delay: 2,
+			
+				}
+			);
+		});
+		
+
+
+	gsap.utils.toArray('.button-more').forEach(element => {
+		ScrollTrigger.create({
+			trigger: element,
+			start: 'bottom bottom',
+			scrub: true,
+			toggleClass: 'is-inview-line',
+			// this toggles the class again when you scroll back up:
+			toggleActions: 'play none none none',
+			// this removes the class when the scrolltrigger is passed:
+			// once: true,
+		});
+	});
+
 
 		
-				
-		
-			gsap.utils.toArray('.button-line').forEach(element => {
-				ScrollTrigger.create({
+
+	gsap.utils.toArray('.button-line').forEach(element => {
+		ScrollTrigger.create({
+			trigger: element,
+			toggleClass: 'is-inview',
+		});
+	});
+
+	if(screen.width>=1280){
+		gsap.utils.toArray('.is-animate').forEach(element => {
+
+			let parallax = element.getAttribute('data-speed');
+			let speed = parallax * 100 + '%';
+			gsap.fromTo(element, {
+				// duration: 5,
+				y: speed
+			}, {
+				y: "0%",
+				force3D: true,
+				scrollTrigger: {
 					trigger: element,
-					toggleClass: 'is-inview',
-				});
+					scrub: true,
+					// start: "top top"
+				} 
 			});
+		});
+	}
+}
+// Анимация и прелоадер
+	document.onreadystatechange = function () {
+	
+		if (document.readyState === "complete") {
+	
+			setTimeout(function () {
+				document.querySelector('.preloader').style.display = "none";
+				
+
+				initAnimation();
+
+
 			
 			}, 6000);
 		
@@ -1682,53 +1780,52 @@ if(screen.width>=1280){
 
 
 	// Анимация элементов
-	gsap.utils.toArray('.is-animate').forEach(element => {
 
-		let parallax = element.getAttribute('data-speed');
-		let speed = parallax * 100 + '%';
-		gsap.fromTo(element, {
-			// duration: 5,
-			y: speed
-		}, {
-			y: "0%",
-			force3D: true,
-			scrollTrigger: {
-				trigger: element,
-				scrub: true,
-				// start: "top top"
-			} 
-		});
-	});
 
 
 
 }
 
 
+
+
+function highlightTabs(event, tabs){
+	console.log(event.target);
+	let tablinks = document.querySelectorAll('.' + tabs);
+	if (event.target.classList.contains(tabs) ) {
+		console.log('Клик');
+		removeActivity(tablinks);
+		event.target.classList.add('active');
+		console.log(event.target);
+	}
+
+}
+
+function removeActivity (arrCollection) {
+	for (let i = 0; i<arrCollection.length; i++) {
+		arrCollection[i].classList.remove('active');
+		
+	}
+}
+
 let tabsEvent = document.getElementById('tabs_event');
 
-
 	if(tabsEvent){
+		tabsEvent.addEventListener('click', openList)
+		function openList(e) {
+			e.stopPropagation();
+			highlightTabs( e, 'tabs-common-links-js');
+			if (e.target.classList.contains('tabs-common-links-js') ) {
+				let tabcontent = document.querySelectorAll(".tabs-common-content");
+					
+				removeActivity(tabcontent);
+				document.getElementById(e.target.dataset.tab).classList.add('active')
 
-
-	tabsEvent.addEventListener('click', openList)
-	function openList(e) {
-		e.stopPropagation();
-		if (e.target.className === "tabs-common-links") {
-			let tabcontent = document.getElementsByClassName("tabs-common-content"),
-				tablinks = document.getElementsByClassName("tabs-common-links");
-			function removeActivity (arrCollection) {
-				for (let item of arrCollection) {
-					item.classList.remove('active');
-				}
+			
 			}
-			removeActivity(tablinks);
-			removeActivity(tabcontent);
-			e.target.classList.add('active');
-			document.getElementById(e.target.dataset.tab).classList.add('active')
 
+			
 		}
-	}
 	}
 
 

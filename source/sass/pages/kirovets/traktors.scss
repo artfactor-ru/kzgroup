@@ -130,7 +130,9 @@
 .traktors__number-icon.is-inview{
 	animation: dash 8s linear forwards 0.5s;
 }
-
+.nooverflow{
+	overflow:hidden;
+}
 
 @keyframes dash {
   to {
@@ -164,26 +166,47 @@
 }
 
 @media (min-width:767px){
-	
+	.traktors:nth-of-type(odd){
+		background-color: $bg-color-light-grey;
+		position: relative;
+		
+	}
+	// .traktors:nth-of-type(odd)::before{
+	// 	content: "";
+	// 	position: absolute;
+	// 	height: 100%;
+	// 	background-color: $bg-color-light-grey;
+	// 	right: -2%;
+	// 	width: 50px
+	// }
 	.traktors{
 		padding-bottom: 50px;
+
 	
 	}
 	.traktors__container{
 		position: relative;
+		display: flex;
+		box-sizing: border-box;
 	}
 	.traktors__nav{
 		display: inline-block;
-		position: fixed;
+		position: sticky;
+		// transform: translateX(-100%);
+		margin-left: -27px;
 		right: 2%;
-		height: 80%;
+    	// width: 0;
+		height: 100vh;
+		left: auto !important;
+	
 		top:30px;
 		z-index: 2000;
 		transition: opacity 0.1s linear;
-		opacity: 0;
+		// opacity: 0;
 		// display: none;
 		display: flex;
 		flex: column;
+
 		box-sizing: border-box;
 
 	}
@@ -193,7 +216,8 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding-top: 20px;
+		justify-content: center;
+		// padding-top: 20px;
 	}
 
 	.traktors__nav-link{
@@ -235,7 +259,7 @@
 		line-height: 40px;
 
 		color: $red-color;
-		padding-top: 30px;
+		padding-top: 10px;
 		padding-left: 0px;
 	}
 	.traktors__title--two-screen{
@@ -401,11 +425,11 @@
 		// display: inline-block;
 		
 		right: 2%;
-	
+		margin-left: -25px;
 		// top: 80px;
 	}
 	.traktors__nav-list{
-		padding-top: 30px;
+		// padding-top: 30px;
 	}
 
 	.traktors__nav-link{
@@ -431,7 +455,7 @@
 		line-height: 40px;
 
 		color: $red-color;
-		padding-top: 80px;
+		padding-top: 13px;
 
 	}
 
@@ -594,7 +618,7 @@
 		display: none;
 	}
 	.traktors{
-		padding-bottom: 45px;
+		padding-bottom: 30px;
 	
 	
 	}
@@ -603,10 +627,10 @@
 	}
 	.traktors__nav{
 		// display: inline-block;
-		height: 80;
+		// height: 80;
 		right: 3%;
 	
-		top: 70px;
+		// top: 70px;
 	}
 
 
