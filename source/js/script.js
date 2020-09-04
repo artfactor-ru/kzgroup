@@ -1068,10 +1068,23 @@ if(document.querySelector('.rent-details__slider')){
 				enableSwiper();
 			
 
-			btnMore = document.querySelectorAll('.traktors__text-wrap--tablet .button-more--traktors');
+		// if (document.querySelector('.history_slider')) {
+		// 	document.querySelector('.history_slider').classList.add('swiper-container');
+		// 	document.querySelector('.history_achieves--list').classList.add('swiper-wrapper');
+		// 	let statSlides = document.querySelectorAll('.history_achieves--list-item');
+		// 	for (let i = 0; i < statSlides.length; i++) {
 
-		}
-	};
+		// 		statSlides[i].classList.add('swiper-slide');
+		// 	}
+		// }
+
+		enableSwiper();
+
+
+		btnMore = document.querySelectorAll('.traktors__text-wrap--tablet .button-more--traktors');
+
+	}
+};
 
 
 	breakpoint.addListener(breakpointChecker);
