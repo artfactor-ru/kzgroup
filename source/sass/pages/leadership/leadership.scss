@@ -34,8 +34,25 @@
   margin-bottom: 15px;
 }
 
+.leadership_general--text{
+  position: relative;
+  &:before {
+    content:'';
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: $red-color;
+    transition: all 0.6s ease;
+  }
+}
+
 .leadership_general--text-about{
   margin-bottom: 20px;
+  display: inline-block;
+  position: relative;
 }
 
 .leadership_general--text-name{
@@ -47,6 +64,7 @@
   text-transform: uppercase;
   color: $black-grey;
   font-family: $font-bold-2-title;
+  transition: all 0.6s ease;
 }
 
 .leadership_general--text-position{
@@ -61,6 +79,7 @@
   font-family: $font-text-light;
   color: $grey-text-paragraf;
   font-size: 14px;
+  display: block;
 }
 
 .leadership_unit--list{
@@ -95,6 +114,10 @@
 .leadership_unit--pic{
   margin-bottom: 12px;
   font-size: 0;
+  min-height: 59%;
+  & img{
+    height: 100%;
+  }
 }
 
 .leadership_unit--pic img{
@@ -188,6 +211,7 @@
   }
   .leadership_unit--pic{
     margin-bottom: 17px;
+    min-height: 72%;
   }
   .leadership_unit--text-name{
     font-size: 14px;
@@ -206,12 +230,20 @@
     font-size: 16px;
     line-height: 26px;
   }
+  .leadership_general--text{
+    padding-bottom: 30px;
+  }
   .leadership_general{
     margin-bottom: 60px;
     min-height: 363px;
     &:hover{
-      .leadership_general--text-details{
-        height: 15px;
+      .leadership_general--text-name{
+        color: $red-color;
+      }
+      .leadership_general--text{
+        &:before{
+          width: 100%;
+        }
       }
     }
   }
@@ -231,13 +263,10 @@
     line-height: 36px;
   }
   .leadership_general--text-details{
-    height: 0;
     display: block;
     overflow: hidden;
     transition: .2s;
-    
   }
-
   .leadership_unit{
     width: 23%;
     margin-bottom: 55px;
@@ -251,17 +280,18 @@
   }
   .leadership_unit--pic{
     margin-bottom: 19px;
+    min-height: 73%;
   }
   .leadership_unit--text-name{
     font-size: 16px;
     line-height: 24px;
   }
-  
   .leadership_unit--text-position{
     font-size: 16px;
     line-height: 20px;
   }
 }
+
 
 @media(min-width: 1680px){
   .leadership__desc{
@@ -277,6 +307,9 @@
   .leadership_general--text-position{
     font-size: 36px;
     line-height: 38px;
+  }
+  .leadership_unit--pic{
+    min-height: 81%;
   }
   .leadership_unit{
     padding-bottom: 20px;
