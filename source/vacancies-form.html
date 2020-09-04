@@ -355,7 +355,7 @@
             </div>
         </aside>
     </nav>
-    <div class="scroll">
+    <div class="scroll-">
         <div class="vac-form__wrapper two-screen">
             <div class="container">
                 <a href="vacancies.html" class="popup_kirovets__back vacancies-d__breadcrumb">
@@ -738,10 +738,10 @@
                 secName.css('border' , '1px solid #C30215');
                 if (secName.next().is('.form-invalid-error') === false) {
                     $("<div class='form-invalid-error'>обязательное поле<div/>").insertAfter($(secName));
-                    $('html, body').animate({ scrollTop: $(".vac-f__second-name").offset().top - 70 }, 300);
+                    $('html, body').animate({ scrollTop: $(".vac-f__second-name").offset().top - 80 }, 300);
                     validSecName = false;
                 } else if (secName.next().is('.form-invalid-error') === true && secName.val() === "") {
-                    $('html, body').animate({ scrollTop: $(".vac-f__second-name").offset().top - 70 }, 300);
+                    $('html, body').animate({ scrollTop: $(".vac-f__second-name").offset().top - 80 }, 300);
                 }
             } else {
                 secName.next('.form-invalid-error').remove();
