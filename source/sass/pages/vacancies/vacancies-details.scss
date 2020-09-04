@@ -89,6 +89,7 @@
 
 
 .vacancies-d__download {
+  @extend %link-underline;
   position: relative;
   cursor: pointer;
   font-family: $font-regular;
@@ -233,6 +234,7 @@
 }
 
 .vacancies-d__download-status {
+
   font-family: $font-regular;
   font-size: 18px;
   color: #616161;

@@ -357,7 +357,6 @@
 </nav>
 <div class="scroll">
     <div class="vacancies-d__wrapper two-screen">
-
         <div class="vacancies-d__hero">
             <div class="container">
                 <a href="vacancies.html" class="popup_kirovets__back vacancies-d__breadcrumb">
@@ -509,7 +508,7 @@
                     </ul>
                     <div class="vacancies-d__contacts-map">
                         <script class="vacancies-d__yandex-map" type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aff8349f64b0479eaecacce90d53e50e0708533f9791d25f52ea4768837854da7&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=false"></script>
-                        
+
                     </div>
                 </div>
                 <div class="vacancies-d__main-building">
@@ -621,18 +620,18 @@
         })
     });
 
-    if ($('.vacancies-d__form-wrapper').css('display', 'block')) {
-        jQuery(function($){
-            $(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу
-                let block = $("#vac-d-form"); // определяем элемент, к которому будем применять условия (можем указывать ID, класс либо любой другой идентификатор элемента)
-                if (!block.is(e.target) // проверка условия если клик был не по нашему блоку
-                    && block.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
-                    $('.vacancies-d__form-wrapper').css('display', 'none');
-
-                }
-            });
-        });
-    }
+    // if ($('.vacancies-d__form-wrapper').css('display', 'block')) {
+    //     jQuery(function($){
+    //         $(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу
+    //             let block = $("#vac-d-form"); // определяем элемент, к которому будем применять условия (можем указывать ID, класс либо любой другой идентификатор элемента)
+    //             if (!block.is(e.target) // проверка условия если клик был не по нашему блоку
+    //                 && block.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+    //                 $('.vacancies-d__form-wrapper').css('display', 'none');
+    //
+    //             }
+    //         });
+    //     });
+    // }
 
     $('#vac-d-form__number').inputmask("+7 (999) 999-99-99");
     // добавляем правило для валидации телефона

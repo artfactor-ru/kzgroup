@@ -352,6 +352,7 @@ let scrollbar;
 
 //slider rent detail page
 if(document.querySelector('.rent-details__slider')){
+
 	let galleryThumbs = new Swiper('.gallery-thumbs', {
 		spaceBetween: 20,
 		slidesPerView: 5,
@@ -362,7 +363,7 @@ if(document.querySelector('.rent-details__slider')){
 		watchSlidesProgress: true,
 	});
 	let galleryTop = new Swiper('.gallery-top', {
-		spaceBetween: 10,
+		spaceBetween: 0,
 		loop: true,
 		navigation: {
 			nextEl: '.rent-details__slider-next-arrow',
