@@ -1,0 +1,156 @@
+.press-news-in {
+
+    &-title {
+        font-family: 'HeliosExtBold';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 46px;
+        line-height: 52px;
+        color: #171C28;
+        margin-bottom: 20px;
+
+        &-container {
+            width: 83%;
+        }
+    }
+
+    &-main {
+
+        &-photo {
+            width: 100%;
+
+            &-container {
+                width: 86%;
+            }
+
+            &-date {
+                font-family: 'MullerRegular';
+                font-size: 18px;
+                line-height: 136.6%;
+                color: #A6A2A2;
+                margin-bottom: 20px;
+            }
+
+            &-description {
+                font-family: 'MullerRegular';
+                font-style: italic;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 18px;
+                color: #171C28;
+                margin-bottom: 60px;
+            }
+        }
+
+        &-text {
+            font-family: 'MullerRegular';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 28px;
+            color: #000000;
+            width: 83%;
+            margin-bottom: 60px;
+
+            &-item {
+                margin-bottom: 26px;
+            }
+        }
+    }
+
+    &-text {
+        font-family: 'MullerRegular';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 150%;
+        color: #000000;
+        margin-top: -60px;
+        width: 83%;
+        margin-bottom: 60px;
+
+        &-item {
+            margin-bottom: 26px;
+        }
+    }
+
+    &-gallery {
+
+    }
+
+    &-video {
+        width: 86%;
+        margin-bottom: 45px;
+    }
+
+    &-reference {
+
+        &-container {
+            width: 85%;
+            margin-bottom: 35px;
+        }
+
+        &-title {
+            font-family: 'HeliosExtBold';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 136.6%;
+            color: #171C28;
+            margin-bottom:20px;
+        }
+
+        &-text {
+            font-family: 'MullerRegular';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 28px;
+            color: #000000;
+        }
+    }
+
+    &-pre-news {
+        display: flex;
+        flex-direction: row;
+        margin-right: 10%;
+        &-item {
+            font-family: 'MullerRegular';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 136.6%;
+            text-transform: uppercase;
+            color: #616161;
+        }
+    }
+}
+
+.press-button-more-news-in {
+    margin-top: -48px;
+
+}
+
+.press-news-in-button-share-background {
+    background-image: url(../../../img/press/icon/share.svg);
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-position-y: 45%;
+    margin-left: -0.5%;
+}
+
+.press-news-in-button-share {
+    margin-bottom: 60px;
+}
+
+.press-news-in-pre-news {
+    margin-bottom: 15%;
+
+    &-item {
+        margin-right: 90px;
+        cursor: pointer;
+    }
+}
+.parallax__item-news-in {
+    height: 745px;
+}
