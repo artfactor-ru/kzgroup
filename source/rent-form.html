@@ -396,7 +396,6 @@
                                 <span>Имя/Компания</span>
                                 <div class="vac-f__input-container">
                                     <input name="name"
-                                           onkeyup="this.value = this.value.replace(/[0-9]/i, '')"
                                            type="text"
                                            placeholder="Андрей"
                                            class="rent-form-name">
@@ -444,10 +443,16 @@
                             </label>
                             <label class="vac-f__form-label rent-form__main-label">
                                 <span class="rent-form__label-title">Площадь</span>
-                                <div class="vac-f__form-date">
-                                    <div class="vac-f__input-container">
-                                        <input type="number" placeholder="От" class="vac-f__form-date__input">
-                                        <input type="number" placeholder="До" class="vac-f__form-date__input">
+                                <div class="vac-f__form-date  rent-f__form-date">
+                                    <div class="vac-f__input-container rent-form__input-number">
+                                        <div>
+                                            <span>От</span>
+                                            <input type="number" class="vac-f__form-date  rent-f__form-date__input rent-f__form-numbers">
+                                        </div>
+                                        <div>
+                                            <span>До</span>
+                                            <input type="number" class="vac-f__form-date  rent-f__form-date__input rent-f__form-numbers">
+                                        </div>
                                     </div>
                                 </div>
                             </label>
@@ -459,19 +464,31 @@
                             </label>
                             <label class="vac-f__form-label rent-form__main-label">
                                 <span class="rent-form__label-title">Эл/мощность, кВт</span>
-                                <div class="vac-f__form-date">
-                                    <div class="vac-f__input-container">
-                                        <input type="number" placeholder="От" class="vac-f__form-date__input">
-                                        <input type="number" placeholder="До" class="vac-f__form-date__input">
+                                <div class="vac-f__form-date  rent-f__form-date">
+                                    <div class="vac-f__input-container rent-form__input-number">
+                                        <div>
+                                            <span>От</span>
+                                            <input type="number" class="vac-f__form-date  rent-f__form-date__input rent-f__form-numbers">
+                                        </div>
+                                        <div>
+                                            <span>До</span>
+                                            <input type="number" class="vac-f__form-date  rent-f__form-date__input rent-f__form-numbers">
+                                        </div>
                                     </div>
                                 </div>
                             </label>
                             <label class="vac-f__form-label rent-form__main-label">
                                 <span class="rent-form__label-title">Наличие г/п оборудования, тонн</span>
-                                <div class="vac-f__form-date">
-                                    <div class="vac-f__input-container">
-                                        <input type="number" placeholder="От" class="vac-f__form-date__input">
-                                        <input type="number" placeholder="До" class="vac-f__form-date__input">
+                                <div class="vac-f__form-date  rent-f__form-date">
+                                    <div class="vac-f__input-container rent-form__input-number">
+                                        <div>
+                                            <span>От</span>
+                                            <input type="number" class="vac-f__form-date  rent-f__form-date__input rent-f__form-numbers">
+                                        </div>
+                                        <div>
+                                            <span>До</span>
+                                            <input type="number" class="vac-f__form-date  rent-f__form-date__input rent-f__form-numbers">
+                                        </div>
                                     </div>
                                 </div>
                             </label>
@@ -511,10 +528,16 @@
                             </label>
                             <label class="vac-f__form-label rent-form__main-label">
                                 <span class="rent-form__label-title">Высота потолков</span>
-                                <div class="vac-f__form-date">
-                                    <div class="vac-f__input-container">
-                                        <input type="number" placeholder="От" class="vac-f__form-date__input">
-                                        <input type="number" placeholder="До" class="vac-f__form-date__input">
+                                <div class="vac-f__form-date  rent-f__form-date">
+                                    <div class="vac-f__input-container rent-form__input-number">
+                                        <div>
+                                            <span>От</span>
+                                            <input type="number" class="vac-f__form-date  rent-f__form-date__input rent-f__form-numbers">
+                                        </div>
+                                        <div>
+                                            <span>До</span>
+                                            <input type="number" class="vac-f__form-date  rent-f__form-date__input rent-f__form-numbers">
+                                        </div>
                                     </div>
                                 </div>
                             </label>
@@ -527,8 +550,8 @@
                                             <p class="rent-form__radio--style"></p>
                                             <span class="rent-form__radio-name rent-form__radio-name--irregular">Не важно</span>
                                         </label>
-                                        <label for="">
-                                            <input name="jd-vetka" type="text" placeholder="Не менее" class="jd-branch-style vac-f__form-date__input rent-form__input-irregular">
+                                        <label class="rent-form__input-radio-custom">
+                                            <input name="jd-vetka" type="text" placeholder="Не менее" class="jd-branch-style vac-f__form-date  rent-f__form-date__input rent-form__input-irregular">
                                         </label>
                                     </div>
                                 </div>
@@ -556,10 +579,16 @@
                                     <span class="rent-form__label-title">Офис (кв.м)</span>
                                 </div>
 
-                                <div class="vac-f__form-date">
-                                    <div class="vac-f__input-container">
-                                        <input type="number" placeholder="От" class="vac-f__form-date__input">
-                                        <input type="number" placeholder="До" class="vac-f__form-date__input">
+                                <div class="vac-f__form-date  rent-f__form-date">
+                                    <div class="vac-f__input-container rent-form__input-number">
+                                        <div>
+                                            <span>От</span>
+                                            <input type="number" class="vac-f__form-date  rent-f__form-date__input rent-f__form-numbers">
+                                        </div>
+                                        <div>
+                                            <span>До</span>
+                                            <input type="number" class="vac-f__form-date  rent-f__form-date__input rent-f__form-numbers">
+                                        </div>
                                     </div>
                                 </div>
                             </label>
@@ -568,10 +597,16 @@
                                     <span class="rent-form__label-title">Дополнительно:</span>
                                     <span class="rent-form__label-title">Открытая площадка (кв.м)</span>
                                 </div>
-                                <div class="vac-f__form-date">
-                                    <div class="vac-f__input-container">
-                                        <input type="number" placeholder="От" class="vac-f__form-date__input">
-                                        <input type="number" placeholder="До" class="vac-f__form-date__input">
+                                <div class="vac-f__form-date  rent-f__form-date">
+                                    <div class="vac-f__input-container rent-form__input-number">
+                                        <div>
+                                            <span>От</span>
+                                            <input type="number" class="vac-f__form-date  rent-f__form-date__input rent-f__form-numbers">
+                                        </div>
+                                        <div>
+                                            <span>До</span>
+                                            <input type="number" class="vac-f__form-date  rent-f__form-date__input rent-f__form-numbers">
+                                        </div>
                                     </div>
                                 </div>
                             </label>
@@ -622,10 +657,8 @@
         let validPhone = false;
         $('.rent-form__main-form').submit(function (event) {
             event.preventDefault();
-
             let name = $('.rent-form-name');
             let number = $('.rent-details-number');
-
             if (number.val() === "") {
                 number.css('border' , '1px solid #C30215');
                 if (number.next().is('.form-invalid-error') === false) {
@@ -640,7 +673,6 @@
                 number.css('border' , '1px solid #dce0e3');
                 validPhone = true;
             }
-
             if (name.val() === "") {
                 name.css('border' , '1px solid #C30215');
                 if (name.next().is('.form-invalid-error') === false) {
@@ -655,9 +687,6 @@
                 name.css('border' , '1px solid #dce0e3');
                 validName = true;
             }
-
-
-
             if(validName === true  && validPhone === true) {
                 $(".rent-form__main-form").unbind('submit').submit();
             }

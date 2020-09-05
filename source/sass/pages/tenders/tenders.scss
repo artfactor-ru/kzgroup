@@ -1,0 +1,108 @@
+.tenders__main {
+  padding: 45px 0;
+}
+
+.tab-tenders {
+  margin-right: 30% !important;
+}
+
+.b-table {
+  &__header {
+    background-color: #171C28;
+    height: 64px;
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+  }
+  &__item {
+    color: #F2F4F7;
+    font-family: $font-text-light;
+    font-size: 14px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 20px;
+    &-col-1 {
+      width: 22%;
+    }
+    &-col-2 {
+      width: 28%;
+    }
+    &-col-3 {
+      width: 15%;
+    }
+    &-col-4 {
+      width: 8%;
+    }
+    &-col-5 {
+      width: 9%;
+    }
+    &-col-6 {
+      width: 8%;
+    }
+    &-col-7 {
+      width: 10%;
+    }
+    &--search {
+      background-color: #A6A2A2;
+      &-icon {
+        margin-right: 25px;
+      }
+      & input {
+        background-color: transparent;
+        border: none;
+        color: #F2F4F7;
+        font-size: 14px;
+        font-family: $font-text-regular;
+        &:focus {
+          border: transparent;
+          background-color: transparent;
+        }
+        &::-webkit-input-placeholder {
+          color: #F2F4F7;
+        }
+        &::-moz-placeholder {
+          color: #F2F4F7;
+        }
+      }
+    }
+  }
+}
+
+.b-table__container {
+  display: flex;
+  border-bottom: 1px solid #CECECE;
+}
+
+.b-table__row {
+  display: flex;
+  flex-direction: row;
+  font-family: $font-text-regular;
+  color: #171C28;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+  &-1 {
+    width: 50%;
+    font-size: 20px;
+  }
+  &-2 {
+    width: 15%;
+  }
+  &-3 {
+    width: 8%;
+  }
+  &-4 {
+    width: 9%;
+  }
+  &-5 {
+    width: 8%;
+  }
+  &-6 {
+    width: 10%;
+  }
+}

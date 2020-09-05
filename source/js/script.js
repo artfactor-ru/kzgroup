@@ -453,9 +453,6 @@ let scrollbar;
 	
 
 
-//slider rent detail page
-
-
 
 // Инициализация свайперов
 	let swiperStatistics;
@@ -538,7 +535,7 @@ let scrollbar;
 				watchSlidesProgress: true,
 			});
 			let galleryTop = new Swiper('.gallery-top', {
-				spaceBetween: 10,
+				spaceBetween: 0,
 				loop: true,
 				navigation: {
 					nextEl: '.rent-details__slider-next-arrow',

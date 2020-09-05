@@ -194,8 +194,15 @@
 }
 
 .vac-f__form-education-btn {
-  @extend %button_underline;
+  @extend %link-underline;
+  cursor: pointer;
+  font-family: $font-regular;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #616161;
+  border: none;
   margin: 0 30px 20px 0;
+  outline: none;
 }
 
 .vac-f__form-select-arrow {
@@ -531,6 +538,10 @@
   }
   .vac-f__input-container {
     display: flex;
+    &--req {
+      flex-direction: column;
+    }
+
   }
   .vac-form__wrapper {
     padding: 85px 0;

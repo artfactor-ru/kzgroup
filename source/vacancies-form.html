@@ -355,7 +355,7 @@
             </div>
         </aside>
     </nav>
-    <div class="scroll">
+    <div class="scroll-">
         <div class="vac-form__wrapper two-screen">
             <div class="container">
                 <a href="vacancies.html" class="popup_kirovets__back vacancies-d__breadcrumb">
@@ -398,13 +398,13 @@
                                 </h5>
                                 <label class="vac-f__form-label">
                                     <span>Фамилия</span>
-                                    <div class="vac-f__input-container">
+                                    <div class="vac-f__input-container vac-f__input-container--req">
                                         <input onkeyup="this.value = this.value.replace(/[0-9]/i, '')" class="vac-f__second-name" type="text" placeholder="Петров">
                                     </div>
                                 </label>
                                 <label class="vac-f__form-label">
                                     <span>Имя</span>
-                                    <div class="vac-f__input-container">
+                                    <div class="vac-f__input-container  vac-f__input-container--req">
                                         <input  name="input-name"
                                                 onkeyup="this.value = this.value.replace(/[0-9]/i, '')"
                                                 type="text"
@@ -439,7 +439,7 @@
                                 </label>
                                 <label class="vac-f__form-label">
                                     <span>Телефон</span>
-                                    <div class="vac-f__input-container">
+                                    <div class="vac-f__input-container  vac-f__input-container--req">
                                         <input type="phone"
                                                class="input-phone-field"
                                                name="phone-number"
@@ -498,7 +498,9 @@
                                 </div>
                                 <div class="more-education"></div>
                                 <div class="vac-f__input-container--separate vac-f__input-container--adding">
-                                    <a class="vac-f__form-education-btn">Указать ещё одно место обучения</a>
+                                    <a class="vac-f__form-education-btn test_link">
+                                        <span class="label">Указать ещё одно место обучения</span>
+                                    </a>
                                 </div>
                             </div>
                             <div class="vac-f__form-block">
@@ -736,10 +738,10 @@
                 secName.css('border' , '1px solid #C30215');
                 if (secName.next().is('.form-invalid-error') === false) {
                     $("<div class='form-invalid-error'>обязательное поле<div/>").insertAfter($(secName));
-                    $('html, body').animate({ scrollTop: $(".vac-f__second-name").offset().top - 70 }, 300);
+                    $('html, body').animate({ scrollTop: $(".vac-f__second-name").offset().top - 80 }, 300);
                     validSecName = false;
                 } else if (secName.next().is('.form-invalid-error') === true && secName.val() === "") {
-                    $('html, body').animate({ scrollTop: $(".vac-f__second-name").offset().top - 70 }, 300);
+                    $('html, body').animate({ scrollTop: $(".vac-f__second-name").offset().top - 80 }, 300);
                 }
             } else {
                 secName.next('.form-invalid-error').remove();

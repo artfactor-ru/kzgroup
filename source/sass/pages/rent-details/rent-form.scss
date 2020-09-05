@@ -79,7 +79,28 @@
   transform: scale(1);
 }
 
+.rent-form__input-number {
+  color: #616161;
+  display: flex;
+  & div {
+    display: flex;
+    width: 30%;
+    align-items: center;
+  }
+  & span {
+    text-transform: unset;
+  }
+}
 
+.rent-f__form-numbers {
+  margin-left: 14px;
+  margin-right: 14px;
+  width: 100% !important;
+}
+
+.rent-form__input-radio-custom {
+  width: 100%;
+}
 
 @media screen and (max-width: 1366px) {
   .rent-form__nav-item__circle {
@@ -95,6 +116,22 @@
 }
 
 @media screen and (max-width: 1025px) {
+  .rent-form__input-number {
+    height: unset;
+    & span {
+      margin-right: 10px;
+    }
+    & input {
+      margin: 0;
+      height: 64px;
+    }
+    & div {
+      width: 50%;
+      flex-direction: column;
+
+    }
+  }
+
   .rent-form__nav-item a {
     width: 130px;
   }
@@ -117,6 +154,14 @@
 }
 
 @media screen and (max-width: 769px) {
+  .rent-form__input-number {
+    & div {
+      align-items: flex-start;
+    }
+    & span {
+      font-size: 15px;
+    }
+  }
   .rent-form__main-label {
     flex-direction: column;
     align-items: flex-start;
@@ -149,18 +194,33 @@
   .rent-form__submit-container {
     margin-top: 15px;
   }
-}
-
-@media screen and (max-width: 769px) {
   .rent-form__radio-name {
     margin-bottom: 0 !important;
   }
   .rent-form__input-irregular {
     height: 50px !important;
   }
+  .rent-form__input-irregular {
+    height: 100% !important;
+  }
+  .rent-f__form-date {
+    width: 347px;
+  }
 }
 
+
+
 @media screen and (max-width: 481px) {
+  .rent-form__input-number input {
+    height: 50px;
+  }
+  .rent-f__form-date {
+    width: 100%;
+  }
+  .rent-form__main-label span {
+    margin: 0;
+    font-size: 13px;
+  }
   .rent-form__radio--style {
     width: 32px;
     height: 32px;
@@ -173,6 +233,9 @@
   }
   .rent-form__radio-container .rent-form__label {
     width: 90%;
+  }
+  .rent-form__label--short {
+    width: 100%;
   }
 }
 
