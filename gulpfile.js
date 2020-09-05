@@ -111,13 +111,13 @@ gulp.task("image", function () {
 });
 
 // Оптимизация webp
-gulp.task("webp", function () {
-  return gulp.src("./build/img/**/*.{png,jpg}")
-    .pipe(webp({
-      quality: 90
-    }))
-    .pipe(gulp.dest("./build/img"));
-});
+// gulp.task("webp", function () {
+//   return gulp.src("./build/img/**/*.{png,jpg}")
+//     .pipe(webp({
+//       quality: 90
+//     }))
+//     .pipe(gulp.dest("./build/img"));
+// });
 
 // svg спрайт
 gulp.task("sprite", function () {
@@ -153,7 +153,7 @@ gulp.task("build", gulp.series(
   "copy",   // копируем необходимые файлы в папку build
   "sprite", // создаем svg спрайт
   "image",  // оптимизируем изображения
-  "webp",   // конвертируем в webp
+  // "webp",   // конвертируем в webp
 
   "css",     // собираем css
   "minifyjs", // минификация js

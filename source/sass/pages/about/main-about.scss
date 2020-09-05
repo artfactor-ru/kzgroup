@@ -4,6 +4,13 @@
 	font-size: 30px;
 }
 
+
+@media(max-width: 359px){
+	.main__title--about{
+		font-size: 25px;
+	}
+}
+
 @media(min-width: 767px){
 	.main__title--about{
 		font-size: 48px;
