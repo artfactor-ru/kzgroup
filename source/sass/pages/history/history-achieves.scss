@@ -27,19 +27,12 @@
 .history_achieves--list{
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
 }
-
-// .swiper-container-horizontal>.swiper-scrollbar {
-//     @extend %scroll-line;
-// }
- 
-// .swiper-scrollbar-drag{
-//     @extend %scroll-drag;
-// }
-
 
 .history_achieves--list-item{
     text-align: center;
+    width: 40%;
 }
 
 .history_achieves--list-item-pic{
@@ -103,6 +96,7 @@
             max-width: 850px;
             & .history__entry--text-title{
                 margin-bottom: 30px;
+                font-size: 36px;
             }
         }
     }
@@ -110,7 +104,7 @@
         justify-content: space-between;
     }
     .history_achieves--list-item{
-        width: 14%;
+        width: 11%;
         margin-bottom: 0px;
     }
     .history_achieves--text-subtitle{
