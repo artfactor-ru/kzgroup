@@ -127,7 +127,11 @@
 
 
 // }
-
+@media(max-width: 359px){
+	.main__title{
+		font-size: 25px;
+	}
+}
 @media(min-width: 767px){
 	
 	.main{

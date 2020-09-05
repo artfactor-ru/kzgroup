@@ -13,35 +13,46 @@ import ScrollbarSmoth from 'smooth-scrollbar';
 
 
 import barba from '@barba/core';
+// import barbaCss from '@barba/css';
 
-
-
+// barba.use(barbaCss);
 
 
 
 	if(document.querySelector('.barbapage')){
 
 		barba.init({
-			transitions: [{
-				name: 'opacity-transition',
-				leave(data) {
-				return gsap.to(data.current.container, {
-					opacity: 0
-				});
-				},
-				enter(data) {
-				return gsap.from(data.next.container, {
-					opacity: 0
-				});
-				}
-			}],
+			debug: true,
+			// transitions: [{
+			// 	name: 'opacity-transition',
+			// 	leave(data) {
+			// 	 gsap.to(data.current.container, {
+			// 	// 	opacity: 0
+			// 	//   });
+			// 	data.current.container.classList.add('active-katya');
+			// 	},
+			// 	enter(data) {
+			// 	  gsap.from(data.next.container, {
+			// 		opacity: 0
+			// 	  });
+			// 	}
+			//   }]
+		
+			
 
 		});
-		barba.hooks.enter(() => {
+		barba.hooks.enter((data) => {
+
+			// console.log(data.current.container);
+
+			data.next.container.classList.add('active');
+
+			// data.current.container.classList.add('show');
+			setTimeout(initAnimation, 10);
+		
 			initSlider();
-
-			initAnimation();
-
+			
+			
 			if(socialContainer){
 				socialInteraction()
 			}
@@ -53,15 +64,18 @@ import barba from '@barba/core';
 			
 			checkUrl('.tabs-common-links--barba');
 			
-			
+		
 			if(containerScroll){
-				scrollbar = ScrollbarSmoth.init(containerScroll, options);
+				// scrollbar = ScrollbarSmoth.init(containerScroll, options);
 				scrollbar.addListener(ScrollTrigger.update);
 		
 				eventOnScroll();
 			
 				
 			}
+				
+					
+				
 			// Взаимодействие с шапкой
 				if ( breakpoint.matches === true ) {
 					
@@ -69,7 +83,7 @@ import barba from '@barba/core';
 					if(header){	
 
 						headerShowAndHideDesktop();
-						console.log("ШАпка");
+					
 					}
 				
 			}else if ( breakpoint.matches === false ) {
@@ -82,7 +96,9 @@ import barba from '@barba/core';
 
 
 
-
+	function delay(ms) {
+		return new Promise(resolve => setTimeout(resolve, ms));
+	  }
 
 // import $ from "jquery";
 var $ = require( "jquery" );
@@ -145,9 +161,20 @@ function getCoords(elem) {
 function scrollToTop( element) {
 	let elementTopPosition = getCoords(element).top;
 
-	scrollbar.scrollTo(0, elementTopPosition, 600);
+	scrollbar.scrollTo(0, elementTopPosition, 1000);
 
 }
+
+let contactMuseum = document.querySelector('.hero-common_info__item--phone');
+if(contactMuseum){
+	contactMuseum.addEventListener('click', function(){
+
+		let contactBlock = document.querySelector('.contact-block');
+		scrollToTop(contactBlock);
+	})
+}
+
+
 // Скролл к определенному элементу музей
 function scrollToTopMuseum( element) {
 	let museumNavHeight = document.querySelector('.museum-nav').offsetHeight;
@@ -364,7 +391,7 @@ if(containerTabsScroll){
 
 function eventOnScroll(){
 	scrollbar.addListener(({ offset }) => {
-			
+		
 		// Анимация для кнопки подробнее нужно инициализировать чтобы появлялась при клике на табе
 		gsap.utils.toArray('.button-more').forEach(element => {
 			ScrollTrigger.create({
@@ -1058,32 +1085,6 @@ let scrollbar;
 				}
 		
 		
-				// if (swiperHistory1 != null) {
-				// 	swiperHistory1.destroy(true, true);
-				// 	swiperHistory1.update();
-				// }
-				// if (document.querySelector('.history__photos-1')) {
-				// 	document.querySelector('.history__photos-1').classList.remove('swiper-container');
-				// 	document.querySelector('.history__photos-1 .history__photos--container').classList.remove('swiper-wrapper');
-				// 	let statSlides = document.querySelectorAll('.history__photos-1 .history__photos__item');
-				// 	for (let i = 0; i < statSlides.length; i++) {
-				// 		statSlides[i].classList.remove('swiper-slide');
-				// 	}
-				// }
-		
-				// if (swiperHistory2 != null) {
-				// 	swiperHistory2.destroy(true, true);
-				// 	swiperHistory2.update();
-				// }
-				// if (document.querySelector('.history__photos-2')) {
-				// 	document.querySelector('.history__photos-2').classList.remove('swiper-container');
-				// 	document.querySelector('.history__photos-2 .history__photos--container').classList.remove('swiper-wrapper');
-				// 	let statSlides = document.querySelectorAll('.history__photos-2 .history__photos__item');
-				// 	for (let i = 0; i < statSlides.length; i++) {
-				// 		statSlides[i].classList.remove('swiper-slide');
-				// 	}
-				// }
-		
 				if(document.querySelector('.kirovets_tabs__container')){
 					if (swiperTabFeature1 != null) {
 						swiperTabFeature1.destroy(true, true);
@@ -1154,35 +1155,7 @@ let scrollbar;
 				}
 			}
 	
-			// if (document.querySelector('.history__photos-1')) {
-			// 	document.querySelector('.history__photos-1').classList.add('swiper-container');
-			// 	document.querySelector('.history__photos-1 .history__photos--container').classList.add('swiper-wrapper');
-			// 	let statSlides = document.querySelectorAll('.history__photos-1 .history__photos__item');
-			// 	for (let i = 0; i < statSlides.length; i++) {
-			// 		statSlides[i].classList.add('swiper-slide');
-			// 	}
-			// }
-	
-			// if (document.querySelector('.history__photos-2')) {
-			// 	document.querySelector('.history__photos-2').classList.add('swiper-container');
-			// 	document.querySelector('.history__photos-2 .history__photos--container').classList.add('swiper-wrapper');
-			// 	let statSlides = document.querySelectorAll('.history__photos-2 .history__photos__item');
-			// 	for (let i = 0; i < statSlides.length; i++) {
-			// 		statSlides[i].classList.add('swiper-slide');
-			// 	}
-			// }
-				enableSwiper();
-			
 
-		// if (document.querySelector('.history_slider')) {
-		// 	document.querySelector('.history_slider').classList.add('swiper-container');
-		// 	document.querySelector('.history_achieves--list').classList.add('swiper-wrapper');
-		// 	let statSlides = document.querySelectorAll('.history_achieves--list-item');
-		// 	for (let i = 0; i < statSlides.length; i++) {
-
-		// 		statSlides[i].classList.add('swiper-slide');
-		// 	}
-		// }
 
 		enableSwiper();
 
@@ -1457,7 +1430,7 @@ let initAnimation = function(){
 				scrollTrigger: {
 					trigger: element,
 					// scrub: true,
-					start: "bottom bottom"
+					// start: "bottom bottom"
 				} 
 			});
 		});
@@ -1506,6 +1479,8 @@ let initAnimation = function(){
 			trigger: element,
 			toggleClass: 'is-inview',
 		});
+
+
 	});
 
 	if(screen.width>=1280){
@@ -1790,13 +1765,13 @@ if(screen.width>=1280){
 
 
 function highlightTabs(event, tabs){
-	console.log(event.target);
+
 	let tablinks = document.querySelectorAll('.' + tabs);
 	if (event.target.classList.contains(tabs) ) {
-		console.log('Клик');
+	
 		removeActivity(tablinks);
 		event.target.classList.add('active');
-		console.log(event.target);
+	
 	}
 
 }

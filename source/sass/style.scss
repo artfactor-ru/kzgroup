@@ -33,7 +33,7 @@
 @import 'common/contact-block';
 @import 'common/contact-block-more3';
 @import 'common/gallery';
-
+@import 'common/activity';
 @import 'pages/main/frame';
 
 @import 'pages/about/main-about';
@@ -126,6 +126,9 @@
 @import 'pages/museum/museum-nav';
 @import 'pages/museum/museum-section';
 @import 'pages/museum/museum-history';
+
+
+@import 'pages/university/center';
 
 body{
 	margin: 0;
@@ -287,3 +290,65 @@ figure{
 .fancybox-caption__body{
 	font-family: $font-text-regular;
 }
+
+.barba_background-in{
+	position: relative;
+
+}
+.barbawrapper{
+	position: relative;
+}
+
+.barba_background{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+
+.barba_background::before, .barba_background::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	  transform: scaleX(1);
+	  transform-origin: center left;
+	transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .barba_background::before {
+	background-color: #ffffff;
+	animation-delay: 0.25s;
+	z-index: 1;
+  }
+  
+  .barba_background::after {
+	background-color: $bg-color-light-grey;
+	animation-delay: 0.10s;
+	z-index: 3;
+  }
+
+  .barbawrapper.active .barba_background::after, .barbawrapper.active .barba_background::before {
+	// transform: scaleX(1);
+	animation-name: bg-anim;
+	animation-duration: 1.2s;
+	animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	animation-fill-mode: forwards;
+
+  }
+
+
+  @keyframes bg-anim{
+	//   50%{
+	// 	transform: scaleX(1); 
+	// 	transform-origin: center left;
+	//   }
+	  100%{
+		transform: scaleX(0); 
+		transform-origin: center left;
+	  }
+  }

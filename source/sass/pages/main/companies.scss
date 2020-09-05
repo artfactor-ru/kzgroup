@@ -78,6 +78,9 @@
 .companies__thumbs{
     display: none;
 }
+.companies__thumbs-layear{
+    display: none;
+}
 .swiper-slide--companies .parallax__img-wrap{
     top:0;
     left: 0;
@@ -228,11 +231,26 @@
         z-index: 20;
         background: rgba(0, 4, 17, 0.5);
         backdrop-filter: blur(18px);
+
+        opacity: .98;
         box-sizing: border-box;
         padding-right: 8%;
        
         padding-top: 80px;
     }
+    // .companies__thumbs-layear{
+    //     display: block;
+    //     // right: 0;
+    //     background: rgba(0, 4, 17, 0.5);
+    //     left: 0;
+    //     top:0;
+    //     bottom: 0;
+    //     height: 100%;
+    //     position: absolute;
+    //     filter: blur(100px);
+    //     padding-right: 8%;
+       
+    // }
     .swiper-container--companies-thumbs{
         width: 100%;
         height: 100%;

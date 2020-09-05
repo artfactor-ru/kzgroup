@@ -8,6 +8,7 @@
   background-color: grey;
   width: 100%;
   height: 100%;
+  position: absolute;
 }
 
 .hero-common {
@@ -84,7 +85,7 @@
   position: absolute;
   bottom: 0;
   background-color: transparent;
-  background-blend-mode: multiply;
+  // background-blend-mode: multiply;
   backdrop-filter: blur(20px);
 }
 
@@ -130,7 +131,9 @@
   font-size: 16px;
   line-height: 100%;
 }
-
+.hero-common_info__item--phone{
+  display: none;
+}
 @media screen and (max-width: 1680px) {
   .hero-common__title {
     font-size: 64px;
@@ -165,6 +168,8 @@
     font-size: 14px;
     line-height: 20px;
   }
+
+
 }
 
 @media screen and (max-width: 1279px) {
@@ -228,6 +233,14 @@
   .hero-common_info__item{
     width: auto;
   }
+
+  .hero-common_info__item--phone{
+    display: none;
+  }
+  .hero-common_info__item:nth-child(3){
+    display: none;
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -280,10 +293,28 @@
   .hero-common_info__icon {
     margin-right: 10px;
   }
+ 
+  .hero-common_info__item{
+    display: none;
+  }
+  .hero-common_info__item--phone{
+    display: block;
+  }
+  .hero-common_info__item:last-child{
+    display: block;
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 415px) {
   .hero-common_info__link {
     font-size: 14px;
   }
+}
+
+
+@media(max-width: 359px){
+	.hero-common__title{
+		font-size: 25px;
+	}
 }

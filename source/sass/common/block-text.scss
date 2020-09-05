@@ -1,3 +1,8 @@
+.block_text--grey{
+    background-color: $bg-color-light-grey;
+}
+
+
 .block_text{
     padding-top: 50px;
     padding-bottom: 50px;
@@ -24,6 +29,31 @@
 .block_text__desc{
     @extend %block-text;
 }
+
+.block_text__paragraph{
+    @extend %block-text;
+    padding-top: 25px;
+}
+.block_text__smalllist{
+    @include list-destroy;
+    @extend %block-text;
+    padding-top: 10px;
+}
+.block_text__smalllist li{
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 28px;
+}
+.block_text__smalllist li::before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    background-color: $black-grey;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
 @media(min-width: 768px){
     .block_text__list{
         
@@ -36,6 +66,16 @@
      }
      .block_text__item{
         margin-bottom: 22px;
+    }
+
+    .block_text__paragraph{
+        padding-top: 30px;
+        width: 95%;
+    }
+
+    .block_text__smalllist{
+   
+        padding-top: 30px;
     }
 }
 @media(min-width: 1280px){
@@ -51,6 +91,16 @@
      .block_text__item{
         margin-bottom: 40px;
     }
+
+    .block_text__paragraph{
+        padding-top: 45px;
+        width: 90%;
+    }
+    .block_text__smalllist{
+   
+        padding-top: 45px;
+    }
+    
 }
 @media(min-width: 1680px){
     .block_text__list{
@@ -61,5 +111,18 @@
     }
     .block_text__item{
         margin-bottom: 40px;
+    }
+
+    .block_text__paragraph{
+        padding-top: 45px;
+        width: 80%;
+    }
+    .block_text__smalllist{
+        padding-top: 65px;
+        padding-left: 50px;
+    }
+    .block_text__smalllist li::before{
+        
+        width: 13px;
     }
 }
