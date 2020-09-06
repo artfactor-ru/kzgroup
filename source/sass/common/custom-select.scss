@@ -38,6 +38,9 @@
 
 .new-select__item:hover {
   background-color: #A6A2A2;
+  & span {
+    color: #fff;
+  }
 }
 
 .new-select__item span {
