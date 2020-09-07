@@ -17,35 +17,64 @@ import barba from '@barba/core';
 
 // barba.use(barbaCss);
 
-
+function delay(n) {
+	n = n || 2000;
+	return new Promise((done) => {
+		setTimeout(() => {
+			done();
+		}, n);
+	});
+}
 
 	if(document.querySelector('.barbapage')){
 
 		barba.init({
 			debug: true,
-			// transitions: [{
-			// 	name: 'opacity-transition',
-			// 	leave(data) {
-			// 	 gsap.to(data.current.container, {
-			// 	// 	opacity: 0
-			// 	//   });
-			// 	data.current.container.classList.add('active-katya');
-			// 	},
-			// 	enter(data) {
-			// 	  gsap.from(data.next.container, {
-			// 		opacity: 0
-			// 	  });
-			// 	}
-			//   }]
-		
+			sync: true,
+			transitions: [{
+				
+				name: 'opacity-transition',
+				async leave(data) {
+
+					data.current.container.classList.add('active');
+					// data.next.container.classList.add('active');
+				//  gsap.to(data.current.container, {
+				// 	opacity: 0
+				//   });
+					// bg.classList.remove('active');
+					const done = this.async();
+					await delay(1500);
+					
+					done();
+					
+				},
+				async enter(data) {
+					// const done = this.async();
+					
+					// await delay(1000);
+					
+					// done();
+					data.next.container.classList.add('show');
+
+				//   gsap.from(data.next.container, {
+				// 	opacity: 0
+				//   });
+				
+				}
+			  }]
+			
 			
 
 		});
+		let bg = document.querySelector('.barba_background');
 		barba.hooks.enter((data) => {
 
 			// console.log(data.current.container);
 
-			data.next.container.classList.add('active');
+			// data.next.container.classList.add('active');
+
+			
+			
 
 			// data.current.container.classList.add('show');
 			setTimeout(initAnimation, 10);
@@ -92,13 +121,13 @@ import barba from '@barba/core';
 					}
 			}
 		});
+
+		
 	}
 
 
 
-	function delay(ms) {
-		return new Promise(resolve => setTimeout(resolve, ms));
-	  }
+	
 
 // import $ from "jquery";
 var $ = require( "jquery" );
