@@ -74,7 +74,7 @@ gulp.task("minifyjs", function () {
   // return gulp.src("./source/js/**/*.js")
     // .pipe(babel())
     return browserify({entries: './source/js/script.js', debug: true})
-    .transform("babelify", { presets: ["@babel/preset-env"] })
+    .transform("babelify", { presets: ["@babel/preset-env"], plugins: ['@babel/transform-runtime'] })
     
         .bundle()
         .pipe(source('app.js'))
