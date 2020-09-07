@@ -460,8 +460,8 @@
                                             <svg class="vac-f__form-select-arrow" width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1.656 1.36724L1.65603 1.36721L1.65305 1.36374C1.61289 1.31698 1.56143 1.26853 1.49311 1.23318C1.4224 1.19658 1.34802 1.1814 1.27258 1.1814C0.979044 1.1814 0.75 1.44028 0.75 1.7488C0.75 1.86243 0.792681 2.01654 0.889966 2.13133L6.09482 8.47738L6.09477 8.47743L6.09846 8.48173C6.19427 8.59329 6.32888 8.66406 6.47892 8.66406C6.62897 8.66406 6.76357 8.59329 6.85939 8.48173L6.85943 8.48176L6.86263 8.47788L12.0946 2.13194L12.1202 2.10212C12.333 1.85438 12.2568 1.5227 12.093 1.332C11.9859 1.20735 11.8367 1.14939 11.6836 1.16721C11.54 1.18394 11.4181 1.26361 11.3321 1.36374L11.332 1.36371L11.3287 1.36775L6.50566 7.22781L1.656 1.36724Z" fill="black" stroke="black" stroke-width="0.5"/>
                                             </svg>
-                                            <select class="select" name="language">
-                                                <option disabled>Выбрать</option>
+                                            <select  class="select" name="language">
+<!--                                                <option disabled>Выбрать</option>-->
                                                 <option value="school">Общее</option>
                                                 <option value="middle">Среднее</option>
                                                 <option value="middle-prof">Среднее профессиональное</option>
@@ -469,6 +469,7 @@
                                             </select>
                                         </div>
                                     </label>
+
                                     <label class="vac-f__form-label">
                                         <span>Учебное заведение </span>
                                         <div class="vac-f__input-container">
@@ -636,62 +637,67 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js"></script>
 <script>
-    let customSelectFunc = function () {
-        $('.select').each(function() {
-            const _this = $(this),
-                selectOption = _this.find('option'),
-                selectOptionLength = selectOption.length,
-                selectedOption = selectOption.filter(':selected'),
-                duration = 450; // длительность анимации
 
-            _this.hide();
-            _this.wrap('<div class="select"></div>');
+    $('.vac-f__form-education-btn').on('click', function () {
+        let copy = $('#education-block').clone();-
+            copy.appendTo('.more-education');
+    });
+
+    $('.select').each(function() {
+        const _this = $(this),
+            selectOption = _this.find('option'),
+            selectOptionLength = selectOption.length,
+            selectedOption = selectOption.filter(':selected'),
+            duration = 450; // длительность анимации
+
+        _this.hide();
+        _this.wrap('<div class="select"></div>');
+        // $('<div>', {
+        //     class: 'new-select',
+        //     text: _this.children('option:disabled').text()
+        // }).insertAfter(_this);
+
+        const selectHead = _this.next('.new-select');
+        $('<div>', {
+            class: 'new-select__list'
+        }).insertAfter(selectHead);
+
+        const selectList = selectHead.next('.new-select__list');
+        for (let i = 1; i < selectOptionLength; i++) {
             $('<div>', {
-                class: 'new-select',
-                text: _this.children('option:disabled').text()
-            }).insertAfter(_this);
-
-            const selectHead = _this.next('.new-select');
-            $('<div>', {
-                class: 'new-select__list'
-            }).insertAfter(selectHead);
-
-            const selectList = selectHead.next('.new-select__list');
-            for (let i = 1; i < selectOptionLength; i++) {
-                $('<div>', {
-                    class: 'new-select__item',
-                    html: $('<span>', {
-                        text: selectOption.eq(i).text()
-                    })
+                class: 'new-select__item',
+                html: $('<span>', {
+                    text: selectOption.eq(i).text()
                 })
-                    .attr('data-value', selectOption.eq(i).val())
-                    .appendTo(selectList);
-            }
+            })
+                .attr('data-value', selectOption.eq(i).val())
+                .appendTo(selectList);
+        }
 
-            const selectItem = selectList.find('.new-select__item');
-            selectList.slideUp(0);
-            selectHead.on('click', function() {
-                if ( !$(this).hasClass('on') ) {
-                    $(this).addClass('on');
-                    selectList.slideDown(duration);
+        const selectItem = selectList.find('.new-select__item');
+        selectList.slideUp(0);
+        selectHead.on('click', function() {
+            if ( !$(this).hasClass('on') ) {
+                $(this).addClass('on');
+                selectList.slideDown(duration);
 
-                    selectItem.on('click', function() {
-                        let chooseItem = $(this).data('value');
+                selectItem.on('click', function() {
+                    let chooseItem = $(this).data('value');
 
-                        $('select').val(chooseItem).attr('selected', 'selected');
-                        selectHead.text( $(this).find('span').text() );
+                    $('select').val(chooseItem).attr('selected', 'selected');
+                    selectHead.text( $(this).find('span').text() );
 
-                        selectList.slideUp(duration);
-                        selectHead.removeClass('on');
-                    });
-
-                } else {
-                    $(this).removeClass('on');
                     selectList.slideUp(duration);
-                }
-            });
+                    selectHead.removeClass('on');
+                });
+
+            } else {
+                $(this).removeClass('on');
+                selectList.slideUp(duration);
+            }
         });
-    };
+    });
+
     //form validate
     $(document).ready(function () {
         let validName = false;
@@ -759,12 +765,6 @@
 
        let copy = $('#working-main-block').clone();-
        copy.appendTo('.working-another-block');
-    });
-
-    $('.vac-f__form-education-btn').on('click', function () {
-        customSelectFunc();
-        let copy = $('#education-block').clone();-
-       copy.appendTo('.more-education');
     });
 
     $('.input-phone-field').inputmask("+7 (999)999-99-99");
