@@ -31,9 +31,9 @@
                 animation: dash 6s linear 3s forwards infinite alternate;
             }
         </style>
-        <div class="preloader">
+        <!-- <div class="preloader">
             <svg class="preloader__icon"><use xlink:href="./img/sprite.svg#icon-logo-company"></use></svg>
-        </div>
+        </div> -->
         <div class="forheader">
     
             <header class="header">
@@ -77,8 +77,6 @@
             
              <nav class="nav">
                 <div class="nav_background"></div>
-    
-    
                  <div class="nav_list-wrap">
                     <article class="nav_list-scroll">
                         <div class="nav_list-left scrollbar-inner">
@@ -357,14 +355,94 @@
             </nav>  
     
             <div class="scroll">
-                <main class="leadership-detail"></main>
-            
-        
+                <section class="main parallax__item">
+                    <div class="parallax__img-wrap">
+                       <div class="parallax__img parallax__img--company_group " data-speed="-40">
+                          <div class="parallax__img--inner" style="background-image: url(./img/leadership/people-big/dyatchin.jpg);
+                                background-position: center;
+                                background-size: cover;">
+                                <!-- <a href="#" class="leadership-person__back">
+                                    <svg class="leadership-person__back-icon">
+                                        <use xlink:href="./img/sprite.svg#icon-arrow-popup"></use>
+                                    </svg>
+                                    вернуться
+                                </a> -->
+                          </div>
+                       </div>
+                    </div>
+                 </section>
+                <section class="leadership-person__text two-screen">
+                    <ul class="social__btn-list">
+                        <li class="social__btn-item social__btn-item--share">
+                           <button class="social__btn" style="background-image: url(./img/social-share.svg);"></button>
+                           <div class="social__dropdown">
+                              <h5 class="social__title">Поделиться:</h5>
+                              <ul class="social__link-list">
+                                 <li class="social__link-item">
+                                    <a class="social__link" href="" target="_blank">
+                                       <svg class="social__icon">
+                                          <use xlink:href="./img//sprite.svg#icon-vk"></use>
+                                       </svg>
+                                       <span class="visually-hidden">Vk</span>
+                                    </a>
+                                 </li>
+                                 <li class="social__link-item">
+                                    <a class="social__link" href="" target="_blank">
+                                       <svg class="social__icon">
+                                          <use xlink:href="./img//sprite.svg#icon-inst"></use>
+                                       </svg>
+                                       <span class="visually-hidden">Instagram</span>
+                                    </a>
+                                 </li>
+                                 <li class="social__link-item">
+                                    <a class="social__link" href="" target="_blank">
+                                       <svg class="social__icon">
+                                          <use xlink:href="./img//sprite.svg#icon-fb"></use>
+                                       </svg>
+                                       <span class="visually-hidden">Facebook</span>
+                                    </a>
+                                 </li>
+                                 <li class="social__link-item">
+                                    <a class="social__link" href="" target="_blank">
+                                       <svg class="social__icon">
+                                          <use xlink:href="./img//sprite.svg#icon-youtube"></use>
+                                       </svg>
+                                       <span class="visually-hidden">Youtube</span>
+                                    </a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </li>
+                        <li class="social__btn-item social__btn-item--message">
+                           <button class="social__btn" style="background-image: url(./img/social-message.svg);"></button>
+                           <div class="social__dropdown">
+                              <h5 class="social__title">Подписаться на новости</h5>
+                              <ul class="social__link-list">
+                                 <li class="social__link-item">
+                                    <a class="social__link" href="" target="_blank">
+                                       <svg class="social__icon">
+                                          <use xlink:href="./img//sprite.svg#icon-news"></use>
+                                       </svg>
+                                       <span class="visually-hidden">Подписаться</span>
+                                    </a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </li>
+                     </ul>
+                     <!-- <a href="#" class="leadership-person__back">
+                        <svg class="leadership-person__back-icon">
+                            <use xlink:href="./img/sprite.svg#icon-arrow-popup"></use>
+                        </svg>
+                        вернуться
+                    </a> -->
+                    <h1 class="leadership-person__name">Дятчин Руслан Валентинович</h1>
+                    <p class="leadership-person__position">Заместитель генерального директора по безопасности – начальник управления по безопасности</p>
+                    <p class="leadership-person__about">В 2004 году окончил Санкт-Петербургский государственный университет экономики и финансов по специальности «Менеджмент».<br>С 2003 по 2004 год работал директором ЗАО «Инвестиционная финансовая компания «Петросталь-инвест».<br>В 2003 году избран в состав Совета директоров ОАО «Кировский завод», участвуя в разработке и реализации политики развития предприятия.<br>С 2004 по 2005 год занимал должность директора по экономике, финансам и стратегическому развитию ООО «Киров-Станкомаш», руководя процессом подготовки и выполнения программ модернизации станочного парка ОАО «Кировский завод».<br>В 2005 году решением Совета директоров был назначен временно исполняющим обязанности генерального директора ОАО «Кировский завод».<br>29 июня 2006 года на годовом общем собрании акционеров избран генеральным директором Кировского завода.<br>С 2006 года является членом Президиума Союза промышленников и предпринимателей (работодателей) Санкт-Петербурга.</p>
+                </section>
                 <footer class="footer">
-
                     <div class="footer__outer">
                         <div class="container">
-
                             <div class="footer__row">
                                 <nav class="footer__nav">
                                     <ul class="footer__nav-list">
@@ -420,7 +498,6 @@
                                                 <button class="footer__contact-submit" type="submit"><svg class="footer__contact-submit-icon" width="40"><use xlink:href="./img/sprite.svg#icon-mail-submit"></use></svg></button>
                                             </div>
                                         </form>
-                                        
                                     </div>
                                         
                                         <ul class="footer__social-list">
@@ -448,15 +525,9 @@
                                                 </a>
                                             </li>
                                         </ul>
-                                    
-                            
                                 </div>
 
-
                             </div>
-                        
-                        
-                
 
                             <section class="copyright">
                                 <h6 class="copyright__title">Copyrights © ПАО "Кировский завод"</h6>

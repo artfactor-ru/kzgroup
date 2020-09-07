@@ -1,0 +1,94 @@
+.leadership-person__pic{
+    background-color: #000;
+}
+
+.leadership-person__text{
+    padding: 30px 20px 60px;
+}
+
+.leadership-person__name{
+    font-family: $font-bold-2-title;
+    margin-bottom: 10px;
+    font-size: 22px;
+    line-height: 1.1;
+}
+.leadership-person__position{
+    font-family: $font-regular;
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 1.2;
+}
+.leadership-person__about{
+    font-family: $font-text-light;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.leadership-person__back{
+    border: 0;
+    background: 0 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 16px;
+    color: #fff;
+    font-family: $font-regular;
+}
+
+.leadership-person__back-icon{
+    width: 68px;
+    height: 8px;
+    padding-right: 10px;
+    position: relative;
+    transition: all .5s ease;
+    will-change: transform;
+    fill: #fff;
+    & path{
+        fill: #fff;
+    }
+}
+
+.leadership-person__text{
+    position: relative;
+}
+  
+@media (min-width: 767px){
+    .leadership-person__text{
+        padding: 50px 60px 100px;
+    }
+    .leadership-person__name{
+        font-size: 26px;
+        line-height: 42px;
+    }
+}
+
+@media(min-width: 1280px){
+    .leadership-person__name{
+        line-height: 42px;
+    }
+    .leadership-person__position{
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    .leadership-person__about{
+        font-size: 16px;
+    }
+}
+
+@media(min-width: 1680px){
+    .leadership-person__name{
+        line-height: 46px;
+        line-height: 54px;
+        margin-bottom: 20px;
+    }
+    .leadership-person__position{
+        font-size: 24px;
+        line-height: 33px;
+    }
+    .leadership-person__about{
+        font-size: 18px;
+    }
+}
