@@ -10,13 +10,17 @@
     text-align: center;
     & .leadership-person__back{
         position: absolute;
-        top: 45px;
+        top: 65px;
         left: 15px;
     }
 }
 
 .leadership-person__text{
     padding: 30px 20px 60px;
+    & .social__btn{
+        width: 30px;
+        height: 30px;
+    }
 }
 
 .leadership-person__name{
@@ -46,32 +50,25 @@
     box-sizing: border-box;
     outline: 0;
     cursor: pointer;
-    font-size: 16px;
-    line-height: 16px;
+    font-size: 12px;
     color: #fff;
     font-family: $font-regular;
     display: block;
-}
-
-.leadership-person__back-icon{
-    width: 68px;
-    height: 8px;
-    padding-right: 10px;
-    position: relative;
-    transition: all .5s ease;
-    will-change: transform;
-    fill: #fff;
-    & path{
-        fill: #fff;
+    font-size: 12px;
+    & .leadership-person__back-icon{
+        width: 29px;
+        height: 8px;
+        padding-right: 10px;
+        position: relative;
+        transition: all .5s ease;
+        will-change: transform;
     }
 }
+
+
 
 .leadership-person__text{
     position: relative;
-    & .leadership-person__back{
-        font-size: 18px;
-        color: $grey-text-paragraf;
-    }
 }
 
 .xs-show{
@@ -84,11 +81,18 @@
 @media (min-width: 767px){
     .leadership-person__text{
         padding: 50px 60px 100px;
+        .leadership-person__back{
+            font-size: 16px;
+            .leadership-person__back-icon{
+                width: 47px;
+            }
+        }
     }
     .leadership-person__name{
         font-size: 26px;
         line-height: 42px;
     }
+    
 }
 
 @media(min-width: 1280px){
@@ -107,10 +111,26 @@
     .leadership-person__text{
         width: 60%;
         padding: 70px 105px 100px 40px;
+        .leadership-person__back{
+            font-size: 18px;
+            margin-bottom: 40px;
+            color: $grey-text-paragraf;
+            .leadership-person__back-icon{
+                width: 67px;
+            }
+            &:hover{
+                .leadership-person__back-icon {
+                    width: 75px;
+                }
+            }
+        }
+        
+        & .social__btn{
+            width: 50px;
+            height: 50px;
+        }
     }
-    .leadership-person__back{
-        margin-bottom: 40px;
-    }
+    
     .leadership-person__name{
         line-height: 42px;
         margin-bottom: 30px;
@@ -145,5 +165,8 @@
     }
     .leadership-person__about{
         font-size: 18px;
+    }
+    .leadership-person__back{
+        margin-bottom: 50px;
     }
 }
