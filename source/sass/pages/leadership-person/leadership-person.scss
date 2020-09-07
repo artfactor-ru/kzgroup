@@ -1,11 +1,18 @@
 .leadership-person{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .leadership-person__pic{
     background-color: #000;
     font-size: 0;
+    text-align: center;
+    & .leadership-person__back{
+        position: absolute;
+        top: 45px;
+        left: 15px;
+    }
 }
 
 .leadership-person__text{
