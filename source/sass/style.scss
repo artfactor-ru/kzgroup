@@ -6,23 +6,19 @@
 
 @import 'libs/swiperbundle';
 
+@import 'common/accordion';
 @import 'common/social-btn';
-
 @import 'common/footer';
-
 @import 'common/header';
-
 @import 'common/nav2';
 @import 'common/about';
 @import 'common/main';
-
-
 @import 'common/news';
-
 @import 'common/hero-section';
 @import 'common/tabs';
 @import 'common/pagination';
 @import 'common/custom-select';
+@import 'common/preloader';
 
 @import 'pages/main/frame';
 
@@ -79,8 +75,6 @@
 
 @import 'pages/press/press';
 
-
-@import 'common/preloader';
 
 body{
 	margin: 0;
