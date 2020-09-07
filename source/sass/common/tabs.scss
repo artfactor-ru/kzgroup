@@ -90,7 +90,7 @@
   }
   .tabs-common {
     position: relative;
-    height: 45px;
+    height: 43px;
     // overflow-x: scroll;
     width: 100%;
     overflow: hidden;
@@ -126,5 +126,12 @@
    
     border-bottom: 4px solid transparent;
   
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .tabs-common {
+    height: 29px;
   }
 }
