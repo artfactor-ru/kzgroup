@@ -103,13 +103,13 @@
     .leadership-person__pic{
         background-color: #000;
         height: 100%;
-        width: 40%;
+        width: 47%;
         display: flex;
         align-items: flex-end;
         font-size: 0;
     }
     .leadership-person__text{
-        width: 60%;
+        width: 53%;
         padding: 70px 105px 100px 40px;
         .leadership-person__back{
             font-size: 18px;
@@ -148,6 +148,9 @@
     .md-show{
         display: block;
     }
+    .leadership-person__back{
+        margin-bottom: 60px;
+    }
 }
 
 @media(min-width: 1680px){
@@ -165,6 +168,7 @@
     }
     .leadership-person__about{
         font-size: 18px;
+        line-height: 1.35;
     }
     .leadership-person__back{
         margin-bottom: 50px;
