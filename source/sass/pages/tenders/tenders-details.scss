@@ -1,0 +1,155 @@
+.tenders-d {
+  padding: 60px 0 60px 0;
+  font-family: $font-regular;
+  position: relative;
+}
+
+.tenders-d__main-socials {
+  top: 23%;
+  display: none;
+}
+
+.tenders-d__breadcrumb {
+  display: block;
+  font-size: 12px;
+}
+
+.tenders-d__link-back svg {
+  width: 40px;
+}
+
+.tenders-d__main-title {
+  @extend %block-title;
+  font-size: 22px;
+  margin: 20px 0;
+  margin-bottom: 25px;
+}
+
+.tenders-d__desc {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.tenders-d__list {
+  list-style: none;
+}
+
+.tenders-d__item {
+  display: flex;
+  padding: 33px 0;
+  border-bottom: 1px solid #CECECE;
+  align-items: center;
+  justify-content: space-between;
+  font-family: $font-text-light;
+  &-desc {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 0 13px;
+    width: 100%;
+  }
+  &-download {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #616161;
+    @extend %link-underline;
+    height: 20px;
+    &:after {
+      bottom: 0;
+    }
+    &:before {
+      bottom: 0;
+    }
+  }
+  &-icon {
+    min-width: 27px;
+  }
+}
+
+
+@media(min-width: 767px){
+  .tenders-d {
+    padding: 85px 0;
+  }
+  .tenders-d__link-back {
+    font-size: 16px;
+  }
+  .tenders-d__main-title {
+    font-size: 26px;
+    margin: 45px 0 35px 0;
+  }
+  .tenders-d__item-icon {
+    min-width: 30px;
+  }
+  .tenders-d__item-desc {
+    font-size: 14px;
+    padding: 0 35% 0 26px;
+    line-height: 24px;
+  }
+  .tenders-d__desc {
+    margin-bottom: 22px;
+  }
+  .tenders-d__item {
+    display: flex;
+    padding: 20px 16px;
+  }
+}
+@media(min-width: 1279px){
+  .tenders-d {
+    padding: 80px 0;
+  }
+  .tenders-d__link-back svg {
+    width: 60px;
+  }
+  .tenders-d__main-title {
+    margin: 45px 0 50px;
+    font-size: 36px;
+  }
+  .tenders-d__desc {
+    font-size: 22px;
+    line-height: 37px;
+    margin-bottom: 58px;
+  }
+  .tenders-d__item-icon {
+    min-width: 37px;
+  }
+  .tenders-d__item-desc {
+    font-size: 18px;
+    line-height: 28px;
+    padding: 0 35% 0 89px;
+  }
+  .tenders-d__item-download {
+    font-size: 16px;
+  }
+  .tenders-d__item {
+    padding: 33px 28px;
+  }
+}
+@media(min-width: 1679px){
+  .tenders-d {
+    padding: 120px 0;
+  }
+  .tenders-d__link-back svg {
+    width: 67px;
+  }
+  .tenders-d__main-title {
+    margin: 73px 0 35px;
+    font-size: 46px;
+  }
+  .tenders-d__desc {
+    font-size: 24px;
+    margin-bottom: 58px;
+  }
+  .tenders-d__item-desc {
+    padding: 0 35% 0 80px;
+    width: 85%;
+  }
+  .tenders-d__item {
+    padding: 30px 28px;
+  }
+  .tenders-d__item-download {
+    font-size: 18px;
+  }
+  .tenders-d__main-socials {
+    display: block;
+  }
+}
