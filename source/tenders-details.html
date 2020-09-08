@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Файлы по тендеру</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body>
+<style>
+    .preloader{
+        background-color: #ffffff;
+        width: 100vw;
+        z-index: 20000;
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .preloader__icon{
+        width: 130px;
+        height: 130px;
+        fill: none;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: dash 6s linear 3s forwards infinite alternate;
+    }
+</style>
+<div class="preloader">
+    <svg class="preloader__icon"><use xlink:href="./img/sprite.svg#icon-logo-company"></use></svg>
+</div>
+<header class="header">
+    <div class="container--header container--header--main">
+
+        <div class="header__wrapper">
+
+            <button class="c-nav-button js-nav-toggle" type="button">
+                <div class="c-nav-button_wrap">
+                    <div class="c-nav-button_icon">
+                        <span class="c-nav-button_line"></span>
+                        <span class="c-nav-button_line"></span>
+                        <span class="c-nav-button_line"></span>
+                    </div>
+                </div>
+            </button>
+            <a class="header__logo" href="">
+                <svg class="header__logo-icon"  viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                        <path d="M29.684 17.9667L17.9667 29.684L6.32028 17.9667L17.9667 6.32028L29.684 17.9667ZM27.7666 8.16666L23.3637 0H12.5696L8.16666 8.16666L0 12.5696V23.3637L8.16666 27.7666L12.5696 35.9333H23.3637L27.7666 27.7666L35.9333 23.3637V12.5696L27.7666 8.16666Z" fill="#ED1C24"/>
+                        <path d="M20.4522 6.32031L34.087 13.7058V19.9551L20.4522 6.32031ZM22.2986 34.158H16.0493L29.6841 20.5232L22.2986 34.158ZM1.77539 22.2986V15.9783L15.4102 29.613L1.77539 22.2986ZM13.6348 1.77539H19.8841L6.32031 15.4812L13.6348 1.77539Z" fill="#FFDD00"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0">
+                            <rect width="35.9333" height="35.9333" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+
+                <p class="header__logo-text">Кировский<br> завод</p>
+            </a>
+        </div>
+    </div>
+</header>
+<nav class="nav">
+    <div class="nav_background"></div>
+    <div class="nav_list-wrap">
+        <article class="nav_list-scroll">
+            <div class="nav_list-left scrollbar-inner">
+                <div class="nav_list-content">
+                    <div class="js-search-button">
+                        <div class="js-search-text">Поиск</div>
+                    </div>
+                    <ul class="nav_list">
+                        <li class="nav_item -dropdown js-dropdown">
+                            <div class="nav_link js-nav-link js-dropdown-toggle">
+                                <span class="nav_link_text">Компания</span>
+                                <svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+
+                            </div>
+                            <span class="nav_link_line"></span>
+                            <div class="nav_dropdown js-dropdown-list">
+                                <div class="nav_dropdown_wrap">
+                                    <ul class="nav_dropdown_list">
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Руководство</a>
+                                        </li>
+
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">История</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Музей</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Производственная система</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Охрана труда</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Профсоюз</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Реквизиты</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav_item -dropdown js-dropdown">
+                            <div class="nav_link js-nav-link js-dropdown-toggle">
+                                <span class="nav_link_text">Дочерние предприятия</span>
+                                <svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+
+                            </div>
+                            <span class="nav_link_line"></span>
+                            <div class="nav_dropdown js-dropdown-list">
+                                <div class="nav_dropdown_wrap">
+                                    <ul class="nav_dropdown_list">
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Петербургский тракторный завод завод «Петросталь»</a>
+                                        </li>
+
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Завод буровых технологий</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Кировский завод Газовые технологии</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Энергетический комплекс</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Тетрамет</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Локомотив</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#"> Проектно-конструкторское бюро «Автоматика»</a>
+                                        </li>
+
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#"> Центр метрологии, испытаний и охраны труда</a>
+                                        </li>
+
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#"> Предприятия социальной сферы</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <li class="nav_item">
+                            <a class="nav_link js-nav-link" href="#">
+                                <span class="nav_link_text">Корпоративный университет</span>
+                                <span class="nav_link_line"></span>
+                            </a>
+                        </li>
+
+                        <li class="nav_item">
+                            <a class="nav_link js-nav-link" href="#">
+                                <span class="nav_link_text">Вакансии</span>
+                                <span class="nav_link_line"></span>
+                            </a>
+                        </li>
+
+                        <li class="nav_item -dropdown js-dropdown">
+
+
+                            <div class="nav_link js-nav-link js-dropdown-toggle">
+                                <span class="nav_link_text">Пресс-Центр</span>
+                                <svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+                            </div>
+                            <div class="nav_dropdown js-dropdown-list">
+                                <div class="nav_dropdown_wrap">
+                                    <ul class="nav_dropdown_list">
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Новости</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Видеогалерея</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Пресса о нас</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Фотогалерея</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Контакты</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav_item -dropdown js-dropdown">
+
+
+                            <div class="nav_link js-nav-link js-dropdown-toggle">
+                                <span class="nav_link_text">Акционерам и инвесторам</span>
+                                <svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+                            </div>
+                            <div class="nav_dropdown js-dropdown-list">
+                                <div class="nav_dropdown_wrap">
+                                    <ul class="nav_dropdown_list">
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Информация, подлежащая раскрытию</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Раскрытие информации дочерними обществами</a>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+
+
+                        <li class="nav_item">
+                            <a class="nav_link js-nav-link" href="#">
+                                <span class="nav_link_text">Продажа активов</span>
+                                <span class="nav_link_line"></span>
+                            </a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav_link js-nav-link" href="#">
+                                <span class="nav_link_text">Тендеры</span>
+                                <span class="nav_link_line"></span>
+                            </a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav_link js-nav-link" href="#">
+                                <span class="nav_link_text">Аренда помещений	</span>
+                                <span class="nav_link_line"></span>
+                            </a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav_link js-nav-link" href="#">
+                                <span class="nav_link_text">Контакты</span>
+                                <span class="nav_link_line"></span>
+                            </a>
+                        </li>
+
+
+
+                        <li class="nav_item">
+                            <a class="nav_link nav_link--policy js-nav-link" href="#">
+                                <span class="nav_link_text">Использование сайта</span>
+                                <span class="nav_link_line"></span>
+                            </a>
+                        </li>
+                    </ul>
+
+
+                    <div class="nav_lang nav_lang--mobile">
+                        <div class="nav_lang-wrap">
+                            <ul class="nav_lang-list">
+                                <li class="nav_lang-item">
+                                    <a class="nav_lang-link" href="">En</a>
+                                </li>
+                                <li class="nav_lang-item">
+                                    <a class="nav_lang-link" href="">Ru</a>
+                                </li>
+                                <li class="nav_lang-item">
+                                    <a class="nav_lang-link" href="">De</a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </article>
+
+
+
+    </div>
+    <div class="nav_search">
+        <article class="search-wrap">
+            <div class="search">
+                <input class="search_input o-input -search js-search-input" type="text" placeholder="Поиск" value="">
+                <div class="search_results js-search-results"></div>
+            </div>
+        </article>
+    </div>
+    <aside class="nav_aside">
+        <ul class="nav_social">
+            <li class="nav_social_item">
+                <a class="nav_social_link" href="#" target="_blank">
+
+
+                    <svg class="nav_social_icon" ><use xlink:href="./img/sprite.svg#icon-fb"></use></svg>
+                </a>
+            </li>
+            <li class="nav_social_item">
+                <a class="nav_social_link" href="#" target="_blank">
+                    <svg class="nav_social_icon" ><use xlink:href="./img/sprite.svg#icon-vk"></use></svg>
+
+                </a>
+            </li>
+            <li class="nav_social_item">
+                <a class="nav_social_link" href="#" target="_blank">
+                    <svg class="nav_social_icon" ><use xlink:href="./img/sprite.svg#icon-youtube"></use></svg>
+
+                </a>
+            </li>
+            <li class="nav_social_item">
+                <a class="nav_social_link" href="#" target="_blank">
+
+                    <svg class="nav_social_icon" ><use xlink:href="./img/sprite.svg#icon-inst"></use></svg>
+                </a>
+            </li>
+        </ul>
+        <div class="nav_lang nav_lang--desktop">
+            <div class="nav_lang-wrap">
+                <ul class="nav_lang-list">
+                    <li class="nav_lang-item">
+                        <a class="nav_lang-link" href="">Ru</a>
+                    </li>
+                    <li class="nav_lang-item">
+                        <a class="nav_lang-link" href="">En</a>
+                    </li>
+                    <li class="nav_lang-item">
+                        <a class="nav_lang-link" href="">De</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </aside>
+</nav>
+
+<div class="scroll">
+    <div class="tenders-d two-screen">
+        <ul class="social__btn-list tenders-d__main-socials">
+            <li class="social__btn-item social__btn-item--share">
+                <button class="social__btn" style="background-image: url(./img/social-share.svg);"></button>
+
+                <div class="social__dropdown">
+                    <h5 class="social__title">Поделиться:</h5>
+                    <ul class="social__link-list">
+                        <li class="social__link-item">
+                            <a class="social__link" href="" target="_blank">
+                                <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-vk"></use></svg>
+                                <span class="visually-hidden">Vk</span>
+                            </a>
+                        </li>
+                        <li class="social__link-item">
+                            <a class="social__link" href="" target="_blank">
+                                <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-inst"></use></svg>
+                                <span class="visually-hidden">Instagram</span>
+                            </a>
+                        </li>
+                        <li class="social__link-item">
+                            <a class="social__link" href="" target="_blank">
+                                <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-fb"></use></svg>
+                                <span class="visually-hidden">Facebook</span>
+                            </a>
+                        </li>
+
+                        <li class="social__link-item">
+                            <a class="social__link" href="" target="_blank">
+                                <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-youtube"></use></svg>
+                                <span class="visually-hidden">Youtube</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="social__btn-item social__btn-item--message">
+                <button class="social__btn" style="background-image: url(./img/social-message.svg);"></button>
+                <div class="social__dropdown">
+                    <h5 class="social__title">Подписаться на новости</h5>
+                    <ul class="social__link-list">
+                        <li class="social__link-item">
+                            <a class="social__link" href="" target="_blank">
+                                <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-news"></use></svg>
+                                <span class="visually-hidden">Подписаться</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+        </ul>
+        <div class="container">
+            <a href="tenders.html" class="popup_kirovets__back tenders-d__link-back tenders-d__breadcrumb">
+                <svg class="popup_kirovets__back-icon"><use xlink:href="./img/sprite.svg#icon-arrow-popup"></use></svg>
+                вернуться в «тендеры»
+            </a>
+            <h1 class="tenders-d__main-title">Файлы по тендеру</h1>
+            <p class="tenders-d__desc">Выполнение строительно-монтажных работ по объекту: «Производство специальных сталей и сплавов». Система электроснабжения. Электроснабжение мостовых кранов, вспомогательного технологического оборудования». Поставка, монтаж, подключение</p>
+
+            <ul class="tenders-d__list">
+                <li class="tenders-d__item">
+                    <svg class="tenders-d__item-icon" width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.01787 0C0.911698 0 0 0.919364 0 2.03483V32.9653C0 34.0808 0.911698 35 2.01787 35H24.2321C25.3383 35 26.25 34.0808 26.25 32.9653V8.67749L26.0566 8.47871L17.8077 0H2.01787ZM2.01787 1.36317H16.848V7.56886C16.848 8.69253 17.7527 9.6376 18.8793 9.6376H24.8982V32.9653C24.8982 33.3492 24.6128 33.637 24.2321 33.637H2.01787C1.63718 33.637 1.3518 33.3492 1.3518 32.9653V2.03483C1.3518 1.65094 1.63718 1.36317 2.01787 1.36317ZM18.1998 2.34955L23.9642 8.27443H18.8793C18.519 8.27444 18.1998 7.94454 18.1998 7.56886V2.34955ZM5.11865 19.2516V25.3922H6.34817V23.0758H7.14981C7.70642 23.0758 8.13152 23.0466 8.42505 22.9879C8.64105 22.9404 8.85286 22.844 9.06055 22.6988C9.27101 22.5508 9.44405 22.3484 9.57974 22.0915C9.71543 21.8346 9.78324 21.5176 9.78324 21.1406C9.78324 20.6519 9.66558 20.254 9.4302 19.9469C9.19482 19.6369 8.90264 19.4358 8.55372 19.3437C8.32665 19.2823 7.83927 19.2516 7.09159 19.2516H5.11865ZM10.7968 19.2516V25.3922H13.1105C13.5647 25.3922 13.9274 25.3488 14.1987 25.2623C14.5615 25.145 14.8495 24.9817 15.0627 24.7722C15.3452 24.4958 15.5625 24.1341 15.7148 23.6873C15.8394 23.3215 15.9018 22.8859 15.9018 22.3805C15.9018 21.8052 15.8354 21.3222 15.7025 20.9312C15.5695 20.5375 15.3757 20.2051 15.1209 19.9343C14.8662 19.6634 14.5601 19.475 14.2029 19.3689C13.937 19.2907 13.5508 19.2516 13.0441 19.2516H10.7968ZM16.9568 19.2516V25.3922H18.1864V22.7826H20.7285V21.7438H18.1864V20.2904H21.1314V19.2516H16.9568ZM6.34817 20.2904H6.94206C7.38512 20.2904 7.68014 20.3043 7.82691 20.3322C8.02629 20.3685 8.19096 20.4592 8.32111 20.6045C8.45126 20.7497 8.51637 20.934 8.51637 21.1574C8.51637 21.3389 8.46936 21.4981 8.37521 21.6349C8.28382 21.7718 8.15644 21.8723 7.99306 21.9365C7.82968 22.0008 7.50562 22.0329 7.02101 22.0329H6.34817V20.2904ZM12.0263 20.2904H12.5788C13.0801 20.2904 13.4164 20.3099 13.5881 20.349C13.8179 20.3992 14.0077 20.4955 14.1573 20.638C14.3068 20.7804 14.4231 20.9787 14.5062 21.2328C14.5893 21.4869 14.6307 21.8513 14.6307 22.326C14.6307 22.8008 14.5893 23.1763 14.5062 23.4528C14.4231 23.7264 14.315 23.9234 14.1821 24.0435C14.052 24.1635 13.8872 24.2487 13.6878 24.2989C13.5355 24.338 13.2877 24.3575 12.9444 24.3575H12.0263V20.2904Z" fill="#E51C26"/>
+                    </svg>
+
+                    <p class="tenders-d__item-desc">Приглашение на участие в тендере от ООО «НПО Лаборатория специальных сталей и сплавов»</p>
+                    <a href="#0" class="tenders-d__item-download">Скачать</a>
+                </li>
+                <li class="tenders-d__item">
+                    <svg class="tenders-d__item-icon" width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.01787 0C0.911698 0 0 0.919364 0 2.03483V32.9653C0 34.0808 0.911698 35 2.01787 35H24.2321C25.3383 35 26.25 34.0808 26.25 32.9653V8.67749L26.0566 8.47871L17.8077 0H2.01787ZM2.01787 1.36317H16.848V7.56886C16.848 8.69253 17.7527 9.6376 18.8793 9.6376H24.8982V32.9653C24.8982 33.3492 24.6128 33.637 24.2321 33.637H2.01787C1.63718 33.637 1.3518 33.3492 1.3518 32.9653V2.03483C1.3518 1.65094 1.63718 1.36317 2.01787 1.36317ZM18.1998 2.34955L23.9642 8.27443H18.8793C18.519 8.27444 18.1998 7.94454 18.1998 7.56886V2.34955ZM5.11865 19.2516V25.3922H6.34817V23.0758H7.14981C7.70642 23.0758 8.13152 23.0466 8.42505 22.9879C8.64105 22.9404 8.85286 22.844 9.06055 22.6988C9.27101 22.5508 9.44405 22.3484 9.57974 22.0915C9.71543 21.8346 9.78324 21.5176 9.78324 21.1406C9.78324 20.6519 9.66558 20.254 9.4302 19.9469C9.19482 19.6369 8.90264 19.4358 8.55372 19.3437C8.32665 19.2823 7.83927 19.2516 7.09159 19.2516H5.11865ZM10.7968 19.2516V25.3922H13.1105C13.5647 25.3922 13.9274 25.3488 14.1987 25.2623C14.5615 25.145 14.8495 24.9817 15.0627 24.7722C15.3452 24.4958 15.5625 24.1341 15.7148 23.6873C15.8394 23.3215 15.9018 22.8859 15.9018 22.3805C15.9018 21.8052 15.8354 21.3222 15.7025 20.9312C15.5695 20.5375 15.3757 20.2051 15.1209 19.9343C14.8662 19.6634 14.5601 19.475 14.2029 19.3689C13.937 19.2907 13.5508 19.2516 13.0441 19.2516H10.7968ZM16.9568 19.2516V25.3922H18.1864V22.7826H20.7285V21.7438H18.1864V20.2904H21.1314V19.2516H16.9568ZM6.34817 20.2904H6.94206C7.38512 20.2904 7.68014 20.3043 7.82691 20.3322C8.02629 20.3685 8.19096 20.4592 8.32111 20.6045C8.45126 20.7497 8.51637 20.934 8.51637 21.1574C8.51637 21.3389 8.46936 21.4981 8.37521 21.6349C8.28382 21.7718 8.15644 21.8723 7.99306 21.9365C7.82968 22.0008 7.50562 22.0329 7.02101 22.0329H6.34817V20.2904ZM12.0263 20.2904H12.5788C13.0801 20.2904 13.4164 20.3099 13.5881 20.349C13.8179 20.3992 14.0077 20.4955 14.1573 20.638C14.3068 20.7804 14.4231 20.9787 14.5062 21.2328C14.5893 21.4869 14.6307 21.8513 14.6307 22.326C14.6307 22.8008 14.5893 23.1763 14.5062 23.4528C14.4231 23.7264 14.315 23.9234 14.1821 24.0435C14.052 24.1635 13.8872 24.2487 13.6878 24.2989C13.5355 24.338 13.2877 24.3575 12.9444 24.3575H12.0263V20.2904Z" fill="#E51C26"/>
+                    </svg>
+
+                    <p class="tenders-d__item-desc">Рабочая документация</p>
+                    <a href="#0" class="tenders-d__item-download">Скачать</a>
+                </li>
+                <li class="tenders-d__item">
+                    <svg class="tenders-d__item-icon" width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.01787 0C0.911698 0 0 0.919364 0 2.03483V32.9653C0 34.0808 0.911698 35 2.01787 35H24.2321C25.3383 35 26.25 34.0808 26.25 32.9653V8.67749L26.0566 8.47871L17.8077 0H2.01787ZM2.01787 1.36317H16.848V7.56886C16.848 8.69253 17.7527 9.6376 18.8793 9.6376H24.8982V32.9653C24.8982 33.3492 24.6128 33.637 24.2321 33.637H2.01787C1.63718 33.637 1.3518 33.3492 1.3518 32.9653V2.03483C1.3518 1.65094 1.63718 1.36317 2.01787 1.36317ZM18.1998 2.34955L23.9642 8.27443H18.8793C18.519 8.27444 18.1998 7.94454 18.1998 7.56886V2.34955ZM5.11865 19.2516V25.3922H6.34817V23.0758H7.14981C7.70642 23.0758 8.13152 23.0466 8.42505 22.9879C8.64105 22.9404 8.85286 22.844 9.06055 22.6988C9.27101 22.5508 9.44405 22.3484 9.57974 22.0915C9.71543 21.8346 9.78324 21.5176 9.78324 21.1406C9.78324 20.6519 9.66558 20.254 9.4302 19.9469C9.19482 19.6369 8.90264 19.4358 8.55372 19.3437C8.32665 19.2823 7.83927 19.2516 7.09159 19.2516H5.11865ZM10.7968 19.2516V25.3922H13.1105C13.5647 25.3922 13.9274 25.3488 14.1987 25.2623C14.5615 25.145 14.8495 24.9817 15.0627 24.7722C15.3452 24.4958 15.5625 24.1341 15.7148 23.6873C15.8394 23.3215 15.9018 22.8859 15.9018 22.3805C15.9018 21.8052 15.8354 21.3222 15.7025 20.9312C15.5695 20.5375 15.3757 20.2051 15.1209 19.9343C14.8662 19.6634 14.5601 19.475 14.2029 19.3689C13.937 19.2907 13.5508 19.2516 13.0441 19.2516H10.7968ZM16.9568 19.2516V25.3922H18.1864V22.7826H20.7285V21.7438H18.1864V20.2904H21.1314V19.2516H16.9568ZM6.34817 20.2904H6.94206C7.38512 20.2904 7.68014 20.3043 7.82691 20.3322C8.02629 20.3685 8.19096 20.4592 8.32111 20.6045C8.45126 20.7497 8.51637 20.934 8.51637 21.1574C8.51637 21.3389 8.46936 21.4981 8.37521 21.6349C8.28382 21.7718 8.15644 21.8723 7.99306 21.9365C7.82968 22.0008 7.50562 22.0329 7.02101 22.0329H6.34817V20.2904ZM12.0263 20.2904H12.5788C13.0801 20.2904 13.4164 20.3099 13.5881 20.349C13.8179 20.3992 14.0077 20.4955 14.1573 20.638C14.3068 20.7804 14.4231 20.9787 14.5062 21.2328C14.5893 21.4869 14.6307 21.8513 14.6307 22.326C14.6307 22.8008 14.5893 23.1763 14.5062 23.4528C14.4231 23.7264 14.315 23.9234 14.1821 24.0435C14.052 24.1635 13.8872 24.2487 13.6878 24.2989C13.5355 24.338 13.2877 24.3575 12.9444 24.3575H12.0263V20.2904Z" fill="#E51C26"/>
+                    </svg>
+
+                    <p class="tenders-d__item-desc">Техническое задание на электроснабжение</p>
+                    <a href="#0" class="tenders-d__item-download">Скачать</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+
+    <div class="footer__outer">
+        <div class="container">
+            <div class="footer__row">
+                <nav class="footer__nav">
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="">Компания</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="">Деятельность</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="">Карта сайта</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="">Пресс-центр</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="">Акционерам и инвесторам</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="">Контакты</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="">Вакансии</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="">Тендеры</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="">Аренда помещений</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="">Реквизиты</a>
+                        </li>
+                        <li class="footer__nav-item footer__nav-item--last">
+                        </li>
+                    </ul>
+                    <p class="footer__adress">198097, Россия, Санкт-Петербург, пр. Стачек, 47</p>
+                </nav>
+                <div class="footer__contact">
+                    <div class="footer__contact-feedback">
+                        <h6 class="footer__contact-title">Подписаться на наши новости</h6>
+                        <form class="footer__contact-form" action="">
+                            <div class="footer__contact-form__wrap">
+                                <input class="footer__contact-input" type="mail" placeholder="E-mail">
+                                <button class="footer__contact-submit" type="submit"><svg class="footer__contact-submit-icon" width="40"><use xlink:href="./img/sprite.svg#icon-mail-submit"></use></svg></button>
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="footer__social-list">
+                        <li class="footer__social-item" style="background-image: url(./img/social-youtube.svg);">
+                            <a class="footer__social-link" href="">
+                                <span class="visually-hidden">Youtube</span>
+                            </a>
+                        </li>
+
+                        <li class="footer__social-item" style="background-image: url(./img/social-vk.svg);">
+                            <a class="footer__social-link" href="">
+                                <span class="visually-hidden">Vk</span>
+                            </a>
+                        </li>
+
+                        <li class="footer__social-item" style="background-image: url(./img/social-inst.svg);">
+                            <a class="footer__social-link" href="">
+                                <span class="visually-hidden">Instagram</span>
+                            </a>
+                        </li>
+
+                        <li class="footer__social-item" style="background-image: url(./img/social-fb.svg);">
+                            <a class="footer__social-link" href="">
+                                <span class="visually-hidden">Facebook</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <section class="copyright">
+                <h6 class="copyright__title">Copyrights © ПАО "Кировский завод"</h6>
+                <a class="copyright__link" href="">Правила использования сайта</a>
+                <a class="copyright__link" href="">Политика в области обработки персональных данных</a>
+            </section>
+
+        </div>
+
+    </div>
+</footer>
+
+<script src="./js/script.min.js"></script>
+
+</body>
+</html>

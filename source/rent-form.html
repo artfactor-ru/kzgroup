@@ -296,9 +296,6 @@
                 </div>
             </div>
         </article>
-
-
-
     </div>
     <div class="nav_search">
         <article class="search-wrap">
@@ -547,7 +544,7 @@
                                     <div class="rent-form__label rent-form__label--short">
                                         <label class="rent-form__radio rent-form__radio-label rent-form__radio--irregular">
                                             <input class="rent-form__radio--basic jd-branch-radio-one" type="radio" name="jd-vetka">
-                                            <p class="rent-form__radio--style"></p>
+                                            <p class="rent-form__radio--style rent-form__radio--style--nomatter"></p>
                                             <span class="rent-form__radio-name rent-form__radio-name--irregular">Не важно</span>
                                         </label>
                                         <label class="rent-form__input-radio-custom">
@@ -644,10 +641,10 @@
 
     $( document ).ready(function() {
         $('.jd-branch-style').on('click', function () {
-            $('.rent-form__radio--style').addClass('rent-form__radio--style-none');
+            $('.rent-form__radio--style--nomatter').addClass('rent-form__radio--style-none');
         });
         $('.rent-form__radio-label').on('click', function () {
-            $('.rent-form__radio--style').removeClass('rent-form__radio--style-none');
+            $('.rent-form__radio--style--nomatter').removeClass('rent-form__radio--style-none');
         })
     });
 

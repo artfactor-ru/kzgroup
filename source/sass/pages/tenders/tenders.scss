@@ -1,6 +1,49 @@
 .tenders__main {
   padding: 45px 0;
   overflow: hidden;
+  position: relative;
+}
+
+.tenders__underblock {
+  background: rgba(242, 244, 247, 0.47);
+  padding: 40px 0;
+  font-family: $font-text-regular;
+  &-content {
+    display: flex;
+    flex-direction: column;
+    color: #3C3D40;
+    & div {
+      display: flex;
+      flex-direction: column;
+      & label {
+        display: flex;
+        align-items: baseline;
+        margin-right: 65px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &-text {
+    font-family: $font-text-light;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  &-title {
+    font-size: 14px;
+    color: #616161;
+    margin-right: 10px;
+    font-family: $font-text-light;
+  }
+  &-link {
+    font-size: 14px;
+    color: #171C28;
+    font-weight: bold;
+    transition: .3s;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
 }
 
 .tab-tenders {
@@ -28,8 +71,14 @@
   padding-right: unset;
 }
 
+.tenders__main-socials {
+  top: 12%;
+  z-index: 600;
+  display: none;
+}
+
 .b-table {
-  width: 1200px;
+  width: 1055px;
   &__header {
     background-color: #171C28;
     height: 64px;
@@ -111,6 +160,14 @@
   border-bottom: 1px solid #CECECE;
 }
 
+.b-table__link-tender {
+  color: #171C28;
+  transition: .3s;
+  &:hover {
+    opacity: 0.45;
+  }
+}
+
 .b-table__row {
   line-height: 22px;
   display: flex;
@@ -123,6 +180,10 @@
   &-downloads {
     color: #C30215;
     text-decoration: underline;
+    transition: .3s;
+    &:hover {
+      opacity: 0.7;
+    }
   }
   &-1 {
     width: 35%;
@@ -165,6 +226,9 @@
   }
   .b-table__row-1 {
     font-size: 16px;
+  }
+  .tenders__underblock-content div {
+    flex-direction: row;
   }
   .b-table__item--search-icon {
     width: unset;
@@ -238,6 +302,16 @@
   .tab-tenders {
     margin-right: 85px !important;
   }
+  .tenders__underblock-text {
+    font-size: 22px;
+    line-height: 36px;
+  }
+  .tenders__underblock-title {
+    font-size: 16px;
+  }
+  .tenders__underblock-link {
+    font-size: 22px;
+  }
 }
 
 @media(min-width: 1364px){
@@ -253,6 +327,19 @@
   }
   .tenders__main .tenders--container {
     padding-right: 8%;
+  }
+  .tenders__underblock-text {
+    font-size: 24px;
+    line-height: 42px;
+  }
+  .tenders__underblock-title {
+    font-size: 18px;
+  }
+  .tenders__underblock-link {
+    font-size: 24px;
+  }
+  .tenders__main-socials {
+    display: block;
   }
 }
 
@@ -272,5 +359,7 @@
   .tenders__main .tenders--container {
     padding-right: 9%;
   }
-
+  .tenders__underblock-title {
+    margin-right: 15px;
+  }
 }

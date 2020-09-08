@@ -469,7 +469,6 @@
                                             </select>
                                         </div>
                                     </label>
-
                                     <label class="vac-f__form-label">
                                         <span>Учебное заведение </span>
                                         <div class="vac-f__input-container">
@@ -519,6 +518,21 @@
                                         <span>Начало работы</span>
                                         <div class="vac-f__form-date">
                                             <div class="vac-f__input-container">
+<!--                                                <select  class="select vac-f__form-date__month" name="language">-->
+<!--                                                    <option disabled>Выбрать</option>-->
+<!--                                                    <option value="jan">Январь</option>-->
+<!--                                                    <option value="feb">Февраль</option>-->
+<!--                                                    <option value="mar">Март</option>-->
+<!--                                                    <option value="apr">Апрель</option>-->
+<!--                                                    <option value="may">Май</option>-->
+<!--                                                    <option value="jun">Июнь</option>-->
+<!--                                                    <option value="jul">Июль</option>-->
+<!--                                                    <option value="aug">Август</option>-->
+<!--                                                    <option value="sep">Сентябрь</option>-->
+<!--                                                    <option value="oct">Октябрь</option>-->
+<!--                                                    <option value="nov">Ноябрь</option>-->
+<!--                                                    <option value="dec">Декабрь</option>-->
+<!--                                                </select>-->
                                                 <select name="work-month" class="vac-f__form-date__month">
                                                     <option value="january">Январь</option>
                                                     <option value="february">Феварь</option>
@@ -639,8 +653,60 @@
 <script>
 
     $('.vac-f__form-education-btn').on('click', function () {
-        let copy = $('#education-block').clone();-
-            copy.appendTo('.more-education');
+        let copy = $('#education-block').clone();
+        copy.appendTo('.more-education');
+        $('.select').each(function() {
+            const _this = $(this),
+                selectOption = _this.find('option'),
+                selectOptionLength = selectOption.length,
+                selectedOption = selectOption.filter(':selected'),
+                duration = 450; // длительность анимации
+
+            _this.hide();
+            _this.wrap('<div class="select"></div>');
+            $('<div>', {
+                class: 'new-select',
+                text: _this.children('option:disabled').text()
+            }).insertAfter(_this);
+
+            const selectHead = _this.next('.new-select');
+            $('<div>', {
+                class: 'new-select__list'
+            }).insertAfter(selectHead);
+
+            const selectList = selectHead.next('.new-select__list');
+            for (let i = 1; i < selectOptionLength; i++) {
+                $('<div>', {
+                    class: 'new-select__item',
+                    html: $('<span>', {
+                        text: selectOption.eq(i).text()
+                    })
+                })
+                    .attr('data-value', selectOption.eq(i).val())
+                    .appendTo(selectList);
+            }
+
+            const selectItem = selectList.find('.new-select__item');
+            selectList.slideUp(0);
+            selectHead.on('click', function() {
+                if ( !$(this).hasClass('on') ) {
+                    $(this).addClass('on');
+                    selectList.slideDown(duration);
+                    selectItem.on('click', function() {
+                        let chooseItem = $(this).data('value');
+                        $('select').val(chooseItem).attr('selected', 'selected');
+                        selectHead.text( $(this).find('span').text() );
+
+                        selectList.slideUp(duration);
+                        selectHead.removeClass('on');
+                    });
+
+                } else {
+                    $(this).removeClass('on');
+                    selectList.slideUp(duration);
+                }
+            });
+        });
     });
 
     $('.select').each(function() {
@@ -680,10 +746,8 @@
             if ( !$(this).hasClass('on') ) {
                 $(this).addClass('on');
                 selectList.slideDown(duration);
-
                 selectItem.on('click', function() {
                     let chooseItem = $(this).data('value');
-
                     $('select').val(chooseItem).attr('selected', 'selected');
                     selectHead.text( $(this).find('span').text() );
 
@@ -762,7 +826,6 @@
     });
 
     $('.vac-f__form-works-btn').on('click', function () {
-
        let copy = $('#working-main-block').clone();-
        copy.appendTo('.working-another-block');
     });
