@@ -5,7 +5,7 @@
 }
 
 .leadership-person__pic{
-    background-color: #000;
+    background-color: #070707;
     font-size: 0;
     text-align: center;
     & .leadership-person__back{
@@ -99,6 +99,7 @@
     .leadership-person{
         flex-direction: row;
         height: calc(var(--vh, 1vh)*100);
+        min-height: calc(var(--vh, 1vh)*100);
     }
     .leadership-person__pic{
         background-color: #000;
