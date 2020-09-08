@@ -36,17 +36,6 @@
 
 .leadership_general--text{
   position: relative;
-  &:before {
-    content:'';
-    position: absolute;
-    display: block;
-    top: 100%;
-    left: 0;
-    width: 0;
-    height: 4px;
-    background: $red-color;
-    transition: all 0.6s ease;
-  }
 }
 
 .leadership_general--text-about{
@@ -80,6 +69,24 @@
   color: $grey-text-paragraf;
   font-size: 14px;
   display: block;
+  padding-left: 65px;
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: center left;
+    transition: all .6s cubic-bezier(.4,0,.2,1);
+    transition-delay: .1s;
+    background-color: #fff;
+  }
+  & span{
+    transition: transform .6s cubic-bezier(.4,0,.2,1);
+  }
 }
 
 .leadership_unit--list{
@@ -241,12 +248,14 @@
     margin-bottom: 60px;
     min-height: 363px;
     &:hover{
-      .leadership_general--text-name{
-        color: $red-color;
-      }
-      .leadership_general--text{
-        &:before{
-          width: 100%;
+      & .leadership_general--text-details{
+        &::after{
+          width: 55px;
+        }
+        & span{
+          display: inline-block;
+          transform: translateX(10px);
+          transition: transform .6s cubic-bezier(.4,0,.2,1);
         }
       }
     }
@@ -270,6 +279,11 @@
     display: block;
     overflow: hidden;
     transition: .2s;
+  }
+  .leadership_general--text-details{
+    &::after{
+      width: 40px;
+    }
   }
   .leadership_unit{
     width: 23%;
