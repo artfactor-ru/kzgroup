@@ -7,24 +7,20 @@
 @import 'libs/swiperbundle';
 @import 'libs/fancybox';
 
+@import 'common/accordion';
 @import 'common/social-btn';
-
 @import 'common/footer';
-
 @import 'common/header';
-
 @import 'common/nav2';
 @import 'common/about';
 @import 'common/hero-section';
 @import 'common/main';
-
-
 @import 'common/news';
-
 
 @import 'common/tabs';
 @import 'common/pagination';
 @import 'common/custom-select';
+@import 'common/preloader';
 
 @import 'common/video-block';
 
@@ -333,13 +329,13 @@ figure{
   }
   
   .barba_background::before {
-	background-color: $bg-color-light-grey;
+	background-color: #e2e2e2;
 	transition-delay: 0.10s;
 	z-index: 1;
   }
   
   .barba_background::after {
-	background-color: #e2e2e2;
+	background-color: #ffffff;
 	transition-delay: 0.25s;
 	z-index: 3;
   }
@@ -362,14 +358,14 @@ figure{
   }
   
   .barba_background--next::before {
-	background-color: $bg-color-light-grey;
+	background-color: #e2e2e2;
 	transition-delay: 1.75s;
 	z-index: 1;
   }
   
   .barba_background--next::after {
-	background-color: #e2e2e2;
-	transition-delay: 1.60s;
+	background-color: #ffffff;
+	transition-delay: 1.5s;
 	z-index: 3;
   }
 
