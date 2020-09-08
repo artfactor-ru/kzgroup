@@ -124,6 +124,14 @@
 	width: 95px;
 
 }
+
+.traktors__number-icon--four{
+	width: 95px;
+
+}
+.traktors__number-icon--big{
+	width: 95px;
+}
 .traktors__title--two-screen{
 	display: none;
 }
@@ -163,6 +171,9 @@
 			width: 72px;
 		}
 	
+		.traktors__number-icon--big{
+			width: 77px;
+		}
 }
 
 @media (min-width:767px){
@@ -295,7 +306,9 @@
 		width: 120px;
 	
 	}
-
+	.traktors__number-icon--big{
+		width: 120px;
+	}
 	.traktors__about-title--mobile{
 		display: none;
 	}
@@ -428,9 +441,7 @@
 		margin-left: -25px;
 		// top: 80px;
 	}
-	.traktors__nav-list{
-		// padding-top: 30px;
-	}
+	
 
 	.traktors__nav-link{
 
@@ -490,7 +501,9 @@
 		width: 105px;
 	
 	}
-
+	.traktors__number-icon--big{
+		width: 105px;
+	}
 	.traktors__about{
 		display: flex;
 		justify-content: flex-start;
@@ -670,7 +683,9 @@
 		width: 190px;
 	
 	}
-
+	.traktors__number-icon--big{
+		width: 190px;
+	}
 
 	.traktors__about{
 		display: flex;

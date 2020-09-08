@@ -37,29 +37,15 @@ function delay(n) {
 				async leave(data) {
 
 					data.current.container.classList.add('active');
-					// data.next.container.classList.add('active');
-				//  gsap.to(data.current.container, {
-				// 	opacity: 0
-				//   });
-					// bg.classList.remove('active');
 					const done = this.async();
-					await delay(1500);
+					await delay(1000);
 					
 					done();
 					
 				},
 				async enter(data) {
-					// const done = this.async();
-					
-					// await delay(1000);
-					
-					// done();
-					data.next.container.classList.add('show');
-
-				//   gsap.from(data.next.container, {
-				// 	opacity: 0
-				//   });
 				
+					data.next.container.classList.add('show');
 				}
 			  }]
 			
@@ -188,8 +174,9 @@ function getCoords(elem) {
 
 // Скролл к определенному элементу
 function scrollToTop( element) {
+	
 	let elementTopPosition = getCoords(element).top;
-
+	
 	scrollbar.scrollTo(0, elementTopPosition, 1000);
 
 }
@@ -278,7 +265,7 @@ function socialInteraction() {
 let twoScreen = document.querySelector('.two-screen');
 document.addEventListener('DOMContentLoaded', function(){
 	
-	if(!document.querySelector('.main') && !document.querySelector('.hero-common') && !document.querySelector('.main__hero')){
+	if(!document.querySelector('.main') && !document.querySelector('.hero-common') && !document.querySelector('.main__hero') && !document.querySelector('.main--person')){
 		header.classList.add('js-scroll');
 
 	}
@@ -434,7 +421,25 @@ function eventOnScroll(){
 				// once: true,
 			});
 		});
-	
+
+		let historyBg = document.querySelector('.history__bg');
+		if(historyBg){
+			let light = document.querySelectorAll('.history_light');
+			let dark = document.querySelectorAll('.history_dark');
+
+			for(let i = 0; i<dark.length; i++){
+				if(scrollbar.isVisible(dark[i])){
+					historyBg.style.opacity = "1"
+				}
+			}
+
+			for(let i = 0; i<light.length; i++){
+				if(scrollbar.isVisible(light[i])){
+					historyBg.style.opacity = "0"
+				}
+			}
+
+		}
 	
 	
 	parallax(document.querySelectorAll('.parallax__img'));
@@ -471,11 +476,15 @@ function eventOnScroll(){
 	
 	
 	makeNavLinksSmooth('.traktors','.traktors__nav-link');
+	makeNavLinksSmooth('.article','.history__nav-link');
 	makeNavLinksSmoothMuseum('.museum-zal','.museum-nav__link' );
+
 	spyScrolling ('.museum-zal' , '.museum-nav__link.active');
 	spyScrolling ('.traktors' , '.traktors__nav-link.active');
+	spyScrolling ('.article' , '.history__nav-link.active');
 	fixedNav(offset, '.museum-nav');
 	fixedNav(offset, '.traktors__nav');
+
 	// Взаимодействие с шапкой
 	if ( breakpoint.matches === true ) {
 		
@@ -521,17 +530,16 @@ let scrollbar;
 	let companiesThumbs;
 	let swiperHero;
 	let swiperGallery;
+	
+	let swipersHistory = [];
 	let swiperAchieves;
-	// let swiperHistory1;
-	// let swiperHistory2;
 	const transitionSlide = 15000;
 
 	const enableSwiper = function(){
-		// document.addEventListener('DOMContentLoaded', function(){
+		
 			if(document.querySelector('.statistics__slider')){
 				swiperStatistics = new Swiper('.statistics__slider',{
-					// observer: true,
-					// observeParents: true,
+				
 					scrollbar: {
 						el: '.swiper-scrollbar',
 					},
@@ -539,11 +547,7 @@ let scrollbar;
 			}
 			if(document.querySelector('.kirovets_tabs__features--1')){
 				let tabFeatures1 = document.querySelector('.kirovets_tabs__features--1');
-
-			
 				swiperTabFeature1 = new Swiper(tabFeatures1,{
-					// observer: true,
-					// observeParents: true,
 					scrollbar: {
 						el: '.swiper-scrollbar',
 					},
@@ -552,25 +556,34 @@ let scrollbar;
 			if(document.querySelector('.kirovets_tabs__features--2')){
 			
 				let tabFeatures2 = document.querySelector('.kirovets_tabs__features--2');
-
 					swiperTabFeature2 = new Swiper(tabFeatures2,{
-						// observer: true,
-						// observeParents: true,
 						scrollbar: {
 							el: '.swiper-scrollbar',
 						},
 					});
 				
 			}
-			if (document.querySelector('.history_slider')) {
-				swiperAchieves = new Swiper('.history_slider', {
-					observer: true,
-					observeParents: true,
+			if (document.querySelectorAll('.history__photos')) {
+				document.querySelectorAll('.history__photos').forEach(function(slider, index){
+					console.log(slider.querySelector('.swiper-scrollbar--history'));
+					slider.classList.add('swiper-container--history-'+ index);
+					slider.querySelector('.swiper-scrollbar--history').classList.add('swiper-scrollbar--history-' + index)
+					swipersHistory[index] = new Swiper(".swiper-container--history-" + index, {
+						scrollbar: {
+							el: '.swiper-scrollbar--history-' + index
+						},
+					});
+				});
+			}
+			if(document.querySelector('.history_slider')){
+				swiperAchieves = new Swiper('.history_slider',{
+					slidesPerView: 'auto',
 					scrollbar: {
-						el: '.swiper-scrollbar',
+						el: '.swiper-scrollbar--achieves',
 					},
 				});
 			}
+
 				
 	}
 	function updateSlider(slider){
@@ -1077,7 +1090,7 @@ let scrollbar;
 
 
 	let InnerSliders = document.querySelectorAll('.kirovets_tabs__features');
-
+	let slidersHistory = document.querySelectorAll('.history__photos');
 	const breakpointChecker = function() {
 		// if larger viewport and multi-row layout needed
 		if ( breakpoint.matches === true ) {
@@ -1096,20 +1109,26 @@ let scrollbar;
 						statSlides[i].classList.remove('swiper-slide');
 					}
 				}
-				if (swiperAchieves != null) {
-					swiperAchieves.destroy(true, true);
-					swiperAchieves.update();
-				}
-				if (document.querySelector('.history_slider')) {
-					document.querySelector('.history_slider').classList.remove('swiper-container');
-					document.querySelector('.history_achieves--list').classList.remove('swiper-wrapper');
-					let statSlides = document.querySelectorAll('.history_achieves--list-item');
-					for (let i = 0; i < statSlides.length; i++) {
-		
-						statSlides[i].classList.remove('swiper-slide');
+			
+				for(let i = 0; i<swipersHistory.length; i++){
+					if (swipersHistory[i] != null) {
+						swipersHistory[i].destroy(true, true);
+						swipersHistory[i].update();
 					}
 				}
-		
+			
+
+				
+
+				for(let i = 0; i<slidersHistory.length; i++){
+					slidersHistory[i].classList.remove('swiper-container');
+					slidersHistory[i].querySelector('.history__photos--container').classList.remove('swiper-wrapper');
+					let historySlides = slidersHistory[i].querySelectorAll('.history__photos__item');
+					for (let i = 0; i < historySlides.length; i++) {
+						
+						historySlides[i].classList.remove('swiper-slide');
+					}
+				}
 		
 				if(document.querySelector('.kirovets_tabs__container')){
 					if (swiperTabFeature1 != null) {
@@ -1137,9 +1156,20 @@ let scrollbar;
 					}
 				}
 				
-			
-					
-
+				if (swiperAchieves != null) {
+					swiperAchieves.destroy(true, true);
+					swiperAchieves.update();
+				}
+				if(document.querySelector('.history_slider')){
+					document.querySelector('.history_slider').classList.remove('swiper-container');
+					document.querySelector('.history_achieves--list').classList.remove('swiper-wrapper');
+					let achievesSlides = document.querySelectorAll('.history_achieves--list-item');
+					for (let i = 0; i < achievesSlides.length; i++) {
+						
+						achievesSlides[i].classList.remove('swiper-slide');
+					}
+				}
+				
 				btnMore = document.querySelectorAll('.traktors__text-wrap--desktop .button-more--traktors');
 
 		} else if ( breakpoint.matches === false ) {
@@ -1171,15 +1201,26 @@ let scrollbar;
 				}
 			}
 
-			if (document.querySelector('.history_slider')) {
-				document.querySelector('.history_slider').classList.add('swiper-container');
-				document.querySelector('.history_achieves--list').classList.add('swiper-wrapper');
-				let statSlides = document.querySelectorAll('.history_achieves--list-item');
-				for (let i = 0; i < statSlides.length; i++) {
-	
-					statSlides[i].classList.add('swiper-slide');
+			for(let i = 0; i<slidersHistory.length; i++){
+				slidersHistory[i].classList.add('swiper-container');
+				slidersHistory[i].querySelector('.history__photos--container').classList.add('swiper-wrapper');
+				let historySlides = slidersHistory[i].querySelectorAll('.history__photos__item');
+				for (let i = 0; i < historySlides.length; i++) {
+					
+					historySlides[i].classList.add('swiper-slide');
 				}
 			}
+
+			if(document.querySelector('.history_slider')){
+				document.querySelector('.history_slider').classList.add('swiper-container');
+				document.querySelector('.history_achieves--list').classList.add('swiper-wrapper');
+				let achievesSlides = document.querySelectorAll('.history_achieves--list-item');
+				for (let i = 0; i < achievesSlides.length; i++) {
+					
+					achievesSlides[i].classList.add('swiper-slide');
+				}
+			}
+		
 	
 
 
@@ -1339,6 +1380,63 @@ let initAnimation = function(){
 				// once: true,
 			});
 		});
+
+		// gsap.utils.toArray('.history_dark').forEach(element => {
+		// 	gsap.to(document.querySelector('.history__bg'),{
+			
+				
+		// 			opacity: 1,
+	
+		// 			// duration: 2,
+		// 			// stagger: .13,
+		// 			// ease: "power3.out",
+		// 			// delay: .2,
+		// 			// force3D: true,
+		// 			scrollTrigger: {
+		// 				trigger: element,
+		// 				// scrub: true,
+		// 				// toggleClass: 'dark',
+		// 				// toggleActions: 'play none none reverse',
+		// 			} 
+		// 			}
+		// 	);
+			
+		// });
+
+		// gsap.utils.toArray('.history_light').forEach(element => {
+		// 	gsap.to(document.querySelector('.history__bg'),{
+			
+			
+		// 			opacity: 0,
+	
+		// 			// duration: 2,
+		// 			// stagger: .13,
+		// 			// ease: "power3.out",
+		// 			// delay: .2,
+		// 			// force3D: true,
+		// 			scrollTrigger: {
+		// 				trigger: element,
+		// 				// scrub: true,
+		// 				// start: 'bottom top',
+		// 				// toggleClass: 'light',
+		// 				// toggleActions: 'play none none reverse',
+		// 			} 
+		// 			}
+		// 	);
+			
+		// });
+
+		// gsap.utils.toArray('.history_light').forEach(element => {
+		// 	ScrollTrigger.create({
+		// 		trigger: element,
+		// 		scrub: true,
+		// 		toggleClass: 'show',
+		// 		// this toggles the class again when you scroll back up:
+		// 		toggleActions: 'play none none none',
+		// 		// this removes the class when the scrolltrigger is passed:
+		// 		// once: true,
+		// 	});
+		// });
 
 		gsap.utils.toArray('.company_group__item-icon').forEach(element => {
 			ScrollTrigger.create({
@@ -1501,6 +1599,15 @@ let initAnimation = function(){
 		
 
 	gsap.utils.toArray('.button-line').forEach(element => {
+		ScrollTrigger.create({
+			trigger: element,
+			toggleClass: 'is-inview',
+		});
+
+
+	});
+
+	gsap.utils.toArray('.pic__frame--line').forEach(element => {
 		ScrollTrigger.create({
 			trigger: element,
 			toggleClass: 'is-inview',

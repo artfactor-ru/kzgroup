@@ -1,14 +1,38 @@
-.history-about{
-    min-height: auto;
-    margin-bottom: 40px;
+.about--history{
+    min-height: 180px;
+    // margin-bottom: 40px;
+    box-sizing: border-box;
     & .social__btn-list{
         top: 50px;
     }
 }
+.about__title--history{
+    width: 60%;
+}
+.history__wrapper{
+    // display: flex;
+    position: relative;  
+    & .history__bg{
+            display: none;
+            position: absolute;
+         
+            left: 0;
+            top: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background-color: $blue-color;
+            opacity: 0;
+            transition: all 1s linear 0.1s;
+        }
+}
+
+
 
 .history_light,
 .history_dark{
     padding: 50px 0;
+    position: relative;
 }
 .history_dark{
     position: relative;
@@ -23,6 +47,8 @@
         width: 100%;
         height: 100%;
         background-color: $blue-color;
+        opacity: 1;
+        transition: all 2s ease;
     }
     & .history__entry--text-title,
     & .history__entry--text-content,
@@ -30,10 +56,33 @@
         color: #f4f3f4;
     }
 }
+// .history_light::before{
+//     display: block;
+//         position: absolute;
+//         content: '';
+//         left: 0;
+//         top: 0;
+//         z-index: -1;
+//         width: 100%;
+//         height: 100%;
+//         background-color: $blue-color;
+//         opacity: 1;
+//         transition: all 2s ease;
+// }
+
+// .history_light.show::before{
+//     opacity: 0;
+// }
+
+// .history_dark.show::before{
+//     opacity: 1;
+// }
 
 .history__year{
+    width: 320px;
     height: 120px;
-    display: block;
+    display: flex;
+    margin-bottom: 32px;
 }
 
 .history__entry--text{
@@ -57,7 +106,7 @@
     font-size: 19px;
     line-height: 1.25;
     letter-spacing: 2.2px;
-    padding-left: 7px;
+    // padding-left: 7px;
     & span{
         background-color: $accent-text-bg-color;
         display: inline-block;
@@ -83,13 +132,16 @@
 
 .history__photos--container{
     display: flex;
-    flex-direction: column;
-    padding-left: 26px;
+    // flex-direction: column;
+    // padding-left: 26px;
 }
 
 .history__photos__item{
     margin-bottom: 70px;
+    padding-left: 26px;
+    padding-top: 28px;
     width: 68%;
+    box-sizing: border-box;
     &.history__photos__item-1{
         // max-width: 341px;
     }
@@ -105,6 +157,10 @@
     position: relative;
     margin-bottom: 10px;
     font-size: 0;
+    display: inline-block;
+}
+.history__photos__item-pic img{
+    height: 260px;
 }
 
 .history__photos__item-year{
@@ -120,18 +176,60 @@
 }
 
 @media(min-width: 767px){
-    .history-about{
-        & .social__btn-list{
-            top: 110px;
+    .history__wrapper .history__bg{
+        display: block;
+    }
+    .history__wrapper{
+        display: flex;
+    }
+    .history_dark{
+        &::before{
+           display: none;
         }
     }
+    .history__photos__item-pic img{
+        height: auto;
+    }
+
+    .about--history{
+        min-height: 200px;
+        // margin-bottom: 40px;
+        box-sizing: border-box;
+        & .social__btn-list{
+            top: 50px;
+        }
+    }
+    .about__title--history{
+        width: 90%;
+    }
+  
     .history_light,
     .history_dark{
         padding: 60px 0;
     }
     .history__year{
         height: 210px;
+        width: 645px;
     }
+
+    .history__year .traktors__number-icon{
+        width: 150px;
+    }
+
+    .history__year .traktors__number-icon--one{
+		width: 90px;
+	
+	
+		margin-right: 10px;
+	}
+	.history__year .traktors__number-icon--four{
+		width: 180px;
+	
+	}
+	.history__year .traktors__number-icon--big{
+		width: 180px;
+    }
+    
     .history__entry--text-title{
         font-size: 30px;
         letter-spacing: 0;
@@ -147,6 +245,7 @@
     }
     .history__photos--container{
         padding-left: 0px;
+        flex-direction: column;
     }
     .history__photos{
         & .history__photos__item{
@@ -397,22 +496,86 @@
             }
         }
     }
+
+    .history__nav-link{
+		text-decoration: none;
+		font-family: $font-text-regular;
+		font-family: MullerRegular;
+		font-size: 12px;
+		line-height: 14px;
+		text-align: center;
+		color: #ADADAD;
+		display: block;
+		position: relative;
+		transition: all 0.3s ease;
+
+    }
+    .traktors__nav-item:not(:last-child) .history__nav-link{
+		padding-bottom: 20px;
+		margin-bottom: 5px;
+    }
+    
+    .history__nav-link.active{
+		color: #000000;
+	}
+	.traktors__nav-item:not(:last-child) .history__nav-link::after{
+		content: '';
+		position: absolute;
+		width: 1px;
+		height: 15px;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		background: #C6BEBE;
+		transition: all 0.3s ease;
+	}
+	.traktors__nav-item:not(:last-child) .history__nav-link.active::after{
+		background: #000000;
+	}
     
 }
 
 @media(min-width: 1280px){
-    .history-about{
+    .about--history{
+        min-height: 305px;
+        // margin-bottom: 40px;
+        box-sizing: border-box;
         & .social__btn-list{
-            top: 110px;
+            top: 50px;
         }
     }
+    .about__title--history{
+        width: 80%;
+    }
+  
     .history_light,
     .history_dark{
-        padding: 70px 0 150px;
+        padding: 110px 0;
     }
     .history__year{
         height: 330px;
+        width: 986px;
+     
     }
+
+    .history__year .traktors__number-icon{
+        width: 260px;
+    }
+
+    .history__year .traktors__number-icon--one{
+		width: 180px;
+	
+	
+		margin-right: 10px;
+	}
+	.history__year .traktors__number-icon--four{
+		width: 280px;
+	
+	}
+	.history__year .traktors__number-icon--big{
+		width: 280px;
+    }
+    
     .history__entry--text-content{
         font-size: 16px;
     }
@@ -722,13 +885,62 @@
             }
         }
     }
-    
+    .history__nav-link{
+
+		font-size: 12px;
+		line-height: 14px;
+
+
+	}
+	.traktors__nav-item:not(:last-child) .history__nav-link{
+		padding-bottom: 20px;
+		margin-bottom: 5px;
+	}
+
+	.traktors__nav-item:not(:last-child) .history__nav-link::after{
+
+		height: 15px;
+
+	}
 }
 
 @media(min-width: 1680px){
-    .history__year{
-        height: 420px;
+
+    .about--history{
+        min-height: 335px;
+        // margin-bottom: 40px;
+        box-sizing: border-box;
+        & .social__btn-list{
+            top: 120px;
+        }
     }
+    .about__title--history{
+        width: 70%;
+    }
+
+    .history__year{
+        height: 430px;
+        width: 1275px;
+    }
+
+    .history__year .traktors__number-icon{
+        width: 340px;
+    }
+
+    .history__year .traktors__number-icon--one{
+		width: 250px;
+	
+	
+		margin-right: 10px;
+	}
+	.history__year .traktors__number-icon--four{
+		width: 390px;
+	
+	}
+	.history__year .traktors__number-icon--big{
+		width: 390px;
+    }
+
     .history__entry--text-title{
         font-size: 46px;
         line-height: 42px;
@@ -968,3 +1180,51 @@
         }
     }
 }
+
+
+.swiper-container-horizontal>.swiper-scrollbar.swiper-scrollbar--history {
+	@extend %scroll-line;
+}
+
+.swiper-scrollbar--history .swiper-scrollbar-drag{
+	@extend %scroll-drag;
+}
+
+@media(min-width: 768px){
+    .swiper-scrollbar--history{
+        display: none;
+    }
+}
+
+.history__number-icon{
+    fill: none;
+    stroke: #808080;
+
+    width: 80px;
+
+    // stroke-dasharray: 4000;
+    //     stroke-dashoffset: 4000;
+        flex-shrink: 0;
+        margin-right: 2px;
+}
+.history_dark .history__number-icon{
+    // stroke: rgba(94, 104, 132, 0.65)
+}
+.history__number-icon--one{
+    width: 50px;
+
+
+    margin-right: 5px;
+}
+.history__number-icon--four{
+    width: 95px;
+
+}
+
+.history__nav-link.active{
+    color: $red-color;
+}
+.traktors__nav-item:not(:last-child) .history__nav-link.active::after{
+    background-color: $red-color;
+}
+

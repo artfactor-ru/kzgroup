@@ -27,7 +27,7 @@
 .history_achieves--list{
     list-style-type: none;
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
 }
 
 .history_achieves--list-item{
@@ -137,5 +137,19 @@
     .history_achieves--list-item{
         width: 12%;
         margin-bottom: 0px;
+    }
+}
+
+.swiper-container-horizontal>.swiper-scrollbar.swiper-scrollbar--achieves {
+	@extend %scroll-line;
+}
+
+.swiper-scrollbar--achieves .swiper-scrollbar-drag{
+	@extend %scroll-drag;
+}
+
+@media(min-width: 768px){
+    .swiper-scrollbar--achieves{
+        display: none;
     }
 }

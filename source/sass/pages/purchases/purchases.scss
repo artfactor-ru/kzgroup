@@ -1,0 +1,90 @@
+// .purchase__list .tabs-common-content {
+//     display: flex;
+// }
+.purchase_card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.tab__descr {
+    font-family: $font-text-light;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 24px;
+    color: $grey-light-purchase;
+}
+
+.purchase-inform {
+    padding: 35px 0 45px;
+    font-family: $font-text-light;
+    font-size: 14px;
+    line-height: 23px;
+    color: $grey-light-purchase;
+    background-color: #F9FAFB;
+}
+
+.purchase-inform__text {
+    margin-bottom: 24px;
+}
+
+.purchase-inform__contacts {
+    display: flex;
+}
+
+.purchase-inform__contacts--item {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.purchase-inform__contacts--title {
+    line-height: 28px;
+}
+
+.purchase-inform__contacts--content {
+    font-family: $font-text-regular;
+    color: $black-grey;
+    line-height: 22px;
+}
+
+@media(min-width: 1280px) {
+    .tab__descr {
+        font-size: 22px;
+        line-height: 32px;
+    }
+    .purchase-inform {
+        padding: 70px 0 75px;
+        font-size: 22px;
+        line-height: 32px;
+    }
+    .purchase-inform__text {
+        margin-bottom: 60px;
+    }
+    .purchase-inform__contacts--title {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .purchase-inform__contacts--content {
+        font-size: 22px;
+    }
+}
+
+@media(min-width: 1680px) {
+    .tab__descr {
+        font-size: 24px;
+    }
+    .purchase-inform {
+        padding: 70px 0 125px;
+        font-size: 24px;
+        line-height: 42px;
+    }
+    .purchase-inform__contacts--title {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .purchase-inform__contacts--content {
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
