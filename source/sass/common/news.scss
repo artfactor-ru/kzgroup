@@ -1,5 +1,6 @@
 .news--grey{
     background-color: $bg-color-light-grey;
+    padding-top: 20px;
 }
 .news{
     padding-bottom:40px;
@@ -8,7 +9,7 @@
 .news__title{
     
     @extend %block-title;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 .news__container{
     margin-top: 25px;
@@ -30,7 +31,7 @@
     background-size: cover;
     background-position: center;
     
-    --overflow: 50px;
+    --overflow: 100px;
    
         height: calc(100% + (2 * var(--overflow))) !important;
         top: calc( -1 * var(--overflow));
@@ -277,14 +278,14 @@
     }
     .news__controls .swiper-button-next,.news__controls .swiper-button-prev{
         position: relative;
-        top: 150px;
+        top: 160px;
        
      
     
 
     }
     .news__controls .swiper-button-prev{
-        top: 100px;
+        top: 120px;
     }
     .news__controls-icon{
         width: 15px;
@@ -306,11 +307,11 @@
   
     .news{
  
-        padding-bottom:130px;
+        padding-bottom:105px;
     
     }
     .news__title{
-        padding-top: 30px;
+        padding-top: 105px;
     }
     .news__container{
         margin-top: 50px;

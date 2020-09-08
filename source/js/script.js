@@ -159,7 +159,19 @@ function checkUrl(links){
 
 document.addEventListener('DOMContentLoaded', function(){
 	checkUrl('.tabs-common-links--barba');
+	// knowHeightOfElement('.history__parallax--img', '.history__parallax');
+	knowHeightOfElement('.history__photos--animate', '.history__photos__item');
+	
 })
+
+function knowHeightOfElement(el, block){
+	let elements = document.querySelectorAll(el);
+	let blocks = document.querySelectorAll(block);
+	for(let i = 0; i<elements.length; i++){
+		blocks[i].style.height = elements[i].offsetHeight + 'px';
+		blocks[i].style.width = elements[i].offsetWidth + 'px';
+	}
+}
 
 // Функция получения координат элемента
 function getCoords(elem) {
@@ -177,6 +189,15 @@ function scrollToTop( element) {
 	
 	let elementTopPosition = getCoords(element).top;
 	
+	scrollbar.scrollTo(0, elementTopPosition, 1000);
+
+}
+
+function scrollToTopHistory( element) {
+	
+	let elementTopPosition = getCoords(element).top + 50;
+	
+	// сonsole.log(elementTopPosition);
 	scrollbar.scrollTo(0, elementTopPosition, 1000);
 
 }
@@ -427,17 +448,25 @@ function eventOnScroll(){
 			let light = document.querySelectorAll('.history_light');
 			let dark = document.querySelectorAll('.history_dark');
 
-			for(let i = 0; i<dark.length; i++){
-				if(scrollbar.isVisible(dark[i])){
-					historyBg.style.opacity = "1"
-				}
-			}
-
 			for(let i = 0; i<light.length; i++){
 				if(scrollbar.isVisible(light[i])){
 					historyBg.style.opacity = "0"
+					// console.log('Белый фон');
 				}
+
+
+
 			}
+
+			for(let i = 0; i<dark.length; i++){
+				if(scrollbar.isVisible(dark[i])){
+					historyBg.style.opacity = "1"
+					// console.log('Черный фон');
+		
+				}
+				
+			}
+
 
 		}
 	
@@ -476,7 +505,7 @@ function eventOnScroll(){
 	
 	
 	makeNavLinksSmooth('.traktors','.traktors__nav-link');
-	makeNavLinksSmooth('.article','.history__nav-link');
+	makeNavLinksSmoothHistory('.article','.history__nav-link');
 	makeNavLinksSmoothMuseum('.museum-zal','.museum-nav__link' );
 
 	spyScrolling ('.museum-zal' , '.museum-nav__link.active');
@@ -1257,6 +1286,23 @@ let scrollbar;
 			// }
 		}
 	}
+
+	const makeNavLinksSmoothHistory = (sec, alllink) => {
+		const navLinks = document.querySelectorAll( alllink);
+		const section  = document.querySelectorAll(sec);
+		for ( let n = 0; n<navLinks.length; n++ ) {
+			// if ( navLinks.hasOwnProperty( n ) ) {
+				navLinks[ n ].addEventListener( 'click', e => {
+					// const id = section[ n ].id;
+					e.preventDefault( );
+				
+			
+					scrollToTopHistory(section[n]);
+				
+				} );
+			// }
+		}
+	}
 	
 // Плавный ссылки в годах
 const makeNavLinksSmoothMuseum = (sec, alllink) => {
@@ -1642,10 +1688,18 @@ let initAnimation = function(){
 		if (document.readyState === "complete") {
 	
 			setTimeout(function () {
-				document.querySelector('.preloader').style.display = "none";
-				
+				document.querySelector('.preloader').style.opacity = "0";
+				document.querySelector('.preloader').style.pointerEvents = "none";
 
 				initAnimation();
+
+
+				let videoHero = document.querySelector('.parallax__img-video--hero');
+				if(videoHero){
+					videoHero.play();
+				}
+			
+
 
 
 			

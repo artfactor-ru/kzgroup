@@ -893,6 +893,10 @@
   transition-delay: 0.1s;
 }
 
+
+.nav_lang-link:hover{
+  opacity: 0.5;
+}
 @media (max-width: 699px) {
   .c-nav_lang_link {
     font-size: 16px;
