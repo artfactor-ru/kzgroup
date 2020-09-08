@@ -1,6 +1,7 @@
 .tabs-common__wrapper{
-  border-bottom: 2px solid #E2E2E2;
-  // margin-bottom: 10px;
+  & .tabs-common{
+    border-bottom: 2px solid #E2E2E2;
+  }
 }
 
 .tabs-common {
