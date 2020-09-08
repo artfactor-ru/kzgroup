@@ -518,6 +518,21 @@
                                         <span>Начало работы</span>
                                         <div class="vac-f__form-date">
                                             <div class="vac-f__input-container">
+<!--                                                <select  class="select vac-f__form-date__month" name="language">-->
+<!--                                                    <option disabled>Выбрать</option>-->
+<!--                                                    <option value="jan">Январь</option>-->
+<!--                                                    <option value="feb">Февраль</option>-->
+<!--                                                    <option value="mar">Март</option>-->
+<!--                                                    <option value="apr">Апрель</option>-->
+<!--                                                    <option value="may">Май</option>-->
+<!--                                                    <option value="jun">Июнь</option>-->
+<!--                                                    <option value="jul">Июль</option>-->
+<!--                                                    <option value="aug">Август</option>-->
+<!--                                                    <option value="sep">Сентябрь</option>-->
+<!--                                                    <option value="oct">Октябрь</option>-->
+<!--                                                    <option value="nov">Ноябрь</option>-->
+<!--                                                    <option value="dec">Декабрь</option>-->
+<!--                                                </select>-->
                                                 <select name="work-month" class="vac-f__form-date__month">
                                                     <option value="january">Январь</option>
                                                     <option value="february">Феварь</option>
@@ -639,7 +654,6 @@
 
     $('.vac-f__form-education-btn').on('click', function () {
         let copy = $('#education-block').clone();
-
         copy.appendTo('.more-education');
         $('.select').each(function() {
             const _this = $(this),
