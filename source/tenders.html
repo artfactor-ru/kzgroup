@@ -9,420 +9,763 @@
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
+<style>
+    .preloader{
+        background-color: #ffffff;
+        width: 100vw;
+        z-index: 20000;
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
+    }
+    .preloader__icon{
+        width: 130px;
+        height: 130px;
+        fill: none;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: dash 6s linear 3s forwards infinite alternate;
+    }
+</style>
+<div class="preloader">
+    <svg class="preloader__icon"><use xlink:href="./img/sprite.svg#icon-logo-company"></use></svg>
+</div>
 
-<section class="tenders">
-    <section class="hero-common parallax__item">
-        <div class="parallax__img-wrap parallax__img-wrap--hero-inner">
-            <div class="parallax__img" data-speed="-40">
-                <div class="parallax__img-inner--hero parallax__img-inner--hero--desktop" style="background-image: url(./img/tenders/tenders-bg.png);"></div>
-                <div class="parallax__img-inner--hero parallax__img-inner--hero--mobile" style="background-image: url(./img/tenders/tenders-bg.png); background-position-x: 65%;"></div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="hero-common__block">
-                <h1 class="hero-common__title vacancies-hero__title">
-                    <div class="title--inner">Тендеры</div>
-                </h1>
-            </div>
-        </div>
-        <div class="hero-common__layer"></div>
-    </section>
-</section>
-<section class="tenders__main two-screen">
-    <ul class="social__btn-list tenders__main-socials">
-        <li class="social__btn-item social__btn-item--share">
-            <button class="social__btn" style="background-image: url(./img/social-share.svg);"></button>
+<header class="header">
+    <div class="container--header container--header--main">
 
-            <div class="social__dropdown">
-                <h5 class="social__title">Поделиться:</h5>
-                <ul class="social__link-list">
-                    <li class="social__link-item">
-                        <a class="social__link" href="" target="_blank">
-                            <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-vk"></use></svg>
-                            <span class="visually-hidden">Vk</span>
-                        </a>
-                    </li>
-                    <li class="social__link-item">
-                        <a class="social__link" href="" target="_blank">
-                            <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-inst"></use></svg>
-                            <span class="visually-hidden">Instagram</span>
-                        </a>
-                    </li>
-                    <li class="social__link-item">
-                        <a class="social__link" href="" target="_blank">
-                            <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-fb"></use></svg>
-                            <span class="visually-hidden">Facebook</span>
-                        </a>
-                    </li>
+        <div class="header__wrapper">
 
-                    <li class="social__link-item">
-                        <a class="social__link" href="" target="_blank">
-                            <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-youtube"></use></svg>
-                            <span class="visually-hidden">Youtube</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </li>
-        <li class="social__btn-item social__btn-item--message">
-            <button class="social__btn" style="background-image: url(./img/social-message.svg);"></button>
-            <div class="social__dropdown">
-                <h5 class="social__title">Подписаться на новости</h5>
-                <ul class="social__link-list">
-                    <li class="social__link-item">
-                        <a class="social__link" href="" target="_blank">
-                            <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-news"></use></svg>
-                            <span class="visually-hidden">Подписаться</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </li>
-
-    </ul>
-    <div class="tabs-common__wrapper tenders-tabs__wrapper">
-        <div class="container">
-            <div class="tabs-common tenders-tabs">
-                <div id="tabs_event" class="tabs-common-container tab-tenders-container">
-                    <a href="#0" class="tab-tenders tabs-common-links active" data-tab="Tenders" id="defaultOpen">Тендеры</a>
-                    <a href="#0" class="tabs-common-links  tab-tenders" data-tab="Permanent">Постоянные закупки</a>
+            <button class="c-nav-button js-nav-toggle" type="button">
+                <div class="c-nav-button_wrap">
+                    <div class="c-nav-button_icon">
+                        <span class="c-nav-button_line"></span>
+                        <span class="c-nav-button_line"></span>
+                        <span class="c-nav-button_line"></span>
+                    </div>
                 </div>
-            </div>
+            </button>
+            <a class="header__logo" href="">
+                <svg class="header__logo-icon"  viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                        <path d="M29.684 17.9667L17.9667 29.684L6.32028 17.9667L17.9667 6.32028L29.684 17.9667ZM27.7666 8.16666L23.3637 0H12.5696L8.16666 8.16666L0 12.5696V23.3637L8.16666 27.7666L12.5696 35.9333H23.3637L27.7666 27.7666L35.9333 23.3637V12.5696L27.7666 8.16666Z" fill="#ED1C24"/>
+                        <path d="M20.4522 6.32031L34.087 13.7058V19.9551L20.4522 6.32031ZM22.2986 34.158H16.0493L29.6841 20.5232L22.2986 34.158ZM1.77539 22.2986V15.9783L15.4102 29.613L1.77539 22.2986ZM13.6348 1.77539H19.8841L6.32031 15.4812L13.6348 1.77539Z" fill="#FFDD00"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0">
+                            <rect width="35.9333" height="35.9333" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+
+                <p class="header__logo-text">Кировский<br> завод</p>
+            </a>
         </div>
+
+
+
+
+
+
     </div>
-    <div class="container tenders--container">
-        <div id="Tenders" class="tabs-common-content tenders-tabs-content active">
-            <div class="b-table">
-                <div class="b-table__header">
-                    <ul class="b-table__list">
-                        <li class="b-table__item b-table__item-col-1">
-                            <p>Объект закупки</p>
-                            <label class="b-table__label">
-                                <svg class="b-table__item--search-icon" width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M28.2207 27.6847C28.6384 28.0461 29.2793 28.0089 29.6523 27.6016C30.0253 27.1943 29.9892 26.5712 29.5715 26.2098L28.2207 27.6847ZM20.6303 21.1164L28.2207 27.6847L29.5715 26.2098L21.9811 19.6415L20.6303 21.1164Z" fill="white"/>
-                                    <path d="M23.5534 11.8206C24.3133 17.4271 20.2513 22.6548 14.4129 23.4461C8.57443 24.2374 3.26751 20.2795 2.50762 14.6731C1.74774 9.06662 5.80968 3.83891 11.6481 3.04758C17.4866 2.25626 22.7935 6.21415 23.5534 11.8206Z" stroke="white" stroke-width="2"/>
-                                </svg>
-                                <input class="input-search-tenders" type="text" placeholder="Поиск по тендерам">
-                            </label>
-                        </li>
-                        <li class="b-table__item b-table__item-col-2">
-                            <p>Заказчик</p>
-                        </li>
-                        <li class="b-table__item b-table__item-col-3">
-                            <p>Размещено</p>
-                        </li>
-                        <li class="b-table__item b-table__item-col-4">
-                            <p>Начало приёма заявок</p>
-                        </li>
-                        <li class="b-table__item b-table__item-col-5">
-                            <p>Окончание приёма</p>
-                        </li>
-                        <li class="b-table__item b-table__item-col-6">
-                            <p>Файлы</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="b-table__rows">
-                    <div class="b-table__container">
-                        <div class="b-table__row b-table__row-1">
-                            <a href="tenders-details.html" class="b-table__link-tender">
-                                Выполнение строительно-монтажных работ
-                                по объекту: «Производство специальных сталей и сплавов». Система электроснабжения. Электроснабжение мостовых кранов, вспомогательного технологического оборудования». Поставка, монтаж, подключение
-                            </a>
-                        </div>
-                        <div class="b-table__row b-table__row-2">ООО «НПО Лаборатория специальных сталей и сплавов»</div>
-                        <div class="b-table__row b-table__row-3">27.11.2019 Ср 11:00</div>
-                        <div class="b-table__row b-table__row-4">27.11.2019 Чт 11:00</div>
-                        <div class="b-table__row b-table__row-5">09.12.2019  Пн  11:00</div>
-                        <div class="b-table__row b-table__row-6">
-                            <a href="#0" class="b-table__row-downloads">Вложения</a>
-                        </div>
-                    </div>
-                    <div class="b-table__container">
-                        <div class="b-table__row b-table__row-1">
-                            <a href="tenders-details.html" class="b-table__link-tender">
-                                Выполнение строительно-монтажных работ
-                                по объекту: «Производство специальных сталей и сплавов». Система электроснабжения. Электроснабжение мостовых кранов, вспомогательного технологического оборудования». Поставка, монтаж, подключение
-                            </a>
-                        </div>
-                        <div class="b-table__row b-table__row-2">ООО «НПО Лаборатория специальных сталей и сплавов»</div>
-                        <div class="b-table__row b-table__row-3">27.11.2019 Ср 11:00</div>
-                        <div class="b-table__row b-table__row-4">27.11.2019 Чт 11:00</div>
-                        <div class="b-table__row b-table__row-5">09.12.2019  Пн  11:00</div>
-                        <div class="b-table__row b-table__row-6">
-                            <a href="#0" class="b-table__row-downloads">Вложения</a>
-                        </div>
-                    </div>
-                    <div class="b-table__container">
-                        <div class="b-table__row b-table__row-1">
-                            <a href="tenders-details.html" class="b-table__link-tender">
-                                Выполнение строительно-монтажных работ
-                                по объекту: «Производство специальных сталей и сплавов». Система электроснабжения. Электроснабжение мостовых кранов, вспомогательного технологического оборудования». Поставка, монтаж, подключение
-                            </a>
-                        </div>
-                        <div class="b-table__row b-table__row-2">ООО «НПО Лаборатория специальных сталей и сплавов»</div>
-                        <div class="b-table__row b-table__row-3">27.11.2019 Ср 11:00</div>
-                        <div class="b-table__row b-table__row-4">27.11.2019 Чт 11:00</div>
-                        <div class="b-table__row b-table__row-5">09.12.2019  Пн  11:00</div>
-                        <div class="b-table__row b-table__row-6">
-                            <a href="#0" class="b-table__row-downloads">Вложения</a>
-                        </div>
-                    </div>
-                    <div class="b-table__container">
-                        <div class="b-table__row b-table__row-1">
-                            <a href="tenders-details.html" class="b-table__link-tender">
-                                Выполнение строительно-монтажных работ
-                                по объекту: «Производство специальных сталей и сплавов». Система электроснабжения. Электроснабжение мостовых кранов, вспомогательного технологического оборудования». Поставка, монтаж, подключение
-                            </a>
-                        </div>
-                        <div class="b-table__row b-table__row-2">ООО «НПО Лаборатория специальных сталей и сплавов»</div>
-                        <div class="b-table__row b-table__row-3">27.11.2019 Ср 11:00</div>
-                        <div class="b-table__row b-table__row-4">27.11.2019 Чт 11:00</div>
-                        <div class="b-table__row b-table__row-5">09.12.2019  Пн  11:00</div>
-                        <div class="b-table__row b-table__row-6">
-                            <a href="#0" class="b-table__row-downloads">Вложения</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="Permanent" class="tabs-common-content tenders-tabs-content">
-            <div class="b-table">
-                <div class="b-table__header">
-                    <ul class="b-table__list">
-                        <li class="b-table__item b-table__item-col-1">
-                            <p>Объект закупки</p>
-                            <label class="b-table__label">
-                                <svg class="b-table__item--search-icon" width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M28.2207 27.6847C28.6384 28.0461 29.2793 28.0089 29.6523 27.6016C30.0253 27.1943 29.9892 26.5712 29.5715 26.2098L28.2207 27.6847ZM20.6303 21.1164L28.2207 27.6847L29.5715 26.2098L21.9811 19.6415L20.6303 21.1164Z" fill="white"/>
-                                    <path d="M23.5534 11.8206C24.3133 17.4271 20.2513 22.6548 14.4129 23.4461C8.57443 24.2374 3.26751 20.2795 2.50762 14.6731C1.74774 9.06662 5.80968 3.83891 11.6481 3.04758C17.4866 2.25626 22.7935 6.21415 23.5534 11.8206Z" stroke="white" stroke-width="2"/>
-                                </svg>
-                                <input class="input-search-tenders" type="text" placeholder="Поиск по тендерам">
-                            </label>
-                        </li>
-                        <li class="b-table__item b-table__item-col-2">
-                            <p>Заказчик</p>
-                        </li>
-                        <li class="b-table__item b-table__item-col-3">
-                            <p>Размещено</p>
-                        </li>
-                        <li class="b-table__item b-table__item-col-4">
-                            <p>Начало приёма заявок</p>
-                        </li>
-                        <li class="b-table__item b-table__item-col-5">
-                            <p>Окончание приёма</p>
-                        </li>
-                        <li class="b-table__item b-table__item-col-6">
-                            <p>Файлы</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="b-table__rows">
-                    <div class="b-table__container">
-                        <div class="b-table__row b-table__row-1">Выполнение строительно-монтажных работ
-                            по объекту: «Производство специальных сталей и сплавов». Система электроснабжения. Электроснабжение мостовых кранов, вспомогательного технологического оборудования». Поставка, монтаж, подключение</div>
-                        <div class="b-table__row b-table__row-2">ООО «НПО Лаборатория специальных сталей и сплавов»</div>
-                        <div class="b-table__row b-table__row-3">27.11.2019 Ср 11:00</div>
-                        <div class="b-table__row b-table__row-4">27.11.2019 Чт 11:00</div>
-                        <div class="b-table__row b-table__row-5">09.12.2019  Пн  11:00</div>
-                        <div class="b-table__row b-table__row-6">
-                            <a href="#0" class="b-table__row-downloads">Вложения</a>
-                        </div>
-                    </div>
-                    <div class="b-table__container">
-                        <div class="b-table__row b-table__row-1">Выполнение строительно-монтажных работ
-                            по объекту: «Производство специальных сталей и сплавов». Система электроснабжения. Электроснабжение мостовых кранов, вспомогательного технологического оборудования». Поставка, монтаж, подключение</div>
-                        <div class="b-table__row b-table__row-2">ООО «НПО Лаборатория специальных сталей и сплавов»</div>
-                        <div class="b-table__row b-table__row-3">27.11.2019 Ср 11:00</div>
-                        <div class="b-table__row b-table__row-4">27.11.2019 Чт 11:00</div>
-                        <div class="b-table__row b-table__row-5">09.12.2019  Пн  11:00</div>
-                        <div class="b-table__row b-table__row-6">
-                            <a href="#0" class="b-table__row-downloads">Вложения</a>
-                        </div>
-                    </div>
-                    <div class="b-table__container">
-                        <div class="b-table__row b-table__row-1">Выполнение строительно-монтажных работ
-                            по объекту: «Производство специальных сталей и сплавов». Система электроснабжения. Электроснабжение мостовых кранов, вспомогательного технологического оборудования». Поставка, монтаж, подключение</div>
-                        <div class="b-table__row b-table__row-2">ООО «НПО Лаборатория специальных сталей и сплавов»</div>
-                        <div class="b-table__row b-table__row-3">27.11.2019 Ср 11:00</div>
-                        <div class="b-table__row b-table__row-4">27.11.2019 Чт 11:00</div>
-                        <div class="b-table__row b-table__row-5">09.12.2019  Пн  11:00</div>
-                        <div class="b-table__row b-table__row-6">
-                            <a href="#0" class="b-table__row-downloads">Вложения</a>
-                        </div>
-                    </div>
-                    <div class="b-table__container">
-                        <div class="b-table__row b-table__row-1">Выполнение строительно-монтажных работ
-                            по объекту: «Производство специальных сталей и сплавов». Система электроснабжения. Электроснабжение мостовых кранов, вспомогательного технологического оборудования». Поставка, монтаж, подключение</div>
-                        <div class="b-table__row b-table__row-2">ООО «НПО Лаборатория специальных сталей и сплавов»</div>
-                        <div class="b-table__row b-table__row-3">27.11.2019 Ср 11:00</div>
-                        <div class="b-table__row b-table__row-4">27.11.2019 Чт 11:00</div>
-                        <div class="b-table__row b-table__row-5">09.12.2019  Пн  11:00</div>
-                        <div class="b-table__row b-table__row-6">
-                            <a href="#0" class="b-table__row-downloads">Вложения</a>
-                        </div>
-                    </div>
-                    <div class="b-table__container">
-                        <div class="b-table__row b-table__row-1">Выполнение строительно-монтажных работ
-                            по объекту: «Производство специальных сталей и сплавов». Система электроснабжения. Электроснабжение мостовых кранов, вспомогательного технологического оборудования». Поставка, монтаж, подключение</div>
-                        <div class="b-table__row b-table__row-2">ООО «НПО Лаборатория специальных сталей и сплавов»</div>
-                        <div class="b-table__row b-table__row-3">27.11.2019 Ср 11:00</div>
-                        <div class="b-table__row b-table__row-4">27.11.2019 Чт 11:00</div>
-                        <div class="b-table__row b-table__row-5">09.12.2019  Пн  11:00</div>
-                        <div class="b-table__row b-table__row-6">
-                            <a href="#0" class="b-table__row-downloads">Вложения</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="common-pagination">
-            <ul class="common-pagination__list">
-                <li class="common-pagination__item">
-                    <a href="#0" class="common-pagination__arrow">
-                        <svg class="common-pagination__svg" width="14" height="22" viewBox="0 0 14 22" fill="#D1D0D0" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.4483 1.95084L13.4484 1.95088L13.4518 1.94794C13.5258 1.88577 13.5951 1.81214 13.6446 1.71855C13.6955 1.62234 13.7178 1.51939 13.7178 1.40967C13.7178 0.999881 13.3449 0.664062 12.8783 0.664062C12.7116 0.664062 12.4766 0.728246 12.3072 0.86939L0.520306 10.3339L0.520266 10.3338L0.515944 10.3375C0.349805 10.4772 0.249999 10.6679 0.249999 10.8757C0.249999 11.0836 0.349805 11.2743 0.515944 11.414L0.515912 11.4141L0.519809 11.4172L12.3067 20.9312L12.3638 20.9792C12.7191 21.278 13.2113 21.1814 13.5108 20.9297C13.6903 20.7787 13.7706 20.573 13.7455 20.3619C13.7216 20.1609 13.6064 19.983 13.4518 19.8531L13.4519 19.8531L13.4478 19.8498L2.37141 10.9248L13.4483 1.95084Z" fill="#D1D0D0" stroke="#D1D0D0" stroke-width="0.5"/>
-                        </svg>
-                    </a>
-                </li>
-                <li class="common-pagination__item">
-                    <a href="#0" class="button-paginate button-paginate--active">
-                        1
-                        <div class=" button-line button-line--first"></div>
-                        <div class=" button-line button-line--two"></div>
-                    </a>
-                </li>
-                <li class="common-pagination__item">
-                    <a href="#0" class="button-paginate">
-                        2
-                        <div class=" button-line button-line--first"></div>
-                        <div class=" button-line button-line--two"></div>
-                    </a>
-                </li>
-                <li class="common-pagination__item">
-                    <a href="#0" class="button-paginate">
-                        3
-                        <div class=" button-line button-line--first"></div>
-                        <div class=" button-line button-line--two"></div>
-                    </a>
-                </li>
-                <li class="common-pagination__item">
-                    <a href="#0" class="common-pagination__arrow">
-                        <svg class="common-pagination__svg common-pagination__svg--rotate" width="14" height="22" viewBox="0 0 14 22" fill="#D1D0D0" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.4483 1.95084L13.4484 1.95088L13.4518 1.94794C13.5258 1.88577 13.5951 1.81214 13.6446 1.71855C13.6955 1.62234 13.7178 1.51939 13.7178 1.40967C13.7178 0.999881 13.3449 0.664062 12.8783 0.664062C12.7116 0.664062 12.4766 0.728246 12.3072 0.86939L0.520306 10.3339L0.520266 10.3338L0.515944 10.3375C0.349805 10.4772 0.249999 10.6679 0.249999 10.8757C0.249999 11.0836 0.349805 11.2743 0.515944 11.414L0.515912 11.4141L0.519809 11.4172L12.3067 20.9312L12.3638 20.9792C12.7191 21.278 13.2113 21.1814 13.5108 20.9297C13.6903 20.7787 13.7706 20.573 13.7455 20.3619C13.7216 20.1609 13.6064 19.983 13.4518 19.8531L13.4519 19.8531L13.4478 19.8498L2.37141 10.9248L13.4483 1.95084Z" fill="#D1D0D0" stroke="#D1D0D0" stroke-width="0.5"/>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
-<section class="tenders__underblock">
-    <div class="container tenders__underblock-content">
-        <p class="tenders__underblock-text">В целях обеспечения прозрачности и объективности процедур закупки продукции
-            для нужд группы компаний «Кировский завод», на предприятии действует телефон доверия.
-            При выявлении недобросовестных действий со стороны участников торгов просьба сообщать о подобных фактах
-        </p>
-        <div>
-            <label>
-                <span class="tenders__underblock-title">Телефон/Факс</span>
-                <a href="tel:+78127020102" class="tenders__underblock-link">+7 (812) 702-01-02</a>
-            </label>
-            <label>
-                <span class="tenders__underblock-title">E-mail:</span>
-                <a href="mailto:doverie@kzgroup.ru" class="tenders__underblock-link">doverie@kzgroup.ru</a>
-            </label>
-        </div>
-    </div>
-</section>
+</header>
 
-<footer class="footer">
-    <div class="footer__outer">
-        <div class="container">
-            <div class="footer__row">
-                <nav class="footer__nav">
-                    <ul class="footer__nav-list">
-                        <li class="footer__nav-item">
-                            <a class="footer__nav-link" href="">Компания</a>
-                        </li>
-                        <li class="footer__nav-item">
-                            <a class="footer__nav-link" href="">Деятельность</a>
-                        </li>
-                        <li class="footer__nav-item">
-                            <a class="footer__nav-link" href="">Карта сайта</a>
-                        </li>
+<nav class="nav">
+    <div class="nav_background"></div>
 
-                        <li class="footer__nav-item">
-                            <a class="footer__nav-link" href="">Пресс-центр</a>
-                        </li>
-                        <li class="footer__nav-item">
-                            <a class="footer__nav-link" href="">Акционерам и инвесторам</a>
-                        </li>
-                        <li class="footer__nav-item">
-                            <a class="footer__nav-link" href="">Контакты</a>
-                        </li>
-                        <li class="footer__nav-item">
-                            <a class="footer__nav-link" href="">Вакансии</a>
-                        </li>
-                        <li class="footer__nav-item">
-                            <a class="footer__nav-link" href="">Тендеры</a>
-                        </li>
-                        <li class="footer__nav-item">
-                            <a class="footer__nav-link" href="">Аренда помещений</a>
-                        </li>
-                        <li class="footer__nav-item">
-                            <a class="footer__nav-link" href="">Реквизиты</a>
-                        </li>
-                        <li class="footer__nav-item footer__nav-item--last">
-                        </li>
-                    </ul>
-                    <p class="footer__adress">198097, Россия, Санкт-Петербург, пр. Стачек, 47</p>
-                </nav>
-                <div class="footer__contact">
-                    <div class="footer__contact-feedback">
-                        <h6 class="footer__contact-title">Подписаться на наши новости</h6>
-                        <form class="footer__contact-form" action="">
-                            <div class="footer__contact-form__wrap">
-                                <input class="footer__contact-input" type="mail" placeholder="E-mail">
-                                <button class="footer__contact-submit" type="submit"><svg class="footer__contact-submit-icon" width="40"><use xlink:href="./img/sprite.svg#icon-mail-submit"></use></svg></button>
+
+    <div class="nav_list-wrap">
+        <article class="nav_list-scroll">
+            <div class="nav_list-left scrollbar-inner">
+                <div class="nav_list-content">
+
+
+                    <div class="js-search-button">
+                        <div class="js-search-text">Поиск</div>
+                    </div>
+                    <ul class="nav_list">
+                        <li class="nav_item -dropdown js-dropdown">
+                            <div class="nav_link js-nav-link js-dropdown-toggle">
+                                <span class="nav_link_text">Компания</span>
+                                <svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+
                             </div>
-                        </form>
-                    </div>
-                    <ul class="footer__social-list">
-                        <li class="footer__social-item" style="background-image: url(./img/social-youtube.svg);">
-                            <a class="footer__social-link" href="">
-                                <span class="visually-hidden">Youtube</span>
+                            <span class="nav_link_line"></span>
+                            <div class="nav_dropdown js-dropdown-list">
+                                <div class="nav_dropdown_wrap">
+                                    <ul class="nav_dropdown_list">
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Руководство</a>
+                                        </li>
+
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">История</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Музей</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Производственная система</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Охрана труда</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Профсоюз</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Реквизиты</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav_item -dropdown js-dropdown">
+                            <div class="nav_link js-nav-link js-dropdown-toggle">
+                                <span class="nav_link_text">Дочерние предприятия</span>
+                                <svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+
+                            </div>
+                            <span class="nav_link_line"></span>
+                            <div class="nav_dropdown js-dropdown-list">
+                                <div class="nav_dropdown_wrap">
+                                    <ul class="nav_dropdown_list">
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Петербургский тракторный завод завод «Петросталь»</a>
+                                        </li>
+
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Завод буровых технологий</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Кировский завод Газовые технологии</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Энергетический комплекс</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Тетрамет</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Локомотив</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#"> Проектно-конструкторское бюро «Автоматика»</a>
+                                        </li>
+
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#"> Центр метрологии, испытаний и охраны труда</a>
+                                        </li>
+
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#"> Предприятия социальной сферы</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <li class="nav_item">
+                            <a class="nav_link js-nav-link" href="#">
+                                <span class="nav_link_text">Корпоративный университет</span>
+                                <span class="nav_link_line"></span>
                             </a>
                         </li>
-                        <li class="footer__social-item" style="background-image: url(./img/social-vk.svg);">
-                            <a class="footer__social-link" href="">
+
+                        <li class="nav_item">
+                            <a class="nav_link js-nav-link" href="#">
+                                <span class="nav_link_text">Вакансии</span>
+                                <span class="nav_link_line"></span>
+                            </a>
+                        </li>
+
+                        <li class="nav_item -dropdown js-dropdown">
+
+
+                            <div class="nav_link js-nav-link js-dropdown-toggle">
+                                <span class="nav_link_text">Пресс-Центр</span>
+                                <svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+                            </div>
+                            <div class="nav_dropdown js-dropdown-list">
+                                <div class="nav_dropdown_wrap">
+                                    <ul class="nav_dropdown_list">
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Новости</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Видеогалерея</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Пресса о нас</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Фотогалерея</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Контакты</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav_item -dropdown js-dropdown">
+
+
+                            <div class="nav_link js-nav-link js-dropdown-toggle">
+                                <span class="nav_link_text">Акционерам и инвесторам</span>
+                                <svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+                            </div>
+                            <div class="nav_dropdown js-dropdown-list">
+                                <div class="nav_dropdown_wrap">
+                                    <ul class="nav_dropdown_list">
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Информация, подлежащая раскрытию</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="#">Раскрытие информации дочерними обществами</a>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+
+
+                        <li class="nav_item">
+                            <a class="nav_link js-nav-link" href="#">
+                                <span class="nav_link_text">Продажа активов</span>
+                                <span class="nav_link_line"></span>
+                            </a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav_link js-nav-link" href="#">
+                                <span class="nav_link_text">Тендеры</span>
+                                <span class="nav_link_line"></span>
+                            </a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav_link js-nav-link" href="#">
+                                <span class="nav_link_text">Аренда помещений	</span>
+                                <span class="nav_link_line"></span>
+                            </a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav_link js-nav-link" href="#">
+                                <span class="nav_link_text">Контакты</span>
+                                <span class="nav_link_line"></span>
+                            </a>
+                        </li>
+
+
+
+                        <li class="nav_item">
+                            <a class="nav_link nav_link--policy js-nav-link" href="#">
+                                <span class="nav_link_text">Использование сайта</span>
+                                <span class="nav_link_line"></span>
+                            </a>
+                        </li>
+                    </ul>
+
+
+                    <div class="nav_lang nav_lang--mobile">
+                        <div class="nav_lang-wrap">
+                            <ul class="nav_lang-list">
+                                <li class="nav_lang-item">
+                                    <a class="nav_lang-link" href="">En</a>
+                                </li>
+                                <li class="nav_lang-item">
+                                    <a class="nav_lang-link" href="">Ru</a>
+                                </li>
+                                <li class="nav_lang-item">
+                                    <a class="nav_lang-link" href="">De</a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </article>
+
+
+
+    </div>
+    <div class="nav_search">
+        <article class="search-wrap">
+            <div class="search">
+                <input class="search_input o-input -search js-search-input" type="text" placeholder="Поиск" value="">
+                <div class="search_results js-search-results"></div>
+            </div>
+        </article>
+    </div>
+    <aside class="nav_aside">
+        <ul class="nav_social">
+            <li class="nav_social_item">
+                <a class="nav_social_link" href="#" target="_blank">
+
+
+                    <svg class="nav_social_icon" ><use xlink:href="./img/sprite.svg#icon-fb"></use></svg>
+                </a>
+            </li>
+            <li class="nav_social_item">
+                <a class="nav_social_link" href="#" target="_blank">
+                    <svg class="nav_social_icon" ><use xlink:href="./img/sprite.svg#icon-vk"></use></svg>
+
+                </a>
+            </li>
+            <li class="nav_social_item">
+                <a class="nav_social_link" href="#" target="_blank">
+                    <svg class="nav_social_icon" ><use xlink:href="./img/sprite.svg#icon-youtube"></use></svg>
+
+                </a>
+            </li>
+            <li class="nav_social_item">
+                <a class="nav_social_link" href="#" target="_blank">
+
+                    <svg class="nav_social_icon" ><use xlink:href="./img/sprite.svg#icon-inst"></use></svg>
+                </a>
+            </li>
+        </ul>
+        <div class="nav_lang nav_lang--desktop">
+            <div class="nav_lang-wrap">
+                <ul class="nav_lang-list">
+                    <li class="nav_lang-item">
+                        <a class="nav_lang-link" href="">Ru</a>
+                    </li>
+                    <li class="nav_lang-item">
+                        <a class="nav_lang-link" href="">En</a>
+                    </li>
+                    <li class="nav_lang-item">
+                        <a class="nav_lang-link" href="">De</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </aside>
+</nav>
+
+<div class="scroll">
+    <section class="tenders">
+        <section class="hero-common parallax__item">
+            <div class="parallax__img-wrap parallax__img-wrap--hero-inner">
+                <div class="parallax__img" data-speed="-40">
+                    <div class="parallax__img-inner--hero parallax__img-inner--hero--desktop" style="background-image: url(./img/tenders/tenders-bg.png);"></div>
+                    <div class="parallax__img-inner--hero parallax__img-inner--hero--mobile" style="background-image: url(./img/tenders/tenders-bg.png); background-position-x: 65%;"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="hero-common__block">
+                    <h1 class="hero-common__title vacancies-hero__title">
+                        <div class="title--inner">Тендеры</div>
+                    </h1>
+                </div>
+            </div>
+            <div class="hero-common__layer"></div>
+        </section>
+    </section>
+    <section class="tenders__main two-screen">
+        <ul class="social__btn-list tenders__main-socials">
+            <li class="social__btn-item social__btn-item--share">
+                <button class="social__btn" style="background-image: url(./img/social-share.svg);"></button>
+                <div class="social__dropdown">
+                    <h5 class="social__title">Поделиться:</h5>
+                    <ul class="social__link-list">
+                        <li class="social__link-item">
+                            <a class="social__link" href="" target="_blank">
+                                <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-vk"></use></svg>
                                 <span class="visually-hidden">Vk</span>
                             </a>
                         </li>
-                        <li class="footer__social-item" style="background-image: url(./img/social-inst.svg);">
-                            <a class="footer__social-link" href="">
+                        <li class="social__link-item">
+                            <a class="social__link" href="" target="_blank">
+                                <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-inst"></use></svg>
                                 <span class="visually-hidden">Instagram</span>
                             </a>
                         </li>
-                        <li class="footer__social-item" style="background-image: url(./img/social-fb.svg);">
-                            <a class="footer__social-link" href="">
+                        <li class="social__link-item">
+                            <a class="social__link" href="" target="_blank">
+                                <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-fb"></use></svg>
                                 <span class="visually-hidden">Facebook</span>
+                            </a>
+                        </li>
+
+                        <li class="social__link-item">
+                            <a class="social__link" href="" target="_blank">
+                                <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-youtube"></use></svg>
+                                <span class="visually-hidden">Youtube</span>
                             </a>
                         </li>
                     </ul>
                 </div>
+            </li>
+            <li class="social__btn-item social__btn-item--message">
+                <button class="social__btn" style="background-image: url(./img/social-message.svg);"></button>
+                <div class="social__dropdown">
+                    <h5 class="social__title">Подписаться на новости</h5>
+                    <ul class="social__link-list">
+                        <li class="social__link-item">
+                            <a class="social__link" href="" target="_blank">
+                                <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-news"></use></svg>
+                                <span class="visually-hidden">Подписаться</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+        </ul>
+        <div class="tabs-common__wrapper tenders-tabs__wrapper">
+            <div class="container">
+                <div class="tabs-common tenders-tabs">
+                    <div id="tabs_event" class="tabs-common-container tab-tenders-container">
+                        <a href="#0" class="tab-tenders tabs-common-links active" data-tab="Tenders" id="defaultOpen">Тендеры</a>
+                        <a href="#0" class="tabs-common-links  tab-tenders" data-tab="Permanent">Постоянные закупки</a>
+                    </div>
+                </div>
             </div>
-            <section class="copyright">
-                <h6 class="copyright__title">Copyrights © ПАО "Кировский завод"</h6>
-                <a class="copyright__link" href="">Правила использования сайта</a>
-                <a class="copyright__link" href="">Политика в области обработки персональных данных</a>
-            </section>
-
         </div>
+        <div class="container tenders--container">
+            <div id="Tenders" class="tabs-common-content tenders-tabs-content active">
+                <div class="b-table">
+                    <div class="b-table__header">
+                        <ul class="b-table__list">
+                            <li class="b-table__item b-table__item-col-1">
+                                <p>Объект закупки</p>
+                                <label class="b-table__label">
+                                    <svg class="b-table__item--search-icon" width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M28.2207 27.6847C28.6384 28.0461 29.2793 28.0089 29.6523 27.6016C30.0253 27.1943 29.9892 26.5712 29.5715 26.2098L28.2207 27.6847ZM20.6303 21.1164L28.2207 27.6847L29.5715 26.2098L21.9811 19.6415L20.6303 21.1164Z" fill="white"/>
+                                        <path d="M23.5534 11.8206C24.3133 17.4271 20.2513 22.6548 14.4129 23.4461C8.57443 24.2374 3.26751 20.2795 2.50762 14.6731C1.74774 9.06662 5.80968 3.83891 11.6481 3.04758C17.4866 2.25626 22.7935 6.21415 23.5534 11.8206Z" stroke="white" stroke-width="2"/>
+                                    </svg>
+                                    <input class="input-search-tenders" type="text" placeholder="Поиск по тендерам">
+                                </label>
+                            </li>
+                            <li class="b-table__item b-table__item-col-2">
+                                <p>Заказчик</p>
+                            </li>
+                            <li class="b-table__item b-table__item-col-3">
+                                <p>Размещено</p>
+                            </li>
+                            <li class="b-table__item b-table__item-col-4">
+                                <p>Начало приёма заявок</p>
+                            </li>
+                            <li class="b-table__item b-table__item-col-5">
+                                <p>Окончание приёма</p>
+                            </li>
+                            <li class="b-table__item b-table__item-col-6">
+                                <p>Файлы</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="b-table__rows">
+                        <div class="b-table__container">
+                            <div class="b-table__row b-table__row-1">
+                                <a href="tenders-details.html" class="b-table__link-tender">
+                                    Выполнение строительно-монтажных работ
+                                    по объекту: «Производство специальных сталей и сплавов». Система электроснабжения. Электроснабжение мостовых кранов, вспомогательного технологического оборудования». Поставка, монтаж, подключение
+                                </a>
+                            </div>
+                            <div class="b-table__row b-table__row-2">ООО «НПО Лаборатория специальных сталей и сплавов»</div>
+                            <div class="b-table__row b-table__row-3">27.11.2019 Ср 11:00</div>
+                            <div class="b-table__row b-table__row-4">27.11.2019 Чт 11:00</div>
+                            <div class="b-table__row b-table__row-5">09.12.2019  Пн  11:00</div>
+                            <div class="b-table__row b-table__row-6">
+                                <a href="#0" class="b-table__row-downloads">Вложения</a>
+                            </div>
+                        </div>
+                        <div class="b-table__container">
+                            <div class="b-table__row b-table__row-1">
+                                <a href="tenders-details.html" class="b-table__link-tender">
+                                    Выполнение строительно-монтажных работ
+                                    по объекту: «Производство специальных сталей и сплавов». Система электроснабжения. Электроснабжение мостовых кранов, вспомогательного технологического оборудования». Поставка, монтаж, подключение
+                                </a>
+                            </div>
+                            <div class="b-table__row b-table__row-2">ООО «НПО Лаборатория специальных сталей и сплавов»</div>
+                            <div class="b-table__row b-table__row-3">27.11.2019 Ср 11:00</div>
+                            <div class="b-table__row b-table__row-4">27.11.2019 Чт 11:00</div>
+                            <div class="b-table__row b-table__row-5">09.12.2019  Пн  11:00</div>
+                            <div class="b-table__row b-table__row-6">
+                                <a href="#0" class="b-table__row-downloads">Вложения</a>
+                            </div>
+                        </div>
+                        <div class="b-table__container">
+                            <div class="b-table__row b-table__row-1">
+                                <a href="tenders-details.html" class="b-table__link-tender">
+                                    Выполнение строительно-монтажных работ
+                                    по объекту: «Производство специальных сталей и сплавов». Система электроснабжения. Электроснабжение мостовых кранов, вспомогательного технологического оборудования». Поставка, монтаж, подключение
+                                </a>
+                            </div>
+                            <div class="b-table__row b-table__row-2">ООО «НПО Лаборатория специальных сталей и сплавов»</div>
+                            <div class="b-table__row b-table__row-3">27.11.2019 Ср 11:00</div>
+                            <div class="b-table__row b-table__row-4">27.11.2019 Чт 11:00</div>
+                            <div class="b-table__row b-table__row-5">09.12.2019  Пн  11:00</div>
+                            <div class="b-table__row b-table__row-6">
+                                <a href="#0" class="b-table__row-downloads">Вложения</a>
+                            </div>
+                        </div>
+                        <div class="b-table__container">
+                            <div class="b-table__row b-table__row-1">
+                                <a href="tenders-details.html" class="b-table__link-tender">
+                                    Выполнение строительно-монтажных работ
+                                    по объекту: «Производство специальных сталей и сплавов». Система электроснабжения. Электроснабжение мостовых кранов, вспомогательного технологического оборудования». Поставка, монтаж, подключение
+                                </a>
+                            </div>
+                            <div class="b-table__row b-table__row-2">ООО «НПО Лаборатория специальных сталей и сплавов»</div>
+                            <div class="b-table__row b-table__row-3">27.11.2019 Ср 11:00</div>
+                            <div class="b-table__row b-table__row-4">27.11.2019 Чт 11:00</div>
+                            <div class="b-table__row b-table__row-5">09.12.2019  Пн  11:00</div>
+                            <div class="b-table__row b-table__row-6">
+                                <a href="#0" class="b-table__row-downloads">Вложения</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="Permanent" class="tabs-common-content tenders-tabs-content">
+                <div class="b-table">
+                    <div class="b-table__header">
+                        <ul class="b-table__list">
+                            <li class="b-table__item b-table__item-col-1">
+                                <p>Объект закупки</p>
+                                <label class="b-table__label">
+                                    <svg class="b-table__item--search-icon" width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M28.2207 27.6847C28.6384 28.0461 29.2793 28.0089 29.6523 27.6016C30.0253 27.1943 29.9892 26.5712 29.5715 26.2098L28.2207 27.6847ZM20.6303 21.1164L28.2207 27.6847L29.5715 26.2098L21.9811 19.6415L20.6303 21.1164Z" fill="white"/>
+                                        <path d="M23.5534 11.8206C24.3133 17.4271 20.2513 22.6548 14.4129 23.4461C8.57443 24.2374 3.26751 20.2795 2.50762 14.6731C1.74774 9.06662 5.80968 3.83891 11.6481 3.04758C17.4866 2.25626 22.7935 6.21415 23.5534 11.8206Z" stroke="white" stroke-width="2"/>
+                                    </svg>
+                                    <input class="input-search-tenders" type="text" placeholder="Поиск по тендерам">
+                                </label>
+                            </li>
+                            <li class="b-table__item b-table__item-col-2">
+                                <p>Заказчик</p>
+                            </li>
+                            <li class="b-table__item b-table__item-col-3">
+                                <p>Размещено</p>
+                            </li>
+                            <li class="b-table__item b-table__item-col-4">
+                                <p>Начало приёма заявок</p>
+                            </li>
+                            <li class="b-table__item b-table__item-col-5">
+                                <p>Окончание приёма</p>
+                            </li>
+                            <li class="b-table__item b-table__item-col-6">
+                                <p>Файлы</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="b-table__rows">
+                        <div class="b-table__container">
+                            <div class="b-table__row b-table__row-1">Выполнение строительно-монтажных работ
+                                по объекту: «Производство специальных сталей и сплавов». Система электроснабжения. Электроснабжение мостовых кранов, вспомогательного технологического оборудования». Поставка, монтаж, подключение</div>
+                            <div class="b-table__row b-table__row-2">ООО «НПО Лаборатория специальных сталей и сплавов»</div>
+                            <div class="b-table__row b-table__row-3">27.11.2019 Ср 11:00</div>
+                            <div class="b-table__row b-table__row-4">27.11.2019 Чт 11:00</div>
+                            <div class="b-table__row b-table__row-5">09.12.2019  Пн  11:00</div>
+                            <div class="b-table__row b-table__row-6">
+                                <a href="#0" class="b-table__row-downloads">Вложения</a>
+                            </div>
+                        </div>
+                        <div class="b-table__container">
+                            <div class="b-table__row b-table__row-1">Выполнение строительно-монтажных работ
+                                по объекту: «Производство специальных сталей и сплавов». Система электроснабжения. Электроснабжение мостовых кранов, вспомогательного технологического оборудования». Поставка, монтаж, подключение</div>
+                            <div class="b-table__row b-table__row-2">ООО «НПО Лаборатория специальных сталей и сплавов»</div>
+                            <div class="b-table__row b-table__row-3">27.11.2019 Ср 11:00</div>
+                            <div class="b-table__row b-table__row-4">27.11.2019 Чт 11:00</div>
+                            <div class="b-table__row b-table__row-5">09.12.2019  Пн  11:00</div>
+                            <div class="b-table__row b-table__row-6">
+                                <a href="#0" class="b-table__row-downloads">Вложения</a>
+                            </div>
+                        </div>
+                        <div class="b-table__container">
+                            <div class="b-table__row b-table__row-1">Выполнение строительно-монтажных работ
+                                по объекту: «Производство специальных сталей и сплавов». Система электроснабжения. Электроснабжение мостовых кранов, вспомогательного технологического оборудования». Поставка, монтаж, подключение</div>
+                            <div class="b-table__row b-table__row-2">ООО «НПО Лаборатория специальных сталей и сплавов»</div>
+                            <div class="b-table__row b-table__row-3">27.11.2019 Ср 11:00</div>
+                            <div class="b-table__row b-table__row-4">27.11.2019 Чт 11:00</div>
+                            <div class="b-table__row b-table__row-5">09.12.2019  Пн  11:00</div>
+                            <div class="b-table__row b-table__row-6">
+                                <a href="#0" class="b-table__row-downloads">Вложения</a>
+                            </div>
+                        </div>
+                        <div class="b-table__container">
+                            <div class="b-table__row b-table__row-1">Выполнение строительно-монтажных работ
+                                по объекту: «Производство специальных сталей и сплавов». Система электроснабжения. Электроснабжение мостовых кранов, вспомогательного технологического оборудования». Поставка, монтаж, подключение</div>
+                            <div class="b-table__row b-table__row-2">ООО «НПО Лаборатория специальных сталей и сплавов»</div>
+                            <div class="b-table__row b-table__row-3">27.11.2019 Ср 11:00</div>
+                            <div class="b-table__row b-table__row-4">27.11.2019 Чт 11:00</div>
+                            <div class="b-table__row b-table__row-5">09.12.2019  Пн  11:00</div>
+                            <div class="b-table__row b-table__row-6">
+                                <a href="#0" class="b-table__row-downloads">Вложения</a>
+                            </div>
+                        </div>
+                        <div class="b-table__container">
+                            <div class="b-table__row b-table__row-1">Выполнение строительно-монтажных работ
+                                по объекту: «Производство специальных сталей и сплавов». Система электроснабжения. Электроснабжение мостовых кранов, вспомогательного технологического оборудования». Поставка, монтаж, подключение</div>
+                            <div class="b-table__row b-table__row-2">ООО «НПО Лаборатория специальных сталей и сплавов»</div>
+                            <div class="b-table__row b-table__row-3">27.11.2019 Ср 11:00</div>
+                            <div class="b-table__row b-table__row-4">27.11.2019 Чт 11:00</div>
+                            <div class="b-table__row b-table__row-5">09.12.2019  Пн  11:00</div>
+                            <div class="b-table__row b-table__row-6">
+                                <a href="#0" class="b-table__row-downloads">Вложения</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="common-pagination">
+                <ul class="common-pagination__list">
+                    <li class="common-pagination__item">
+                        <a href="#0" class="common-pagination__arrow">
+                            <svg class="common-pagination__svg" width="14" height="22" viewBox="0 0 14 22" fill="#D1D0D0" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.4483 1.95084L13.4484 1.95088L13.4518 1.94794C13.5258 1.88577 13.5951 1.81214 13.6446 1.71855C13.6955 1.62234 13.7178 1.51939 13.7178 1.40967C13.7178 0.999881 13.3449 0.664062 12.8783 0.664062C12.7116 0.664062 12.4766 0.728246 12.3072 0.86939L0.520306 10.3339L0.520266 10.3338L0.515944 10.3375C0.349805 10.4772 0.249999 10.6679 0.249999 10.8757C0.249999 11.0836 0.349805 11.2743 0.515944 11.414L0.515912 11.4141L0.519809 11.4172L12.3067 20.9312L12.3638 20.9792C12.7191 21.278 13.2113 21.1814 13.5108 20.9297C13.6903 20.7787 13.7706 20.573 13.7455 20.3619C13.7216 20.1609 13.6064 19.983 13.4518 19.8531L13.4519 19.8531L13.4478 19.8498L2.37141 10.9248L13.4483 1.95084Z" fill="#D1D0D0" stroke="#D1D0D0" stroke-width="0.5"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="common-pagination__item">
+                        <a href="#0" class="button-paginate button-paginate--active">
+                            1
+                            <div class=" button-line button-line--first"></div>
+                            <div class=" button-line button-line--two"></div>
+                        </a>
+                    </li>
+                    <li class="common-pagination__item">
+                        <a href="#0" class="button-paginate">
+                            2
+                            <div class=" button-line button-line--first"></div>
+                            <div class=" button-line button-line--two"></div>
+                        </a>
+                    </li>
+                    <li class="common-pagination__item">
+                        <a href="#0" class="button-paginate">
+                            3
+                            <div class=" button-line button-line--first"></div>
+                            <div class=" button-line button-line--two"></div>
+                        </a>
+                    </li>
+                    <li class="common-pagination__item">
+                        <a href="#0" class="common-pagination__arrow">
+                            <svg class="common-pagination__svg common-pagination__svg--rotate" width="14" height="22" viewBox="0 0 14 22" fill="#D1D0D0" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.4483 1.95084L13.4484 1.95088L13.4518 1.94794C13.5258 1.88577 13.5951 1.81214 13.6446 1.71855C13.6955 1.62234 13.7178 1.51939 13.7178 1.40967C13.7178 0.999881 13.3449 0.664062 12.8783 0.664062C12.7116 0.664062 12.4766 0.728246 12.3072 0.86939L0.520306 10.3339L0.520266 10.3338L0.515944 10.3375C0.349805 10.4772 0.249999 10.6679 0.249999 10.8757C0.249999 11.0836 0.349805 11.2743 0.515944 11.414L0.515912 11.4141L0.519809 11.4172L12.3067 20.9312L12.3638 20.9792C12.7191 21.278 13.2113 21.1814 13.5108 20.9297C13.6903 20.7787 13.7706 20.573 13.7455 20.3619C13.7216 20.1609 13.6064 19.983 13.4518 19.8531L13.4519 19.8531L13.4478 19.8498L2.37141 10.9248L13.4483 1.95084Z" fill="#D1D0D0" stroke="#D1D0D0" stroke-width="0.5"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="tenders__underblock">
+        <div class="container tenders__underblock-content">
+            <p class="tenders__underblock-text">В целях обеспечения прозрачности и объективности процедур закупки продукции
+                для нужд группы компаний «Кировский завод», на предприятии действует телефон доверия.
+                При выявлении недобросовестных действий со стороны участников торгов просьба сообщать о подобных фактах
+            </p>
+            <div>
+                <label>
+                    <span class="tenders__underblock-title">Телефон/Факс</span>
+                    <a href="tel:+78127020102" class="tenders__underblock-link">+7 (812) 702-01-02</a>
+                </label>
+                <label>
+                    <span class="tenders__underblock-title">E-mail:</span>
+                    <a href="mailto:doverie@kzgroup.ru" class="tenders__underblock-link">doverie@kzgroup.ru</a>
+                </label>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__outer">
+            <div class="container">
+                <div class="footer__row">
+                    <nav class="footer__nav">
+                        <ul class="footer__nav-list">
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="">Компания</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="">Деятельность</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="">Карта сайта</a>
+                            </li>
 
-    </div>
-</footer>
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="">Пресс-центр</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="">Акционерам и инвесторам</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="">Контакты</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="">Вакансии</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="">Тендеры</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="">Аренда помещений</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="">Реквизиты</a>
+                            </li>
+                            <li class="footer__nav-item footer__nav-item--last">
+                            </li>
+                        </ul>
+                        <p class="footer__adress">198097, Россия, Санкт-Петербург, пр. Стачек, 47</p>
+                    </nav>
+                    <div class="footer__contact">
+                        <div class="footer__contact-feedback">
+                            <h6 class="footer__contact-title">Подписаться на наши новости</h6>
+                            <form class="footer__contact-form" action="">
+                                <div class="footer__contact-form__wrap">
+                                    <input class="footer__contact-input" type="mail" placeholder="E-mail">
+                                    <button class="footer__contact-submit" type="submit"><svg class="footer__contact-submit-icon" width="40"><use xlink:href="./img/sprite.svg#icon-mail-submit"></use></svg></button>
+                                </div>
+                            </form>
+                        </div>
+                        <ul class="footer__social-list">
+                            <li class="footer__social-item" style="background-image: url(./img/social-youtube.svg);">
+                                <a class="footer__social-link" href="">
+                                    <span class="visually-hidden">Youtube</span>
+                                </a>
+                            </li>
+                            <li class="footer__social-item" style="background-image: url(./img/social-vk.svg);">
+                                <a class="footer__social-link" href="">
+                                    <span class="visually-hidden">Vk</span>
+                                </a>
+                            </li>
+                            <li class="footer__social-item" style="background-image: url(./img/social-inst.svg);">
+                                <a class="footer__social-link" href="">
+                                    <span class="visually-hidden">Instagram</span>
+                                </a>
+                            </li>
+                            <li class="footer__social-item" style="background-image: url(./img/social-fb.svg);">
+                                <a class="footer__social-link" href="">
+                                    <span class="visually-hidden">Facebook</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <section class="copyright">
+                    <h6 class="copyright__title">Copyrights © ПАО "Кировский завод"</h6>
+                    <a class="copyright__link" href="">Правила использования сайта</a>
+                    <a class="copyright__link" href="">Политика в области обработки персональных данных</a>
+                </section>
+            </div>
+        </div>
+    </footer>
+</div>
+
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="

@@ -40,7 +40,12 @@
   border-bottom: 1px solid #CECECE;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  cursor: default;
   font-family: $font-text-light;
+  & p {
+    transition: .3s;
+  }
   &-desc {
     font-size: 12px;
     line-height: 18px;
@@ -63,6 +68,27 @@
   &-icon {
     min-width: 27px;
   }
+}
+
+
+.tenders-d__item:before {
+  content:'';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: $red-color;
+  transition: all 0.85s ease;
+}
+
+.tenders-d__item:hover:before {
+  width: 100%;
+}
+
+.tenders-d__item:hover p {
+  color: $red-color;
+  transition: .3s;
 }
 
 

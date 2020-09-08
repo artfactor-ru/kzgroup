@@ -318,9 +318,6 @@
   .b-table {
     width: 1250px;
   }
-  .tenders__main-socials {
-    display: block;
-  }
 
 }
 
@@ -341,6 +338,9 @@
   .tenders__underblock-link {
     font-size: 24px;
   }
+  .tenders__main-socials {
+    display: block;
+  }
 }
 
 @media(min-width: 1679px){
@@ -359,5 +359,7 @@
   .tenders__main .tenders--container {
     padding-right: 9%;
   }
-
+  .tenders__underblock-title {
+    margin-right: 15px;
+  }
 }
