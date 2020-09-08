@@ -1,7 +1,7 @@
 .personnel-policy{
     background-color: $blue-color;
     padding-top: 35px;
-    padding-bottom: 95px;
+    padding-bottom: 55px;
     box-sizing: border-box;
     
 }
@@ -25,6 +25,7 @@
     @include list-destroy;
     color: #FFFFFF;
     position: relative;
+    margin-top: 100px;
 
 }
 .personnel-policy__statisctics-item{
@@ -103,7 +104,7 @@
         padding-bottom: 45px;
     }
     .parallax__img-wrap--personnel-policy{
-        --overflow: 50px;
+        --overflow: 70px;
         height: calc(100% + (2 * var(--overflow))) !important; 
         top: calc( -1 * var(--overflow));
     }
@@ -121,8 +122,9 @@
     .personnel-policy__statisctics{
        display: flex;
        
-
+        margin-top: 0px;
     }
+   
     .personnel-policy__statisctics-item{
         margin-top: 35px;
         
@@ -215,7 +217,7 @@
         padding: 30px 50px;
         max-width: none;
         font-size: 12px;
-        margin-top: 25px;
+        margin-top: 40px;
        
     }
     .personnel-policy__statisctics-data--inner .personnel-policy__statisctics-number{
@@ -241,10 +243,15 @@
     }
     .personnel-policy__desc{
  
-        padding-top: 25px;
+        padding-top: 33px;
         width: 65%;
     }
-
+    .personnel-policy__statisctics{
+        display: flex;
+        
+         margin-top: 30px;
+     }
+    
    
     .personnel-policy__statisctics-item{
         margin-top: 40px;

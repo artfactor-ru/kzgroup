@@ -23,7 +23,7 @@
             height: 100%;
             background-color: $blue-color;
             opacity: 0;
-            transition: all 1s linear 0.1s;
+            transition: all 1s ease 0.2s;
         }
 }
 
@@ -141,6 +141,9 @@
     padding-left: 26px;
     padding-top: 28px;
     width: 68%;
+    will-change: transform;
+    // position: absolute;
+    position: relative;
     box-sizing: border-box;
     &.history__photos__item-1{
         // max-width: 341px;
@@ -158,6 +161,7 @@
     margin-bottom: 10px;
     font-size: 0;
     display: inline-block;
+ 
 }
 .history__photos__item-pic img{
     height: 260px;
@@ -181,6 +185,7 @@
     }
     .history__wrapper{
         display: flex;
+        box-sizing: border-box;
     }
     .history_dark{
         &::before{
@@ -550,7 +555,7 @@
   
     .history_light,
     .history_dark{
-        padding: 110px 0;
+        padding: 150px 0 30px 0;
     }
     .history__year{
         height: 330px;
@@ -905,7 +910,9 @@
 }
 
 @media(min-width: 1680px){
-
+    .history .traktors__nav{
+        margin-left: 35px;
+    }
     .about--history{
         min-height: 335px;
         // margin-bottom: 40px;
@@ -1194,8 +1201,15 @@
     .swiper-scrollbar--history{
         display: none;
     }
-}
 
+}
+@media(min-width: 1280px){
+    .history__photos--animate{
+        position: fixed;
+        will-change: transform;
+        top: 0;
+    }
+}
 .history__number-icon{
     fill: none;
     stroke: #808080;
@@ -1228,3 +1242,17 @@
     background-color: $red-color;
 }
 
+// .history__parallax{
+//     overflow: hidden;
+//     position: relative;
+// }
+// .history__parallax img{
+//     position: absolute;
+//     // position: relative;
+//     display: inline-block;
+//     will-change: transform;
+
+//     --overflow: 100px; 
+//     top: calc( -1 * var(--overflow));
+//     bottom: calc( -1 * var(--overflow));
+// }

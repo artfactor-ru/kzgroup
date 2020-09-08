@@ -13,7 +13,7 @@
 
 
 .zavod-text--main {
-    max-height: 170px;
+    max-height: 215px;
     overflow: hidden;
     margin-top: 5px;
    transition: all 3s ease;
@@ -91,8 +91,8 @@
 
 @media(min-width: 1280px){
     .zavod--main{
-        padding-bottom: 80px;
-        padding-top: 140px;
+        padding-bottom: 140px;
+        // padding-top: 140px;
     }
     .zavod-img-wrap--main{
        flex-direction: column;
@@ -116,7 +116,7 @@
 @media(min-width: 1680px){
     .zavod--main{
         padding-bottom: 140px;
-        padding-top: 170px;
+        padding-top: 125px;
     }
     .zavod-img-wrap--main{
         margin-top: 0;
