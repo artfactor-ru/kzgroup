@@ -265,7 +265,7 @@ function socialInteraction() {
 let twoScreen = document.querySelector('.two-screen');
 document.addEventListener('DOMContentLoaded', function(){
 	
-	if(!document.querySelector('.main') && !document.querySelector('.hero-common') && !document.querySelector('.main__hero')){
+	if(!document.querySelector('.main') && !document.querySelector('.hero-common') && !document.querySelector('.main__hero') && !document.querySelector('.main--person')){
 		header.classList.add('js-scroll');
 
 	}
