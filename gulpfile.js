@@ -80,7 +80,7 @@ gulp.task("minifyjs", function () {
         .pipe(source('app.js'))
         .pipe(buffer())
         .pipe(sourcemaps.init())
-        // .pipe(minifyjs())
+        .pipe(minifyjs())
         .pipe(sourcemaps.write('./maps'))
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("./build/js"));
@@ -89,24 +89,24 @@ gulp.task("minifyjs", function () {
 // Оптимизация изображений
 gulp.task("image", function () {
   return gulp.src("./build/img/**/*.{png,jpg,svg}")
-    // .pipe(imagemin([
-    //   imagemin.optipng({
-    //     optimizationLevel: 3  // уровень оптимизации
-    //   }),
-    //   imagemin.jpegtran({
-    //     progressive: true // прогрессивная загрузка картинки
-    //   }),
-    //   imagemin.svgo(
-    //     {
-    //     plugins: [
-    //       {cleanupIDs: false},
-    //       {removeUselessDefs: false},
-    //       {removeViewBox: true},
-    //       {removeComments: true}
-    //     ]
-    //   }
-    //   )
-    // ]))
+    .pipe(imagemin([
+      // imagemin.optipng({
+      //   optimizationLevel: 3  // уровень оптимизации
+      // }),
+      imagemin.jpegtran({
+        progressive: true // прогрессивная загрузка картинки
+      }),
+      imagemin.svgo(
+        {
+        plugins: [
+          {cleanupIDs: false},
+          {removeUselessDefs: false},
+          {removeViewBox: true},
+          {removeComments: true}
+        ]
+      }
+      )
+    ]))
     .pipe(gulp.dest("./build/img"));
 });
 
