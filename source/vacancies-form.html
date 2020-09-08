@@ -355,7 +355,7 @@
             </div>
         </aside>
     </nav>
-    <div class="scroll-">
+    <div class="scroll">
         <div class="vac-form__wrapper two-screen">
             <div class="container">
                 <a href="vacancies.html" class="popup_kirovets__back vacancies-d__breadcrumb">
@@ -461,7 +461,7 @@
                                                 <path d="M1.656 1.36724L1.65603 1.36721L1.65305 1.36374C1.61289 1.31698 1.56143 1.26853 1.49311 1.23318C1.4224 1.19658 1.34802 1.1814 1.27258 1.1814C0.979044 1.1814 0.75 1.44028 0.75 1.7488C0.75 1.86243 0.792681 2.01654 0.889966 2.13133L6.09482 8.47738L6.09477 8.47743L6.09846 8.48173C6.19427 8.59329 6.32888 8.66406 6.47892 8.66406C6.62897 8.66406 6.76357 8.59329 6.85939 8.48173L6.85943 8.48176L6.86263 8.47788L12.0946 2.13194L12.1202 2.10212C12.333 1.85438 12.2568 1.5227 12.093 1.332C11.9859 1.20735 11.8367 1.14939 11.6836 1.16721C11.54 1.18394 11.4181 1.26361 11.3321 1.36374L11.332 1.36371L11.3287 1.36775L6.50566 7.22781L1.656 1.36724Z" fill="black" stroke="black" stroke-width="0.5"/>
                                             </svg>
                                             <select  class="select" name="language">
-<!--                                                <option disabled>Выбрать</option>-->
+                                                <option disabled>Выбрать</option>
                                                 <option value="school">Общее</option>
                                                 <option value="middle">Среднее</option>
                                                 <option value="middle-prof">Среднее профессиональное</option>
@@ -652,10 +652,10 @@
 
         _this.hide();
         _this.wrap('<div class="select"></div>');
-        // $('<div>', {
-        //     class: 'new-select',
-        //     text: _this.children('option:disabled').text()
-        // }).insertAfter(_this);
+        $('<div>', {
+            class: 'new-select',
+            text: _this.children('option:disabled').text()
+        }).insertAfter(_this);
 
         const selectHead = _this.next('.new-select');
         $('<div>', {
