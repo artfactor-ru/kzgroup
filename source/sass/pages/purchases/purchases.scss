@@ -1,6 +1,6 @@
 .purchase__list {
     margin-bottom: 34px;
-    padding-top: 40px;
+    padding-top: 50px;
 }
 
 .purchase__wrapper {
@@ -18,7 +18,7 @@
 .parallax__item--purchase {
     flex-shrink: 0;
     margin-right: 0px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     flex-basis: 45%;
     min-height: 305px;
     transition: transform .9s ease;
@@ -89,6 +89,7 @@
     width: 50%;
     display: flex;
     flex-direction: column;
+    padding-left: 7px;
 }
 
 .purchase-inform__contacts--title {
