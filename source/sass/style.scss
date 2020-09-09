@@ -170,6 +170,9 @@ figure {
     .scrollbar-track-y {
         display: block !important;
     }
+    .tabs-common__wrapper .scrollbar-track-y {
+        display: none !important;
+    }
 }
 
 @media(min-width: 1280px) {
@@ -327,6 +330,7 @@ figure {
 	transform: scaleX(0);
 
   }
+
 
 // [data-speed= "0.9"]{
 // 	position: relative;
