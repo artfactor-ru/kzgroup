@@ -15,7 +15,9 @@
 .button-more--museum-history{
     @extend %button-more;
 }
-
+.museum-zal__wrap{
+    padding-top: 15px;
+}
 @media(min-width: 768px){
     .museum-history{
         

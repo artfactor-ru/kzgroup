@@ -1,5 +1,5 @@
 .history_achieves{
-    padding: 50px 0 35px;
+    padding: 50px 0 50px;
     & .history__entry--text-title{
         font-size: 22px;
     }
@@ -8,7 +8,7 @@
     }
     & 
     & .history__entry--text{
-        margin-bottom: 30px;
+        margin-bottom: 0px;
     }
     & .history__entry--text-subtitle{
         margin-bottom: 30px;
@@ -51,8 +51,22 @@
     font-size: 12px;
     line-height: 1.3;
     font-family: $font-text-regular;
+    padding-bottom: 35px;
 }
 
+@media(min-width: 560px){
+    .history_achieves--list-item{
+        width: 30%;
+    }
+    .history__photos__item.swiper-slide{
+        width: 50% !important;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+    .history__photos__item-pic img{
+        height: auto;
+    }
+}
 @media(min-width: 767px){
     .history_achieves{
         padding: 80px 0;

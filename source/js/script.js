@@ -428,6 +428,15 @@ if(containerTabsScroll){
 
 function eventOnScroll(){
 	scrollbar.addListener(({ offset }) => {
+
+
+		// let historyImage = document.querySelectorAll('.history__parallax');
+
+		// for(let i = 0; i<historyImage.length; i++){
+		// 	if(scrollbar.isVisible(historyImage[i])){
+		// 		historyImage[i].classList.add('is-inview');
+		// 	}
+		// }
 		
 		// Анимация для кнопки подробнее нужно инициализировать чтобы появлялась при клике на табе
 		gsap.utils.toArray('.button-more').forEach(element => {
@@ -470,7 +479,8 @@ function eventOnScroll(){
 
 		}
 	
-	
+
+
 	parallax(document.querySelectorAll('.parallax__img'));
 	parallax(document.querySelectorAll('.parallax__img--slide'));
 	
@@ -494,10 +504,11 @@ function eventOnScroll(){
 	if(document.querySelector('.swiper-container--hero')){
 		if(scrollbar.isVisible(document.querySelector('.swiper-container--hero'))){
 			swiperHero.autoplay.start();
+			document.body.classList.add('load')
 			
-		
 		}else{
 			swiperHero.autoplay.stop();
+			document.body.classList.remove('load')
 		}
 	}
 	
@@ -594,11 +605,12 @@ let scrollbar;
 			}
 			if (document.querySelectorAll('.history__photos')) {
 				document.querySelectorAll('.history__photos').forEach(function(slider, index){
-					console.log(slider.querySelector('.swiper-scrollbar--history'));
 					slider.classList.add('swiper-container--history-'+ index);
 					slider.querySelector('.swiper-scrollbar--history').classList.add('swiper-scrollbar--history-' + index)
 					swipersHistory[index] = new Swiper(".swiper-container--history-" + index, {
+						slidesPerView: 'auto',
 						scrollbar: {
+							
 							el: '.swiper-scrollbar--history-' + index
 						},
 					});
@@ -1082,6 +1094,10 @@ let scrollbar;
 	}
 	document.addEventListener('DOMContentLoaded', function(){
 		initSlider();
+		if(swiperHero){
+			swiperHero.autoplay.stop();
+		}
+		
 	})
 
 	
@@ -1699,9 +1715,13 @@ let initAnimation = function(){
 					videoHero.play();
 				}
 			
+				if(swiperHero){
+					swiperHero.autoplay.start();
+					document.body.classList.add('load');
 
-
-
+				}
+				
+				
 			
 			}, 6000);
 		
@@ -1928,17 +1948,20 @@ if(document.querySelector('.geography')){
 if(screen.width>=1280){
 	let body = document.body;
 	let parallaxHor = document.querySelectorAll(".parallax__img--horizontal");
+	let wrapperHor = document.querySelector('.strategy_about');
 
-	for(let i = 0; i<parallaxHor.length; i++){
-		body.addEventListener('mousemove', function(e) {
-			let speed = parallaxHor[i].getAttribute('data-speedhor');
-			let x = -(e.pageX + this.offsetLeft) / speed;
-		
-			parallaxHor[i].style.transform = 'translate3d(' + x + 'px,'  + '0px, 0px)';
 
-			// blobs[0].style.transform = 'translate3d(' + -x + 'px,' + -y + 'px, 0px)';
-		})
-	}
+		for(let i = 0; i<parallaxHor.length; i++){
+			wrapperHor.addEventListener('mousemove', function(e) {
+				
+					let speed = parallaxHor[i].getAttribute('data-speedhor');
+					let x = -(e.pageX + this.offsetLeft) / speed;
+				
+					parallaxHor[i].style.transform = 'translate3d(' + x + 'px,'  + '0px, 0px)';
+				
+			})
+		}
+	
 
 
 	// Анимация элементов
