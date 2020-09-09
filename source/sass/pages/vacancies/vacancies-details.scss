@@ -68,6 +68,7 @@
   }
 }
 
+
 .vacancies-d__description {
   display: flex;
 }
@@ -119,20 +120,23 @@
   width: 100%;
 }
 
+
+
 .vacancies-d__form {
   font-family: $font-text-regular;
   width: 950px;
-  height: 670px;
+  height: 700px;
   background-color: #fff;
   position: fixed;
   top: 50%;
   left: 50%;
-  z-index: 500;
+  z-index: 990;
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  animation: showBlock .2s linear forwards;
   &-close {
     position: absolute;
     top: 4%;
@@ -152,11 +156,15 @@
     position: absolute;
     display: none;
     z-index: 900;
+    animation: showBlock .2s linear forwards;
+    opacity: 0;
   }
   &-layer {
     width: 100%;
     height: 100%;
     background-color: #000000ab;
+    z-index: 900;
+    animation: showBlock .2s linear forwards;
   }
   &-buttons {
     padding-left: 300px;
@@ -193,7 +201,7 @@
     }
     & input {
       width: 468px;
-      height: 42px;
+      height: 62px;
       border-radius: 3px;
       background-color: #F6F6F6;
       box-sizing: border-box;
@@ -218,6 +226,14 @@
   }
 }
 
+@keyframes showBlock {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 .vac-d-form__input-container {
   position: relative;
