@@ -907,8 +907,6 @@
 
 // Ссылка подробнее
 
-
-
 %button-more{
 	font-family: $font-regular;
 	font-style: normal;
@@ -953,15 +951,12 @@
 
 @media (min-width: 1280px){
 	%button-more{
-	
 		font-size: 14px;
 		line-height: 18px;
-	
-	
 		padding-left: 65px;
-		 &:hover span{
-				transform:  translateX(10px);
-			}
+		&:hover span{
+			transform:  translateX(10px);
+		}
 		&::before{
 			width: 0px;
 			height: 1px;
