@@ -1,6 +1,11 @@
 .purchase__list {
     margin-bottom: 34px;
     padding-top: 50px;
+
+}
+
+.swiper-purchase{
+    overflow: hidden;
 }
 
 .purchase__wrapper {
@@ -125,7 +130,14 @@
             justify-content: space-between;
             width: 100%;
             & .purchase_card {
-                width: 31%;
+                width: 31.3%;
+                & .parallax__item--purchase {
+                    min-height: 244px;
+                    margin-bottom: 24px;
+                }
+                & .rent_link{
+                    margin-top: 22px;
+                }
             }
         }
     }
@@ -139,8 +151,9 @@
             }
         }
         & .button {
-            margin: 0 0 45px;
-            font-size: 14px;
+            margin: 0 0 48px;
+            font-size: 16px;
+            padding: 27px 53px;
         }
     }
     .purchase_heading {
@@ -151,8 +164,11 @@
         font-size: 22px;
         line-height: 32px;
     }
+    .purchase-inform__contacts--item {
+        width: 28%;
+    }
     .purchase-inform__text {
-        margin-bottom: 60px;
+        margin-bottom: 35px;
     }
     .purchase-inform__contacts--title {
         font-size: 16px;
@@ -178,9 +194,14 @@
     }
     .purchase__list {
         margin-bottom: 95px;
-    }
-    .purchase__order {
-        font-size: 24px;
+        & .cards {
+            & .purchase_card {
+                width: 32%;
+                & .parallax__item--purchase {
+                    min-height: 365px;
+                }
+            }
+        }
     }
     .purchase__order {
         padding-bottom: 70px;
@@ -193,7 +214,7 @@
         }
         & .button {
             margin: 0 0 45px;
-            font-size: 18px;
+            padding: 27px 32px;
         }
     }
     .purchase-inform {
