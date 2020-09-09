@@ -58,6 +58,13 @@ address {
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
       -ms-overflow-style: -ms-autohiding-scrollbar;
+      //border-bottom: 2px solid #E2E2E2;
+      font-size: 14px;
+      width: 90%;
+      margin-left: 5%;
+    }
+
+    @media only screen and (max-width: 600px) {
       border-bottom: 2px solid #E2E2E2;
       font-size: 14px;
       width: 95%;
@@ -165,6 +172,8 @@ address {
         &:hover:before {
           width: 100%;
         }
+      }
+    }
 
         &.active {
           color: $red-color;
@@ -184,7 +193,6 @@ address {
           @media only screen and(max-width: 1680px) {
             padding-bottom: 20px;
             font-size: 20px;
-            line-height: 18px;
           }
 
           @media only screen and(max-width: 1279px) {
@@ -203,7 +211,7 @@ address {
       }
     }
 
-  }
+  
 
   &-menu {
     &-container {
@@ -263,7 +271,6 @@ address {
         color: white;
       }
     }
-  }
 
   &__content {
     &-container {
@@ -273,23 +280,39 @@ address {
     }
   }
 
-  &-info {
+        @media only screen and(max-width: 1680px) {
+          margin-left: 30%;
+        }
 
     &__text-wrapper {
       @media only screen and(max-width: 1279px) {
         width: 90%
       }
-    }
 
-    &__menu-icon {
-      &-burger {
+      &_button {
         position: relative;
         display: inline-block;
         width: 1.625em;
         height: .103em;
         background: $black-grey;
 
-        &::before, &::after {
+        @media only screen and(max-width: 1279px) {
+          margin-left: 32%;
+          font-size: 16px;
+        }
+
+        @media only screen and(max-width: 767px) {
+          display: block;
+          width: 100%;
+          font-size: 14px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 18px;
+        }
+
+
+        &::before {
+          transition: all .5s ease;
           content: "";
           position: absolute;
           width: 1.625em;
@@ -297,15 +320,19 @@ address {
           background: $black-grey;
         }
 
-        &::before {
-          top: -.625em;
+        &:hover {
+          color: $light-grey-color;
         }
 
-        &::after {
-          bottom: -.625em;
+        &:hover:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: $black-grey;
+          z-index: -1;
         }
       }
-    }
 
     &__contacts-container {
       padding-top: 65px;
@@ -313,6 +340,7 @@ address {
       @media only screen and(max-width: 1680px) {
         padding-top: 55px;
       }
+    }
 
       @media only screen and(max-width: 1279px) {
         width: 100%;
@@ -345,10 +373,15 @@ address {
       }
     }
 
-    &__menu {
-      &-item {
-        display: none;
-        border: 1px solid black;
+    &_attention {
+      font-family: $font-text-light;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 1.8;
+      color: $red-color;
+      text-transform: uppercase;
+      padding-top: 10px;
 
         @media only screen and(max-width: 1279px) {
           display: block;
@@ -433,7 +466,7 @@ address {
         }
       }
     }
-  }
+  
 
   &__contacts {
     &-info {
@@ -1344,7 +1377,7 @@ address {
     }
   }
 
-}
+
 
 .contacts-info__menu {
 

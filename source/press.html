@@ -8,7 +8,41 @@
 </head>
 
 
-<body class="press">
+<body class="index">
+
+    <style>
+		.preloader{
+			background-color: #ffffff;
+			width: 100vw;
+			z-index: 20000;
+			height: 100vh;
+			height: calc(var(--vh, 1vh) * 100);
+			position: fixed;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		
+		}
+		.preloader__icon{
+			width: 130px;
+			height: 130px;
+			fill: none;
+			stroke-dasharray: 1000;
+			stroke-dashoffset: 1000;
+			animation: dash 6s linear 3s forwards infinite alternate;
+		}
+	</style>
+	<div class="preloader">
+		<svg class="preloader__icon"><use xlink:href="./img/sprite.svg#icon-logo-company"></use></svg>
+    </div>
+    
+    <div class="forheader">
+
+        
+    </div>
+    
+
+
     <div class="scroll">
         <div class="container">
             <nav class="press-nav-bar">
@@ -54,7 +88,7 @@
                     
                         <div class="swiper-wrapper">
                             <!-- Slides -->
-                            <div class="swiper-slide news__item ">
+                            <div class="swiper-slide news__item press-news__item ">
                                 <a class="news__link press-news__hover" href=""></a>
                                 <div class="parallax__item--news parallax__item">
                                     <div class="parallax__img-wrap">
@@ -68,7 +102,7 @@
                             </div>
                     
                             
-                            <div class="swiper-slide news__item">
+                            <div class="swiper-slide news__item press-news__item">
                                 <a class="news__link press-news__hover" href=""></a>
                                 <div class="parallax__item--news parallax__item">
                                     <div class="parallax__img-wrap">
@@ -80,7 +114,7 @@
                                 <p class="news__date">12.09.2019</p>
                                 <h3 class="press-news-subtitle">Петербургский тракторный завод обновил линейку самых мощных тракторов</h3>
                             </div>
-                            <div class="swiper-slide news__item">
+                            <div class="swiper-slide news__item press-news__item">
                                 <a class="news__link press-news__hover" href=""></a>
                                 <div class="parallax__item--news parallax__item">
                                     <div class="parallax__img-wrap">
@@ -129,7 +163,7 @@
                     
                         <div class="swiper-wrapper">
                             <!-- Slides -->
-                            <div class="swiper-slide news__item  news__item--video press-video__hover-item">
+                            <div class="swiper-slide news__item press-news__item  news__item--video press-video__hover-item">
                                 <a class="news__link press-video__hover" href=""></a>
                                 <div class="parallax__item--news parallax__item">
                                     <div class="parallax__img-wrap">
@@ -138,9 +172,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <h3 class="press-news-subtitle press-video-font press-video-font-subtitle">Музей истории и техники Кировского завода признан лучшим</h3>
+                                <h3 class="press-news-subtitle  press-video-font press-video-font-subtitle">Музей истории и техники Кировского завода признан лучшим</h3>
                             </div>
-                            <div class="swiper-slide news__item news__item--video press-video__hover-item">
+                            <div class="swiper-slide news__item press-news__item news__item--video press-video__hover-item">
                                 <a class="news__link press-video__hover" href=""></a>
                                 <div class="parallax__item--news parallax__item">
                                     <div class="parallax__img-wrap">
@@ -151,7 +185,7 @@
                                 </div>
                                 <h3 class="press-news-subtitle press-video-font press-video-font-subtitle">Музей истории и техники Кировского завода принял участие во всероссийской акции "Ночь музеев - 2019"</h3>
                             </div>
-                            <div class="swiper-slide news__item news__item--video press-video__hover-item">
+                            <div class="swiper-slide news__item press-news__item news__item--video press-video__hover-item">
                                 <a class="news__link press-video__hover" href=""></a>
                                 <div class="parallax__item--news parallax__item">
                                     <div class="parallax__img-wrap">
@@ -191,21 +225,21 @@
                 <div class="press-about-container">
                     <div class="press-about">
                         <div class="press-about__title"><h4>Пресса о нас</h4></div>
-                        <div class="press-about__item">
+                        <a href="#" class="press-about__item">
                             <p class="press-about__item-date">03.06.2020</p>
                             <h6 class="press-about__item-title">"Ростелеком", TELE2и Кировский завод завершили тестирование решений IOT для промышленности</h6>
                             <p class="press-about__item-text">Во время тестирования был развернут сервис автоматического сбора и передачи информации со счетчиков потребления тепла и воды в информационную систему производственного мониторинга Кировского завода с использованием оборудования отечественных поставщиков.</p>
-                        </div>
-                        <div class="press-about__item">
+                        </a>
+                        <a href="#" class="press-about__item">
                             <p class="press-about__item-date">03.06.2020</p>
                             <h6 class="press-about__item-title">За территорией завода моя влиятельность заканчивается</h6>
                             <p class="press-about__item-text">Интервью генерального директора ПАО "Кировский завод" Георгия Семененко изданию "Деловой Петербург".<br> В этом году эксперты назвали молодого руководителя завода Георгия Семененко самым влиятельным промышленником Санкт-Петербурга. А сам Кировский завод в конце августа стал вторым в Рейтинге брендов"ДП" в номинации<br> "Промышленность"</p>
-                        </div>
-                        <div class="press-about__item">
+                        </a>
+                        <a href="#" class="press-about__item">
                             <p class="press-about__item-date">03.06.2020</p>
                             <h3 class="press-about__item-title">"Ростелеком", TELE2и Кировский завод завершили тестирование решений IOT для промышленности</h3>
                             <p class="press-about__item-text">Во время тестирования был развернут сервис автоматического сбора и передачи информации со счетчиков потребления тепла и воды в информационную систему производственного мониторинга Кировского завода с использованием оборудования отечественных поставщиков.</p>
-                        </div>
+                        </a>
                         <div class="press-button-more press-button-more__about">
                             <a href="#" class="button-more--companies button-more is-inview-line press-button-more__news">
                                 <span>смотреть все</span>
@@ -279,7 +313,7 @@
                     
                         <div class="swiper-wrapper">
                             <!-- Slides -->
-                            <div class="swiper-slide news__item  news__item--video">
+                            <div class="swiper-slide news__item press-news__item  news__item--video">
                                 <a class="news__link press-news__hover" href=""></a>
                                 <div class="parallax__item--news parallax__item">
                                     <div class="parallax__img-wrap">
@@ -290,7 +324,7 @@
                                 </div>
                                 <h3 class="press-news-subtitle press-photo__subtitle">Диорама "Кировский завод в дни блокады" Художник Ю.П. Реммер</h3>
                             </div>
-                            <div class="swiper-slide news__item">
+                            <div class="swiper-slide news__item press-news__item">
                                 <a class="news__link press-news__hover" href=""></a>
                                 <div class="parallax__item--news parallax__item">
                                     <div class="parallax__img-wrap">
@@ -301,7 +335,7 @@
                                 </div>
                                 <h3 class="press-news-subtitle press-photo__subtitle">Музей истории и техники Кировского завода принял участие во всероссийской акции "Ночь музеев - 2019"</h3>
                             </div>
-                            <div class="swiper-slide news__item">
+                            <div class="swiper-slide news__item press-news__item">
                                 <a class="news__link press-news__hover" href=""></a>
                                 <div class="parallax__item--news parallax__item">
                                     <div class="parallax__img-wrap">
@@ -349,7 +383,7 @@
                     
                 </div>
                 <div class="press-contacts-field">
-                    <div class="press-contacts-field__title"><p>Контакты</p>&nbsp <p class="nowrap-text">пресс-центра</p></div>
+                    <div class="press-contacts-field__title">Контакты пресс&#8209;центра</div>
                     <div class="press-contacts-field__name">Ключникова Екатерина Николаевна</div>
                     <div class="press-contacts-field__phone">
                         <p class="press-contacts-field__phone-title">Телефон/Факс:</p>
@@ -384,6 +418,116 @@
             </div>
         </section>
 
+
+        <footer class="footer">
+
+            <div class="footer__outer">
+                <div class="container">
+
+                    <div class="footer__row">
+                        <nav class="footer__nav">
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="">Компания</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="">Деятельность</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="">Карта сайта</a>
+                                </li>
+                            
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="">Пресс-центр</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="">Акционерам и инвесторам</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="">Контакты</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="">Вакансии</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="">Тендеры</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="">Аренда помещений</a>
+                                </li>
+                        
+                        
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="">Реквизиты</a>
+                                </li>
+                                <li class="footer__nav-item footer__nav-item--last">
+                                
+                                </li>
+                            </ul>
+
+                            <p class="footer__adress">198097, Россия, Санкт-Петербург, пр. Стачек, 47</p>
+                        </nav>
+
+
+                        <div class="footer__contact">
+
+                            <div class="footer__contact-feedback">
+                                <h6 class="footer__contact-title">Подписаться на наши новости</h6>
+                                <form class="footer__contact-form" action="">
+                                    <div class="footer__contact-form__wrap">
+                                        <input class="footer__contact-input" type="mail" placeholder="E-mail">
+                                        <button class="footer__contact-submit" type="submit"><svg class="footer__contact-submit-icon" width="40"><use xlink:href="./img/sprite.svg#icon-mail-submit"></use></svg></button>
+                                    </div>
+                                </form>
+                                
+                            </div>
+                                
+                                <ul class="footer__social-list">
+                                    <li class="footer__social-item" style="background-image: url(./img/social-youtube.svg);">
+                                        <a class="footer__social-link" href="">
+                                            <span class="visually-hidden">Youtube</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="footer__social-item" style="background-image: url(./img/social-vk.svg);">
+                                        <a class="footer__social-link" href="">
+                                            <span class="visually-hidden">Vk</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="footer__social-item" style="background-image: url(./img/social-inst.svg);">
+                                        <a class="footer__social-link" href="">
+                                            <span class="visually-hidden">Instagram</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="footer__social-item" style="background-image: url(./img/social-fb.svg);">
+                                        <a class="footer__social-link" href="">
+                                            <span class="visually-hidden">Facebook</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            
+                    
+                        </div>
+
+
+                    </div>
+                
+                
+        
+
+                    <section class="copyright">
+                        <h6 class="copyright__title">Copyrights © ПАО "Кировский завод"</h6>
+                        <a class="copyright__link" href="">Правила использования сайта</a>
+                        <a class="copyright__link" href="">Политика в области обработки персональных данных</a>
+                    </section>
+
+                </div>
+            
+            </div>
+        </footer>
     </div>
+
     <script src="./js/script.min.js"></script>
 </body>

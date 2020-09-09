@@ -496,7 +496,7 @@
 
           &-arrow {
             transform: translateX(-50%) rotate(0);
-            transition: transform 1s ease;
+            transition: transform .5s ease;
 
             &>svg {
               fill: #000000;
@@ -521,8 +521,9 @@
           font-size: 1rem;
           font-weight: normal;
           line-height: inherit;
-          display: none;
+          //display: none;
           padding: 30px 0;
+          max-height: 0;
 
 
           &>a {
