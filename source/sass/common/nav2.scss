@@ -527,9 +527,13 @@ outline: none;
 			display:inline-block;
 			text-transform: uppercase;
 			color: #fff;
+			opacity: 0.5;
 			position: relative;
 			text-decoration: none;
 			transition: transform .3s cubic-bezier(.4,0,.2,1);
+	}
+	.nav_lang-link.current{
+		opacity: 1;
 	}
 	.nav_lang-link:hover{
 		transform: translateX(7px);

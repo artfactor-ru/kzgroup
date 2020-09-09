@@ -154,11 +154,11 @@
     background-color: $red-color;
 
 }
-.swiper-container--hero .swiper-slide-active .hero__slide-line-time{
+.load .swiper-container--hero .swiper-slide-active .hero__slide-line-time{
     width: 0%;
     animation-name: animate-line;
     animation-duration: 15000ms;
-    animation-delay: 3s;
+    // animation-delay: 3s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
     

@@ -32,7 +32,7 @@
   
   .rent_noinfo-paragraph {
     @extend %block-text;
-   
+    margin-bottom: 30px;
 
     @media (max-width: 1680px) {
       margin-bottom: 30px;

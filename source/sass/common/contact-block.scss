@@ -267,6 +267,10 @@
 }
 
 @media(min-width: 1280px){
+    .contact-block--grey{
+        padding-top:50px;
+        padding-bottom: 60px;
+    }
     .contact-block--grey .contact-block__item{
     
         display: flex;
@@ -274,7 +278,7 @@
         padding-bottom: 0px;
         // width: 25%;
         box-sizing: border-box;
-
+        
         // flex-shrink: 1;
         margin-right: 40px;
         width: auto;
@@ -288,7 +292,7 @@
         padding-top: 0px;
         max-width: none;
         
-       
+        justify-content: space-between;
 
         
     }
@@ -305,5 +309,8 @@
         height: 18px;
         flex-shrink: 0;
         padding-right: 20px;
+    }
+    .contact-block__item:last-child{
+        width: 28%;
     }
 }

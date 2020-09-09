@@ -7,7 +7,7 @@
     }
 }
 .about__title--history{
-    width: 60%;
+    width: 80%;
 }
 .history__wrapper{
     // display: flex;
@@ -31,7 +31,7 @@
 
 .history_light,
 .history_dark{
-    padding: 50px 0;
+    padding: 50px 0 40px 0;
     position: relative;
 }
 .history_dark{
@@ -82,7 +82,7 @@
     width: 320px;
     height: 120px;
     display: flex;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
 }
 
 .history__entry--text{
@@ -98,7 +98,9 @@
         }
     }
 }
-
+.history__entry--text--two{
+    margin-top: 25px;
+}
 .history__entry--text-title{
     font-family: $font-bold-2-title;
     color: #000;
@@ -137,23 +139,20 @@
 }
 
 .history__photos__item{
-    margin-bottom: 70px;
+    padding-bottom: 20px;
     padding-left: 26px;
     padding-top: 28px;
     width: 68%;
+    height: auto;
     will-change: transform;
     // position: absolute;
     position: relative;
     box-sizing: border-box;
-    &.history__photos__item-1{
-        // max-width: 341px;
-    }
-    &.history__photos__item-2{
-        // max-width: 249px;
-    }
-    &.history__photos__item-3{
-        // max-width: 498px;
-    }
+  
+}
+.history__photos__item.swiper-slide{
+    width: 100% !important;
+    box-sizing: border-box;
 }
 
 .history__photos__item-pic{
@@ -211,6 +210,9 @@
     .history_light,
     .history_dark{
         padding: 60px 0;
+    }
+    .history_light:first-child{
+        padding-top: 20px;
     }
     .history__year{
         height: 210px;
@@ -906,7 +908,8 @@
 
 		height: 15px;
 
-	}
+    }
+   
 }
 
 @media(min-width: 1680px){
@@ -1221,9 +1224,7 @@
         flex-shrink: 0;
         margin-right: 2px;
 }
-.history_dark .history__number-icon{
-    // stroke: rgba(94, 104, 132, 0.65)
-}
+
 .history__number-icon--one{
     width: 50px;
 
@@ -1244,15 +1245,17 @@
 
 // .history__parallax{
 //     overflow: hidden;
-//     position: relative;
-// }
-// .history__parallax img{
-//     position: absolute;
-//     // position: relative;
-//     display: inline-block;
-//     will-change: transform;
+   
 
-//     --overflow: 100px; 
-//     top: calc( -1 * var(--overflow));
-//     bottom: calc( -1 * var(--overflow));
+
+// .history__parallax__wrap{
+//     // transform: translateY(100%);
+//     height: 0;
+//     transition: height 1s ease;
+// }
+
+// .is-inview .history__parallax--img{
+//     height: auto;
+//     // transform: translateY(0%);
+//     // transition: transform 0.5s ease;
 // }
