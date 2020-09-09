@@ -26,94 +26,90 @@ function delay(n) {
 	});
 }
 
-	if(document.querySelector('.barbapage')){
+if(document.querySelector('.barbapage')){
 
-		barba.init({
-			debug: true,
-			sync: true,
-			transitions: [{
-				
-				name: 'opacity-transition',
-				async leave(data) {
+	barba.init({
+		debug: true,
+		sync: true,
+		transitions: [{
+			
+			name: 'opacity-transition',
+			async leave(data) {
 
-					data.current.container.classList.add('active');
-					const done = this.async();
-					await delay(1000);
-					
-					done();
-					
-				},
-				async enter(data) {
+				data.current.container.classList.add('active');
+				const done = this.async();
+				await delay(1000);
 				
-					data.next.container.classList.add('show');
+				done();
+				
+			},
+			async enter(data) {
+			
+				data.next.container.classList.add('show');
+			}
+			}]
+		
+		
+
+	});
+	let bg = document.querySelector('.barba_background');
+	barba.hooks.enter((data) => {
+
+		// console.log(data.current.container);
+
+		// data.next.container.classList.add('active');
+
+		
+		
+
+		// data.current.container.classList.add('show');
+		setTimeout(initAnimation, 10);
+	
+		initSlider();
+		
+		
+		if(socialContainer){
+			socialInteraction()
+		}
+				
+	
+
+		breakpointChecker();
+
+		
+		checkUrl('.tabs-common-links--barba');
+		
+	
+		if(containerScroll){
+			// scrollbar = ScrollbarSmoth.init(containerScroll, options);
+			scrollbar.addListener(ScrollTrigger.update);
+	
+			eventOnScroll();
+		
+			
+		}
+			
+				
+			
+		// Взаимодействие с шапкой
+			if ( breakpoint.matches === true ) {
+				
+					
+				if(header){	
+
+					headerShowAndHideDesktop();
+				
 				}
-			  }]
 			
-			
-
-		});
-		let bg = document.querySelector('.barba_background');
-		barba.hooks.enter((data) => {
-
-			// console.log(data.current.container);
-
-			// data.next.container.classList.add('active');
-
-			
-			
-
-			// data.current.container.classList.add('show');
-			setTimeout(initAnimation, 10);
-		
-			initSlider();
-			
-			
-			if(socialContainer){
-				socialInteraction()
-			}
-					
-		
-
-			breakpointChecker();
-
-			
-			checkUrl('.tabs-common-links--barba');
-			
-		
-			if(containerScroll){
-				// scrollbar = ScrollbarSmoth.init(containerScroll, options);
-				scrollbar.addListener(ScrollTrigger.update);
-		
-				eventOnScroll();
-			
-				
-			}
-				
-					
-				
-			// Взаимодействие с шапкой
-				if ( breakpoint.matches === true ) {
-					
-						
-					if(header){	
-
-						headerShowAndHideDesktop();
-					
-					}
-				
-			}else if ( breakpoint.matches === false ) {
-					if(header){	
-						hideAndShowHeaderMobile();
-					}
-			}
-		});
-
-		
-	}
-
-
+		}else if ( breakpoint.matches === false ) {
+				if(header){	
+					hideAndShowHeaderMobile();
+				}
+		}
+	});
 
 	
+}
 
 // import $ from "jquery";
 var $ = require( "jquery" );
@@ -484,8 +480,6 @@ function eventOnScroll(){
 	parallax(document.querySelectorAll('.parallax__img'));
 	parallax(document.querySelectorAll('.parallax__img--slide'));
 	
-	
-	
 	if(videoMain){
 	
 		if(!scrollbar.isVisible(videoMain)){
@@ -527,8 +521,6 @@ function eventOnScroll(){
 
 	// Взаимодействие с шапкой
 	if ( breakpoint.matches === true ) {
-		
-			
 			if(header){	
 	
 				headerShowAndHideDesktop();
@@ -573,6 +565,7 @@ let scrollbar;
 	
 	let swipersHistory = [];
 	let swiperAchieves;
+	let swiperPurchase;
 	const transitionSlide = 15000;
 
 	const enableSwiper = function(){
@@ -583,6 +576,14 @@ let scrollbar;
 					scrollbar: {
 						el: '.swiper-scrollbar',
 					},
+				});
+			}
+			if(document.querySelector('.swiper-purchase')){
+				swiperPurchase = new Swiper('.swiper-purchase',{
+				
+					// scrollbar: {
+					// 	el: '.swiper-scrollbar',
+					// },
 				});
 			}
 			if(document.querySelector('.kirovets_tabs__features--1')){
@@ -1092,6 +1093,7 @@ let scrollbar;
 		}
 
 	}
+
 	document.addEventListener('DOMContentLoaded', function(){
 		initSlider();
 		if(swiperHero){
@@ -1113,6 +1115,7 @@ let scrollbar;
 		updateSlider(companiesThumbs);
 		updateSlider(swiperHero);
 		updateSlider(swiperGallery);
+		updateSlider(swiperPurchase);
 		breakpoint.addListener(breakpointChecker);
 		breakpointChecker();
 
@@ -2093,16 +2096,14 @@ if(document.querySelector('.vac-f__form-selector')) {
 //     });
 // }
 //вызов формы на детальной страницы вакансий
-// if(document.querySelector('.vacancies-d__form-container')) {
-// 	let vacanciesForm = document.querySelector('.vacancies-d__form-wrapper');
-// 	let vacanciesClose = document.querySelector('.vacancies-d__form-close');
-// 	let vacanciesBtnResponse = document.querySelector('.vacancies-d__response-btn');
-// 	vacanciesBtnResponse.addEventListener('click', function () {
-// 		vacanciesForm.style.display = 'block';
-// 	});
-// 	vacanciesClose.addEventListener('click', function () {
-// 		vacanciesForm.style.display = 'none';
-// 	});
-// }
-
-
+if(document.querySelector('.vacancies-d__form-container')) {
+	let vacanciesForm = document.querySelector('.vacancies-d__form-wrapper');
+	let vacanciesClose = document.querySelector('.vacancies-d__form-close');
+	let vacanciesBtnResponse = document.querySelector('.vacancies-d__response-btn');
+	vacanciesBtnResponse.addEventListener('click', function () {
+		vacanciesForm.style.display = 'block';
+	});
+	vacanciesClose.addEventListener('click', function () {
+		vacanciesForm.style.display = 'none';
+	});
+}
