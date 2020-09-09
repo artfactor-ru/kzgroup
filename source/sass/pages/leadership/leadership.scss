@@ -43,10 +43,10 @@
     }
     & .leadership_general--text-details{
       & span{
-        transform:  translateX(10px);
+        transform:  translateX(15px);
       }
       &::before{
-        width: 55px;
+        width: 40px;
       }
     }
   }
@@ -94,6 +94,7 @@
 .leadership_general--text-details{
   @extend  %button-more;
   display: none;
+  font-size: 12px;
   &::before{
     border-top: 1px solid #fff;
   }
@@ -209,6 +210,17 @@
     align-items: center;
     min-height: 218px;
     margin-bottom: 40px;
+    &:before {
+      display: none;
+    }
+    &:hover{
+      &:before {
+        width: 0%;
+      }
+      & .leadership_general--text-name{
+        color: #fff;
+      }
+    }
   }
   .leadership_general--pic{
     background-image: none;
@@ -231,6 +243,7 @@
   .leadership_general--text-details{
     font-size: 14px;
     color: #fff;
+    display: block;
   }
   .leadership_unit{
     width: 31.4%;
@@ -291,11 +304,13 @@
       display: none;
     }
     &:hover{
-      &:before {
-        width: 0%;
-      }
-      & .leadership_general--text-name{
-        color: #fff;
+      & .leadership_general--text-details{
+        & span{
+          transform: translateX(10px);
+        }
+        &::before{
+          width: 55px;
+        }
       }
     }
   }
@@ -314,9 +329,6 @@
   .leadership_general--text-position{
     font-size: 30px;
     line-height: 36px;
-  }
-  .leadership_general--text-details{
-    display: block;
   }
   .leadership_unit{
     width: 23%;
