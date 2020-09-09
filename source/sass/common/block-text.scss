@@ -79,6 +79,10 @@
     }
 }
 @media(min-width: 1280px){
+    .block_text{
+        padding-top: 70px;
+        padding-bottom: 60px;
+    }
     .block_text__list{
         
         margin-top: 50px;
@@ -94,11 +98,17 @@
 
     .block_text__paragraph{
         padding-top: 45px;
-        width: 90%;
+        width: 95%;
     }
     .block_text__smalllist{
    
         padding-top: 45px;
+    }
+    .block_text__smalllist li{
+        margin-bottom: 20px;
+    }
+    .block_text__title{
+        width: 90%;
     }
     
 }
@@ -106,6 +116,9 @@
     .block_text{
         padding-top: 90px;
     padding-bottom: 60px;
+    }
+    .block_text__title{
+        width: 70%;
     }
     .block_text__list{
         
