@@ -32,7 +32,7 @@
     @extend %block-text;
     color: $black-grey;
     font-size: 16px;
-    line-height: 29px;
+    line-height: 24px;
     font-weight: bold;
 }
 
@@ -56,7 +56,7 @@
 
     .property__list{
    
-        padding-top: 60px;
+        padding-top: 80px;
         width: 80%;
     }
     .property__item-icon{
@@ -112,7 +112,7 @@
     }
     .property__title{
       
-        padding-bottom: 10px;
+        padding-bottom: 25px;
     
     }
     .property__desc{
@@ -142,7 +142,7 @@
     .property__item p{
         
         font-size: 24px;
-        line-height: 32px;
+        line-height: 50px;
         
       
     }
@@ -152,7 +152,7 @@
 @media(min-width: 1680px){
     .property{
         padding-top: 95px;
-        padding-bottom: 140px;
+        padding-bottom: 100px;
    
     }
     .property__pic{
@@ -173,7 +173,7 @@
     
     }
     .property__desc{
-        width: 85%;
+        width: 65%;
         
     }
 
@@ -191,14 +191,14 @@
     .property__item{
         display: flex;
         align-items: center;
-        margin-bottom: 95px;
+        margin-bottom: 60px;
         
     }
 
     .property__item p{
         
         font-size: 24px;
-        line-height: 30px;
+        line-height: 40px;
         
       
     }

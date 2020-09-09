@@ -1,112 +1,80 @@
-.rent_noinfo-container {
-  box-sizing: border-box;
-
-  padding: 0 5px;
-  width: 100%;
-
-  @media (min-width: 1921px) {
-    padding: 0 440px 0 170px;
-  }
-
-  @media (max-width: 1920px) {
-    padding: 0 440px 0 170px;
-  }
-
-  @media (max-width: 1440px) {
-    padding: 0 100px;
-  }
-
-  @media (max-width: 1280px) {
-    padding: 0 100px;
-  }
-
-  @media (max-width: 768px) {
-    padding: 0 60px;
-  }
-
-  @media (max-width: 500px) {
-    padding: 0 20px;
-  }
 
   .rent_noinfo-heading {
     font-family: $font-regular;
     line-height: 135%;
+    font-weight: normal;
+    font-size: 36px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    
 
-    @media (min-width: 1440px) {
-      font-size: 36px;
-      margin-bottom: 30px;
-    }
-
-    @media (max-width: 1280px) {
+    @media (max-width: 1680px) {
       font-size: 26px;
       margin-bottom: 20px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1279px) {
       font-size: 22px;
-      margin-bottom: 20px;
-    }
-
-    @media (max-width: 500px) {
-      font-size: 18px;
       margin-bottom: 15px;
     }
-  }
 
+    @media (max-width: 767px) {
+      font-size: 18px;
+      margin-bottom: 15px;
+      margin-top: 0;
+    }
+  }
+  @media (max-width: 1680px) {
+    .rent_noinfo-paragraph br{
+      display: none;
+    }
+  }
+  
   .rent_noinfo-paragraph {
     @extend %block-text;
+   
 
-    @media (min-width: 1440px) {
+    @media (max-width: 1680px) {
       margin-bottom: 30px;
+       
     }
 
-    @media (max-width: 1280px) {
+    @media (max-width: 1279px) {
       margin-bottom: 25px;
     }
-
-    @media (min-width: 769px) {
-      .rent_noinfo-span{
-        display: block;
-      }
+    @media (max-width: 767px) {
+      // width: 98%;
     }
-
-    @media (max-width: 768px) {
-      margin-bottom: 20px;
-    }
-
-    @media (max-width: 500px) {
-      margin-bottom: 30px;
-    }
+  
   }
 
   .rent_noinfo-contact {
     font-family: $font-text-regular;
 
-    @media (min-width: 1440px) {
       font-size: 24px;
       margin-bottom: 45px;
-    }
+    
 
-    @media (max-width: 1280px) {
+    @media (max-width: 1680px) {
       font-size: 20px;
       margin-bottom: 30px;
     }
     
-    @media (max-width: 768px) {
+    @media (max-width: 1279px) {
       font-size: 16px;
       line-height: 135%;
     }
 
     &>h4 {
-      @media (min-width: 1440px) {
-        margin-bottom: 35px;
-      }
-
-      @media (max-width: 1280px) {
+    
         margin-bottom: 25px;
+      
+
+      @media (max-width: 1680px) {
+        margin-bottom: 20px;
       }
       
-      @media (max-width: 1280px) {
+      @media (max-width: 1279px) {
         margin-bottom: 15px;
       }
     }
@@ -115,7 +83,10 @@
       margin-left: 1.5%;
       font-weight: bold;
       line-height: 150%;
-
+      margin-bottom: 40px;
+      @media(max-width: 1680px){
+        margin-bottom: 20px;
+      }
       @media (max-width: 500px) {
         margin-left: 4%;
       }
@@ -125,8 +96,36 @@
         padding-bottom: 10px;
       }
     }
-    .rent_noinfo-contact-button {
-      margin-top: 15px;
+   
+  }
+
+  .button--rent{
+    display: inline-block;
+    @extend %btn-bordered;
+    padding: 28px 80px;
+  //  margin-bottom: 35px;
+
+    @media(max-width: 1680px){
+      padding: 25px 55px;
+    }
+    @media(max-width: 1279px){
+      padding: 20px 45px;
+    }
+    @media(max-width: 1279px){
+      padding: 20px 45px;
+      width: auto;
     }
   }
-}
+
+  .rent__wrapper--noinfo{
+    padding-bottom: 385px;
+    @media(max-width: 1680px){
+      padding-bottom: 125px;
+    }
+    @media(max-width: 1279px){
+      padding-bottom: 35px;
+    }
+    @media(max-width: 767px){
+      padding-bottom: 15px;
+    }
+  }

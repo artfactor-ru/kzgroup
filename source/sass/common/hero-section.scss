@@ -1,5 +1,7 @@
 //common styles for hero section (section.hero-common html)
-
+.parallax__img-inner--hero--mobile{
+  display: none;
+}
 .parallax__img-inner--hero{
   background-position: center;
   background-size: cover;
@@ -36,17 +38,18 @@
 .hero-common__title {
   @extend %title-main-screen;
   font-size: 90px;
-  margin-bottom: 70px;
+  padding-bottom: 70px;
   perspective: 600px;
 }
 
 .hero-common__btn {
   @extend %btn-bordered;
+  // margin: 0 !important;
   font-family: $font-text-regular;
   color: $light-grey-color;
   font-size: 14px;
   padding: 28px 38px;
-  margin: 0;
+  // margin: 0;
 
   color: $light-grey-color;
 
@@ -116,18 +119,22 @@
   transition: .4s;
   width: 18px;
   height: 18px;
+  flex-shrink: 0;
 }
 
 .hero-common_info__link {
   transition: .4s;
   font-family: $font-text-light;
   color: #E0E0E0;
+
+  font-size: 16px;
+  line-height: 100%;
 }
 
 @media screen and (max-width: 1680px) {
   .hero-common__title {
     font-size: 64px;
-    margin-bottom: 45px;
+    padding-bottom: 45px;
   }
   .hero-common__btn {
    
@@ -149,6 +156,15 @@
   .hero-common_info__item:last-child{
     margin-left: 35px;
   }
+  .hero-common_info__item{
+    width: 320px;
+  }
+  .hero-common_info__link {
+
+  
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 @media screen and (max-width: 1279px) {
@@ -168,7 +184,7 @@
   }
   .hero-common__title {
     font-size: 48px;
-    margin-bottom: 40px;
+    padding-bottom: 40px;
     
   }
 
@@ -179,7 +195,7 @@
     }
   }
   .hero-common_info__link {
-    font-size: 14px;
+    font-size: 12px;
   }
   .hero-common_info__icon {
     margin-right: 5px;
@@ -209,9 +225,19 @@
   .hero-common__info {
     height: 68px;
   }
+  .hero-common_info__item{
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 767px) {
+  .parallax__img-inner--hero--desktop{
+    display: none;
+  }
+  .parallax__img-inner--hero--mobile{
+    display: block;
+    overflow: non;
+  }
   .hero-common {
     height: 435px;
     background-position: center 30%;

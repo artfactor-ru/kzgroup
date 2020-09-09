@@ -1,0 +1,226 @@
+.contact-block{
+    padding-bottom: 45px;
+    @media(min-width: 768px){
+        padding-bottom: 65px;
+    }
+    @media(min-width: 1280px){
+        padding-bottom: 75px;
+    }
+    @media(min-width: 1680px){
+        padding-bottom: 75px;
+    }
+}
+.contact-block__title{
+    margin: 0;
+    padding: 0;
+    font-family: $font-regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+
+    padding-bottom: 0px;
+    @media(min-width: 768px){
+        padding-bottom: 25px;
+    }
+    @media(min-width: 1280px){
+        font-size: 20px;
+        padding-bottom: 30px;
+    }
+    @media(min-width: 1680px){
+        font-size: 24px;
+        padding-bottom: 40px;
+    }
+  
+}
+.contact-block__list{
+    @include list-destroy;
+}
+.contact-block-item:not(:first-child){
+    border-top: 1px solid rgba(0, 0, 0, 0.22);
+}
+
+
+.contact-block-item{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    @media(min-width: 768px){
+        display: flex;
+        align-items: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+    }
+    @media(min-width: 1280px){
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+}
+.contact-block-item--phone{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    @media(min-width: 768px){
+        padding-top: 30px;
+        padding-bottom: 15px;
+    }
+    @media(min-width: 1280px){
+        padding-top: 30px;
+        padding-bottom: 15px;
+    }
+    @media(min-width: 1680px){
+        padding-top: 40px;
+        padding-bottom: 15px;
+    }
+}
+.contact-block__subtitle{
+    display: none;
+    @media(min-width: 768px){
+       display: block;
+
+        font-family: $font-regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: uppercase;
+
+        color: #000000;
+        width: 180px;
+        flex-shrink: 0;
+    }
+    @media(min-width: 1280px){
+        font-size: 18px;
+        width: 280px;
+    }
+    
+}
+.contact-block__label{
+    margin: 0;
+    padding: 0;
+    font-family: $font-regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 136.6%;
+    color: #ACACBC;
+    padding-bottom: 10px;
+    @media(min-width: 768px){
+        padding-left: 40px;
+    }
+    @media(min-width: 1280px){
+        font-size: 18px;
+    }
+}
+.contact-block__icon{
+    display: none;
+    @media(min-width: 768px){
+        display: block;
+        width: 18px;
+        height: 18px;
+        padding-right: 25px;
+        
+    }
+    @media(min-width: 1280px){
+        width: 20px;
+        height: 20px;
+    }
+    
+}
+.contact-block__link{
+    font-family:  $font-regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 139.2%;
+   
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+    transition: all 0.5s ease;
+    @media(min-width: 768px){
+        align-items: flex-start;
+    }
+    @media(min-width: 1280px){
+       font-size: 16px;
+    }
+
+    &:hover{
+        opacity: 0.4;
+    }
+}
+
+.contact-block__sublist{
+    @include list-destroy;
+    @media(min-width: 768px){
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+.contact-block__subitem:not(:first-child){
+    border-top: 1px solid rgba(0, 0, 0, 0.22);
+    @media(min-width: 768px){
+        border-top: none;
+    }
+}
+.contact-block__subitem:not(:first-child){
+    padding-top: 10px;
+    @media(min-width: 768px){
+        padding-top: 0px;
+    }
+}
+
+
+.contact-block__subitem:not(:last-child){
+    
+    padding-bottom: 10px;
+    @media(min-width: 768px){
+        padding-bottom: 15px;
+    }
+}
+
+.contact-block__link--upper{
+    text-transform: uppercase;
+}
+
+
+@media(min-width: 768px){
+    .contact-block__subitem{
+        padding-bottom: 15px;
+     
+   
+    }
+   
+        .contact-block-item{
+            border-top: 1px solid rgba(0, 0, 0, 0.22);
+        }
+        .contact-block__subitem{
+            width: 45%;
+        }
+    
+}
+
+@media(min-width: 1280px){
+    .contact-block__subitem{
+        padding-bottom: 30px;
+    }
+   
+       
+        .contact-block__subitem{
+            width: 50%;
+        }
+    
+}
+@media(min-width: 1680px){
+    .contact-block__wrap{
+        width: 100%;
+    }
+    .contact-block__sublist{
+        width: 100%;
+    }
+    .contact-block__subitem{
+        width: 25%;
+    }
+}

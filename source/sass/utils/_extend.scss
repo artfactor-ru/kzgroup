@@ -212,6 +212,41 @@
 }
 
 
+%block-title-light{
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 26px;
+	text-transform: none;
+	color: #FFFFFF;
+	font-family: $font-regular;
+	color: $light-grey-color;
+}
+
+@media(min-width: 767px){
+	%block-title-light{
+
+		font-size: 24px;
+		line-height: 26px;
+	}
+}
+
+@media(min-width: 1280px){
+	%block-title-light{
+
+		font-size: 36px;
+		line-height: 48px;
+	}
+}
+
+@media(min-width: 1680px){
+	%block-title-light{
+
+		font-size: 36px;
+		line-height: 49px;
+	}
+}
+
 // Текстовый блок , параграф
 
 %block-text{
@@ -380,6 +415,117 @@
 	%btn-bordered{
 
 		padding: 15px 80px;
+	}
+}
+
+
+// картинка с фоновой рамкой 
+
+%pic__frame{
+	box-sizing: border-box;
+	background: transparent;
+	margin: 0;
+	padding: 0px 26px;
+	left: -26px;
+	top: -28px;
+	color: #C26063;
+	font-family: $font-bold-2-title;
+	font-size: 14px;
+	line-height: 32px;
+	position: absolute;
+	z-index: -1;
+	&::after{
+		content: '';
+		position: absolute;
+		z-index: -1;
+		width: 0%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+	& .pic__frame--line-first{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		&::before{
+			content: "";
+			position: absolute;
+			width: 4px;
+			height: 0%;
+			bottom:0;
+			left: 0;
+			background-color: #C26063;
+			transition: all 0.3s ease;
+			transition-delay: 0.9s;
+		}
+		&.is-inview::before{
+			height: 100%;
+		}
+		&::after{
+			content: "";
+			position: absolute;
+			width: 0%;
+			height: 4px;
+			top:0;
+			left: 0;
+			background-color: #C26063;
+			transition: all 0.3s ease;
+		}
+		&.is-inview::after{
+			width: 100%;
+		}
+	}
+	& .pic__frame--line-two{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		&::before{
+			content: "";
+			position: absolute;
+			width: 4px;
+			height: 100%;
+			top:0;
+			right: 0;
+			background-color: #C26063;
+			transition: all 0.3s ease;
+			transition-delay: 0.3s;
+		}
+		&::after{
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 4px;
+			bottom:0;
+			right: 0;
+			background-color: #C26063;
+			transition: all 0.3s ease;
+			transition-delay: 0.6s;
+		}
+		
+	}
+	&.pic__frame-1{
+		height: 55%;
+		width: 60%;
+	}
+	&.pic__frame-2{
+		height: 97%;
+		width: 97%;
+		@media(min-width: 1280px){
+			height: 80%;
+			width: 70%;
+		}
+	}
+	&.pic__frame-3{
+		height: 90%;
+		width: 90%;
+	}
+	@media(min-width: 1280px){
+		top: -34px;
+		line-height: 38px;
 	}
 }
 
@@ -607,3 +753,58 @@
 	
 	}
 }
+
+//кнопка с нижним подчёркиванием
+
+%button_underline{
+	position: relative;
+	cursor: pointer;
+	font-family: $font-regular;
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #616161;
+	border: none;
+	background-color: transparent;
+	transition: .8s;
+	padding-bottom: 12px;
+	width: fit-content;
+	&:before {
+		content:'';
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 0;
+		height: 1px;
+		background: #616161;
+		transition: all 0.6s ease;
+	}
+	&:hover:before {
+		width: 100%;
+	}
+}
+
+
+%block-title-inlist{
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	line-height: 24px;
+	font-family: $font-regular;
+	font-style: normal;
+	font-weight: normal;
+	color: #000;
+	@media(min-width: 768px){
+		font-size: 20px;
+		line-height: 39px;
+	}
+	@media(min-width: 1280px){
+		font-size: 24px;
+		line-height: 39px;
+	}
+	@media(min-width: 1680px){
+		font-size: 30px;
+		line-height: 39px;		
+	}
+}
+
+
