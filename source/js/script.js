@@ -2081,28 +2081,28 @@ if(document.querySelector('.vac-f__form-selector')) {
 
 
 //вызов формы на детальной страницы аренды помещений
-if(document.querySelector('.rent-details__form-wrapper')) {
-    let vacanciesForm = document.querySelector('.vacancies-d__form-wrapper');
-    let vacanciesClose = document.querySelector('.vacancies-d__form-close');
-    let vacanciesBtnResponse = document.querySelector('.rent-details__button');
-    vacanciesBtnResponse.addEventListener('click', function () {
-        vacanciesForm.style.display = 'block';
-    });
-    vacanciesClose.addEventListener('click', function () {
-        vacanciesForm.style.display = 'none';
-    });
-}
+// if(document.querySelector('.rent-details__form-wrapper')) {
+//     let vacanciesForm = document.querySelector('.vacancies-d__form-wrapper');
+//     let vacanciesClose = document.querySelector('.vacancies-d__form-close');
+//     let vacanciesBtnResponse = document.querySelector('.rent-details__button');
+//     vacanciesBtnResponse.addEventListener('click', function () {
+//         vacanciesForm.style.display = 'block';
+//     });
+//     vacanciesClose.addEventListener('click', function () {
+//         vacanciesForm.style.display = 'none';
+//     });
+// }
 //вызов формы на детальной страницы вакансий
-if(document.querySelector('.vacancies-d__form-container')) {
-	let vacanciesForm = document.querySelector('.vacancies-d__form-wrapper');
-	let vacanciesClose = document.querySelector('.vacancies-d__form-close');
-	let vacanciesBtnResponse = document.querySelector('.vacancies-d__response-btn');
-	vacanciesBtnResponse.addEventListener('click', function () {
-		vacanciesForm.style.display = 'block';
-	});
-	vacanciesClose.addEventListener('click', function () {
-		vacanciesForm.style.display = 'none';
-	});
-}
+// if(document.querySelector('.vacancies-d__form-container')) {
+// 	let vacanciesForm = document.querySelector('.vacancies-d__form-wrapper');
+// 	let vacanciesClose = document.querySelector('.vacancies-d__form-close');
+// 	let vacanciesBtnResponse = document.querySelector('.vacancies-d__response-btn');
+// 	vacanciesBtnResponse.addEventListener('click', function () {
+// 		vacanciesForm.style.display = 'block';
+// 	});
+// 	vacanciesClose.addEventListener('click', function () {
+// 		vacanciesForm.style.display = 'none';
+// 	});
+// }
 
 

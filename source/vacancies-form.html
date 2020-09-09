@@ -399,13 +399,13 @@
                                 <label class="vac-f__form-label">
                                     <span>Фамилия</span>
                                     <div class="vac-f__input-container vac-f__input-container--req">
-                                        <input onkeyup="this.value = this.value.replace(/[0-9]/i, '')" class="vac-f__second-name" type="text" placeholder="Петров">
+                                        <input name="sec-name" onkeyup="this.value = this.value.replace(/[0-9]/i, '')" class="vac-f__second-name" type="text" placeholder="Петров">
                                     </div>
                                 </label>
                                 <label class="vac-f__form-label">
                                     <span>Имя</span>
                                     <div class="vac-f__input-container  vac-f__input-container--req">
-                                        <input  name="input-name"
+                                        <input  name="first-name"
                                                 onkeyup="this.value = this.value.replace(/[0-9]/i, '')"
                                                 type="text"
                                                 placeholder="Андрей"
@@ -416,25 +416,25 @@
                                 <label class="vac-f__form-label">
                                     <span>Отчество</span>
                                     <div class="vac-f__input-container">
-                                        <input type="text" placeholder="Петрович">
+                                        <input name="patronymic" type="text" placeholder="Петрович">
                                     </div>
                                 </label>
                                 <label class="vac-f__form-label">
                                     <span>Город проживания</span>
                                     <div class="vac-f__input-container">
-                                        <input type="text" placeholder="Санкт-Петербург">
+                                        <input name="city" type="text" placeholder="Санкт-Петербург">
                                     </div>
                                 </label>
                                 <label class="vac-f__form-label">
                                     <span>Гражданство</span>
                                     <div class="vac-f__input-container">
-                                        <input type="text" placeholder="РФ">
+                                        <input name="citizenship" type="text" placeholder="РФ">
                                     </div>
                                 </label>
                                 <label class="vac-f__form-label">
                                     <span>E-mail</span>
                                     <div class="vac-f__input-container">
-                                        <input type="email" placeholder="Санкт-Петербург">
+                                        <input name="mail" type="email" placeholder="Санкт-Петербург">
                                     </div>
                                 </label>
                                 <label class="vac-f__form-label">
@@ -454,13 +454,10 @@
                                     2. Образование
                                 </h5>
                                 <div id="education-block">
-                                    <label class="vac-f__form-label">
+                                    <label class="vac-f__form-label vac-f__form-label-educ">
                                         <span>Образование</span>
                                         <div class="custom-select vac-f__input-container">
-                                            <svg class="vac-f__form-select-arrow" width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1.656 1.36724L1.65603 1.36721L1.65305 1.36374C1.61289 1.31698 1.56143 1.26853 1.49311 1.23318C1.4224 1.19658 1.34802 1.1814 1.27258 1.1814C0.979044 1.1814 0.75 1.44028 0.75 1.7488C0.75 1.86243 0.792681 2.01654 0.889966 2.13133L6.09482 8.47738L6.09477 8.47743L6.09846 8.48173C6.19427 8.59329 6.32888 8.66406 6.47892 8.66406C6.62897 8.66406 6.76357 8.59329 6.85939 8.48173L6.85943 8.48176L6.86263 8.47788L12.0946 2.13194L12.1202 2.10212C12.333 1.85438 12.2568 1.5227 12.093 1.332C11.9859 1.20735 11.8367 1.14939 11.6836 1.16721C11.54 1.18394 11.4181 1.26361 11.3321 1.36374L11.332 1.36371L11.3287 1.36775L6.50566 7.22781L1.656 1.36724Z" fill="black" stroke="black" stroke-width="0.5"/>
-                                            </svg>
-                                            <select  class="select" name="language">
+                                            <select name="education" class="c-select" name="language">
                                                 <option disabled>Выбрать</option>
                                                 <option value="school">Общее</option>
                                                 <option value="middle">Среднее</option>
@@ -472,33 +469,33 @@
                                     <label class="vac-f__form-label">
                                         <span>Учебное заведение </span>
                                         <div class="vac-f__input-container">
-                                            <input type="text">
+                                            <input name="institution" type="text">
                                         </div>
                                     </label>
                                     <label class="vac-f__form-label">
                                         <span>Факультет</span>
                                         <div class="vac-f__input-container">
-                                            <input type="text">
+                                            <input name="faculty" type="text">
                                         </div>
                                     </label>
                                     <label class="vac-f__form-label">
                                         <span>Специализация</span>
                                         <div class="vac-f__input-container">
-                                            <input type="text">
+                                            <input name="specialization" type="text">
                                         </div>
                                     </label>
                                     <label class="vac-f__form-label vac-f__form-label--short">
                                         <span>Год окончания</span>
                                         <div class="vac-f__input-container">
                                             <div>
-                                                <input type="number">
+                                                <input name="education-year" type="number">
                                             </div>
                                         </div>
                                     </label>
                                 </div>
                                 <div class="more-education"></div>
                                 <div class="vac-f__input-container--separate vac-f__input-container--adding">
-                                    <a class="vac-f__form-education-btn test_link">
+                                    <a class="vac-f__form-education-btn vac-f__form-education-adding">
                                         <span class="label">Указать ещё одно место обучения</span>
                                     </a>
                                 </div>
@@ -510,44 +507,30 @@
                                 <label class="vac-f__form-label">
                                     <span>Профессиональный стаж</span>
                                     <div class="vac-f__input-container">
-                                        <input type="text">
+                                        <input name="experience" type="text">
                                     </div>
                                 </label>
-                                <div id="working-main-block">
+                                <div class="working-main-block">
                                     <label class="vac-f__form-label">
                                         <span>Начало работы</span>
                                         <div class="vac-f__form-date">
                                             <div class="vac-f__input-container">
-<!--                                                <select  class="select vac-f__form-date__month" name="language">-->
-<!--                                                    <option disabled>Выбрать</option>-->
-<!--                                                    <option value="jan">Январь</option>-->
-<!--                                                    <option value="feb">Февраль</option>-->
-<!--                                                    <option value="mar">Март</option>-->
-<!--                                                    <option value="apr">Апрель</option>-->
-<!--                                                    <option value="may">Май</option>-->
-<!--                                                    <option value="jun">Июнь</option>-->
-<!--                                                    <option value="jul">Июль</option>-->
-<!--                                                    <option value="aug">Август</option>-->
-<!--                                                    <option value="sep">Сентябрь</option>-->
-<!--                                                    <option value="oct">Октябрь</option>-->
-<!--                                                    <option value="nov">Ноябрь</option>-->
-<!--                                                    <option value="dec">Декабрь</option>-->
-<!--                                                </select>-->
-                                                <select name="work-month" class="vac-f__form-date__month">
-                                                    <option value="january">Январь</option>
-                                                    <option value="february">Феварь</option>
-                                                    <option value="march">Март</option>
-                                                    <option value="april">Апрель</option>
+                                                <select name="work-month"  class="c-select vac-f__form-date__month" name="language">
+                                                    <option disabled>Месяц</option>
+                                                    <option value="jan">Январь</option>
+                                                    <option value="feb">Февраль</option>
+                                                    <option value="mar">Март</option>
+                                                    <option value="apr">Апрель</option>
                                                     <option value="may">Май</option>
-                                                    <option value="june">Июнь</option>
-                                                    <option value="july">Июль</option>
-                                                    <option value="august">Август</option>
-                                                    <option value="september">Сентябрь</option>
-                                                    <option value="october">Октябрь</option>
-                                                    <option value="november">Ноябрь</option>
-                                                    <option value="december">Декабрь</option>
+                                                    <option value="jun">Июнь</option>
+                                                    <option value="jul">Июль</option>
+                                                    <option value="aug">Август</option>
+                                                    <option value="sep">Сентябрь</option>
+                                                    <option value="oct">Октябрь</option>
+                                                    <option value="nov">Ноябрь</option>
+                                                    <option value="dec">Декабрь</option>
                                                 </select>
-                                                <input type="text" placeholder="Год" class="vac-f__form-date__input">
+                                                <input name="work-year" type="text" placeholder="Год" class="vac-f__form-date__input">
                                             </div>
                                         </div>
                                     </label>
@@ -562,40 +545,41 @@
                                         <span>Окончание</span>
                                         <div class="vac-f__form-date">
                                             <div class="vac-f__input-container">
-                                                <select name="work-month" class="vac-f__form-date__month">
-                                                    <option value="january">Январь</option>
-                                                    <option value="february">Феварь</option>
-                                                    <option value="march">Март</option>
-                                                    <option value="april">Апрель</option>
+                                                <select name="work-last-month"  class="c-select vac-f__form-date__month">
+                                                    <option disabled>Месяц</option>
+                                                    <option value="jan">Январь</option>
+                                                    <option value="feb">Февраль</option>
+                                                    <option value="mar">Март</option>
+                                                    <option value="apr">Апрель</option>
                                                     <option value="may">Май</option>
-                                                    <option value="june">Июнь</option>
-                                                    <option value="july">Июль</option>
-                                                    <option value="august">Август</option>
-                                                    <option value="september">Сентябрь</option>
-                                                    <option value="october">Октябрь</option>
-                                                    <option value="november">Ноябрь</option>
-                                                    <option value="december">Декабрь</option>
+                                                    <option value="jun">Июнь</option>
+                                                    <option value="jul">Июль</option>
+                                                    <option value="aug">Август</option>
+                                                    <option value="sep">Сентябрь</option>
+                                                    <option value="oct">Октябрь</option>
+                                                    <option value="nov">Ноябрь</option>
+                                                    <option value="dec">Декабрь</option>
                                                 </select>
-                                                <input type="text" placeholder="Год" class="vac-f__form-date__input">
+                                                <input name="work-last-year" type="text" placeholder="Год" class="vac-f__form-date__input">
                                             </div>
                                         </div>
                                     </label>
                                     <label class="vac-f__form-label">
                                         <span>Организация</span>
                                         <div class="vac-f__input-container">
-                                            <input type="text">
+                                            <input name="organization" type="text">
                                         </div>
                                     </label>
                                     <label class="vac-f__form-label">
                                         <span>Должность</span>
                                         <div class="vac-f__input-container">
-                                            <input type="text">
+                                            <input type="text" name="position">
                                         </div>
                                     </label>
                                     <label class="vac-f__form-label vac-f__form-label--high">
                                         <span>Обязанности на работе</span>
                                         <div class="vac-f__input-container vac-f__input-container--area">
-                                            <textarea></textarea>
+                                            <textarea name="work-duties"></textarea>
                                         </div>
                                     </label>
                                 </div>
@@ -606,17 +590,17 @@
                                 <label class="vac-f__form-label vac-f__form-label--high">
                                     <span>Ключевые навыки</span>
                                     <div class="vac-f__input-container vac-f__input-container--area">
-                                        <textarea></textarea>
+                                        <textarea name="work-skills"></textarea>
                                     </div>
                                 </label>
                                 <label class="vac-f__form-label vac-f__form-label--high">
                                     <span>Дополнительная информация</span>
                                     <div class="vac-f__input-container vac-f__input-container--area">
-                                        <textarea></textarea>
+                                        <textarea name="work-more-info"></textarea>
                                     </div>
                                 </label>
                                 <div class="vac-f__input-container--separate vac-f__resume">
-                                    <button class="vac-f__form-education-btn">Загрузить резюме</button>
+                                    <button class="vac-f__form-education-btn  vac-f__resume-download">Загрузить резюме</button>
                                     <p class="vacancies-d__download-status vac-f__form-download-status">Файл не выбран</p>
                                 </div>
                                 <div class="vac-f__input-container--separate2 vac-f__click">
@@ -644,6 +628,114 @@
                 </div>
             </div>
         </div>
+        <footer class="footer">
+
+            <div class="footer__outer">
+                <div class="container">
+
+                    <div class="footer__row">
+                        <nav class="footer__nav">
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="">Компания</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="">Деятельность</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="">Карта сайта</a>
+                                </li>
+
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="">Пресс-центр</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="">Акционерам и инвесторам</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="">Контакты</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="">Вакансии</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="">Тендеры</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="">Аренда помещений</a>
+                                </li>
+
+
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="">Реквизиты</a>
+                                </li>
+                                <li class="footer__nav-item footer__nav-item--last">
+
+                                </li>
+                            </ul>
+
+                            <p class="footer__adress">198097, Россия, Санкт-Петербург, пр. Стачек, 47</p>
+                        </nav>
+
+
+                        <div class="footer__contact">
+
+                            <div class="footer__contact-feedback">
+                                <h6 class="footer__contact-title">Подписаться на наши новости</h6>
+                                <form class="footer__contact-form" action="">
+                                    <div class="footer__contact-form__wrap">
+                                        <input class="footer__contact-input" type="mail" placeholder="E-mail">
+                                        <button class="footer__contact-submit" type="submit"><svg class="footer__contact-submit-icon" width="40"><use xlink:href="./img/sprite.svg#icon-mail-submit"></use></svg></button>
+                                    </div>
+                                </form>
+
+                            </div>
+
+                            <ul class="footer__social-list">
+                                <li class="footer__social-item" style="background-image: url(./img/social-youtube.svg);">
+                                    <a class="footer__social-link" href="">
+                                        <span class="visually-hidden">Youtube</span>
+                                    </a>
+                                </li>
+
+                                <li class="footer__social-item" style="background-image: url(./img/social-vk.svg);">
+                                    <a class="footer__social-link" href="">
+                                        <span class="visually-hidden">Vk</span>
+                                    </a>
+                                </li>
+
+                                <li class="footer__social-item" style="background-image: url(./img/social-inst.svg);">
+                                    <a class="footer__social-link" href="">
+                                        <span class="visually-hidden">Instagram</span>
+                                    </a>
+                                </li>
+
+                                <li class="footer__social-item" style="background-image: url(./img/social-fb.svg);">
+                                    <a class="footer__social-link" href="">
+                                        <span class="visually-hidden">Facebook</span>
+                                    </a>
+                                </li>
+                            </ul>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+
+                    <section class="copyright">
+                        <h6 class="copyright__title">Copyrights © ПАО "Кировский завод"</h6>
+                        <a class="copyright__link" href="">Правила использования сайта</a>
+                        <a class="copyright__link" href="">Политика в области обработки персональных данных</a>
+                    </section>
+
+                </div>
+
+            </div>
+        </footer>
     </div>
 
 <script src="./js/script.min.js"></script>
@@ -654,26 +746,24 @@
 
     $('.vac-f__form-education-btn').on('click', function () {
         let copy = $('#education-block').clone();
-        copy.appendTo('.more-education');
-        $('.select').each(function() {
+        copy.insertAfter('#education-block');
+
+        $('.c-select').each(function() {
             const _this = $(this),
                 selectOption = _this.find('option'),
                 selectOptionLength = selectOption.length,
                 selectedOption = selectOption.filter(':selected'),
                 duration = 450; // длительность анимации
-
             _this.hide();
-            _this.wrap('<div class="select"></div>');
+            _this.wrap('<div class="c-select"></div>');
             $('<div>', {
                 class: 'new-select',
                 text: _this.children('option:disabled').text()
             }).insertAfter(_this);
-
             const selectHead = _this.next('.new-select');
             $('<div>', {
                 class: 'new-select__list'
             }).insertAfter(selectHead);
-
             const selectList = selectHead.next('.new-select__list');
             for (let i = 1; i < selectOptionLength; i++) {
                 $('<div>', {
@@ -685,7 +775,6 @@
                     .attr('data-value', selectOption.eq(i).val())
                     .appendTo(selectList);
             }
-
             const selectItem = selectList.find('.new-select__item');
             selectList.slideUp(0);
             selectHead.on('click', function() {
@@ -696,11 +785,9 @@
                         let chooseItem = $(this).data('value');
                         $('select').val(chooseItem).attr('selected', 'selected');
                         selectHead.text( $(this).find('span').text() );
-
                         selectList.slideUp(duration);
                         selectHead.removeClass('on');
                     });
-
                 } else {
                     $(this).removeClass('on');
                     selectList.slideUp(duration);
@@ -708,8 +795,7 @@
             });
         });
     });
-
-    $('.select').each(function() {
+    $('.c-select').each(function() {
         const _this = $(this),
             selectOption = _this.find('option'),
             selectOptionLength = selectOption.length,
@@ -717,7 +803,7 @@
             duration = 450; // длительность анимации
 
         _this.hide();
-        _this.wrap('<div class="select"></div>');
+        _this.wrap('<div class="c-select"></div>');
         $('<div>', {
             class: 'new-select',
             text: _this.children('option:disabled').text()
@@ -745,6 +831,8 @@
         selectHead.on('click', function() {
             if ( !$(this).hasClass('on') ) {
                 $(this).addClass('on');
+
+                $(this).parent('.c-select').addClass('c-select-rotate');
                 selectList.slideDown(duration);
                 selectItem.on('click', function() {
                     let chooseItem = $(this).data('value');
@@ -753,14 +841,17 @@
 
                     selectList.slideUp(duration);
                     selectHead.removeClass('on');
+
                 });
 
             } else {
                 $(this).removeClass('on');
+                $(this).parent('.c-select').removeClass('c-select-rotate');
                 selectList.slideUp(duration);
             }
         });
     });
+
 
     //form validate
     $(document).ready(function () {
@@ -826,8 +917,8 @@
     });
 
     $('.vac-f__form-works-btn').on('click', function () {
-       let copy = $('#working-main-block').clone();-
-       copy.appendTo('.working-another-block');
+        let copy = $('.working-main-block').clone();
+        copy.insertAfter('.working-main-block');
     });
 
     $('.input-phone-field').inputmask("+7 (999)999-99-99");
