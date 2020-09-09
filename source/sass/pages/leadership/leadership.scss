@@ -334,7 +334,7 @@
     }
   }
   .leadership_unit--pic{
-    margin-bottom: 14px;
+    margin-bottom: 16px;
     min-height: 73%;
   }
   .leadership_unit--text-name{
@@ -384,6 +384,10 @@
     }
   }
   .leadership_unit--text-name{
+    font-size: 18px;
+  }
+  .leadership_unit--text-name{
     min-height: 48px;
+    line-height: 1.35;
   }
 }
