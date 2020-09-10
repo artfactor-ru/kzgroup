@@ -86,7 +86,6 @@ if(document.querySelector('.barbapage')){
 	
 			eventOnScroll();
 		
-			
 		}
 			
 				
@@ -437,7 +436,6 @@ function eventOnScroll(){
 
 		}
 	
-	
 	parallax(document.querySelectorAll('.parallax__img'));
 	parallax(document.querySelectorAll('.parallax__img--slide'));
 	
@@ -507,9 +505,6 @@ let scrollbar;
 		
 	}
 
-	
-
-
 
 // Инициализация свайперов
 	let swiperStatistics;
@@ -540,10 +535,15 @@ let scrollbar;
 			}
 			if(document.querySelector('.swiper-purchase')){
 				swiperPurchase = new Swiper('.swiper-purchase',{
-				
-					// scrollbar: {
-					// 	el: '.swiper-scrollbar',
-					// },
+					scrollbar: {
+						el: '.swiper-scrollbar',
+					},
+					slidesPerView: 'auto',
+					breakpoints: {
+						760: {
+							slidesPerView: 2
+						}
+					}
 				});
 			}
 			if(document.querySelector('.kirovets_tabs__features--1')){
@@ -624,7 +624,6 @@ let scrollbar;
 			let newNavPrev = document.querySelector('.news__container .swiper-button-next');
 			let newNavNext = document.querySelector('.news__container .swiper-button-prev');
 	
-	
 			swiperNews = new Swiper('.news__container',{
 				// autoHeight: true,
 				// observer: true,
@@ -644,18 +643,16 @@ let scrollbar;
 				slidesOffsetAfter: 0,
 				breakpoints: {
 					500: {
-					spaceBetween: 20,
-					slidesOffsetAfter: 200,
+						spaceBetween: 20,
+						slidesOffsetAfter: 200,
 					},
 					767: {
 						spaceBetween: 20,
 						slidesOffsetAfter: 200,
-						
 					},
-					1280:{
+					1280: {
 						spaceBetween: 35,
 						slidesOffsetAfter: 200,
-						
 					}
 				}
 			});
@@ -674,13 +671,10 @@ let scrollbar;
 				watchSlidesProgress: true,
 				breakpoints: {
 					1680: {
-					spaceBetween: 45,
-					
+						spaceBetween: 45,
 					},
-			
 				},
 			});
-	
 	
 			swiperCompanies = new Swiper('.swiper-container--companies',{
 				// observer: true,
@@ -698,15 +692,12 @@ let scrollbar;
 				},
 			});
 
-
 			swiperCompanies.on('slidePrevTransitionStart', function () {
 
 				let btnCompanies = document.querySelectorAll('.swiper-slide-active .button-more--inner');
 				for(let i = 0; i<btnCompanies.length; i++){
 					btnCompanies[i].classList.add('is-inview-line');
 				}
-				
-			
 			
 				gsap.utils.toArray('.swiper-slide-active .companies__title .title--inner').forEach(element => {
 					gsap.fromTo(element,{
@@ -715,14 +706,12 @@ let scrollbar;
 					opacity: 0 
 						}, {
 							y: "0%",
-						rotateX: 0,
-						opacity: 1,
-			
-						duration: 1,
-						stagger: .13,
-						ease: "power3.out",
-						delay: 0,
-					
+							rotateX: 0,
+							opacity: 1,
+							duration: 1,
+							stagger: .13,
+							ease: "power3.out",
+							delay: 0,
 						}
 					);
 				});
@@ -1042,9 +1031,7 @@ let scrollbar;
 					breakpoints: {
 						1280: {
 						spaceBetween: 15,
-						
 						},
-				
 					},
 				});
 			}
