@@ -6,6 +6,8 @@
 
 .swiper-purchase{
     overflow: hidden;
+    position: relative;
+    padding-bottom: 40px;
 }
 
 .purchase__wrapper {
@@ -176,6 +178,9 @@
     }
     .purchase-inform__contacts--content {
         font-size: 22px;
+    }
+    .swiper-purchase{
+        padding-bottom: 0px;
     }
 }
 
