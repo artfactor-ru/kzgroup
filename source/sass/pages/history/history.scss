@@ -56,21 +56,21 @@
     color: #000;
     margin-bottom: 14px;
     font-size: 19px;
-    line-height: 1.25;
+    line-height: 1.2;
     letter-spacing: 2.2px;
     padding-left: 7px;
     & span {
         background-color: $accent-text-bg-color;
         display: inline-block;
         color: #fff;
-        padding: 0px 12px 3px;
-        margin-left: -13px;
+        padding: 4px 6px 6px;
+        margin-left: -7px;
     }
 }
 
 .history__entry--text-subtitle {
     font-family: $font-text-regular;
-    margin: 40px 0 20px;
+    margin: 28px 0 4px;
     font-size: 21px;
     line-height: 24px;
 }
@@ -142,9 +142,9 @@
         }
     }
     .history__entry--text-subtitle {
-        margin: 40px 0 20px;
+        margin: 40px 0 6px;
         font-size: 30px;
-        line-height: 36px;
+        line-height: 33px;
     }
     .history__photos--container {
         padding-left: 0px;
