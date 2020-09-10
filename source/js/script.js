@@ -564,6 +564,8 @@ let scrollbar;
 	let swiperGallery;
 	
 	let swipersHistory = [];
+	let swiperPress = [];
+	
 	let swiperAchieves;
 	let swiperPurchase;
 	const transitionSlide = 15000;
@@ -626,7 +628,57 @@ let scrollbar;
 				});
 			}
 
+			
+
 				
+	}
+
+	const enableSwiperForPress = function(){
+		if(document.querySelectorAll('.press__container')){
+			document.querySelectorAll('.press__container').forEach(function(slider, index){
+
+				slider.classList.add('swiper-container--press-'+ index);
+				// slider.querySelector('.swiper-button-next').classList.add('press_swiper-button-next-' + index);
+				// slider.querySelector('.swiper-button-prev').classList.add('press_swiper-button-prev-' + index);
+				slider.querySelector('.swiper-scrollbar--news').classList.add('swiper-scrollbar--news-' + index)
+
+				swiperPress[index] = new Swiper('.swiper-container--press-'+ index,{
+					// autoHeight: true,
+					// observer: true,
+					// 	observeParents: true,
+					slidesPerView: 'auto',
+					spaceBetween: 0,
+					scrollbar: {
+						el: '.swiper-scrollbar--news-' + index,
+					},
+					// navigation: {
+					// 	nextEl: '.press_swiper-button-prev-' + index,
+					// 	prevEl: '.press_swiper-button-next-' + index,
+					// },
+					// observer: true, 
+					// observeParents: true,
+					// updateOnWindowResize: true,
+					slidesOffsetAfter: 0,
+					breakpoints: {
+						500: {
+						spaceBetween: 20,
+						slidesOffsetAfter: 200,
+						},
+						767: {
+							spaceBetween: 20,
+							slidesOffsetAfter: 200,
+							
+						},
+						1280:{
+							spaceBetween: 35,
+							slidesOffsetAfter: 200,
+							
+						}
+					}
+				});
+			});
+			
+		}
 	}
 	function updateSlider(slider){
 		if(slider!= undefined){
@@ -634,6 +686,9 @@ let scrollbar;
 		}
 	}
 	const initSlider = function(){
+
+
+	
 
 		if(document.querySelector('.rent-details__slider')){
 			let galleryThumbs = new Swiper('.gallery-thumbs', {
@@ -661,6 +716,8 @@ let scrollbar;
 				},
 			});
 		}
+
+		
 		if(document.querySelector('.news__container')){
 			let newNavPrev = document.querySelector('.news__container .swiper-button-next');
 			let newNavNext = document.querySelector('.news__container .swiper-button-prev');
@@ -1118,6 +1175,9 @@ let scrollbar;
 		updateSlider(swiperPurchase);
 		breakpoint.addListener(breakpointChecker);
 		breakpointChecker();
+		breakpointForPress.addListener(breakpointChecker);
+
+		breakpointChecker();
 
 		let vh = window.innerHeight * 0.01;
 		document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -1137,8 +1197,52 @@ let scrollbar;
 
 
 
+
+
+	let slidersPress = document.querySelectorAll('.press__container');
+	const breakpointForPress = window.matchMedia('(min-width:1280px)');
+	
+	const breakpointCheckerForPress = function() {
+		// if larger viewport and multi-row layout needed
+		if ( breakpointForPress.matches === true ) {
+			for(let i = 0; i<swiperPress.length; i++){
+				if (swiperPress[i] != null) {
+					swiperPress[i].destroy(true, true);
+					swiperPress[i].update();
+				}
+			}
+
+			for(let i = 0; i<slidersPress.length; i++){
+				slidersPress[i].classList.remove('swiper-container');
+				slidersPress[i].querySelector('.swiper-wrapper--press').classList.remove('swiper-wrapper');
+				let pressSlides = slidersPress[i].querySelectorAll('.press-news__item');
+				for (let i = 0; i < pressSlides.length; i++) {
+					
+					pressSlides[i].classList.remove('swiper-slide');
+				}
+			}
+		}else if ( breakpointForPress.matches === false ) {
+
+			for(let i = 0; i<slidersPress.length; i++){
+				slidersPress[i].classList.add('swiper-container');
+				slidersPress[i].querySelector('.swiper-wrapper--press').classList.add('swiper-wrapper');
+				let pressSlides = slidersPress[i].querySelectorAll('.press-news__item');
+				for (let i = 0; i < pressSlides.length; i++) {
+					
+					pressSlides[i].classList.add('swiper-slide');
+				}
+			}
+			enableSwiperForPress();
+		}
+	};
+	breakpointForPress.addListener(breakpointCheckerForPress);
+
+	breakpointCheckerForPress();
+
+
 	let InnerSliders = document.querySelectorAll('.kirovets_tabs__features');
 	let slidersHistory = document.querySelectorAll('.history__photos');
+
 	const breakpointChecker = function() {
 		// if larger viewport and multi-row layout needed
 		if ( breakpoint.matches === true ) {
