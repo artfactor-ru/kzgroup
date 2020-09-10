@@ -1,4 +1,4 @@
-.history_heroes{
+.history_heroes {
     padding: 40px 0 20px;
     position: relative;
     background-image: url(../../../img/history/bg-heroes.jpg);
@@ -7,7 +7,7 @@
     background-size: cover;
     z-index: 1;
     color: #fff;
-    &::before{
+    &::before {
         display: block;
         position: absolute;
         content: '';
@@ -20,7 +20,7 @@
     }
 }
 
-.history_heroes--title{
+.history_heroes--title {
     font-family: $font-bold-2-title;
     font-size: 22px;
     line-height: 30px;
@@ -28,131 +28,140 @@
     color: #f4f3f4;
 }
 
-.history_heroes--subtitle{
+.history_heroes--subtitle {
     font-family: $font-text-regular;
     font-size: 18px;
     line-height: 23px;
     margin-bottom: 27px;
 }
 
-.history_heroes--list{
+.history_heroes--list {
     display: flex;
     list-style-type: none;
     flex-wrap: wrap;
 }
 
-.history_heroes--list-item{
+.history_heroes--list-item {
     width: 46%;
     margin-right: 8%;
     margin-bottom: 33px;
     font-family: $font-text-regular;
-    &:nth-child(2n){
+    &:nth-child(2n) {
         margin-right: 0;
     }
 }
 
-.history_heroes--list-item-link{
+.history_heroes--list-item-link {
     font-family: $font-text-regular;
     color: #f4f3f4;
     display: block;
 }
 
-.history_heroes--list-item-pic{
+.history_heroes--list-item-pic {
     margin-bottom: 10px;
     font-size: 0;
 }
 
-.history_heroes--list-item-descr{
+.history_heroes--list-item-descr {
     font-size: 12px;
     line-height: 14px;
 }
 
-@media(min-width: 767px){
-    .history_heroes{
+.history_heroes--list-item-pic-inner {
+    position: relative;
+    height: 0;
+    padding-top: 132%;
+    background-size: cover;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+}
+
+@media(min-width: 767px) {
+    .history_heroes {
         padding: 80px 0 60px;
     }
-    .history_heroes--title{
+    .history_heroes--title {
         font-size: 30px;
         line-height: 36px;
         margin-bottom: 30px;
     }
-    .history_heroes--subtitle{
+    .history_heroes--subtitle {
         font-size: 26px;
         line-height: 30px;
         margin-bottom: 74px;
     }
-    .history_heroes--list-item{
+    .history_heroes--list-item {
         width: 22%;
-        margin-right: 5%;
-        &:nth-child(2n){
-            margin-right: 5%;
+        margin-right: 4%;
+        &:nth-child(2n) {
+            margin-right: 4%;
         }
-        &:nth-child(4n){
+        &:nth-child(4n) {
             margin-right: 0;
         }
     }
 }
 
-@media(min-width: 1280px){
-    .history_heroes{
+@media(min-width: 1280px) {
+    .history_heroes {
         padding: 107px 0 25px;
     }
-    .history_heroes--list-item{
+    .history_heroes--list-item {
         width: 14%;
         margin-right: 3.1%;
         margin-bottom: 20px;
-        &:nth-child(2n){
+        &:nth-child(2n) {
             margin-right: 3.1%;
         }
-        &:nth-child(4n){
+        &:nth-child(4n) {
             margin-right: 3.1%;
         }
-        &:nth-child(6n){
+        &:nth-child(6n) {
             margin-right: 0;
         }
     }
-    .history_heroes--title{
+    .history_heroes--title {
         font-size: 36px;
         line-height: 30px;
         margin-bottom: 53px;
     }
-    .history_heroes--subtitle{
+    .history_heroes--subtitle {
         font-size: 30px;
         line-height: 36px;
     }
-    .history_heroes--list-item-descr{
+    .history_heroes--list-item-descr {
         font-size: 14px;
         line-height: 17px;
     }
 }
 
-@media(min-width: 1680px){
-    .history_heroes{
+@media(min-width: 1680px) {
+    .history_heroes {
         padding: 100px 0 80px;
     }
-    .history_heroes--title{
+    .history_heroes--title {
         font-size: 46px;
         line-height: 42px;
         margin-bottom: 50px;
     }
-    .history_heroes--subtitle{
+    .history_heroes--subtitle {
         font-size: 36px;
         line-height: 44px;
         margin-bottom: 140px;
     }
-    .history_heroes--list-item{
+    .history_heroes--list-item {
         width: 13.4%;
         margin-right: 1%;
-        &:nth-child(2n){
+        &:nth-child(2n) {
             margin-right: 1%;
         }
-        &:nth-child(4n){
+        &:nth-child(4n) {
             margin-right: 1%;
         }
-        &:nth-child(6n){
+        &:nth-child(6n) {
             margin-right: 1%;
         }
-        &:nth-child(7n){
+        &:nth-child(7n) {
             margin-right: 0;
         }
     }
