@@ -34,10 +34,11 @@
     padding: 50px 0 40px 0;
     position: relative;
 }
-.history_dark{
+
+.history_dark {
     position: relative;
     color: #f4f3f4;
-    &::before{
+    &::before {
         display: block;
         position: absolute;
         content: '';
@@ -52,7 +53,7 @@
     }
     & .history__entry--text-title,
     & .history__entry--text-content,
-    & .history__photos__item-descr{
+    & .history__photos__item-descr {
         color: #f4f3f4;
     }
 }
@@ -85,15 +86,15 @@
     margin-bottom: 28px;
 }
 
-.history__entry--text{
+.history__entry--text {
     margin-bottom: 63px;
-    & ul{
+    & ul {
         list-style-type: '—';
         font-family: $font-text-light;
         font-size: 14px;
         line-height: 1.6;
         padding-left: 10px;
-        & li{
+        & li {
             padding-left: 10px;
         }
     }
@@ -106,33 +107,33 @@
     color: #000;
     margin-bottom: 14px;
     font-size: 19px;
-    line-height: 1.25;
+    line-height: 1.2;
     letter-spacing: 2.2px;
-    // padding-left: 7px;
-    & span{
+    padding-left: 7px;
+    & span {
         background-color: $accent-text-bg-color;
         display: inline-block;
         color: #fff;
-        padding: 0px 12px 3px;
-        margin-left: -13px;
+        padding: 4px 6px 6px;
+        margin-left: -7px;
     }
 }
 
-.history__entry--text-subtitle{
+.history__entry--text-subtitle {
     font-family: $font-text-regular;
-    margin: 40px 0 20px;
-    font-size: 26px;
-    line-height: 30px;
+    margin: 28px 0 4px;
+    font-size: 21px;
+    line-height: 24px;
 }
 
-.history__entry--text-content{
+.history__entry--text-content {
     font-family: $font-text-light;
     color: $grey-text-paragraf;
     font-size: 14px;
     line-height: 1.6;
 }
 
-.history__photos--container{
+.history__photos--container {
     display: flex;
     // flex-direction: column;
     // padding-left: 26px;
@@ -155,7 +156,7 @@
     box-sizing: border-box;
 }
 
-.history__photos__item-pic{
+.history__photos__item-pic {
     position: relative;
     margin-bottom: 10px;
     font-size: 0;
@@ -166,12 +167,12 @@
     height: 260px;
 }
 
-.history__photos__item-year{
+.history__photos__item-year {
     @extend %pic__frame;
     display: block;
 }
 
-.history__photos__item-descr{
+.history__photos__item-descr {
     font-family: $font-text-light;
     color: $grey-text-paragraf;
     font-size: 14px;
@@ -208,7 +209,7 @@
     }
   
     .history_light,
-    .history_dark{
+    .history_dark {
         padding: 60px 0;
     }
     .history_light:first-child{
@@ -241,196 +242,196 @@
         font-size: 30px;
         letter-spacing: 0;
         padding-left: 0;
-        & span{
+        & span {
             padding: 5px 8px 8px;
         }
     }
-    .history__entry--text-subtitle{
-        margin: 40px 0 20px;
+    .history__entry--text-subtitle {
+        margin: 40px 0 6px;
         font-size: 30px;
-        line-height: 36px;
+        line-height: 33px;
     }
-    .history__photos--container{
+    .history__photos--container {
         padding-left: 0px;
         flex-direction: column;
     }
-    .history__photos{
-        & .history__photos__item{
+    .history__photos {
+        & .history__photos__item {
             margin-bottom: 0;
-            &.history__photos__item-1{
+            &.history__photos__item-1 {
                 width: 31%;
             }
-            &.history__photos__item-2{
+            &.history__photos__item-2 {
                 align-self: flex-end;
                 margin-top: -204px;
                 width: 40%;
             }
-            &.history__photos__item-3{
+            &.history__photos__item-3 {
                 margin-top: -5px;
                 width: 48%;
             }
-            &.history__photos__item-4{
+            &.history__photos__item-4 {
                 margin-top: -65px;
                 max-width: 315px;
             }
         }
-        &.history__photos-1{
-            & .history__photos__item-2{
-                & .history__photos__item-pic{
+        &.history__photos-1 {
+            & .history__photos__item-2 {
+                & .history__photos__item-pic {
                     padding-right: 55px;
                 }
             }
         }
-        &.history__photos-2{
-            & .history__photos--container{
+        &.history__photos-2 {
+            & .history__photos--container {
                 flex-direction: row;
                 justify-content: space-between;
                 flex-wrap: wrap;
             }
-            & .history__photos__item{
-                &:nth-child(odd){
+            & .history__photos__item {
+                &:nth-child(odd) {
                     width: 40%;
                 }
-                &.history__photos__item-2{
+                &.history__photos__item-2 {
                     width: 40%;
                     margin-top: 0;
                     margin-bottom: 100px;
-                    & .history__photos__item-pic{
+                    & .history__photos__item-pic {
                         padding-right: 55px;
                     }
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     margin-top: -66px;
                 }
-                &.history__photos__item-4{
+                &.history__photos__item-4 {
                     margin-top: 50px;
                     width: 49%;
                     max-width: inherit;
                 }
-                &.history__photos__item-5{
+                &.history__photos__item-5 {
                     margin-top: -50px;
                 }
-                &.history__photos__item-6{
+                &.history__photos__item-6 {
                     margin-top: 140px;
                     width: 41%;
                 }
             }
         }
-        &.history__photos-3{
-            & .history__photos--container{
+        &.history__photos-3 {
+            & .history__photos--container {
                 flex-direction: row;
                 justify-content: space-between;
                 flex-wrap: wrap;
             }
-            & .history__photos__item{
-                &:nth-child(even){
+            & .history__photos__item {
+                &:nth-child(even) {
                     max-width: inherit;
                     width: 40%;
                 }
-                &.history__photos__item-1{
+                &.history__photos__item-1 {
                     order: 2;
                 }
-                &.history__photos__item-2{
+                &.history__photos__item-2 {
                     order: 1;
                     margin-top: 0;
                     margin-bottom: 100px;
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     order: 4;
                     margin-top: 120px;
                 }
-                &.history__photos__item-4{
+                &.history__photos__item-4 {
                     order: 3;
                     margin-top: 0;
                 }
             }
         }
-        &.history__photos-4{
+        &.history__photos-4 {
             margin-bottom: 100px;
-            & .history__photos--container{
+            & .history__photos--container {
                 flex-direction: column;
                 align-items: flex-end;
             }
-            & .history__photos__item{
-                &:nth-child(odd){
+            & .history__photos__item {
+                &:nth-child(odd) {
                     width: 40%;
                 }
-                &.history__photos__item-1{
-                    & .history__photos__item-pic{
+                &.history__photos__item-1 {
+                    & .history__photos__item-pic {
                         width: 65%;
                     }
                 }
-                &.history__photos__item-2{
+                &.history__photos__item-2 {
                     align-self: flex-start;
                     width: 45%;
                     max-width: 100%;
                     margin-top: -60px;
-                    & img{
+                    & img {
                         max-width: 100%;
                     }
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     margin-top: -50px;
                 }
             }
         }
-        &.history__photos-5{
-            & .history__photos--container{
+        &.history__photos-5 {
+            & .history__photos--container {
                 flex-direction: column;
                 align-items: flex-end;
             }
-            & .history__photos__item{
-                &.history__photos__item-1{
-                    & .history__photos__item-pic{
+            & .history__photos__item {
+                &.history__photos__item-1 {
+                    & .history__photos__item-pic {
                         width: 40%;
                     }
                 }
-                &.history__photos__item-2{
+                &.history__photos__item-2 {
                     align-self: flex-start;
                     width: 45%;
                     margin-top: 100px;
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     margin-top: -290px;
                     width: 40%;
                 }
-                &.history__photos__item-4{
+                &.history__photos__item-4 {
                     width: 40%;
                     margin-right: 5%;
                     margin-top: 70px;
                 }
             }
         }
-        &.history__photos-6{
+        &.history__photos-6 {
             margin-top: 0;
-            & .history__photos--container{
+            & .history__photos--container {
                 flex-direction: row;
                 align-items: flex-start;
                 flex-wrap: wrap;
                 justify-content: space-between;
             }
-            & .history__photos__item{
-                &:nth-child(even){
+            & .history__photos__item {
+                &:nth-child(even) {
                     max-width: 100%;
                     width: 40%;
                 }
-                &.history__photos__item-1{
+                &.history__photos__item-1 {
                     order: 2;
                     margin-bottom: 80px;
                     max-width: 100%;
                 }
-                &.history__photos__item-2{
+                &.history__photos__item-2 {
                     margin-top: 0;
                     margin-bottom: 0px;
                     order: 1;
                     align-self: flex-start;
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     margin-top: 0px;
                     order: 4;
                     width: 39%;
                 }
-                &.history__photos__item-4{
+                &.history__photos__item-4 {
                     margin-top: 90px;
                     order: 3;
                     width: 30%;
@@ -438,66 +439,66 @@
                 }
             }
         }
-        &.history__photos-7{
-            & .history__photos--container{
+        &.history__photos-7 {
+            & .history__photos--container {
                 align-items: flex-end;
             }
-            & .history__photos__item-1{
+            & .history__photos__item-1 {
                 width: 41%;
             }
-            & .history__photos__item-2{
+            & .history__photos__item-2 {
                 align-self: flex-start;
                 margin-top: -100px;
                 width: 40%;
             }
-            & .history__photos__item-3{
+            & .history__photos__item-3 {
                 width: 31%;
                 margin-top: -40px;
             }
         }
-        &.history__photos-8{
-            & .history__photos--container{
+        &.history__photos-8 {
+            & .history__photos--container {
                 align-items: flex-end;
             }
-            & .history__photos__item:nth-child(even){
+            & .history__photos__item:nth-child(even) {
                 align-self: flex-start;
             }
-            & .history__photos__item-1{
+            & .history__photos__item-1 {
                 width: 41%;
             }
-            & .history__photos__item-2{
+            & .history__photos__item-2 {
                 align-self: flex-start;
                 margin-top: -100px;
                 width: 44%;
             }
-            & .history__photos__item-3{
+            & .history__photos__item-3 {
                 width: 31%;
                 margin-top: 0px;
             }
-            & .history__photos__item-4{
+            & .history__photos__item-4 {
                 width: 31%;
                 margin-top: -80px;
             }
         }
-        &.history__photos-9{
-            & .history__photos--container{
+        &.history__photos-9 {
+            & .history__photos--container {
                 align-items: flex-end;
             }
-            & .history__photos__item:nth-child(even){
+            & .history__photos__item:nth-child(even) {
                 align-self: flex-start;
             }
-            & .history__photos__item-1{
+            & .history__photos__item-1 {
                 width: 41%;
             }
-            & .history__photos__item-2{
+            & .history__photos__item-2 {
                 margin-top: -100px;
                 width: 35%;
             }
-            & .history__photos__item-3{
+            & .history__photos__item-3 {
                 width: 50%;
                 margin-top: -10px;
             }
-            & .history__photos__item-4{
+            & .history__photos__item-4 {
                 width: 40%;
                 margin-top: -80px;
             }
@@ -559,7 +560,7 @@
     .history_dark{
         padding: 150px 0 30px 0;
     }
-    .history__year{
+    .history__year {
         height: 330px;
         width: 986px;
      
@@ -582,78 +583,77 @@
 	.history__year .traktors__number-icon--big{
 		width: 280px;
     }
-    
-    .history__entry--text-content{
+    .history__entry--text-content {
         font-size: 16px;
     }
-    .history__entry--text{
+    .history__entry--text {
         max-width: 612px;
     }
-    .history__entry--text-title{
+    .history__entry--text-title {
         font-size: 36px;
         line-height: 40px;
+        margin-bottom: 23px;
     }
-    .history__entry--text-subtitle{
+    .history__entry--text-subtitle {
         margin: 40px 0 20px;
-        font-size: 30px;
+        font-size: 36px;
         line-height: 36px;
     }
-    .history__entry--text ul{
+    .history__entry--text ul {
         padding-right: 60px;
     }
-    .history__photos__item-descr{
+    .history__photos__item-descr {
         font-size: 16px;
     }
-    .history__photos{
+    .history__photos {
         margin-top: -240px;
     }
-    .history__photos--container{
+    .history__photos--container {
         align-items: flex-end;
     }
-    .history__photos{
-        & .history__photos__item{
-            &.history__photos__item-1{
+    .history__photos {
+        & .history__photos__item {
+            &.history__photos__item-1 {
                 max-width: 340px;
                 order: 2;
                 align-self: flex-start;
                 margin-top: -120px;
             }
-            &.history__photos__item-2{
+            &.history__photos__item-2 {
                 max-width: 340px;
                 order: 1;
                 margin-top: -14px;
-                & img{
+                & img {
                     max-width: 250px;
                 }
             }
-            &.history__photos__item-3{
+            &.history__photos__item-3 {
                 max-width: 500px;
                 margin-top: -192px;
-                order:3;
+                order: 3;
             }
-            &.history__photos__item-4{
+            &.history__photos__item-4 {
                 margin-top: -100px;
                 max-width: 500px;
                 order: 4;
             }
-            
         }
-        &.history__photos-2{
+        &.history__photos-2 {
             margin-top: -520px;
-            & .history__photos--container{
+            & .history__photos--container {
                 flex-direction: column;
                 align-items: flex-start;
             }
-            & .history__photos__item{
-                &:nth-child(odd){
+            & .history__photos__item {
+                &:nth-child(odd) {
                     margin-top: 0;
                 }
-                &.history__photos__item-1{
+                &.history__photos__item-1 {
                     max-width: inherit;
                     order: 2;
                     margin-top: 120px;
                 }
-                &.history__photos__item-2{
+                &.history__photos__item-2 {
                     order: 1;
                     margin-top: 18px;
                     margin-bottom: 0;
@@ -661,30 +661,30 @@
                     align-self: flex-end;
                     max-width: inherit;
                     width: 31%;
-                    & img{
+                    & img {
                         max-width: 100%;
                     }
-                    & .history__photos__item-pic{
+                    & .history__photos__item-pic {
                         padding-right: 90px;
                     }
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     order: 4;
                     margin-right: 0;
                     margin-top: -60px;
                 }
-                &.history__photos__item-4{
+                &.history__photos__item-4 {
                     align-self: flex-end;
                     width: 40%;
                     order: 3;
                     margin-top: -220px;
                 }
-                &.history__photos__item-5{
+                &.history__photos__item-5 {
                     order: 6;
                     margin-top: -75px;
                     width: 31.5%;
                 }
-                &.history__photos__item-6{
+                &.history__photos__item-6 {
                     align-self: flex-end;
                     order: 5;
                     margin-top: -73px;
@@ -692,123 +692,123 @@
                 }
             }
         }
-        &.history__photos-3{
+        &.history__photos-3 {
             margin-top: -130px;
-            & .history__photos--container{
+            & .history__photos--container {
                 flex-direction: column;
                 align-items: flex-start;
             }
-            & .history__photos__item{
-                &:nth-child(odd){
+            & .history__photos__item {
+                &:nth-child(odd) {
                     align-self: flex-end;
                 }
-                &:nth-child(even){
+                &:nth-child(even) {
                     align-self: flex-start;
                     width: 40%;
                     margin-right: 0;
                 }
-                &.history__photos__item-1{
+                &.history__photos__item-1 {
                     order: 1;
                 }
-                &.history__photos__item-2{
+                &.history__photos__item-2 {
                     order: 2;
                     margin-bottom: 0;
-                    & img{
+                    & img {
                         max-width: 100%;
                     }
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     order: 3;
                     margin-top: 0px;
                 }
-                &.history__photos__item-4{
+                &.history__photos__item-4 {
                     order: 4;
                     margin-top: -170px;
                     width: 40%;
                 }
             }
         }
-        &.history__photos-4{
+        &.history__photos-4 {
             margin-bottom: 120px;
             margin-top: -320px;
-            & .history__photos__item{
-                &:nth-child(odd){
+            & .history__photos__item {
+                &:nth-child(odd) {
                     width: 40%;
                 }
-                &.history__photos__item-1{
+                &.history__photos__item-1 {
                     align-self: flex-end;
                     margin-top: 0;
                     order: 1;
-                    & .history__photos__item-pic{
+                    & .history__photos__item-pic {
                         width: 65%;
                     }
                 }
-                &.history__photos__item-2{
+                &.history__photos__item-2 {
                     margin-top: 80px;
                     order: 2;
                     margin-right: 0;
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     margin-top: -290px;
                     width: 36%;
                 }
             }
         }
-        &.history__photos-5{
+        &.history__photos-5 {
             margin-top: -110px;
-            & .history__photos--container{
+            & .history__photos--container {
                 flex-direction: column;
                 align-items: flex-end;
             }
-            & .history__photos__item{
-                &.history__photos__item-1{
+            & .history__photos__item {
+                &.history__photos__item-1 {
                     align-self: flex-end;
                     order: 1;
-                    & .history__photos__item-pic{
+                    & .history__photos__item-pic {
                         width: 70%;
                     }
                 }
-                &.history__photos__item-2{
+                &.history__photos__item-2 {
                     order: 2;
                     max-width: 100%;
                     margin-right: 0;
                     margin-top: 120px;
-                    & img{
+                    & img {
                         max-width: 100%;
                     }
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     width: 36%;
                     margin-top: -390px;
                 }
-                &.history__photos__item-4{
+                &.history__photos__item-4 {
                     margin-top: 100px;
                 }
             }
         }
-        &.history__photos-6{
+        &.history__photos-6 {
             margin-top: 0;
-            & .history__photos--container{
+            & .history__photos--container {
                 flex-direction: row;
                 align-items: flex-start;
                 flex-wrap: wrap;
                 justify-content: space-between;
             }
-            & .history__photos__item{
-                &:nth-child(even){
+            & .history__photos__item {
+                &:nth-child(even) {
                     max-width: 100%;
                     width: 40%;
                 }
-                &.history__photos__item-2{
-                    & img{
+                &.history__photos__item-2 {
+                    & img {
                         max-width: 100%;
                     }
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     margin-top: 0px;
                     order: 4;
                 }
-                &.history__photos__item-4{
+                &.history__photos__item-4 {
                     margin-top: 90px;
                     order: 3;
                     width: 30%;
@@ -816,76 +816,76 @@
                 }
             }
         }
-        &.history__photos-7{
+        &.history__photos-7 {
             margin-top: -60px;
-            & .history__photos__item-1{
+            & .history__photos__item-1 {
                 order: 1;
                 align-self: flex-end;
                 max-width: 100%;
                 width: 38%;
             }
-            & .history__photos__item-2{
+            & .history__photos__item-2 {
                 order: 2;
                 margin-right: 0;
                 max-width: 100%;
-                & img{
+                & img {
                     max-width: 100%;
                 }
             }
-            & .history__photos__item-3{
+            & .history__photos__item-3 {
                 width: 31%;
                 margin-top: -120px;
             }
         }
-        &.history__photos-8{
+        &.history__photos-8 {
             margin-top: -50px;
-            & .history__photos__item-1{
+            & .history__photos__item-1 {
                 order: 1;
                 align-self: flex-end;
                 max-width: 100%;
                 width: 39%;
             }
-            & .history__photos__item-2{
+            & .history__photos__item-2 {
                 order: 2;
                 max-width: 100%;
                 margin-top: -150px;
-                & img{
+                & img {
                     max-width: 100%;
                 }
             }
-            & .history__photos__item-3{
+            & .history__photos__item-3 {
                 order: 3;
                 margin-top: -80px;
             }
-            & .history__photos__item-4{
+            & .history__photos__item-4 {
                 order: 4;
                 width: 35%;
             }
         }
-        &.history__photos-9{
+        &.history__photos-9 {
             margin-top: -330px;
-            & .history__photos__item-1{
+            & .history__photos__item-1 {
                 align-self: flex-end;
                 order: 1;
                 margin-top: 0;
                 max-width: 100%;
                 width: 35%;
             }
-            & .history__photos__item-2{
+            & .history__photos__item-2 {
                 order: 2;
                 margin-top: 100px;
                 margin-right: 0;
                 max-width: 100%;
                 width: 38%;
-                & img{
+                & img {
                     max-width: 100%;
                 }
             }
-            & .history__photos__item-3{
+            & .history__photos__item-3 {
                 margin-top: -160px;
                 max-width: 100%;
             }
-            & .history__photos__item-4{
+            & .history__photos__item-4 {
                 width: 41%;
                 margin-top: 0px;
                 max-width: 100%;
@@ -956,233 +956,233 @@
         line-height: 42px;
         margin-bottom: 28px;
     }
-    .history__entry--text-title span{
+    .history__entry--text-title span {
         padding: 10px 12px 13px;
         margin-left: -8px;
     }
-    .history__entry--text-content{
+    .history__entry--text-content {
         font-size: 18px;
     }
-    .history__entry--text{
+    .history__entry--text {
         max-width: 742px;
-        & ul{
+        & ul {
             font-size: 18px;
             padding-right: 0px;
         }
     }
-    .history__entry--text-subtitle{
+    .history__entry--text-subtitle {
         font-size: 36px;
-        line-height: 49px;
+        line-height: 33px;
     }
-    .history__photos__item-descr{
+    .history__photos__item-descr {
         font-size: 20px;
     }
-    .history__photos{
+    .history__photos {
         margin-top: -295px;
-        & .history__photos__item{
-            &.history__photos__item-1{
+        & .history__photos__item {
+            &.history__photos__item-1 {
                 max-width: 458px;
                 margin-top: -149px;
                 width: 33%;
             }
-            &.history__photos__item-2{
+            &.history__photos__item-2 {
                 max-width: 442px;
                 margin-top: 23px;
-                & img{
+                & img {
                     max-width: 320px;
                 }
-                .history__photos__item-pic{
+                .history__photos__item-pic {
                     margin-bottom: 23px;
                 }
             }
-            &.history__photos__item-3{
+            &.history__photos__item-3 {
                 max-width: 639px;
                 margin-top: -365px;
                 margin-right: -60px;
                 width: 47%;
             }
-            &.history__photos__item-4{
+            &.history__photos__item-4 {
                 max-width: 639px;
                 margin-top: -230px;
             }
         }
-        &.history__photos-2{
+        &.history__photos-2 {
             margin-top: -550px;
-            & .history__photos__item{
-                &.history__photos__item-1{
+            & .history__photos__item {
+                &.history__photos__item-1 {
                     margin-top: 130px;
                     width: 47%;
                 }
-                &.history__photos__item-2{
+                &.history__photos__item-2 {
                     width: 36%;
                     margin-top: -118px;
                     margin-right: -70px;
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     margin-top: -140px;
                     width: 47%;
                 }
-                &.history__photos__item-4{
+                &.history__photos__item-4 {
                     width: 45%;
                     margin-right: -62px;
                     margin-top: -295px;
                 }
-                &.history__photos__item-5{
+                &.history__photos__item-5 {
                     margin-top: -136px;
                     width: 38%;
                 }
-                &.history__photos__item-6{
+                &.history__photos__item-6 {
                     width: 36%;
                     margin-top: -66px;
                     margin-right: -74px;
                 }
             }
         }
-        &.history__photos-3{
+        &.history__photos-3 {
             margin-top: -133px;
-            & .history__photos__item{
-                &.history__photos__item-1{
+            & .history__photos__item {
+                &.history__photos__item-1 {
                     margin-top: 0px;
                     width: 36%;
                     max-width: 100%;
                     margin-right: -82px;
                 }
-                &.history__photos__item-2{
+                &.history__photos__item-2 {
                     margin-top: -205px;
                     max-width: 100%;
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     margin-top: 25px;
                 }
-                &.history__photos__item-4{
+                &.history__photos__item-4 {
                     margin-top: -283px;
                 }
             }
         }
-        &.history__photos-4{
-            & .history__photos__item{
-                &.history__photos__item-1{
+        &.history__photos-4 {
+            & .history__photos__item {
+                &.history__photos__item-1 {
                     margin-right: -58px;
                     margin-top: -70px;
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     margin-top: -375px;
                 }
             }
         }
-        &.history__photos-5{
+        &.history__photos-5 {
             margin-top: -140px;
-            & .history__photos__item{
-                &.history__photos__item-1{
+            & .history__photos__item {
+                &.history__photos__item-1 {
                     max-width: 100%;
                     width: 29%;
                 }
-                &.history__photos__item-2{
+                &.history__photos__item-2 {
                     margin-top: 155px;
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     margin-top: -517px;
                 }
-                &.history__photos__item-4{
+                &.history__photos__item-4 {
                     width: 43%;
                     margin-right: -1%;
                 }
             }
         }
-        &.history__photos-6{
+        &.history__photos-6 {
             margin-top: 145px;
-            & .history__photos__item{
-                &.history__photos__item-1{
+            & .history__photos__item {
+                &.history__photos__item-1 {
                     margin-right: -64px;
                     width: 37%;
                 }
-                &.history__photos__item-2{
+                &.history__photos__item-2 {
                     margin-top: 46px;
                     width: 47%;
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     margin-top: 42px;
                     width: 45%;
                 }
-                &.history__photos__item-4{
+                &.history__photos__item-4 {
                     margin-top: 191px;
                     width: 37%;
                     margin-left: 9.5%;
                 }
             }
         }
-        &.history__photos-7{
+        &.history__photos-7 {
             margin-top: -216px;
-            & .history__photos__item-1{
+            & .history__photos__item-1 {
                 width: 45%;
                 max-width: 100%;
                 margin-top: 0px;
                 margin-right: -67px;
-                & img{
+                & img {
                     max-width: 100%;
                 }
             }
-            & .history__photos__item-2{
+            & .history__photos__item-2 {
                 width: 47%;
                 max-width: 100%;
                 margin-top: -150px;
-                & img{
+                & img {
                     max-width: 100%;
                 }
             }
-            & .history__photos__item-3{
+            & .history__photos__item-3 {
                 margin-top: -180px;
                 margin-right: -206px;
             }
         }
-        &.history__photos-8{
+        &.history__photos-8 {
             margin-top: -12px;
-            & .history__photos__item-1{
+            & .history__photos__item-1 {
                 margin-right: -80px;
                 width: 46%;
                 max-width: 100%;
             }
-            & .history__photos__item-2{
+            & .history__photos__item-2 {
                 margin-top: -154px;
                 width: 47%;
                 max-width: 100%;
-                & img{
+                & img {
                     max-width: 100%;
                 }
             }
-            & .history__photos__item-3{
+            & .history__photos__item-3 {
                 width: 38%;
                 margin-top: -104px;
                 margin-right: -82px;
             }
-            & .history__photos__item-4{
+            & .history__photos__item-4 {
                 max-width: 100%;
                 width: 39%;
                 margin-top: -194px;
             }
         }
-        &.history__photos-9{
+        &.history__photos-9 {
             margin-top: -345px;
-            & .history__photos__item-1{
+            & .history__photos__item-1 {
                 max-width: 100%;
                 width: 46%;
                 margin-top: -145px;
                 margin-right: -78px;
             }
-            & .history__photos__item-2{
+            & .history__photos__item-2 {
                 width: 43%;
                 margin-top: 106px;
                 max-width: 100%;
-                & img{
+                & img {
                     max-width: 100%;
                 }
             }
-            & .history__photos__item-3{
+            & .history__photos__item-3 {
                 width: 55%;
                 max-width: 100%;
                 margin-top: -280px;
             }
-            & .history__photos__item-4{
+            & .history__photos__item-4 {
                 width: 46%;
                 max-width: 100%;
                 margin-top: 36px;
