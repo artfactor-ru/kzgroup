@@ -195,8 +195,10 @@
     .swiper-slide--hero-video{
         display: block;
     }
-    .button__video-controls-wrap--other{
+    .button__video-controls-wrap--hero{
         display: block;
+        z-index: 1000;
+
     }
     .main__hero{
 

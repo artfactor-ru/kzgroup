@@ -51,6 +51,7 @@
 @import 'pages/history/history-achieves';
 @import 'pages/history/history-heroes';
 @import 'pages/company_group/_company-group';
+
 @import 'pages/actioners/actioners';
 @import 'pages/rent/card';
 @import 'pages/purchases/purchases';
@@ -83,6 +84,7 @@
 @import 'pages/museum/museum-section';
 @import 'pages/museum/museum-history';
 @import 'pages/university/center';
+@import 'pages/prod-system/prod-sys-common';
 
 body {
     margin: 0;
@@ -243,7 +245,9 @@ figure {
 .fancybox-caption__body {
     font-family: $font-text-regular;
 }
-
+.fancybox-infobar{
+    font-family: $font-text-regular;
+}
 .barba_background-in {
     position: relative;
 }

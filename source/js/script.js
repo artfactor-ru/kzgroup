@@ -55,14 +55,7 @@ if(document.querySelector('.barbapage')){
 	let bg = document.querySelector('.barba_background');
 	barba.hooks.enter((data) => {
 
-		// console.log(data.current.container);
-
-		// data.next.container.classList.add('active');
-
 		
-		
-
-		// data.current.container.classList.add('show');
 		setTimeout(initAnimation, 10);
 	
 		initSlider();
@@ -73,9 +66,10 @@ if(document.querySelector('.barbapage')){
 		}
 				
 	
-
+		breakpoint.addListener(breakpointChecke);
 		breakpointChecker();
-
+		breakpointOnlyForDesktop.addListener(breakpointCheckerForDesktop);
+		breakpointCheckerForDesktop();
 		
 		checkUrl('.tabs-common-links--barba');
 		
@@ -465,8 +459,6 @@ function eventOnScroll(){
 			for(let i = 0; i<dark.length; i++){
 				if(scrollbar.isVisible(dark[i])){
 					historyBg.style.opacity = "1"
-					// console.log('Черный фон');
-		
 				}
 				
 			}
@@ -487,7 +479,9 @@ function eventOnScroll(){
 			
 		}else{
 			if(videoMain.paused) {
-				videoMain.play();
+				if(!flagBtnVideo){
+					videoMain.play();
+				}
 			}
 		}
 	}
@@ -555,6 +549,7 @@ let scrollbar;
 	let swiperCompanies;
 	let companiesThumbs;
 	let swiperHero;
+	
 	let swiperGallery;
 	
 	let swipersHistory = [];
@@ -796,6 +791,7 @@ let scrollbar;
 					btnCompanies[i].classList.add('is-inview-line');
 				}
 			
+				
 				gsap.utils.toArray('.swiper-slide-active .companies__title .title--inner').forEach(element => {
 					gsap.fromTo(element,{
 					y: '130%',
@@ -968,25 +964,28 @@ let scrollbar;
 			swiperHero = new Swiper('.swiper-container--hero',{
 				loop: true,
 				
-			autoplay: {
-					delay: transitionSlide,
-					disableOnInteraction: true,
+				autoplay: {
+						delay: transitionSlide,
+						disableOnInteraction: true,
 
-			},
+				},
 
-			navigation: {
-				nextEl: '.hero__slider-controls .swiper-button-prev',
-				prevEl: '.hero__slider-controls .swiper-button-next',
-			},
-			//    observer: true,
-			// 		observeParents: true,
-			effect: 'fade',
-			fadeEffect: {
-				crossFade: true
-			},
+				navigation: {
+					nextEl: '.hero__slider-controls .swiper-button-prev',
+					prevEl: '.hero__slider-controls .swiper-button-next',
+				},
+				//    observer: true,
+				// 		observeParents: true,
+				effect: 'fade',
+				fadeEffect: {
+					crossFade: true
+				},
+
 		
-		});
+		
+			});
 
+		
 		
 
 		swiperHero.on('slidePrevTransitionStart', function () {
@@ -1075,11 +1074,14 @@ let scrollbar;
 		});
 
 		function checkActiveSlideForVideo(){
-			if(swiperHero.activeIndex == 1){
+			if(swiperHero.realIndex == 0){
 				videoMain.play();
+				btnPlay.classList.add('active');
 
 			}else{
 				videoMain.pause();
+				btnPlay.classList.remove('active');
+
 				
 				
 			}
@@ -1161,9 +1163,9 @@ let scrollbar;
 		updateSlider(swiperPurchase);
 		breakpoint.addListener(breakpointChecker);
 		breakpointChecker();
-		breakpointForPress.addListener(breakpointChecker);
 
-		breakpointChecker();
+		breakpointOnlyForDesktop.addListener(breakpointCheckerForDesktop);
+		breakpointCheckerForDesktop();
 
 		let vh = window.innerHeight * 0.01;
 		document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -1186,11 +1188,11 @@ let scrollbar;
 
 
 	let slidersPress = document.querySelectorAll('.press__container');
-	const breakpointForPress = window.matchMedia('(min-width:1280px)');
+	const breakpointOnlyForDesktop = window.matchMedia('(min-width:1280px)');
 	
-	const breakpointCheckerForPress = function() {
+	const breakpointCheckerForDesktop = function() {
 		// if larger viewport and multi-row layout needed
-		if ( breakpointForPress.matches === true ) {
+		if ( breakpointOnlyForDesktop.matches === true ) {
 			for(let i = 0; i<swiperPress.length; i++){
 				if (swiperPress[i] != null) {
 					swiperPress[i].destroy(true, true);
@@ -1207,7 +1209,31 @@ let scrollbar;
 					pressSlides[i].classList.remove('swiper-slide');
 				}
 			}
-		}else if ( breakpointForPress.matches === false ) {
+
+
+			gsap.utils.toArray('.is-animate').forEach(element => {
+
+				let parallax = element.getAttribute('data-speed');
+				let speed = parallax * 100 + '%';
+				gsap.fromTo(element, {
+					// duration: 5,
+					y: speed
+				}, {
+					y: "0%",
+					force3D: true,
+					scrollTrigger: {
+						trigger: element,
+						scrub: true,
+						// start: "top top"
+					} 
+				});
+			});
+
+			horParallax();
+
+			
+
+		}else if ( breakpointOnlyForDesktop.matches === false ) {
 
 			for(let i = 0; i<slidersPress.length; i++){
 				slidersPress[i].classList.add('swiper-container');
@@ -1219,11 +1245,36 @@ let scrollbar;
 				}
 			}
 			enableSwiperForPress();
+
+
+			
+			let burger = document.querySelector('.js-nav-toggle');
+
+			let dropList = document.querySelectorAll('.js-dropdown');
+			let navList = document.querySelector('.nav_list');
+			let navLink = navList.querySelectorAll('.js-dropdown-toggle');
+			let navItem = navList.querySelectorAll('.js-dropdown');
+
+			if(burger){
+
+				for(let i = 0; i<dropList.length; i++){
+
+					navItem[i].addEventListener('click', function(event){
+						navLink[i].classList.toggle('active');
+						navItem[i].classList.toggle('active');
+
+						let dropdown = navItem[i].querySelector('.nav_dropdown');
+						dropdown.classList.toggle('active');
+
+					})
+				}
+
+			}
 		}
 	};
-	breakpointForPress.addListener(breakpointCheckerForPress);
+	breakpointOnlyForDesktop.addListener(breakpointCheckerForDesktop);
 
-	breakpointCheckerForPress();
+	breakpointCheckerForDesktop();
 
 
 	let InnerSliders = document.querySelectorAll('.kirovets_tabs__features');
@@ -1310,9 +1361,13 @@ let scrollbar;
 				
 				btnMore = document.querySelectorAll('.traktors__text-wrap--desktop .button-more--traktors');
 
+				
+
 		} else if ( breakpoint.matches === false ) {
 			
-	
+			paragraphOpen();
+
+
 			if(document.querySelector('.kirovets_tabs__container')){
 
 				for(let i = 0; i<InnerSliders.length; i++){
@@ -1451,22 +1506,18 @@ const makeNavLinksSmoothMuseum = (sec, alllink) => {
 	}
 
 
-
+	let flagBtnVideo = false;
 	// Видео
 	let videoMain = document.querySelector('.parallax__img-video');
-
+	let btnPlay = document.querySelector('.button__video-controls--play');
 	if(videoMain){
-		let btnPlay = document.querySelector('.button__video-controls--play');
-	
-	
-	
-
 		function playPauseMedia() {
 			if(videoMain.paused) {
 				videoMain.style.display = "block";
 				videoMain.play();
 			
 				btnPlay.classList.add('active');
+				flagBtnVideo = true;
 			} else {
 				videoMain.pause();
 				btnPlay.classList.remove('active');
@@ -1474,53 +1525,28 @@ const makeNavLinksSmoothMuseum = (sec, alllink) => {
 			}
 		}
 
-
-		
 		btnPlay.addEventListener('click', playPauseMedia);
 
-		let btnsPlaySlider = document.querySelectorAll('.button__video-controls--other');
+		let btnsPlaySlider = document.querySelector('.button__video-controls--hero');
+		console.log(btnsPlaySlider);
+		if(btnsPlaySlider){
+			btnsPlaySlider.addEventListener('click', function(){
+				if(swiperHero.realIndex != 0){
 
-		for(let i = 0; i<btnsPlaySlider.length; i++){
-
-		
-			btnsPlaySlider[i].addEventListener('click', function(){
-				swiperHero.slideToLoop(0, 100, true);
-				videoMain.currentTime = 0;
+					console.log(swiperHero.realIndex);
+					swiperHero.slideToLoop(0, 100, true);
+					videoMain.currentTime = 0;
+				}
 			})
 		}
+		
+
+		
+			
+		
 	}
 	
 
-	// Видео внутреннее
-	// let videoInner = document.querySelector('.parallax__img--inner-video');
-
-	// if(videoInner){
-	// 	let btnPlayInner = document.querySelector('.button__video-controls--inner');
-	
-	
-	
-
-	// 	function playPauseMedia() {
-	// 		if(videoInner.paused) {
-	// 			videoInner.style.display = "block";
-	// 			videoInner.style.zIndex = "5";
-	// 			videoInner.play();
-			
-	// 			btnPlayInner.classList.add('active');
-	// 		} else {
-	// 			videoInner.pause();
-	// 			btnPlayInner.classList.remove('active');
-	// 			videoInner.style.zIndex = "-1";
-			
-	// 		}
-	// 	}
-
-
-		
-	// 	btnPlayInner.addEventListener('click', playPauseMedia);
-
-	
-	// }
 
 
 let initAnimation = function(){
@@ -1771,26 +1797,10 @@ let initAnimation = function(){
 
 	});
 
-	if(screen.width>=1280){
-		gsap.utils.toArray('.is-animate').forEach(element => {
-
-			let parallax = element.getAttribute('data-speed');
-			let speed = parallax * 100 + '%';
-			gsap.fromTo(element, {
-				// duration: 5,
-				y: speed
-			}, {
-				y: "0%",
-				force3D: true,
-				scrollTrigger: {
-					trigger: element,
-					scrub: true,
-					// start: "top top"
-				} 
-			});
-		});
-	}
 }
+
+
+
 // Анимация и прелоадер
 	document.onreadystatechange = function () {
 	
@@ -1833,15 +1843,12 @@ if(socialContainer){
 // Меню
 
 let burger = document.querySelector('.js-nav-toggle');
-
+let dropList = document.querySelectorAll('.js-dropdown');
+let navList = document.querySelector('.nav_list');
+let navLink = navList.querySelectorAll('.js-dropdown-toggle');
+let navItem = navList.querySelectorAll('.js-dropdown');
 if(burger){
 	let btnSearch = document.querySelector('.js-search-text');
-	let dropList = document.querySelectorAll('.js-dropdown');
-
-	let navList = document.querySelector('.nav_list');
-
-	let navLink = navList.querySelectorAll('.js-dropdown-toggle');
-	let navItem = navList.querySelectorAll('.js-dropdown');
 
 	burger.addEventListener('click', function(){
 		document.body.classList.toggle('has-nav-open');
@@ -1862,23 +1869,7 @@ if(burger){
 		
 	})
 
-	if ( window.screen.width < 1199 ) {
 
-		for(let i = 0; i<dropList.length; i++){
-			navItem[i].addEventListener('click', function(event){
-				navLink[i].classList.toggle('active');
-				navItem[i].classList.toggle('active');
-				// this.querySelector('.c-nav_dropdown').classList.add('active');
-				navItem[i].querySelector('.nav_dropdown').classList.toggle('active');
-
-				// if(!this.contains(event.target)){
-				// 	navItem[i].classList.remove('active');
-				// 	navItem[i].querySelector('.nav_dropdown').classList.remove('active');
-				// 	navLink[i].classList.remove('active');
-				// }
-			})
-		}
-	}	
 }
 
 let popup = document.querySelectorAll('.popup_kirovets');
@@ -1926,23 +1917,26 @@ let popup = document.querySelectorAll('.popup_kirovets');
 
 // Добавление видимость параграфам 
 
-
-
-if(window.screen.width< 767){
-	let paragraph = document.querySelector('.zavod-text--main');
-	let paragraphBtnMore = document.querySelector('.button-more--zavod ');
-	let wrapper = document.querySelector('.zavod');
-	if(paragraph){
-		paragraphBtnMore.addEventListener('click', function(){
+	function paragraphOpen(){
+		let paragraph = document.querySelector('.zavod-text--main');
+		let p = document.querySelectorAll('.zavod-text--main p');
+		let height = 0;
+		for(let i = 0; i<p.length; i++){
+			height += p[i].offsetHeight;
+		}
+	
+		let paragraphBtnMore = document.querySelector('.button-more--zavod ');
+		let wrapper = document.querySelector('.zavod');
+		if(paragraph){
+			paragraphBtnMore.addEventListener('click', function(){
+					paragraph.style.maxHeight = height + 'px';
+					paragraphBtnMore.style.display ="none";
+					wrapper.classList.add('active');
+			})
 			
-				paragraph.classList.add('show');
-				paragraphBtnMore.style.display ="none";
-				wrapper.classList.add('active');
-		})
-		
+		}
 	}
 	
-}
 
 
 // accordion
@@ -2038,31 +2032,28 @@ if(document.querySelector('.geography')){
 
 
   
-if(screen.width>=1280){
-	let body = document.body;
-	let parallaxHor = document.querySelectorAll(".parallax__img--horizontal");
-	let wrapperHor = document.querySelector('.strategy_about');
+
+// Горизонтальный паралакс
 
 
-		for(let i = 0; i<parallaxHor.length; i++){
-			wrapperHor.addEventListener('mousemove', function(e) {
-				
-					let speed = parallaxHor[i].getAttribute('data-speedhor');
-					let x = -(e.pageX + this.offsetLeft) / speed;
-				
-					parallaxHor[i].style.transform = 'translate3d(' + x + 'px,'  + '0px, 0px)';
-				
-			})
-		}
+	function horParallax(){
+		let parallaxHor = document.querySelectorAll(".parallax__img--horizontal");
+		let wrapperHor = document.querySelector('.strategy_about');
 	
+	
+			for(let i = 0; i<parallaxHor.length; i++){
+				wrapperHor.addEventListener('mousemove', function(e) {
+					
+						let speed = parallaxHor[i].getAttribute('data-speedhor');
+						let x = -(e.pageX + this.offsetLeft) / speed;
+					
+						parallaxHor[i].style.transform = 'translate3d(' + x + 'px,'  + '0px, 0px)';
+					
+				})
+			}
+	}
 
 
-	// Анимация элементов
-
-
-
-
-}
 
 
 
@@ -2197,3 +2188,5 @@ if(document.querySelector('.vacancies-d__form-container')) {
 		vacanciesForm.style.display = 'none';
 	});
 }
+
+

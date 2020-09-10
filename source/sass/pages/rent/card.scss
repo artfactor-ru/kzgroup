@@ -1,7 +1,7 @@
 .rent__wrapper{
  
     padding-top: 160px;
-    @media (max-width:1680px) { 
+    @media (max-width:1679px) { 
       padding-top: 60px;
     }
     @media (max-width:1279px) { 
@@ -13,9 +13,9 @@
 }
 .rent__list{
   padding-top: 85px;
-  padding-right: 15%;
+  padding-right: 12%;
 
-  @media(max-width: 1680px) {
+  @media(max-width: 1679px) {
     padding-top: 40px;
     padding-right: 10%;
   }
@@ -32,7 +32,7 @@
     position: relative;
     will-change: transform;
    
-  @media (max-width:1680px) { 
+  @media (max-width:1679px) { 
     display: flex;
     margin-bottom: 65px;
     position: relative;
@@ -58,7 +58,7 @@
 
  
 
-  @media (max-width: 1680px) {
+  @media (max-width: 1679px) {
     margin-right: 30px;
     flex-basis: 45%;
     min-height: 305px;
@@ -106,7 +106,7 @@
  
 
 
-  @media (max-width: 1680px) {
+  @media (max-width: 1679px) {
     font-size: 26px;
     line-height: 34px;
     margin-bottom: 0px;
@@ -130,7 +130,7 @@
     margin-bottom: 20px;
   
 
-  @media (max-width: 1680px) {
+  @media (max-width: 1679px) {
     font-size: 20px;
     margin-bottom: 20px;
   }
@@ -171,7 +171,7 @@
   font-size: 16px;
   padding-top: 20px;
 
-  @media (max-width: 1680px) {
+  @media (max-width: 1679px) {
     padding-top: 10px;
   }
   @media(max-width: 1279px){
@@ -205,7 +205,7 @@
 
 
 
-  @media (max-width: 1680px) {
+  @media (max-width: 1679px) {
     font-size: 16px;
     margin-bottom: 10px;
     td {
@@ -239,7 +239,7 @@
     margin-top: 35px;
     margin-bottom: 15px;
 
-    @media (max-width: 1680px) {
+    @media (max-width: 1679px) {
       margin-top: 15px;
       margin-bottom: 0px;
     }
@@ -255,7 +255,7 @@
 }
 .tabs-common-container--rent .tabs-common-links:not(:last-child){
   margin-right: 190px;
-  @media(max-width:1680px){
+  @media(max-width:1679px){
     margin-right: 55px;
   }
   @media(max-width:1279px){

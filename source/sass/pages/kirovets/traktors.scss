@@ -438,7 +438,7 @@
 		// display: inline-block;
 		
 		right: 2%;
-		margin-left: -25px;
+		margin-left: -28px;
 		// top: 80px;
 	}
 	
@@ -716,7 +716,8 @@
 		// flex-shrink: 1;
 		// flex-grow: 1;
 		max-width: 100%;
-
+		box-sizing: border-box;
+		padding-left: 15%;
 
 	}
 
@@ -724,7 +725,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: flex-end;
-		justify-content: space-between;
+		justify-content: flex-end;
 		// margin-left: 115px;
 	
 	}
