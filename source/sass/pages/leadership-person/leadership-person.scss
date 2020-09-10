@@ -114,12 +114,10 @@
 @media(min-width: 1280px){
     .leadership-person{
         flex-direction: row;
-        height: calc(var(--vh, 1vh)*100);
         min-height: calc(var(--vh, 1vh)*100);
     }
     .leadership-person__pic{
         background-color: #000;
-        height: 100%;
         width: 46%;
         display: flex;
         align-items: flex-end;
