@@ -7,6 +7,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/style.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -449,15 +450,15 @@
                                     </div>
                                 </label>
                             </div>
-                            <div class="vac-f__form-block">
+                            <div class="vac-f__form-block vac-f__form-block--education">
                                 <h5 class="vac-f__form-title" id="education">
                                     2. Образование
                                 </h5>
-                                <div id="education-block">
+                                <div class="education-block">
                                     <label class="vac-f__form-label vac-f__form-label-educ">
                                         <span>Образование</span>
                                         <div class="custom-select vac-f__input-container">
-                                            <select name="education" class="c-select" name="language">
+                                            <select name="education-level" class="c-select">
                                                 <option disabled>Выбрать</option>
                                                 <option value="school">Общее</option>
                                                 <option value="middle">Среднее</option>
@@ -493,9 +494,9 @@
                                         </div>
                                     </label>
                                 </div>
-                                <div class="more-education"></div>
-                                <div class="vac-f__input-container--separate vac-f__input-container--adding">
-                                    <a class="vac-f__form-education-btn vac-f__form-education-adding">
+
+                                <div class="vac-f__input-container--separate vac-f__input-container--adding add-education">
+                                    <a class="vac-f__form-education-btn vac-f__form-education-adding" data-click="0">
                                         <span class="label">Указать ещё одно место обучения</span>
                                     </a>
                                 </div>
@@ -740,61 +741,10 @@
 
 <script src="./js/script.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js"></script>
 <script>
 
-    $('.vac-f__form-education-btn').on('click', function () {
-        let copy = $('#education-block').clone();
-        copy.insertAfter('#education-block');
 
-        $('.c-select').each(function() {
-            const _this = $(this),
-                selectOption = _this.find('option'),
-                selectOptionLength = selectOption.length,
-                selectedOption = selectOption.filter(':selected'),
-                duration = 450; // длительность анимации
-            _this.hide();
-            _this.wrap('<div class="c-select"></div>');
-            $('<div>', {
-                class: 'new-select',
-                text: _this.children('option:disabled').text()
-            }).insertAfter(_this);
-            const selectHead = _this.next('.new-select');
-            $('<div>', {
-                class: 'new-select__list'
-            }).insertAfter(selectHead);
-            const selectList = selectHead.next('.new-select__list');
-            for (let i = 1; i < selectOptionLength; i++) {
-                $('<div>', {
-                    class: 'new-select__item',
-                    html: $('<span>', {
-                        text: selectOption.eq(i).text()
-                    })
-                })
-                    .attr('data-value', selectOption.eq(i).val())
-                    .appendTo(selectList);
-            }
-            const selectItem = selectList.find('.new-select__item');
-            selectList.slideUp(0);
-            selectHead.on('click', function() {
-                if ( !$(this).hasClass('on') ) {
-                    $(this).addClass('on');
-                    selectList.slideDown(duration);
-                    selectItem.on('click', function() {
-                        let chooseItem = $(this).data('value');
-                        $('select').val(chooseItem).attr('selected', 'selected');
-                        selectHead.text( $(this).find('span').text() );
-                        selectList.slideUp(duration);
-                        selectHead.removeClass('on');
-                    });
-                } else {
-                    $(this).removeClass('on');
-                    selectList.slideUp(duration);
-                }
-            });
-        });
-    });
     $('.c-select').each(function() {
         const _this = $(this),
             selectOption = _this.find('option'),
@@ -852,6 +802,128 @@
         });
     });
 
+    let addEducationBtn = $('.vac-f__form-education-btn');
+    let mainEducBlock = $('.education-block');
+    let clickCounter = 0;
+
+    let newPrefix = 2;
+    let setAttrNames = function (block) {
+        let newNameFunc = function (old) {
+            if (newPrefix === 2) {
+                return old + '-' + newPrefix;
+            } else {
+                old.substring(0, old.length - 3);
+                return old + newPrefix
+            }
+        };
+        block.children('label').children().find('input').each(function (i, el) {
+            let firstName = $(el).attr('name');
+            $(el).attr('name', newNameFunc(firstName));
+        });
+        block.children('label').children().find('select').each(function (i, el) {
+            let firstName = $(el).attr('name');
+            $(el).attr('name', newNameFunc(firstName));
+        });
+        newPrefix++;
+    };
+
+    addEducationBtn.on('click', function () {
+        if (addEducationBtn.attr('data-click') === '0') {
+            let copy = mainEducBlock.clone();
+            copy.addClass('education-block-copy');
+            setAttrNames(copy);
+            copy.insertBefore('.vac-f__input-container--adding');
+            $('.education-block-copy .c-select').each(function() {
+                const _this = $(this),
+                    selectOption = _this.find('option'),
+                    selectOptionLength = selectOption.length,
+                    selectedOption = selectOption.filter(':selected'),
+                    duration = 450;
+
+                const selectHead = _this.next('.new-select');
+                $('<div>', {
+                    class: 'new-select__list'
+                }).insertAfter(selectHead);
+                const selectList = selectHead.next('.new-select__list');
+                for (let i = 1; i < selectOptionLength; i++) {
+                    $('<div>', {
+                        class: 'new-select__item',
+                        html: $('<span>', {
+                            text: selectOption.eq(i).text()
+                        })
+                    })
+                        .attr('data-value', selectOption.eq(i).val())
+                        .appendTo(selectList);
+                }
+                const selectItem = selectList.find('.new-select__item');
+                selectList.slideUp(0);
+                selectHead.on('click', function() {
+                    if ( !$(this).hasClass('on') ) {
+                        $(this).addClass('on');
+                        selectList.slideDown(duration);
+                        selectItem.on('click', function() {
+                            let chooseItem = $(this).data('value');
+                            $('select').val(chooseItem).attr('selected', 'selected');
+                            selectHead.text( $(this).find('span').text() );
+                            selectList.slideUp(duration);
+                            selectHead.removeClass('on');
+                        });
+                    } else {
+                        $(this).removeClass('on');
+                        selectList.slideUp(duration);
+                    }
+                });
+            });
+            addEducationBtn.attr('data-click', ++clickCounter);
+        } else if (addEducationBtn.attr('data-click') >= '1') {
+            let closestBlock = addEducationBtn.closest('.add-education').prev('.education-block-copy');
+            let copy = closestBlock.clone();
+            setAttrNames(copy);
+            copy.insertBefore('.vac-f__input-container--adding');
+            $('.education-block-copy .c-select').each(function() {
+                const _this = $(this),
+                    selectOption = _this.find('option'),
+                    selectOptionLength = selectOption.length,
+                    selectedOption = selectOption.filter(':selected'),
+                    duration = 450;
+
+                const selectHead = _this.next('.new-select');
+                $('<div>', {
+                    class: 'new-select__list'
+                }).insertAfter(selectHead);
+                const selectList = selectHead.next('.new-select__list');
+                for (let i = 1; i < selectOptionLength; i++) {
+                    $('<div>', {
+                        class: 'new-select__item',
+                        html: $('<span>', {
+                            text: selectOption.eq(i).text()
+                        })
+                    })
+                        .attr('data-value', selectOption.eq(i).val())
+                        .appendTo(selectList);
+                }
+                const selectItem = selectList.find('.new-select__item');
+                selectList.slideUp(0);
+                selectHead.on('click', function() {
+                    if ( !$(this).hasClass('on') ) {
+                        $(this).addClass('on');
+                        selectList.slideDown(duration);
+                        selectItem.on('click', function() {
+                            let chooseItem = $(this).data('value');
+                            $('select').val(chooseItem).attr('selected', 'selected');
+                            selectHead.text( $(this).find('span').text() );
+                            selectList.slideUp(duration);
+                            selectHead.removeClass('on');
+                        });
+                    } else {
+                        $(this).removeClass('on');
+                        selectList.slideUp(duration);
+                    }
+                });
+            });
+            addEducationBtn.attr('data-click', ++clickCounter);
+        }
+    });
 
     //form validate
     $(document).ready(function () {
@@ -921,16 +993,13 @@
         copy.insertAfter('.working-main-block');
     });
 
+
     $('.input-phone-field').inputmask("+7 (999)999-99-99");
-    // добавляем правило для валидации телефона
     jQuery.validator.addMethod("checkMaskPhone", function(value, element) {
         return /\+\d{1}\(\d{3}\)\d{3}-\d{4}/g.test(value);
     });
-    // получаем нашу форму по class
     var form = $('.vac-f__main-form');
-    // включаем валидацию в форме
     form.validate();
-    // вешаем валидацию на поле с телефоном по классу
     $.validator.addClassRules({
         'input-phone-field': {
             checkMaskPhone: true,
