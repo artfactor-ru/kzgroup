@@ -32,9 +32,9 @@
             animation: dash 6s linear 3s forwards infinite alternate;
         }
     </style>
-    <div class="preloader">
+    <!-- <div class="preloader">
       <svg class="preloader__icon"><use xlink:href="./img/sprite.svg#icon-logo-company"></use></svg>
-      </div>
+    </div> -->
     <div class="forheader">
         <header class="header">
             <div class="container--header container--header--main">
@@ -340,7 +340,7 @@
                     </div>
                 </div>
             </section>
-            <div class="purchase__wrapper purchase-wrapper">
+            <div class="purchase__wrapper">
                 <div class="tabs-common__wrapper">
                     <div class="container">
                         <div class="tabs-common">
@@ -354,52 +354,55 @@
                 <div class="container">
                     <main class="purchase__list two-screen">
                         <p class="tab__descr">Для обеспечения производства дочерние общества ПАО «Кировский завод» на постоянной основе закупают следующие материалы и продукцию:</p>
-                        <div class="cards">
-                            <div class="purchase_card">
-                                <div class="parallax__item--purchase parallax__item">
-                                    <div class="parallax__img-wrap">
-                                        <div class="parallax__img parallax__img--purchase" data-speed="-20">
-                                            <div class="parallax__img-inner" style="background-image: url(./img/purchases/purchase-1.jpg);"></div>
+                        <div class="cards swiper-purchase">
+                            <div class="swiper-wrapper">
+                                <div class="purchase_card swiper-slide">
+                                    <div class="parallax__item--purchase parallax__item">
+                                        <div class="parallax__img-wrap">
+                                            <div class="parallax__img parallax__img--purchase" data-speed="-20">
+                                                <div class="parallax__img-inner" style="background-image: url(./img/purchases/purchase-1.jpg);"></div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="rent_card-info">
-                                    <h5 class="purchase_heading">Огнеупорная продукция</h5>
-                                    <a class="rent_link button-more" href="#">
-                                        <span>подробнее</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="purchase_card">
-                                <div class="parallax__item--purchase parallax__item">
-                                    <div class="parallax__img-wrap">
-                                        <div class="parallax__img parallax__img--purchase" data-speed="-20">
-                                            <div class="parallax__img-inner" style="background-image: url(./img/purchases/purchase-2.jpg);"></div>
-                                        </div>
+                                    <div class="rent_card-info">
+                                        <h5 class="purchase_heading">Огнеупорная продукция</h5>
+                                        <a class="rent_link button-more" href="#">
+                                            <span>подробнее</span>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="rent_card-info">
-                                    <h5 class="purchase_heading">Основные материалы</h5>
-                                    <a class="rent_link button-more" href="#">
-                                        <span>подробнее</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="purchase_card">
-                                <div class="parallax__item--purchase parallax__item">
-                                    <div class="parallax__img-wrap">
-                                        <div class="parallax__img parallax__img--purchase" data-speed="-20">
-                                            <div class="parallax__img-inner" style="background-image: url(./img/purchases/purchase-3.jpg);"></div>
+                                <div class="purchase_card swiper-slide">
+                                    <div class="parallax__item--purchase parallax__item">
+                                        <div class="parallax__img-wrap">
+                                            <div class="parallax__img parallax__img--purchase" data-speed="-20">
+                                                <div class="parallax__img-inner" style="background-image: url(./img/purchases/purchase-2.jpg);"></div>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="rent_card-info">
+                                        <h5 class="purchase_heading">Основные материалы</h5>
+                                        <a class="rent_link button-more" href="#">
+                                            <span>подробнее</span>
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="rent_card-info">
-                                    <h5 class="purchase_heading">Все виды ломов</h5>
-                                    <a class="rent_link button-more" href="#">
-                                        <span>подробнее</span>
-                                    </a>
+                                <div class="purchase_card swiper-slide">
+                                    <div class="parallax__item--purchase parallax__item">
+                                        <div class="parallax__img-wrap">
+                                            <div class="parallax__img parallax__img--purchase" data-speed="-20">
+                                                <div class="parallax__img-inner" style="background-image: url(./img/purchases/purchase-3.jpg);"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rent_card-info">
+                                        <h5 class="purchase_heading">Все виды ломов</h5>
+                                        <a class="rent_link button-more" href="#">
+                                            <span>подробнее</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="swiper-scrollbar swiper-scrollbar--statictics"></div>
                         </div>
                     </main>
                     <div class="purchase__order">

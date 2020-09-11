@@ -8,6 +8,10 @@
     background-color: #070707;
     font-size: 0;
     text-align: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    padding-top: 130%;
     & .leadership-person__back{
         position: absolute;
         top: 65px;
@@ -65,8 +69,6 @@
     }
 }
 
-
-
 .leadership-person__text{
     position: relative;
 }
@@ -79,8 +81,16 @@
 }
   
 @media (min-width: 767px){
+    .leadership-person__pic{
+        padding-top: 90%;
+        & .leadership-person__back{
+            font-size: 16px;
+            top: 70px;
+            left: 76px;
+        }
+    }
     .leadership-person__text{
-        padding: 50px 60px 100px;
+        padding: 50px 60px 108px;
         .leadership-person__back{
             font-size: 16px;
             .leadership-person__back-icon{
@@ -92,26 +102,30 @@
         font-size: 26px;
         line-height: 42px;
     }
-    
+    .leadership-person__position{
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .leadership-person__about{
+        line-height: 1.49;
+    }
 }
 
 @media(min-width: 1280px){
     .leadership-person{
         flex-direction: row;
-        height: calc(var(--vh, 1vh)*100);
         min-height: calc(var(--vh, 1vh)*100);
     }
     .leadership-person__pic{
         background-color: #000;
-        height: 100%;
-        width: 47%;
+        width: 46%;
         display: flex;
         align-items: flex-end;
-        font-size: 0;
+        padding-top: 0;
     }
     .leadership-person__text{
-        width: 53%;
-        padding: 70px 105px 100px 40px;
+        width: 54%;
+        padding: 78px 105px 100px 40px;
         .leadership-person__back{
             font-size: 18px;
             margin-bottom: 40px;
@@ -133,8 +147,9 @@
     }
     
     .leadership-person__name{
+        font-size: 36px;
         line-height: 42px;
-        margin-bottom: 30px;
+        margin-bottom: 26px;
     }
     .leadership-person__position{
         margin-bottom: 20px;
@@ -142,6 +157,7 @@
     }
     .leadership-person__about{
         font-size: 16px;
+        line-height: 1.4;
     }
     .xs-show{
         display: none;
@@ -155,23 +171,29 @@
 }
 
 @media(min-width: 1680px){
+    .leadership-person__pic{
+        width: 48%;
+    }
     .leadership-person__text{
-        padding: 70px 170px 60px 40px;
+        width: 51%;
+        padding: 90px 170px 60px 35px;
+        & .leadership-person__back{
+            margin-bottom: 21px;
+        }
     }
     .leadership-person__name{
         font-size: 46px;
         line-height: 54px;
-        margin-bottom: 20px;
+        margin-bottom: 14px;
     }
     .leadership-person__position{
         font-size: 24px;
         line-height: 33px;
+        margin-bottom: 32px;
     }
     .leadership-person__about{
         font-size: 18px;
-        line-height: 1.35;
+        line-height: 1.6;
     }
-    .leadership-person__back{
-        margin-bottom: 50px;
-    }
+
 }

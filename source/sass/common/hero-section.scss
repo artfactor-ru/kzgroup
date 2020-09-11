@@ -134,6 +134,7 @@
 .hero-common_info__item--phone{
   display: none;
 }
+
 @media screen and (max-width: 1680px) {
   .hero-common__title {
     font-size: 64px;
@@ -159,16 +160,19 @@
   .hero-common_info__item:last-child{
     margin-left: 35px;
   }
-  .hero-common_info__item{
-    width: 320px;
+  .hero-common_info__item--museum{
+    display: block;
+    width: 28%;
   }
   .hero-common_info__link {
 
   
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
   }
-
+  .hero-common_info__item--phone{
+    display: none;
+  }
 
 }
 
@@ -241,15 +245,19 @@
     display: none;
     margin-left: 0;
   }
+  .hero-common_info__item--phone{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 767px) {
+  
   .parallax__img-inner--hero--desktop{
     display: none;
   }
   .parallax__img-inner--hero--mobile{
     display: block;
-    overflow: non;
+    
   }
   .hero-common {
     height: 435px;
@@ -295,14 +303,18 @@
   }
  
   .hero-common_info__item{
+    display: block;
+  }
+ 
+  .hero-common_info__item:last-child{
+    display: none;
+    margin-left: 0;
+  }
+  .hero-common_info__item--museum:not(:last-child){
     display: none;
   }
-  .hero-common_info__item--phone{
+  .hero-common_info__item:last-child.hero-common_info__item--phone{
     display: block;
-  }
-  .hero-common_info__item:last-child{
-    display: block;
-    margin-left: 0;
   }
 }
 

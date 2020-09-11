@@ -8,7 +8,7 @@
     margin-top: 30px;
     
 
-    @media (max-width: 1680px) {
+    @media (max-width: 1679px) {
       font-size: 26px;
       margin-bottom: 20px;
     }
@@ -24,7 +24,7 @@
       margin-top: 0;
     }
   }
-  @media (max-width: 1680px) {
+  @media (max-width: 1679px) {
     .rent_noinfo-paragraph br{
       display: none;
     }
@@ -32,9 +32,9 @@
   
   .rent_noinfo-paragraph {
     @extend %block-text;
-   
+    margin-bottom: 30px;
 
-    @media (max-width: 1680px) {
+    @media (max-width: 1679px) {
       margin-bottom: 30px;
        
     }
@@ -55,7 +55,7 @@
       margin-bottom: 45px;
     
 
-    @media (max-width: 1680px) {
+    @media (max-width: 1679px) {
       font-size: 20px;
       margin-bottom: 30px;
     }
@@ -70,7 +70,7 @@
         margin-bottom: 25px;
       
 
-      @media (max-width: 1680px) {
+      @media (max-width: 1679px) {
         margin-bottom: 20px;
       }
       
@@ -84,7 +84,7 @@
       font-weight: bold;
       line-height: 150%;
       margin-bottom: 40px;
-      @media(max-width: 1680px){
+      @media(max-width: 1679px){
         margin-bottom: 20px;
       }
       @media (max-width: 500px) {
@@ -105,7 +105,7 @@
     padding: 28px 80px;
   //  margin-bottom: 35px;
 
-    @media(max-width: 1680px){
+    @media(max-width: 1679px){
       padding: 25px 55px;
     }
     @media(max-width: 1279px){
@@ -119,7 +119,7 @@
 
   .rent__wrapper--noinfo{
     padding-bottom: 385px;
-    @media(max-width: 1680px){
+    @media(max-width: 1679px){
       padding-bottom: 125px;
     }
     @media(max-width: 1279px){

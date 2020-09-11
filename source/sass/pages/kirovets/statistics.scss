@@ -63,6 +63,8 @@
 	.statistics__number-wrap{
 		// overflow: hidden;
 		padding-bottom: 0px;
+		white-space: nowrap;
+		overflow: visible;
 	}
 }
 

@@ -1,11 +1,7 @@
 .tenders__main {
-  padding: 45px 0 10px 0;
+  padding: 45px 0;
   overflow: hidden;
   position: relative;
-}
-
-.tenders--container .common-pagination__list {
-  margin: 30px 0;
 }
 
 .tenders__underblock {
@@ -42,6 +38,7 @@
   &-link {
     font-size: 14px;
     color: #171C28;
+    font-weight: bold;
     transition: .3s;
     &:hover {
       opacity: 0.5;
@@ -81,7 +78,7 @@
 }
 
 .b-table {
-  width: 1100px;
+  width: 1055px;
   &__header {
     background-color: #171C28;
     height: 64px;
@@ -125,9 +122,9 @@
 }
 
 .b-table__label {
-  background-color: rgba(255, 255, 255, 0.19);;
+  background-color: #A6A2A2;
   height: 100%;
-  width: 37%;
+  width: 20%;
   display: flex;
   padding-left: 20px;
   position: relative;
@@ -142,8 +139,6 @@
     outline: none;
     margin-left: 10px;
     font-family: $font-text-regular;
-    width: 100%;
-    padding-right: 10px;
 
     &:focus {
       border: transparent;
@@ -162,31 +157,12 @@
 
 .b-table__container {
   display: flex;
-  //border-bottom: 1px solid #CECECE;
-  border-bottom: 2px solid #E2E2E2;
-  transition: .3s;
-  position: relative;
-}
-
-.b-table__container:before {
-  content:'';
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: $red-color;
-  transition: all 0.85s ease;
-}
-
-.b-table__container:hover:before {
-  width: 100%;
+  border-bottom: 1px solid #CECECE;
 }
 
 .b-table__link-tender {
   color: #171C28;
   transition: .3s;
-  padding-right: 10%;
   &:hover {
     opacity: 0.45;
   }
@@ -200,7 +176,7 @@
   color: #171C28;
   padding: 20px;
   box-sizing: border-box;
-  font-size: 12px;
+  font-size: 14px;
   &-downloads {
     color: #C30215;
     text-decoration: underline;
@@ -239,17 +215,8 @@
 }
 
 @media(min-width: 767px){
-  .tab-tenders {
-    margin-right: 10%!important;
-  }
-  .tenders__main {
-    padding: 45px 0 30px 0;
-  }
-  .b-table__link-tender {
-    padding-right: 0;
-  }
   .b-table__label {
-    width: 53%;
+    width: 40%;
   }
   .b-table {
     width: 1100px;
@@ -281,62 +248,53 @@
       box-sizing: border-box;
       padding-left: 20px;
       &-col-1 {
-        width: 40%;
+        width: 50%;
         display: flex;
         justify-content: space-between;
       }
       &-col-2 {
-        width: 18%;
+        width: 15%;
       }
       &-col-3 {
-        width: 12%;
+        width: 9%;
       }
       &-col-4 {
-        width: 10%;
+        width: 9%;
       }
       &-col-5 {
-        width: 10%;
+        width: 9%;
       }
       &-col-6 {
-        width: 10%;
+        width: 8%;
       }
     }
   }
   .b-table__row {
     &-1 {
-      width: 40%;
+      width: 50%;
       font-size: 14px;
     }
     &-2 {
-      width: 18%;
+      width: 15%;
     }
     &-3 {
-      width: 12%;
+      width: 9%;
     }
     &-4 {
-      width: 10%;
+      width: 9%;
     }
     &-5 {
-      width: 10%;
+      width: 9%;
     }
     &-6 {
-      width: 10%;
+      width: 8%;
     }
-  }
-}
-
-@media(min-width: 1023px){
-  .tab-tenders {
-    margin-right: 10%!important;
   }
 }
 
 @media(min-width: 1279px){
   .b-table {
     width: 1155px;
-  }
-  .tenders--container .common-pagination__list {
-    margin: 40px 0;
   }
   .tenders-tabs-content {
     overflow: hidden;
@@ -353,18 +311,6 @@
   }
   .tenders__underblock-link {
     font-size: 22px;
-  }
-  .b-table__row-2 {
-    width: 16%;
-  }
-  .b-table__item-col-2 {
-    width: 16%;
-  }
-  .b-table__item-col-4 {
-    width: 12%;
-  }
-  .b-table__row-4 {
-    width: 12%;
   }
 }
 
@@ -415,8 +361,5 @@
   }
   .tenders__underblock-title {
     margin-right: 15px;
-  }
-  .tenders--container .common-pagination__list {
-    margin: 70px 0;
   }
 }

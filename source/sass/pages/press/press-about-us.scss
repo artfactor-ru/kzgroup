@@ -115,9 +115,22 @@
     padding-left: 2%;
     padding-right: 5%;
     margin-bottom: 200px;
+
+    @media only screen and(max-width: 1150px) {
+      margin-bottom: 60px;
+    }
+
+    @media only screen and(max-width: 550px) {
+      flex-direction: column;
+      margin-bottom: 60px;
+    }
 }
 .press-about-us-pagination-container {
     height: 60px;
+
+    @media only screen and(max-width: 550px) {
+      margin-bottom: 20px;
+    }
 }
 
 .press-about-us-pagination__list {

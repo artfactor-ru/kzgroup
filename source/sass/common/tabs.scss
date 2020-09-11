@@ -1,7 +1,18 @@
 .tabs-common__wrapper{
+
   & .tabs-common{
-    border-bottom: 2px solid #E2E2E2;
+    // border-bottom: 2px solid #E2E2E2;
+    position: relative;
+    &::before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #E2E2E2;
+      bottom: 0;
+    }
   }
+ 
 }
 
 .tabs-common {
@@ -39,7 +50,7 @@
 .tabs-common-links:before {
   content:'';
   position: absolute;
-  top: 100%;
+  top: 99%;
   left: 0;
   width: 0;
   height: 6px;
@@ -95,7 +106,7 @@
     // overflow-x: scroll;
     width: 100%;
     overflow: hidden;
-    margin-bottom: -10px;
+    margin-bottom: 0px;
   }
   .tabs-common-links:not(:last-child){
     margin-right: 20px;
@@ -114,10 +125,11 @@
   }
   .tabs-common-links:not(:last-child){
     margin-right: 20px;
+
   }
-  .tabs-common a.active {
-    border-bottom: 4px solid $red-color;
-  }
+  // .tabs-common a.active {
+  //   border-bottom: 4px solid $red-color;
+  // }
   .tabs-common-links:before {
    
     height: 4px;
@@ -134,5 +146,10 @@
 @media screen and (max-width: 480px) {
   .tabs-common {
     height: 29px;
+  }
+  .tabs-common a {
+   
+    border-bottom: 4px solid transparent;
+  
   }
 }
