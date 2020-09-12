@@ -804,16 +804,15 @@
 
     let addEducationBtn = $('.vac-f__form-education-btn');
     let mainEducBlock = $('.education-block');
-    let clickCounter = 0;
+    let clickCounter = 0,
+        newPrefix = 2;
 
-    let newPrefix = 2;
     let setAttrNames = function (block) {
         let newNameFunc = function (old) {
             if (newPrefix === 2) {
                 return old + '-' + newPrefix;
-            } else {
-                old.substring(0, old.length - 3);
-                return old + newPrefix
+            } else if (newPrefix > 2) {
+                return old.substring(0, old.length - 1) + newPrefix
             }
         };
         block.children('label').children().find('input').each(function (i, el) {
@@ -825,6 +824,7 @@
             $(el).attr('name', newNameFunc(firstName));
         });
         newPrefix++;
+        console.log(newPrefix);
     };
 
     addEducationBtn.on('click', function () {
