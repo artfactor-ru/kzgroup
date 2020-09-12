@@ -135,8 +135,9 @@
         bottom: 35px;
         left: auto;
         // transform: translateX(-0%);
+        transform: translateZ(0);
         right: -60px;
-        will-change: transform;
+        // will-change: transform;
        
     
     }
