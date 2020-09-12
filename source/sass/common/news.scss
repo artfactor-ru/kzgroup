@@ -99,11 +99,10 @@
 }
 .parallax__item--news .parallax__img-wrap{
     transition: transform 0.9s ease;
+    // will-change: transform;
+    backface-visibility: hidden;
 }
-.news__link:hover ~ .parallax__item--news .parallax__img-wrap{
-    transform: scale(1.1);
-    transform-origin: center;
-}
+
 
 .news__link:hover  ~ .news__subtitle{
     color: $red-color;
@@ -114,6 +113,12 @@
 .press__container .swiper-wrapper{
     transition: transform 1s ease !important;
 }
+
+.news__link:hover ~ .parallax__item--news .parallax__img-wrap{
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
 @media(min-width: 500px){
     .news__item{
         width: 315px;
@@ -264,6 +269,9 @@
 }
 
 @media(min-width: 1280px){
+
+    
+
     .swiper-wrapper--press{
         display: flex;
         justify-content: space-between;

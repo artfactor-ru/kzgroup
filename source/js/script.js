@@ -66,7 +66,7 @@ if(document.querySelector('.barbapage')){
 		}
 				
 	
-		breakpoint.addListener(breakpointChecke);
+		breakpoint.addListener(breakpointChecker);
 		breakpointChecker();
 		breakpointOnlyForDesktop.addListener(breakpointCheckerForDesktop);
 		breakpointCheckerForDesktop();
@@ -465,9 +465,13 @@ function eventOnScroll(){
 
 
 		}
-
-	parallax(document.querySelectorAll('.parallax__img'));
-	parallax(document.querySelectorAll('.parallax__img--slide'));
+		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+			// код для мобильных устройств
+		  } else {
+			parallax(document.querySelectorAll('.parallax__img'));
+			parallax(document.querySelectorAll('.parallax__img--slide'));
+		}
+	
 	
 	if(videoMain){
 	
@@ -526,10 +530,19 @@ function eventOnScroll(){
 	})
 }
 
-
 let containerScroll = document.querySelector('.scroll');
+
+// if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+// 	containerScroll.classList.remove('scroll');
+//   } else {
+// 	containerScroll.classList.add('scroll');
+// }
+
+// let containerScroll = document.querySelector('.scroll');
 let scrollbar;
 	if(containerScroll){
+
+
 		scrollbar = ScrollbarSmoth.init(containerScroll, options);
 		scrollbar.addListener(ScrollTrigger.update);
 
@@ -1169,6 +1182,10 @@ let scrollbar;
 
 		let vh = window.innerHeight * 0.01;
 		document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+		knowHeightOfElement('.history__photos--animate', '.history__photos__item');
+
+		scrollbarTabs.update()
 	});
 
 
@@ -1214,20 +1231,40 @@ let scrollbar;
 			gsap.utils.toArray('.is-animate').forEach(element => {
 
 				let parallax = element.getAttribute('data-speed');
-				let speed = parallax * 100 + '%';
+				let speed = parallax * 100 + 'px';
 				gsap.fromTo(element, {
 					// duration: 5,
 					y: speed
-				}, {
-					y: "0%",
+					}, {
+					y: "0",
 					force3D: true,
 					scrollTrigger: {
 						trigger: element,
-						scrub: true,
+						scrub: 1.1,
 						// start: "top top"
 					} 
 				});
 			});
+
+			gsap.utils.toArray('.history__photos--animate').forEach(element => {
+
+				let parallax = element.getAttribute('data-speed');
+				let speed = parallax * 100 + '%';
+				gsap.fromTo(element, {
+					// duration: 5,
+					y: speed
+					}, {
+					y: "0",
+					force3D: true,
+					scrollTrigger: {
+						trigger: element,
+						scrub: 1.1,
+						// start: "top top"
+					} 
+				});
+			});
+
+			
 
 			horParallax();
 
@@ -1520,6 +1557,7 @@ const makeNavLinksSmoothMuseum = (sec, alllink) => {
 				flagBtnVideo = true;
 			} else {
 				videoMain.pause();
+				flagBtnVideo = true;
 				btnPlay.classList.remove('active');
 			
 			}
@@ -1561,7 +1599,7 @@ let initAnimation = function(){
 				// once: true,
 			});
 		});
-
+	
 		// gsap.utils.toArray('.history_dark').forEach(element => {
 		// 	gsap.to(document.querySelector('.history__bg'),{
 			
@@ -1913,6 +1951,31 @@ let popup = document.querySelectorAll('.popup_kirovets');
 			
 		}
 
+	let popupHistory = document.querySelectorAll('.popup_history');
+	let linkPopupHistory = document.querySelectorAll('.history__link-popup');
+	for(let i = 0; i<popupHistory.length; i++){
+		
+		linkPopupHistory[i].addEventListener('click', function(event){
+			event.preventDefault();
+			popupHistory[i].classList.add('active');
+			
+			
+			let btnBack = popupHistory[i].querySelector('.popup_kirovets__back');
+
+			btnBack.addEventListener('click', function(event){
+				popupHistory[i].classList.remove('active');
+			});
+		
+			let btnClose = popupHistory[i].querySelector('.popup_kirovets__close');
+
+			btnClose.addEventListener('click', function(event){
+				popupHistory[i].classList.remove('active');
+			});
+
+		})
+
+
+	}
 
 
 // Добавление видимость параграфам 

@@ -56,33 +56,33 @@
         color: #f4f3f4;
     }
 }
-// .history_light::before{
-//     display: block;
-//         position: absolute;
-//         content: '';
-//         left: 0;
-//         top: 0;
-//         z-index: -1;
-//         width: 100%;
-//         height: 100%;
-//         background-color: $blue-color;
-//         opacity: 1;
-//         transition: all 2s ease;
-// }
 
-// .history_light.show::before{
-//     opacity: 0;
-// }
-
-// .history_dark.show::before{
-//     opacity: 1;
-// }
 
 .history__year{
     width: 320px;
     height: 120px;
+    
     display: flex;
     margin-bottom: 28px;
+}
+
+.history__year .traktors__number-icon{
+    width: 70px;
+    margin-right: 2px;
+}
+
+.history__year .traktors__number-icon--one{
+    width: 44px;
+
+
+    margin-right: 5px;
+}
+.history__year .traktors__number-icon--four{
+    width: 80px;
+
+}
+.history__year .traktors__number-icon--big{
+    width: 85px;
 }
 
 .history__entry--text{
@@ -107,22 +107,23 @@
     margin-bottom: 14px;
     font-size: 19px;
     line-height: 1.25;
-    letter-spacing: 2.2px;
+    // letter-spacing: 2.2px;///
     // padding-left: 7px;
     & span{
         background-color: $accent-text-bg-color;
         display: inline-block;
         color: #fff;
-        padding: 0px 12px 3px;
-        margin-left: -13px;
+        padding: 5px 12px 5px 12px;
+        // margin-left: -13px;
     }
 }
 
 .history__entry--text-subtitle{
     font-family: $font-text-regular;
     margin: 40px 0 20px;
-    font-size: 26px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 22px;
+
 }
 
 .history__entry--text-content{
@@ -144,10 +145,10 @@
     padding-top: 28px;
     width: 68%;
     height: auto;
-    will-change: transform;
-    // position: absolute;
+    // will-change: transform;
+    position: absolute;
     position: relative;
-    box-sizing: border-box;
+    // box-sizing: border-box;
   
 }
 .history__photos__item.swiper-slide{
@@ -177,7 +178,12 @@
     font-size: 14px;
     line-height: 1.2;
 }
-
+.history__photos__item.swiper-slide {
+    height: auto !important;
+}
+.history__parallax{
+    display: none;
+}
 @media(min-width: 767px){
     .history__wrapper .history__bg{
         display: block;
@@ -217,24 +223,25 @@
     .history__year{
         height: 210px;
         width: 645px;
+ 
     }
 
     .history__year .traktors__number-icon{
-        width: 150px;
+        width: 140px;
     }
 
     .history__year .traktors__number-icon--one{
-		width: 90px;
+		width: 85px;
 	
 	
 		margin-right: 10px;
 	}
 	.history__year .traktors__number-icon--four{
-		width: 180px;
+		width: 165px;
 	
 	}
 	.history__year .traktors__number-icon--big{
-		width: 180px;
+		width: 170px;
     }
     
     .history__entry--text-title{
@@ -543,6 +550,27 @@
 }
 
 @media(min-width: 1280px){
+    .history__parallax{
+        display: block;
+    }
+    .history__img--mobile{
+        display: none;
+    }
+    .history__parallax--horizontal{
+        width: 400px;
+        height: 300px;
+    }
+    .history__parallax--vertical{
+        width: 330px;
+        height: 400px;
+    }
+    .history__parallax--img{
+        --overflow: 50px; 
+        height: calc(100% + (2 * var(--overflow))) !important; 
+        top: calc( -1 * var(--overflow));
+    }
+
+
     .about--history{
         min-height: 305px;
         // margin-bottom: 40px;
@@ -557,7 +585,7 @@
   
     .history_light,
     .history_dark{
-        padding: 150px 0 30px 0;
+        padding: 250px 0 60px 0;
     }
     .history__year{
         height: 330px;
@@ -913,6 +941,20 @@
 }
 
 @media(min-width: 1680px){
+
+    .history__parallax--horizontal{
+        width: 600px;
+        height: 370px;
+    }
+    .history__parallax--vertical{
+        width: 430px;
+        height: 558px;
+    }
+    .history__parallax--img{
+        --overflow: 50px; 
+        height: calc(100% + (2 * var(--overflow))) !important; 
+        top: calc( -1 * var(--overflow));
+    }
     .history .traktors__nav{
         margin-left: 35px;
     }
@@ -934,21 +976,21 @@
     }
 
     .history__year .traktors__number-icon{
-        width: 340px;
+        width: 320px;
     }
 
     .history__year .traktors__number-icon--one{
-		width: 250px;
+		width: 195px;
 	
 	
 		margin-right: 10px;
 	}
 	.history__year .traktors__number-icon--four{
-		width: 390px;
+		width: 365px;
 	
 	}
 	.history__year .traktors__number-icon--big{
-		width: 390px;
+		width: 370px;
     }
 
     .history__entry--text-title{
@@ -1207,10 +1249,15 @@
 
 }
 @media(min-width: 1280px){
+
     .history__photos--animate{
-        position: fixed;
-        will-change: transform;
+        position: absolute;
+
+        // will-change: transform;
         top: 0;
+    }
+    .history__photos__item{
+        position: relative;
     }
 }
 .history__number-icon{
