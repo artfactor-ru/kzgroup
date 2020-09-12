@@ -121,7 +121,7 @@
 }
 @media(min-width: 1279px){
   .tenders-d {
-    padding: 80px 0;
+    padding: 80px 0 100px;
   }
   .tenders-d__link-back svg {
     width: 60px;
@@ -152,7 +152,7 @@
 }
 @media(min-width: 1679px){
   .tenders-d {
-    padding: 120px 0;
+    padding: 120px 0 174px;
   }
   .tenders-d__link-back svg {
     width: 67px;
@@ -176,6 +176,9 @@
     font-size: 18px;
   }
   .tenders-d__main-socials {
-    display: block;
+    display: flex;
+  }
+  .tenders-d__item p {
+    padding: 0 80px;
   }
 }
