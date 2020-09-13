@@ -802,10 +802,12 @@
         });
     });
 
-    let addEducationBtn = $('.vac-f__form-education-btn');
-    let mainEducBlock = $('.education-block');
     let clickCounter = 0,
-        newPrefix = 2;
+        newPrefix = 2,
+        copyNumber = 1,
+        mainEducBlock = $('.education-block'),
+        addEducationBtn = $('.vac-f__form-education-btn'),
+        copyBlockName = 'education-block-copy' + '-' + copyNumber;
 
     let setAttrNames = function (block) {
         let newNameFunc = function (old) {
@@ -824,16 +826,17 @@
             $(el).attr('name', newNameFunc(firstName));
         });
         newPrefix++;
-        console.log(newPrefix);
     };
 
     addEducationBtn.on('click', function () {
+        let newBlockNameSelector = '.' + copyBlockName + ' ' + '.c-select';
         if (addEducationBtn.attr('data-click') === '0') {
             let copy = mainEducBlock.clone();
-            copy.addClass('education-block-copy');
+            copy.addClass(copyBlockName);
+            copy.removeClass('education-block');
             setAttrNames(copy);
-            copy.insertBefore('.vac-f__input-container--adding');
-            $('.education-block-copy .c-select').each(function() {
+            copy.insertBefore('.add-education');
+            $(newBlockNameSelector).each(function() {
                 const _this = $(this),
                     selectOption = _this.find('option'),
                     selectOptionLength = selectOption.length,
@@ -845,6 +848,8 @@
                     class: 'new-select__list'
                 }).insertAfter(selectHead);
                 const selectList = selectHead.next('.new-select__list');
+                console.log($(newBlockNameSelector));
+
                 for (let i = 1; i < selectOptionLength; i++) {
                     $('<div>', {
                         class: 'new-select__item',
@@ -873,14 +878,19 @@
                         selectList.slideUp(duration);
                     }
                 });
+
             });
             addEducationBtn.attr('data-click', ++clickCounter);
+            copyNumber++;
         } else if (addEducationBtn.attr('data-click') >= '1') {
-            let closestBlock = addEducationBtn.closest('.add-education').prev('.education-block-copy');
+            let closestBlock = addEducationBtn.closest('.add-education').prev('.' + copyBlockName);
             let copy = closestBlock.clone();
+            copy.removeClass(copyBlockName);
+            copyBlockName = copyBlockName.substring(0, copyBlockName.length - 1) + copyNumber;
+            copy.addClass(copyBlockName);
             setAttrNames(copy);
-            copy.insertBefore('.vac-f__input-container--adding');
-            $('.education-block-copy .c-select').each(function() {
+            copy.insertBefore('.add-education"');
+            $(newBlockNameSelector).each(function() {
                 const _this = $(this),
                     selectOption = _this.find('option'),
                     selectOptionLength = selectOption.length,
@@ -922,6 +932,7 @@
                 });
             });
             addEducationBtn.attr('data-click', ++clickCounter);
+            copyNumber++;
         }
     });
 
