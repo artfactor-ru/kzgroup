@@ -1,0 +1,14 @@
+.sitemap {
+    padding-top: 54px;
+    position: relative;
+    & .leadership-person__back {
+        margin-bottom: 19px;
+    }
+}
+
+.sitemap__title {
+    font-family: $font-bold-2-title;
+    font-size: 22px;
+    line-height: 25px;
+    margin-bottom: 25px;
+}
