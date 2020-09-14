@@ -349,6 +349,18 @@ function fixedNav(offsetscroll, navigation){
 		fixed.style.left = offsetscroll.x + 'px';
 	}
 }
+function fixedNavForm(offsetscroll, navigation){
+	let _header = document.querySelector('.header');
+	let _headerHeight = _header.offsetHeight;
+
+	let fixed = document.querySelector(navigation);
+	if(fixed){
+		fixed.style.top = offsetscroll.y + _headerHeight + 30 + 'px';
+		fixed.style.left = offsetscroll.x + 'px';
+	}
+}
+
+
 // Инициализация плавного скролла
 
 let options  = {
@@ -501,14 +513,17 @@ function eventOnScroll(){
 	
 	
 	makeNavLinksSmooth('.traktors','.traktors__nav-link');
+	makeNavLinksSmooth('.vac-f__form-title','.vac-f__nav-item');
 	makeNavLinksSmoothHistory('.article','.history__nav-link');
 	makeNavLinksSmoothMuseum('.museum-zal','.museum-nav__link' );
 
 	spyScrolling ('.museum-zal' , '.museum-nav__link.active');
 	spyScrolling ('.traktors' , '.traktors__nav-link.active');
 	spyScrolling ('.article' , '.history__nav-link.active');
+	spyScrolling ('.vac-f__form-title' , '.vac-f__nav-item.active');
 	fixedNav(offset, '.museum-nav');
 	fixedNav(offset, '.traktors__nav');
+	fixedNavForm(offset, '.vac-f__nav-list');
 
 	// Взаимодействие с шапкой
 	if ( breakpoint.matches === true ) {

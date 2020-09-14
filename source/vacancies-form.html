@@ -366,26 +366,26 @@
             <h1 class="vac-f__main-title">Контролер станочных и слесарных работ</h1>
             <div class="vac-f__content">
                 <div class="vac-f__nav">
-                    <ul class="vac-f__nav-list">
-                        <li class="vac-f__nav-item vac-f__nav-item--active">
+                    <div class="vac-f__nav-list">
+                        <a data-scroll="" href="#personal-data" class="vac-f__nav-item active">
                             <div class="vac-f__nav-item__circle">
                                 <span>1</span>
                             </div>
-                            <a href="#personal-data">Личные данные</a>
-                        </li>
-                        <li class="vac-f__nav-item">
+                            <div>Личные данные</div>
+                        </a>
+                        <a data-scroll="" href="#education" class="vac-f__nav-item">
                             <div class="vac-f__nav-item__circle">
                                 <span>2</span>
                             </div>
-                            <a href="#education">Образование</a>
-                        </li>
-                        <li class="vac-f__nav-item">
+                            <div>Образование</div>
+                        </a>
+                        <a data-scroll="" href="#experience" class="vac-f__nav-item">
                             <div class="vac-f__nav-item__circle">
                                 <span>3</span>
                             </div>
-                            <a href="#experience">Опыт работы</a>
-                        </li>
-                    </ul>
+                            <div>Опыт работы</div>
+                        </a>
+                    </div>
                 </div>
                 <div class="vac-f__form vac-f__form-selector">
                     <div class="vac-f__form-desc">Уважаемый кандидат, заполните, пожалуйста, приведенную ниже форму. Благодарим Вас за проявленный интерес к нашей компании.
@@ -743,6 +743,11 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js"></script>
 <script>
 
+    $('.vac-f__nav-item').on('click', function () {
+        let _this = $(this);
+        _this.addClass('active');
+        _this.siblings().removeClass('active');
+    });
 
     $('.c-select').each(function() {
         const _this = $(this),

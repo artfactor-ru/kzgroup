@@ -28,7 +28,7 @@
   width: 30%;
   padding-top: 13px;
   &-list {
-    position: fixed;
+    position: sticky;
     list-style: none;
   }
   &-item {
@@ -38,6 +38,7 @@
     display: flex;
     align-items: center;
     transition: .4s;
+    color: #67676A;
     &:hover {
       & a {
         color: #000;
@@ -79,14 +80,14 @@
   }
 }
 
-.vac-f__nav-list li:last-child div::after {
+.vac-f__nav-list a:last-child div.vac-f__nav-item__circle::after {
   display: none;
 }
 
-.vac-f__nav-item--active  {
-  & a {
-    color: #000;
-  }
+.vac-f__nav-item.active  {
+
+  color: #000;
+
   & .vac-f__nav-item__circle {
     background-color: #F34542;
     border-color: #F34542;
@@ -554,6 +555,9 @@
 }
 
 @media screen and (max-width: 769px) {
+  .vac-f__nav-item {
+    font-size: 10px;
+  }
   .vac-f__form-date .c-select {
     width: 50%;
   }
