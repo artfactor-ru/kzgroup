@@ -1,5 +1,5 @@
 .sitemap {
-    padding-top: 54px;
+    padding: 54px 0 70px;
     position: relative;
     & .leadership-person__back {
         margin-bottom: 19px;
@@ -10,5 +10,78 @@
     font-family: $font-bold-2-title;
     font-size: 22px;
     line-height: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+}
+
+.sitemap__list {
+    font-family: $font-regular;
+}
+
+.sitemap__item.show {
+    & .sitemap__item--title {
+        color: $red-color;
+    }
+    &.accordion-item {
+        border-bottom: none;
+        & .sitemap__item--list {
+            padding-bottom: 0;
+        }
+    }
+}
+
+.sitemap__item {
+    margin-bottom: 14px;
+    &.accordion-item {
+        border-bottom: none;
+        & .sitemap__item--list {
+            padding-bottom: 0;
+        }
+        &::after {
+            display: none;
+        }
+    }
+}
+
+.sitemap__item--title {
+    font-size: 18px;
+    line-height: 36px;
+    color: $black-grey;
+    padding-top: 0;
+    padding-bottom: 0;
+    position: relative;
+    display: inline-block;
+    & .sitemap__item--link {
+        color: $black-grey;
+    }
+    &.accordion-item-header {
+        &::after {
+            position: absolute;
+            right: -32px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background-size: contain;
+            min-width: 20px;
+            width: 20px;
+            height: 13px;
+            min-height: 13px;
+        }
+    }
+}
+
+.sitemap__item--list {
+    font-size: 12px;
+    line-height: 30px;
+    color: $grey-text-paragraf;
+}
+
+.sitemap__item--list-item {
+    & .sitemap__item--link {
+        color: $grey-text-paragraf;
+    }
+    &:hover {
+        & .sitemap__item--link {
+            color: $red-color;
+        }
+    }
 }

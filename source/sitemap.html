@@ -405,11 +405,11 @@
                         </svg> вернуться на главную
                     </a>
                     <h1 class="sitemap__title">Карта сайта</h1>
-                    <div class="sitemap__list accordion">
+                    <div id="accordion" class="sitemap__list accordion">
                         <div class="sitemap__list--part">
-                            <div class="sitemap__item accordion__item">
-                                <h2 class="sitemap__item--title">Компания <span class="accordion__item--arrow"></span></h2>
-                                <div class="sitemap__item--list">
+                            <div class="sitemap__item accordion-item">
+                                <h2 class="sitemap__item--title accordion-item-header">Компания</h2>
+                                <div class="sitemap__item--list accordion-item-content">
                                     <div class="sitemap__item--list-item">
                                         <a href="#" class="sitemap__item--link">Руководство</a>
                                     </div>
@@ -438,8 +438,96 @@
                                     <a href="#" class="sitemap__item--link">Вакансии</a>
                                 </h2>
                             </div>
+                            <div class="sitemap__item accordion-item">
+                                <h2 class="sitemap__item--title accordion-item-header">Корпроративный университет</h2>
+                                <div class="sitemap__item--list accordion-item-content">
+                                    <div class="sitemap__item--list-item">
+                                        <a href="#" class="sitemap__item--link">Обучение</a>
+                                    </div>
+                                    <div class="sitemap__item--list-item">
+                                        <a href="#" class="sitemap__item--link">Сведения об образовательной  организации</a>
+                                    </div>
+                                    <div class="sitemap__item--list-item">
+                                        <a href="#" class="sitemap__item--link">Контакты</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sitemap__item accordion-item">
+                                <h2 class="sitemap__item--title accordion-item-header">Дочерние предприятия</h2>
+                                <div class="sitemap__item--list accordion-item-content">
+                                    <div class="sitemap__item--list-item">
+                                        <a href="#" class="sitemap__item--link">Петербургский тракторный завод завод «Петросталь»</a>
+                                    </div>
+                                    <div class="sitemap__item--list-item">
+                                        <a href="#" class="sitemap__item--link">Завод буровых технологий</a>
+                                    </div>
+                                    <div class="sitemap__item--list-item">
+                                        <a href="#" class="sitemap__item--link">Кировский завод Газовые технологии</a>
+                                    </div>
+                                    <div class="sitemap__item--list-item">
+                                        <a href="#" class="sitemap__item--link">Энергетический комплекс</a>
+                                    </div>
+                                    <div class="sitemap__item--list-item">
+                                        <a href="#" class="sitemap__item--link">Тетрамет</a>
+                                    </div>
+                                    <div class="sitemap__item--list-item">
+                                        <a href="#" class="sitemap__item--link">Локомотив</a>
+                                    </div>
+                                    <div class="sitemap__item--list-item">
+                                        <a href="#" class="sitemap__item--link">Проектно-конструкторское бюро «Автоматика»</a>
+                                    </div>
+                                    <div class="sitemap__item--list-item">
+                                        <a href="#" class="sitemap__item--link">Центр метрологии, испытаний и охраны труда</a>
+                                    </div>
+                                    <div class="sitemap__item--list-item">
+                                        <a href="#" class="sitemap__item--link">Предприятия социальной сферы</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sitemap__item accordion-item">
+                                <h2 class="sitemap__item--title accordion-item-header">Пресс-Центр</h2>
+                                <div class="sitemap__item--list accordion-item-content">
+                                    <div class="sitemap__item--list-item">
+                                        <a href="#" class="sitemap__item--link">Новости</a>
+                                    </div>
+                                    <div class="sitemap__item--list-item">
+                                        <a href="#" class="sitemap__item--link">Видеогалерея</a>
+                                    </div>
+                                    <div class="sitemap__item--list-item">
+                                        <a href="#" class="sitemap__item--link">Пресса о нас</a>
+                                    </div>
+                                    <div class="sitemap__item--list-item">
+                                        <a href="#" class="sitemap__item--link">Фотогалерея</a>
+                                    </div>
+                                    <div class="sitemap__item--list-item">
+                                        <a href="#" class="sitemap__item--link">Контакты</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sitemap__item accordion-item">
+                                <h2 class="sitemap__item--title accordion-item-header">Акционерам и инвесторам</h2>
+                                <div class="sitemap__item--list accordion-item-content">
+                                    <div class="sitemap__item--list-item">
+                                        <a href="#" class="sitemap__item--link">Информация, подлежащая раскрытию</a>
+                                    </div>
+                                    <div class="sitemap__item--list-item">
+                                        <a href="#" class="sitemap__item--link">Раскрытие информации дочерними обществами</a>
+                                    </div>
+                                    <div class="sitemap__item--list-item">
+                                        <a href="#" class="sitemap__item--link">Инвесторам</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sitemap__item accordion-item">
+                                <h2 class="sitemap__item--title accordion-item-header">Тендеры</h2>
+                                <div class="sitemap__item--list accordion-item-content">
+                                    <div class="sitemap__item--list-item">
+                                        <a href="#" class="sitemap__item--link">Постоянные закупки</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="sitemap__list--part">
+                        <!-- <div class="sitemap__list--part">
                             <div class="sitemap__item accordion__item">
                                 <h2 class="sitemap__item--title">Продажа активов <span class="accordion__item--arrow"></span></h2>
                                 <div class="sitemap__item--list">
@@ -456,7 +544,7 @@
                                     <a href="#" class="sitemap__item--link">Обратная связь</a>
                                 </h2>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -562,6 +650,68 @@
         </div>
     </div>
     <script src="./js/script.min.js"></script>
+    <script>
+        // Accordion
+        let accordion = (function(element) {
+            let _getItem = function(elements, className) {
+                // функция для получения элемента с указанным классом
+                let element;
+                elements.forEach(function(item) {
+                    if (item.classList.contains(className)) {
+                        element = item;
+                    }
+                });
+                return element;
+            };
+
+            return function() {
+                let _mainElement = {}, // .accordion
+                    _items = {}, // .accordion-item
+                    _contents = {}; // .accordion-item-content
+
+                let _actionClick = function(e) {
+                        if (!e.target.classList.contains("accordion-item-header")) {
+                            // прекращаем выполнение функции если кликнули не по заголовку
+                            return;
+                        }
+                        e.preventDefault(); // Отменям стандартное действие
+                        // получаем необходимые данные
+                        let header = e.target,
+                            item = header.parentElement,
+                            itemActive = _getItem(_items, "show");
+
+                        if (itemActive === undefined) {
+                            // добавляем класс show к элементу (в зависимости от выбранного заголовка)
+                            item.classList.add("show");
+                        } else {
+                            // удаляем класс show у ткущего элемента
+                            itemActive.classList.remove("show");
+                            // если следующая вкладка не равна активной
+                            if (itemActive !== item) {
+                                // добавляем класс show к элементу (в зависимости от выбранного заголовка)
+                                item.classList.add("show");
+                            }
+                        }
+                    },
+                    _setupListeners = function() {
+                        // добавим к элементу аккордиона обработчик события click
+                        _mainElement.addEventListener("click", _actionClick);
+                    };
+
+                return {
+                    init: function(element) {
+                        _mainElement =
+                            typeof element === "string" ? document.querySelector(element) : element;
+                        _items = _mainElement.querySelectorAll(".accordion-item");
+                        _setupListeners();
+                    }
+                };
+            };
+        })();
+
+        let accordion1 = accordion();
+        accordion1.init("#accordion");
+    </script>
 </body>
 
 </html>
