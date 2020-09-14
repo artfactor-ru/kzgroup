@@ -827,6 +827,46 @@
         });
         newPrefix++;
     };
+    let selectInit = function (selector) {
+        const _this = $(selector),
+            selectOption = _this.find('option'),
+            selectOptionLength = selectOption.length,
+            selectedOption = selectOption.filter(':selected'),
+            duration = 450;
+        const selectHead = _this.next('.new-select');
+        $('<div>', {
+            class: 'new-select__list'
+        }).insertAfter(selectHead);
+        const selectList = selectHead.next('.new-select__list');
+        for (let i = 1; i < selectOptionLength; i++) {
+            $('<div>', {
+                class: 'new-select__item',
+                html: $('<span>', {
+                    text: selectOption.eq(i).text()
+                })
+            })
+                .attr('data-value', selectOption.eq(i).val())
+                .appendTo(selectList);
+        }
+        const selectItem = selectList.find('.new-select__item');
+        selectList.slideUp(0);
+        selectHead.on('click', function() {
+            if ( !$(this).hasClass('on') ) {
+                $(this).addClass('on');
+                selectList.slideDown(duration);
+                selectItem.on('click', function() {
+                    let chooseItem = $(this).data('value');
+                    $('select').val(chooseItem).attr('selected', 'selected');
+                    selectHead.text( $(this).find('span').text() );
+                    selectList.slideUp(duration);
+                    selectHead.removeClass('on');
+                });
+            } else {
+                $(this).removeClass('on');
+                selectList.slideUp(duration);
+            }
+        });
+    }
 
     addEducationBtn.on('click', function () {
         let newBlockNameSelector = '.' + copyBlockName + ' ' + '.c-select';
@@ -835,110 +875,27 @@
             copy.addClass(copyBlockName);
             copy.removeClass('education-block');
             setAttrNames(copy);
+            copy.find('.new-select__list').detach();
             copy.insertBefore('.add-education');
-            $(newBlockNameSelector).each(function() {
-                const _this = $(this),
-                    selectOption = _this.find('option'),
-                    selectOptionLength = selectOption.length,
-                    selectedOption = selectOption.filter(':selected'),
-                    duration = 450;
-
-                const selectHead = _this.next('.new-select');
-                $('<div>', {
-                    class: 'new-select__list'
-                }).insertAfter(selectHead);
-                const selectList = selectHead.next('.new-select__list');
-                //console.log($(newBlockNameSelector));
-                for (let i = 1; i < selectOptionLength; i++) {
-                    $('<div>', {
-                        class: 'new-select__item',
-                        html: $('<span>', {
-                            text: selectOption.eq(i).text()
-                        })
-                    })
-                        .attr('data-value', selectOption.eq(i).val())
-                        .appendTo(selectList);
-                }
-                const selectItem = selectList.find('.new-select__item');
-                selectList.slideUp(0);
-                selectHead.on('click', function() {
-                    if ( !$(this).hasClass('on') ) {
-                        $(this).addClass('on');
-                        selectList.slideDown(duration);
-                        selectItem.on('click', function() {
-                            let chooseItem = $(this).data('value');
-                            $('select').val(chooseItem).attr('selected', 'selected');
-                            selectHead.text( $(this).find('span').text() );
-                            selectList.slideUp(duration);
-                            selectHead.removeClass('on');
-                        });
-                    } else {
-                        $(this).removeClass('on');
-                        selectList.slideUp(duration);
-                    }
-                });
-
-            });
+            selectInit(newBlockNameSelector);
             addEducationBtn.attr('data-click', ++clickCounter);
             ++copyNumber;
-            console.log(newBlockNameSelector);
-        } else if (addEducationBtn.attr('data-click') >= '1') {
+        } else if (addEducationBtn.attr('data-click') > '0') {
             let closestBlock = addEducationBtn.closest('.add-education').prev('.' + copyBlockName);
             let copy = closestBlock.clone();
             copy.removeClass(copyBlockName);
-            console.log(copyBlockName);
             copyBlockName = copyBlockName.substring(0, copyBlockName.length - 1) + copyNumber;
-            console.log(copyBlockName);
             copy.addClass(copyBlockName);
             newBlockNameSelector = '.' + copyBlockName + ' ' + '.c-select';
-            console.log(newBlockNameSelector);
             setAttrNames(copy);
+            copy.find('.new-select__list').detach();
             copy.insertBefore('.add-education');
-            $(newBlockNameSelector).each(function() {
-                const _this = $(this),
-                    selectOption = _this.find('option'),
-                    selectOptionLength = selectOption.length,
-                    selectedOption = selectOption.filter(':selected'),
-                    duration = 450;
-
-                const selectHead = _this.next('.new-select');
-                $('<div>', {
-                    class: 'new-select__list'
-                }).insertAfter(selectHead);
-                const selectList = selectHead.next('.new-select__list');
-                for (let i = 1; i < selectOptionLength; i++) {
-                    $('<div>', {
-                        class: 'new-select__item',
-                        html: $('<span>', {
-                            text: selectOption.eq(i).text()
-                        })
-                    })
-                        .attr('data-value', selectOption.eq(i).val())
-                        .appendTo(selectList);
-                }
-                const selectItem = selectList.find('.new-select__item');
-                selectList.slideUp(0);
-                selectHead.on('click', function() {
-                    if ( !$(this).hasClass('on') ) {
-                        $(this).addClass('on');
-                        selectList.slideDown(duration);
-                        selectItem.on('click', function() {
-                            let chooseItem = $(this).data('value');
-                            $('select').val(chooseItem).attr('selected', 'selected');
-                            selectHead.text( $(this).find('span').text() );
-                            selectList.slideUp(duration);
-                            selectHead.removeClass('on');
-                        });
-                    } else {
-                        $(this).removeClass('on');
-                        selectList.slideUp(duration);
-                    }
-                });
-            });
+            selectInit(newBlockNameSelector);
             addEducationBtn.attr('data-click', ++clickCounter);
             ++copyNumber;
         }
     });
+
 
     //form validate
     $(document).ready(function () {
