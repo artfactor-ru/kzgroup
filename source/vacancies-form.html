@@ -780,7 +780,6 @@
         selectHead.on('click', function() {
             if ( !$(this).hasClass('on') ) {
                 $(this).addClass('on');
-
                 $(this).parent('.c-select').addClass('c-select-rotate');
                 selectList.slideDown(duration);
                 selectItem.on('click', function() {
@@ -829,6 +828,10 @@
             let firstName = $(el).attr('name');
             $(el).attr('name', newNameFunc(firstName));
         });
+        block.children('label').children().find('textarea').each(function (i, el) {
+            let firstName = $(el).attr('name');
+            $(el).attr('name', newNameFunc(firstName));
+        });
         newPrefix++;
     };
     let setAttrNamesWorks = function (block) {
@@ -847,10 +850,7 @@
             let firstName = $(el).attr('name');
             $(el).attr('name', newNameFunc(firstName));
         });
-        block.children('label').children().find('textarea').each(function (i, el) {
-            let firstName = $(el).attr('name');
-            $(el).attr('name', newNameFunc(firstName));
-        });
+
         newPrefixW++;
     };
     //инициализация кастомных селектов
@@ -880,6 +880,7 @@
         selectHead.on('click', function() {
             if ( !$(this).hasClass('on') ) {
                 $(this).addClass('on');
+                $(this).parent('.c-select').addClass('c-select-rotate');
                 selectList.slideDown(duration);
                 selectItem.on('click', function() {
                     let chooseItem = $(this).data('value');
@@ -890,6 +891,7 @@
                 });
             } else {
                 $(this).removeClass('on');
+                $(this).parent('.c-select').removeClass('c-select-rotate');
                 selectList.slideUp(duration);
             }
         });
