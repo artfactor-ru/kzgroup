@@ -51,7 +51,6 @@
 @import 'pages/history/history-achieves';
 @import 'pages/history/history-heroes';
 @import 'pages/company_group/_company-group';
-
 @import 'pages/actioners/actioners';
 @import 'pages/rent/card';
 @import 'pages/purchases/purchases';
@@ -75,6 +74,9 @@
 @import 'pages/press/press-videogallery-in';
 @import 'pages/press/press-videogallery';
 @import 'pages/press/press-news-in';
+@import 'pages/press/press-instagram';
+@import 'pages/press/press-searchbar-internal-pages';
+@import 'pages/press/press-right-sidebar';
 @import 'common/preloader';
 @import 'pages/energy/energy-about';
 @import 'pages/ptz/clients';
@@ -199,6 +201,12 @@ figure {
     color: $red-color;
 }
 
+.parallax__img-wrap {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    // perspective: 1000px;
+}
 
 
 .parallax__item {

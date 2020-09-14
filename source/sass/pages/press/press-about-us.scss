@@ -137,12 +137,12 @@
     margin: 0% ;
 }
 
-.press-right-side-bar-about-us-instagram {
+/*.press-right-side-bar-about-us-instagram {
     width: 105%;
     margin-right: 0%;
     margin-left: 4.5%;
     margin-top: 22%;
-}
+}*/
 
 .press-about-us__item-hover {
     display: inline-block;
@@ -185,7 +185,7 @@
     width: ;
 }*/
 
-.rigt-side-bar-theme-button-active {
+/*.rigt-side-bar-theme-button-active {
   color: #c30215;
    &::before {
        content: '';
@@ -197,4 +197,50 @@
        display: block;
        left: 0%;
    }
+}*/
+
+.press-hidden-sidebar-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 650px;
+  height: 64px;
+
+  @media only screen and(max-width: 768px) {
+    width: 96%;
+  }
+
+}
+
+.press-hidden-sidebar-select-theme {
+  position: relative;
+  width: 60%;
+  font-family: 'MullerRegular';
+  font-size: 18px;
+  line-height: 143.55%;
+  color: #000000;
+}
+
+.press-hidden-sidebar-select-date {
+  position: relative;
+  width: 40%;
+  font-family: 'MullerRegular';
+  font-size: 18px;
+  line-height: 143.55%;
+  color: #000000;
+}
+
+.press-form-select-arrow {
+  position: absolute;
+  right: 7%;
+  top: 40%;
+  z-index: 11;
+}
+
+.press-hidden-sidebar-select-theme-hidden-title {
+
+  @media only screen and(max-width: 550px) {
+    display:none;
+  }
+  
 }
