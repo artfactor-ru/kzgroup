@@ -70,15 +70,11 @@
 
     &-content
       color: $black-grey
-      transform: scaleY(0)
-      transform-origin: top
-      transition: transform .3s, max-height .2s, opacity .4s
-      max-height: 1px
-      opacity: 0
+      transition: max-height .5s
+      max-height: 0
+      overflow: hidden
 
     &.show .accordion-item-content
-      transform: scaleY(1)
-      opacity: 1
       max-height: 1000px
       padding-bottom: 40px
 
