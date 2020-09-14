@@ -370,7 +370,7 @@
   </aside>
 </nav>
 
-<div class="scroll">
+<div class="scroll" data-scrollbar="true" tabindex="-1" style="overflow: hidden; outline: currentcolor none medium;">
   <section class="main parallax__item">
     <div class="parallax__img-wrap">
       <div class="parallax__img" data-speed="-40">
@@ -391,7 +391,13 @@
     <div class="container">
       <div class="main__wrapper">
         <h1 class="main__title main__title--about">
-          <div class="title--inner-main">Контакты</div>
+          <div class="title--inner-main contacts-header-title" data-name="contacts-main">Контакты</div>
+          <div class="title--inner-main contacts-header-title" data-name="management">Руководство</div>
+          <div class="title--inner-main contacts-header-title" data-name="press-center">Пресс-центр</div>
+          <div class="title--inner-main contacts-header-title" data-name="group">Дочерние<br>компании</div>
+          <div class="title--inner-main contacts-header-title" data-name="employment">Трудоустройство</div>
+          <div class="title--inner-main contacts-header-title" data-name="rent">Аренда</div>
+          <div class="title--inner-main contacts-header-title" data-name="museum">Музей</div>
         </h1>
       </div>
     </div>
@@ -1278,12 +1284,14 @@
     let menuItem = document.getElementById("menu-container"),
         arrow = document.getElementById("arrow"),
         width = document.documentElement.clientWidth;
+
     if (width <= 1279) {
       menuItem.classList.toggle("show");
       arrow.classList.toggle("active");
     } else {
       closeMenu();
     }
+
   }
 </script>
 <script>
@@ -1354,9 +1362,10 @@
   let hash = document.location.hash;
   console.log(hash);
   $(document).ready(function(){
-    let tabs = $('.contacts-sidebar__nav-item');
-    let dropTabs = $('.contacts-menu__nav-item');
-    let pages = $('.contacts_tabs');
+    let navItemSidebar = $('.contacts-sidebar__nav-item');
+    let navItemDrop = $('.contacts-menu__nav-item');
+    let subPages = $('.contacts_tabs');
+    let headerTitle = $('.contacts-header-title');
     if(hash){
       let name = hash.slice(1);
       console.log(name);
@@ -1365,16 +1374,16 @@
       tabActivate('contacts-main');
     }
 
-    tabs.click(function(){
+    navItemSidebar.click(function(){
       tabActivate($(this).data('name'));
     })
 
-    dropTabs.click(function(){
+    navItemDrop.click(function(){
       tabActivate($(this).data('name'));
     })
 
     function tabActivate(name){
-      tabs.each(function(ind, tab){
+      headerTitle.each(function(ind, tab){
         console.log(ind, tab);
         if($(tab).data('name') == name){
           $(tab).addClass('active');
@@ -1382,7 +1391,8 @@
           $(tab).removeClass('active');
         }
       });
-      dropTabs.each(function(ind, tab){
+
+      navItemDrop.each(function(ind, tab){
         console.log(ind, tab);
         if($(tab).data('name') == name){
           $(tab).addClass('active');
@@ -1390,7 +1400,17 @@
           $(tab).removeClass('active');
         }
       });
-      pages.each(function(ind, page){
+
+      navItemSidebar.each(function(ind, tab){
+        console.log(ind, tab);
+        if($(tab).data('name') == name){
+          $(tab).addClass('active');
+        }else{
+          $(tab).removeClass('active');
+        }
+      });
+
+      subPages.each(function(ind, page){
         $(page).removeClass('active');
       });
       $('.tab_'+name).addClass('active');
