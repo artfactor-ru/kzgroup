@@ -524,12 +524,21 @@ outline: none;
 			font-weight: normal;
 			font-size: 18px;
 			line-height: 18px;
+			display:inline-block;
 			text-transform: uppercase;
 			color: #fff;
-
+			opacity: 0.5;
+			position: relative;
 			text-decoration: none;
-		
+			transition: transform .3s cubic-bezier(.4,0,.2,1);
 	}
+	.nav_lang-link.current{
+		opacity: 1;
+	}
+	.nav_lang-link:hover{
+		transform: translateX(7px);
+	}  
+
 	.nav_list-wrap .scrollbar-track-y{
 		display: block !important;
 	}
@@ -812,7 +821,7 @@ outline: none;
 		background-image: url(../img/nav/icon-arrow-desktop.svg);
 
 
-		transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
+		transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
 	
 	  }
 	  .nav_list:hover .nav_item.-dropdown::before{
@@ -933,11 +942,11 @@ outline: none;
 	}
 	  
 .nav_dropdown_item:nth-child(1) {
-	transition-delay: 0.2s;
+	transition-delay: 0.1s;
   }
   
   .nav_dropdown_item:nth-child(2) {
-	transition-delay: 0.1s;
+	transition-delay: 0.09s;
   }
   
   .nav_dropdown_item:nth-child(3) {

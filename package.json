@@ -10,7 +10,9 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.10.5",
+    "@babel/plugin-transform-runtime": "^7.11.5",
     "@babel/preset-env": "^7.10.4",
+    "@barba/css": "^2.1.15",
     "babel-preset-es2015": "^6.24.1",
     "babelify": "^10.0.0",
     "browser-sync": "^2.26.7",
@@ -46,7 +48,10 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
+    "@barba/core": "^2.9.7",
+    "@fancyapps/fancybox": "^3.5.7",
     "easing-js": "^1.1.2",
+    "jquery": "^3.5.1",
     "smooth-scroll": "^16.1.3",
     "smooth-scrollbar": "^8.5.2",
     "swiper": "^6.0.4"

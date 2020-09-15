@@ -13,7 +13,7 @@
 }
 
 .vacancies_vacancies {
-  padding: 70px 0 70px 0;
+  padding: 70px 0 0px 0;
 }
 
 .vacancies_vacancies .container {
@@ -137,6 +137,21 @@
     width: 28%;
   }
 }
+@media screen and (max-width: 1680px) {
+  .vacancies_vacancy-desc {
+    padding: 50px 0;
+  }
+  .vacancies_care__img {
+    width: 100px;
+  }
+  .vacancies_care__desc {
+    font-size: 16px;
+  }
+  .vacancies-hero__title {
+    margin: 0;
+  }
+}
+
 
 @media screen and (max-width: 1441px) {
   .vacancies_vacancy-desc {
@@ -148,43 +163,13 @@
     font-size: 20px;
   }
 }
-@media screen and (max-width: 1680px) {
-  .vacancies_vacancy-desc {
-    padding: 50px 0;
-  }
-  .vacancies_pagination__link {
-    font-size: 28px;
-    width: 50px;
-    height: 50px;
-  }
-  .vacancies_care__img {
-    width: 100px;
-  }
-  .vacancies_pagination__list {
-    align-items: center;
-  }
-  .vacancies_care__desc {
-    font-size: 16px;
-  }
-  .vacancies-hero__title {
-    margin: 0;
-  }
-}
 
 @media screen and (max-width: 1025px) {
   .vacancies_vacancy-desc, .vacancies_vacancy-desc h5 {
     font-size: 16px;
   }
-  .vacancies_pagination__link {
-    font-size: 20px;
-    width: 40px;
-    height: 40px;
-  }
   .vacancies_svg {
     height: 16px;
-  }
-  .vacancies_pagination__list {
-    align-items: baseline;
   }
   .vacancies_care__name {
     font-size: 20px;
@@ -221,7 +206,6 @@
   .vacancies_vacancies {
     padding-bottom: 0;
   }
-
   .vacancies_vacancy-desc {
     padding: 28px 0;
   }

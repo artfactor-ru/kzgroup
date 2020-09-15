@@ -61,7 +61,9 @@
     margin-bottom: 10px;
     font-size: 0;
 }
-
+.history_heroes--list-item-pic img{
+    width: 100%;
+}
 .history_heroes--list-item-descr {
     font-size: 12px;
     line-height: 14px;
@@ -88,7 +90,7 @@
     .history_heroes--subtitle {
         font-size: 26px;
         line-height: 30px;
-        margin-bottom: 74px;
+        margin-bottom: 25px;
     }
     .history_heroes--list-item {
         width: 22%;

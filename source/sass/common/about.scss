@@ -44,12 +44,18 @@
 
 }
 
+.about__descsmall{
+	@extend %block-text;
+	margin-top: 25px;
+	margin-bottom: 32px;
+}
+
 @media(min-width: 767px){
 	.about{
 		min-height: 505px;
 	}
 	.about__title{
-		padding-top: 100px;
+		padding-top: 50px;
 		width: 90%;
 	}
 	.about__desc{
@@ -71,9 +77,11 @@
 		position: relative;
 		background-image: none;
 	}
-
+	.about--museum{
+		min-height: 550px;
+	}
 	.about__title{
-		padding-top: 125px;
+		padding-top: 55px;
 		width: 75%;
 	}
 	.about__desc{
@@ -93,10 +101,12 @@
 		min-height: 960px;
 	}
 
-
+	.about--museum{
+		min-height: 680px;
+	}
 
 	.about__title{
-		padding-top: 215px;
+		padding-top: 110px;
 		// padding-left: 70px;
 		width: 82%;
 	}
@@ -107,7 +117,11 @@
 		width: 70%;
 	}
 
-
+	.about__descsmall{
+		width: 85%;
+		font-size: 30px;
+		line-height: 34px;
+	}
 
 
 

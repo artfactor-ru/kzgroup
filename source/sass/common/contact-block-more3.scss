@@ -1,0 +1,91 @@
+.contact-block-item--more3{
+    border: none;
+}
+
+.contact-block-item--more3:first-child{
+    border-bottom: 1px solid rgba(0,0,0,.22);
+}
+.contact-block-item--more3:not(:first-child){
+    border: none;
+}
+.contact-block-item--more3 .contact-block__subitem{
+    border: none;
+}
+.contact-block--more3 .contact-block__subtitle{
+    display: block;
+    font-family: $font-regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+
+    color: #000000;
+
+    padding-bottom: 12px;
+}
+
+@media(min-width:768px){
+    .contact-block-item--more3 .contact-block__subitem{
+        width: 100%;
+    }
+    .contact-block-item--more3{
+        align-items: flex-start;
+    }
+    .contact-block-item--more3 .contact-block__link{
+        padding-left: 0px;
+        display: inline-block;
+    }
+    .contact-block-item--more3 .contact-block__label{
+        padding-left: 0px;
+    }
+    .contact-block--more3 .contact-block__subtitle{
+   
+        font-size: 14px;
+        line-height: 20px;
+        
+    
+        padding-bottom: 0px;
+    }
+   
+}
+@media(min-width:1280px){
+    .contact-block--more3 .contact-block__wrap{
+        justify-content: space-between;
+        flex-basis: 100%;
+    }
+    .contact-block--more3 .contact-block__subtitle{
+        width: 19%;
+ 
+        margin-right: 60px;
+        flex-shrink: 0;
+    }
+    .contact-block-item--more3 .contact-block__subitem{
+        width: 33%;
+    }
+    .contact-block-item--more3{
+        align-items: flex-start;
+    }
+    .contact-block__link--noicon{
+        padding-left: 40px;
+        display: inline-block;
+    }
+    .contact-block__subitem--adress{
+        flex-grow: 1;
+        flex-shrink: 0;
+        width: 40%;
+    }
+    .contact-block--more3 .contact-block__subtitle{
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .contact-block--more3 .contact-block__subitem{
+        padding-bottom: 0;
+    }
+}
+@media(min-width:1680px){
+    .contact-block--more3 .contact-block__subtitle{
+        font-size: 18px;
+        line-height: 20px;
+    } 
+}

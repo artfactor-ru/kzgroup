@@ -9,7 +9,6 @@
   margin-top: 50px;
 }
 
-
 .vac-f__content {
   display: flex;
   justify-content: space-between;
@@ -17,12 +16,18 @@
   position: relative;
 }
 
+.vac-f__form-date .c-select {
+  width: 33%;
+}
+
+.vac-f__form-date .vac-f__input-container {
+  display: flex;
+}
 
 .vac-f__nav {
   width: 30%;
-  padding-top: 13px;
   &-list {
-    position: fixed;
+    position: sticky;
     list-style: none;
   }
   &-item {
@@ -32,6 +37,7 @@
     display: flex;
     align-items: center;
     transition: .4s;
+    color: #67676A;
     &:hover {
       & a {
         color: #000;
@@ -73,14 +79,14 @@
   }
 }
 
-.vac-f__nav-list li:last-child div::after {
+.vac-f__nav-list a:last-child div.vac-f__nav-item__circle::after {
   display: none;
 }
 
-.vac-f__nav-item--active  {
-  & a {
-    color: #000;
-  }
+.vac-f__nav-item.active  {
+
+  color: #000;
+
   & .vac-f__nav-item__circle {
     background-color: #F34542;
     border-color: #F34542;
@@ -194,16 +200,15 @@
 }
 
 .vac-f__form-education-btn {
-  @extend %button_underline;
+  @extend %link-underline;
+  cursor: pointer;
+  font-family: $font-regular;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #616161;
+  border: none;
   margin: 0 30px 20px 0;
-}
-
-.vac-f__form-select-arrow {
-  position: absolute;
-  right: 4%;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
+  outline: none;
 }
 
 .vac-f__form-date {
@@ -262,7 +267,7 @@
     &::before {
       content: "";
       position: absolute;
-      background: url(../img/vacancies/vac-f-accept.svg) center center no-repeat;
+      background: url("../img/vacancies/vac-f-accept.svg") center center no-repeat;
       background-size: contain;
       top: 7px;
       left: 9px;
@@ -278,9 +283,25 @@
   transform: scale(1);
 }
 
+.rent-form__radio--style-none::before {
+  transform: scale(0) !important;
+}
+
+.checked__title {
+  color: #616161;
+}
+
+.jd-branch-basic {
+  display: none;
+}
+
+.jd-branch-style {
+  position: relative;
+}
+
 .vac-f__form-label textarea {
   width: 100%;
-  height: 81%;
+  height: 100%;
   padding: 14px;
   font-family: $font-text-regular;
   resize: none;
@@ -288,6 +309,11 @@
   background: #F6F6F6;
   box-sizing: border-box;
   border-radius: 3px;
+  font-size: 18px;
+}
+
+.vac-f__checkbox-custom {
+  margin-left: auto;
 }
 
 .vac-f__form-submit {
@@ -321,6 +347,41 @@
   }
   & a {
     color: #3C3D40;
+    transition: .4s;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+
+.vac-f__form-label-educ .c-select {
+  position: relative;
+  &:after {
+    position: absolute;
+    display: block;
+    content: url("../img/arrow-select.svg");
+    right: 5%;
+    top: 38%;
+    transition: .3s;
+  }
+}
+
+.vac-f__form-date .c-select {
+  position: relative;
+  &:after {
+    position: absolute;
+    display: block;
+    content: url("../img/arrow-select.svg");
+    right: 10%;
+    top: 38%;
+    transition: .3s;
+  }
+}
+
+.c-select-rotate {
+  &:after {
+    transform: rotate(180deg);
   }
 }
 
@@ -339,6 +400,16 @@
   .vac-f__form-label span {
     max-width: 190px;
   }
+}
+
+@media screen and (max-width: 1366px) {
+  .vac-f__nav-item__circle {
+    margin-right: 15px !important;
+  }
+  .vac-f__nav-item a {
+    font-size: 14px;
+  }
+
 }
 
 @media screen and (max-width: 1281px) {
@@ -483,6 +554,12 @@
 }
 
 @media screen and (max-width: 769px) {
+  .vac-f__nav-item {
+    font-size: 10px;
+  }
+  .vac-f__form-date .c-select {
+    width: 50%;
+  }
   .vac-f__main-title {
     margin: 43px 0 0;
   }
@@ -500,6 +577,9 @@
   }
   .vac-f__input-container {
     display: flex;
+    &--req {
+      flex-direction: column;
+    }
   }
   .vac-form__wrapper {
     padding: 85px 0;
@@ -520,9 +600,39 @@
   .vac-f__click {
     margin-top: 0;
   }
+  .vac-f__resume-download {
+    margin: 0 15px 0 0;
+  }
+  .vac-f__information {
+    padding-top: 65px;
+  }
+  .vac-f__information h3 {
+    font-size: 18px;
+  }
+  .vac-f__information p {
+    font-size: 14px;
+    color: #3c3d40;
+  }
+  .vac-f__information div:last-child {
+    margin-bottom: 0;
+  }
+  .vac-form__wrapper {
+    padding-bottom: 55px;
+  }
 }
 
 @media screen and (max-width: 600px) {
+  .vac-f__form-date .c-select:after, .vac-f__form-label-educ .c-select:after {
+    top: 33%;
+  }
+  .vac-f__checkbox-custom {
+    margin-left: 0;
+  }
+  .vac-f__form-education-btn {
+    height: 32px;
+    display: flex;
+    align-items: center;
+  }
   .new-select__list {
     top: 50px;
     width: 99.56%;
@@ -616,21 +726,50 @@
     margin-bottom: 0;
   }
   .vac-f__input-container--adding {
-    height: 50px;
+    height: 35px;
   }
   .vac-f__form-works-btn {
-    margin-top: 20px;
+    margin-top: 5px;
   }
   .vac-f__license {
     margin-top: 20px;
   }
-}
-
-@media screen and (max-width: 481px) {
+  .vac-f__resume {
+    align-items: center;
+    height: 35px;
+    margin-bottom: 20px;
+  }
+  .vac-f__form-education-adding {
+    margin: 0;
+  }
+  .vac-f__form-checkbox--style {
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+  }
+  .checked__title {
+    font-size: 14px;
+    color: #616161;
+  }
+  .vac-f__form-checkbox {
+    margin-bottom: 8px;
+  }
   .vac-f__form-desc {
     margin-bottom: 30px;
   }
   .vac-f__form-title {
     margin-bottom: 10px;
+  }
+  .vac-f__form-block {
+    margin-bottom: 20px;
+  }
+  .new-select__item span {
+    font-size: 12px !important;
+  }
+  .vac-f__form-checkbox--style::before {
+    top: 5px;
+    left: 8px;
+    width: 18px;
+    height: 23px;
   }
 }

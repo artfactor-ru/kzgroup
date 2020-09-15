@@ -1,0 +1,164 @@
+.center{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.center__title{
+    @extend %block-title;
+    padding-bottom: 20px;
+    position: relative;
+    color: #FFFFFF;
+}
+
+.center__desc{
+    @extend %block-text;
+    padding-bottom: 30px;
+    position: relative;
+    color: #FFFFFF;
+}
+
+.button--center{
+    display: inline-block;
+    @extend %btn-bordered;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    max-width: 420px;
+}
+
+.button--center{
+    color: $light-grey-color;
+ 
+    &::after{
+        background: $light-grey-color;
+    }
+    &:hover{
+		color: $blue-color;
+    }
+    & .button-line--first{
+        &::before{
+            background-color: $light-grey-color;
+        }
+        &::after{
+            background-color: $light-grey-color;
+        }
+    }
+    & .button-line--two{
+        &::before{
+            background-color: $light-grey-color;
+        }
+        &::after{
+            background-color: $light-grey-color;
+        }
+    }
+}
+
+@media(min-width: 768px){
+    .center{
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+    
+    .center__title{
+      
+        padding-bottom: 30px;
+
+    }
+    
+    .center__desc{
+       
+        padding-bottom: 30px;
+
+    }
+    
+    .button--center{
+
+        margin-bottom: 10px;
+    
+        padding-left: 20px;
+        padding-right: 20px;
+
+        padding-top: 15px;
+        padding-bottom: 15px;
+        width: 420px;
+    }
+}
+
+@media(min-width: 1280px){
+    .center{
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    
+    .center__title{
+      
+        padding-bottom: 30px;
+
+    }
+    
+    .center__desc{
+       
+        padding-bottom: 30px;
+
+    }
+    
+    .button--center{
+        width: 610px;
+        max-width: 610px;
+        margin-bottom: 25px;
+    
+        padding-left: 20px;
+        padding-right: 20px;
+
+        padding-top: 25px;
+        padding-bottom: 25px;
+        
+    }
+    .button__list{
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+    }
+}
+
+@media(min-width: 1680px){
+    .center{
+        padding-top: 145px;
+        padding-bottom: 200px;
+    }
+    
+    .center__title{
+      
+        padding-bottom: 30px;
+
+    }
+    
+    .center__desc{
+       
+        padding-bottom: 30px;
+        width: 70%;
+    }
+    
+    .button--center{
+        width: 770px;
+        max-width: 770px;
+        margin-bottom: 25px;
+    
+        padding-left: 20px;
+        padding-right: 20px;
+
+        padding-top: 45px;
+        padding-bottom: 45px;
+        font-size: 20px;
+        
+    }
+    .button__list{
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+}

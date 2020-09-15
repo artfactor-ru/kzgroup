@@ -53,7 +53,7 @@
 }
 .swiper-container--hero .swiper-slide-active{
     transition: opacity 3s ease 1s!important;
-    z-index: 20;
+    // z-index: 20;
 }
 .swiper-container--hero .parallax__img-wrap{
 
@@ -154,11 +154,11 @@
     background-color: $red-color;
 
 }
-.swiper-container--hero .swiper-slide-active .hero__slide-line-time{
+.load .swiper-container--hero .swiper-slide-active .hero__slide-line-time{
     width: 0%;
     animation-name: animate-line;
     animation-duration: 15000ms;
-    animation-delay: 3s;
+    // animation-delay: 3s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
     
@@ -195,8 +195,10 @@
     .swiper-slide--hero-video{
         display: block;
     }
-    .button__video-controls-wrap--other{
+    .button__video-controls-wrap--hero{
         display: block;
+        z-index: 1000;
+
     }
     .main__hero{
 

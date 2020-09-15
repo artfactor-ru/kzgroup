@@ -1,5 +1,6 @@
 .news--grey{
     background-color: $bg-color-light-grey;
+    padding-top: 20px;
 }
 .news{
     padding-bottom:40px;
@@ -8,15 +9,19 @@
 .news__title{
     
     @extend %block-title;
-    padding-top: 20px;
+    padding-top: 10px;
 }
-.news__container{
+.news__container, .press__container{
     margin-top: 25px;
     width: 100%;
     // height: 220px;
 }
+.press__container{
+    display: flex;
+}
 .news__item{
     width: 100%;
+    position: relative;
 
 }
 .parallax__item--news{
@@ -30,7 +35,7 @@
     background-size: cover;
     background-position: center;
     
-    --overflow: 50px;
+    --overflow: 100px;
    
         height: calc(100% + (2 * var(--overflow))) !important;
         top: calc( -1 * var(--overflow));
@@ -94,11 +99,10 @@
 }
 .parallax__item--news .parallax__img-wrap{
     transition: transform 0.9s ease;
+    // will-change: transform;
+    backface-visibility: hidden;
 }
-.news__link:hover ~ .parallax__item--news .parallax__img-wrap{
-    transform: scale(1.1);
-    transform-origin: center;
-}
+
 
 .news__link:hover  ~ .news__subtitle{
     color: $red-color;
@@ -106,9 +110,19 @@
 .news__container .swiper-wrapper{
     transition: transform 1s ease !important;
 }
+.press__container .swiper-wrapper{
+    transition: transform 1s ease !important;
+}
+
+.news__link:hover ~ .parallax__item--news .parallax__img-wrap{
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
 @media(min-width: 500px){
     .news__item{
         width: 315px;
+
     }
   
 }
@@ -132,7 +146,17 @@
         box-sizing: border-box;
         overflow: hidden;
     }
+    .press__container{
+        margin-top: 40px;
+        display: flex;
+
+        box-sizing: border-box;
+        overflow: hidden;
+    }
     .news__container .swiper-wrapper{
+        order: 2;
+    }
+    .press__container .swiper-wrapper{
         order: 2;
     }
     .container--news{
@@ -220,18 +244,22 @@
        padding-bottom: 40px;
        padding-top: 10px;
     }
+    .news__item{
+        overflow:hidden;
+    }
   
     .news__item::after{
         content: "";
         position: absolute;
         bottom: 0;
-        width: 0%;
+        width: 100%;
         height: 4px;
         background-color: $red-color;
+        transform: translateX(-100%);
         transition: all 0.5s ease;
     }
     .news__item:hover::after{
-        width: 100%;
+        transform: translateX(0px);
 
     }
     .news--grey .news__controls{
@@ -241,6 +269,15 @@
 }
 
 @media(min-width: 1280px){
+
+    
+
+    .swiper-wrapper--press{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
     .news--grey{
         background-color: $bg-color-light-grey;
         padding-bottom: 80px;
@@ -251,6 +288,9 @@
         padding-top: 75px;
     }
     .news__container{
+        margin-top: 60px;
+    }
+    .press__container{
         margin-top: 60px;
     }
     .news__item{
@@ -272,14 +312,14 @@
     }
     .news__controls .swiper-button-next,.news__controls .swiper-button-prev{
         position: relative;
-        top: 150px;
+        top: 160px;
        
      
     
 
     }
     .news__controls .swiper-button-prev{
-        top: 100px;
+        top: 120px;
     }
     .news__controls-icon{
         width: 15px;
@@ -301,16 +341,18 @@
   
     .news{
  
-        padding-bottom:130px;
+        padding-bottom:105px;
     
     }
     .news__title{
-        padding-top: 30px;
+        padding-top: 105px;
     }
     .news__container{
         margin-top: 50px;
     }
-   
+    .press__container{
+        margin-top: 50px;
+    }
     .news__item{
         width: 504px;
     }

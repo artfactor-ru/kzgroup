@@ -74,13 +74,13 @@ gulp.task("minifyjs", function () {
   // return gulp.src("./source/js/**/*.js")
     // .pipe(babel())
     return browserify({entries: './source/js/script.js', debug: true})
-    .transform("babelify", { presets: ["@babel/preset-env"] })
+    .transform("babelify", { presets: ["@babel/preset-env"], plugins: ['@babel/transform-runtime'] })
     
         .bundle()
         .pipe(source('app.js'))
         .pipe(buffer())
         .pipe(sourcemaps.init())
-        // .pipe(minifyjs())
+        .pipe(minifyjs())
         .pipe(sourcemaps.write('./maps'))
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("./build/js"));
@@ -90,9 +90,9 @@ gulp.task("minifyjs", function () {
 gulp.task("image", function () {
   return gulp.src("./build/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
-      imagemin.optipng({
-        optimizationLevel: 3  // уровень оптимизации
-      }),
+      // imagemin.optipng({
+      //   optimizationLevel: 3  // уровень оптимизации
+      // }),
       imagemin.jpegtran({
         progressive: true // прогрессивная загрузка картинки
       }),
@@ -111,13 +111,13 @@ gulp.task("image", function () {
 });
 
 // Оптимизация webp
-gulp.task("webp", function () {
-  return gulp.src("./build/img/**/*.{png,jpg}")
-    .pipe(webp({
-      quality: 90
-    }))
-    .pipe(gulp.dest("./build/img"));
-});
+// gulp.task("webp", function () {
+//   return gulp.src("./build/img/**/*.{png,jpg}")
+//     .pipe(webp({
+//       quality: 90
+//     }))
+//     .pipe(gulp.dest("./build/img"));
+// });
 
 // svg спрайт
 gulp.task("sprite", function () {
@@ -153,7 +153,7 @@ gulp.task("build", gulp.series(
   "copy",   // копируем необходимые файлы в папку build
   "sprite", // создаем svg спрайт
   "image",  // оптимизируем изображения
-  "webp",   // конвертируем в webp
+  // "webp",   // конвертируем в webp
 
   "css",     // собираем css
   "minifyjs", // минификация js

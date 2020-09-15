@@ -1,6 +1,17 @@
 .tabs-common__wrapper{
-  border-bottom: 2px solid #E2E2E2;
-  margin-bottom: 10px;
+
+ 
+    // border-bottom: 2px solid #E2E2E2;
+    position: relative;
+    &::before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #E2E2E2;
+      bottom: 0;
+    }
+ 
 }
 
 .tabs-common {
@@ -25,9 +36,7 @@
   transition: all 0.5s ease;
 }
 
-.tabs-common a.active {
-  border-bottom: 6px solid $red-color;
-}
+
 
 .tabs-common a.active, .tabs-common a:hover {
   color: $red-color;
@@ -40,7 +49,7 @@
 .tabs-common-links:before {
   content:'';
   position: absolute;
-  top: 100%;
+  top: 99%;
   left: 0;
   width: 0;
   height: 6px;
@@ -51,7 +60,9 @@
 .tabs-common-links:hover:before {
   width: 100%;
 }
-
+.tabs-common-links.active:before {
+  width: 100%;
+}
 .tabs-common-container {
   // width: 100%;
   display: flex;
@@ -90,11 +101,11 @@
   }
   .tabs-common {
     position: relative;
-    height: 45px;
+    height: 43px;
     // overflow-x: scroll;
     width: 100%;
     overflow: hidden;
-    margin-bottom: -6px;
+    margin-bottom: 0px;
   }
   .tabs-common-links:not(:last-child){
     margin-right: 20px;
@@ -113,14 +124,27 @@
   }
   .tabs-common-links:not(:last-child){
     margin-right: 20px;
+
   }
-  .tabs-common a.active {
-    border-bottom: 4px solid $red-color;
-  }
+  // .tabs-common a.active {
+  //   border-bottom: 4px solid $red-color;
+  // }
   .tabs-common-links:before {
    
     height: 4px;
 
+  }
+  .tabs-common a {
+   
+    border-bottom: 4px solid transparent;
+  
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .tabs-common {
+    height: 29px;
   }
   .tabs-common a {
    

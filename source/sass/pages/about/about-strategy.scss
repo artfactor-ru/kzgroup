@@ -12,11 +12,14 @@
 
 @media(min-width:767px){
     .strategy_about{
-        padding-bottom: 10px;
+        padding-bottom: 0px;
     }
     .strategy_about__desc{
         width: 95%;
-     }
+	 }
+	 .strategy_about__title {
+		padding-top: 60px;
+	 }
 }
 
 @media(min-width:1280px){
@@ -41,7 +44,7 @@
 		width: 120%;
 		position: absolute;
 		z-index: -1;
-	
+		will-change: transform;
 		
 	}
 

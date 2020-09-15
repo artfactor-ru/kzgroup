@@ -124,7 +124,7 @@
     .button--gotocompany{
         padding: 28px 75px;
         max-width: none;
-        margin-top: 65px;
+        margin-top: 40px;
        
     }
     
@@ -134,8 +134,10 @@
         height: 585px;
         bottom: 35px;
         left: auto;
-        transform: translateX(-0%);
+        // transform: translateX(-0%);
+        transform: translateZ(0);
         right: -60px;
+        // will-change: transform;
        
     
     }

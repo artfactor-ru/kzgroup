@@ -426,7 +426,7 @@
 	background: transparent;
 	margin: 0;
 	padding: 0px 26px;
-	left: -26px;
+	left: -22px;
 	top: -28px;
 	color: #C26063;
 	font-family: $font-bold-2-title;
@@ -487,7 +487,7 @@
 			content: "";
 			position: absolute;
 			width: 4px;
-			height: 100%;
+			height: 0%;
 			top:0;
 			right: 0;
 			background-color: #C26063;
@@ -497,13 +497,19 @@
 		&::after{
 			content: "";
 			position: absolute;
-			width: 100%;
+			width: 0%;
 			height: 4px;
 			bottom:0;
 			right: 0;
 			background-color: #C26063;
 			transition: all 0.3s ease;
 			transition-delay: 0.6s;
+		}
+		&.is-inview::before{
+			height: 100%;
+		}
+		&.is-inview::after{
+			width: 100%;
 		}
 		
 	}
@@ -901,8 +907,6 @@
 
 // Ссылка подробнее
 
-
-
 %button-more{
 	font-family: $font-regular;
 	font-style: normal;
@@ -947,15 +951,12 @@
 
 @media (min-width: 1280px){
 	%button-more{
-	
 		font-size: 14px;
 		line-height: 18px;
-	
-	
 		padding-left: 65px;
-		 &:hover span{
-				transform:  translateX(10px);
-			}
+		&:hover span{
+			transform:  translateX(10px);
+		}
 		&::before{
 			width: 0px;
 			height: 1px;
@@ -1056,6 +1057,52 @@
 		width: 100%;
 	}
 }
+
+
+%link-underline{
+	height: 34px;
+	background-color: rgba(255,255,255,0);
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	font-size: 3px;
+	transition: all 0.6s;
+	&:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		bottom: 0;
+		right: 0;
+		background-color: #616161;
+		transition: transform 0.4s cubic-bezier(0.65, 0.005, 0.35, 0.995);
+		transform-origin: right;
+		transition-delay: 0.25s;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		bottom: 0;
+		right: 0;
+		background-color: #616161;
+		transition: transform 0.4s cubic-bezier(0.65, 0.005, 0.35, 0.995);
+		transform: scaleX(0);
+		transform-origin: left;
+		transition-delay: 0s;
+	}
+	&:hover:before {
+		transform: scaleX(1);
+		transition-delay: 0.25s;
+	}
+	&:hover:after {
+		transform: scaleX(0);
+		transition-delay: 0s;
+	}
+}
+
+
 
 
 %block-title-inlist{

@@ -1,0 +1,313 @@
+.press-photogallery-link:hover > .parallax__item-photogallery-in .parallax__img-wrap{
+    transform: scale(1.1);
+    transform-origin: center;
+
+}
+
+
+.press-photogallery-link .parallax__item-photogallery-in .parallax__img-wrap{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    z-index: 200;
+    transition: all .9s ease;
+}
+.press-photogallery {
+
+    &-title {
+        font-family: 'HeliosExtBold';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 46px;
+        line-height: 54px;
+        color: #171C28;
+        margin-bottom: 30px;
+
+        @media only screen and(max-width: 1680px) {
+            font-size: 36px;
+            line-height: 40px;
+        }
+
+        @media only screen and(max-width: 1100px) {
+            font-size: 26px;
+            line-height: 30px;
+        }
+
+        @media only screen and(max-width: 560px) {
+            font-size: 22px;
+            line-height: 25px;
+        }
+    }
+
+    &-description {
+        font-family: 'MullerRegular';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 28px;
+        color: #000000;
+        margin-bottom: 4.6%;
+
+        @media only screen and(max-width: 1680px) {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        @media only screen and(max-width: 1100px) {
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        &-date {
+            font-family: 'MullerRegular';
+            font-size: 18px;
+            line-height: 136.6%;
+            color: #A6A2A2;
+            margin-bottom: 10px;
+
+            @media only screen and(max-width: 1680px) {
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            @media only screen and(max-width: 1100px) {
+                font-size: 14px;
+                line-height: 26px;
+            }
+        }
+    }
+
+    &-item {
+        display: block;
+        position: relative;
+        list-style: none;
+        width: 28.5%;
+        margin-right:3.4%;
+        margin-left: 0;
+        //margin-bottom: 90px;
+        margin-bottom: 3.5%;
+
+        @media only screen and(max-width: 1400px) {
+            margin-right:3%;
+            margin-bottom: 3%;
+        }
+
+        @media only screen and(max-width: 1100px) {
+            width: 45%;
+        }
+
+        @media only screen and(max-width: 1100px) {
+            width: 44.7%;
+        }
+    
+
+        &-img {
+            width: 100%;
+        }
+
+        &-date {
+            font-family: 'MullerRegular';
+            font-size: 18px;
+            line-height: 26px;
+            color: rgba(60, 61, 64, 0.39);
+            margin-bottom: 5px;
+            margin-top: 20px;
+
+         @media only screen and(max-width: 1100px) {
+                font-size: 16px;
+            }
+
+        }
+
+        &-description {
+            font-family: 'HeliosExt';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 125.1%;
+            color: #171C28;
+
+            @media only screen and(max-width: 1680px) {
+                font-size: 18px;
+            }
+
+            @media only screen and(max-width: 1100px) {
+                font-size: 16px;
+            }
+            
+        }
+    }
+}
+
+.press-photogallery-subscribe-button-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    //margin-top: -10px;
+    margin-bottom: 10%;
+
+    @media only screen and(max-width:768px) {
+        margin-top: 20px;
+        width: 104%;
+    }
+}
+
+.press-popup__back {
+    margin-bottom: 55px;
+    margin-top: 100px;
+}
+
+.press-photo-gallery-flex-item-container {
+    margin-right: -8%;
+}
+
+.parallax__item-photogallery-in {
+    width: 100%;
+    height: 323px;
+
+    @media only screen and(max-width: 1850px) {
+        height: 311px;
+    }
+
+    @media only screen and(max-width: 1800px) {
+        height: 303px;
+    }
+
+    @media only screen and(max-width: 1750px) {
+        height: 294px;
+    }
+
+    @media only screen and(max-width: 1700px) {
+        height: 286px;
+    }
+
+    @media only screen and(max-width: 1650px) {
+        height: 284px;
+    }
+
+    @media only screen and(max-width: 1600px) {
+        height: 276px;
+    }
+
+    @media only screen and(max-width: 1550px) {
+        height: 258px;
+    }
+
+    @media only screen and(max-width: 1500px) {
+        height: 263px;
+    }
+
+    @media only screen and(max-width: 1450px) {
+        height: 250px;
+    }
+
+    @media only screen and(max-width: 1400px) {
+        height: 241px;
+    }
+
+    @media only screen and(max-width: 1350px) {
+        height: 233px;
+    }
+
+    @media only screen and(max-width: 1300px) {
+        height: 224px;
+    }
+
+    @media only screen and(max-width: 1280px) {
+        height: 223px;
+    }
+
+    @media only screen and(max-width: 1250px) {
+        height: 216px;
+    }
+
+    @media only screen and(max-width: 1200px) {
+        height: 209px;
+    }
+
+    @media only screen and(max-width: 1100px) {
+        height: 300px;
+    }
+
+    @media only screen and(max-width: 1050px) {
+        height: 286px;
+    }
+
+    @media only screen and(max-width: 1000px) {
+        height: 272px;
+    }
+
+    @media only screen and(max-width: 950px) {
+        height: 278px;
+    }
+
+    @media only screen and(max-width: 900px) {
+        height: 263px;
+    }
+
+    @media only screen and(max-width: 850px) {
+        height: 248px;
+    }
+
+    @media only screen and(max-width: 800px) {
+        height: 234px;
+    }
+
+    @media only screen and(max-width: 768px) {
+        height: 209px;
+    }
+
+    @media only screen and(max-width: 700px) {
+        height: 207px;
+    }
+
+    @media only screen and(max-width: 650px) {
+        height: 192px;
+    }
+
+    @media only screen and(max-width: 600px) {
+        height: 178px;
+    }
+
+    @media only screen and(max-width: 550px) {
+        height: 163px;
+    }
+
+    @media only screen and(max-width: 500px) {
+        height: 147px;
+    }
+
+    @media only screen and(max-width: 450px) {
+        height: 133px;
+    }
+
+    @media only screen and(max-width: 400px) {
+        height: 119px;
+    }
+
+    @media only screen and(max-width: 360px) {
+        height: 107px;
+    }
+
+    @media only screen and(max-width: 320px) {
+        height: 95px;
+    }
+
+
+}
+
+.press-photo-gallery-container {
+
+    @media only screen and(max-width: 960px) {
+        margin-left: -4%;
+        margin-right: -4%;
+    }
+
+    @media only screen and(max-width: 768px) {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+}
