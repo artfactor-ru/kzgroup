@@ -1,0 +1,121 @@
+.conditions {
+    font-family: $font-text-regular;
+    padding: 76px 0 50px;
+    position: relative;
+}
+
+.conditions__back {
+    border: 0;
+    background: 0 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    cursor: pointer;
+    color: $grey-text-paragraf;
+    font-family: $font-regular;
+    display: block;
+    font-size: 12px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    letter-spacing: 0px;
+    & .conditions__back-icon {
+        width: 40px;
+        padding-right: 20px;
+        position: relative;
+        transition: all 0.5s ease 0s;
+        will-change: transform;
+    }
+}
+
+.conditions__title {
+    margin-bottom: 20px;
+    font-family: $font-bold-2-title;
+    font-size: 22px;
+    line-height: 25px;
+}
+
+.conditions__content {
+    font-family: $font-text-light;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+@media(min-width: 767px) {
+    .conditions {
+        padding: 83px 0 70px;
+        min-height: 100vh;
+    }
+    .conditions__back {
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 40px;
+        & .conditions__back-icon {
+            width: 47px;
+            padding-right: 7px;
+        }
+    }
+    .conditions__title {
+        margin-bottom: 30px;
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .conditions__content {
+        line-height: 24px;
+    }
+}
+
+@media(min-width: 1280px) {
+    .conditions {
+        padding: 80px 0 160px;
+    }
+    .conditions__back {
+        font-size: 16px;
+        line-height: 28px;
+        margin-bottom: 40px;
+        & .conditions__back-icon {
+            width: 60px;
+            padding-right: 29px;
+        }
+        &:hover {
+            .conditions__back-icon {
+                width: 75px;
+            }
+        }
+    }
+    .conditions__title {
+        margin-bottom: 40px;
+        font-size: 36px;
+        line-height: 40px;
+    }
+    .conditions__content {
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+
+@media(min-width: 1680px) {
+    .conditions {
+        padding: 106px 17% 160px 0;
+        & .container {
+            padding-right: 8%;
+            padding-left: 8%;
+        }
+    }
+    .conditions__back {
+        margin-bottom: 65px;
+        & .conditions__back-icon {
+            width: 67px;
+            padding-right: 2px;
+        }
+    }
+    .conditions__title {
+        font-size: 46px;
+        line-height: 62px;
+        margin-bottom: 38px;
+    }
+    .conditions__content {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
