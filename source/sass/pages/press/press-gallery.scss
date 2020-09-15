@@ -397,16 +397,16 @@
     }
 }
 
-.show {
-    display:block;
-    opacity: 0;
-    transition: all 1000s ease;
+// .show {
+//     display:block;
+//     opacity: 0;
+//     transition: all 1000s ease;
 
-    &:hover {
-        opacity: 1;
-        transition: all 0.5s ease;
-    }
-}
+//     &:hover {
+//         opacity: 1;
+//         transition: all 0.5s ease;
+//     }
+// }
 
 .press-hidden-sidebar-select {
 

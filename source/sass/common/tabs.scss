@@ -1,6 +1,6 @@
 .tabs-common__wrapper{
 
-  & .tabs-common{
+ 
     // border-bottom: 2px solid #E2E2E2;
     position: relative;
     &::before{
@@ -11,7 +11,6 @@
       background-color: #E2E2E2;
       bottom: 0;
     }
-  }
  
 }
 
