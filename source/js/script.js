@@ -27,10 +27,21 @@ function delay(n) {
 }
 
 if(document.querySelector('.barbapage')){
+	let links = document.querySelectorAll('a');
+	for(let i = 0; i<links.length; i++){
+		links[i].classList.add('no-barba');
+		if(links[i].classList.contains('tabs-common-links--barba')){
+			links[i].classList.remove('no-barba');
+		}
+		if(links[i].classList.contains('contacts-sidebar__nav-link')){
+			links[i].classList.remove('no-barba');
+		}	
+	}
 
 	barba.init({
 		debug: true,
 		sync: true,
+		prevent: ({ el }) => el.classList && el.classList.contains('no-barba'),
 		transitions: [{
 			
 			name: 'opacity-transition',
@@ -41,6 +52,7 @@ if(document.querySelector('.barbapage')){
 				await delay(1000);
 				
 				done();
+			
 				
 			},
 			async enter(data) {
@@ -68,10 +80,13 @@ if(document.querySelector('.barbapage')){
 	
 		breakpoint.addListener(breakpointChecker);
 		breakpointChecker();
-		breakpointOnlyForDesktop.addListener(breakpointCheckerForDesktop);
-		breakpointCheckerForDesktop();
+		// breakpointOnlyForDesktop.addListener(breakpointCheckerForDesktop);
+		// breakpointCheckerForDesktop();
+		
 		
 		checkUrl('.tabs-common-links--barba');
+		checkUrl('.contacts-sidebar__nav-link');
+		checkUrlForTitle('.contacts-header-title');
 		
 	
 		if(containerScroll){
@@ -82,23 +97,18 @@ if(document.querySelector('.barbapage')){
 		
 		}
 			
-				
-			
-		// Взаимодействие с шапкой
-			if ( breakpoint.matches === true ) {
-				
-					
-				if(header){	
+		createMap();
 
-					headerShowAndHideDesktop();
-				
-				}
-			
-		}else if ( breakpoint.matches === false ) {
-				if(header){	
-					hideAndShowHeaderMobile();
-				}
+		customSelect();
+
+	
+		if(document.getElementById('accordion')){
+			let accordion1 = accordion();
+			accordion1.init("#accordion");
 		}
+		
+			
+	
 	});
 
 	
@@ -131,25 +141,76 @@ let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 
+
+
+function checkUrlForTabs(links){
+	let tabsLink = document.querySelectorAll(links);
+	for (let i = 0; i < tabsLink.length; i++) {
+		if(tabsLink[i].getAttribute('href') == window.location.hash){
+			removeActivity(tabsLink);
+			tabsLink[i].classList.add('active');
+			let tabcontent = document.querySelectorAll(".tabs-common-content");
+					
+			removeActivity(tabcontent);
+			document.getElementById(tabsLink[i].dataset.tab).classList.add('active')
+		}
+	}
+}
+
+
+
+
 function checkUrl(links){
 	let barbalink = document.querySelectorAll(links);
 			
 	for(let i = 0; i<barbalink.length; i++){
-		// barbalink[i].addEventListener('click', function(){
+		if(barbalink[i].href == window.location.href){
+			let path = window.location.pathname.substr(1);
 
-			if(barbalink[i].href == window.location.href){
-				removeActivity(barbalink);
-				barbalink[i].classList.add('active');
+			let otherLink = document.querySelectorAll(`a:not([href="${path}" ])` );
+			
+			let allLink = document.querySelectorAll(`a[href="${path}" ]` );
+	
+			removeActivity(otherLink);
+			barbalink[i].classList.add('active');
 				
+		}
+	}
+}
+
+function checkUrlForTitle( title){
+	let header = document.querySelectorAll(title);
+
+	for(let i = 0; i<header.length; i++){
+		// barbalink[i].addEventListener('click', function(){
+			let namePage = header[i].dataset.name;
+
+			let path = window.location.pathname.split('.')[0];
+			let purePath = path.substr(1);
+			
+			if(namePage == purePath){
+				setTimeout(function(){
+				header[i].classList.add('active');
+
+				}, 500);
+				
+			}else{
+				header[i].classList.remove('active');
 			}
-		// });
+
 	}
 }
 
 document.addEventListener('DOMContentLoaded', function(){
 	checkUrl('.tabs-common-links--barba');
-	// knowHeightOfElement('.history__parallax--img', '.history__parallax');
+	checkUrl('.contacts-sidebar__nav-link');
+	checkUrlForTitle('.contacts-header-title');
+	checkUrlForTabs('.tabs-common-links-js');
 	knowHeightOfElement('.history__photos--animate', '.history__photos__item');
+
+	createMap();
+	customSelect();
+	
 	
 })
 
@@ -453,30 +514,7 @@ function eventOnScroll(){
 			});
 		});
 
-		let historyBg = document.querySelector('.history__bg');
-		if(historyBg){
-			let light = document.querySelectorAll('.history_light');
-			let dark = document.querySelectorAll('.history_dark');
-
-			for(let i = 0; i<light.length; i++){
-				if(scrollbar.isVisible(light[i])){
-					historyBg.style.opacity = "0"
-					// console.log('Белый фон');
-				}
-
-
-
-			}
-
-			for(let i = 0; i<dark.length; i++){
-				if(scrollbar.isVisible(dark[i])){
-					historyBg.style.opacity = "1"
-				}
-				
-			}
-
-
-		}
+		
 		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 			// код для мобильных устройств
 		  } else {
@@ -529,19 +567,47 @@ function eventOnScroll(){
 	fixedNav(offset, '.traktors__nav');
 	fixedNavForm(offset, '.vac-f__nav-list');
 
-	// Взаимодействие с шапкой
-	if ( breakpoint.matches === true ) {
-			if(header){	
-	
-				headerShowAndHideDesktop();
-	
+	const mobileBreakpoint = window.matchMedia('(min-width:1280px)');
+	const breakpointCheckerForMobile = function() {
+		// Взаимодействие с шапкой
+	if ( mobileBreakpoint.matches === true ) {
+		if(header){	
+			headerShowAndHideDesktop();
+
+		}
+		let historyBg = document.querySelector('.history__bg');
+		if(historyBg){
+			let light = document.querySelectorAll('.history_light');
+			let dark = document.querySelectorAll('.history_dark');
+
+			for(let i = 0; i<light.length; i++){
+				if(scrollbar.isVisible(light[i])){
+					historyBg.style.opacity = "0"
+				}
 			}
-		
-	}else if ( breakpoint.matches === false ) {
-			if(header){	
-				hideAndShowHeaderMobile();
+
+			for(let i = 0; i<dark.length; i++){
+				if(scrollbar.isVisible(dark[i])){
+					historyBg.style.opacity = "1"
+				}
+				
 			}
+
+
+		}
+	
+		}else if ( mobileBreakpoint.matches === false ) {
+				if(header){	
+					hideAndShowHeaderMobile();
+				}
+		}
 	}
+
+
+	mobileBreakpoint.addListener(breakpointCheckerForMobile);
+
+	breakpointCheckerForMobile();
+	
 	})
 }
 
@@ -1199,8 +1265,9 @@ let scrollbar;
 		document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 		knowHeightOfElement('.history__photos--animate', '.history__photos__item');
-
-		scrollbarTabs.update()
+		if(containerTabsScroll){
+			scrollbarTabs.update()
+		}
 	});
 
 
@@ -1283,6 +1350,12 @@ let scrollbar;
 
 			horParallax();
 
+
+			let contacts = document.getElementById('contacts');
+			if(contacts){
+				contacts.classList.remove('no-barba');
+			}
+			
 			
 
 		}else if ( breakpointOnlyForDesktop.matches === false ) {
@@ -1312,16 +1385,48 @@ let scrollbar;
 				for(let i = 0; i<dropList.length; i++){
 
 					navItem[i].addEventListener('click', function(event){
+						event.stopPropagation();
+						event.preventDefault();
 						navLink[i].classList.toggle('active');
 						navItem[i].classList.toggle('active');
 
 						let dropdown = navItem[i].querySelector('.nav_dropdown');
+						console.log(navItem[i]);
 						dropdown.classList.toggle('active');
 
 					})
 				}
 
 			}
+
+
+			let contacts = document.getElementById('contacts');
+		
+			if(contacts){
+				contacts.classList.add('no-barba');
+				let menuItem = document.getElementById("menu-container");
+				let arrow = document.getElementById("arrow");
+				
+				function closeMenu() {
+					menuItem.classList.remove("show");
+					arrow.classList.remove("active");
+				}
+
+				contacts.addEventListener('click', function(event){
+					event.preventDefault();
+					event.stopPropagation();
+					console.log(menuItem);
+					menuItem.classList.toggle("show");
+					arrow.classList.toggle("active");
+				})
+
+				let contactsItem = document.querySelectorAll('.contacts-menu__nav-item');
+				for(let i = 0; i<contactsItem.length; i++){
+					contactsItem[i].addEventListener('click', closeMenu)
+				}
+				
+			}
+			
 		}
 	};
 	breakpointOnlyForDesktop.addListener(breakpointCheckerForDesktop);
@@ -1581,12 +1686,9 @@ const makeNavLinksSmoothMuseum = (sec, alllink) => {
 		btnPlay.addEventListener('click', playPauseMedia);
 
 		let btnsPlaySlider = document.querySelector('.button__video-controls--hero');
-		console.log(btnsPlaySlider);
 		if(btnsPlaySlider){
 			btnsPlaySlider.addEventListener('click', function(){
 				if(swiperHero.realIndex != 0){
-
-					console.log(swiperHero.realIndex);
 					swiperHero.slideToLoop(0, 100, true);
 					videoMain.currentTime = 0;
 				}
@@ -2018,59 +2120,55 @@ let popup = document.querySelectorAll('.popup_kirovets');
 
 
 // accordion
-let accordion = document.querySelector('.akcioner-info__accordion');
-if(accordion){
+// let accordion = document.querySelector('.akcioner-info__accordion');
+// if(accordion){
 
-	let menu = document.getElementsByClassName("akcioner-info__menu-icon");
-	let contactNavItem = document.getElementsByClassName("contacts-sidebar__nav-item");
-	let navItem = document.getElementsByClassName("contacts-navigation-list__item");
-	let actionerNavItem = document.getElementsByClassName('akcioner-navigation-list__item-active');
-	let contactsMenuItem = document.getElementsByClassName('contacts-navigation-list__item-active');
-	let contactsMenu = document.getElementsByClassName("contacts-menu-container");
+	// let menu = document.getElementsByClassName("akcioner-info__menu-icon");
+	// let contactNavItem = document.getElementsByClassName("contacts-sidebar__nav-item");
+	// let navItem = document.getElementsByClassName("contacts-navigation-list__item");
+	// let actionerNavItem = document.getElementsByClassName('akcioner-navigation-list__item-active');
+	// let contactsMenuItem = document.getElementsByClassName('contacts-navigation-list__item-active');
+	// let contactsMenu = document.getElementsByClassName("contacts-menu-container");
 
 
-	accordion.addEventListener('click', function(e) {
-		let accordionItems = document.querySelectorAll('.akcioner-info__accordion-item'),
-				target = e.target;
+	// accordion.addEventListener('click', function(e) {
+	// 	let accordionItems = document.querySelectorAll('.akcioner-info__accordion-item'),
+	// 			target = e.target;
 
-		Array.from(accordionItems).forEach(item => {
-			item.classList.remove('active')
-		})
-		target.classList.add('active')
-	})
+	// 	Array.from(accordionItems).forEach(item => {
+	// 		item.classList.remove('active')
+	// 	})
+	// 	target.classList.add('active')
+	// })
 
-	for (let i = 0; i < acc.length; i++) {
-		acc[i].addEventListener("click", function() {
-			this.classList.remove("active");
-		});
-	}
 
-	for (let i = 0; i < menu.length; i++) {
-		menu[i].addEventListener("click", function() {
-			this.classList.toggle("active");
-		});
-	}
 
-	for (let i = 0; i < contactsMenuItem.length; i++) {
-		contactsMenuItem[i].addEventListener("click", function() {
-			this.classList.toggle("active");
-		});
-	}
+	// for (let i = 0; i < menu.length; i++) {
+	// 	menu[i].addEventListener("click", function() {
+	// 		this.classList.toggle("active");
+	// 	});
+	// }
 
-	for (let i = 0; i < actionerNavItem.length; i++) {
-		actionerNavItem[i].addEventListener("click", function() {
-			this.classList.toggle("active");
-		});
-	}
+	// for (let i = 0; i < contactsMenuItem.length; i++) {
+	// 	contactsMenuItem[i].addEventListener("click", function() {
+	// 		this.classList.toggle("active");
+	// 	});
+	// }
 
-	for (let i = 0; i < contactNavItem.length; i++) {
-		contactNavItem[i].addEventListener("click", function() {
-			let current = document.getElementsByClassName("active");
-			current[0].className = current[0].className.replace(" active", "");
-			this.className += " active";
-		});
-	}
-}
+	// for (let i = 0; i < actionerNavItem.length; i++) {
+	// 	actionerNavItem[i].addEventListener("click", function() {
+	// 		this.classList.toggle("active");
+	// 	});
+	// }
+
+	// for (let i = 0; i < contactNavItem.length; i++) {
+	// 	contactNavItem[i].addEventListener("click", function() {
+	// 		let current = document.getElementsByClassName("active");
+	// 		current[0].className = current[0].className.replace(" active", "");
+	// 		this.className += " active";
+	// 	});
+	// }
+// }
 
 
 
@@ -2178,67 +2276,123 @@ let tabsEvent = document.getElementById('tabs_event');
 
 
 
+
+function customSelect(){
 //Кастомный select и option
+	if(document.querySelector('.select')) {
+		$('.select').each(function() {
+			const _this = $(this),
+				selectOption = _this.find('option'),
+				selectOptionLength = selectOption.length,
+				selectedOption = selectOption.filter(':selected'),
+				duration = 450; // длительность анимации
 
+			_this.hide();
+			_this.wrap('<div class="select"></div>');
+			$('<div>', {
+				class: 'new-select',
+				text: _this.children('option:disabled').text()
+			}).insertAfter(_this);
 
+			const selectHead = _this.next('.new-select');
+			$('<div>', {
+				class: 'new-select__list'
+			}).insertAfter(selectHead);
 
-if(document.querySelector('.vac-f__form-selector')) {
-	$('.select').each(function() {
-		const _this = $(this),
+			const selectList = selectHead.next('.new-select__list');
+			for (let i = 1; i < selectOptionLength; i++) {
+				$('<div>', {
+					class: 'new-select__item',
+					html: $('<span>', {
+						text: selectOption.eq(i).text()
+					})
+				})
+					.attr('data-value', selectOption.eq(i).val())
+					.appendTo(selectList);
+			}
+
+			const selectItem = selectList.find('.new-select__item');
+			selectList.slideUp(0);
+			selectHead.on('click', function() {
+				if ( !$(this).hasClass('on') ) {
+					$(this).addClass('on');
+					selectList.slideDown(duration);
+
+					selectItem.on('click', function() {
+						let chooseItem = $(this).data('value');
+
+						$('select').val(chooseItem).attr('selected', 'selected');
+						selectHead.text( $(this).find('span').text() );
+
+						selectList.slideUp(duration);
+						selectHead.removeClass('on');
+					});
+
+				} else {
+					$(this).removeClass('on');
+					selectList.slideUp(duration);
+				}
+			});
+		});
+	}
+	if(document.querySelector('.select-contact')) {
+		$('.select-contact').each(function () {
+			const _this = $(this),
 			selectOption = _this.find('option'),
 			selectOptionLength = selectOption.length,
 			selectedOption = selectOption.filter(':selected'),
 			duration = 450; // длительность анимации
 
-		_this.hide();
-		_this.wrap('<div class="select"></div>');
-		$('<div>', {
-			class: 'new-select',
-			text: _this.children('option:disabled').text()
-		}).insertAfter(_this);
-
-		const selectHead = _this.next('.new-select');
-		$('<div>', {
-			class: 'new-select__list'
-		}).insertAfter(selectHead);
-
-		const selectList = selectHead.next('.new-select__list');
-		for (let i = 1; i < selectOptionLength; i++) {
+			_this.hide();
+			_this.wrap('<div class="select"></div>');
 			$('<div>', {
-				class: 'new-select__item',
+			class: 'contacts_form_select my_select',
+			text: _this.children('option:disabled').text()
+			}).insertAfter(_this);
+
+			const selectHead = _this.next('.contacts_form_select');
+			$('<div>', {
+			class: 'contacts_form_select__list my_drop',
+			}).insertAfter(selectHead);
+
+			const selectList = selectHead.next('.contacts_form_select__list');
+			for (let i = 1; i < selectOptionLength; i++) {
+			$('<div>', {
+				class: 'contacts_form_select__item',
 				html: $('<span>', {
-					text: selectOption.eq(i).text()
+				text: selectOption.eq(i).text()
 				})
 			})
 				.attr('data-value', selectOption.eq(i).val())
 				.appendTo(selectList);
-		}
+			}
 
-		const selectItem = selectList.find('.new-select__item');
-		selectList.slideUp(0);
-		selectHead.on('click', function() {
-			if ( !$(this).hasClass('on') ) {
+			const selectItem = selectList.find('.contacts_form_select__item');
+			selectList.slideUp(0);
+			selectHead.on('click', function () {
+			if (!$(this).hasClass('on')) {
 				$(this).addClass('on');
 				selectList.slideDown(duration);
 
-				selectItem.on('click', function() {
-					let chooseItem = $(this).data('value');
+				selectItem.on('click', function () {
+				let chooseItem = $(this).data('value');
 
-					$('select').val(chooseItem).attr('selected', 'selected');
-					selectHead.text( $(this).find('span').text() );
+				$('select').val(chooseItem).attr('selected', 'selected');
+				selectHead.text($(this).find('span').text());
 
-					selectList.slideUp(duration);
-					selectHead.removeClass('on');
+				selectList.slideUp(duration);
+				selectHead.removeClass('on');
 				});
 
 			} else {
 				$(this).removeClass('on');
 				selectList.slideUp(duration);
 			}
+			});
 		});
-	});
-}
+	}
 
+}
 
 
 
@@ -2268,3 +2422,106 @@ if(document.querySelector('.vacancies-d__form-container')) {
 }
 
 
+
+
+// Создание яндекс карты
+
+
+function createMap(){
+	let maps = document.getElementById('yamap');
+
+	if(maps){
+
+
+		if (typeof(ymaps) == 'undefined') {
+			let tag = document.createElement('script');
+			tag.src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU";
+			let firstScriptTag = document.getElementsByTagName('script')[0];
+			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+		};
+		ymaps.ready(function () {
+			let map = new ymaps.Map(maps, {
+			  // center: [59.880069, 30.259939],
+			  center: [59.880402, 30.252628],
+			  zoom: 15
+			});
+		
+			let place = new ymaps.Placemark(
+				[59.880402, 30.252628], {
+				  hintContent: 'Кировский завод',
+				},
+				{
+				  iconImageHref: 'img/contacts/ya_maps_pin.svg',
+				  iconImageSize: [64, 64],
+				  iconLayout: 'default#image',
+				}
+			);
+			map.geoObjects.add(place);
+			map.behaviors.disable('scrollZoom');
+		  });
+	}
+}
+
+
+
+  // Accordion
+  let accordion = (function (element) {
+    let _getItem = function (elements, className) {
+      // функция для получения элемента с указанным классом
+      let element;
+      elements.forEach(function (item) {
+        if (item.classList.contains(className)) {
+          element = item;
+        }
+      });
+      return element;
+    };
+
+    return function () {
+      let _mainElement = {}, // .accordion
+        _items = {}, // .accordion-item
+        _contents = {}; // .accordion-item-content
+
+      let _actionClick = function (e) {
+          if (!e.target.classList.contains("accordion-item-header")) {
+            // прекращаем выполнение функции если кликнули не по заголовку
+            return;
+          }
+          e.preventDefault(); // Отменям стандартное действие
+          // получаем необходимые данные
+          let header = e.target,
+            item = header.parentElement,
+            itemActive = _getItem(_items, "show");
+
+          if (itemActive === undefined) {
+            // добавляем класс show к элементу (в зависимости от выбранного заголовка)
+            item.classList.add("show");
+          } else {
+            // удаляем класс show у ткущего элемента
+            itemActive.classList.remove("show");
+            // если следующая вкладка не равна активной
+            if (itemActive !== item) {
+              // добавляем класс show к элементу (в зависимости от выбранного заголовка)
+              item.classList.add("show");
+            }
+          }
+        },
+        _setupListeners = function () {
+          // добавим к элементу аккордиона обработчик события click
+          _mainElement.addEventListener("click", _actionClick);
+        };
+
+      return {
+        init: function (element) {
+          _mainElement =
+            typeof element === "string" ? document.querySelector(element) :element;
+          _items = _mainElement.querySelectorAll(".accordion-item");
+          _setupListeners();
+        }
+      };
+    };
+  })();
+  if(document.getElementById('accordion')){
+	let accordion1 = accordion();
+	accordion1.init("#accordion");
+  }

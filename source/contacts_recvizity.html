@@ -8,7 +8,7 @@
   <title>Обратная связь</title>
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
-<body>
+<body class="contact barbapage" data-barba="wrapper">
 
 
 <style>
@@ -383,93 +383,146 @@
 						background-repeat: no-repeat;">
 
         </div>
-        <!-- <video loop="" class="parallax__img-video" playsinline="" muted="">
-            <source src="./video/video-main.mp4" type="video/mp4">
-      </video> -->
+
       </div>
     </div>
 
     <div class="container">
       <div class="main__wrapper">
         <h1 class="main__title main__title--about">
-          <div class="title--inner-main">Реквизиты</div></h1>
+          <div class="title--inner-main contacts-header-title active" data-name="contacts">Контакты</div>
+            <div class="title--inner-main contacts-header-title" data-name="contacts_form">Обратная связь</div>
+            <div class="title--inner-main contacts-header-title" data-name="contacts_hotline">Горячая линия</div>
+            <div class="title--inner-main contacts-header-title" data-name="contacts_recvizity">Реквизиты</div>
+            <div class="title--inner-main contacts-header-title" data-name="contacts-leadership">Руководство</div>
+            <div class="title--inner-main contacts-header-title" data-name="contacts-press">Пресс-центр</div>
+            <div class="title--inner-main contacts-header-title" data-name="contacts-group">Дочерние <br>компании</div>
+            <div class="title--inner-main contacts-header-title" data-name="contacts-employment">Трудоустройство</div>
+            <div class="title--inner-main contacts-header-title" data-name="contacts-rent">Аренда</div>
+            <div class="title--inner-main contacts-header-title" data-name="contacts-museum">Музей</div> 
       </div>
     </div>
-
-    <!-- <div class="button__video-controls-wrap">
-        <button class="button__video-controls button__video-controls--play"></button>
-
-    </div> -->
   </section>
+
+
+  <div class="rent__wrapper">
+    <div class="tabs-common__wrapper">
+          <div class="container">
+
+          
+              <div class="tabs-common">
+
+                  <div class="tabs-common-container" id="barba-nav">
+                 
+                      <a id="contacts" href="contacts.html" class=" contacts-navigation-list__item tabs-common-links tabs-common-links--barba"  id="contacts" >
+                        Контакты
+                        <svg id="arrow" class="contacts-navigation-list__item-arrow" width="14" height="9" viewBox="0 0 14 9" fill="none"
+                      xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 8L13 1" stroke="#C30215"/></svg>
+                      </a>
+
+                     
+                  
+      
+                      <a href="contacts_form.html" class="tabs-common-links tabs-common-links--barba" >Обратная связь</a>
+                      <a href="contacts_hotline.html" class=" tabs-common-links tabs-common-links--barba active">Горячая линия</a>
+                      <a href="contacts_recvizity.html" class=" tabs-common-links tabs-common-links--barba">Реквизиты</a>
+                  </div>
+
+              </div>
+              <nav id="menu-container" class="contacts-menu-container">
+                <ul class="contacts-menu__nav-list">
+                  <li class="contacts-menu__nav-item" data-name="contacts-main">
+                    <a class="contacts-sidebar__nav-link" href="contacts.html">Контакты</a>
+                  </li>
+                  <li class="contacts-menu__nav-item" data-name="management">
+                    <a class="contacts-sidebar__nav-link" href="contacts-leadership.html">Руководство</a>
+                  </li>
+                  <li class="contacts-menu__nav-item" data-name="press-center">
+                    <a class="contacts-sidebar__nav-link" href="contacts-press.html">Пресс-центр</a>
+                  </li>
+                  <li class="contacts-menu__nav-item" data-name="group">
+                    <a class="contacts-sidebar__nav-link" href="contacts-group.html">Дочерние компании</a>
+                  </li>
+                  <li class="contacts-menu__nav-item" data-name="employment">
+                    <a  class="contacts-sidebar__nav-link" href="contacts-employment.html">Трудоустройство</a>
+                  </li>
+                  <li class="contacts-menu__nav-item" data-name="rent">
+                    <a class="contacts-sidebar__nav-link" href="contacts-rent.html">Аренда</a>
+                  </li>
+                  <li class="contacts-menu__nav-item" data-name="museum">
+                    <a class="contacts-sidebar__nav-link" href="contacts-museum.html">Музей</a>
+                  </li>
+                </ul>
+              </nav> 
+          </div>
+      </div>
+  </div>
+
   <div class="contacts-container two-screen">
-    <nav id="barba-wrapper" class="contacts-navigation">
-      <ul class="contacts-navigation-list barba-container">
-        <li class="contacts-navigation-list__item">
-          <a href="contacts.html">Контакты</a>
-        </li>
-        <li class="contacts-navigation-list__item"><a href="contacts_form.html">Обратная связь</a></li>
-        <li class="contacts-navigation-list__item"><a href="contacts_hotline.html">Горячая линия</a></li>
-        <li class="contacts-navigation-list__item active"><a href="contacts_recvizity.html">Реквизиты</a></li>
-      </ul>
-    </nav>
+ 
 
     <main class="contacts__content-container">
+      <div  class="barbawrapper contacts-info-container contacts-info__contacts-container contacts_tabs tab_contacts-main" data-barba="container" data-barba-namespace="home" data-barba-prevent="all">
+        <div class="barba_background"></div>
+        <div class="barba_background--next"></div>
+        <div class="barba_background-in">
+          <section class="">
+            <div class="contacts-mobile_container">
+              <h2 class="contacts__contacts-info__main">ПАО «КИРОВСКИЙ ЗАВОД»</h2>
+              <div class="contacts__contacts-info__pressc">
+                <div class="contacts_hotline_text">
+                  <p>
+                    Россия, 198097, г. Санкт-Петербург проспект Стачек д.47, литера Щ, пом. 8-н кабинет 6
+                  </p>
+                  <p>
+                    ИНН/КПП 7805019279/ 780501001
+                  </p>
+                  <p>
+                    Р/С 40702810300000004097
+                  </p>
+                  <p>
+                    в АО «АБ «РОССИЯ», г. Санкт-Петербург
+                  </p>
+                  <p>
+                    БИК 044030861
+                  </p>
+                  <p>
+                    К/С 30101810800000000861
+                  </p>
+                </div>
 
-      <section class="contacts-info-container contacts-info__contacts-container">
-        <div class="contacts-mobile_container">
-          <h2 class="contacts__contacts-info__main">ПАО «КИРОВСКИЙ ЗАВОД»</h2>
-          <div class="contacts__contacts-info__pressc">
-            <div class="contacts_hotline_text">
-              <p>
-                Россия, 198097, г. Санкт-Петербург проспект Стачек д.47, литера Щ, пом. 8-н кабинет 6
-              </p>
-              <p>
-                ИНН/КПП 7805019279/ 780501001
-              </p>
-              <p>
-                Р/С 40702810300000004097
-              </p>
-              <p>
-                в АО «АБ «РОССИЯ», г. Санкт-Петербург
-              </p>
-              <p>
-                БИК 044030861
-              </p>
-              <p>
-                К/С 30101810800000000861
-              </p>
+              </div>
             </div>
-
-          </div>
+          </section>
         </div>
-      </section>
+      </div>
 
       <aside class="contacts-sidebar">
-        <nav class="contacts-sidebar__nav">
-          <ul class="contacts-sidebar__nav-list">
-            <li class="contacts-sidebar__nav-item" data-name="contacts-main">
-              <a href="contacts.html#contacts-main">Контакты</a>
+        <nav id="menu-container" class="contacts-menu-container">
+          <ul class="contacts-menu__nav-list">
+            <li class="contacts-menu__nav-item" data-name="contacts-main">
+              <a class="contacts-sidebar__nav-link" href="contacts.html">Контакты</a>
             </li>
-            <li class="contacts-sidebar__nav-item" data-name="management">
-              <a href="contacts.html#management">Руководство</a>
+            <li class="contacts-menu__nav-item" data-name="management">
+              <a class="contacts-sidebar__nav-link" href="contacts-leadership.html">Руководство</a>
             </li>
-            <li class="contacts-sidebar__nav-item" data-name="press-center">
-              <a href="contacts.html#press-center">Пресс-центр</a>
+            <li class="contacts-menu__nav-item" data-name="press-center">
+              <a class="contacts-sidebar__nav-link" href="contacts-press.html">Пресс-центр</a>
             </li>
-            <li class="contacts-sidebar__nav-item" data-name="group">
-              <a href="contacts.html#group">Дочерние компании</a>
+            <li class="contacts-menu__nav-item" data-name="group">
+              <a class="contacts-sidebar__nav-link" href="contacts-group.html">Дочерние компании</a>
             </li>
-            <li class="contacts-sidebar__nav-item" data-name="employment">
-              <a href="contacts.html#employment">Трудоустройство</a>
+            <li class="contacts-menu__nav-item" data-name="employment">
+              <a  class="contacts-sidebar__nav-link" href="contacts-employment.html">Трудоустройство</a>
             </li>
-            <li class="contacts-sidebar__nav-item" data-name="rent">
-              <a href="contacts.html#rent">Аренда</a>
+            <li class="contacts-menu__nav-item" data-name="rent">
+              <a class="contacts-sidebar__nav-link" href="contacts-rent.html">Аренда</a>
             </li>
-            <li class="contacts-sidebar__nav-item" data-name="museum">
-              <a href="contacts.html#museum">Музей</a>
+            <li class="contacts-menu__nav-item" data-name="museum">
+              <a class="contacts-sidebar__nav-link" href="contacts-museum.html">Музей</a>
             </li>
           </ul>
-        </nav>
+        </nav> 
         <section class="contacts-sidebar__contacts">
           <div class="contacts-social-container">
             <ul class="contacts-social__list">
@@ -640,22 +693,9 @@
     </div>
   </footer>
 </div>
-<script src="./js/script.min.js"></script>
-<script>
-  function closeMenu() {
-    let x = document.getElementById("menu-container");
-    x.classList.remove("show");
-  }
 
-  function toggleDropDown() {
-    let x = document.getElementById("menu-container"),
-        width = document.documentElement.clientWidth;
-    if (width <= 768) {
-      x.classList.toggle("show");
-    } else {
-      closeMenu();
-    }
-  }
-</script>
+<script src='https://api-maps.yandex.ru/2.1/?lang=ru_RU'></script>
+<script src="./js/script.min.js"></script>
+
 </body>
 </html>
