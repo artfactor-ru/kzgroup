@@ -1772,7 +1772,15 @@
         </div>
         </div>
 
+        <script>
+            document.querySelectorAll('.museum__gallery__img').forEach(e => {
+
+                // e.parentElement.nextElementSibling.style.maxWidth = e.offsetWidth;
+                e.parentElement.nextElementSibling.style.width = (e.offsetWidth - 10) + 'px';
+            });
+        </script>
         <script src="./js/script.min.js"></script>
+
 </body>
 
 </html>
