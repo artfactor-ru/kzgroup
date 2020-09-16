@@ -323,28 +323,28 @@
   flex-direction: column;
 }
 
-@media screen and (max-width: 1561px) {
-  .rent-details__socials {
-    top: -13%;
-  }
-  .rent-details__form {
-    height: 650px;
-    padding: 30px 0;
-  }
-  .rent-details__form-label textarea {
-    height: 105px;
-  }
-  .rent-details__form-wrapper h2 {
-    margin-bottom: 20px;
-  }
-  .rent-details__slider .gallery-thumbs {
-    height: 15%;
-    width: 67%;
-    bottom: 109px;
-  }
-}
+//@media screen and (max-width: 1561px) {
+//  .rent-details__socials {
+//    top: -13%;
+//  }
+//  .rent-details__form {
+//    height: 650px;
+//    padding: 30px 0;
+//  }
+//  .rent-details__form-label textarea {
+//    height: 105px;
+//  }
+//  .rent-details__form-wrapper h2 {
+//    margin-bottom: 20px;
+//  }
+//  .rent-details__slider .gallery-thumbs {
+//    height: 15%;
+//    width: 67%;
+//    bottom: 109px;
+//  }
+//}
 
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1680px) {
   .rent-details__slider .gallery-thumbs {
     bottom: 102px;
     height: 17%;
