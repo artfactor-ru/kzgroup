@@ -1,0 +1,130 @@
+
+
+.ptz_about{
+
+	background-image: url(../img/ptz/ptz-bg-about.svg);
+	padding-bottom: 80px;
+	background-size: cover ;
+}
+
+
+
+
+.parallax__img--ptz  {
+
+	background-position: bottom center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+ 
+  position: absolute;
+	// z-index: -1;
+	height: 370px;
+	// background-size: 100% auto;
+}
+
+
+
+@media(min-width: 767px){
+	
+	.ptz_about{
+		background-size: cover ;
+	}
+	
+	.parallax__img--ptz{
+
+		background-position: bottom center;
+		background-size: auto 505px;
+		background-repeat: no-repeat;
+		width: 100%;
+		position: absolute;
+		z-index: -1;
+		height: 505px;
+
+	}
+
+}
+
+@media(min-width: 1280px){
+    
+    .ptz_about{
+		padding-bottom: 0;
+        background-image: none;
+    }
+	
+	.parallax__img--ptz{
+
+		background-position: bottom  center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		width: 100%;
+		position: absolute;
+		z-index: -1;
+	
+		
+	}
+	.parallax__img--ptz-1{
+		background-image: url(../img/ptz/ptz-parallax-1.svg);
+		background-position: bottom  center;
+		--overflow: -80px;
+		// --overflow: -20%;
+		height: calc(660px + (2 * var(--overflow)));
+		top: calc( -1 * var(--overflow));
+		
+	}
+	.parallax__img--ptz-2{
+		background-image: url(../img/ptz/ptz-parallax-2.svg);
+		// --overflow: -15%;
+		--overflow: -50px;
+		height: calc(660px + (2 * var(--overflow)));
+		top: calc( -1 * var(--overflow));
+		
+	}
+	.parallax__img--ptz-3{
+		background-image: url(../img/ptz/ptz-parallax-3.svg);
+		// --overflow: -150px;
+		--overflow: -130px;
+		// --overflow: -50%;
+		height: calc(660px + (2 * var(--overflow)));
+		top: calc( -1 * var(--overflow));
+	
+	}
+
+
+
+
+	
+
+}
+
+@media(min-width: 1680px){
+	
+	.parallax__img--aboutcompany-1{
+		// background-image: url(../img/about/about-parallax-first-1.svg);
+		background-position: bottom  center;
+		--overflow: -100px;
+		// --overflow: -20%;
+		height: calc(660px + (2 * var(--overflow)));
+		top: calc( -1 * var(--overflow));
+		
+	}
+	.parallax__img--aboutcompany-2{
+		// background-image: url(../img/about/about-parallax-first-2.svg);
+		// --overflow: -15%;
+		--overflow: -50px;
+		height: calc(660px + (2 * var(--overflow)));
+		top: calc( -1 * var(--overflow));
+		
+	}
+	.parallax__img--aboutcompany-3{
+		// background-image: url(../img/about/about-parallax-first-3.svg);
+		// --overflow: -150px;
+		--overflow: -130px;
+		// --overflow: -50%;
+		height: calc(660px + (2 * var(--overflow)));
+		top: calc( -1 * var(--overflow));
+	
+	}
+
+
+}
