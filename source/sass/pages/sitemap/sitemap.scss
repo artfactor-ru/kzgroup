@@ -6,6 +6,7 @@
     }
 }
 
+<<<<<<< HEAD
 .sitemap__back {
     border: 0;
     background: 0 0;
@@ -30,6 +31,8 @@
     }
 }
 
+=======
+>>>>>>> history
 .sitemap__title {
     font-family: $font-bold-2-title;
     font-size: 22px;
@@ -48,13 +51,21 @@
     &.accordion-item {
         border-bottom: none;
         & .sitemap__item--list {
+<<<<<<< HEAD
             padding-bottom: 0px;
+=======
+            padding-bottom: 0;
+>>>>>>> history
         }
     }
 }
 
 .sitemap__item {
+<<<<<<< HEAD
     margin-bottom: 0px;
+=======
+    margin-bottom: 14px;
+>>>>>>> history
     &.accordion-item {
         border-bottom: none;
         & .sitemap__item--list {
@@ -72,6 +83,7 @@
     color: $black-grey;
     padding-top: 0;
     padding-bottom: 0;
+<<<<<<< HEAD
     margin-bottom: 10px;
     position: relative;
     display: inline-block;
@@ -81,31 +93,55 @@
         &:hover {
             color: $red-color;
         }
+=======
+    position: relative;
+    display: inline-block;
+    & .sitemap__item--link {
+        color: $black-grey;
+>>>>>>> history
     }
     &.accordion-item-header {
         &::after {
             position: absolute;
+<<<<<<< HEAD
             right: -28px;
+=======
+            right: -32px;
+>>>>>>> history
             top: 0;
             bottom: 0;
             margin: auto;
             background-size: contain;
+<<<<<<< HEAD
             min-width: 14px;
             width: 14px;
             height: 11px;
             min-height: 11px;
+=======
+            min-width: 20px;
+            width: 20px;
+            height: 13px;
+            min-height: 13px;
+>>>>>>> history
         }
     }
 }
 
 .sitemap__item--list {
     font-size: 12px;
+<<<<<<< HEAD
     line-height: 16px;
+=======
+    line-height: 30px;
+>>>>>>> history
     color: $grey-text-paragraf;
 }
 
 .sitemap__item--list-item {
+<<<<<<< HEAD
     margin-bottom: 13px;
+=======
+>>>>>>> history
     & .sitemap__item--link {
         color: $grey-text-paragraf;
     }
@@ -114,6 +150,7 @@
             color: $red-color;
         }
     }
+<<<<<<< HEAD
 }
 
 @media(min-width: 767px) {
@@ -237,4 +274,6 @@
     .sitemap__item--list {
         font-size: 15px;
     }
+=======
+>>>>>>> history
 }
