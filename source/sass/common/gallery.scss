@@ -98,25 +98,22 @@
     @extend %block-text;
     padding-top: 15px;
     padding-bottom: 25px;
-    max-width: 135px;
+    padding-left: 10px;
+    padding-right: 0px;
     font-size: 13px;
     @media(min-width: 768px) {
-        padding-left: 5px;
+        padding-left: 10px;
         padding-right: 0px;
     }
     @media(min-width: 1280px) {
-        max-width: 195px;
         padding-top: 25px;
         padding-bottom: 25px;
-        padding-left: 5px;
         font-size: 14px;
     }
     @media(min-width: 1680px) {
-        max-width: 280px;
         padding-top: 35px;
         padding-bottom: 60px;
-        padding-left: 10px;
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 
