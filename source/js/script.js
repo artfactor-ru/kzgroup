@@ -36,6 +36,9 @@ if(document.querySelector('.barbapage')){
 		if(links[i].classList.contains('contacts-sidebar__nav-link')){
 			links[i].classList.remove('no-barba');
 		}	
+		if(links[i].classList.contains('contacts-sidebar__nav-link--mobile')){
+			links[i].classList.remove('no-barba');
+		}	
 	}
 
 	barba.init({
@@ -49,7 +52,7 @@ if(document.querySelector('.barbapage')){
 
 				data.current.container.classList.add('active');
 				const done = this.async();
-				await delay(1000);
+				await delay(800);
 				
 				done();
 			
@@ -80,12 +83,12 @@ if(document.querySelector('.barbapage')){
 	
 		breakpoint.addListener(breakpointChecker);
 		breakpointChecker();
-		// breakpointOnlyForDesktop.addListener(breakpointCheckerForDesktop);
-		// breakpointCheckerForDesktop();
+		
 		
 		
 		checkUrl('.tabs-common-links--barba');
 		checkUrl('.contacts-sidebar__nav-link');
+		checkUrl('.contacts-sidebar__nav-link--mobile');
 		checkUrlForTitle('.contacts-header-title');
 		
 	
@@ -97,22 +100,27 @@ if(document.querySelector('.barbapage')){
 		
 		}
 			
-		createMap();
+	
 
 		customSelect();
 
 	
 		if(document.getElementById('accordion')){
-			let accordion1 = accordion();
-			accordion1.init("#accordion");
+			 accordion();
 		}
 		
+		createMap();
 			
 	
 	});
 
 	
 }
+
+barba.hooks.once(() => {
+	breakpointOnlyForDesktop.addListener(breakpointCheckerForDesktop);
+	breakpointCheckerForDesktop();
+});
 
 // import $ from "jquery";
 var $ = require( "jquery" );
@@ -185,10 +193,9 @@ function checkUrlForTitle( title){
 		// barbalink[i].addEventListener('click', function(){
 			let namePage = header[i].dataset.name;
 
-			let path = window.location.pathname.split('.')[0];
-			let purePath = path.substr(1);
+			let path = window.location.href;
 			
-			if(namePage == purePath){
+			if(path.indexOf(namePage)> -1){
 				setTimeout(function(){
 				header[i].classList.add('active');
 
@@ -204,13 +211,14 @@ function checkUrlForTitle( title){
 document.addEventListener('DOMContentLoaded', function(){
 	checkUrl('.tabs-common-links--barba');
 	checkUrl('.contacts-sidebar__nav-link');
+	checkUrl('.contacts-sidebar__nav-link--mobile');
 	checkUrlForTitle('.contacts-header-title');
 	checkUrlForTabs('.tabs-common-links-js');
 	knowHeightOfElement('.history__photos--animate', '.history__photos__item');
 
-	createMap();
-	customSelect();
 	
+	customSelect();
+	createMap();
 	
 })
 
@@ -444,7 +452,7 @@ let options3  = {
 let options4  = {
 	damping: 0.09,
 	renderByPixels: true,
-	continuousScrolling: false
+	// continuousScrolling: false
 	// delegateTo: document
 }
 
@@ -1282,6 +1290,18 @@ let scrollbar;
 	
 	}
 
+	function closeMenu() {
+		menuItem.classList.remove("show");
+		arrow.classList.remove("active");
+	}
+	let menuItem = document.getElementById("menu-container");
+	let arrow = document.getElementById("arrow");
+	function showMenu(event){
+		event.preventDefault();
+		event.stopPropagation();
+		menuItem.classList.toggle("show");
+		arrow.classList.toggle("active");
+	}
 
 
 
@@ -1353,7 +1373,9 @@ let scrollbar;
 
 			let contacts = document.getElementById('contacts');
 			if(contacts){
+				
 				contacts.classList.remove('no-barba');
+				contacts.removeEventListener('click', showMenu);
 			}
 			
 			
@@ -1385,13 +1407,10 @@ let scrollbar;
 				for(let i = 0; i<dropList.length; i++){
 
 					navItem[i].addEventListener('click', function(event){
-						event.stopPropagation();
-						event.preventDefault();
 						navLink[i].classList.toggle('active');
 						navItem[i].classList.toggle('active');
 
 						let dropdown = navItem[i].querySelector('.nav_dropdown');
-						console.log(navItem[i]);
 						dropdown.classList.toggle('active');
 
 					})
@@ -1404,21 +1423,8 @@ let scrollbar;
 		
 			if(contacts){
 				contacts.classList.add('no-barba');
-				let menuItem = document.getElementById("menu-container");
-				let arrow = document.getElementById("arrow");
-				
-				function closeMenu() {
-					menuItem.classList.remove("show");
-					arrow.classList.remove("active");
-				}
-
-				contacts.addEventListener('click', function(event){
-					event.preventDefault();
-					event.stopPropagation();
-					console.log(menuItem);
-					menuItem.classList.toggle("show");
-					arrow.classList.toggle("active");
-				})
+			
+				contacts.addEventListener('click', showMenu);
 
 				let contactsItem = document.querySelectorAll('.contacts-menu__nav-item');
 				for(let i = 0; i<contactsItem.length; i++){
@@ -2119,62 +2125,6 @@ let popup = document.querySelectorAll('.popup_kirovets');
 	
 
 
-// accordion
-// let accordion = document.querySelector('.akcioner-info__accordion');
-// if(accordion){
-
-	// let menu = document.getElementsByClassName("akcioner-info__menu-icon");
-	// let contactNavItem = document.getElementsByClassName("contacts-sidebar__nav-item");
-	// let navItem = document.getElementsByClassName("contacts-navigation-list__item");
-	// let actionerNavItem = document.getElementsByClassName('akcioner-navigation-list__item-active');
-	// let contactsMenuItem = document.getElementsByClassName('contacts-navigation-list__item-active');
-	// let contactsMenu = document.getElementsByClassName("contacts-menu-container");
-
-
-	// accordion.addEventListener('click', function(e) {
-	// 	let accordionItems = document.querySelectorAll('.akcioner-info__accordion-item'),
-	// 			target = e.target;
-
-	// 	Array.from(accordionItems).forEach(item => {
-	// 		item.classList.remove('active')
-	// 	})
-	// 	target.classList.add('active')
-	// })
-
-
-
-	// for (let i = 0; i < menu.length; i++) {
-	// 	menu[i].addEventListener("click", function() {
-	// 		this.classList.toggle("active");
-	// 	});
-	// }
-
-	// for (let i = 0; i < contactsMenuItem.length; i++) {
-	// 	contactsMenuItem[i].addEventListener("click", function() {
-	// 		this.classList.toggle("active");
-	// 	});
-	// }
-
-	// for (let i = 0; i < actionerNavItem.length; i++) {
-	// 	actionerNavItem[i].addEventListener("click", function() {
-	// 		this.classList.toggle("active");
-	// 	});
-	// }
-
-	// for (let i = 0; i < contactNavItem.length; i++) {
-	// 	contactNavItem[i].addEventListener("click", function() {
-	// 		let current = document.getElementsByClassName("active");
-	// 		current[0].className = current[0].className.replace(" active", "");
-	// 		this.className += " active";
-	// 	});
-	// }
-// }
-
-
-
-
-
-
 
 if(document.querySelector('.geography')){
 	//Добавление класса active к городам section-geography__map-item в рандомном порядке 
@@ -2463,65 +2413,32 @@ function createMap(){
 }
 
 
+function accordion(){
+	let accordionItem = document.querySelectorAll('.accordion-item'),
+		active = document.getElementsByClassName('show');
 
-  // Accordion
-  let accordion = (function (element) {
-    let _getItem = function (elements, className) {
-      // функция для получения элемента с указанным классом
-      let element;
-      elements.forEach(function (item) {
-        if (item.classList.contains(className)) {
-          element = item;
-        }
-      });
-      return element;
-    };
+	Array.from(accordionItem).forEach(function(item, i, accordionItem) {
+		item.querySelector('.accordion-item-header').addEventListener('click', function(e) {
+			if (active.length && active[0] !== item) {
+				active[0].querySelector('.accordion-item-content').style.height = 0 + 'px';
+				active[0].classList.remove('show'); 
+			} 
+			
+			let content = item.querySelector('.accordion-item-wrap');
+			let contentHeight = content.offsetHeight;
+			if(item.classList.contains('show')){
+				item.classList.remove('show');
+				item.querySelector('.accordion-item-content').style.height = 0 + 'px';
+			}else if(!item.classList.contains('show')){
+				item.classList.add('show');
+				item.querySelector('.accordion-item-content').style.height = contentHeight + 'px';
+			}
+			
+			
+		});
+	});
+}
 
-    return function () {
-      let _mainElement = {}, // .accordion
-        _items = {}, // .accordion-item
-        _contents = {}; // .accordion-item-content
-
-      let _actionClick = function (e) {
-          if (!e.target.classList.contains("accordion-item-header")) {
-            // прекращаем выполнение функции если кликнули не по заголовку
-            return;
-          }
-          e.preventDefault(); // Отменям стандартное действие
-          // получаем необходимые данные
-          let header = e.target,
-            item = header.parentElement,
-            itemActive = _getItem(_items, "show");
-
-          if (itemActive === undefined) {
-            // добавляем класс show к элементу (в зависимости от выбранного заголовка)
-            item.classList.add("show");
-          } else {
-            // удаляем класс show у ткущего элемента
-            itemActive.classList.remove("show");
-            // если следующая вкладка не равна активной
-            if (itemActive !== item) {
-              // добавляем класс show к элементу (в зависимости от выбранного заголовка)
-              item.classList.add("show");
-            }
-          }
-        },
-        _setupListeners = function () {
-          // добавим к элементу аккордиона обработчик события click
-          _mainElement.addEventListener("click", _actionClick);
-        };
-
-      return {
-        init: function (element) {
-          _mainElement =
-            typeof element === "string" ? document.querySelector(element) :element;
-          _items = _mainElement.querySelectorAll(".accordion-item");
-          _setupListeners();
-        }
-      };
-    };
-  })();
-  if(document.getElementById('accordion')){
-	let accordion1 = accordion();
-	accordion1.init("#accordion");
-  }
+if(document.getElementById('accordion')){
+	accordion();
+}

@@ -30,6 +30,10 @@ address {
 
   &__accordion-container {
     margin-bottom: 115px;
+    width: 88%;
+    @media(max-width: 1679px){
+      width: 100%;
+    }
   }
 
   &-container {
@@ -38,7 +42,8 @@ address {
     padding-left: 9%;
     max-width: 1920px;
     margin: 0 auto;
-
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
     @media(max-width: 1679px){
       padding-left: 8%;
     }
@@ -64,7 +69,7 @@ address {
     overflow-y: hidden;
     border-bottom: none;
 
-    @media(max-width: 1680px) {
+    @media(max-width: 1679px) {
       border-bottom: none;
       font-size: 16px;
     }
@@ -114,7 +119,7 @@ address {
       //border-bottom: 2px solid #E2E2E2;
 
       //padding: 0;
-      @media(max-width: 1680px) {
+      @media(max-width: 1679px) {
         width: 68%;
         padding-right: 10%;
       }
@@ -182,7 +187,7 @@ address {
           background-color: $red-color;
           transition: width .5s;
 
-          @media(max-width: 1680px) {
+          @media(max-width: 1679px) {
             bottom: -3px;
           }
         }
@@ -206,7 +211,7 @@ address {
           transition: color .5s ease;
 
 
-          @media(max-width: 1680px) {
+          @media(max-width: 1679px) {
             padding-bottom: 20px;
             font-size: 20px;
             line-height: 18px;
@@ -265,6 +270,7 @@ address {
       width: 100%;
       display: flex;
       overflow: hidden;
+      
     }
   }
 
@@ -305,7 +311,7 @@ address {
     &__contacts-container {
       padding-top: 65px;
 
-      @media(max-width: 1680px) {
+      @media(max-width: 1679px) {
         padding-top: 55px;
       }
 
@@ -325,7 +331,7 @@ address {
       width: 80%;
       padding-right: 2%;
 
-      @media(max-width: 1680px) {
+      @media(max-width: 1679px) {
         width: 70%;
       }
 
@@ -368,7 +374,7 @@ address {
 
         margin-bottom: 10px;
 
-        @media(max-width: 1680px) {
+        @media(max-width: 1679px) {
           font-size: 20px;
         }
 
@@ -387,7 +393,7 @@ address {
         margin-right: 115px;
         margin-bottom: 20px;
 
-        @media(max-width: 1680px) {
+        @media(max-width: 1679px) {
           font-size: 16px;
           &:last-child {
             margin-bottom: 0;
@@ -437,7 +443,7 @@ address {
         margin-bottom: 0;
       }
 
-      @media(max-width: 1680px) {
+      @media(max-width: 1679px) {
         margin-bottom: 20px;
       }
 
@@ -457,7 +463,7 @@ address {
         font-size: 46px;
         padding-bottom: 32px;
 
-        @media(max-width: 1680px) {
+        @media(max-width: 1679px) {
           font-size: 36px;
           padding-bottom: 25px;
         }
@@ -487,7 +493,7 @@ address {
           padding-top: 15px;
           margin-bottom: 40px;
 
-          @media(max-width: 1680px) {
+          @media(max-width: 1679px) {
             font-size: 25px;
           }
 
@@ -506,7 +512,7 @@ address {
             font-size: 24px;
             margin-bottom: 16px;
 
-            @media(max-width: 1680px) {
+            @media(max-width: 1679px) {
               font-size: 22px;
             }
 
@@ -529,7 +535,7 @@ address {
         color: $grey-text-paragraf;
         margin-bottom: 0;
 
-        @media(max-width: 1680px) {
+        @media(max-width: 1679px) {
           font-size: 16px;
         }
 
@@ -548,7 +554,7 @@ address {
         line-height: 1.5;
         color: $black-grey;
 
-        @media(max-width: 1680px) {
+        @media(max-width: 1679px) {
           font-size: 20px;
         }
 
@@ -590,7 +596,7 @@ address {
     width: 90%;
     margin-top: 30px;
 
-    @media(max-width: 1680px) {
+    @media(max-width: 1679px) {
       padding-top: 30px;
     }
 
@@ -606,7 +612,7 @@ address {
     &>div {
       height: 462px;
 
-      @media(max-width: 1680px) {
+      @media(max-width: 1679px) {
         height: 316px;
       }
 
@@ -625,7 +631,7 @@ address {
     width: 39.4%;
     background-color: $bg-color-light-grey;
     margin-top: 1px;
-    @media(max-width: 1680px) {
+    @media(max-width: 1679px) {
       width: 31.6%;
     }
 
@@ -675,7 +681,7 @@ address {
       margin-bottom: 40px;
       padding-left: 6%;
 
-      @media(max-width: 1680px) {
+      @media(max-width: 1679px) {
         margin-bottom: 30px;
       }
 
@@ -697,7 +703,7 @@ address {
 
     &__nav {
       padding-top: 70px;
-      @media(max-width: 1680px) {
+      @media(max-width: 1679px) {
         padding-top: 58px;
       }
 
@@ -711,7 +717,7 @@ address {
         margin-bottom: 35px;
         padding-left: 6%;
 
-        @media(max-width: 1680px) {
+        @media(max-width: 1679px) {
           margin-bottom: 21px;
           padding-left: 10%;
         }
@@ -727,7 +733,7 @@ address {
           color: $grey-text-paragraf;
           transition: color .5s ease;
 
-          @media(max-width: 1680px) {
+          @media(max-width: 1679px) {
             font-size: 16px;
           }
 
@@ -763,7 +769,7 @@ address {
       border-top: 1px solid #E2E2E2;
       padding-top: 80px;
 
-      @media(max-width: 1680px) {
+      @media(max-width: 1679px) {
         padding-top: 26px;
       }
     }
@@ -773,7 +779,7 @@ address {
       display: flex;
       padding-bottom: 50px;
 
-      @media(max-width: 1680px) {
+      @media(max-width: 1679px) {
         padding-top: 14px;
       }
 
@@ -812,7 +818,7 @@ address {
           color: $black-grey;
           margin-bottom: 20px;
 
-          @media(max-width: 1680px) {
+          @media(max-width: 1679px) {
             font-size: 16px;
             line-height: 1.2;
             width: 200px;
@@ -854,9 +860,10 @@ address {
       font-weight: 500;
       font-size: 14px;
       line-height: 100%;
+      outline: none;
       transition: border .5s ease;
 
-      @media(max-width: 1680px) {
+      @media(max-width: 1679px) {
         width: 186px;
         height: 50px;
       }
@@ -870,7 +877,7 @@ address {
       }
 
       &:focus {
-        box-shadow: 0 0 0 3px rgba($black-grey, .25);
+        border: solid 1px $black-grey;
       }
     }
 
@@ -888,7 +895,7 @@ address {
       cursor: pointer;
       outline: none;
 
-      @media(max-width: 1680px) {
+      @media(max-width: 1679px) {
         width: 60px;
         height: 50px;
       }
@@ -923,7 +930,7 @@ address {
     &_contacts {
       margin-bottom: 26px;
 
-      @media(max-width: 1680px) {
+      @media(max-width: 1679px) {
         margin-bottom: 22px;
       }
 
@@ -942,12 +949,12 @@ address {
 
     &_title {
       font-family: $font-text-regular;
-      font-weight: 500;
+      font-weight: 800;
       font-size: 18px;
       line-height: 1.3;
       color: $black-grey;
 
-      @media(max-width: 1680px) {
+      @media(max-width: 1679px) {
         font-size: 16px;
       }
 
@@ -966,7 +973,7 @@ address {
       font-size: 18px;
       line-height: 1.2;
       color: $grey-text-paragraf;
-      @media(max-width: 1680px) {
+      @media(max-width: 1679px) {
         font-size: 16px;
       }
 
@@ -1004,13 +1011,13 @@ address {
     &_text {
       margin-bottom: 50px;
 
-      @media(max-width: 1680px) {
+      @media(max-width: 1679px) {
         margin-bottom: 25px;
       }
       @media(max-width: 1279px) {
         margin-bottom: 25px;
       }
-      @media(max-width: 1680px) {
+      @media(max-width: 1679px) {
         margin-bottom: 35px;
       }
     }
@@ -1022,7 +1029,7 @@ address {
       color: $black-grey;
       margin-right: 5%;
 
-      @media(max-width: 1680px) {
+      @media(max-width: 1679px) {
         font-size: 20px;
         line-height: 1.3;
       }
@@ -1039,7 +1046,7 @@ address {
     &_group {
       margin-bottom: 50px;
 
-      @media(max-width: 1680px) {
+      @media(max-width: 1679px) {
         margin-bottom: 75px;
       }
 
@@ -1068,7 +1075,7 @@ address {
         &:last-child {
           margin-bottom: 160px;
 
-          @media(max-width: 1680px) {
+          @media(max-width: 1679px) {
             margin-bottom: 130px;
           }
           @media(max-width: 1279px) {
@@ -1086,12 +1093,12 @@ address {
         color: $grey-text-paragraf;
         margin-left: 27%;
 
-        @media(max-width: 1680px) {
-          margin-left: 30%;
+        @media(max-width: 1679px) {
+          margin-left: 22%;
         }
 
         @media(max-width: 1279px) {
-          margin-left: 32%;
+          margin-left: 25%;
           font-size: 16px;
         }
 
@@ -1108,12 +1115,12 @@ address {
         margin-left: 27%;
         margin-right: 27px;
 
-        @media(max-width: 1680px) {
-          margin-left: 30%;
+        @media(max-width: 1679px) {
+          margin-left: 22%;
         }
 
         @media(max-width: 1279px) {
-          margin-left: 32%;
+          margin-left: 25%;
           font-size: 16px;
         }
 
@@ -1127,18 +1134,22 @@ address {
 
         & > button {
           margin-top: 0;
+          padding: 20px 100px;
+          @media(max-width: 1279px) {
+            padding: 15px 60px;
+          }
         }
 
       }
 
       &_agreement {
-        max-width: 417px;
+        max-width: 410px;
         font-family: $font-text-regular;
         font-size: 18px;
         line-height: 1.2;
         color: $grey-text-paragraf;
 
-        @media(max-width: 1680px) {
+        @media(max-width: 1679px) {
           font-size: 16px;
         }
 
@@ -1147,7 +1158,7 @@ address {
         }
 
         @media(max-width: 767px) {
-          max-width: 100%;
+          max-width: 90%;
           font-size: 14px;
         }
 
@@ -1169,12 +1180,12 @@ address {
       color: $grey-text-paragraf;
       padding: 20px 0;
 
-      @media(max-width: 1680px) {
-        width: 30%;
+      @media(max-width: 1679px) {
+        width: 22%;
         font-size: 16px;
       }
       @media(max-width: 1279px) {
-        width: 32%;
+        width: 25%;
         font-size: 14px;
       }
       @media(max-width: 767px) {
@@ -1200,7 +1211,7 @@ address {
       border-radius: 3px;
       padding: 20px 23px;
 
-      @media(max-width: 1680px) {
+      @media(max-width: 1679px) {
         font-size: 16px;
         width: 61%;
         padding: 21px 23px;
@@ -1233,7 +1244,7 @@ address {
         color: $grey-text-paragraf;
         margin-bottom: 20px;
 
-        @media(max-width: 1680px) {
+        @media(max-width: 1679px) {
           font-size: 16px;
         }
 
@@ -1257,7 +1268,7 @@ address {
       text-transform: uppercase;
       padding-top: 10px;
 
-      @media(max-width: 1680px) {
+      @media(max-width: 1679px) {
         font-size: 16px;
       }
 
@@ -1277,7 +1288,7 @@ address {
     overflow: hidden;
     padding-right: 2%;
     padding-top: 65px;
-    padding-top: 0;
+
     //display: none;
     // transition: opacity 2s linear;
     // opacity: 0;
@@ -1290,7 +1301,7 @@ address {
     //   opacity: 1;
     //   padding-top: 65px;
 
-      @media(max-width: 1680px) {
+      @media(max-width: 1679px) {
         padding-top: 55px;
       }
 
@@ -1328,7 +1339,7 @@ address {
       padding-bottom: 87px;
       margin: auto;
 
-      @media (max-width: 1680px) {
+      @media (max-width: 1679px) {
         width: 65%;
       }
 
@@ -1353,7 +1364,7 @@ address {
       margin-right: auto;
       margin-bottom: 50px;
 
-      @media (max-width: 1680px) {
+      @media (max-width: 1679px) {
         font-size: 30px;
         width: 66.3%;
       }
@@ -1453,7 +1464,7 @@ address {
   font-size: 18px;
   font-family: $font-regular;
   color: $black-grey;
-  border: 1px solid $grey-text-table;
+  border: 1px solid #C4C4C4;
   cursor: pointer;
   user-select: none;
 
@@ -1463,16 +1474,16 @@ address {
   -webkit-appearance: none;
   -moz-appearance: none;
 
-  @media(max-width: 1680px) {
+  @media(max-width: 1679px) {
     font-size: 16px;
   }
   @media(max-width: 1279px) {
     font-size: 14px;
-    padding: 25px;
+    padding: 20px;
   }
   @media(max-width: 767px) {
     font-size: 12px;
-    padding: 18px 10px;
+    padding: 12px 10px;
   }
 }
 
@@ -1555,7 +1566,7 @@ address {
     padding: 18px 0;
   }
 
-  @media(max-width: 1680px) {
+  @media(max-width: 1679px) {
     left: 9%;
     width: 89.9%;
     display: none;
@@ -1574,4 +1585,15 @@ address {
     left: 4%;
     width: 92%;
   }
+}
+.contact .tabs-common{
+  padding-right: 30.4%;
+
+  @media(max-width: 1679px){
+    padding-right: 24.6%;
+  }
+  @media(max-width: 1279px){
+    padding-right: 0%;
+  }
+
 }

@@ -55,10 +55,12 @@
         flex-basis: 100%;
     }
     .contact-block--more3 .contact-block__subtitle{
-        width: 19%;
- 
-        margin-right: 60px;
-        flex-shrink: 0;
+        // width: 19%;
+        width: 265px;
+        box-sizing: border-box;
+        padding-right: 60px;
+        // flex-shrink: 0;
+        flex-grow: 0;
     }
     .contact-block-item--more3 .contact-block__subitem{
         width: 33%;
@@ -87,5 +89,6 @@
     .contact-block--more3 .contact-block__subtitle{
         font-size: 18px;
         line-height: 20px;
+        width: 375px;
     } 
 }
