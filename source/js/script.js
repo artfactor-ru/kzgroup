@@ -2101,6 +2101,32 @@ let popup = document.querySelectorAll('.popup_kirovets');
 
 	}
 
+	let popupMuseum = document.querySelectorAll('.popup_museum');
+	let linkPopupMuseum = document.querySelectorAll('.museum__link-popup');
+	for(let i = 0; i< popupMuseum.length; i++){
+		
+		linkPopupMuseum[i].addEventListener('click', function(event){
+			event.preventDefault();
+			popupMuseum[i].classList.add('active');
+			
+			
+			let btnBack = popupMuseum[i].querySelector('.popup_kirovets__back');
+
+			btnBack.addEventListener('click', function(event){
+				popupMuseum[i].classList.remove('active');
+			});
+		
+			let btnClose = popupMuseum[i].querySelector('.popup_kirovets__close');
+
+			btnClose.addEventListener('click', function(event){
+				popupMuseum[i].classList.remove('active');
+			});
+
+		})
+
+
+	}
+
 
 // Добавление видимость параграфам 
 
@@ -2443,3 +2469,13 @@ function accordion(){
 if(document.getElementById('accordion')){
 	accordion();
 }
+
+	let galleryImg = document.querySelectorAll('.swiper-slide--gallery');
+	for(let i = 0; i<galleryImg.length; i++){
+
+		galleryImg[i].querySelector('.gallery__img').addEventListener("load", function() {
+			galleryImg[i].querySelector('.gallery__desc').style.width = (galleryImg[i].querySelector('.gallery__img').offsetWidth - 10) + 'px';
+		});
+	}
+
+

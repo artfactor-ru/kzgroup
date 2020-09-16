@@ -1,4 +1,4 @@
-.popup_kirovets, .popup_history{
+.popup_kirovets, .popup_history, .popup_museum{
 	position: fixed !important;
 	top: 0;
   right: 0;
@@ -18,7 +18,7 @@
 	// display: none !important;
 }
 
-.popup_kirovets.active, .popup_history.active{
+.popup_kirovets.active, .popup_history.active, .popup_museum.active{
 	visibility: visible;
 	transition-delay: 0s;
 	
@@ -99,7 +99,7 @@
 
 	
 }
-.popup_kirovets.active .popup__wrapper, .popup_history.active .popup__wrapper{
+.popup_kirovets.active .popup__wrapper, .popup_history.active .popup__wrapper, .popup_museum.active .popup__wrapper{
 	visibility: visible;
 	opacity: 1;
 	transition-delay: 0.25s;
@@ -194,19 +194,22 @@
 
 
 .active.popup_kirovets .popup-background::before, .active.popup_kirovets .popup-background::after,
-.active.popup_history .popup-background::before, .active.popup_history .popup-background::after{
+.active.popup_history .popup-background::before, .active.popup_history .popup-background::after,
+.active.popup_museum .popup-background::before, .active.popup_museum .popup-background::after{
   -webkit-transform: scaleX(1);
       -ms-transform: scaleX(1);
           transform: scaleX(1);
 }
 
 .active.popup_kirovets .popup-background::before,
-.active.popup_history .popup-background::before {
+.active.popup_history .popup-background::before,
+.active.popup_museum .popup-background::before{
   transition-delay: 0s;
 }
 
 .active.popup_kirovets .popup-background::after,
-.active.popup_history .popup-background::after {
+.active.popup_history .popup-background::after,
+.active.popup_museum .popup-background::after{
   transition-delay: 0.15s;
 }
 .popup_history__article .popup_history__subtitle{
