@@ -1,1131 +1,1045 @@
-
 // Главный заголовок
-
 %title-main-screen {
-
-	margin: 0;
-	padding: 0;
-
-	font-family: $font-bold-title;
-  font-style: normal;
-	font-size: 36px;
-	line-height: 36px;
-	// line-height: 37px;
-	color: #FFFFFF;
-	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-	padding-bottom: 40px;
+    margin: 0;
+    padding: 0;
+    font-family: $font-bold-title;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 36px;
+    // line-height: 37px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-bottom: 40px;
 }
 
-
-
-@media(min-width: 767px){
-
-	%title-main-screen {
-		font-style: normal;
-		font-size: 48px;
-		line-height: 48px;
-		letter-spacing: 0.02em;
-		text-shadow: none;
-
-		padding-bottom: 0px;
-	}
-
+@media(min-width: 767px) {
+    %title-main-screen {
+        font-style: normal;
+        font-size: 48px;
+        line-height: 48px;
+        letter-spacing: 0.02em;
+        text-shadow: none;
+        padding-bottom: 0px;
+    }
 }
 
-
-@media(min-width: 1280px){
-	%title-main-screen {
-		font-size: 64px;
-		// line-height: 114%;
-		line-height: 64px;
-	}
-	
+@media(min-width: 1280px) {
+    %title-main-screen {
+        font-size: 64px;
+        // line-height: 114%;
+        line-height: 64px;
+    }
 }
 
-@media(min-width: 1680px){
-	%title-main-screen {
-		font-size: 90px;
-		line-height: 90px;
-		// line-height: 96.5%;
-		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	}
-	
+@media(min-width: 1680px) {
+    %title-main-screen {
+        font-size: 90px;
+        line-height: 90px;
+        // line-height: 96.5%;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
 }
 
 // Заголовок блоков
-
-%block-title{
-	margin: 0;
-	padding: 0;
-	font-family: $font-bold-2-title;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 20px;
-	line-height: 23px;
-
-	color: #000000;
-}
-@media(min-width: 767px){
-	%block-title{
-
-		font-size: 26px;
-		line-height: 30px;
-	}
+%block-title {
+    margin: 0;
+    padding: 0;
+    font-family: $font-bold-2-title;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
 }
 
-@media(min-width: 1280px){
-	%block-title{
-
-		font-size: 36px;
-		line-height: 40px;
-	}
+@media(min-width: 767px) {
+    %block-title {
+        font-size: 26px;
+        line-height: 30px;
+    }
 }
 
-
-
-@media(min-width: 1680px){
-	%block-title{
-
-		font-size: 46px;
-		line-height: 49px;
-	}
+@media(min-width: 1280px) {
+    %block-title {
+        font-size: 36px;
+        line-height: 40px;
+    }
 }
 
+@media(min-width: 1680px) {
+    %block-title {
+        font-size: 46px;
+        line-height: 49px;
+    }
+}
 
 // Текст Upper
-
-%upper-text{
-	margin: 0;
-	padding: 0;
-	font-family: $font-regular;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 14px;
-	line-height: 22px;
-	text-transform: uppercase;
-
-	color: #000000;
+%upper-text {
+    margin: 0;
+    padding: 0;
+    font-family: $font-regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #000000;
 }
 
-@media(min-width: 767px){
-	%upper-text{
-
-		font-size: 20px;
-		line-height: 30px;
-	}
+@media(min-width: 767px) {
+    %upper-text {
+        font-size: 20px;
+        line-height: 30px;
+    }
 }
 
-@media(min-width: 1280px){
-	%upper-text{
-
-		font-size: 25px;
-		line-height: 40px;
-	}
+@media(min-width: 1280px) {
+    %upper-text {
+        font-size: 25px;
+        line-height: 40px;
+    }
 }
 
-@media(min-width: 1680px){
-	%upper-text{
-
-		font-size: 30px;
-		line-height: 48px;
-	}
+@media(min-width: 1680px) {
+    %upper-text {
+        font-size: 30px;
+        line-height: 48px;
+    }
 }
-
 
 // Заголовок на фоне картинки
-%block-title-light{
-	margin:0;
-	padding: 0;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 22px;
-	line-height: 26px;
-	/* or 118% */
-
-	text-transform: uppercase;
-
-	font-family: $font-regular;
-	color: $light-grey-color;
+%block-title-light {
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+    /* or 118% */
+    text-transform: uppercase;
+    font-family: $font-regular;
+    color: $light-grey-color;
 }
 
-@media(min-width: 767px){
-	%block-title-light{
-
-		font-size: 26px;
-		line-height: 31px;
-	}
+@media(min-width: 767px) {
+    %block-title-light {
+        font-size: 26px;
+        line-height: 31px;
+    }
 }
 
-@media(min-width: 1280px){
-	%block-title-light{
-
-		font-size: 36px;
-		line-height: 43px;
-	}
+@media(min-width: 1280px) {
+    %block-title-light {
+        font-size: 36px;
+        line-height: 43px;
+    }
 }
 
-@media(min-width: 1680px){
-	%block-title-light{
-
-		font-size: 46px;
-		line-height: 55px;
-	}
+@media(min-width: 1680px) {
+    %block-title-light {
+        font-size: 46px;
+        line-height: 55px;
+    }
 }
 
 // Список на фоне картинки
-
-%block-list-light{
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
-	line-height: 87.6%;
-	
-	text-transform: lowercase;
-	color: #FFFFFF;
-	font-family: $font-regular;
-	color: $light-grey-color;
+%block-list-light {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 87.6%;
+    text-transform: lowercase;
+    color: #FFFFFF;
+    font-family: $font-regular;
+    color: $light-grey-color;
 }
 
-@media(min-width: 767px){
-	%block-list-light{
-
-		font-size: 25px;
-		line-height: 120.1%;
-	}
+@media(min-width: 767px) {
+    %block-list-light {
+        font-size: 25px;
+        line-height: 120.1%;
+    }
 }
 
-@media(min-width: 1280px){
-	%block-list-light{
-
-		font-size: 30px;
-		line-height: 120.1%;
-	}
+@media(min-width: 1280px) {
+    %block-list-light {
+        font-size: 30px;
+        line-height: 120.1%;
+    }
 }
 
-@media(min-width: 1680px){
-	%block-list-light{
-
-		font-size: 36px;
-		line-height: 87.6%;
-	}
+@media(min-width: 1680px) {
+    %block-list-light {
+        font-size: 36px;
+        line-height: 87.6%;
+    }
 }
 
-
-%block-title-light{
-	font-style: normal;
-	font-weight: normal;
-	font-size: 18px;
-	line-height: 26px;
-	text-transform: none;
-	color: #FFFFFF;
-	font-family: $font-regular;
-	color: $light-grey-color;
+%block-title-light {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: none;
+    color: #FFFFFF;
+    font-family: $font-regular;
+    color: $light-grey-color;
 }
 
-@media(min-width: 767px){
-	%block-title-light{
-
-		font-size: 24px;
-		line-height: 26px;
-	}
+@media(min-width: 767px) {
+    %block-title-light {
+        font-size: 24px;
+        line-height: 26px;
+    }
 }
 
-@media(min-width: 1280px){
-	%block-title-light{
-
-		font-size: 36px;
-		line-height: 48px;
-	}
+@media(min-width: 1280px) {
+    %block-title-light {
+        font-size: 36px;
+        line-height: 48px;
+    }
 }
 
-@media(min-width: 1680px){
-	%block-title-light{
-
-		font-size: 36px;
-		line-height: 49px;
-	}
+@media(min-width: 1680px) {
+    %block-title-light {
+        font-size: 36px;
+        line-height: 49px;
+    }
 }
 
 // Текстовый блок , параграф
-
-%block-text{
-	margin: 0;
-	padding: 0;
-	font-family: $font-text-light;
-	font-style: normal;
-	font-weight: 300;
-	font-size: 14px;
-	line-height: 22px;
-
-	color: $grey-text-paragraf;
-
+%block-text {
+    margin: 0;
+    padding: 0;
+    font-family: $font-text-light;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    color: $grey-text-paragraf;
 }
 
-@media(min-width: 767px){
-	%block-text{
-		font-size: 14px;
-		line-height: 22px;
-	}
+@media(min-width: 767px) {
+    %block-text {
+        font-size: 14px;
+        line-height: 22px;
+    }
 }
 
-@media(min-width: 1280px){
-	%block-text{
-		font-size: 16px;
-		line-height: 24px;
-	}
+@media(min-width: 1280px) {
+    %block-text {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 
-@media(min-width: 1680px){
-	%block-text{
-		font-size: 18px;
-		line-height: 28px;
-	}
+@media(min-width: 1680px) {
+    %block-text {
+        font-size: 18px;
+        line-height: 28px;
+    }
 }
-
 
 // Кнопка 
-
-%btn-bordered{
-	box-sizing: border-box;
-	background: transparent;
-	margin: 0;
-	padding: 0;
-	border: none;
-	// border: 1px solid #000000;
-	color: #000000;
-	font-family: $font-regular;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 12px;
-	line-height: 20px;
-
-	text-align: center;
-	text-transform: uppercase;
-
-	outline: none;
-	cursor: pointer;
-	padding: 13px 0px;
-	width: 100%;
-	position: relative;
-	transition: all 0.3s;
-	z-index: 5;
-	&::after{
-		content: '';
-    position: absolute;
-    z-index: -1;
-		width: 0%;
-    height: 100%;
-    top: 0;
-    left: 0;
-		background: #000000;
-		transition: all 0.3s;
-	}
-	&:hover{
-		color: #FFFFFF;
-	}
-	&:hover::after{
-		width: 100%;
-	}
-
-	& .button-line--first{
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		left: 0;
-		top: 0;
-		&::before{
-			content: "";
-			position: absolute;
-			width: 1px;
-			height: 0%;
-			bottom:0;
-			left: 0;
-			background-color: #000000;
-			transition: all 0.3s ease;
-			transition-delay: 0.9s;
-		}
-		&.is-inview::before{
-			height: 100%;
-		}
-		&::after{
-			content: "";
-			position: absolute;
-			width: 0%;
-			height: 1px;
-			top:0;
-			left: 0;
-			background-color: #000000;
-			transition: all 0.3s ease;
-		}
-		&.is-inview::after{
-			width: 100%;
-		}
-	}
-		& .button-line--two{
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			left: 0;
-			top: 0;
-			&::before{
-				content: "";
-				position: absolute;
-				width: 1px;
-				height: 0%;
-				top:0;
-				right: 0;
-				background-color: #000000;
-				transition: all 0.3s ease;
-				transition-delay: 0.3s;
-			}
-			&.is-inview::before{
-				height: 100%;
-
-			}
-			&::after{
-				content: "";
-				position: absolute;
-				width: 0%;
-				height: 1px;
-				bottom:0;
-				right: 0;
-				background-color: #000000;
-				transition: all 0.3s ease;
-				transition-delay: 0.6s;
-			}
-			&.is-inview::after{
-				width: 100%;
-			}
-		
-	}
-	
+%btn-bordered {
+    box-sizing: border-box;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    border: none;
+    // border: 1px solid #000000;
+    color: #000000;
+    font-family: $font-regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+    padding: 13px 0px;
+    width: 100%;
+    position: relative;
+    transition: all 0.3s;
+    z-index: 5;
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 0%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: #000000;
+        transition: all 0.3s;
+    }
+    &:hover {
+        color: #FFFFFF;
+    }
+    &:hover::after {
+        width: 100%;
+    }
+    & .button-line--first {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 0%;
+            bottom: 0;
+            left: 0;
+            background-color: #000000;
+            transition: all 0.3s ease;
+            transition-delay: 0.9s;
+        }
+        &.is-inview::before {
+            height: 100%;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 1px;
+            top: 0;
+            left: 0;
+            background-color: #000000;
+            transition: all 0.3s ease;
+        }
+        &.is-inview::after {
+            width: 100%;
+        }
+    }
+    & .button-line--two {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 0%;
+            top: 0;
+            right: 0;
+            background-color: #000000;
+            transition: all 0.3s ease;
+            transition-delay: 0.3s;
+        }
+        &.is-inview::before {
+            height: 100%;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 1px;
+            bottom: 0;
+            right: 0;
+            background-color: #000000;
+            transition: all 0.3s ease;
+            transition-delay: 0.6s;
+        }
+        &.is-inview::after {
+            width: 100%;
+        }
+    }
 }
 
-
-@media(min-width: 767px){
-	%btn-bordered{
-
-		padding: 13px 60px;
-		width: auto;
-	}
+@media(min-width: 767px) {
+    %btn-bordered {
+        padding: 13px 60px;
+        width: auto;
+    }
 }
 
-@media(min-width: 1280px){
-	%btn-bordered{
-
-		padding: 15px 80px;
-	}
+@media(min-width: 1280px) {
+    %btn-bordered {
+        padding: 15px 80px;
+    }
 }
-
 
 // картинка с фоновой рамкой 
-
-%pic__frame{
-	box-sizing: border-box;
-	background: transparent;
-	margin: 0;
-	padding: 0px 26px;
-	left: -22px;
-	top: -28px;
-	color: #C26063;
-	font-family: $font-bold-2-title;
-	font-size: 14px;
-	line-height: 32px;
-	position: absolute;
-	z-index: -1;
-	&::after{
-		content: '';
-		position: absolute;
-		z-index: -1;
-		width: 0%;
-		height: 100%;
-		top: 0;
-		left: 0;
-	}
-	& .pic__frame--line-first{
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		left: 0;
-		top: 0;
-		&::before{
-			content: "";
-			position: absolute;
-			width: 4px;
-			height: 0%;
-			bottom:0;
-			left: 0;
-			background-color: #C26063;
-			transition: all 0.3s ease;
-			transition-delay: 0.9s;
-		}
-		&.is-inview::before{
-			height: 100%;
-		}
-		&::after{
-			content: "";
-			position: absolute;
-			width: 0%;
-			height: 4px;
-			top:0;
-			left: 0;
-			background-color: #C26063;
-			transition: all 0.3s ease;
-		}
-		&.is-inview::after{
-			width: 100%;
-		}
-	}
-	& .pic__frame--line-two{
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		left: 0;
-		top: 0;
-		&::before{
-			content: "";
-			position: absolute;
-			width: 4px;
-			height: 0%;
-			top:0;
-			right: 0;
-			background-color: #C26063;
-			transition: all 0.3s ease;
-			transition-delay: 0.3s;
-		}
-		&::after{
-			content: "";
-			position: absolute;
-			width: 0%;
-			height: 4px;
-			bottom:0;
-			right: 0;
-			background-color: #C26063;
-			transition: all 0.3s ease;
-			transition-delay: 0.6s;
-		}
-		&.is-inview::before{
-			height: 100%;
-		}
-		&.is-inview::after{
-			width: 100%;
-		}
-		
-	}
-	&.pic__frame-1{
-		height: 80%;
-		width: 85%;
-		@media(min-width: 1280px){
-			height: 77%;
-			width: 80%;
-		}
-		@media(min-width: 1680px){
-			height: 56%;
-			width: 60%;
-		}
-	}
-	&.pic__frame-2{
-		height: 90%;
-		width: 85%;
-		@media(min-width: 767px){
-			height: 86%;
-			width: 74%;
-		}
-		@media(min-width: 1280px){
-			height: 88%;
-			width: 70%;
-		}
-	}
-	&.pic__frame-3{
-		height: 90%;
-		width: 90%;
-		@media(min-width: 767px){
-			height: 100%;
-			width: 92%;
-		}
-		@media(min-width: 1280px){
-			height: 86%;
-			width: 87%;
-		}
-	}
-	&.pic__frame-4{
-		height: 70%;
-		width: 70%;
-		@media(min-width: 1280px){
-			height: 82%;
-			width: 74%;
-		}
-		@media(min-width: 1680px){
-			height: 78%;
-			width: 70%;
-		}
-	}
-	&.pic__frame-5{
-		height: 80%;
-		width: 70%;
-		@media(min-width: 1280px){
-			height: 80%;
-			width: 62%;
-		}
-	}
-	&.pic__frame-6{
-		height: 70%;
-		width: 70%;
-		@media(min-width: 1280px){
-			height: 75%;
-			width: 85%;
-		}
-		@media(min-width: 1680px){
-			height: 69%;
-			width: 79%;
-		}
-	}
-	&.pic__frame-7{
-		height: 80%;
-		width: 70%;
-		@media(min-width: 1280px){
-			height: 95%;
-			width: 63%;
-		}
-		@media(min-width: 1680px){
-			height: 90%;
-			width: 60%;
-		}
-	}
-	&.pic__frame-8{
-		height: 70%;
-		width: 70%;
-		@media(min-width: 1280px){
-			height: 92%;
-			width: 81%;
-		}
-		@media(min-width: 1680px){
-			height: 90%;
-			width: 78%;
-		}
-	}
-	&.pic__frame-9{
-		height: 80%;
-		width: 70%;
-		@media(min-width: 1280px){
-			height: 99%;
-			width: 62%;
-		}
-		@media(min-width: 1680px){
-			height: 93%;
-			width: 59%;
-		}
-	}
-	&.pic__frame-10{
-		height: 80%;
-		width: 85%;
-		@media(min-width: 1680px){
-			height: 89%;
-			width: 82%;
-		}
-	}
-	&.pic__frame-11{
-		height: 90%;
-		width: 74%;
-		@media(min-width: 1680px){
-			height: 92%;
-		}
-	}
-	&.pic__frame-12{
-		height: 90%;
-		width: 85%;
-		@media(min-width: 1680px){
-			height: 93%;
-			width: 84%;
-		}
-	}
-	&.pic__frame-13{
-		height: 90%;
-		width: 85%;
-		@media(min-width: 1680px){
-			height: 74%;
-			width: 74%;
-		}
-	}
-	&.pic__frame-14{
-		height: 90%;
-		width: 85%;
-		@media(min-width: 1680px){
-			height: 60%;
-			width: 66%;
-		}
-	}
-	&.pic__frame-15{
-		height: 90%;
-		width: 90%;
-		@media(min-width: 1680px){
-			height: 100%;
-			width: 77%;
-		}
-	}
-	&.pic__frame-16{
-		height: 90%;
-		width: 90%;
-		@media(min-width: 1680px){
-			height: 59%;
-			width: 47%;
-		}
-	}
-	&.pic__frame-17{
-		height: 90%;
-		width: 90%;
-		@media(min-width: 1680px){
-			height: 97%;
-			width: 65%;
-		}
-	}
-	&.pic__frame-18{
-		height: 80%;
-		width: 85%;
-		@media(min-width: 1680px){
-			height: 58%;
-			width: 75%;
-		}
-	}
-	&.pic__frame-19{
-		height: 80%;
-		width: 85%;
-		@media(min-width: 1680px){
-			height: 81%;
-			width: 82%;
-		}
-	}
-	&.pic__frame-20{
-		height: 80%;
-		width: 85%;
-		@media(min-width: 1680px){
-			height: 75%;
-			width: 62%;
-		}
-	}
-	&.pic__frame-21{
-		height: 90%;
-		width: 90%;
-		@media(min-width: 1280px){
-			height: 59%;
-			width: 82%;
-		}
-	}
-	&.pic__frame-22{
-		height: 80%;
-		width: 85%;
-		@media(min-width: 1680px){
-			height: 62%;
-			width: 42%;
-		}
-	}
-	&.pic__frame-23{
-		height: 80%;
-		width: 85%;
-		@media(min-width: 1680px){
-			height: 85%;
-			width: 60%;
-		}
-	}
-	&.pic__frame-24{
-		height: 90%;
-		width: 90%;
-		@media(min-width: 1680px){
-			height: 82%;
-			width: 41%;
-		}
-	}
-	&.pic__frame-25{
-		height: 80%;
-		width: 85%;
-		@media(min-width: 1680px){
-			height: 85%;
-			width: 61%;
-		}
-	}
-	&.pic__frame-26{
-		height: 90%;
-		width: 85%;
-		@media(min-width: 1680px){
-			height: 88%;
-			width: 60%;
-		}
-	}
-	&.pic__frame-27{
-		height: 90%;
-		width: 90%;
-		@media(min-width: 1280px){
-			height: 71%;
-			width: 87%;
-		}
-	}
-	&.pic__frame-28{
-		height: 90%;
-		width: 90%;
-		@media(min-width: 1280px){
-			height: 100%;
-			width: 71%;
-		}
-	}
-	&.pic__frame-29{
-		height: 80%;
-		width: 85%;
-		@media(min-width: 1680px){
-			height: 72%;
-			width: 60%;
-		}
-	}
-	&.pic__frame-30{
-		height: 90%;
-		width: 85%;
-		@media(min-width: 1680px){
-			height: 56%;
-			width: 85%;
-		}
-	}
-	&.pic__frame-31{
-		height: 90%;
-		width: 90%;
-		@media(min-width: 1280px){
-			height: 66%;
-			width: 66%;
-		}
-	}
-	&.pic__frame-32{
-		height: 90%;
-		width: 90%;
-		@media(min-width: 1280px){
-			height: 62%;
-			width: 62%;
-		}
-	}
-	@media(min-width: 1280px){
-		top: -34px;
-		line-height: 38px;
-		&.pic__frame-3{
-			width: 87%;
-		}
-	}
+%pic__frame {
+    box-sizing: border-box;
+    background: transparent;
+    margin: 0;
+    padding: 0px 26px;
+    left: -22px;
+    top: -28px;
+    color: #C26063;
+    font-family: $font-bold-2-title;
+    font-size: 14px;
+    line-height: 32px;
+    position: absolute;
+    z-index: -1;
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 0%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    & .pic__frame--line-first {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 0%;
+            bottom: 0;
+            left: 0;
+            background-color: #C26063;
+            transition: all 0.3s ease;
+            transition-delay: 0.9s;
+        }
+        &.is-inview::before {
+            height: 100%;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 4px;
+            top: 0;
+            left: 0;
+            background-color: #C26063;
+            transition: all 0.3s ease;
+        }
+        &.is-inview::after {
+            width: 100%;
+        }
+    }
+    & .pic__frame--line-two {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 0%;
+            top: 0;
+            right: 0;
+            background-color: #C26063;
+            transition: all 0.3s ease;
+            transition-delay: 0.3s;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 4px;
+            bottom: 0;
+            right: 0;
+            background-color: #C26063;
+            transition: all 0.3s ease;
+            transition-delay: 0.6s;
+        }
+        &.is-inview::before {
+            height: 100%;
+        }
+        &.is-inview::after {
+            width: 100%;
+        }
+    }
+    &.pic__frame-1 {
+        height: 80%;
+        width: 85%;
+        @media(min-width: 1280px) {
+            height: 77%;
+            width: 80%;
+        }
+        @media(min-width: 1680px) {
+            height: 56%;
+            width: 60%;
+        }
+    }
+    &.pic__frame-2 {
+        height: 90%;
+        width: 85%;
+        @media(min-width: 767px) {
+            height: 86%;
+            width: 74%;
+        }
+        @media(min-width: 1280px) {
+            height: 88%;
+            width: 70%;
+        }
+    }
+    &.pic__frame-3 {
+        height: 90%;
+        width: 90%;
+        @media(min-width: 767px) {
+            height: 100%;
+            width: 92%;
+        }
+        @media(min-width: 1280px) {
+            height: 86%;
+            width: 87%;
+        }
+    }
+    &.pic__frame-4 {
+        height: 70%;
+        width: 70%;
+        @media(min-width: 1280px) {
+            height: 82%;
+            width: 74%;
+        }
+        @media(min-width: 1680px) {
+            height: 78%;
+            width: 70%;
+        }
+    }
+    &.pic__frame-5 {
+        height: 80%;
+        width: 70%;
+        @media(min-width: 1280px) {
+            height: 80%;
+            width: 62%;
+        }
+    }
+    &.pic__frame-6 {
+        height: 70%;
+        width: 70%;
+        @media(min-width: 1280px) {
+            height: 75%;
+            width: 85%;
+        }
+        @media(min-width: 1680px) {
+            height: 69%;
+            width: 79%;
+        }
+    }
+    &.pic__frame-7 {
+        height: 80%;
+        width: 70%;
+        @media(min-width: 1280px) {
+            height: 95%;
+            width: 63%;
+        }
+        @media(min-width: 1680px) {
+            height: 90%;
+            width: 60%;
+        }
+    }
+    &.pic__frame-8 {
+        height: 70%;
+        width: 70%;
+        @media(min-width: 1280px) {
+            height: 92%;
+            width: 81%;
+        }
+        @media(min-width: 1680px) {
+            height: 90%;
+            width: 78%;
+        }
+    }
+    &.pic__frame-9 {
+        height: 80%;
+        width: 70%;
+        @media(min-width: 1280px) {
+            height: 99%;
+            width: 62%;
+        }
+        @media(min-width: 1680px) {
+            height: 93%;
+            width: 59%;
+        }
+    }
+    &.pic__frame-10 {
+        height: 80%;
+        width: 85%;
+        @media(min-width: 1680px) {
+            height: 89%;
+            width: 82%;
+        }
+    }
+    &.pic__frame-11 {
+        height: 90%;
+        width: 74%;
+        @media(min-width: 1680px) {
+            height: 92%;
+        }
+    }
+    &.pic__frame-12 {
+        height: 90%;
+        width: 85%;
+        @media(min-width: 1680px) {
+            height: 93%;
+            width: 84%;
+        }
+    }
+    &.pic__frame-13 {
+        height: 90%;
+        width: 85%;
+        @media(min-width: 1680px) {
+            height: 74%;
+            width: 74%;
+        }
+    }
+    &.pic__frame-14 {
+        height: 90%;
+        width: 85%;
+        @media(min-width: 1680px) {
+            height: 60%;
+            width: 66%;
+        }
+    }
+    &.pic__frame-15 {
+        height: 90%;
+        width: 90%;
+        @media(min-width: 1680px) {
+            height: 100%;
+            width: 77%;
+        }
+    }
+    &.pic__frame-16 {
+        height: 90%;
+        width: 90%;
+        @media(min-width: 1680px) {
+            height: 59%;
+            width: 47%;
+        }
+    }
+    &.pic__frame-17 {
+        height: 90%;
+        width: 90%;
+        @media(min-width: 1680px) {
+            height: 97%;
+            width: 65%;
+        }
+    }
+    &.pic__frame-18 {
+        height: 80%;
+        width: 85%;
+        @media(min-width: 1680px) {
+            height: 58%;
+            width: 75%;
+        }
+    }
+    &.pic__frame-19 {
+        height: 80%;
+        width: 85%;
+        @media(min-width: 1680px) {
+            height: 81%;
+            width: 82%;
+        }
+    }
+    &.pic__frame-20 {
+        height: 80%;
+        width: 85%;
+        @media(min-width: 1680px) {
+            height: 75%;
+            width: 62%;
+        }
+    }
+    &.pic__frame-21 {
+        height: 90%;
+        width: 90%;
+        @media(min-width: 1280px) {
+            height: 59%;
+            width: 82%;
+        }
+    }
+    &.pic__frame-22 {
+        height: 80%;
+        width: 85%;
+        @media(min-width: 1680px) {
+            height: 62%;
+            width: 42%;
+        }
+    }
+    &.pic__frame-23 {
+        height: 80%;
+        width: 85%;
+        @media(min-width: 1680px) {
+            height: 85%;
+            width: 60%;
+        }
+    }
+    &.pic__frame-24 {
+        height: 90%;
+        width: 90%;
+        @media(min-width: 1680px) {
+            height: 82%;
+            width: 41%;
+        }
+    }
+    &.pic__frame-25 {
+        height: 80%;
+        width: 85%;
+        @media(min-width: 1680px) {
+            height: 85%;
+            width: 61%;
+        }
+    }
+    &.pic__frame-26 {
+        height: 90%;
+        width: 85%;
+        @media(min-width: 1680px) {
+            height: 88%;
+            width: 60%;
+        }
+    }
+    &.pic__frame-27 {
+        height: 90%;
+        width: 90%;
+        @media(min-width: 1280px) {
+            height: 71%;
+            width: 87%;
+        }
+    }
+    &.pic__frame-28 {
+        height: 90%;
+        width: 90%;
+        @media(min-width: 1280px) {
+            height: 100%;
+            width: 71%;
+        }
+    }
+    &.pic__frame-29 {
+        height: 80%;
+        width: 85%;
+        @media(min-width: 1680px) {
+            height: 72%;
+            width: 60%;
+        }
+    }
+    &.pic__frame-30 {
+        height: 90%;
+        width: 85%;
+        @media(min-width: 1680px) {
+            height: 56%;
+            width: 85%;
+        }
+    }
+    &.pic__frame-31 {
+        height: 90%;
+        width: 90%;
+        @media(min-width: 1280px) {
+            height: 66%;
+            width: 66%;
+        }
+    }
+    &.pic__frame-32 {
+        height: 90%;
+        width: 90%;
+        @media(min-width: 1280px) {
+            height: 62%;
+            width: 62%;
+        }
+    }
+    @media(min-width: 1280px) {
+        top: -34px;
+        line-height: 38px;
+        &.pic__frame-3 {
+            width: 87%;
+        }
+    }
 }
-
 
 // Красные цифры
-
-%red-number{
-	font-family: $font-for-number;
-	font-style: normal;
-	font-weight: 900;
-	font-size: 52px;
-	line-height: 52px;
-	letter-spacing: -0.025em;
-
-	color: $red-color;
+%red-number {
+    font-family: $font-for-number;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 52px;
+    line-height: 52px;
+    letter-spacing: -0.025em;
+    color: $red-color;
 }
 
-
-@media(min-width: 1280px){
-	%red-number{
-		font-size: 64px;
-		line-height: 64px;
-
-	}
+@media(min-width: 1280px) {
+    %red-number {
+        font-size: 64px;
+        line-height: 64px;
+    }
 }
-@media(min-width: 1680px){
-	%red-number{
-		font-size: 85px;
-		line-height: 85px;
 
-	}
+@media(min-width: 1680px) {
+    %red-number {
+        font-size: 85px;
+        line-height: 85px;
+    }
 }
+
 // Маленький подзаголовок
-
-%small-subtitle{
-	margin: 0;
-	padding: 0;
-	font-family: $font-bold-2-title;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 14px;
-	line-height: 19px;
-
-	text-transform: uppercase;
-
-	color: $black-grey;
-
+%small-subtitle {
+    margin: 0;
+    padding: 0;
+    font-family: $font-bold-2-title;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: $black-grey;
 }
-@media(min-width: 1280px){
-	%small-subtitle{
-		font-size: 16px;
-		line-height: 22px;
-	}
+
+@media(min-width: 1280px) {
+    %small-subtitle {
+        font-size: 16px;
+        line-height: 22px;
+    }
 }
-@media(min-width: 1680px){
-	%small-subtitle{
-		font-size: 18px;
-		line-height: 24px;
-	}
+
+@media(min-width: 1680px) {
+    %small-subtitle {
+        font-size: 18px;
+        line-height: 24px;
+    }
 }
+
 // Текстовый параграф маленький
-%block-text-smallest{
-	margin: 0;
-	padding: 0;
-	font-family: $font-text-light;
-	font-style: normal;
-	font-weight: 300;
-	font-size: 12px;
-	line-height: 16px;
-	color: $grey-text-paragraf;
-}
-@media(min-width: 1280px){
-	%block-text-smallest{
-		font-size: 16px;
-		line-height: 22px;
-	}
-}
-@media(min-width: 1680px){
-	%block-text-smallest{
-		font-size: 18px;
-		line-height: 24px;
-	}
+%block-text-smallest {
+    margin: 0;
+    padding: 0;
+    font-family: $font-text-light;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    color: $grey-text-paragraf;
 }
 
+@media(min-width: 1280px) {
+    %block-text-smallest {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+@media(min-width: 1680px) {
+    %block-text-smallest {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
 
 // Скролл-бар
-
-%scroll-line{
-	// width: 100%;
-	height: 3px;
-	background-color: #E6E6E6;
+%scroll-line {
+    // width: 100%;
+    height: 3px;
+    background-color: #E6E6E6;
 }
 
-%scroll-drag{
-	background: $red-color;
-	border-radius: 0px;
+%scroll-drag {
+    background: $red-color;
+    border-radius: 0px;
 }
-
 
 // Ссылка подробнее
-
-%button-more{
-	font-family: $font-regular;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 10px;
-	line-height: 18px;
-	color: $black-grey;
-	text-decoration: none;
-	display: block;
-	padding-left: 35px;
-	position: relative;
-	transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-	&::before{
-		content: "";
-		position: absolute;
-		width: 0px;
-		height: 1px;
-		border-top: 1px solid $black-grey;
-		left: 0;
-		top: 50%;
-		transform: translateY(-50%);
-		transform-origin: center left;
-		transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-		transition-delay: 0.1s;
-	}
-	&.is-inview-line::before{
-		width: 30px;
-	}
-	& span{
-		display: inline-block;
-		transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-	}
-
-	
-	// &:hover::before{
-	// 	width: 45px;
-	
-	// }
-
+%button-more {
+    font-family: $font-regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 18px;
+    color: $black-grey;
+    text-decoration: none;
+    display: block;
+    padding-left: 35px;
+    position: relative;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    &::before {
+        content: "";
+        position: absolute;
+        width: 0px;
+        height: 1px;
+        border-top: 1px solid $black-grey;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transform-origin: center left;
+        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        transition-delay: 0.1s;
+    }
+    &.is-inview-line::before {
+        width: 30px;
+    }
+    & span {
+        display: inline-block;
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    // &:hover::before{
+    // 	width: 45px;
+    // }
 }
 
-
-@media (min-width: 1280px){
-	%button-more{
-		font-size: 14px;
-		line-height: 18px;
-		padding-left: 65px;
-		&:hover span{
-			transform:  translateX(10px);
-		}
-		&::before{
-			width: 0px;
-			height: 1px;
-		}
-		&.is-inview-line::before{
-			width: 40px;
-		}
-		&:hover::before{
-			width: 55px;
-		}
-	
-	}
-
+@media (min-width: 1280px) {
+    %button-more {
+        font-size: 14px;
+        line-height: 18px;
+        padding-left: 65px;
+        &:hover span {
+            transform: translateX(10px);
+        }
+        &::before {
+            width: 0px;
+            height: 1px;
+        }
+        &.is-inview-line::before {
+            width: 40px;
+        }
+        &:hover::before {
+            width: 55px;
+        }
+    }
 }
-
 
 // Подзаголовок Regular
-
-%subtitle-regular{
-	margin: 0;
-	padding: 0;
-
-	font-family: $font-regular;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
-	line-height: 24px;
-
-	color: $black-grey;
+%subtitle-regular {
+    margin: 0;
+    padding: 0;
+    font-family: $font-regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: $black-grey;
 }
 
-
-@media(min-width: 767px){
-	%subtitle-regular{
-		font-size: 24px;
-		line-height: 24px;
-	}
+@media(min-width: 767px) {
+    %subtitle-regular {
+        font-size: 24px;
+        line-height: 24px;
+    }
 }
 
-@media(min-width: 1280px){
-	%subtitle-regular{
-		font-size: 30px;
-		line-height: 36px;
-	}
-}
-@media(min-width: 1680px){
-	%subtitle-regular{
-		font-size: 36px;
-		line-height: 39px;
-	}
+@media(min-width: 1280px) {
+    %subtitle-regular {
+        font-size: 30px;
+        line-height: 36px;
+    }
 }
 
+@media(min-width: 1680px) {
+    %subtitle-regular {
+        font-size: 36px;
+        line-height: 39px;
+    }
+}
 
 // Кнопки управления слайдером как в новостях
-@media(min-width: 767px){
-	%btn-slider{
-		width: 35px;
+@media(min-width: 767px) {
+    %btn-slider {
+        width: 35px;
         height: 35px;
-		border: 1px solid #A29797;
-	
-		
-	}
+        border: 1px solid #A29797;
+    }
 }
 
-@media(min-width: 1280px){
-	%btn-slider{
-		width: 50px;
-		height: 50px;
-	
-	}
+@media(min-width: 1280px) {
+    %btn-slider {
+        width: 50px;
+        height: 50px;
+    }
 }
 
 //кнопка с нижним подчёркиванием
-
-%button_underline{
-	position: relative;
-	cursor: pointer;
-	font-family: $font-regular;
-	font-size: 18px;
-	text-transform: uppercase;
-	color: #616161;
-	border: none;
-	background-color: transparent;
-	transition: .8s;
-	padding-bottom: 12px;
-	width: fit-content;
-	&:before {
-		content:'';
-		position: absolute;
-		top: 100%;
-		left: 0;
-		width: 0;
-		height: 1px;
-		background: #616161;
-		transition: all 0.6s ease;
-	}
-	&:hover:before {
-		width: 100%;
-	}
+%button_underline {
+    position: relative;
+    cursor: pointer;
+    font-family: $font-regular;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #616161;
+    border: none;
+    background-color: transparent;
+    transition: .8s;
+    padding-bottom: 12px;
+    width: fit-content;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: #616161;
+        transition: all 0.6s ease;
+    }
+    &:hover:before {
+        width: 100%;
+    }
 }
 
-
-%link-underline{
-	height: 34px;
-	background-color: rgba(255,255,255,0);
-	position: relative;
-	display: inline-block;
-	text-decoration: none;
-	font-size: 3px;
-	transition: all 0.6s;
-	&:after {
-		content: '';
-		position: absolute;
-		width: 100%;
-		height: 1px;
-		bottom: 0;
-		right: 0;
-		background-color: #616161;
-		transition: transform 0.4s cubic-bezier(0.65, 0.005, 0.35, 0.995);
-		transform-origin: right;
-		transition-delay: 0.25s;
-	}
-	&:before {
-		content: '';
-		position: absolute;
-		width: 100%;
-		height: 1px;
-		bottom: 0;
-		right: 0;
-		background-color: #616161;
-		transition: transform 0.4s cubic-bezier(0.65, 0.005, 0.35, 0.995);
-		transform: scaleX(0);
-		transform-origin: left;
-		transition-delay: 0s;
-	}
-	&:hover:before {
-		transform: scaleX(1);
-		transition-delay: 0.25s;
-	}
-	&:hover:after {
-		transform: scaleX(0);
-		transition-delay: 0s;
-	}
+%link-underline {
+    height: 34px;
+    background-color: rgba(255, 255, 255, 0);
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 3px;
+    transition: all 0.6s;
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        right: 0;
+        background-color: #616161;
+        transition: transform 0.4s cubic-bezier(0.65, 0.005, 0.35, 0.995);
+        transform-origin: right;
+        transition-delay: 0.25s;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        right: 0;
+        background-color: #616161;
+        transition: transform 0.4s cubic-bezier(0.65, 0.005, 0.35, 0.995);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition-delay: 0s;
+    }
+    &:hover:before {
+        transform: scaleX(1);
+        transition-delay: 0.25s;
+    }
+    &:hover:after {
+        transform: scaleX(0);
+        transition-delay: 0s;
+    }
 }
 
-
-
-
-%block-title-inlist{
-	margin: 0;
-	padding: 0;
-	font-size: 18px;
-	line-height: 24px;
-	font-family: $font-regular;
-	font-style: normal;
-	font-weight: normal;
-	color: #000;
-	@media(min-width: 768px){
-		font-size: 20px;
-		line-height: 39px;
-	}
-	@media(min-width: 1280px){
-		font-size: 24px;
-		line-height: 39px;
-	}
-	@media(min-width: 1680px){
-		font-size: 30px;
-		line-height: 39px;		
-	}
+%block-title-inlist {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: $font-regular;
+    font-style: normal;
+    font-weight: normal;
+    color: #000;
+    @media(min-width: 768px) {
+        font-size: 20px;
+        line-height: 39px;
+    }
+    @media(min-width: 1280px) {
+        font-size: 24px;
+        line-height: 39px;
+    }
+    @media(min-width: 1680px) {
+        font-size: 30px;
+        line-height: 39px;
+    }
 }
-
-
