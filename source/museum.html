@@ -350,8 +350,8 @@
                         <div class="parallax__img" data-speed="-40">
                             <div class="parallax__img-inner--hero parallax__img-inner--hero--desktop" style="background-image: url(./img/museum/bg-museum.jpg);"></div>
                             <div class="parallax__img-inner--hero parallax__img-inner--hero--mobile" style="background-image: url(./img/museum/bg-museum.jpg);"></div>
-                            <video loop="" class="parallax__img-video" playsinline="" muted="">
-                                <source src="./video/video-main.mp4" type="video/mp4">
+                            <video poster="./video/video-museum-poster.jpg" loop="" class="parallax__img-video" playsinline="" muted="">
+                                <source src="./video/video-museum.mp4" type="video/mp4">
                             </video>
                         </div>
 
@@ -575,7 +575,7 @@
                 <section class="museum-nav">
                     <div class="museum-nav-wrap">
                         <div class="container">
-                            <h2 class="museum-nav__title">Залы музея</h2>
+                            <h2 class="museum-nav__title">Залы <br> музея</h2>
                             <ul class="museum-nav__list">
                                 <li class="museum-nav__item">
                                     <a class="museum-nav__link active" href="#zal-1">
@@ -1594,7 +1594,7 @@
                             <p class="museum-history__desc">Первоначально идея открытия музея возникла еще в 20-е годы прошлого века. О необходимости сбора и упорядочения исторических материалов первым заговорил Иван Иванович Газа – организатор партийного комитета на заводе «Красный
                                 путиловец». Уже тогда начали собирать документы, фотографии, воспоминания, различные реликвии. Директор завода выделил специальное помещение для хранения поступавших материалов. В это время активно проводились вечера с
                                 участием ветеранов труда, стенографировались выступления участников и очевидцев революционных событий – в прямом смысле «писалась История завода».</p>
-                            <a href="#" class="button-more--museum-history button-more">
+                            <a href="#" class="button-more--museum-history button-more museum__link-popup">
                                 <span>подробнее</span>
                             </a>
                         </div>
@@ -1775,15 +1775,46 @@
                 </div>
             </footer>
         </div>
-        </div>
+        <article class="popup_museum scroll-popup">
+            <div class="popup-background"></div>
+            <div class="container">
+                <div class="popup__wrapper">
+                    <header class="popup_kirovets__header">
+                        <button class="popup_kirovets__back popup__close">
+							<svg class="popup_kirovets__back-icon"><use xlink:href="./img/sprite.svg#icon-arrow-popup"></use></svg>
+							вернуться
+						</button>
+                        <button class="popup_kirovets__close popup__close">
+							<span class="line"></span>
+							<span class="line"></span>
+						</button>
+                    </header>
 
-        <script>
-            document.querySelectorAll('.museum__gallery__img').forEach(e => {
 
-                // e.parentElement.nextElementSibling.style.maxWidth = e.offsetWidth;
-                e.parentElement.nextElementSibling.style.width = (e.offsetWidth - 10) + 'px';
-            });
-        </script>
+                    <div class="popup_history__article">
+                        <h2 class="popup_history__title">
+                            <span class="red-accent">История создания</span><br>музея
+                        </h2>
+              
+                        <p class="popup_history__desc">Карл Гаскойн родился в 1737 году в семье капитана британской армии, мать его была дочерью лорда. Получив достаточно высокое по тем временам инженерное образование, он уже в 30 лет становится одним из ведущих промышленников Великобритании,
+                            а в 1769 году — директором одного из крупнейших в Европе металлургических предприятий — завода Кэррон в Шотландии, на котором выпускались лучшие по тому времени пушки. В 1772 году по заказу российского правительства К.Гаскойн
+                            начал поставку для российского флота большой партии орудий нового типа, а также паровых машин и современных станков, оказывал инженерную помощь. 1786 году по рекомендации адмирала С. Грейга К.Гаскойн был приглашен в Россию.
+                            По условиям контракта он должен был привезти сюда также оборудование и знающих мастеров. Инженерный опыт позволил К.Гаскойну довольно-таки быстро создать на развалинах Петровского завода в Петрозаводске лучший пушечный завод
+                            в России, названный Александровским. Впервые в России он построил «вагранок» или малую поворотную печь, ввел новые технологические процессы литья. Карл Гаскойн родился в 1737 году в семье капитана британской армии, мать его
+                            была дочерью лорда. Получив достаточно высокое по тем временам инженерное образование, он уже в 30 лет становится одним из ведущих промышленников Великобритании, а в 1769 году — директором одного из крупнейших в Европе металлургических
+                            предприятий — завода Кэррон в Шотландии, на котором выпускались лучшие по тому времени пушки. В 1772 году по заказу российского правительства К.Гаскойн начал поставку для российского флота большой партии орудий нового типа,
+                            а также паровых машин и современных станков, оказывал инженерную помощь. 1786 году по рекомендации адмирала С. Грейга К.Гаскойн был приглашен в Россию. По условиям контракта он должен был привезти сюда также оборудование и
+                            знающих мастеров. Инженерный опыт позволил К.Гаскойну довольно-таки быстро создать на развалинах Петровского завода в Петрозаводске лучший пушечный завод в России, названный Александровским. Впервые в России он построил «вагранок»
+                            или малую поворотную печь, ввел новые технологические процессы литья.
+
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+
         <script src="./js/script.min.js"></script>
 
 </body>

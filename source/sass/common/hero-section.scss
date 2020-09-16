@@ -199,6 +199,7 @@
 
   .hero-common_info__item {
     margin-right: 20px;
+
     &:last-child {
       margin-right: 0;
     }
@@ -224,15 +225,15 @@
       display: none;
     }
   }
-  .hero-common_info__link {
-    font-size: 18px;
-  }
+  
   .hero-common_info__icon {
     margin-right: 15px;
+    width: 15px;
+    height: 15px;
   }
 
   .hero-common__info {
-    height: 68px;
+    min-height: 48px;
   }
   .hero-common_info__item{
     width: auto;
@@ -241,10 +242,10 @@
   .hero-common_info__item--phone{
     display: none;
   }
-  .hero-common_info__item:nth-child(3){
-    display: none;
-    margin-left: 0;
-  }
+  // .hero-common_info__item:nth-child(3){
+  //   display: none;
+  //   margin-left: 0;
+  // }
   .hero-common_info__item--phone{
     display: none;
   }
