@@ -106,16 +106,16 @@
     // text-transform: uppercase;
 	font-weight: normal;
 		font-family: $font-regular;
-		color: #BDBDBD;
+		color: #ffffff;
 	text-decoration: none;
 	transition: all 0.5s ease;
 	&:hover{
-		color: #BDBDBD;
+		color: #ffffff;
 	}
 }
 
 .nav_link_text {
-	color: #BDBDBD;
+	color: #ffffff;
 }
 
 .nav_link.nav_link--policy{
@@ -132,22 +132,22 @@
 }
 
 .nav_list:hover .nav_link{
-	color: #525252;
+	opacity: 0.5;
 }
 .nav_list:hover .nav_link__icon{
-	fill: #525252;
+	opacity: 0.5;
 }
 .nav_list:hover .nav_link:hover > .nav_link__icon{
-	fill: #CECECE;
+	opacity: 1;
 }
 .nav_list:hover .nav_link:hover{
-	color: #BDBDBD;
+	opacity: 0.5;
 }
 .nav_list:hover .nav_link.active{
-	color: #BDBDBD;
+	opacity: 1;
 }
 .nav_list:hover .nav_link.active  > .nav_link__icon{
-	color: #CECECE;
+	opacity: 1;
 }
 
 .active .nav_link__icon{
