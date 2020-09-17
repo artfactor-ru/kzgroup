@@ -15,6 +15,26 @@ import ScrollbarSmoth from 'smooth-scrollbar';
 import barba from '@barba/core';
 
 
+// var Stickyfill = require('stickyfill');
+ 
+// // you can optionally pass `document` and `window` for reuse in iframes
+// var stickyfill = Stickyfill();
+ 
+// // make sure to add the elements you want to polyfill
+// let stickyMuseum = document.querySelector('.museum-nav');
+// stickyfill.add(stickyMuseum);
+
+
+// let parent = document.querySelector('.museum-nav').parentElement;
+
+// while (parent) {
+//     const hasOverflow = getComputedStyle(parent).overflow;
+//     if(hasOverflow !== 'visible') {
+//         console.log(hasOverflow, parent);
+//     }
+//     parent = parent.parentElement;
+// }
+
 function delay(n) {
 	n = n || 2000;
 	return new Promise((done) => {
@@ -445,6 +465,26 @@ function fixedNavForm(offsetscroll, navigation){
 	}
 }
 
+function stickyNav(offsetscroll, navigation, container){
+	
+		let wrapper = document.querySelector(container);
+		let nav = document.querySelector(navigation);
+		let sec1 = document.querySelector('#zal-1')
+			if(getCoords(wrapper).top <= scrollbar.offset.y && ((getCoords(wrapper).bottom - nav.offsetHeight)  >= scrollbar.offset.y)){
+				// nav.style.opacity = "1";
+				// nav.style.pointerEvents = "auto";
+				nav.style.position = "absolute";
+				sec1.style.paddingTop = (nav.offsetHeight+40) + 'px';
+				fixedNav(offsetscroll, '.museum-nav');
+				// console.log('hi');
+			}else{
+				// nav.style.position = "static";
+			}
+	
+	
+	
+}
+
 
 // Инициализация плавного скролла
 
@@ -593,9 +633,22 @@ function eventOnScroll(){
 	spyScrolling ('.traktors' , '.traktors__nav-link.active');
 	spyScrolling ('.article' , '.history__nav-link.active');
 	spyScrolling ('.vac-f__form-title' , '.vac-f__nav-item.active');
-	fixedNav(offset, '.museum-nav');
+	
 	fixedNav(offset, '.traktors__nav');
 	fixedNavForm(offset, '.vac-f__nav-list');
+
+	if(document.querySelector('.museum-nav')){
+		stickyNav(offset, '.museum-nav', '.museum-zal__wrap');
+	}
+	
+
+	if (/iPhone|iPad|iPod|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		// код для мобильных устройств
+		document.querySelector('.traktors__nav').style.display = "none";
+		document.querySelector('.vac-f__nav-list').style.display = "none";
+	  } else {
+		
+	}
 
 	const mobileBreakpoint = window.matchMedia('(min-width:1280px)');
 	const breakpointCheckerForMobile = function() {
@@ -1695,6 +1748,8 @@ const makeNavLinksSmoothMuseum = (sec, alllink) => {
 	// Видео
 	let videoMain = document.querySelector('.parallax__img-video');
 	let btnPlay = document.querySelector('.button__video-controls--play');
+	let overlay = document.querySelector('.video-overlay');
+	
 	if(videoMain){
 		function playPauseMedia() {
 			if(videoMain.paused) {
@@ -1702,6 +1757,10 @@ const makeNavLinksSmoothMuseum = (sec, alllink) => {
 				videoMain.play();
 			
 				btnPlay.classList.add('active');
+				if(overlay){
+					overlay.style.opacity="1";
+				}
+				
 				flagBtnVideo = true;
 			} else {
 				videoMain.pause();
@@ -2463,7 +2522,7 @@ if(document.getElementById('accordion')){
 
 		galleryImg[i].querySelector('.gallery__img').addEventListener("load", function() {
 
-			console.log(galleryImg[i].querySelector('.gallery__img').offsetWidth);
+			// console.log(galleryImg[i].querySelector('.gallery__img').offsetWidth);
 			galleryImg[i].querySelector('.gallery__desc').style.width = (galleryImg[i].querySelector('.gallery__img').offsetWidth - 10) + 'px';
 		});
 	}

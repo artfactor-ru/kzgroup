@@ -99,7 +99,7 @@
 
 @media(min-width: 1680px){
 	
-	.parallax__img--aboutcompany-1{
+	.parallax__img--ptz-1{
 		// background-image: url(../img/about/about-parallax-first-1.svg);
 		background-position: bottom  center;
 		--overflow: -100px;
@@ -108,7 +108,7 @@
 		top: calc( -1 * var(--overflow));
 		
 	}
-	.parallax__img--aboutcompany-2{
+	.parallax__img--ptz-2{
 		// background-image: url(../img/about/about-parallax-first-2.svg);
 		// --overflow: -15%;
 		--overflow: -50px;
@@ -116,7 +116,7 @@
 		top: calc( -1 * var(--overflow));
 		
 	}
-	.parallax__img--aboutcompany-3{
+	.parallax__img--ptz-3{
 		// background-image: url(../img/about/about-parallax-first-3.svg);
 		// --overflow: -150px;
 		--overflow: -130px;

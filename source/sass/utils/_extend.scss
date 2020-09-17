@@ -214,14 +214,14 @@
     font-family: $font-text-light;
     font-style: normal;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 22px;
     color: $grey-text-paragraf;
 }
 
 @media(min-width: 767px) {
     %block-text {
-        font-size: 14px;
+        font-size: 15px;
         line-height: 22px;
     }
 }
@@ -811,7 +811,7 @@
     font-family: $font-text-light;
     font-style: normal;
     font-weight: 300;
-    font-size: 12px;
+    font-size: 15px;
     line-height: 16px;
     color: $grey-text-paragraf;
 }
