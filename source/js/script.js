@@ -865,7 +865,7 @@ let scrollbar;
 			let galleryThumbs = new Swiper('.gallery-thumbs', {
 				spaceBetween: 20,
 				slidesPerView: 5,
-				loop: true,
+				loop: false,
 				freeMode: true,
 				loopedSlides: 1, //looped slides should be the same
 				watchSlidesVisibility: true,
