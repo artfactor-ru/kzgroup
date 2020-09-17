@@ -366,15 +366,20 @@
 
 
 @media screen and (max-width: 1561px) {
-  .vacancies-d__form {
-    height: 600px;
-  }
+
   .vacancies-d__build-point {
     right: 18%;
   }
 }
 
 @media screen and (max-width: 1366px) {
+  .vacancies-d__form-label input, .vacancies-d__form-label textarea {
+    height: 50px;
+  }
+  .vacancies-d__form-buttons--block .vacancies-d__download {
+    padding-bottom: 0;
+    margin-bottom: 9px;
+  }
   .vac-d-form__input-container {
     width: 433px;
   }
@@ -400,6 +405,13 @@
 }
 
 @media screen and (max-width: 1281px) {
+  .vacancies-d__form {
+    height: 580px;
+  }
+  .vacancies-d__form-buttons {
+    padding-left: 299px;
+    padding-right: 68px;
+  }
   .vacancies-d__hero {
     padding: 90px 0;
   }

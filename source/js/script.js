@@ -2360,18 +2360,18 @@ function customSelect(){
 //     });
 // }
 //вызов формы на детальной страницы вакансий
-if(document.querySelector('.vacancies-d__form-container')) {
-	let vacanciesForm = document.querySelector('.vacancies-d__form-wrapper');
-	let vacanciesClose = document.querySelector('.vacancies-d__form-close');
-	let vacanciesBtnResponse = document.querySelector('.vacancies-d__response-btn');
-	vacanciesBtnResponse.addEventListener('click', function () {
-		vacanciesForm.style.display = 'block';
-	});
-	vacanciesClose.addEventListener('click', function () {
-		vacanciesForm.style.display = 'none';
-	});
-}
-
+// if(document.querySelector('.vacancies-d__form-container')) {
+// 	let vacanciesForm = document.querySelector('.vacancies-d__form-wrapper');
+// 	let vacanciesClose = document.querySelector('.vacancies-d__form-close');
+// 	let vacanciesBtnResponse = document.querySelector('.vacancies-d__response-btn');
+// 	vacanciesBtnResponse.addEventListener('click', function () {
+// 		vacanciesForm.style.display = 'block';
+// 	});
+// 	vacanciesClose.addEventListener('click', function () {
+// 		vacanciesForm.style.display = 'none';
+// 	});
+// }
+//
 
 
 

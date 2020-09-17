@@ -66,13 +66,17 @@
 		white-space: nowrap;
 		overflow: visible;
 	}
+	.statistics__subtitle {
+		margin-top: 5px;
+	}
+	.statistics__item:last-child .statistics__subtitle {
+		margin-top: -8px;
+	}
 }
 
 @media(min-width: 1280px){
 	.statistics__list{
-	
 		justify-content: flex-start;
-
 	}
 	.statistics{
 		padding-top: 75px;
@@ -84,8 +88,12 @@
 		padding-right: 10%;
 		box-sizing: border-box;
 	}
-
-
+	.statistics__subtitle {
+		margin-top: 8px;
+	}
+	.statistics__item:last-child .statistics__subtitle {
+		margin-top: -7px;
+	}
 }
 
 @media(min-width: 1680px){
@@ -101,6 +109,9 @@
 		margin-top: 20px;
 	}
 
+  	.statistics__item:last-child .statistics__subtitle {
+		margin-top: 0;
+	}
 	.statistics__item{
 		width:50%;
 		padding-bottom: 100px;

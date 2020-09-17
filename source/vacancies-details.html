@@ -201,19 +201,22 @@
                                 <div class="nav_dropdown_wrap">
                                     <ul class="nav_dropdown_list">
                                         <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="#">Новости</a>
+                                            <a class="nav_dropdown_link" href="press.html">Пресс-Центр</a>
                                         </li>
                                         <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="#">Видеогалерея</a>
+                                            <a class="nav_dropdown_link" href="press-news.html">Новости</a>
                                         </li>
                                         <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="#">Пресса о нас</a>
+                                            <a class="nav_dropdown_link" href="press-videogallery.html">Видеогалерея</a>
                                         </li>
                                         <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="#">Фотогалерея</a>
+                                            <a class="nav_dropdown_link" href="press-about-us.html">Пресса о нас</a>
                                         </li>
                                         <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="#">Контакты</a>
+                                            <a class="nav_dropdown_link" href="press-photogallery.html">Фотогалерея</a>
+                                        </li>
+                                        <li class="nav_dropdown_item">
+                                            <a class="nav_dropdown_link" href="press-contacts.html">Контакты</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -538,7 +541,7 @@
                                 <a class="footer__nav-link" href="">Компания</a>
                             </li>
                             <li class="footer__nav-item">
-                                <a class="footer__nav-link" href="">Деятельность</a>
+                                <a class="footer__nav-link" href="company_group.html">Дочерние предприятия</a>
                             </li>
                             <li class="footer__nav-item">
                                 <a class="footer__nav-link" href="">Карта сайта</a>
@@ -638,7 +641,7 @@
 <div class="vacancies-d__form-wrapper vacancies-d__form-container">
     <div class="vacancies-d__form-layer"></div>
     <form id="vac-d-form" class="vacancies-d__form">
-        <svg class="vacancies-d__form-close" width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="vacancies-d__form-close vac-d-form-test" width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7109 15.1292L0.355601 29.4845L1.06271 30.1916L15.418 15.8363L29.0663 29.4845L29.7734 28.7774L16.1251 15.1292L29.7756 1.47873L29.0685 0.771619L15.418 14.4221L1.06049 0.0645121L0.353381 0.771619L14.7109 15.1292Z" fill="black"/>
         </svg>
         <h2>Отправить резюме соискателя</h2>
@@ -697,7 +700,7 @@
         $('.vacancies-d__form').show(300);
 
     });
-    $('.vacancies-d__form-close').on('click', function () {
+    $('.vac-d-form-test').on('click', function () {
         $('.vacancies-d__form').hide(200);
         $('.vacancies-d__form-wrapper').fadeOut(200);
     });
@@ -705,6 +708,7 @@
         $('.vacancies-d__form').hide(200);
         $('.vacancies-d__form-wrapper').fadeOut(200);
     });
+
 
 
     $(document).ready(function () {
