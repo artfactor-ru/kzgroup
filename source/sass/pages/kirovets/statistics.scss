@@ -69,8 +69,15 @@
 	.statistics__subtitle {
 		margin-top: 5px;
 	}
-	.statistics__item:last-child .statistics__subtitle {
+	.statistics__subtitle--huge {
 		margin-top: -8px;
+	}
+
+	.statistics__subtitle--huge2 {
+		margin-top: -6px;
+	}
+	.statistics__subtitle--huge3 {
+		margin-top: -6px;
 	}
 }
 
@@ -91,8 +98,16 @@
 	.statistics__subtitle {
 		margin-top: 8px;
 	}
-	.statistics__item:last-child .statistics__subtitle {
+	.statistics__subtitle--huge {
 		margin-top: -7px;
+	}
+
+	.statistics__subtitle--huge2 {
+		margin-top: -1px;
+	}
+
+	.statistics__subtitle--huge3 {
+		margin-top: 0;
 	}
 }
 
@@ -108,9 +123,14 @@
 	.statistics__subtitle{
 		margin-top: 20px;
 	}
-
-  	.statistics__item:last-child .statistics__subtitle {
-		margin-top: 0;
+  	.statistics__subtitle--huge {
+		margin-top: 2px;
+	}
+  	.statistics__subtitle--huge2 {
+		margin-top: 7px;
+	}
+  	.statistics__subtitle--huge3 {
+		margin-top: 3px;
 	}
 	.statistics__item{
 		width:50%;

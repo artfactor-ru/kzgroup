@@ -154,6 +154,10 @@
     }
 }
 
+.contact-block__link--unhover:hover {
+    opacity: unset;
+}
+
 .contact-block__sublist{
     @include list-destroy;
     @media(min-width: 768px){
