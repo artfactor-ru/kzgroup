@@ -31,9 +31,11 @@
 }
 
 .parallax__img-video{
-	display: none;
+	// display: none;
+	opacity: 0;
 	pointer-events: none;
 	position: absolute;
+	transition: all 0.5s ease;
 }
 .parallax__img-video.active{
 	display: block;

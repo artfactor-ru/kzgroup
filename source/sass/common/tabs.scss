@@ -152,3 +152,133 @@
   
   }
 }
+
+.tabs-common-content{
+  position: relative;
+}
+
+.tabs_background, .tabs_background--next{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	pointer-events: none;
+}
+.tabs_background--next{
+	opacity: 0;
+}
+
+.tabs_background::before, .tabs_background::after {
+	content: "";
+	position: absolute;
+	top: 1px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	  transform: scaleX(1);
+	  transform-origin: center right;
+	  transition: transform 5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+
+  .tabs_background::before {
+    background-color:#f2f4f7;
+    // transition-delay: 0.45s;
+    z-index: 1;
+  }
+  
+  .tabs_background::after {
+    background-color: #ffffff;
+    // transition-delay: 0.65s;
+    z-index: 3;
+  }
+
+  .leave .tabs_background::after, .leave .tabs_background::before {
+  // transform: scaleX(1);
+    animation-name: animateBg;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+  }
+  .leave .tabs_background::before{
+    animation-delay: 0.1s;
+  }
+
+  .leave .tabs_background::before{
+    animation-delay: 0.15s;
+  }
+  
+  @keyframes animateBg{
+    0%{
+      transform: scaleX(1);
+	    // transform-origin: center left;
+    }
+    30%{
+      transform: scaleX(0);
+    }
+    50%{
+      transform: scaleX(0);
+    }
+    // 70%{
+    //   transform: scaleX(1);
+    //   // transform-origin: center right;
+    // }
+    100%{
+      transform: scaleX(0);
+      // transform-origin: center right;
+    }
+  }
+  // .tabs_background--next::before, .tabs_background--next::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 1px;
+  //   right: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //     transform: scaleX(1);
+  //     transform-origin: center right;
+  //   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 1.4s;
+  //   }
+    
+  
+  
+  //   .tabs_background--next::before {
+  //   background-color: #f2f4f7;
+  //   transition-delay: 1.65s;
+  //   z-index: 1;
+  //   }
+    
+  //   .tabs_background--next::after {
+  //   background-color: #ffffff;
+  //   transition-delay: 1.4s;
+  //   z-index: 3;
+  //   }
+  
+  //     .show .tabs_background--next{
+  //     opacity: 1;
+  //   }
+  //   .show .tabs_background--next::after, .show  .tabs_background--next::before {
+  //   transform: scaleX(0);
+  
+  //   }
+  
+  // .tabs_background--next::before {
+  //     background-color: #f2f4f7;
+  //     transition-delay: 1.75s;
+  //     z-index: 1;
+  // }
+  
+  // .tabs_background--next::after {
+  //     background-color: #ffffff;
+  //     transition-delay: 1.5s;
+  //     z-index: 3;
+  // }
+  
+  // .show .tabs_background--next {
+  //     opacity: 1;
+  // }
+  
+  // .show .tabs_background--next::after,
+  // .show .tabs_background--next::before {
+  //     transform: scaleX(0);
+  // }
