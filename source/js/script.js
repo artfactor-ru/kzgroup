@@ -170,17 +170,18 @@ function checkUrlForTabs(links){
 
 function checkUrl(links){
 	let barbalink = document.querySelectorAll(links);
-			
+	removeActivity(barbalink);
 	for(let i = 0; i<barbalink.length; i++){
 		if(barbalink[i].href == window.location.href){
-			let path = window.location.pathname.substr(1);
-
-			let otherLink = document.querySelectorAll(`a:not([href="${path}" ])` );
-			
-			let allLink = document.querySelectorAll(`a[href="${path}" ]` );
-	
-			removeActivity(otherLink);
-			barbalink[i].classList.add('active');
+			let path = window.location.href;
+			if(path.indexOf(barbalink[i].href)> -1){
+				let otherLink = document.querySelectorAll(`a:not([href="${barbalink[i].href}" ])` );
+				console.log(barbalink[i].href);
+				// let allLink = document.querySelectorAll(`a[href="${path}" ]` );
+		
+				// 
+				barbalink[i].classList.add('active');
+			}
 				
 		}
 	}

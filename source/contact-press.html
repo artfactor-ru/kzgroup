@@ -380,13 +380,16 @@
     <div class="parallax__img-wrap">
       <div class="parallax__img" data-speed="-40">
         <div class="parallax__img--inner" style="
-						background: linear-gradient(65.95deg, #0F0F0F 0.6%, #000000 0.6%, rgba(0, 0, 0, 0) 42.86%), linear-gradient(0deg, rgba(0, 0, 0, 0.43), rgba(0, 0, 0, 0.43)),  url(./img/contacts/bg-contacts.png);
+						background:  url(./img/contacts/bg-contacts.png);
 						background-blend-mode: multiply, normal, normal;
 						background-position: center;
 						background-size: cover;
 						background-repeat: no-repeat;">
 
         </div>
+        <video loop="" class="parallax__img-video" playsinline="">
+          <source src="./video/video-contact.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
 
@@ -394,17 +397,21 @@
       <div class="main__wrapper">
         <h1 class="main__title main__title--about">
           <div class="title--inner-main contacts-header-title active" data-name="contacts">Контакты</div>
-          <div class="title--inner-main contacts-header-title" data-name="contact_form">Обратная связь</div>
-          <div class="title--inner-main contacts-header-title" data-name="contact_hotline">Горячая линия</div>
+          <div class="title--inner-main contacts-header-title" data-name="contact_form">Обратная <br>связь</div>
+          <div class="title--inner-main contacts-header-title" data-name="contact_hotline">Горячая <br>линия</div>
           <div class="title--inner-main contacts-header-title" data-name="contact_recvizity">Реквизиты</div>
           <div class="title--inner-main contacts-header-title" data-name="contact-leadership">Руководство</div>
-          <div class="title--inner-main contacts-header-title" data-name="contact-press">Пресс-центр</div>
-          <div class="title--inner-main contacts-header-title" data-name="contact-group">Дочерние <br>компании</div>
+          <div class="title--inner-main contacts-header-title" data-name="contact-press">Контакты</div>
+          <div class="title--inner-main contacts-header-title" data-name="contact-group">Контакты<br> дочерних компаний</div>
           <div class="title--inner-main contacts-header-title" data-name="contact-employment">Трудоустройство</div>
           <div class="title--inner-main contacts-header-title" data-name="contact-rent">Аренда</div>
-          <div class="title--inner-main contacts-header-title" data-name="contact-museum">Музей</div>  
+          <div class="title--inner-main contacts-header-title" data-name="contact-museum">Музей</div> 
         </h1>
       </div>
+    </div>
+
+    <div class="button__video-controls-wrap">
+      <button class="button__video-controls button__video-controls--play"></button>
     </div>
   </section>
 
