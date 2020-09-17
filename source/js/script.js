@@ -13,9 +13,7 @@ import ScrollbarSmoth from 'smooth-scrollbar';
 
 
 import barba from '@barba/core';
-// import barbaCss from '@barba/css';
 
-// barba.use(barbaCss);
 
 function delay(n) {
 	n = n || 2000;
@@ -161,6 +159,7 @@ function checkUrlForTabs(links){
 					
 			removeActivity(tabcontent);
 			document.getElementById(tabsLink[i].dataset.tab).classList.add('active')
+			document.getElementById(tabsLink[i].dataset.tab).classList.add('leave')
 		}
 	}
 }
@@ -358,17 +357,33 @@ function headerShowAndHideDesktop() {
 	let museumContainer = document.querySelector('.museum-zal__wrap');
 
 	
+	let univerLink = document.querySelector('.header__wrapper--university');
 	
 	if(getCoords(header).top > 50 && getCoords(twoScreen).top >= scrollbar.offset.y){
 		header.classList.add('hide')
+		if(univerLink){
+			univerLink.style.display = "block";
+		}
+		
+
 	}else if(getCoords(header).top < 0  || getCoords(header).top > 100 && getCoords(twoScreen).top <= scrollbar.offset.y){
 		header.classList.remove('hide')
+		if(univerLink){
+			univerLink.style.display = "none";
+		}
+
+	
 	}
 	if(getCoords(twoScreen).top >= scrollbar.offset.y){
 		
 		header.classList.remove('js-scroll');
+		if(univerLink){
+			univerLink.style.display = "block";
+		}
+		
 	}else if(getCoords(header).top > 50 && getCoords(twoScreen).top <= scrollbar.offset.y){
 		header.classList.add('js-scroll');
+		
 	}
 
 	if(getCoords(twoScreen).top<= 0){
@@ -520,6 +535,12 @@ function eventOnScroll(){
 				toggleActions: 'play none none none',
 				// this removes the class when the scrolltrigger is passed:
 				// once: true,
+			});
+		});
+		gsap.utils.toArray('.button-line').forEach(element => {
+			ScrollTrigger.create({
+				trigger: element,
+				toggleClass: 'is-inview',
 			});
 		});
 
@@ -1677,7 +1698,7 @@ const makeNavLinksSmoothMuseum = (sec, alllink) => {
 	if(videoMain){
 		function playPauseMedia() {
 			if(videoMain.paused) {
-				videoMain.style.display = "block";
+				videoMain.style.opacity = "1";
 				videoMain.play();
 			
 				btnPlay.classList.add('active');
@@ -1724,62 +1745,6 @@ let initAnimation = function(){
 			});
 		});
 	
-		// gsap.utils.toArray('.history_dark').forEach(element => {
-		// 	gsap.to(document.querySelector('.history__bg'),{
-			
-				
-		// 			opacity: 1,
-	
-		// 			// duration: 2,
-		// 			// stagger: .13,
-		// 			// ease: "power3.out",
-		// 			// delay: .2,
-		// 			// force3D: true,
-		// 			scrollTrigger: {
-		// 				trigger: element,
-		// 				// scrub: true,
-		// 				// toggleClass: 'dark',
-		// 				// toggleActions: 'play none none reverse',
-		// 			} 
-		// 			}
-		// 	);
-			
-		// });
-
-		// gsap.utils.toArray('.history_light').forEach(element => {
-		// 	gsap.to(document.querySelector('.history__bg'),{
-			
-			
-		// 			opacity: 0,
-	
-		// 			// duration: 2,
-		// 			// stagger: .13,
-		// 			// ease: "power3.out",
-		// 			// delay: .2,
-		// 			// force3D: true,
-		// 			scrollTrigger: {
-		// 				trigger: element,
-		// 				// scrub: true,
-		// 				// start: 'bottom top',
-		// 				// toggleClass: 'light',
-		// 				// toggleActions: 'play none none reverse',
-		// 			} 
-		// 			}
-		// 	);
-			
-		// });
-
-		// gsap.utils.toArray('.history_light').forEach(element => {
-		// 	ScrollTrigger.create({
-		// 		trigger: element,
-		// 		scrub: true,
-		// 		toggleClass: 'show',
-		// 		// this toggles the class again when you scroll back up:
-		// 		toggleActions: 'play none none none',
-		// 		// this removes the class when the scrolltrigger is passed:
-		// 		// once: true,
-		// 	});
-		// });
 
 		gsap.utils.toArray('.company_group__item-icon').forEach(element => {
 			ScrollTrigger.create({
@@ -1986,7 +1951,16 @@ let initAnimation = function(){
 
 				}
 				
-				
+				// if(videoMain){
+				// 	if(videoMain.paused) {
+				// 		setTimeout(function(){
+				// 			if(videoMain.paused) {
+				// 				btnPlay.click();
+				// 			}
+				// 		}, 4000)
+						
+				// 	}
+				// }
 			
 			}, 6000);
 		
@@ -2101,6 +2075,32 @@ let popup = document.querySelectorAll('.popup_kirovets');
 
 	}
 
+	let popupMuseum = document.querySelectorAll('.popup_museum');
+	let linkPopupMuseum = document.querySelectorAll('.museum__link-popup');
+	for(let i = 0; i< popupMuseum.length; i++){
+		
+		linkPopupMuseum[i].addEventListener('click', function(event){
+			event.preventDefault();
+			popupMuseum[i].classList.add('active');
+			
+			
+			let btnBack = popupMuseum[i].querySelector('.popup_kirovets__back');
+
+			btnBack.addEventListener('click', function(event){
+				popupMuseum[i].classList.remove('active');
+			});
+		
+			let btnClose = popupMuseum[i].querySelector('.popup_kirovets__close');
+
+			btnClose.addEventListener('click', function(event){
+				popupMuseum[i].classList.remove('active');
+			});
+
+		})
+
+
+	}
+
 
 // Добавление видимость параграфам 
 
@@ -2204,6 +2204,17 @@ function removeActivity (arrCollection) {
 	}
 }
 
+function removeActivityTabs (arrCollection) {
+	for (let i = 0; i<arrCollection.length; i++) {
+
+		// setTimeout(function(){
+			arrCollection[i].classList.remove('active');
+		// }, 500)
+		
+		arrCollection[i].classList.remove('leave');
+	}
+}
+
 let tabsEvent = document.getElementById('tabs_event');
 
 	if(tabsEvent){
@@ -2214,10 +2225,13 @@ let tabsEvent = document.getElementById('tabs_event');
 			if (e.target.classList.contains('tabs-common-links-js') ) {
 				let tabcontent = document.querySelectorAll(".tabs-common-content");
 					
-				removeActivity(tabcontent);
-				document.getElementById(e.target.dataset.tab).classList.add('active')
-
-			
+				removeActivityTabs(tabcontent);
+				
+				document.getElementById(e.target.dataset.tab).classList.add('leave')
+				// setTimeout(function(){
+					document.getElementById(e.target.dataset.tab).classList.add('active')
+				// }, 500)
+				
 			}
 
 			
@@ -2443,3 +2457,15 @@ function accordion(){
 if(document.getElementById('accordion')){
 	accordion();
 }
+
+	let galleryImg = document.querySelectorAll('.swiper-slide--gallery');
+	for(let i = 0; i<galleryImg.length; i++){
+
+		galleryImg[i].querySelector('.gallery__img').addEventListener("load", function() {
+
+			console.log(galleryImg[i].querySelector('.gallery__img').offsetWidth);
+			galleryImg[i].querySelector('.gallery__desc').style.width = (galleryImg[i].querySelector('.gallery__img').offsetWidth - 10) + 'px';
+		});
+	}
+
+
