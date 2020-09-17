@@ -5,7 +5,7 @@
 .parallax__img--frame{
     // position: fixed;
     background-size: cover;
-    background-image: url(../img/main/frame-bg-mobile.jpg);
+    background-image: url(../img/main/frame-bg.jpg);
     --overflow: 200px;
    
     height: calc(175px + (2 * var(--overflow))) !important;
@@ -19,7 +19,7 @@
     .parallax__img--frame{
         // position: fixed;
         background-size: cover;
-        background-image: url(../img/main/frame-bg-mobile.jpg);
+        background-image: url(../img/main/frame-bg.jpg);
         // --overflow: -500px;
        
         // height: calc(225px + (2 * var(--overflow)));
@@ -34,7 +34,7 @@
     .parallax__img--frame{
         // position: fixed;
         background-size: cover;
-        background-image: url(../img/main/frame-bg-mobile.jpg);
+        background-image: url(../img/main/frame-bg.jpg);
         // --overflow: -500px;
        
         // height: calc(360px + (2 * var(--overflow)));
