@@ -2527,4 +2527,47 @@ if(document.getElementById('accordion')){
 		});
 	}
 
+//форма обратной связи на Вакансии детально
+if ($('#vac-d-form')) {
+	$('.vacancies-d__response-btn').on('click', function () {
+		$('.vacancies-d__form-wrapper').fadeIn();
+		$('.vacancies-d__form').show(300);
+		gsap.utils.toArray('.button-line').forEach(element => {
+			ScrollTrigger.create({
+				trigger: element,
+				toggleClass: 'is-inview',
+			});
+		});
+	});
+	$('.vac-d-form-test').on('click', function () {
+		$('.vacancies-d__form').hide(200);
+		$('.vacancies-d__form-wrapper').fadeOut(200);
+	});
+	$('.vacancies-d__form-layer').on('click', function () {
+		$('.vacancies-d__form').hide(200);
+		$('.vacancies-d__form-wrapper').fadeOut(200);
+	});
+}
+
+//форма обратной связи на Аренда детально
+if ($('#rent-d-form')) {
+	$('.rent-details__button').on('click', function () {
+		$('.vacancies-d__form-wrapper').fadeIn();
+		$('.rent-details__form').show(300);
+		gsap.utils.toArray('.button-line').forEach(element => {
+			ScrollTrigger.create({
+				trigger: element,
+				toggleClass: 'is-inview',
+			});
+		});
+	});
+	$('.vacancies-d__form-close').on('click', function () {
+		$('.rent-details__form').hide(200);
+		$('.vacancies-d__form-wrapper').fadeOut(200);
+	});
+	$('.vacancies-d__form-layer').on('click', function () {
+		$('.rent-details__form').hide(200);
+		$('.vacancies-d__form-wrapper').fadeOut(200);
+	});
+}
 

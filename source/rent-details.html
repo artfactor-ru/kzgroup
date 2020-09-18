@@ -735,12 +735,11 @@
             return counterSlides;
         };
         amountSlides();
-
         if (counterSlides > 4) {
             thumbsWrapper.css('justify-content', 'initial');
+        } else {
+            thumbsWrapper.css('justify-content', 'center');
         }
-
-        console.log(counterSlides);
     });
 
     $(document).ready(function () {
@@ -786,19 +785,6 @@
         })
     });
 
-
-    $('.rent-details__button').on('click', function () {
-        $('.vacancies-d__form-wrapper').fadeIn();
-        $('.rent-details__form').show(300);
-    });
-    $('.vacancies-d__form-close').on('click', function () {
-        $('.rent-details__form').hide(200);
-        $('.vacancies-d__form-wrapper').fadeOut(200);
-    });
-    $('.vacancies-d__form-layer').on('click', function () {
-        $('.rent-details__form').hide(200);
-        $('.vacancies-d__form-wrapper').fadeOut(200);
-    });
 
     $('#rent-d-form__number').inputmask("+7 (999) 999-99-99");
     // добавляем правило для валидации телефона
