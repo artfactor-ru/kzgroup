@@ -15,25 +15,6 @@ import ScrollbarSmoth from 'smooth-scrollbar';
 import barba from '@barba/core';
 
 
-// var Stickyfill = require('stickyfill');
- 
-// // you can optionally pass `document` and `window` for reuse in iframes
-// var stickyfill = Stickyfill();
- 
-// // make sure to add the elements you want to polyfill
-// let stickyMuseum = document.querySelector('.museum-nav');
-// stickyfill.add(stickyMuseum);
-
-
-// let parent = document.querySelector('.museum-nav').parentElement;
-
-// while (parent) {
-//     const hasOverflow = getComputedStyle(parent).overflow;
-//     if(hasOverflow !== 'visible') {
-//         console.log(hasOverflow, parent);
-//     }
-//     parent = parent.parentElement;
-// }
 
 function delay(n) {
 	n = n || 2000;
@@ -642,13 +623,7 @@ function eventOnScroll(){
 	}
 	
 
-	if (/iPhone|iPad|iPod|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-		// код для мобильных устройств
-		document.querySelector('.traktors__nav').style.display = "none";
-		document.querySelector('.vac-f__nav-list').style.display = "none";
-	  } else {
-		
-	}
+	
 
 	const mobileBreakpoint = window.matchMedia('(min-width:1280px)');
 	const breakpointCheckerForMobile = function() {
@@ -1320,6 +1295,22 @@ let scrollbar;
 		initSlider();
 		if(swiperHero){
 			swiperHero.autoplay.stop();
+		}
+
+		if (/iPhone|iPad|iPod|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+			// код для мобильных устройств
+	
+			if(document.querySelector('.traktors__nav')){
+				document.querySelector('.traktors__nav').classList.add('hidden')
+			}
+			if(document.querySelector('.vac-f__nav-list')){
+				document.querySelector('.vac-f__nav-list').classList.add('hidden')
+			}
+	
+			console.log('iphone')
+			
+		
+			
 		}
 		
 	})
@@ -2417,35 +2408,6 @@ function customSelect(){
 	}
 
 }
-
-
-
-//вызов формы на детальной страницы аренды помещений
-// if(document.querySelector('.rent-details__form-wrapper')) {
-//     let vacanciesForm = document.querySelector('.vacancies-d__form-wrapper');
-//     let vacanciesClose = document.querySelector('.vacancies-d__form-close');
-//     let vacanciesBtnResponse = document.querySelector('.rent-details__button');
-//     vacanciesBtnResponse.addEventListener('click', function () {
-//         vacanciesForm.style.display = 'block';
-//     });
-//     vacanciesClose.addEventListener('click', function () {
-//         vacanciesForm.style.display = 'none';
-//     });
-// }
-//вызов формы на детальной страницы вакансий
-// if(document.querySelector('.vacancies-d__form-container')) {
-// 	let vacanciesForm = document.querySelector('.vacancies-d__form-wrapper');
-// 	let vacanciesClose = document.querySelector('.vacancies-d__form-close');
-// 	let vacanciesBtnResponse = document.querySelector('.vacancies-d__response-btn');
-// 	vacanciesBtnResponse.addEventListener('click', function () {
-// 		vacanciesForm.style.display = 'block';
-// 	});
-// 	vacanciesClose.addEventListener('click', function () {
-// 		vacanciesForm.style.display = 'none';
-// 	});
-// }
-//
-
 
 
 // Создание яндекс карты
