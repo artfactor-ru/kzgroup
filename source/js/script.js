@@ -2571,3 +2571,122 @@ if ($('#rent-d-form')) {
 	});
 }
 
+function scrollToTopForm( element , pxs) {
+	let elementTopPosition = -(getCoordsNew(element).top)  - pxs;
+	scrollbar.scrollTo(0, elementTopPosition, 900);
+}
+
+let getCoordsNew = function (el) {
+	let block = $(el),
+		offset = block.offset(),
+		topOffset = offset.top,
+		bottomOffset = topOffset + block.outerHeight();
+	return {
+		top: topOffset,
+		bottom: bottomOffset
+	}
+};
+//валидация большой формы вакансий
+if ($('.vac-f__main-form')) {
+	let validName = false;
+	let validSecName = false;
+	let validPhone = false;
+
+	$('#vac-form').submit(function (event) {
+		event.preventDefault();
+
+		let name = $('.form-name-input');
+		let secName = $('.vac-f__second-name');
+		let number = $('.input-phone-field');
+
+		if (number.val() === "") {
+			number.css('border' , '1px solid #C30215');
+			if (number.next().is('.form-invalid-error') === false) {
+				$("<div class='form-invalid-error'>обязательное поле<div/>").insertAfter($(number));
+				scrollToTopForm(number, 400);
+				validPhone = false;
+			} else if (number.next().is('.form-invalid-error') === true && number.val() === "") {
+				scrollToTopForm(number, 400);
+			}
+		} else {
+			number.next('.form-invalid-error').remove();
+			number.css('border' , '1px solid #dce0e3');
+			validPhone = true;
+		}
+
+		if (name.val() === "") {
+			name.css('border' , '1px solid #C30215');
+			if (name.next().is('.form-invalid-error') === false) {
+				$("<div class='form-invalid-error'>обязательное поле<div/>").insertAfter($(name));
+				scrollToTopForm(name, 1600);
+				validName = false;
+			} else if (name.next().is('.form-invalid-error') === true && name.val() === "") {
+				scrollToTopForm(name, 1600);
+			}
+		} else {
+			name.next('.form-invalid-error').remove();
+			name.css('border' , '1px solid #dce0e3');
+			validName = true;
+		}
+
+		if (secName.val() === "") {
+			secName.css('border' , '1px solid #C30215');
+			if (secName.next().is('.form-invalid-error') === false) {
+				$("<div class='form-invalid-error'>обязательное поле<div/>").insertAfter($(secName));
+				scrollToTopForm(secName, 1700);
+				validSecName = false;
+			} else if (secName.next().is('.form-invalid-error') === true && secName.val() === "") {
+				scrollToTopForm(secName, 1700);
+			}
+		} else {
+			secName.next('.form-invalid-error').remove();
+			secName.css('border' , '1px solid #dce0e3');
+			validSecName = true;
+		}
+
+		if(validName === true && validSecName === true && validPhone === true) {
+			$("#vac-form").unbind('submit').submit();
+		}
+	});
+}
+//валидация большой формы аренды помещений
+if ($('.rent-form__main-form')) {
+	let validName = false;
+	let validPhone = false;
+	$('.rent-form__main-form').submit(function (event) {
+		event.preventDefault();
+		let name = $('.rent-form-name');
+		let number = $('.rent-details-number');
+		if (number.val() === "") {
+			number.css('border' , '1px solid #C30215');
+			if (number.next().is('.form-invalid-error') === false) {
+				$("<div class='form-invalid-error'>обязательное поле<div/>").insertAfter($(number));
+				scrollToTopForm(number, 600);
+				validPhone = false;
+			} else if (number.next().is('.form-invalid-error') === true && number.val() === "") {
+				scrollToTopForm(number, 600);
+			}
+		} else {
+			number.next('.form-invalid-error').remove();
+			number.css('border' , '1px solid #dce0e3');
+			validPhone = true;
+		}
+		if (name.val() === "") {
+			name.css('border' , '1px solid #C30215');
+			if (name.next().is('.form-invalid-error') === false) {
+				$("<div class='form-invalid-error'>обязательное поле<div/>").insertAfter($(name));
+				scrollToTopForm(number, 700);
+				validName = false;
+			} else if (name.next().is('.form-invalid-error') === true && name.val() === "") {
+				scrollToTopForm(number, 700);
+			}
+		} else {
+			name.next('.form-invalid-error').remove();
+			name.css('border' , '1px solid #dce0e3');
+			validName = true;
+		}
+		if(validName === true  && validPhone === true) {
+			$(".rent-form__main-form").unbind('submit').submit();
+		}
+	})
+}
