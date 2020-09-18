@@ -24,6 +24,7 @@
   display: flex;
 }
 
+
 .vac-f__nav {
   width: 30%;
   &-list {
@@ -61,6 +62,7 @@
       align-items: center;
       justify-content: center;
       position: relative;
+      transition: .3s;
       &:after {
         position: absolute;
         display: block;
@@ -90,6 +92,7 @@
   & .vac-f__nav-item__circle {
     background-color: #F34542;
     border-color: #F34542;
+
     & span {
       color: #fff;
     }
