@@ -4,6 +4,8 @@
 .main_about{
 
 	background-image: url(../img/main/about-main-bg.svg);
+	background-position: bottom center;
+  background-size: contain;
 }
 
 
@@ -27,7 +29,10 @@
 
 
 @media(min-width: 767px){
-	
+	.main_about{
+
+	  background-size: cover;
+	}
 	.parallax__img--main_about{
 
 		background-position: bottom center;

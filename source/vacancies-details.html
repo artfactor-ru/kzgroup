@@ -694,6 +694,23 @@
 <script src="./js/script.min.js"></script>
 <script>
 
+
+    $('.vacancies-d__response-btn').on('click', function () {
+        $('.vacancies-d__form-wrapper').fadeIn();
+        $('.vacancies-d__form').show(300);
+
+    });
+    $('.vac-d-form-test').on('click', function () {
+        $('.vacancies-d__form').hide(200);
+        $('.vacancies-d__form-wrapper').fadeOut(200);
+    });
+    $('.vacancies-d__form-layer').on('click', function () {
+        $('.vacancies-d__form').hide(200);
+        $('.vacancies-d__form-wrapper').fadeOut(200);
+    });
+
+
+
     $(document).ready(function () {
         let validName = false;
         let validPhone = false;

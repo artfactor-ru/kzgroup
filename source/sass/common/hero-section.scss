@@ -131,6 +131,8 @@
   font-size: 16px;
   line-height: 100%;
 }
+
+
 .hero-common_info__item--phone{
   display: none;
 }
@@ -250,10 +252,15 @@
   .hero-common_info__item--phone{
     display: none;
   }
+  .hero-common_info__link br{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 767px) {
-  
+  .hero-common_info__link br{
+    display: none;
+  }
   .parallax__img-inner--hero--desktop{
     display: none;
   }

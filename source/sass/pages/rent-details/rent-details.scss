@@ -245,6 +245,7 @@
 }
 
 .rent-details__form-submit {
+  border: 1px solid #000;
   margin-top: 0;
   height: 58px;
 }
@@ -322,7 +323,7 @@
   transform: translate(-50%,-50%);
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   padding: 65px 0;
   flex-direction: column;
 }
@@ -394,7 +395,7 @@
     font-size: 16px;
     margin-bottom: 20px;
     & input {
-      height: 50px;
+      height: 40px;
       width: 425px;
     }
     & textarea {
@@ -571,9 +572,6 @@
 
 
 @media screen and (max-width: 481px) {
-  .rent-details__form-label input {
-    height: 45px;
-  }
   .rent-d-form__input-container {
     width: 100%;
   }

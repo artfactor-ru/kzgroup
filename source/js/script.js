@@ -69,7 +69,12 @@ if(document.querySelector('.barbapage')){
 	let bg = document.querySelector('.barba_background');
 	barba.hooks.enter((data) => {
 
+		if(containerScroll){
+			// scrollbar = ScrollbarSmoth.init(containerScroll, options);
+			scrollbar.addListener(ScrollTrigger.update);
 		
+		}
+			
 		setTimeout(initAnimation, 10);
 	
 		initSlider();
@@ -83,7 +88,9 @@ if(document.querySelector('.barbapage')){
 		breakpoint.addListener(breakpointChecker);
 		breakpointChecker();
 		
-		
+		mobileBreakpoint.addListener(breakpointCheckerForMobile);
+
+		breakpointCheckerForMobile();
 		
 		checkUrl('.tabs-common-links--barba');
 		checkUrl('.contacts-sidebar__nav-link');
@@ -91,14 +98,7 @@ if(document.querySelector('.barbapage')){
 		checkUrlForTitle('.contacts-header-title');
 		
 	
-		if(containerScroll){
-			// scrollbar = ScrollbarSmoth.init(containerScroll, options);
-			scrollbar.addListener(ScrollTrigger.update);
-	
-			eventOnScroll();
 		
-		}
-			
 	
 
 		customSelect();
@@ -281,6 +281,24 @@ function scrollToTopMuseum( element) {
 
 // Паралакс эффект на картинках
 
+function parallaxRemove(items){
+	let layers = items;
+
+	for (let i = 0; i < layers.length; i++) {
+		let layer = layers[i];
+		if(scrollbar.isVisible(layer)){
+			layer.removeAttribute('style');
+		}
+		
+		
+		console.log(layer);
+	}
+}
+
+
+let top;
+
+
 function parallax(items) {
 	let layers = items;
 	let speed;
@@ -294,16 +312,11 @@ function parallax(items) {
 		speed = layer.getAttribute('data-speed');
 
 		
-			let top = scrollbar.offset.y- getCoords(layer).top;
+			top = scrollbar.offset.y- getCoords(layer).top;
 			let yPos = -(top * speed / 100);
 			if(scrollbar.isVisible(layer)){
 				layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
 			}
-
-
-		// if(getCoords(layer).top - 500<=scrollbar.offset.y && getCoords(layer).bottom + 500>=scrollbar.offset.y){
-			// layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
-		// }
 		
 	}
 
@@ -533,163 +546,225 @@ if(containerTabsScroll){
 
 
 
-function eventOnScroll(){
-	scrollbar.addListener(({ offset }) => {
-
-
-		// let historyImage = document.querySelectorAll('.history__parallax');
-
-		// for(let i = 0; i<historyImage.length; i++){
-		// 	if(scrollbar.isVisible(historyImage[i])){
-		// 		historyImage[i].classList.add('is-inview');
-		// 	}
-		// }
-		
-		// Анимация для кнопки подробнее нужно инициализировать чтобы появлялась при клике на табе
-		gsap.utils.toArray('.button-more').forEach(element => {
-			ScrollTrigger.create({
-				trigger: element,
-				start: 'bottom bottom',
-				scrub: true,
-				toggleClass: 'is-inview-line',
-				// this toggles the class again when you scroll back up:
-				toggleActions: 'play none none none',
-				// this removes the class when the scrolltrigger is passed:
-				// once: true,
-			});
-		});
-		gsap.utils.toArray('.button-line').forEach(element => {
-			ScrollTrigger.create({
-				trigger: element,
-				toggleClass: 'is-inview',
-			});
-		});
-
-		
-		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-			// код для мобильных устройств
-		  } else {
-			parallax(document.querySelectorAll('.parallax__img'));
-			parallax(document.querySelectorAll('.parallax__img--slide'));
-		}
 	
-	
-	if(videoMain){
-	
-		if(!scrollbar.isVisible(videoMain)){
-			if(!videoMain.paused) {
-				videoMain.pause();
-	
-			}
-			
-		}else{
-			if(videoMain.paused) {
-				if(!flagBtnVideo){
-					videoMain.play();
-				}
-			}
-		}
-	}
-	
-	if(document.querySelector('.swiper-container--hero')){
-		if(scrollbar.isVisible(document.querySelector('.swiper-container--hero'))){
-			swiperHero.autoplay.start();
-			document.body.classList.add('load')
-			
-		}else{
-			swiperHero.autoplay.stop();
-			document.body.classList.remove('load')
-		}
-	}
-	
-	
-	
-	
-	makeNavLinksSmooth('.traktors','.traktors__nav-link');
-	makeNavLinksSmooth('.vac-f__form-title','.vac-f__nav-item');
-	makeNavLinksSmoothHistory('.article','.history__nav-link');
-	makeNavLinksSmoothMuseum('.museum-zal','.museum-nav__link' );
-
-	spyScrolling ('.museum-zal' , '.museum-nav__link.active');
-	spyScrolling ('.traktors' , '.traktors__nav-link.active');
-	spyScrolling ('.article' , '.history__nav-link.active');
-	spyScrolling ('.vac-f__form-title' , '.vac-f__nav-item.active');
-	
-	fixedNav(offset, '.traktors__nav');
-	fixedNavForm(offset, '.vac-f__nav-list');
-
-	if(document.querySelector('.museum-nav')){
-		stickyNav(offset, '.museum-nav', '.museum-zal__wrap');
-	}
-	
-
-	
-
-	const mobileBreakpoint = window.matchMedia('(min-width:1280px)');
-	const breakpointCheckerForMobile = function() {
-		// Взаимодействие с шапкой
-	if ( mobileBreakpoint.matches === true ) {
-		if(header){	
-			headerShowAndHideDesktop();
-
-		}
-		let historyBg = document.querySelector('.history__bg');
-		if(historyBg){
-			let light = document.querySelectorAll('.history_light');
-			let dark = document.querySelectorAll('.history_dark');
-
-			for(let i = 0; i<light.length; i++){
-				if(scrollbar.isVisible(light[i])){
-					historyBg.style.opacity = "0"
-				}
-			}
-
-			for(let i = 0; i<dark.length; i++){
-				if(scrollbar.isVisible(dark[i])){
-					historyBg.style.opacity = "1"
-				}
-				
-			}
-
-
-		}
-	
-		}else if ( mobileBreakpoint.matches === false ) {
-				if(header){	
-					hideAndShowHeaderMobile();
-				}
-		}
-	}
-
-
-	mobileBreakpoint.addListener(breakpointCheckerForMobile);
-
-	breakpointCheckerForMobile();
-	
-	})
-}
 
 let containerScroll = document.querySelector('.scroll');
 
-// if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-// 	containerScroll.classList.remove('scroll');
-//   } else {
-// 	containerScroll.classList.add('scroll');
-// }
-
-// let containerScroll = document.querySelector('.scroll');
 let scrollbar;
 	if(containerScroll){
 
 
 		scrollbar = ScrollbarSmoth.init(containerScroll, options);
 		scrollbar.addListener(ScrollTrigger.update);
-
-		eventOnScroll();
-	
 		
 	}
 
+	function eventOnScrollMobile(){
+
+		
+
+		scrollbar.addListener(({ offset }) => {
+
+			parallaxRemove(document.querySelectorAll('.parallax__img--slide'));
+			parallaxRemove(document.querySelectorAll('.parallax__img'));
+			// Анимация для кнопки подробнее нужно инициализировать чтобы появлялась при клике на табе
+			gsap.utils.toArray('.button-more').forEach(element => {
+				ScrollTrigger.create({
+					trigger: element,
+					start: 'bottom bottom',
+					scrub: true,
+					toggleClass: 'is-inview-line',
+					// this toggles the class again when you scroll back up:
+					toggleActions: 'play none none none',
+					// this removes the class when the scrolltrigger is passed:
+					// once: true,
+				});
+			});
+			gsap.utils.toArray('.button-line').forEach(element => {
+				ScrollTrigger.create({
+					trigger: element,
+					toggleClass: 'is-inview',
+				});
+			});
+	
+			if(videoMain){
+		
+				if(!scrollbar.isVisible(videoMain)){
+					if(!videoMain.paused) {
+						videoMain.pause();
+			
+					}
+					
+				}else{
+					if(videoMain.paused) {
+						if(!flagBtnVideo){
+							videoMain.play();
+						}
+					}
+				}
+			}
+	
+			if(document.querySelector('.swiper-container--hero')){
+				if(scrollbar.isVisible(document.querySelector('.swiper-container--hero'))){
+					swiperHero.autoplay.start();
+					document.body.classList.add('load')
+					
+				}else{
+					swiperHero.autoplay.stop();
+					document.body.classList.remove('load')
+				}
+			}
+			makeNavLinksSmooth('.traktors','.traktors__nav-link');
+			makeNavLinksSmooth('.vac-f__form-title','.vac-f__nav-item');
+			makeNavLinksSmoothHistory('.article','.history__nav-link');
+			makeNavLinksSmoothMuseum('.museum-zal','.museum-nav__link' );
+		
+			spyScrolling ('.museum-zal' , '.museum-nav__link.active');
+			spyScrolling ('.traktors' , '.traktors__nav-link.active');
+			spyScrolling ('.article' , '.history__nav-link.active');
+			spyScrolling ('.vac-f__form-title' , '.vac-f__nav-item.active');
+			
+			fixedNav(offset, '.traktors__nav');
+			fixedNavForm(offset, '.vac-f__nav-list');
+		
+			if(document.querySelector('.museum-nav')){
+				stickyNav(offset, '.museum-nav', '.museum-zal__wrap');
+			}
+		
+			if(header){	
+				hideAndShowHeaderMobile();
+			}
+		});
+	
+	
+	}
+	
+	function eventOnScroll(){
+		scrollbar.addListener(({ offset }) => {
+	
+			// Анимация для кнопки подробнее нужно инициализировать чтобы появлялась при клике на табе
+			gsap.utils.toArray('.button-more').forEach(element => {
+				ScrollTrigger.create({
+					trigger: element,
+					start: 'bottom bottom',
+					scrub: true,
+					toggleClass: 'is-inview-line',
+					// this toggles the class again when you scroll back up:
+					toggleActions: 'play none none none',
+					// this removes the class when the scrolltrigger is passed:
+					// once: true,
+				});
+			});
+			gsap.utils.toArray('.button-line').forEach(element => {
+				ScrollTrigger.create({
+					trigger: element,
+					toggleClass: 'is-inview',
+				});
+			});
+
+			 
+		
+			parallax(document.querySelectorAll('.parallax__img'));
+			parallax(document.querySelectorAll('.parallax__img--slide'));
+			
+		
+		
+			if(videoMain){
+		
+				if(!scrollbar.isVisible(videoMain)){
+					if(!videoMain.paused) {
+						videoMain.pause();
+			
+					}
+					
+				}else{
+					if(videoMain.paused) {
+						if(!flagBtnVideo){
+							videoMain.play();
+						}
+					}
+				}
+			}
+		
+			if(document.querySelector('.swiper-container--hero')){
+				if(scrollbar.isVisible(document.querySelector('.swiper-container--hero'))){
+					swiperHero.autoplay.start();
+					document.body.classList.add('load')
+					
+				}else{
+					swiperHero.autoplay.stop();
+					document.body.classList.remove('load')
+				}
+			}
+		
+			makeNavLinksSmooth('.traktors','.traktors__nav-link');
+			makeNavLinksSmooth('.vac-f__form-title','.vac-f__nav-item');
+			makeNavLinksSmoothHistory('.article','.history__nav-link');
+			makeNavLinksSmoothMuseum('.museum-zal','.museum-nav__link' );
+	
+			spyScrolling ('.museum-zal' , '.museum-nav__link.active');
+			spyScrolling ('.traktors' , '.traktors__nav-link.active');
+			spyScrolling ('.article' , '.history__nav-link.active');
+			spyScrolling ('.vac-f__form-title' , '.vac-f__nav-item.active');
+			
+			fixedNav(offset, '.traktors__nav');
+			fixedNavForm(offset, '.vac-f__nav-list');
+	
+			if(document.querySelector('.museum-nav')){
+				stickyNav(offset, '.museum-nav', '.museum-zal__wrap');
+			}
+		
+	
+			if(header){	
+				headerShowAndHideDesktop();
+	
+			}
+	
+			let historyBg = document.querySelector('.history__bg');
+			if(historyBg){
+				let light = document.querySelectorAll('.history_light');
+				let dark = document.querySelectorAll('.history_dark');
+	
+				for(let i = 0; i<light.length; i++){
+					if(scrollbar.isVisible(light[i])){
+						historyBg.style.opacity = "0"
+					}
+				}
+	
+				for(let i = 0; i<dark.length; i++){
+					if(scrollbar.isVisible(dark[i])){
+						historyBg.style.opacity = "1"
+					}
+					
+				}
+	
+	
+			}
+		});
+		
+	}
+	
+		
+	
+	
+		const mobileBreakpoint = window.matchMedia('(min-width:1280px)');
+		const breakpointCheckerForMobile = function() {
+			// Взаимодействие с шапкой
+			if ( mobileBreakpoint.matches === true ) {
+				eventOnScroll()
+				
+				
+			
+			}else if ( mobileBreakpoint.matches === false ) {
+				
+				eventOnScrollMobile()
+			}
+		}
+		
+	
+	
+		mobileBreakpoint.addListener(breakpointCheckerForMobile);
+		breakpointCheckerForMobile();
 
 // Инициализация свайперов
 	let swiperStatistics;
@@ -1291,6 +1366,8 @@ let scrollbar;
 
 	}
 
+
+
 	document.addEventListener('DOMContentLoaded', function(){
 		initSlider();
 		if(swiperHero){
@@ -1334,6 +1411,10 @@ let scrollbar;
 
 		breakpointOnlyForDesktop.addListener(breakpointCheckerForDesktop);
 		breakpointCheckerForDesktop();
+
+		mobileBreakpoint.addListener(breakpointCheckerForMobile);
+	
+		breakpointCheckerForMobile();
 
 		let vh = window.innerHeight * 0.01;
 		document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -1905,10 +1986,10 @@ let initAnimation = function(){
 				y: "25px"
 			}, {
 				y: "0%",
-				duration: 1,
+				duration: 5,
 				opacity: 1 ,
 				// stagger: .2,
-				// ease: "ease",
+				ease: "Power3.easeOut",
 				scrollTrigger: {
 					trigger: element,
 					// scrub: true,
@@ -1983,36 +2064,39 @@ let initAnimation = function(){
 	
 		if (document.readyState === "complete") {
 	
-			setTimeout(function () {
-				document.querySelector('.preloader').style.opacity = "0";
-				document.querySelector('.preloader').style.pointerEvents = "none";
+				setTimeout(function () {
+					document.querySelector('.preloader').style.opacity = "0";
+					document.querySelector('.preloader').style.pointerEvents = "none";
 
-				initAnimation();
-
-
-				let videoHero = document.querySelector('.parallax__img-video--hero');
-				if(videoHero){
-					videoHero.play();
-				}
-			
-				if(swiperHero){
-					swiperHero.autoplay.start();
-					document.body.classList.add('load');
-
-				}
+					initAnimation();
+					
+					let videoHero = document.querySelector('.parallax__img-video--hero');
+					if(videoHero){
+						videoHero.play();
+					}
 				
-				// if(videoMain){
-				// 	if(videoMain.paused) {
-				// 		setTimeout(function(){
-				// 			if(videoMain.paused) {
-				// 				btnPlay.click();
-				// 			}
-				// 		}, 4000)
+					if(swiperHero){
+						swiperHero.autoplay.start();
+						document.body.classList.add('load');
+
+					}
+
+					
+
+				}, 800);
+				setTimeout(function () {
+					if(videoMain){
+						videoMain.style.opacity = "1";
+						videoMain.play();
+					
+						btnPlay.classList.add('active');
+						if(overlay){
+							overlay.style.opacity="1";
+						}
 						
-				// 	}
-				// }
-			
-			}, 6000);
+						flagBtnVideo = true;
+					}
+				}, 2800);
 		
 		}
 	}
@@ -2489,47 +2573,4 @@ if(document.getElementById('accordion')){
 		});
 	}
 
-//форма обратной связи на Вакансии детально
-if ($('#vac-d-form')) {
-	$('.vacancies-d__response-btn').on('click', function () {
-		$('.vacancies-d__form-wrapper').fadeIn();
-		$('.vacancies-d__form').show(300);
-		gsap.utils.toArray('.button-line').forEach(element => {
-			ScrollTrigger.create({
-				trigger: element,
-				toggleClass: 'is-inview',
-			});
-		});
-	});
-	$('.vac-d-form-test').on('click', function () {
-		$('.vacancies-d__form').hide(200);
-		$('.vacancies-d__form-wrapper').fadeOut(200);
-	});
-	$('.vacancies-d__form-layer').on('click', function () {
-		$('.vacancies-d__form').hide(200);
-		$('.vacancies-d__form-wrapper').fadeOut(200);
-	});
-}
-
-//форма обратной связи на Аренда детально
-if ($('#rent-d-form')) {
-	$('.rent-details__button').on('click', function () {
-		$('.vacancies-d__form-wrapper').fadeIn();
-		$('.rent-details__form').show(300);
-		gsap.utils.toArray('.button-line').forEach(element => {
-			ScrollTrigger.create({
-				trigger: element,
-				toggleClass: 'is-inview',
-			});
-		});
-	});
-	$('.vacancies-d__form-close').on('click', function () {
-		$('.rent-details__form').hide(200);
-		$('.vacancies-d__form-wrapper').fadeOut(200);
-	});
-	$('.vacancies-d__form-layer').on('click', function () {
-		$('.rent-details__form').hide(200);
-		$('.vacancies-d__form-wrapper').fadeOut(200);
-	});
-}
 

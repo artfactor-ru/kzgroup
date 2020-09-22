@@ -1,1426 +1,674 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Кировский завод</title>
-	<link rel="stylesheet" href="./css/style.min.css">
-</head>
-
-
-<body class="index">
-
-	<style>
-		.preloader{
-			background-color: #ffffff;
-			width: 100vw;
-			z-index: 20000;
-			height: 100vh;
-			height: calc(var(--vh, 1vh) * 100);
-			position: fixed;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		
-		}
-		.preloader__icon{
-			width: 130px;
-			height: 130px;
-			fill: none;
-			stroke-dasharray: 1000;
-			stroke-dashoffset: 1000;
-			animation: dash 6s linear 3s forwards infinite alternate;
-		}
-	</style>
-	<div class="preloader">
-		<svg class="preloader__icon"><use xlink:href="./img/sprite.svg#icon-logo-company"></use></svg>
-	</div>
-
-	<div class="forheader">
-
-		<header class="header">
-			<div class="container--header container--header--main">
-
-				<div class="header__wrapper">
-					
-					<button class="c-nav-button js-nav-toggle" type="button">
-						<div class="c-nav-button_wrap">
-							<div class="c-nav-button_icon">
-								<span class="c-nav-button_line"></span>
-								<span class="c-nav-button_line"></span>
-								<span class="c-nav-button_line"></span>
-							</div>
-						</div>
-					</button>
-					<a class="header__logo" href="index.html">
-						<svg class="header__logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<g clip-path="url(#clip0)">
-								<path d="M29.684 17.9667L17.9667 29.684L6.32028 17.9667L17.9667 6.32028L29.684 17.9667ZM27.7666 8.16666L23.3637 0H12.5696L8.16666 8.16666L0 12.5696V23.3637L8.16666 27.7666L12.5696 35.9333H23.3637L27.7666 27.7666L35.9333 23.3637V12.5696L27.7666 8.16666Z" fill="#ED1C24"></path>
-								<path d="M20.4522 6.32031L34.087 13.7058V19.9551L20.4522 6.32031ZM22.2986 34.158H16.0493L29.6841 20.5232L22.2986 34.158ZM1.77539 22.2986V15.9783L15.4102 29.613L1.77539 22.2986ZM13.6348 1.77539H19.8841L6.32031 15.4812L13.6348 1.77539Z" fill="#FFDD00"></path>
-							</g>
-							<defs>
-								<clipPath id="clip0">
-									<rect width="35.9333" height="35.9333" fill="white"></rect>
-								</clipPath>
-							</defs>
-						</svg>
-	
-						<p class="header__logo-text">Кировский<br> завод</p>
-					</a>
-				</div>
-
-				
-				<div class="header__wrapper header__wrapper--university">
-					<a class="header__logo header__logo--university" href="">
-
-						<p class="header__university-text">Корпоративный<br> университет</p>
-						
-						<svg class="header__logo-unversity-icon"><use xlink:href="./img/sprite.svg#icon-university"></use></svg>
-					</a>
-				</div>
-
-			
-
-			</div>
-		</header>
-		
-		 <nav class="nav">
-			<div class="nav_background"></div>
-
-
-		 	<div class="nav_list-wrap">
-				<article class="nav_list-scroll">
-					<div class="nav_list-left scrollbar-inner">
-						<div class="nav_list-content">
-
-
-							<div class="js-search-button">
-								<div class="js-search-text">Поиск</div>
-							</div>
-							<ul class="nav_list">
-								<li class="nav_item -dropdown js-dropdown">
-									<div class="nav_link js-nav-link js-dropdown-toggle">
-										<span class="nav_link_text">Компания</span>
-										<svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
-										
-									</div>
-									<span class="nav_link_line"></span>
-									<div class="nav_dropdown js-dropdown-list">
-										<div class="nav_dropdown_wrap">
-											<ul class="nav_dropdown_list">
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="about.html">О компании</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="leadership.html">Руководство</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="history.html">История</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="museum.html">Музей</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="production-system.html">Производственная система</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="#">Охрана труда</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="#">Профсоюз</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="#">Реквизиты</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</li>
-								<li class="nav_item -dropdown js-dropdown">
-									<div class="nav_link js-nav-link js-dropdown-toggle">
-										<span class="nav_link_text">Дочерние предприятия</span>
-										<svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
-										
-									</div>
-									<span class="nav_link_line"></span>
-									<div class="nav_dropdown js-dropdown-list">
-										<div class="nav_dropdown_wrap">
-											<ul class="nav_dropdown_list">
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="company_group.html">Основные предприятия</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="ptz.html">АО «Петербургский тракторный завод»</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="#">АО «Завод «Киров-Энергомаш»</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="#">АО «Металлургический завод «Петросталь»</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="#">ООО «Объединенные заводы буровой техники им. В. В. Воровского»</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="#">ООО «Кировский завод Газовые Технологии»</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="energy-department.html">Энергодепартамент</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="#">АО «Тетрамет»</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="#">АО «Локомотив»</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="#">АО «Проектно-конструкторское бюро «Автоматика»</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="#"> Предприятия социальной сферы</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</li>
-
-
-								<li class="nav_item">
-									<a class="nav_link js-nav-link" href="university.html">
-										<span class="nav_link_text">Корпоративный университет</span>
-										<span class="nav_link_line"></span>
-									</a>
-								</li>
-								<!-- <li class="nav_item -dropdown js-dropdown">
-
-								
-									<div class="nav_link js-nav-link js-dropdown-toggle">
-										<span class="nav_link_text">Корпоративный университет</span>
-										<svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
-									</div>
-									<div class="nav_dropdown js-dropdown-list">
-										<div class="nav_dropdown_wrap">
-											<ul class="nav_dropdown_list">
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="#">Обучение</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="#">Сведения об образовательной организации </a>
-												</li>
-													<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="#">Контакты</a>
-												</li>
-											
-											</ul>
-										</div>
-									</div>
-								</li> -->
-								<li class="nav_item">
-									<a class="nav_link js-nav-link" href="vacancies.html">
-										<span class="nav_link_text">Вакансии</span>
-										<span class="nav_link_line"></span>
-									</a>
-								</li>
-						
-								<li class="nav_item -dropdown js-dropdown">
-
-								
-									<div class="nav_link js-nav-link js-dropdown-toggle">
-										<span class="nav_link_text">Пресс-Центр</span>
-										<svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
-									</div>
-									<div class="nav_dropdown js-dropdown-list">
-										<div class="nav_dropdown_wrap">
-											<ul class="nav_dropdown_list">
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="press.html">Пресс-Центр</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="press-news.html">Новости</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="press-videogallery.html">Видеогалерея</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="press-about-us.html">Пресса о нас</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="press-photogallery.html">Фотогалерея</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="press-contacts.html">Контакты</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</li>
-
-								<li class="nav_item -dropdown js-dropdown">
-
-								
-									<div class="nav_link js-nav-link js-dropdown-toggle">
-										<span class="nav_link_text">Акционерам и инвесторам</span>
-										<svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
-									</div>
-									<div class="nav_dropdown js-dropdown-list">
-										<div class="nav_dropdown_wrap">
-											<ul class="nav_dropdown_list">
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="#">Информация, подлежащая раскрытию ПАО «Кировский завод»</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="#">Раскрытие информации дочерними обществами</a>
-												</li>
-													
-										
-											</ul>
-										</div>
-									</div>
-								</li>
-
-								
-								<!-- <li class="nav_item -dropdown js-dropdown">
-
-								
-									<div class="nav_link js-nav-link js-dropdown-toggle">
-										<span class="nav_link_text">Продажа активов</span>
-										<svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
-									</div>
-									<div class="nav_dropdown js-dropdown-list">
-										<div class="nav_dropdown_wrap">
-											<ul class="nav_dropdown_list">
-												<li class="nav_dropdown_item">
-													<a  class="nav_dropdown_link" href="#" >Объекты на продажу</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="#">Непрофильное имущество</a>
-												</li>
-												
-											</ul>
-										</div>
-									</div>
-								</li> -->
-
-								<li class="nav_item">
-									<a class="nav_link js-nav-link" href="#">
-										<span class="nav_link_text">Продажа активов</span>
-										<span class="nav_link_line"></span>
-									</a>
-								</li>
-								<li class="nav_item">
-									<a class="nav_link js-nav-link" href="tenders.html">
-										<span class="nav_link_text">Тендеры</span>
-										<span class="nav_link_line"></span>
-									</a>
-								</li>
-								<li class="nav_item">
-									<a class="nav_link js-nav-link" href="rent.html">
-										<span class="nav_link_text">Аренда помещений	</span>
-										<span class="nav_link_line"></span>
-									</a>
-								</li>
-								<li class="nav_item">
-									<a class="nav_link js-nav-link" href="contacts.html">
-										<span class="nav_link_text">Контакты</span>
-										<span class="nav_link_line"></span>
-									</a>
-								</li>
-								<!-- <li class="nav_item -dropdown js-dropdown">
-
-								
-									<div class="nav_link js-nav-link js-dropdown-toggle">
-										<span class="nav_link_text">Аренда помещений										</span>
-										<svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
-									</div>
-									<div class="nav_dropdown js-dropdown-list">
-										<div class="nav_dropdown_wrap">
-											<ul class="nav_dropdown_list">
-												<li class="nav_dropdown_item">
-													<a  class="nav_dropdown_link" href="#" >Производственные
-														и складские помещения</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="#">Офисные и торговые помещения</a>
-												</li>
-												
-											</ul>
-										</div>
-									</div>
-								</li> -->
-
-								<!-- <li class="nav_item -dropdown js-dropdown">
-
-								
-									<div class="nav_link js-nav-link js-dropdown-toggle">
-										<span class="nav_link_text">Контакты										</span>
-										<svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
-									</div>
-									<div class="nav_dropdown js-dropdown-list">
-										<div class="nav_dropdown_wrap">
-											<ul class="nav_dropdown_list">
-												<li class="nav_dropdown_item">
-													<a  class="nav_dropdown_link" href="#" >Пресс-центр</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="#">Дочерние компании</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a  class="nav_dropdown_link" href="#" >Трудоустройство</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="#">Аренда</a>
-												</li>
-												<li class="nav_dropdown_item">
-													<a class="nav_dropdown_link" href="museum.html">Музей</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</li> -->
-
-								
-								<!-- <li class="nav_item">
-									<a class="nav_link js-nav-link" href="#">
-										<span class="nav_link_text">Обратная связь</span>
-										<span class="nav_link_line"></span>
-									</a>
-								</li>
-
-								<li class="nav_item">
-									<a class="nav_link js-nav-link" href="#">
-										<span class="nav_link_text">Горячая линия</span>
-										<span class="nav_link_line"></span>
-									</a>
-								</li>
-								<li class="nav_item">
-									<a class="nav_link js-nav-link" href="#">
-										<span class="nav_link_text">Реквизиты</span>
-										<span class="nav_link_line"></span>
-									</a>
-								</li> -->
-
-
-								<li class="nav_item">
-									<a class="nav_link nav_link--policy js-nav-link" href="#">
-										<span class="nav_link_text">Использование сайта</span>
-										<span class="nav_link_line"></span>
-									</a>
-								</li>
-							</ul>
-
-
-							<div class="nav_lang nav_lang--mobile">
-								<div class="nav_lang-wrap">
-									<ul class="nav_lang-list">
-										<li class="nav_lang-item">
-											<a class="nav_lang-link" href="">En</a>
-										</li>
-										<li class="nav_lang-item">
-											<a class="nav_lang-link current" href="">Ru</a>
-										</li>
-										<li class="nav_lang-item">
-											<a class="nav_lang-link" href="">De</a>
-										</li>
-										<!-- <li class="nav_lang-list">
-											<a class="nav_lang-link" href="">En</a>
-										</li> -->
-									</ul>
-								</div>
-							
-							</div>
-						</div>
-					</div>
-				</article>
-
-
-
-			</div>
-			<div class="nav_search">
-				<article class="search-wrap">
-					<div class="search">
-						<input class="search_input o-input -search js-search-input" type="text" placeholder="Поиск" value=""> 
-						<div class="search_results js-search-results"></div>
-					</div>
-				</article>
-			</div>
-			<aside class="nav_aside">
-				<ul class="nav_social">
-					<li class="nav_social_item">
-						<a class="nav_social_link" href="#" target="_blank">
-							
-
-							<svg class="nav_social_icon"><use xlink:href="./img/sprite.svg#icon-fb"></use></svg>
-						</a>
-					</li>
-					<li class="nav_social_item">
-						<a class="nav_social_link" href="#" target="_blank">
-							<svg class="nav_social_icon"><use xlink:href="./img/sprite.svg#icon-vk"></use></svg>
-							
-						</a>
-					</li>
-					<li class="nav_social_item">
-						<a class="nav_social_link" href="#" target="_blank">
-							<svg class="nav_social_icon"><use xlink:href="./img/sprite.svg#icon-youtube"></use></svg>
-						
-						</a>
-					</li>
-					<li class="nav_social_item">
-						<a class="nav_social_link" href="#" target="_blank">
-							
-							<svg class="nav_social_icon"><use xlink:href="./img/sprite.svg#icon-inst"></use></svg>
-						</a>
-					</li>
-				</ul>
-				<div class="nav_lang nav_lang--desktop">
-					<div class="nav_lang-wrap">
-						<ul class="nav_lang-list">
-							<li class="nav_lang-item">
-								<a class="nav_lang-link current" href="">Ru</a>
-							</li>
-							<li class="nav_lang-item">
-								<a class="nav_lang-link" href="">En</a>
-							</li>
-							<li class="nav_lang-item">
-								<a class="nav_lang-link" href="">De</a>
-							</li>
-							<!-- <li class="nav_lang-list">
-								<a class="nav_lang-link" href="">En</a>
-							</li> -->
-						</ul>
-					</div>
-				
-				</div>
-			</aside>
-		</nav>  
-
-	
-
-
-		
-			<div class="scroll">
-			
-					
-							<section class="main__hero parallax__item">
-							
-									<div class="swiper-container swiper-container--hero">
-										<!-- Additional required wrapper -->
-										<div class="swiper-wrapper">
-											<!-- Slides -->
-
-
-											<div class="swiper-slide swiper-slide--hero   swiper-slide--hero-video parallax__item--slide">
-												<div class="parallax__img-wrap parallax__img-wrap--hero">
-													<div class="parallax__img--slide parallax__img--video-bg" data-speed="-40">
-														<video poster="./img/companies/hero-bg-video.jpg" loop="" muted="muted" class="parallax__img-video parallax__img-video--hero" playsinline="" preload="auto">
-															<source src="./video/video-main.mp4" type="video/mp4">
-														</video>
-													
-													</div>
-												</div>
-												<div class="container">
-													<div class="hero__wrap">
-														<!-- <h1 class="hero__title hero__title--first">
-														<div class="title--inner">Кировский</div>
-														<div class="title--inner">завод</div></h1> -->
-														<div class="hero__slide-line">
-															<div class="hero__slide-line-time"></div>
-														</div>	
-													</div>
-												</div>
-
-
-
-												
-											</div>
-											<div class="swiper-slide swiper-slide--hero parallax__item--slide"> 
-												<div class="parallax__img-wrap">
-													<div class="parallax__img--slide parallax__img--hero" data-speed="-40">
-														<div class="swiper-slide--hero__bg swiper-slide--hero__bg--1"></div>
-													</div>
-												  </div>
-
-												<div class="container">
-													<div class="hero__wrap">
-														
-														<h1 class="hero__title">
-															<div class="title--inner">Сельскохозяйственное</div>
-															<div class="title--inner">машиностроение</div></h1>
-
-														<div class="hero__slide-line">
-															<div class="hero__slide-line-time"></div>
-														</div>
-													</div>
-													
-												</div>
-											</div>
-
-											<div class="swiper-slide swiper-slide--hero parallax__item--slide">
-												<div class="parallax__img-wrap">
-													<div class="parallax__img--slide parallax__img--hero" data-speed="-40">
-														<div class="swiper-slide--hero__bg swiper-slide--hero__bg--2"></div>
-													</div>
-												  </div>
-
-												<div class="container">
-													<div class="hero__wrap">
-														
-														<h1 class="hero__title"> 
-															<div class="title--inner">Энергетическое</div>
-															<div class="title--inner">машиностроение</div>
-														</h1>
-
-														<div class="hero__slide-line">
-															<div class="hero__slide-line-time"></div>
-														</div>
-													</div>
-													
-												</div>
-											</div>
-											
-											<div class="swiper-slide swiper-slide--hero parallax__item--slide">
-												<div class="parallax__img-wrap">
-													<div class="parallax__img--slide parallax__img--hero" data-speed="-40">
-														<div class="swiper-slide--hero__bg swiper-slide--hero__bg--3"></div>
-													</div>
-												  </div>
-
-												<div class="container">
-													<div class="hero__wrap">
-														
-														<h1 class="hero__title"> 
-															<div class="title--inner">Металлургическая</div>
-															<div class="title--inner">промышленность</div>
-														</h1>
-
-														<div class="hero__slide-line">
-															<div class="hero__slide-line-time"></div>
-														</div>
-													</div>
-													
-												</div>
-											</div>
-											
-											<div class="swiper-slide swiper-slide--hero parallax__item--slide">
-												<div class="parallax__img-wrap">
-													<div class="parallax__img--slide parallax__img--hero" data-speed="-40">
-														<div class="swiper-slide--hero__bg swiper-slide--hero__bg--4"></div>
-													</div>
-												  </div>
-
-												<div class="container">
-													<div class="hero__wrap">
-														
-														<h1 class="hero__title"> 
-															<div class="title--inner">Промышленная</div>
-															<div class="title--inner">техника</div>
-														</h1>
-
-														<div class="hero__slide-line">
-															<div class="hero__slide-line-time"></div>
-														</div>
-													</div>
-													
-												</div>
-											</div>
-
-											<div class="swiper-slide swiper-slide--hero parallax__item--slide">
-												<div class="parallax__img-wrap">
-													<div class="parallax__img--slide parallax__img--hero" data-speed="-40">
-														<div class="swiper-slide--hero__bg swiper-slide--hero__bg--5"></div>
-													</div>
-												  </div>
-
-												<div class="container">
-													<div class="hero__wrap">
-														
-														<h1 class="hero__title"> 
-															<div class="title--inner">Энергетический</div>
-															<div class="title--inner">комплекс</div>
-														</h1>
-
-														<div class="hero__slide-line">
-															<div class="hero__slide-line-time"></div>
-														</div>
-													</div>
-													
-												</div>
-											</div>
-											
-										
-											<div class="swiper-slide swiper-slide--hero parallax__item--slide">
-												<div class="parallax__img-wrap">
-													<div class="parallax__img--slide parallax__img--hero" data-speed="-40">
-														<div class="swiper-slide--hero__bg swiper-slide--hero__bg--7"></div>
-													</div>
-												  </div>
-
-												<div class="container">
-													<div class="hero__wrap">
-													
-														<h1 class="hero__title"> 
-															<div class="title--inner">Буровая</div>
-															<div class="title--inner">техника</div>
-														</h1>
-
-														<div class="hero__slide-line">
-															<div class="hero__slide-line-time"></div>
-														</div>
-													</div>
-													
-												</div>
-											
-											</div>
-											
-										</div>
-										
-										
-										<div class="hero__slider-controls">
-											<div class="swiper-button-next">
-												<svg class="hero__controls-icon"><use xlink:href="./img/sprite.svg#icon-arrow-prev"></use></svg>
-											</div>
-											<div class="swiper-button-prev">
-												<svg class="hero__controls-icon"><use xlink:href="./img/sprite.svg#icon-arrow-next"></use></svg>
-											</div>
-											
-										</div>
-
-										
-									</div>
-
-									<div class="button__video-controls-wrap button__video-controls-wrap--hero">
-										<button class="button__video-controls  button__video-controls--hero button__video-controls--play active"></button>
-	
-									</div>
-								
-							</section>
-
-
-						
-
-							<section class="main_about about two-screen">
-								<div class="parallax__img parallax__img--main parallax__img--main-4" data-type="parallax" data-speed="-60"></div>
-								<div class="parallax__img parallax__img--main parallax__img--main-3" data-type="parallax" data-speed="-45">	</div>
-									
-									<div class="parallax__img parallax__img--main parallax__img--main-2" data-type="parallax" data-speed="-25"></div>
-									
-									<div class="parallax__img parallax__img--main parallax__img--main-1" data-type="parallax" data-speed="0"></div>  
-								
-								<div class="container">
-									<h2 class="main_about__title about__title is-animate" data-speed="0.3">
-										<span class="red-accent">«Кировский завод»</span>
-										 – крупнейшая российская промышленная группа компаний
-										
-									</h2>
-
-									<div class="main_about__desc-wrap">
-										<img class="main_about__flag is-animate" src="./img/main/flag.png" alt="" data-speed="0.7">
-									
-										<p class="main_about__desc about__desc is-animate" data-speed="0.8">
-											В 2009 году завод включен в Перечень системообразующих предприятий Российской Федерации
-										</p>
-									</div>
-								</div>
-
-							</section>
-
-
-							<section class="news">
-								
-									<div class="container ">
-										<h2 class="news__title">Новости компании </h2>
-									</div>
-									
-									<div class="container container--news">
-								
-										<div class="swiper-container news__container">
-
-											
-												<div class="swiper-wrapper">
-													<!-- Slides -->
-													<div class="swiper-slide news__item  news__item--video">
-														<a class="news__link" href=""></a>
-														<div class="parallax__item--news parallax__item">
-															<div class="parallax__img-wrap">
-																<div class="parallax__img parallax__img--news" data-speed="-10">
-																	<div class="parallax__img-inner" style="background-image: url(./img/news/new-1-main.jpg);"></div>
-																</div>
-															</div>
-														</div>
-														<p class="news__date">04.09.2020</p>
-														<h3 class="news__subtitle">Делегация госкорпорации «Росатом» посетила Кировский завод</h3>
-													</div>
-											
-													
-													<div class="swiper-slide news__item">
-														<a class="news__link" href=""></a>
-														<div class="parallax__item--news parallax__item">
-															<div class="parallax__img-wrap">
-																<div class="parallax__img parallax__img--news" data-speed="-10">
-																	<div class="parallax__img-inner" style="background-image: url(./img/news/new-2-main.jpg);"></div>
-																</div>
-															</div>
-														</div>
-														<p class="news__date">26.08.2020</p>
-														<h3 class="news__subtitle">Кировский завод вошел в топ-150 известных брендов Санкт-Петербурга</h3>
-													</div>
-													<div class="swiper-slide news__item">
-														<a class="news__link" href=""></a>
-														<div class="parallax__item--news parallax__item">
-															<div class="parallax__img-wrap">
-																<div class="parallax__img parallax__img--news" data-speed="-10">
-																	<div class="parallax__img-inner" style="background-image: url(./img/news/new-3-main.jpg);"></div>
-																</div>
-															</div>
-														</div>
-														<p class="news__date">24.08.2020</p>
-														<h3 class="news__subtitle">Обновился состав Совета директоров ПАО «Кировский завод»</h3>
-													</div>
-													<div class="swiper-slide news__item">
-														<a class="news__link" href=""></a>
-														<div class="parallax__item--news parallax__item">
-															<div class="parallax__img-wrap">
-																<div class="parallax__img parallax__img--news" data-speed="-10">
-																	<div class="parallax__img-inner" style="background-image: url(./img/news/new-4-main.jpg);"></div>
-																</div>
-															</div>
-														</div>
-														<p class="news__date">10.08.2020</p>
-														<h3 class="news__subtitle">Завод «Киров-Энергомаш» протестировал отечественный инструмент</h3>
-													</div>
-
-													<div class="swiper-slide news__item">
-														<a class="news__link" href=""></a>
-														<div class="parallax__item--news parallax__item">
-															<div class="parallax__img-wrap">
-																<div class="parallax__img parallax__img--news" data-speed="-10">
-																	<div class="parallax__img-inner" style="background-image: url(./img/news/new-5-main.jpg);"></div>
-																</div>
-															</div>
-														</div>
-														<p class="news__date">10.07.2020</p>
-														<h3 class="news__subtitle">Кировский завод и «Севкабель» подписали договор о долгосрочном сотрудничестве</h3>
-													</div>
-
-												</div>
-
-												<div class="swiper-scrollbar swiper-scrollbar--news"></div>
-										
-												<div class="news__controls">
-													
-													<div class="swiper-button-prev">
-														<svg class="news__controls-icon"><use xlink:href="./img/sprite.svg#icon-arrow-prev"></use></svg>
-													</div>
-													<div class="swiper-button-next">
-														<svg class="news__controls-icon"><use xlink:href="./img/sprite.svg#icon-arrow-next"></use></svg>
-													</div>
-												</div>
-										</div>
-									</div>
-							
-								
-							</section>
-							
-
-							<section class="companies">
-								
-
-								<div class="companies__thumbs-layear"></div>
-								<div class="companies__thumbs">
-									<h2 class="swiper-container--companies-thumbs__title">Ключевые компании</h2>
-									<div class="swiper-container swiper-container--companies-thumbs">
-								
-										<div class="swiper-wrapper">
-											<div class="swiper-slide swiper-slide--thumbs">
-												АО «Петербургский тракторный завод»
-											</div>
-											<div class="swiper-slide swiper-slide--thumbs">
-												АО «Завод «Киров-Энергомаш»
-											</div>
-											<div class="swiper-slide swiper-slide--thumbs">
-												АО «Металлургический завод «Петросталь»
-											</div>
-											<div class="swiper-slide swiper-slide--thumbs">
-												ООО «Объединенные заводы буровой техники им. В. В. Воровского»
-											</div>
-											<div class="swiper-slide swiper-slide--thumbs">
-												ООО «Кировский завод Газовые Технологии» 
-											</div>
-											<div class="swiper-slide swiper-slide--thumbs">
-												АО «Тетрамет»
-											</div>
-											<div class="swiper-slide swiper-slide--thumbs">
-												АО «Локомотив»
-											</div>
-											<div class="swiper-slide swiper-slide--thumbs">
-												АО «Проектно-конструкторское бюро «Автоматика»
-											</div>
-										</div>
-									</div>
-								</div>
-						
-
-
-								<div class="swiper-container swiper-container--companies">
-							
-									<div class="swiper-wrapper">
-								
-										<div class="swiper-slide swiper-slide--companies parallax__item">
-											<div class="parallax__img-wrap">
-												<div class="parallax__img--slide" data-speed="-60">
-													<div class=" swiper-slide--companies-bg" style="background: linear-gradient(65.95deg, #0F0F0F 0.6%, #000000 0.6%, rgba(0, 0, 0, 0) 42.86%), linear-gradient(0deg, rgba(0, 0, 0, 0.43), rgba(0, 0, 0, 0.43)), url(./img/companies/company1.jpg); background-blend-mode: multiply, normal, normal;     background-size: cover;
-												background-repeat: no-repeat;
-												background-position: center center;"></div>
-												</div>
-												
-											</div>
-											<div class="container">
-												<h2 class="companies__title">
-													<div class="title--inner">Петербургский</div>
-													<div class="title--inner">тракторный завод</div> 
-												</h2>
-
-												<p class="companies__desc">Предприятие полного производственного цикла. Завод изготавливает продукцию для крупнейших сельскохозяйственных предприятий, нефтегазодобывающих компаний, металлургических, угледобывающих холдингов.  </p>
-
-												<a href="ptz.html" class="button-more--companies button-more button-more--inner">
-													<span>подробнее</span>
-												</a>
-											</div>
-										</div>
-
-										<div class="swiper-slide swiper-slide--companies parallax__item">
-											<div class="parallax__img-wrap">
-												<div class="parallax__img--slide" data-speed="-60">
-													<div class="swiper-slide--companies-bg" style="background: linear-gradient(65.95deg, #0F0F0F 0.6%, #000000 0.6%, rgba(0, 0, 0, 0) 42.86%), linear-gradient(0deg, rgba(0, 0, 0, 0.43), rgba(0, 0, 0, 0.43)), url(./img/companies/company2.jpg); background-blend-mode: multiply, normal, normal;     background-size: cover;
-													background-repeat: no-repeat;
-													background-position: center center;"></div>
-												</div>
-												
-											</div>
-											<div class="container">
-												<h2 class="companies__title">
-													<div class="title--inner">Завод </div>
-													<div class="title--inner">«Киров-Энергомаш»</div> 
-												</h2>
-
-												<p class="companies__desc">Компания осуществляет проектирование, разработку и поставку техники для судостроительной, нефтегазовой и энергетической отраслей, включая тепло, гидро- и атомную энергетику.  </p>
-
-												<a href="#" class="button-more--companies button-more--inner">
-													<span>подробнее</span>
-												</a>
-											</div>
-										</div>
-										
-										<div class="swiper-slide swiper-slide--companies parallax__item">
-											<div class="parallax__img-wrap">
-												<div class="parallax__img--slide" data-speed="-60">
-													<div class="swiper-slide--companies-bg" style="background: linear-gradient(65.95deg, #0F0F0F 0.6%, #000000 0.6%, rgba(0, 0, 0, 0) 42.86%), linear-gradient(0deg, rgba(0, 0, 0, 0.43), rgba(0, 0, 0, 0.43)), url(./img/companies/company3.jpg); background-blend-mode: multiply, normal, normal;     background-size: cover;
-													background-repeat: no-repeat;
-													background-position: center center;"></div>
-												</div>
-												
-											</div>
-											<div class="container">
-												<h2 class="companies__title">
-													<div class="title--inner">Металлургический</div>
-													<div class="title--inner">завод «Петросталь»</div> 
-												</h2>
-
-												<p class="companies__desc">Завод является одним из основных производителей машиностроительного проката в России и странах СНГ. Ежегодный объем выплавки стали составляет 120 тысяч тонн.  </p>
-
-												<a href="#" class="button-more--companies button-more--inner">
-													<span>подробнее о заводе</span>
-												</a>
-											</div>
-										</div>
-
-
-										<div class="swiper-slide swiper-slide--companies parallax__item">
-											<div class="parallax__img-wrap">
-												<div class="parallax__img--slide" data-speed="-60">
-													<div class="swiper-slide--companies-bg" style="background: linear-gradient(65.95deg, #0F0F0F 0.6%, #000000 0.6%, rgba(0, 0, 0, 0) 42.86%), linear-gradient(0deg, rgba(0, 0, 0, 0.43), rgba(0, 0, 0, 0.43)), url(./img/companies/company4.jpg); background-blend-mode: multiply, normal, normal;     background-size: cover;
-													background-repeat: no-repeat;
-													background-position: center center;"></div>
-												</div>
-												
-											</div>
-											<div class="container">
-												<h2 class="companies__title">
-													<div class="title--inner">Объединенные заводы</div>
-													<div class="title--inner">буровой техники</div> 
-													<div class="title--inner"> им. В.В. Воровского</div> 
-												</h2>
-
-												<p class="companies__desc">Современное производственное предприятие, специализирующееся на проектировании и производстве буровой техники и инструмента для различных видов буровых работ.   </p>
-
-												<a href="#" class="button-more--companies button-more--inner">
-													<span>подробнее</span>
-												</a>
-											</div>
-										</div>
-
-										<div class="swiper-slide swiper-slide--companies parallax__item">
-											<div class="parallax__img-wrap">
-												<div class="parallax__img--slide" data-speed="-60">
-													<div class="swiper-slide--companies-bg" style="background: linear-gradient(65.95deg, #0F0F0F 0.6%, #000000 0.6%, rgba(0, 0, 0, 0) 42.86%), linear-gradient(0deg, rgba(0, 0, 0, 0.43), rgba(0, 0, 0, 0.43)), url(./img/companies/company5.jpg); background-blend-mode: multiply, normal, normal;     background-size: cover;
-													background-repeat: no-repeat;
-													background-position: center center;"></div>
-												</div>
-												
-											</div>
-											<div class="container">
-												<h2 class="companies__title">
-													<div class="title--inner">Кировский завод </div>
-													<div class="title--inner">Газовые Технологии</div> 
-												</h2>
-
-												<p class="companies__desc">Предприятие выпускает газовые турбины, компрессоры, центрифуги и перекачивающие установки. Компания специализируется на производстве автомобильных газонаполнительных компрессорных станций (АГНКС) под ключ.  </p>
-
-												<a href="#" class="button-more--companies button-more--inner">
-													<span>подробнее</span>
-												</a>
-											</div>
-										</div>
-
-										<div class="swiper-slide swiper-slide--companies parallax__item">
-											<div class="parallax__img-wrap">
-												<div class="parallax__img--slide" data-speed="-60">
-													<div class="swiper-slide--companies-bg" style="background: linear-gradient(65.95deg, #0F0F0F 0.6%, #000000 0.6%, rgba(0, 0, 0, 0) 42.86%), linear-gradient(0deg, rgba(0, 0, 0, 0.43), rgba(0, 0, 0, 0.43)), url(./img/companies/company6.jpg); background-blend-mode: multiply, normal, normal;     background-size: cover;
-													background-repeat: no-repeat;
-													background-position: center center;"></div>
-												</div>
-												
-											</div>
-											<div class="container">
-												<h2 class="companies__title">
-													<div class="title--inner">Тетрамет </div>
-													
-												</h2>
-
-												<p class="companies__desc">Компания специализируется на логистических услугах для российских и зарубежных предприятий: – перевалке генеральных и навалочных грузов.   </p>
-
-												<a href="#" class="button-more--companies button-more--inner">
-													<span>подробнее</span>
-												</a>
-											</div>
-										</div>
-
-										
-										<div class="swiper-slide swiper-slide--companies parallax__item">
-											<div class="parallax__img-wrap">
-												<div class="parallax__img--slide" data-speed="-60">
-													<div class="swiper-slide--companies-bg" style="background: linear-gradient(65.95deg, #0F0F0F 0.6%, #000000 0.6%, rgba(0, 0, 0, 0) 42.86%), linear-gradient(0deg, rgba(0, 0, 0, 0.43), rgba(0, 0, 0, 0.43)), url(./img/companies/company7.jpg); background-blend-mode: multiply, normal, normal;     background-size: cover;
-													background-repeat: no-repeat;
-													background-position: center center;"></div>
-												</div>
-												
-											</div>
-											<div class="container">
-												<h2 class="companies__title">
-													<div class="title--inner">Локомотив</div>
-													
-												</h2>
-
-												<p class="companies__desc">Предприятие осуществляет ремонт, модернизацию и обслуживание железнодорожной техники и путей, погрузочно-разгрузочные работы, транспортировку грузов железнодорожным транспортом как по России, так и в страны СНГ и Прибалтики.  </p>
-
-												<a href="#" class="button-more--companies button-more--inner">
-													<span>подробнее</span>
-												</a>
-											</div>
-										</div>
-
-										<div class="swiper-slide swiper-slide--companies parallax__item">
-											<div class="parallax__img-wrap">
-												<div class="parallax__img--slide" data-speed="-60">
-													<div class="swiper-slide--companies-bg" style="background: linear-gradient(65.95deg, #0F0F0F 0.6%, #000000 0.6%, rgba(0, 0, 0, 0) 42.86%), linear-gradient(0deg, rgba(0, 0, 0, 0.43), rgba(0, 0, 0, 0.43)), url(./img/companies/company8.jpg); background-blend-mode: multiply, normal, normal;     background-size: cover;
-													background-repeat: no-repeat;
-													background-position: center center;"></div>
-												</div>
-												
-											</div>
-											<div class="container">
-												<h2 class="companies__title">
-													<div class="title--inner">Проектно-конструкторское</div>
-													<div class="title--inner">бюро «Автоматика»</div>
-												</h2>
-
-												<p class="companies__desc">Компания проектирует, производит и осуществляет сервисное обслуживание машиностроительной техники.   </p>
-
-												<a href="#" class="button-more--companies button-more--inner">
-													<span>подробнее</span>
-												</a>
-											</div>
-										</div>
-
-
-									</div>
-								
-									<div class="swiper-scrollbar swiper-scrollbar--companies"></div>
-								</div>
-								
-							</section>
-			
-
-							<section class="zavod zavod--main">
-						
-								<div class="container">
-									
-									<div class="zavod-wrapper">
-										
-										<div class="zavod-img-wrap zavod-img-wrap--main" data-speed="0.6">
-											<img class="zavod-img zavod-img--main" src="./img/logo.svg" alt="">
-											<h3 class="zavod-img__title zavod-img__title--main">Кировский<br>завод</h3>
-										</div>
-										
-										<div class="zavod-text zavod-text--main">
-											<p data-speed="0.4">В группу компаний «Кировский завод» входит более 20 дочерних обществ. В своей деятельности многопрофильное предприятие опирается на более чем двухсотлетний опыт и современные технологии. Компания видит свою миссию в налаживании механизмов импортозамещения, в развитии безопасности российской экономики, а также в стратегическом закреплении на зарубежных рынках. </p>
-											<p data-speed="0.3">Кировский завод развивает как традиционные отрасли - машиностроение, турбостроение, металлургию, так и реализует новые бизнес-проекты. Компания поставляет продукцию и оказывает услуги предприятиям агропромышленного и топливно-энергетического комплексов, дорожного, промышленного и гражданского строительства, нефтегазового сектора, атомной энергетики, лесного и коммунального хозяйства, железнодорожного транспорта, судостроения и других областей. Мощные колесные тракторы, буровая техника, турбогенераторы для ледоколов, оборудование для тепло- и гидроэнергетики, металлургическая продукция - это далеко не весь список продукции предприятий завода .</p>
-											<p data-speed="0.2">Производственные и инфраструктурные объекты компании расположены в Санкт-Петербурге, Ленинградской области и на юге России. На площадке Кировского завода в Северной столице размещаются основные производственные мощности, а также склады и порт, в котором ежедневно происходит отправка и приемка грузов со всего мира.</p>
-											<p data-speed="0.1">Среди клиентов завода - крупные российские и зарубежные промышленные компании. Такие как «Росатом», «Газпром», «Роснефть», «Северсталь», «Сургутнефтегаз», «Росагролизинг», «АвтоВАЗ», «Группа ГАЗ», «КАМАЗ», «МАЗ» (Беларусь) и другие.</p>
-											
-										</div>
-										<a href="#" class="button-more--zavod button-more">
-											<span>подробнее</span>
-										</a>
-									</div>
-								</div>
-							
-							</section>
-
-							<section class="frame parallax__item">
-								<div class="parallax__img-wrap">
-									<div class="parallax__img parallax__img--frame" data-speed="-30">
-									
-									</div>
-								</div>
-								<div class="container">
-									
-								</div>
-							</section>
-
-							<section class="statistics statistics--main">
-
-								
-								<div class="container">
-									<h2 class="statistics__title">
-										<div class="title--inner">Цифры и факты</div></h2>
-							
-										<div class="swiper-container statistics__slider">
-											<ul class="statistics__list swiper-wrapper">
-												<li class="statistics__item swiper-slide">
-							
-													<div class="statistics__number-wrap">
-														<span class="statistics__number statictics--inner">7 000</span>
-													</div>
-												
-													<h3 class="statistics__subtitle"> сотрудников</h3>
-													<p class="statistics__desc">Главная ценность завода – его коллектив. Благодаря труду и талантам сотрудников компания продолжает расти и в свою очередь помогает развиваться каждому работнику</p>
-												</li>
-							
-												<li class="statistics__item swiper-slide">
-													<div class="statistics__number-wrap">
-														<span class="statistics__number statictics--inner">400</span>
-													</div>
-													<h3 class="statistics__subtitle">гектаров</h3>
-													<p class="statistics__desc">В собственности компании находятся земельные участки, включая 2 км береговой линии Финского залива(3 причала)</p>
-												</li>
-							
-												<li class="statistics__item swiper-slide">
-													<div class="statistics__number-wrap">
-														<span class="statistics__number statictics--inner">20</span>
-													</div>
-													<h3 class="statistics__subtitle">компаний</h3>
-													<p class="statistics__desc">В группу компаний «Кировский завод» входит более 20 дочерних предприятий, занимающих ведущие позиции на российском рынке</p>
-												</li>
-							
-												<li class="statistics__item swiper-slide">
-													<div class="statistics__number-wrap">
-														<span class="statistics__number statictics--inner">1,5 
-															<span class="statistics__number-text">млн кв. м</span>
-														</span>
-													</div>
-													<h3 class="statistics__subtitle statistics__subtitle--huge2">ИМущественный комплекс</h3>
-													<p class="statistics__desc">Общая площадь всех зданий и сооружений для производственного и коммерческого использования составляет около 1,5 млн кв. м. Объекты расположены в Санкт-Петербурге, Ленинградской области и на юге России</p>
-												</li>
-											</ul>
-											<div class="swiper-scrollbar swiper-scrollbar--statictics"></div>
-										</div>
-									
-								</div>
-							
-							</section> 
-						
-			
-						<div class="geography">
-
-						
-							<div class="container">
-								<section class="section-geography">
-									<div class="section-geography__title-wrapper"><h2 class="section-geography__title">География поставок</h2></div>
-									<div class="section-geography__body">
-											
-											<div class="section-geography__wrapper">
-												<div class="section-geography__map">
-													<div class="section-geography__map-planet">
-														<img src="./img/geography/world.png" alt="География поставок">
-													</div>
-												
-													<a href="#" class="section-geography__map-item map-item__canada">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Канада</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__usa">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>США</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__england">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Великобритания</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__ireland">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Ирландия</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__netherlands">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Нидерланды</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__belgium">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Бельгия</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__france">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Франция</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__denmark">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Дания</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__germany">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Германия</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__czech">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Чехия</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__austria">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Австрия</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__liechtenstein">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Лихтенштейн</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__switzerland">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Швейцария</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__finland">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Финляндия</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__estonia">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Эстония</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__latvia">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Латвия</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__lithuania">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Литва</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__poland">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Польша</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__slovakia">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Словакия</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__hungary">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Венгрия</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__romania">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Румыния</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__bulgaria">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Болгария</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__moldova">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Молдавия</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__ukraine">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Украина</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__belarus">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Беларусь</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__kazakhstan">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Казахстан</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__uzbekistan">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Узбекистан</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__mongolia">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Монголия</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__india">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Индия</span></div>
-													</a>
-													<a href="#" class="section-geography__map-item map-item__australia">
-														<span class="map-marker-icon"></span>
-														<div class="section-geography__map-item-label"><span>Австралия</span></div>
-													</a>
-						
-						
-						
-												</div>
-												<div class="section-geography__desc">
-													<p>Мы поставляем<br> свою продукцию в&nbsp;более чем <span><span>40 </span>стран мира</span></p>
-												</div>
-											</div>
-										
-									</div>
-									<div class="section-geography__footer">
-										<div class="section-geography__desc">
-											<p>Мы поставляем<br> свою продукцию в&nbsp;более чем <span><span>40 </span>стран мира</span></p>
-										</div>
-									</div>
-								</section>
-							</div>
-						</div>
-						<footer class="footer footer--main">
-
-							<div class="footer__outer">
-								<div class="container">
-
-									<div class="footer__row">
-										<nav class="footer__nav">
-											<ul class="footer__nav-list">
-												<li class="footer__nav-item">
-													<a class="footer__nav-link" href="about.html">Компания</a>
-												</li>
-												<li class="footer__nav-item">
-													<a class="footer__nav-link" href="company_group.html">Дочерние предприятия</a>
-												</li>
-												<li class="footer__nav-item">
-													<a class="footer__nav-link" href="">Карта сайта</a>
-												</li>
-											
-												<li class="footer__nav-item">
-													<a class="footer__nav-link" href="press.html">Пресс-центр</a>
-												</li>
-												<li class="footer__nav-item">
-													<a class="footer__nav-link" href="">Горячая линия</a>
-												</li>
-												<li class="footer__nav-item">
-													<a class="footer__nav-link" href="">Акционерам и инвесторам</a>
-												</li>
-												<li class="footer__nav-item">
-													<a class="footer__nav-link" href="contacts.html">Контакты</a>
-												</li>
-												<li class="footer__nav-item">
-													<a class="footer__nav-link" href="vacancies.html">Вакансии</a>
-												</li>
-												<li class="footer__nav-item">
-													<a class="footer__nav-link" href="tenders.html">Тендеры</a>
-												</li>
-												<li class="footer__nav-item">
-													<a class="footer__nav-link" href="rent-details.html">Аренда помещений</a>
-												</li>
-												
-										
-												<li class="footer__nav-item">
-													<a class="footer__nav-link" href="">Реквизиты</a>
-												</li>
-												<li class="footer__nav-item footer__nav-item--last">
-												
-												</li>
-											</ul>
-
-											<p class="footer__adress">198097, Санкт-Петербург, пр. Стачек, 47</p>
-										</nav>
-
-
-										<div class="footer__contact">
-
-											<div class="footer__contact-feedback">
-												<h6 class="footer__contact-title">Подписаться на наши новости</h6>
-												<form class="footer__contact-form" action="">
-													<div class="footer__contact-form__wrap">
-														<input class="footer__contact-input" type="mail" placeholder="E-mail">
-														<button class="footer__contact-submit" type="submit"><svg class="footer__contact-submit-icon" width="40"><use xlink:href="./img/sprite.svg#icon-mail-submit"></use></svg></button>
-													</div>
-												</form>
-												
-											</div>
-												
-												<ul class="footer__social-list">
-													<li class="footer__social-item" style="background-image: url(./img/social-youtube.svg);">
-														<a class="footer__social-link" href="">
-															<span class="visually-hidden">Youtube</span>
-														</a>
-													</li>
-				
-													<li class="footer__social-item" style="background-image: url(./img/social-vk.svg);">
-														<a class="footer__social-link" href="">
-															<span class="visually-hidden">Vk</span>
-														</a>
-													</li>
-				
-													<li class="footer__social-item" style="background-image: url(./img/social-inst.svg);">
-														<a class="footer__social-link" href="">
-															<span class="visually-hidden">Instagram</span>
-														</a>
-													</li>
-				
-													<li class="footer__social-item" style="background-image: url(./img/social-fb.svg);">
-														<a class="footer__social-link" href="">
-															<span class="visually-hidden">Facebook</span>
-														</a>
-													</li>
-												</ul>
-											
-									
-										</div>
-		
-
-									</div>
-								
-								
-						
-
-									<section class="copyright">
-										<h6 class="copyright__title">Copyrights © ПАО "Кировский завод"</h6>
-										<a class="copyright__link" href="">Правила использования сайта</a>
-										<a class="copyright__link" href="">Политика в области обработки персональных данных</a>
-									</section>
-
-								</div>
-							
-							</div>
-						</footer>
-
-						
-			</div>
-
-
-	</div>
-	
-
-	<script src="./js/script.min.js"></script>
-</body>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Кировский завод</title>
+      <link rel="stylesheet" href="./css/style.min.css">
+   </head>
+   <body class="index">
+      <!-- Прелоадер -->
+      <include src="components/preloader.html"></include>
+    
+         <!-- Шапка и меню -->
+         <include src="components/headerMain.html"></include>
+         <!-- Контент -->
+         <div class="scroll">
+            <section class="main__hero parallax__item">
+               <div class="swiper-container swiper-container--hero">
+                  <div class="swiper-wrapper">
+                     <div class="swiper-slide swiper-slide--hero   swiper-slide--hero-video parallax__item--slide">
+                        <div class="parallax__img-wrap parallax__img-wrap--hero">
+                           <div class="parallax__img--slide parallax__img--video-bg" data-speed="-40">
+                              <video poster="./img/companies/hero-bg-video.jpg" loop="" preload="metadata" muted="muted" class="parallax__img-video parallax__img-video--hero" playsinline="" preload="auto">
+                                 <source src="./video/video-main.mp4" type="video/mp4">
+                              </video>
+                           </div>
+                        </div>
+                        <div class="container">
+                           <div class="hero__wrap">
+                              <!-- <h1 class="hero__title hero__title--first">
+                                 <div class="title--inner">Кировский</div>
+                                 <div class="title--inner">завод</div></h1> -->
+                              <div class="hero__slide-line">
+                                 <div class="hero__slide-line-time"></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-slide swiper-slide--hero parallax__item--slide">
+                        <div class="parallax__img-wrap">
+                           <div class="parallax__img--slide parallax__img--hero" data-speed="-40">
+                              <div class="swiper-slide--hero__bg swiper-slide--hero__bg--1"></div>
+                           </div>
+                        </div>
+                        <div class="container">
+                           <div class="hero__wrap">
+                              <h1 class="hero__title">
+                                 <div class="title--inner">Сельскохозяйственное</div>
+                                 <div class="title--inner">машиностроение</div>
+                              </h1>
+                              <div class="hero__slide-line">
+                                 <div class="hero__slide-line-time"></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-slide swiper-slide--hero parallax__item--slide">
+                        <div class="parallax__img-wrap">
+                           <div class="parallax__img--slide parallax__img--hero" data-speed="-40">
+                              <div class="swiper-slide--hero__bg swiper-slide--hero__bg--2"></div>
+                           </div>
+                        </div>
+                        <div class="container">
+                           <div class="hero__wrap">
+                              <h1 class="hero__title">
+                                 <div class="title--inner">Энергетическое</div>
+                                 <div class="title--inner">машиностроение</div>
+                              </h1>
+                              <div class="hero__slide-line">
+                                 <div class="hero__slide-line-time"></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-slide swiper-slide--hero parallax__item--slide">
+                        <div class="parallax__img-wrap">
+                           <div class="parallax__img--slide parallax__img--hero" data-speed="-40">
+                              <div class="swiper-slide--hero__bg swiper-slide--hero__bg--3"></div>
+                           </div>
+                        </div>
+                        <div class="container">
+                           <div class="hero__wrap">
+                              <h1 class="hero__title">
+                                 <div class="title--inner">Металлургическая</div>
+                                 <div class="title--inner">промышленность</div>
+                              </h1>
+                              <div class="hero__slide-line">
+                                 <div class="hero__slide-line-time"></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-slide swiper-slide--hero parallax__item--slide">
+                        <div class="parallax__img-wrap">
+                           <div class="parallax__img--slide parallax__img--hero" data-speed="-40">
+                              <div class="swiper-slide--hero__bg swiper-slide--hero__bg--4"></div>
+                           </div>
+                        </div>
+                        <div class="container">
+                           <div class="hero__wrap">
+                              <h1 class="hero__title">
+                                 <div class="title--inner">Промышленная</div>
+                                 <div class="title--inner">техника</div>
+                              </h1>
+                              <div class="hero__slide-line">
+                                 <div class="hero__slide-line-time"></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-slide swiper-slide--hero parallax__item--slide">
+                        <div class="parallax__img-wrap">
+                           <div class="parallax__img--slide parallax__img--hero" data-speed="-40">
+                              <div class="swiper-slide--hero__bg swiper-slide--hero__bg--5"></div>
+                           </div>
+                        </div>
+                        <div class="container">
+                           <div class="hero__wrap">
+                              <h1 class="hero__title">
+                                 <div class="title--inner">Энергетический</div>
+                                 <div class="title--inner">комплекс</div>
+                              </h1>
+                              <div class="hero__slide-line">
+                                 <div class="hero__slide-line-time"></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-slide swiper-slide--hero parallax__item--slide">
+                        <div class="parallax__img-wrap">
+                           <div class="parallax__img--slide parallax__img--hero" data-speed="-40">
+                              <div class="swiper-slide--hero__bg swiper-slide--hero__bg--7"></div>
+                           </div>
+                        </div>
+                        <div class="container">
+                           <div class="hero__wrap">
+                              <h1 class="hero__title">
+                                 <div class="title--inner">Буровая</div>
+                                 <div class="title--inner">техника</div>
+                              </h1>
+                              <div class="hero__slide-line">
+                                 <div class="hero__slide-line-time"></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="hero__slider-controls">
+                     <div class="swiper-button-next">
+                        <svg class="hero__controls-icon">
+                           <use xlink:href="./img/sprite.svg#icon-arrow-prev"></use>
+                        </svg>
+                     </div>
+                     <div class="swiper-button-prev">
+                        <svg class="hero__controls-icon">
+                           <use xlink:href="./img/sprite.svg#icon-arrow-next"></use>
+                        </svg>
+                     </div>
+                  </div>
+               </div>
+               <div class="button__video-controls-wrap button__video-controls-wrap--hero">
+                  <button class="button__video-controls  button__video-controls--hero button__video-controls--play active"></button>
+               </div>
+            </section>
+            <section class="main_about about two-screen">
+               <div class="parallax__img parallax__img--main parallax__img--main-4" data-type="parallax" data-speed="-60"></div>
+               <div class="parallax__img parallax__img--main parallax__img--main-3" data-type="parallax" data-speed="-45">	</div>
+               <div class="parallax__img parallax__img--main parallax__img--main-2" data-type="parallax" data-speed="-25"></div>
+               <div class="parallax__img parallax__img--main parallax__img--main-1" data-type="parallax" data-speed="0"></div>
+               <div class="container">
+                  <h2 class="main_about__title about__title is-animate" data-speed="0.3">
+                     <span class="red-accent">«Кировский завод»</span>
+                     – крупнейшая российская промышленная группа компаний
+                  </h2>
+                  <div class="main_about__desc-wrap">
+                     <img class="main_about__flag is-animate" src="./img/main/flag.png" alt="" data-speed="0.7">
+                     <p class="main_about__desc about__desc is-animate" data-speed="0.8">
+                        В 2009 году завод включен в Перечень системообразующих предприятий Российской Федерации
+                     </p>
+                  </div>
+               </div>
+            </section>
+            <section class="news">
+               <div class="container ">
+                  <h2 class="news__title">Новости компании </h2>
+               </div>
+               <div class="container container--news">
+                  <div class="swiper-container news__container">
+                     <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide news__item  news__item--video">
+                           <a class="news__link" href=""></a>
+                           <div class="parallax__item--news parallax__item">
+                              <div class="parallax__img-wrap">
+                                 <div class="parallax__img parallax__img--news" data-speed="-10">
+                                    <div class="parallax__img-inner" style="background-image: url(./img/news/new-1-main.jpg);"></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <p class="news__date">04.09.2020</p>
+                           <h3 class="news__subtitle">Делегация госкорпорации «Росатом» посетила Кировский завод</h3>
+                        </div>
+                        <div class="swiper-slide news__item">
+                           <a class="news__link" href=""></a>
+                           <div class="parallax__item--news parallax__item">
+                              <div class="parallax__img-wrap">
+                                 <div class="parallax__img parallax__img--news" data-speed="-10">
+                                    <div class="parallax__img-inner" style="background-image: url(./img/news/new-2-main.jpg);"></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <p class="news__date">26.08.2020</p>
+                           <h3 class="news__subtitle">Кировский завод вошел в топ-150 известных брендов Санкт-Петербурга</h3>
+                        </div>
+                        <div class="swiper-slide news__item">
+                           <a class="news__link" href=""></a>
+                           <div class="parallax__item--news parallax__item">
+                              <div class="parallax__img-wrap">
+                                 <div class="parallax__img parallax__img--news" data-speed="-10">
+                                    <div class="parallax__img-inner" style="background-image: url(./img/news/new-3-main.jpg);"></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <p class="news__date">24.08.2020</p>
+                           <h3 class="news__subtitle">Обновился состав Совета директоров ПАО «Кировский завод»</h3>
+                        </div>
+                        <div class="swiper-slide news__item">
+                           <a class="news__link" href=""></a>
+                           <div class="parallax__item--news parallax__item">
+                              <div class="parallax__img-wrap">
+                                 <div class="parallax__img parallax__img--news" data-speed="-10">
+                                    <div class="parallax__img-inner" style="background-image: url(./img/news/new-4-main.jpg);"></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <p class="news__date">10.08.2020</p>
+                           <h3 class="news__subtitle">Завод «Киров-Энергомаш» протестировал отечественный инструмент</h3>
+                        </div>
+                        <div class="swiper-slide news__item">
+                           <a class="news__link" href=""></a>
+                           <div class="parallax__item--news parallax__item">
+                              <div class="parallax__img-wrap">
+                                 <div class="parallax__img parallax__img--news" data-speed="-10">
+                                    <div class="parallax__img-inner" style="background-image: url(./img/news/new-5-main.jpg);"></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <p class="news__date">10.07.2020</p>
+                           <h3 class="news__subtitle">Кировский завод и «Севкабель» подписали договор о долгосрочном сотрудничестве</h3>
+                        </div>
+                     </div>
+                     <div class="swiper-scrollbar swiper-scrollbar--news"></div>
+                     <div class="news__controls">
+                        <div class="swiper-button-prev">
+                           <svg class="news__controls-icon">
+                              <use xlink:href="./img/sprite.svg#icon-arrow-prev"></use>
+                           </svg>
+                        </div>
+                        <div class="swiper-button-next">
+                           <svg class="news__controls-icon">
+                              <use xlink:href="./img/sprite.svg#icon-arrow-next"></use>
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="companies">
+               <div class="companies__thumbs-layear"></div>
+               <div class="companies__thumbs">
+                  <h2 class="swiper-container--companies-thumbs__title">Ключевые компании</h2>
+                  <div class="swiper-container swiper-container--companies-thumbs">
+                     <div class="swiper-wrapper">
+                        <div class="swiper-slide swiper-slide--thumbs">
+                           АО «Петербургский тракторный завод»
+                        </div>
+                        <div class="swiper-slide swiper-slide--thumbs">
+                           АО «Завод «Киров-Энергомаш»
+                        </div>
+                        <div class="swiper-slide swiper-slide--thumbs">
+                           АО «Металлургический завод «Петросталь»
+                        </div>
+                        <div class="swiper-slide swiper-slide--thumbs">
+                           ООО «Объединенные заводы буровой техники им. В. В. Воровского»
+                        </div>
+                        <div class="swiper-slide swiper-slide--thumbs">
+                           ООО «Кировский завод Газовые Технологии» 
+                        </div>
+                        <div class="swiper-slide swiper-slide--thumbs">
+                           АО «Тетрамет»
+                        </div>
+                        <div class="swiper-slide swiper-slide--thumbs">
+                           АО «Локомотив»
+                        </div>
+                        <div class="swiper-slide swiper-slide--thumbs">
+                           АО «Проектно-конструкторское бюро «Автоматика»
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="swiper-container swiper-container--companies">
+                  <div class="swiper-wrapper">
+                     <div class="swiper-slide swiper-slide--companies parallax__item">
+                        <div class="parallax__img-wrap">
+                           <div class="parallax__img--slide" data-speed="-60">
+                              <div class=" swiper-slide--companies-bg" style="background: linear-gradient(65.95deg, #0F0F0F 0.6%, #000000 0.6%, rgba(0, 0, 0, 0) 42.86%), linear-gradient(0deg, rgba(0, 0, 0, 0.43), rgba(0, 0, 0, 0.43)), url(./img/companies/company1.jpg); background-blend-mode: multiply, normal, normal;     background-size: cover;
+                                 background-repeat: no-repeat;
+                                 background-position: center center;"></div>
+                           </div>
+                        </div>
+                        <div class="container">
+                           <h2 class="companies__title">
+                              <div class="title--inner">Петербургский</div>
+                              <div class="title--inner">тракторный завод</div>
+                           </h2>
+                           <p class="companies__desc">Предприятие полного производственного цикла. Завод изготавливает продукцию для крупнейших сельскохозяйственных предприятий, нефтегазодобывающих компаний, металлургических, угледобывающих холдингов.  </p>
+                           <a href="ptz.html" class="button-more--companies button-more button-more--inner">
+                           <span>подробнее</span>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="swiper-slide swiper-slide--companies parallax__item">
+                        <div class="parallax__img-wrap">
+                           <div class="parallax__img--slide" data-speed="-60">
+                              <div class="swiper-slide--companies-bg" style="background: linear-gradient(65.95deg, #0F0F0F 0.6%, #000000 0.6%, rgba(0, 0, 0, 0) 42.86%), linear-gradient(0deg, rgba(0, 0, 0, 0.43), rgba(0, 0, 0, 0.43)), url(./img/companies/company2.jpg); background-blend-mode: multiply, normal, normal;     background-size: cover;
+                                 background-repeat: no-repeat;
+                                 background-position: center center;"></div>
+                           </div>
+                        </div>
+                        <div class="container">
+                           <h2 class="companies__title">
+                              <div class="title--inner">Завод </div>
+                              <div class="title--inner">«Киров-Энергомаш»</div>
+                           </h2>
+                           <p class="companies__desc">Компания осуществляет проектирование, разработку и поставку техники для судостроительной, нефтегазовой и энергетической отраслей, включая тепло, гидро- и атомную энергетику.  </p>
+                           <a href="#" class="button-more--companies button-more--inner">
+                           <span>подробнее</span>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="swiper-slide swiper-slide--companies parallax__item">
+                        <div class="parallax__img-wrap">
+                           <div class="parallax__img--slide" data-speed="-60">
+                              <div class="swiper-slide--companies-bg" style="background: linear-gradient(65.95deg, #0F0F0F 0.6%, #000000 0.6%, rgba(0, 0, 0, 0) 42.86%), linear-gradient(0deg, rgba(0, 0, 0, 0.43), rgba(0, 0, 0, 0.43)), url(./img/companies/company3.jpg); background-blend-mode: multiply, normal, normal;     background-size: cover;
+                                 background-repeat: no-repeat;
+                                 background-position: center center;"></div>
+                           </div>
+                        </div>
+                        <div class="container">
+                           <h2 class="companies__title">
+                              <div class="title--inner">Металлургический</div>
+                              <div class="title--inner">завод «Петросталь»</div>
+                           </h2>
+                           <p class="companies__desc">Завод является одним из основных производителей машиностроительного проката в России и странах СНГ. Ежегодный объем выплавки стали составляет 120 тысяч тонн.  </p>
+                           <a href="#" class="button-more--companies button-more--inner">
+                           <span>подробнее о заводе</span>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="swiper-slide swiper-slide--companies parallax__item">
+                        <div class="parallax__img-wrap">
+                           <div class="parallax__img--slide" data-speed="-60">
+                              <div class="swiper-slide--companies-bg" style="background: linear-gradient(65.95deg, #0F0F0F 0.6%, #000000 0.6%, rgba(0, 0, 0, 0) 42.86%), linear-gradient(0deg, rgba(0, 0, 0, 0.43), rgba(0, 0, 0, 0.43)), url(./img/companies/company4.jpg); background-blend-mode: multiply, normal, normal;     background-size: cover;
+                                 background-repeat: no-repeat;
+                                 background-position: center center;"></div>
+                           </div>
+                        </div>
+                        <div class="container">
+                           <h2 class="companies__title">
+                              <div class="title--inner">Объединенные заводы</div>
+                              <div class="title--inner">буровой техники</div>
+                              <div class="title--inner"> им. В.В. Воровского</div>
+                           </h2>
+                           <p class="companies__desc">Современное производственное предприятие, специализирующееся на проектировании и производстве буровой техники и инструмента для различных видов буровых работ.   </p>
+                           <a href="#" class="button-more--companies button-more--inner">
+                           <span>подробнее</span>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="swiper-slide swiper-slide--companies parallax__item">
+                        <div class="parallax__img-wrap">
+                           <div class="parallax__img--slide" data-speed="-60">
+                              <div class="swiper-slide--companies-bg" style="background: linear-gradient(65.95deg, #0F0F0F 0.6%, #000000 0.6%, rgba(0, 0, 0, 0) 42.86%), linear-gradient(0deg, rgba(0, 0, 0, 0.43), rgba(0, 0, 0, 0.43)), url(./img/companies/company5.jpg); background-blend-mode: multiply, normal, normal;     background-size: cover;
+                                 background-repeat: no-repeat;
+                                 background-position: center center;"></div>
+                           </div>
+                        </div>
+                        <div class="container">
+                           <h2 class="companies__title">
+                              <div class="title--inner">Кировский завод </div>
+                              <div class="title--inner">Газовые Технологии</div>
+                           </h2>
+                           <p class="companies__desc">Предприятие выпускает газовые турбины, компрессоры, центрифуги и перекачивающие установки. Компания специализируется на производстве автомобильных газонаполнительных компрессорных станций (АГНКС) под ключ.  </p>
+                           <a href="#" class="button-more--companies button-more--inner">
+                           <span>подробнее</span>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="swiper-slide swiper-slide--companies parallax__item">
+                        <div class="parallax__img-wrap">
+                           <div class="parallax__img--slide" data-speed="-60">
+                              <div class="swiper-slide--companies-bg" style="background: linear-gradient(65.95deg, #0F0F0F 0.6%, #000000 0.6%, rgba(0, 0, 0, 0) 42.86%), linear-gradient(0deg, rgba(0, 0, 0, 0.43), rgba(0, 0, 0, 0.43)), url(./img/companies/company6.jpg); background-blend-mode: multiply, normal, normal;     background-size: cover;
+                                 background-repeat: no-repeat;
+                                 background-position: center center;"></div>
+                           </div>
+                        </div>
+                        <div class="container">
+                           <h2 class="companies__title">
+                              <div class="title--inner">Тетрамет </div>
+                           </h2>
+                           <p class="companies__desc">Компания специализируется на логистических услугах для российских и зарубежных предприятий: – перевалке генеральных и навалочных грузов.   </p>
+                           <a href="#" class="button-more--companies button-more--inner">
+                           <span>подробнее</span>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="swiper-slide swiper-slide--companies parallax__item">
+                        <div class="parallax__img-wrap">
+                           <div class="parallax__img--slide" data-speed="-60">
+                              <div class="swiper-slide--companies-bg" style="background: linear-gradient(65.95deg, #0F0F0F 0.6%, #000000 0.6%, rgba(0, 0, 0, 0) 42.86%), linear-gradient(0deg, rgba(0, 0, 0, 0.43), rgba(0, 0, 0, 0.43)), url(./img/companies/company7.jpg); background-blend-mode: multiply, normal, normal;     background-size: cover;
+                                 background-repeat: no-repeat;
+                                 background-position: center center;"></div>
+                           </div>
+                        </div>
+                        <div class="container">
+                           <h2 class="companies__title">
+                              <div class="title--inner">Локомотив</div>
+                           </h2>
+                           <p class="companies__desc">Предприятие осуществляет ремонт, модернизацию и обслуживание железнодорожной техники и путей, погрузочно-разгрузочные работы, транспортировку грузов железнодорожным транспортом как по России, так и в страны СНГ и Прибалтики.  </p>
+                           <a href="#" class="button-more--companies button-more--inner">
+                           <span>подробнее</span>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="swiper-slide swiper-slide--companies parallax__item">
+                        <div class="parallax__img-wrap">
+                           <div class="parallax__img--slide" data-speed="-60">
+                              <div class="swiper-slide--companies-bg" style="background: linear-gradient(65.95deg, #0F0F0F 0.6%, #000000 0.6%, rgba(0, 0, 0, 0) 42.86%), linear-gradient(0deg, rgba(0, 0, 0, 0.43), rgba(0, 0, 0, 0.43)), url(./img/companies/company8.jpg); background-blend-mode: multiply, normal, normal;     background-size: cover;
+                                 background-repeat: no-repeat;
+                                 background-position: center center;"></div>
+                           </div>
+                        </div>
+                        <div class="container">
+                           <h2 class="companies__title">
+                              <div class="title--inner">Проектно-конструкторское</div>
+                              <div class="title--inner">бюро «Автоматика»</div>
+                           </h2>
+                           <p class="companies__desc">Компания проектирует, производит и осуществляет сервисное обслуживание машиностроительной техники.   </p>
+                           <a href="#" class="button-more--companies button-more--inner">
+                           <span>подробнее</span>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="swiper-scrollbar swiper-scrollbar--companies"></div>
+               </div>
+            </section>
+            <section class="zavod zavod--main">
+               <div class="container">
+                  <div class="zavod-wrapper">
+                     <div class="zavod-img-wrap zavod-img-wrap--main" data-speed="0.6">
+                        <img class="zavod-img zavod-img--main" src="./img/logo.svg" alt="">
+                        <h3 class="zavod-img__title zavod-img__title--main">Кировский<br>завод</h3>
+                     </div>
+                     <div class="zavod-text zavod-text--main">
+                        <p data-speed="0.4">В группу компаний «Кировский завод» входит более 20 дочерних обществ. В своей деятельности многопрофильное предприятие опирается на более чем двухсотлетний опыт и современные технологии. Компания видит свою миссию в налаживании механизмов импортозамещения, в развитии безопасности российской экономики, а также в стратегическом закреплении на зарубежных рынках. </p>
+                        <p data-speed="0.3">Кировский завод развивает как традиционные отрасли - машиностроение, турбостроение, металлургию, так и реализует новые бизнес-проекты. Компания поставляет продукцию и оказывает услуги предприятиям агропромышленного и топливно-энергетического комплексов, дорожного, промышленного и гражданского строительства, нефтегазового сектора, атомной энергетики, лесного и коммунального хозяйства, железнодорожного транспорта, судостроения и других областей. Мощные колесные тракторы, буровая техника, турбогенераторы для ледоколов, оборудование для тепло- и гидроэнергетики, металлургическая продукция - это далеко не весь список продукции предприятий завода .</p>
+                        <p data-speed="0.2">Производственные и инфраструктурные объекты компании расположены в Санкт-Петербурге, Ленинградской области и на юге России. На площадке Кировского завода в Северной столице размещаются основные производственные мощности, а также склады и порт, в котором ежедневно происходит отправка и приемка грузов со всего мира.</p>
+                        <p data-speed="0.1">Среди клиентов завода - крупные российские и зарубежные промышленные компании. Такие как «Росатом», «Газпром», «Роснефть», «Северсталь», «Сургутнефтегаз», «Росагролизинг», «АвтоВАЗ», «Группа ГАЗ», «КАМАЗ», «МАЗ» (Беларусь) и другие.</p>
+                     </div>
+                     <a href="#" class="button-more--zavod button-more">
+                     <span>подробнее</span>
+                     </a>
+                  </div>
+               </div>
+            </section>
+            <section class="frame">
+               
+            </section>
+            <section class="statistics statistics--main">
+               <div class="container">
+                  <h2 class="statistics__title">
+                     <div class="title--inner">Цифры и факты</div>
+                  </h2>
+                  <div class="swiper-container statistics__slider">
+                     <ul class="statistics__list swiper-wrapper">
+                        <li class="statistics__item swiper-slide">
+                           <div class="statistics__number-wrap">
+                              <span class="statistics__number statictics--inner">7 000</span>
+                           </div>
+                           <h3 class="statistics__subtitle"> сотрудников</h3>
+                           <p class="statistics__desc">Главная ценность завода – его коллектив. Благодаря труду и талантам сотрудников компания продолжает расти и в свою очередь помогает развиваться каждому работнику</p>
+                        </li>
+                        <li class="statistics__item swiper-slide">
+                           <div class="statistics__number-wrap">
+                              <span class="statistics__number statictics--inner">400</span>
+                           </div>
+                           <h3 class="statistics__subtitle">гектаров</h3>
+                           <p class="statistics__desc">В собственности компании находятся земельные участки, включая 2 км береговой линии Финского залива(3 причала)</p>
+                        </li>
+                        <li class="statistics__item swiper-slide">
+                           <div class="statistics__number-wrap">
+                              <span class="statistics__number statictics--inner">20</span>
+                           </div>
+                           <h3 class="statistics__subtitle">компаний</h3>
+                           <p class="statistics__desc">В группу компаний «Кировский завод» входит более 20 дочерних предприятий, занимающих ведущие позиции на российском рынке</p>
+                        </li>
+                        <li class="statistics__item swiper-slide">
+                           <div class="statistics__number-wrap">
+                              <span class="statistics__number statictics--inner">1,5 
+                              <span class="statistics__number-text">млн кв. м</span>
+                              </span>
+                           </div>
+                           <h3 class="statistics__subtitle statistics__subtitle--huge2">ИМущественный комплекс</h3>
+                           <p class="statistics__desc">Общая площадь всех зданий и сооружений для производственного и коммерческого использования составляет около 1,5 млн кв. м. Объекты расположены в Санкт-Петербурге, Ленинградской области и на юге России</p>
+                        </li>
+                     </ul>
+                     <div class="swiper-scrollbar swiper-scrollbar--statictics"></div>
+                  </div>
+               </div>
+            </section>
+            <div class="geography">
+               <div class="container">
+                  <section class="section-geography">
+                     <div class="section-geography__title-wrapper">
+                        <h2 class="section-geography__title">География поставок</h2>
+                     </div>
+                     <div class="section-geography__body">
+                        <div class="section-geography__wrapper">
+                           <div class="section-geography__map">
+                              <div class="section-geography__map-planet">
+                                 <img src="./img/geography/world.png" alt="География поставок">
+                              </div>
+                              <a href="#" class="section-geography__map-item map-item__canada">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Канада</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__usa">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>США</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__england">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Великобритания</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__ireland">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Ирландия</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__netherlands">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Нидерланды</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__belgium">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Бельгия</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__france">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Франция</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__denmark">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Дания</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__germany">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Германия</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__czech">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Чехия</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__austria">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Австрия</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__liechtenstein">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Лихтенштейн</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__switzerland">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Швейцария</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__finland">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Финляндия</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__estonia">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Эстония</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__latvia">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Латвия</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__lithuania">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Литва</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__poland">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Польша</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__slovakia">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Словакия</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__hungary">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Венгрия</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__romania">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Румыния</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__bulgaria">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Болгария</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__moldova">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Молдавия</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__ukraine">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Украина</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__belarus">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Беларусь</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__kazakhstan">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Казахстан</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__uzbekistan">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Узбекистан</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__mongolia">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Монголия</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__india">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Индия</span></div>
+                              </a>
+                              <a href="#" class="section-geography__map-item map-item__australia">
+                                 <span class="map-marker-icon"></span>
+                                 <div class="section-geography__map-item-label"><span>Австралия</span></div>
+                              </a>
+                           </div>
+                           <div class="section-geography__desc">
+                              <p>Мы поставляем<br> свою продукцию в&nbsp;более чем <span><span>40 </span>стран мира</span></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="section-geography__footer">
+                        <div class="section-geography__desc">
+                           <p>Мы поставляем<br> свою продукцию в&nbsp;более чем <span><span>40 </span>стран мира</span></p>
+                        </div>
+                     </div>
+                  </section>
+               </div>
+            </div>
+            <!-- Футер  -->
+            <include src="components/footerMain.html"></include>
+         </div>
+     
+      <script src="./js/script.min.js"></script>
+   </body>
 </html>

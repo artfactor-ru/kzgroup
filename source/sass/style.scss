@@ -16,14 +16,14 @@
 @import 'common/tabs';
 @import 'common/pagination';
 @import 'common/custom-select';
-@import 'common/preloader';
+
 @import 'common/video-block';
 @import 'common/block-text';
 @import 'common/contact-block';
 @import 'common/contact-block-more3';
 @import 'common/gallery';
 @import 'common/activity';
-@import 'common/preloader';
+
 
 @import 'pages/main/frame';
 @import 'pages/about/main-about';
@@ -130,6 +130,7 @@ body {
     height: 100vh;
     /* Fallback for browsers that do not support Custom Properties */
     height: calc(var(--vh, 1vh) * 100);
+    // height: 100%;
     -webkit-overflow-scrolling: touch;
 }
 

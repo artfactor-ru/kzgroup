@@ -50,11 +50,11 @@
 	padding-right: 10px;
 	position: relative;
 	transition: all 0.5s ease;
-	will-change: transform;
+	backface-visibility: hidden;
 }
 
 .popup_kirovets__back:hover .popup_kirovets__back-icon{
-	transform: scale(1.1);
+	// transform: scale(1.1);
 	width: 75px;
 }
 

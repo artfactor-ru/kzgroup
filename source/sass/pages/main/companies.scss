@@ -11,7 +11,10 @@
     padding-top: 135px;
     padding-bottom: 35px;
     transition: all 2s ease !important;
+    box-sizing: border-box;
+    min-height: 448px;
 }
+
 
 .swiper-slide--companies{
     transition: opacity 3s ease !important;
@@ -88,13 +91,7 @@
     bottom: 0;
     
 }
-.swiper-slide--companies .parallax__img--slide{
-    --overflow: 150px;
-	
-	height: calc(100% + (2 * var(--overflow))) !important; 
-    top: calc( -1 * var(--overflow));
-    position: absolute;
-}
+
 
 // .button-more--inner::before{
 //     transition-delay: 3s;
@@ -128,7 +125,7 @@
 
     .swiper-slide--companies{
         width: 100%;
-        
+        min-height: 515px;
         padding-top: 260px;
         padding-bottom: 35px;
        
@@ -177,12 +174,22 @@
  
 }
 @media(min-width: 1280px){
+    .swiper-slide--companies .parallax__img--slide{
+        --overflow: 150px;
+        
+        height: calc(100% + (2 * var(--overflow))) !important; 
+        top: calc( -1 * var(--overflow));
+        position: absolute;
+    }
+
+   
+
     .companies{
         position: relative;
     }
     .swiper-slide--companies{
         width: 100%;
-        
+        min-height: 710px;
         padding-top: 380px;
         padding-bottom: 25px;
  
@@ -328,7 +335,7 @@
    
     .swiper-slide--companies{
         width: 100%;
-        
+        min-height: 875px;
         padding-top: 485px;
         padding-bottom: 85px;
        

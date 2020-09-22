@@ -167,7 +167,7 @@
     animation: showBlock .2s linear forwards;
   }
   &-buttons {
-    padding-left: 341px;
+    padding-left: 300px;
     padding-right: 30px;
   }
   &-buttons--block {
@@ -247,6 +247,7 @@
   padding: 15px 70px;
   margin-top: 0;
   margin-right: 30px;
+  border: 1px solid #171c28;
 }
 
 .vacancies-d__download-status {
@@ -372,10 +373,6 @@
 }
 
 @media screen and (max-width: 1366px) {
-  .vacancies-d__form-buttons {
-    padding-left: 298px;
-    padding-right: 53px;
-  }
   .vacancies-d__form-label input, .vacancies-d__form-label textarea {
     height: 50px;
   }
@@ -387,7 +384,7 @@
     width: 433px;
   }
   .vacancies-d__form {
-    height: 580px;
+    height: 530px;
     width: 860px;
   }
   .vacancies-d__form-label textarea {
@@ -412,8 +409,8 @@
     height: 580px;
   }
   .vacancies-d__form-buttons {
-    padding-left: 298px;
-    padding-right: 70px;
+    padding-left: 299px;
+    padding-right: 68px;
   }
   .vacancies-d__hero {
     padding: 90px 0;
@@ -447,6 +444,10 @@
   .vacancies-d__build-point {
     right: 17%;
     top: 24%;
+  }
+  .vacancies-d__form-buttons {
+    padding-left: 281px;
+    padding-right: 138px;
   }
   .vacancies-d__contacts-title {
     margin-bottom: 27px;
