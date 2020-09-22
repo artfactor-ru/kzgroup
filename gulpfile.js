@@ -80,7 +80,7 @@ gulp.task("minifyjs", function () {
         .pipe(source('app.js'))
         .pipe(buffer())
         .pipe(sourcemaps.init())
-        .pipe(minifyjs())
+        // .pipe(minifyjs())
         .pipe(sourcemaps.write('./maps'))
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("./build/js"));
@@ -93,9 +93,9 @@ gulp.task("image", function () {
       // imagemin.optipng({
       //   optimizationLevel: 3  // уровень оптимизации
       // }),
-      imagemin.jpegtran({
-        progressive: true // прогрессивная загрузка картинки
-      }),
+      // imagemin.jpegtran({
+      //   progressive: true // прогрессивная загрузка картинки
+      // }),
       imagemin.svgo(
         {
         plugins: [
@@ -129,6 +129,25 @@ gulp.task("sprite", function () {
     .pipe(gulp.dest("./build/img"));
 });
 
+
+gulp.task("sprite2", function () {
+  return gulp.src("./source/img/**/number-icon*.svg")
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("sprite-number.svg"))
+    .pipe(gulp.dest("./build/img"));
+});
+
+gulp.task("sprite3", function () {
+  return gulp.src("./source/img/**/picicon_about*.svg")
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("sprite-about.svg"))
+    .pipe(gulp.dest("./build/img"));
+});
+
 // Копируем файлы в build
 gulp.task("copy", function () {
   return gulp.src([
@@ -152,6 +171,7 @@ gulp.task("build", gulp.series(
   "clean",  // удаляем папку build
   "copy",   // копируем необходимые файлы в папку build
   "sprite", // создаем svg спрайт
+  "sprite2",
   "image",  // оптимизируем изображения
   // "webp",   // конвертируем в webp
 
@@ -172,9 +192,13 @@ gulp.task("server", function () {
   });
 
   gulp.watch("./source/img/**/icon-*.svg", gulp.series("sprite", "html")).on("change", browserSync.reload);
+  gulp.watch("./source/img/**/number-icon*.svg", gulp.series("sprite2", "html")).on("change", browserSync.reload);
+  gulp.watch("./source/img/**/picicon_about*.svg", gulp.series("sprite3", "html")).on("change", browserSync.reload);
+  gulp.watch("./source/img/**/*.{png,jpg,svg}", gulp.series("image")).on("change", browserSync.reload);
   gulp.watch("./source/js/*.js", {usePolling: true}, gulp.series("minifyjs")).on("change", browserSync.reload);
   gulp.watch("./source/sass/**/*.{sass,scss}", {usePolling: true}, gulp.series("css"));
-  gulp.watch("./source/*.html", gulp.series("html")).on("change", browserSync.reload);
+  gulp.watch("./source/**/**", gulp.series("html")).on("change", browserSync.reload);
+  gulp.watch("./source/video/**/**", gulp.series("copy")).on("change", browserSync.reload);
 });
 
 gulp.task("start", gulp.series("build", "server"));
