@@ -8,17 +8,21 @@
     background-color: #070707;
     font-size: 0;
     text-align: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 100%;
-    padding-top: 130%;
+    // padding-top: 130%;
+    
+    min-height: 455px;
     & .leadership-person__back{
         position: absolute;
         top: 65px;
         left: 15px;
     }
 }
-
+.leadership-person__pic-image{
+    height: 100%;
+}
 .leadership-person__text{
     padding: 30px 20px 60px;
     & .social__btn{
@@ -79,14 +83,20 @@
 .md-show{
     display: none;
 }
+
+.leadership-person__pic-image{
+    object-fit: cover;
+}
   
 @media (min-width: 767px){
     .leadership-person__pic{
-        padding-top: 90%;
+       
+        // padding-top: 90%;
+        min-height: 910px;
         & .leadership-person__back{
             font-size: 16px;
             top: 70px;
-            left: 76px;
+            left: 62px;
         }
     }
     .leadership-person__text{
@@ -110,9 +120,15 @@
         line-height: 1.49;
     }
 }
-
-@media(min-width: 1280px){
+// @media(min-width: 1024px){
+//     .leadership-person{
+//         flex-direction: row;
+//         min-height: calc(var(--vh, 1vh)*100);
+//     }
+// }
+@media(min-width: 1000px){
     .leadership-person{
+        box-sizing: border-box;
         flex-direction: row;
         min-height: calc(var(--vh, 1vh)*100);
     }
@@ -120,8 +136,40 @@
         background-color: #000;
         width: 46%;
         display: flex;
-        align-items: flex-end;
+        // align-items: flex-end;
         padding-top: 0;
+        min-height: auto;
+    }
+    .leadership-person__pic-image{
+        height: auto;
+    }
+   
+    
+ 
+
+    .xs-show{
+        display: none;
+    }
+    .md-show{
+        display: block;
+    }
+    .leadership-person__back{
+        margin-bottom: 60px;
+    }
+}
+@media(min-width: 1280px){
+    .leadership-person__name{
+        font-size: 36px;
+        line-height: 42px;
+        margin-bottom: 26px;
+    }
+    .leadership-person__position{
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    .leadership-person__about{
+        font-size: 16px;
+        line-height: 1.4;
     }
     .leadership-person__text{
         width: 54%;
@@ -145,40 +193,16 @@
             height: 50px;
         }
     }
-    
-    .leadership-person__name{
-        font-size: 36px;
-        line-height: 42px;
-        margin-bottom: 26px;
-    }
-    .leadership-person__position{
-        margin-bottom: 20px;
-        font-size: 20px;
-    }
-    .leadership-person__about{
-        font-size: 16px;
-        line-height: 1.4;
-    }
-    .xs-show{
-        display: none;
-    }
-    .md-show{
-        display: block;
-    }
-    .leadership-person__back{
-        margin-bottom: 60px;
-    }
 }
-
 @media(min-width: 1680px){
     .leadership-person__pic{
-        width: 48%;
+        width: 45%;
     }
     .leadership-person__text{
         width: 51%;
-        padding: 90px 170px 60px 35px;
+        padding: 50px 170px 60px 35px;
         & .leadership-person__back{
-            margin-bottom: 21px;
+            margin-bottom: 35px;
         }
     }
     .leadership-person__name{

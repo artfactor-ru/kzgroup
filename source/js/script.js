@@ -290,8 +290,6 @@ function parallaxRemove(items){
 			layer.removeAttribute('style');
 		}
 		
-		
-		console.log(layer);
 	}
 }
 
@@ -588,20 +586,25 @@ let scrollbar;
 			});
 	
 			if(videoMain){
-		
+				// console.log('Видео есть')
 				if(!scrollbar.isVisible(videoMain)){
+
+					// console.log('Видео не видно') 
 					if(!videoMain.paused) {
 						videoMain.pause();
-			
+						btnPlay.classList.remove('active');
+
+						// console.log('Видео не на паузе')
 					}
 					
-				}else{
-					if(videoMain.paused) {
-						if(!flagBtnVideo){
-							videoMain.play();
-						}
-					}
 				}
+				// else{
+				// 	if(videoMain.paused) {
+				// 		if(!flagBtnVideo){
+				// 			videoMain.play();
+				// 		}
+				// 	}
+				// }
 			}
 	
 			if(document.querySelector('.swiper-container--hero')){
@@ -670,20 +673,25 @@ let scrollbar;
 		
 		
 			if(videoMain){
-		
+				// console.log('Видео есть')
 				if(!scrollbar.isVisible(videoMain)){
+
+					// console.log('Видео не видно') 
 					if(!videoMain.paused) {
 						videoMain.pause();
-			
+						btnPlay.classList.remove('active');
+
+						// console.log('Видео не на паузе')
 					}
 					
-				}else{
-					if(videoMain.paused) {
-						if(!flagBtnVideo){
-							videoMain.play();
-						}
-					}
 				}
+				// else{
+				// 	if(videoMain.paused) {
+				// 		if(!flagBtnVideo){
+				// 			videoMain.play();
+				// 		}
+				// 	}
+				// }
 			}
 		
 			if(document.querySelector('.swiper-container--hero')){
