@@ -74,7 +74,9 @@ if(document.querySelector('.barbapage')){
 			scrollbar.addListener(ScrollTrigger.update);
 		
 		}
-			
+		if(containerYearScroll){
+			scrollbarYear = ScrollbarSmoth.init(containerYearScroll, options4);
+		}
 		setTimeout(initAnimation, 10);
 	
 		initSlider();
@@ -85,6 +87,9 @@ if(document.querySelector('.barbapage')){
 		}
 				
 	
+		if(yearSelect){
+			yearSelection()
+		}
 		breakpoint.addListener(breakpointChecker);
 		breakpointChecker();
 		
@@ -96,7 +101,7 @@ if(document.querySelector('.barbapage')){
 		checkUrl('.contacts-sidebar__nav-link');
 		checkUrl('.contacts-sidebar__nav-link--mobile');
 		checkUrlForTitle('.contacts-header-title');
-		
+		checkUrlForTitle('.press-header-title');
 	
 		
 	
@@ -214,6 +219,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	checkUrl('.contacts-sidebar__nav-link');
 	checkUrl('.contacts-sidebar__nav-link--mobile');
 	checkUrlForTitle('.contacts-header-title');
+	checkUrlForTitle('.press-header-title');
 	checkUrlForTabs('.tabs-common-links-js');
 	knowHeightOfElement('.history__photos--animate', '.history__photos__item');
 
@@ -320,6 +326,27 @@ function parallax(items) {
 
 	
 	
+}
+
+function yearSelection(){
+	let dropdown = document.getElementById("myDropdown");
+	let btnSelect = document.querySelector('.press-rigt-side-bar-date-button-drop')
+	
+
+	btnSelect.addEventListener('click', function(){
+			dropdown.classList.add("show");
+
+
+			console.log('Произошел клик по годам')
+	})
+	
+	document.addEventListener('click', function(event){
+				if ( !event.target.classList.contains('press-rigt-side-bar-date-button-drop') ) {
+						// console.log(dropdown)
+						dropdown.classList.remove("show");
+				}
+			
+	})
 }
 
 
@@ -540,6 +567,12 @@ let containerTabsScroll = document.querySelector('.tabs-common');
 let scrollbarTabs;
 if(containerTabsScroll){
 	scrollbarTabs = ScrollbarSmoth.init(containerTabsScroll, options4);
+}
+
+let containerYearScroll = document.querySelector('.press-dropdown-list-content');
+let scrollbarYear;
+if(containerYearScroll){
+	scrollbarYear = ScrollbarSmoth.init(containerYearScroll, options4);
 }
 
 
@@ -867,8 +900,8 @@ let scrollbar;
 			document.querySelectorAll('.press__container').forEach(function(slider, index){
 
 				slider.classList.add('swiper-container--press-'+ index);
-				// slider.querySelector('.swiper-button-next').classList.add('press_swiper-button-next-' + index);
-				// slider.querySelector('.swiper-button-prev').classList.add('press_swiper-button-prev-' + index);
+				slider.querySelector('.swiper-button-next').classList.add('press_swiper-button-next-' + index);
+				slider.querySelector('.swiper-button-prev').classList.add('press_swiper-button-prev-' + index);
 				slider.querySelector('.swiper-scrollbar--news').classList.add('swiper-scrollbar--news-' + index)
 
 				swiperPress[index] = new Swiper('.swiper-container--press-'+ index,{
@@ -880,10 +913,10 @@ let scrollbar;
 					scrollbar: {
 						el: '.swiper-scrollbar--news-' + index,
 					},
-					// navigation: {
-					// 	nextEl: '.press_swiper-button-prev-' + index,
-					// 	prevEl: '.press_swiper-button-next-' + index,
-					// },
+					navigation: {
+						nextEl: '.swiper-button-prev-' + index,
+						prevEl: '.swiper-button-next-' + index,
+					},
 					// observer: true, 
 					// observeParents: true,
 					// updateOnWindowResize: true,
@@ -2117,6 +2150,10 @@ if(socialContainer){
 	socialInteraction()
 }
 
+let yearSelect = document.querySelector('.press-dropdown-list');
+if(yearSelect){
+	yearSelection()
+}
 
 // Меню
 

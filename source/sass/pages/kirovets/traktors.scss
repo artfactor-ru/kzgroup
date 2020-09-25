@@ -313,7 +313,10 @@
 		display: none;
 	}
 	.traktors__about-title--desktop{
-		display: block;
+		display: inline-block;
+		flex-shrink: 2;
+		flex-grow: 0;	
+		box-sizing: border-box;
 	}
 	.traktors__prints{
 		display: block;

@@ -18,6 +18,9 @@
     position: absolute;
     pointer-events: none;
     height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
    
 }
 // .parallax__img-video--hero{
@@ -33,6 +36,7 @@
 
 .parallax__img--video-bg{
     background-image: url(../img/companies/hero-bg-video.jpg);
+    background-size: cover;
 }
 
 .swiper-container--hero{
@@ -364,7 +368,17 @@
 		height: 35px;
 		background-size: 35px 35px;
     }
-   
+    .parallax__img-video--hero{
+        display: block;
+        opacity: 1;
+        position: absolute;
+        pointer-events: none;
+        height: auto;
+        // min-width: 100%;
+        min-height: auto;
+        object-fit: cover;
+       
+    }
 }
 
 @media(min-width:1680px){

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Пресс-центр</title>
+      <link rel="stylesheet" href="./css/style.min.css">
+   </head>
+   <body class="press  barbapage" data-barba="wrapper">
+      <!-- Прелоадер -->
+      <include src="components/preloader.html"></include>
+      <!-- Шапка и меню -->
+      <include src="components/header.html"></include>
+      <div class="scroll">
+
+        <!-- Главная Пресс-центр -->
+        <include src="components/press/mainPress.html"></include>
+
+         <!-- Табы -->
+         <include src="components/press/tabs.html"></include>
+        <!-- Табы -->
+
+
+       
+        
+         <div class="barbacontainer ">
+				
+            <div  class="barbawrapper" data-barba="container" data-barba-namespace="home" data-barba-prevent="all">
+
+                <div class="barba_background"></div>
+                <div class="barba_background--next"></div>
+                <div class="barba_background-in">
+
+                    <main class="press-wrapper two-screen">
+
+                  
+                         <!-- Поле поиска -->
+                         <div class="container">
+                            <include src="components/press/search.html"></include>
+                         </div>
+                      
+                        <!-- Поле поиска -->
+
+                        <section class="news press-news">
+                            <div class="container">
+                                 <h2 class="news__title press-news-title">Последние новости</h2>
+                            </div>
+
+                            <div class="container container--news">
+                                <div class="swiper-container press__container">
+                                    <div class="swiper-wrapper swiper-wrapper--press">
+                                        <!-- Slides -->
+                                        <div class="swiper-slide news__item press-news__item ">
+                                            <a class="news__link press-news__hover" href=""></a>
+                                            <div class="parallax__item--news parallax__item">
+                                            <div class="parallax__img-wrap">
+                                                <div class="parallax__img parallax__img--news"  data-speed = "-20" >
+                                                    <div class="parallax__img-inner" style="background-image: url(./img/news/news1.jpg);"></div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                            <p class="news__date">12.09.2019</p>
+                                            <h3 class="news__subtitle news__subtitle--press ">Кировский завод разместил облигации на 1 млрд рублей</h3>
+                                        </div>
+                                        <div class="swiper-slide news__item press-news__item">
+                                            <a class="news__link press-news__hover" href=""></a>
+                                            <div class="parallax__item--news parallax__item">
+                                            <div class="parallax__img-wrap">
+                                                <div class="parallax__img parallax__img--news"  data-speed = "-20" >
+                                                    <div class="parallax__img-inner" style="background-image: url(./img/news/news2.jpg);"></div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                            <p class="news__date">12.09.2019</p>
+                                            <h3 class="news__subtitle news__subtitle--press">Петербургский тракторный завод обновил линейку самых мощных тракторов</h3>
+                                        </div>
+                                        <div class="swiper-slide news__item press-news__item">
+                                            <a class="news__link press-news__hover" href=""></a>
+                                            <div class="parallax__item--news parallax__item">
+                                            <div class="parallax__img-wrap">
+                                                <div class="parallax__img parallax__img--news"  data-speed = "-20" >
+                                                    <div class="parallax__img-inner" style="background-image: url(./img/news/news3.jpg);"></div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                            <p class="news__date">12.09.2019</p>
+                                            <h3 class="news__subtitle news__subtitle--press">200 алых тракторов ко Дню Победы выпустил Кировский завод</h3>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-scrollbar swiper-scrollbar--news "></div>
+                                    <div class="news__controls">
+                                        <div class="swiper-button-prev">
+                                           <svg class="news__controls-icon">
+                                              <use xlink:href="./img/sprite.svg#icon-arrow-prev"></use>
+                                           </svg>
+                                        </div>
+                                        <div class="swiper-button-next">
+                                           <svg class="news__controls-icon">
+                                              <use xlink:href="./img/sprite.svg#icon-arrow-next"></use>
+                                           </svg>
+                                        </div>
+                                     </div>
+                                </div>
+                            </div>
+
+                            <div class="container">
+                                <div class="press-button-more">
+                                    <a href="#" class="button-more  press-button-more__news">
+                                    <span>смотреть все</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="news press-news press-video-container press-video">
+                            <div class="container press-video-title-container">
+                                 <h2 class="news__title press-video-font">Видео</h2>
+                            </div>
+                            <div class="container container--news">
+                            <div class="swiper-container press__container ">
+                                <div class="swiper-wrapper swiper-wrapper--press ">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide news__item press-news__item  news__item--video press-video__hover-item">
+                                        <a class="news__link press-video__hover" href=""></a>
+                                        <div class="parallax__item--news parallax__item">
+                                        <div class="parallax__img-wrap">
+                                            <div class="parallax__img parallax__img--news"  data-speed = "-20" >
+                                                <div class="parallax__img-inner" style="background-image: url(./img/news/news1.jpg);"></div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <h3 class="news__subtitle news__subtitle--press  press-video-font press-video-font-subtitle">Музей истории и техники Кировского завода признан лучшим</h3>
+                                    </div>
+                                    <div class="swiper-slide news__item press-news__item news__item--video press-video__hover-item">
+                                        <a class="news__link press-video__hover" href=""></a>
+                                        <div class="parallax__item--news parallax__item">
+                                        <div class="parallax__img-wrap">
+                                            <div class="parallax__img parallax__img--news"  data-speed = "-20" >
+                                                <div class="parallax__img-inner" style="background-image: url(./img/news/news2.jpg);"></div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <h3 class="news__subtitle news__subtitle--press press-video-font press-video-font-subtitle">Музей истории и техники Кировского завода принял участие во всероссийской акции "Ночь музеев - 2019"</h3>
+                                    </div>
+                                    <div class="swiper-slide news__item press-news__item news__item--video press-video__hover-item">
+                                        <a class="news__link press-video__hover" href=""></a>
+                                        <div class="parallax__item--news parallax__item">
+                                        <div class="parallax__img-wrap">
+                                            <div class="parallax__img parallax__img--news"  data-speed = "-20" >
+                                                <div class="parallax__img-inner" style="background-image: url(./img/news/news3.jpg);"></div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <h3 class="news__subtitle news__subtitle--press  press-video-font press-video-font-subtitle">200 алых тракторов ко Дню Победы выпустил Кировский завод</h3>
+                                    </div>
+                                </div>
+                                <div class="swiper-scrollbar swiper-scrollbar--news"></div>
+                                <div class="news__controls  news__controls--blue">
+                                    <div class="swiper-button-prev">
+                                       <svg class="news__controls-icon">
+                                          <use xlink:href="./img/sprite.svg#icon-arrow-prev"></use>
+                                       </svg>
+                                    </div>
+                                    <div class="swiper-button-next">
+                                       <svg class="news__controls-icon">
+                                          <use xlink:href="./img/sprite.svg#icon-arrow-next"></use>
+                                       </svg>
+                                    </div>
+                                 </div>
+                            </div>
+                            </div>
+                            <div class="container">
+                            <div class="press-button-more">
+                                <a href="#" class=" button-more press-button-more__news press-button-more__video">
+                                <span>смотреть все</span>
+                                </a>
+                            </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="container">
+                            <div class="press-about-container">
+                                <div class="press-about">
+                                    <div class="press-about__title">
+                                        <h4>Пресса о нас</h4>
+                                    </div>
+                                    <a href="#" class="press-about__item">
+                                        <p class="press-about__item-date">03.06.2020</p>
+                                        <h6 class="press-about__item-title">"Ростелеком", TELE2и Кировский завод завершили тестирование решений IOT для промышленности</h6>
+                                        <p class="press-about__item-text">Во время тестирования был развернут сервис автоматического сбора и передачи информации со счетчиков потребления тепла и воды в информационную систему производственного мониторинга Кировского завода с использованием оборудования отечественных поставщиков.</p>
+                                    </a>
+                                    <a href="#" class="press-about__item">
+                                        <p class="press-about__item-date">03.06.2020</p>
+                                        <h6 class="press-about__item-title">За территорией завода моя влиятельность заканчивается</h6>
+                                        <p class="press-about__item-text">Интервью генерального директора ПАО "Кировский завод" Георгия Семененко изданию "Деловой Петербург".<br> В этом году эксперты назвали молодого руководителя завода Георгия Семененко самым влиятельным промышленником Санкт-Петербурга. А сам Кировский завод в конце августа стал вторым в Рейтинге брендов"ДП" в номинации "Промышленность"</p>
+                                    </a>
+                                    <a href="#" class="press-about__item">
+                                        <p class="press-about__item-date">03.06.2020</p>
+                                        <h3 class="press-about__item-title">"Ростелеком", TELE2и Кировский завод завершили тестирование решений IOT для промышленности</h3>
+                                        <p class="press-about__item-text">Во время тестирования был развернут сервис автоматического сбора и передачи информации со счетчиков потребления тепла и воды в информационную систему производственного мониторинга Кировского завода с использованием оборудования отечественных поставщиков.</p>
+                                    </a>
+                                    <div class="press-button-more">
+                                        <a href="#" class="button-more  press-button-more__news">
+                                        <span>смотреть все</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="press-instagram">
+                                    <div class="press-instagram__title">
+                                        <img src="./img/press/icon/instagram.png" class="press-instagram__icon">
+                                        <p class="press-instagram__title-item">мы в instagram</p>
+                                    </div>
+                                    <a class="press-instagram__follow-us" href="https://www.instagram.com/kirovskyzavod/">#кировскийзавод</a>
+                                    <div class="press-instagram-gallery">
+                                        <div class="press-instagram-gallery-container">
+                                        <ul class="press-instagram-gallery-img-container">
+                                            <li class="press-instagram-gallery-img">
+                                                <img src="./img/press/instagram/image 48.jpg">
+                                            </li>
+                                            <li class="press-instagram-gallery-img">
+                                                <img src="./img/press/instagram/Rectangle 2.jpg">
+                                            </li>
+                                            <li class="press-instagram-gallery-img">
+                                                <img src="./img/press/instagram/image 49.jpg">
+                                            </li>
+                                            <li class="press-instagram-gallery-img">
+                                                <img src="./img/press/instagram/Rectangle 99.jpg">
+                                            </li>
+                                            <li class="press-instagram-gallery-img">
+                                                <img src="./img/press/instagram/image 25.jpg">
+                                            </li>
+                                            <li class="press-instagram-gallery-img">
+                                                <img src="./img/press/instagram/image 23.jpg">
+                                            </li>
+                                            <li class="press-instagram-gallery-img press-instagram-gallery-img-hidden-first">
+                                                <img src="./img/press/instagram/image 48.jpg">
+                                            </li>
+                                            <li class="press-instagram-gallery-img press-instagram-gallery-img-hidden-first">
+                                                <img src="./img/press/instagram/Rectangle 2.jpg">
+                                            </li>
+                                            <li class="press-instagram-gallery-img press-instagram-gallery-img-hidden-first">
+                                                <img src="./img/press/instagram/image 49.jpg">
+                                            </li>
+                                            <li class="press-instagram-gallery-img press-instagram-gallery-img-hidden-first">
+                                                <img src="./img/press/instagram/Rectangle 99.jpg">
+                                            </li>
+                                            <li class="press-instagram-gallery-img press-instagram-gallery-img-hidden">
+                                                <img src="./img/press/instagram/image 25.jpg">
+                                            </li>
+                                            <li class="press-instagram-gallery-img press-instagram-gallery-img-hidden">
+                                                <img src="./img/press/instagram/image 23.jpg">
+                                            </li>
+                                        </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </section>
+                        <section class="news news--grey press-news press-photo-container">
+                            <div class="container press-photo-title-container">
+                            <h2 class="news__title press-news-title-photo">Фото</h2>
+                            </div>
+                            <div class="container press-photo-container container--news">
+                            <div class="swiper-container press__container">
+                                <div class="swiper-wrapper swiper-wrapper--press ">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide news__item press-news__item  news__item--video">
+                                        <a class="news__link press-news__hover" href=""></a>
+                                        <div class="parallax__item--news parallax__item">
+                                        <div class="parallax__img-wrap">
+                                            <div class="parallax__img parallax__img--news"  data-speed = "-20" >
+                                                <div class="parallax__img-inner" style="background-image: url(./img/news/news1.jpg);"></div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <h3 class="news__subtitle news__subtitle--press press-photo__subtitle">Диорама "Кировский завод в дни блокады" Художник Ю.П. Реммер</h3>
+                                    </div>
+                                    <div class="swiper-slide news__item press-news__item">
+                                        <a class="news__link press-news__hover" href=""></a>
+                                        <div class="parallax__item--news parallax__item">
+                                        <div class="parallax__img-wrap">
+                                            <div class="parallax__img parallax__img--news"  data-speed = "-20" >
+                                                <div class="parallax__img-inner" style="background-image: url(./img/news/news2.jpg);"></div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <h3 class="news__subtitle news__subtitle--press press-photo__subtitle">Диорама "Кировский завод в дни блокады" Художник Ю.П. Реммер</h3>
+                                    </div>
+                                    <div class="swiper-slide news__item press-news__item">
+                                        <a class="news__link press-news__hover" href=""></a>
+                                        <div class="parallax__item--news parallax__item">
+                                        <div class="parallax__img-wrap">
+                                            <div class="parallax__img parallax__img--news"  data-speed = "-20" >
+                                                <div class="parallax__img-inner" style="background-image: url(./img/news/news3.jpg);"></div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <h3 class="news__subtitle news__subtitle--press press-photo__subtitle">Диорама "Кировский завод в дни блокады" Художник Ю.П. Реммер</h3>
+                                    </div>
+                                </div>
+                                <div class="swiper-scrollbar swiper-scrollbar--news"></div>
+                                <div class="news__controls">
+                                    <div class="swiper-button-prev">
+                                       <svg class="news__controls-icon">
+                                          <use xlink:href="./img/sprite.svg#icon-arrow-prev"></use>
+                                       </svg>
+                                    </div>
+                                    <div class="swiper-button-next">
+                                       <svg class="news__controls-icon">
+                                          <use xlink:href="./img/sprite.svg#icon-arrow-next"></use>
+                                       </svg>
+                                    </div>
+                                 </div>
+                            </div>
+                            </div>
+                            <div class="container">
+                                <div class="press-button-more">
+                                    <a href="#" class="button-more  press-button-more__news">
+                                    <span>смотреть все</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="container press-photo-subscribe">
+                            <button class="press-photo-subscribe-button button--details">
+                                подписаться на новости
+                                <div class=" button-line button-line--first"></div>
+                                <div class=" button-line button-line--two"></div>
+                            </button>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="container press-contacts">
+                            <div class="press-contacts__img-box">
+                            </div>
+                            <div class="press-contacts-field">
+                                <div class="press-contacts-field__title">Контакты пресс&#8209;центра</div>
+                                <div class="press-contacts-field__name">Ключникова Екатерина Николаевна</div>
+                                <div class="press-contacts-field__phone">
+                                    <p class="press-contacts-field__phone-title">Телефон/Факс:</p>
+                                    <a href="tel:+7(812)702-02-07">+7 (812) 702-02-17</a>
+                                </div>
+                                <div class="press-contacts-field__mail">
+                                    <a href="mailto:pr@kzgroup.ru">pr@kzgroup.ru</a><br>
+                                    <a href="mailto:Ekaterina.Klyuchnikova@kzgroup.ru">Ekaterina.Klyuchnikova@kzgroup.ru</a>
+                                </div>
+                            </div>
+                            </div>
+                        </section>
+                        <section >
+                            <div class="container press-contact-us__container" style="background-image: url(./img/news/contact-us-bg.jpg);"">
+                            <div class="press-contact-us">
+                                <div class="press-contact-us__title">
+                                    <h4>Свяжитесь с нами</h4>
+                                </div>
+                                <div class="press-contact-us__input">
+                                    <div class="press-contact-us__input-field">
+                                        <form class="press-contact-us__form">
+                                        <input type="text" class="press-contact-us__form-input" placeholder="Ваше имя">
+                                        <input type="tel" class="press-contact-us__form-input" placeholder="Ваш телефон">
+                                        <textarea class="press-contact-us__form-input press-contact-us__form-input--text" placeholder="Сообщение"></textarea>
+                                        <div class="press-contact-us__form-button-container">
+                                            <button class="press-contact-us__form-button">ОТПРАВИТЬ</button>
+                                            <p class="press-contact-us__form-button-description">Нажимая на кнопку "Отправить" вы принимаете согласие на обработку персанальных данных</p>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </section>
+                    </main>
+                 </div>
+             </div>
+         </div>
+
+
+         <!-- Футер  -->
+         <include src="components/footer.html"></include>
+      </div>
+      <script src="./js/script.min.js"></script>
+   </body>

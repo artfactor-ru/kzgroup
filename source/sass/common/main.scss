@@ -199,7 +199,11 @@
 		height: calc(var(--vh, 1vh) * 100);
 		min-height: -webkit-fill-available;	
 	}
+	.parallax__img-video{
 	
+		height: auto;
+		width: 100%;
+	}
 	.parallax__img--inner--mobile{
 		display: none;
 	}
