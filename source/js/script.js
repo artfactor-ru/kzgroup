@@ -2738,3 +2738,49 @@ if ($('.rent-form__main-form')) {
 		}
 	})
 }
+
+//Скролл панорамы и события попап для пинов
+let panorama = document.querySelector('.frame');
+if (panorama) {
+	window.onload = function () {
+		let pin = $('.pin');
+		let scr = $(".frame");
+		scr.mousedown(function () {
+			let startX = this.scrollLeft + event.pageX;
+			let startY = this.scrollTop + event.pageY;
+			scr.mousemove(function () {
+				this.scrollLeft = startX - event.pageX;
+				this.scrollTop = startY - event.pageY;
+				return false;
+			});
+		});
+		$(window).mouseup(function () {
+			scr.off("mousemove");
+		});
+
+		let panoramaW = $('.panorama').width();
+		let frameLayer = $('.frame__layer');
+		frameLayer.css('width', panoramaW);
+
+		pin.on('click', function () {
+			let _this = $(this);
+			let popup = _this.siblings('.pin-popup');
+			if (popup.css('display') === 'none') {
+				popup.show(100);
+				frameLayer.show('fast');
+				_this.parent('.pin-block').css('z-index', '3');
+			} else {
+				popup.hide('fast');
+				frameLayer.hide(100);
+				_this.parent('.pin-block').css('z-index', '1');
+			}
+		});
+		frameLayer.on('click', function () {
+			$('.pin-popup').hide('fast');
+			frameLayer.hide(100);
+			$('.pin-block').css('z-index', '1');
+		});
+	}
+}
+
+

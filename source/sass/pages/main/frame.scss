@@ -1,28 +1,409 @@
 .frame{
-    height: 175px;
-    background-image: url(../img/main/frame-bg.jpg);
-    background-size: cover;
-    background-position: center;
+    height: 626px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.frame::-webkit-scrollbar {
+    width: 0;
+}
+
+.frame__layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(40, 58, 103, 0.56);
+    background-blend-mode: multiply;
+    backdrop-filter: blur(8.55368px);
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 2;
+}
+
+.frame-container {
+    position: relative;
+    height: 610px;
+}
+
+.panorama {
+    width: 2460px;
+    height: 100%;
+    object-fit: cover;
+    max-width: unset;
+}
+
+.pin-popup:after, .pin-popup:before {
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: #fff;
+}
+
+.pin-popup__1:after {
+    right: -34px;
+    top: 16px;
+    width: 33px;
+    height: 1px;
+}
+
+.pin-popup__1:before {
+    right: -33px;
+    width: 1px;
+    top: -23px;
+    height: 39px;
 }
 
 
-@media(min-width: 767px){
-    .frame{
-        height: 225px;
-    }
-  
+.pin-popup__0:after {
+    right: 215px;
+    bottom: -77px;
+    width: 33px;
+    height: 1px;
+}
+.pin-popup__0:before {
+    width: 1px;
+    bottom: -77px;
+    left: 249px;
+    height: 75px;
 }
 
-@media(min-width: 1280px){
-    .frame{
-        height: 360px;
-    }
-
+.pin-popup__2:before {
+    width: 1px;
+    top: -54px;
+    right: 86px;
+    height: 54px;
+}
+.pin-popup__3:before {
+    width: 1px;
+    top: -54px;
+    right: 86px;
+    height: 54px;
 }
 
-@media(min-width: 1680px){
-    .frame{
-        height: 575px;
-    }
+.pin-popup__4:before {
+    width: 1px;
+    top: -54px;
+    right: 36px;
+    height: 54px;
+}
 
+.pin-popup__5:before {
+    width: 1px;
+    top: -54px;
+    right: 36px;
+    height: 54px;
+}
+
+.pin-popup__6:before {
+    width: 1px;
+    top: -54px;
+    right: 36px;
+    height: 54px;
+}
+
+.pin-popup__7:before {
+    width: 1px;
+    top: -54px;
+    right: 36px;
+    height: 54px;
+}
+
+
+.pin-popup__8:after {
+    right: -60px;
+    bottom: 187px;
+    width: 59px;
+    height: 1px;
+}
+
+
+.pin-popup__8:before {
+    width: 1px;
+    top: 14px;
+    right: -60px;
+    height: 54px;
+}
+
+
+.pin-popup__9:before {
+    height: 1px;
+    top: 66px;
+    right: -59px;
+    width: 59px;
+}
+
+.pin-popup__9:after {
+    width: 1px;
+    top: 14px;
+    right: -60px;
+    height: 54px;
+}
+
+.pin-popup__10:before {
+    height: 1px;
+    top: 66px;
+    right: -59px;
+    width: 59px;
+}
+.pin-popup__10:after {
+    width: 1px;
+    top: 14px;
+    right: -60px;
+    height: 54px;
+}
+
+.pin-popup__11:before {
+    width: 1px;
+    top: -54px;
+    right: 36px;
+    height: 54px;
+}
+
+.pin-popup__12:before {
+    width: 1px;
+    top: -54px;
+    right: 36px;
+    height: 54px;
+}
+
+.pin-popup__13:before {
+    width: 1px;
+    top: -54px;
+    right: 36px;
+    height: 54px;
+}
+.pin-popup__14:before {
+    width: 1px;
+    top: -54px;
+    right: 36px;
+    height: 54px;
+}
+
+
+.pin {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.pin-block {
+    width: 25px;
+    height: 34px;
+    position: absolute;
+    font-family: $font-regular;
+    z-index: 1;
+}
+
+.pin-block-0 {
+    left: 300px;
+    bottom: 5px;
+}
+
+.pin-block-1 {
+    left: 932px;
+    top: 52px;
+}
+
+.pin-block-2 {
+    left: 1049px;
+    top: 13px;
+}
+
+.pin-block-3 {
+    left: 1132px;
+    top: 1px;
+}
+
+.pin-block-4 {
+    left: 1169px;
+    top: 1px;
+}
+
+.pin-block-5 {
+    left: 1138px;
+    top: 66px;
+}
+
+.pin-block-6 {
+    left: 1269px;
+    top: 31px;
+}
+
+.pin-block-7 {
+    left: 1269px;
+    top: 105px;
+}
+
+.pin-block-8 {
+    left: 1377px;
+    top: 272px;
+}
+
+.pin-block-9 {
+    left: 1406px;
+    top: 42px;
+}
+
+.pin-block-10 {
+    left: 1435px;
+    top: 290px;
+}
+
+.pin-block-11 {
+    left: 1439px;
+    top: 57px;
+}
+
+.pin-block-12 {
+    left: 1564px;
+    top: 43px;
+}
+
+.pin-block-13 {
+    left: 1665px;
+    top: 43px;
+}
+
+.pin-block-14 {
+    left: 1790px;
+    top: 106px;
+}
+
+.map-arrows {
+    position: sticky;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pin-popup h4 {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 35px;
+}
+
+.pin-popup {
+    display: none;
+    padding: 30px 10px;
+    text-align: center;
+    width: 500px;
+    height: 258px;
+    background: rgba(118, 118, 118, 0.69);
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 0 4px 4px rgba(255, 255, 255, 0.25);
+    border-radius: 9.77563px;
+    position: relative;
+}
+
+.pin-popup div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.pin-popup__1 {
+    top: 50px;
+    right: 520px;
+}
+
+.pin-popup__0 {
+    bottom: 300px;
+    left: -271px;
+}
+
+.pin-popup__2 {
+    bottom: -78px;
+    left: -400px;
+}
+
+.pin-popup__3 {
+    bottom: -78px;
+    left: -400px;
+}
+
+.pin-popup__4 {
+    bottom: -85px;
+    left: -450px;
+}
+
+.pin-popup__5 {
+    bottom: -85px;
+    left: -450px;
+}
+
+.pin-popup__6 {
+    bottom: -85px;
+    left: -450px;
+}
+
+.pin-popup__7 {
+    bottom: -85px;
+    left: -450px;
+}
+
+.pin-popup__8 {
+    bottom: -15px;
+    left: -546px;
+}
+
+.pin-popup__9 {
+    bottom: -15px;
+    left: -546px;
+}
+
+.pin-popup__10 {
+    bottom: -15px;
+    left: -546px;
+}
+
+.pin-popup__11 {
+    bottom: -86px;
+    left: -450px;
+}
+
+.pin-popup__12 {
+    bottom: -86px;
+    left: -450px;
+}
+
+.pin-popup__13 {
+    bottom: -86px;
+    left: -450px;
+}
+.pin-popup__14 {
+    bottom: -86px;
+    left: -450px;
+}
+
+
+.pin-popup__link {
+    position: relative;
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-transform: none;
+    transition: .3s;
+}
+
+.pin-popup__link:hover {
+    opacity: 0.6;
+}
+
+.pin-popup__link img {
+    margin-right: 15px;
+}
+
+
+@media screen and (min-width: 2460px) {
+    .frame {
+        display: flex;
+        justify-content: center;
+    }
 }
