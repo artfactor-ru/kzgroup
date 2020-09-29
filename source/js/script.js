@@ -2587,35 +2587,35 @@ function createMap(){
 }
 
 
-// function accordion(){
-// 	let accordionItem = document.querySelectorAll('.accordion-item'),
-// 		active = document.getElementsByClassName('show');
-//
-// 	Array.from(accordionItem).forEach(function(item, i, accordionItem) {
-// 		item.querySelector('.accordion-item-header').addEventListener('click', function(e) {
-// 			if (active.length && active[0] !== item) {
-// 				active[0].querySelector('.accordion-item-content').style.height = 0 + 'px';
-// 				active[0].classList.remove('show');
-// 			}
-//
-// 			let content = item.querySelector('.accordion-item-wrap');
-// 			let contentHeight = content.offsetHeight;
-// 			if(item.classList.contains('show')){
-// 				item.classList.remove('show');
-// 				item.querySelector('.accordion-item-content').style.height = 0 + 'px';
-// 			}else if(!item.classList.contains('show')){
-// 				item.classList.add('show');
-// 				item.querySelector('.accordion-item-content').style.height = contentHeight + 'px';
-// 			}
-//
-//
-// 		});
-// 	});
-// }
-//
-// if(document.getElementById('accordion')){
-// 	accordion();
-// }
+function accordion(){
+	let accordionItem = document.querySelectorAll('.accordion-item'),
+		active = document.getElementsByClassName('show');
+
+	Array.from(accordionItem).forEach(function(item, i, accordionItem) {
+		item.querySelector('.accordion-item-header').addEventListener('click', function(e) {
+			if (active.length && active[0] !== item) {
+				active[0].querySelector('.accordion-item-content').style.height = 0 + 'px';
+				active[0].classList.remove('show');
+			}
+
+			let content = item.querySelector('.accordion-item-wrap');
+			let contentHeight = content.offsetHeight;
+			if(item.classList.contains('show')){
+				item.classList.remove('show');
+				item.querySelector('.accordion-item-content').style.height = 0 + 'px';
+			}else if(!item.classList.contains('show')){
+				item.classList.add('show');
+				item.querySelector('.accordion-item-content').style.height = contentHeight + 'px';
+			}
+
+
+		});
+	});
+}
+
+if(document.getElementById('accordion')){
+	accordion();
+}
 
 	let galleryImg = document.querySelectorAll('.swiper-slide--gallery');
 	for(let i = 0; i<galleryImg.length; i++){
