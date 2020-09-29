@@ -32,11 +32,6 @@
                         <div class="barba_background"></div>
                         <div class="barba_background--next"></div>
                         <div class="barba_background-in">
-                            <!-- <main class="press-wrapper two-screen"> -->
-                                <!-- <div class="container">
-                                    <include src="components/press/search.html"></include>
-                                </div> -->
-                                
                                 
                                 <div class="container press-newspage-main-container two-screen">
                                     
@@ -45,46 +40,8 @@
 
 
                                         <include src="components/press/search.html"></include>
-                                        <div class="press-hidden-sidebar">
-                                            <div class="press-hidden-sidebar-container">
-                                                <div class="press-hidden-sidebar-select-theme">
-                                                    <svg class="press-form-select-arrow" width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1.656 1.36724L1.65603 1.36721L1.65305 1.36374C1.61289 1.31698 1.56143 1.26853 1.49311 1.23318C1.4224 1.19658 1.34802 1.1814 1.27258 1.1814C0.979044 1.1814 0.75 1.44028 0.75 1.7488C0.75 1.86243 0.792681 2.01654 0.889966 2.13133L6.09482 8.47738L6.09477 8.47743L6.09846 8.48173C6.19427 8.59329 6.32888 8.66406 6.47892 8.66406C6.62897 8.66406 6.76357 8.59329 6.85939 8.48173L6.85943 8.48176L6.86263 8.47788L12.0946 2.13194L12.1202 2.10212C12.333 1.85438 12.2568 1.5227 12.093 1.332C11.9859 1.20735 11.8367 1.14939 11.6836 1.16721C11.54 1.18394 11.4181 1.26361 11.3321 1.36374L11.332 1.36371L11.3287 1.36775L6.50566 7.22781L1.656 1.36724Z" fill="black" stroke="black" stroke-width="0.5"/>
-                                                    </svg>
-                                                    <select class="c-select">
-                                                        <option disabled>Выбрать новость по теме</option>
-                                                        <option value="all">ВСЕ</option>
-                                                        <option value="production">ПРОИЗВОДСТВО</option>
-                                                        <option value="finance">ФИНАНСЫ</option>
-                                                        <option value="innovation">ИННОВАЦИИ</option>
-                                                        <option value="corporate-culture">КОРПОРАТИВНАЯ КУЛЬТУРА</option>
-                                                        <option value="history">ИСТОРИЯ</option>
-                                                        <option value="museum">МУЗЕЙ</option>
-                                                        <option value="activity">МЕРОПРИЯТИЯ</option>
-                                                        <option value="victories">НАШИ ПОБЕДЫ</option>
-                                                        <option value="partners">ПАРТНЕРСТВО</option>
-                                                    </select>
-                                                </div>
-                                                <div class="press-hidden-sidebar-select-date">
-                                                    <svg class="press-form-select-arrow" width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1.656 1.36724L1.65603 1.36721L1.65305 1.36374C1.61289 1.31698 1.56143 1.26853 1.49311 1.23318C1.4224 1.19658 1.34802 1.1814 1.27258 1.1814C0.979044 1.1814 0.75 1.44028 0.75 1.7488C0.75 1.86243 0.792681 2.01654 0.889966 2.13133L6.09482 8.47738L6.09477 8.47743L6.09846 8.48173C6.19427 8.59329 6.32888 8.66406 6.47892 8.66406C6.62897 8.66406 6.76357 8.59329 6.85939 8.48173L6.85943 8.48176L6.86263 8.47788L12.0946 2.13194L12.1202 2.10212C12.333 1.85438 12.2568 1.5227 12.093 1.332C11.9859 1.20735 11.8367 1.14939 11.6836 1.16721C11.54 1.18394 11.4181 1.26361 11.3321 1.36374L11.332 1.36371L11.3287 1.36775L6.50566 7.22781L1.656 1.36724Z" fill="black" stroke="black" stroke-width="0.5"/>
-                                                    </svg>
-                                                    <select class="c-select">
-                                                        <option disabled>По годам</option>
-                                                        <option value="2012">2012</option>
-                                                        <option value="2013">2013</option>
-                                                        <option value="2014">2014</option>
-                                                        <option value="2015">2015</option>
-                                                        <option value="2016">2016</option>
-                                                        <option value="2017">2017</option>
-                                                        <option value="2018">2018</option>
-                                                        <option value="2019">2019</option>
-                                                        <option value="2020">2020</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
+                                        
+                                        <include src="components/press/filter.html"></include>
 
                                         <div class="">
                                             <div class="press-newspage">
@@ -234,202 +191,12 @@
 
                                         </div>
 
-                                        <div class="press-internal-pages-pagination-subscribe">
-                                            <div class="press-internal-pages-pagination-container">
-                                                <div class="common-pagination">
-                                                    <ul class="common-pagination__list">
-                                                        <li class="common-pagination__item">
-                                                            <a class="common-pagination__arrow common-pagination__arrow--disabled">
-                                                                <svg class="common-pagination__svg" width="20" height="13" viewBox="0 0 14 22" fill="#D1D0D0" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M13.4483 1.95084L13.4484 1.95088L13.4518 1.94794C13.5258 1.88577 13.5951 1.81214 13.6446 1.71855C13.6955 1.62234 13.7178 1.51939 13.7178 1.40967C13.7178 0.999881 13.3449 0.664062 12.8783 0.664062C12.7116 0.664062 12.4766 0.728246 12.3072 0.86939L0.520306 10.3339L0.520266 10.3338L0.515944 10.3375C0.349805 10.4772 0.249999 10.6679 0.249999 10.8757C0.249999 11.0836 0.349805 11.2743 0.515944 11.414L0.515912 11.4141L0.519809 11.4172L12.3067 20.9312L12.3638 20.9792C12.7191 21.278 13.2113 21.1814 13.5108 20.9297C13.6903 20.7787 13.7706 20.573 13.7455 20.3619C13.7216 20.1609 13.6064 19.983 13.4518 19.8531L13.4519 19.8531L13.4478 19.8498L2.37141 10.9248L13.4483 1.95084Z" fill="#000000" stroke="#000000" stroke-width="0.5"/>
-                                                                </svg>
-                                                            </a>
-                                                        </li>
-                                                
-                                                        <li class="common-pagination__item">
-                                                            <a href="#0" class="button-paginate button-paginate--active">
-                                                                1
-                                                                <div class=" button-line button-line--first"></div>
-                                                                <div class=" button-line button-line--two"></div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="common-pagination__item">
-                                                            <a href="#0" class="button-paginate">
-                                                                2
-                                                                <div class=" button-line button-line--first"></div>
-                                                                <div class=" button-line button-line--two"></div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="common-pagination__item">
-                                                            <a href="#0" class="button-paginate">
-                                                                3
-                                                                <div class=" button-line button-line--first"></div>
-                                                                <div class=" button-line button-line--two"></div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="common-pagination__item">
-                                                            <a href="#0" class="common-pagination__arrow">
-                                                                <svg class="common-pagination__svg common-pagination__svg--rotate" width="20" height="13" viewBox="0 0 14 22" fill="#D1D0D0" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M13.4483 1.95084L13.4484 1.95088L13.4518 1.94794C13.5258 1.88577 13.5951 1.81214 13.6446 1.71855C13.6955 1.62234 13.7178 1.51939 13.7178 1.40967C13.7178 0.999881 13.3449 0.664062 12.8783 0.664062C12.7116 0.664062 12.4766 0.728246 12.3072 0.86939L0.520306 10.3339L0.520266 10.3338L0.515944 10.3375C0.349805 10.4772 0.249999 10.6679 0.249999 10.8757C0.249999 11.0836 0.349805 11.2743 0.515944 11.414L0.515912 11.4141L0.519809 11.4172L12.3067 20.9312L12.3638 20.9792C12.7191 21.278 13.2113 21.1814 13.5108 20.9297C13.6903 20.7787 13.7706 20.573 13.7455 20.3619C13.7216 20.1609 13.6064 19.983 13.4518 19.8531L13.4519 19.8531L13.4478 19.8498L2.37141 10.9248L13.4483 1.95084Z" fill="#000000" stroke="#000000" stroke-width="0.5"/>
-                                                                </svg>
-                                                
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="press-internal-pages-subscribe-button-container">
-                                                <button class="press-internal-pages-subscribe-button button--details">
-                                                    подписаться на новости
-                                                    <div class=" button-line button-line--first"></div>
-                                                    <div class=" button-line button-line--two"></div>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="press-instagram press-hidden-instagram">
-                                            <div class="press-instagram__title">
-                                                <img src="./img/press/icon/instagram.png" class="press-instagram__icon">
-                                                <p class="press-instagram__title-item">мы в instagram</p>
-                                            </div>
-                                            <a class="press-instagram__follow-us" href="https://www.instagram.com/kirovskyzavod/">#кировскийзавод</a>
-                                            <div class="press-instagram-gallery">
-                                                <div class="press-instagram-gallery-container">
-                                                    <ul class="press-instagram-gallery-img-container">
-                                                        <li class="press-instagram-gallery-img press-instagram-hide-gallery-img">
-                                                            <img src="./img/press/instagram/image48.png">
-                                                        </li>
-                                                        <li class="press-instagram-gallery-img press-instagram-hide-gallery-img">
-                                                            <img src="./img/press/instagram/Rectangle2.png">
-                                                        </li>
-                                                        <li class="press-instagram-gallery-img press-instagram-hide-gallery-img">
-                                                            <img src="./img/press/instagram/image49.png">
-                                                        </li>
-                                                        <li class="press-instagram-gallery-img press-instagram-hide-gallery-img">
-                                                            <img src="./img/press/instagram/Rectangle99.png">
-                                                        </li>
-                                                        <li class="press-instagram-gallery-img press-instagram-hide-gallery-img">
-                                                            <img src="./img/press/instagram/image25.png">
-                                                        </li>
-                                                        <li class="press-instagram-gallery-img press-instagram-hide-gallery-img">
-                                                            <img src="./img/press/instagram/image23.png">
-                                                        </li>
-                                                        <li class="press-instagram-gallery-img press-instagram-hide-gallery-img press-instagram-gallery-img-hidden-first">
-                                                            <img src="./img/press/instagram/image48.png">
-                                                        </li>
-                                                        <li class="press-instagram-gallery-img press-instagram-hide-gallery-img press-instagram-gallery-img-hidden-first">
-                                                            <img src="./img/press/instagram/Rectangle2.png">
-                                                        </li>
-                                                        <li class="press-instagram-gallery-img press-instagram-hide-gallery-img press-instagram-gallery-img-hidden-first">
-                                                            <img src="./img/press/instagram/image49.png">
-                                                        </li>
-                                                        <li class="press-instagram-gallery-img press-instagram-hide-gallery-img press-instagram-gallery-img-hidden-first">
-                                                            <img src="./img/press/instagram/Rectangle99.png">
-                                                        </li>
-                                                        <li class="press-instagram-gallery-img press-instagram-hide-gallery-img press-instagram-gallery-img-hidden">
-                                                            <img src="./img/press/instagram/image25.png">
-                                                        </li>
-                                                        <li class="press-instagram-gallery-img press-instagram-hide-gallery-img press-instagram-gallery-img-hidden">
-                                                            <img src="./img/press/instagram/image23.png">
-                                                        </li>
-                                                    </ul>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <include src="components/press/pagination.html"></include>
+                                        
+                                        <include src="components/press/instagram-mobile.html"></include>
                                     </div>
-                                    <aside class="press-rigt-side-bar press-right-news-sidebar press-rigt-side-bar-hide">
-                                        <div class="sidebar__inner">
-                                            <div class="press-rigt-side-bar-filters">
-                                                <div class="press-rigt-side-bar-filters-theme">
-                                                    <div class="press-rigt-side-bar-theme-list">
-                                                        <a class="press-rigt-side-bar-theme-button rigt-side-bar-theme-button-active">ВСЕ</a>
-                                                        <a class="press-rigt-side-bar-theme-button">ПРОИЗВОДСТВО</a>
-                                                        <a class="press-rigt-side-bar-theme-button">ФИНАНСЫ</a>
-                                                        <a class="press-rigt-side-bar-theme-button">ИННОВАЦИИ</a>
-                                                        <a class="press-rigt-side-bar-theme-button">КОРПОРАТИВНАЯ КУЛЬТУРА</a>
-                                                        <a class="press-rigt-side-bar-theme-button">ИСТОРИЯ</a>
-                                                        <a class="press-rigt-side-bar-theme-button">МУЗЕЙ</a>
-                                                        <a class="press-rigt-side-bar-theme-button">МЕРОПРИЯТИЯ</a>
-                                                        <a class="press-rigt-side-bar-theme-button">НАШИ ПОБЕДЫ</a>
-                                                        <a class="press-rigt-side-bar-theme-button">ПАРТНЕРСТВО</a>
-                                                    </div>
-                                                </div>
-                                                <div class="press-rigt-side-bar-filters-date">
-                                                    <a class="press-rigt-side-bar-date-button rigt-side-bar-date-button-active">2020</a>
-                                                    <a class="press-rigt-side-bar-date-button">2019</a>
-                                                    <a class="press-rigt-side-bar-date-button">2018</a>
-                                                    <div class="press-dropdown-list">
-                                                        <a class="press-rigt-side-bar-date-button press-rigt-side-bar-date-button-drop">все года</a>
-                                                        <div id="myDropdown" class="press-dropdown-list-content">
-                                                            <a class="press-dropdown-list-content__item">2008</a>
-                                                            <a class="press-dropdown-list-content__item">2009</a>
-                                                            <a class="press-dropdown-list-content__item">2010</a>
-                                                            <a class="press-dropdown-list-content__item">2011</a>
-                                                            <a class="press-dropdown-list-content__item">2012</a>
-                                                            <a class="press-dropdown-list-content__item">2013</a>
-                                                            <a class="press-dropdown-list-content__item">2014</a>
-                                                            <a class="press-dropdown-list-content__item">2015</a>
-                                                            <a class="press-dropdown-list-content__item">2016</a>
-                                                            <a class="press-dropdown-list-content__item">2017</a>
-                                                            <a class="press-dropdown-list-content__item">2018</a>
-                                                            <a class="press-dropdown-list-content__item">2019</a>
-                                                            <a class="press-dropdown-list-content__item active">2020</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="press-instagram press-right-side-bar-instagram">
-                                                <div class="press-instagram__title">
-                                                    <img src="./img/press/icon/instagram.png" class="press-instagram__icon">
-                                                    <p class="press-instagram__title-item">мы в instagram</p>
-                                                </div>
-                                                <a class="press-instagram__follow-us" href="https://www.instagram.com/kirovskyzavod/">#кировскийзавод</a>
-                                                <div class="press-instagram-gallery">
-                                                    <div class="press-instagram-gallery-container">
-                                                        <ul class="press-instagram-gallery-img-container">
-                                                            <li class="press-instagram-gallery-img">
-                                                                <img src="./img/press/instagram/image48.png">
-                                                            </li>
-                                                            <li class="press-instagram-gallery-img">
-                                                                <img src="./img/press/instagram/Rectangle2.png">
-                                                            </li>
-                                                            <li class="press-instagram-gallery-img">
-                                                                <img src="./img/press/instagram/image49.png">
-                                                            </li>
-                                                            <li class="press-instagram-gallery-img">
-                                                                <img src="./img/press/instagram/Rectangle99.png">
-                                                            </li>
-                                                            <li class="press-instagram-gallery-img">
-                                                                <img src="./img/press/instagram/image25.png">
-                                                            </li>
-                                                            <li class="press-instagram-gallery-img">
-                                                                <img src="./img/press/instagram/image23.png">
-                                                            </li>
-                                                            <li class="press-instagram-gallery-img press-instagram-gallery-img-hidden">
-                                                                <img src="./img/press/instagram/image48.png">
-                                                            </li>
-                                                            <li class="press-instagram-gallery-img press-instagram-gallery-img-hidden">
-                                                                <img src="./img/press/instagram/Rectangle2.png">
-                                                            </li>
-                                                            <li class="press-instagram-gallery-img press-instagram-gallery-img-hidden">
-                                                                <img src="./img/press/instagram/image49.png">
-                                                            </li>
-                                                            <li class="press-instagram-gallery-img press-instagram-gallery-img-hidden">
-                                                                <img src="./img/press/instagram/Rectangle99.png">
-                                                            </li>
-                                                            <li class="press-instagram-gallery-img press-instagram-gallery-img-hidden">
-                                                                <img src="./img/press/instagram/image25.png">
-                                                            </li>
-                                                            <li class="press-instagram-gallery-img press-instagram-gallery-img-hidden">
-                                                                <img src="./img/press/instagram/image23.png">
-                                                            </li>
-                                                        </ul>
-                                                        
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </aside>
+                                    <!-- Боковое меню -->
+                                    <include src="components/press/aside.html"></include>
                                 </div>
                            
                         </div>
@@ -439,73 +206,5 @@
          <include src="components/footer.html"></include>
         </div>
     
-    <script>
-    
-       
-       
- 
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <script>
- 
-    
-    $('.c-select').each(function() {
-            const _this = $(this),
-                selectOption = _this.find('option'),
-                selectOptionLength = selectOption.length,
-                selectedOption = selectOption.filter(':selected'),
-                duration = 450; // длительность анимации
-    
-            _this.hide();
-            _this.wrap('<div class="c-select"></div>');
-            $('<div>', {
-                class: 'new-select',
-                text: _this.children('option:disabled').text()
-            }).insertAfter(_this);
-    
-            const selectHead = _this.next('.new-select');
-            $('<div>', {
-                class: 'new-select__list'
-            }).insertAfter(selectHead);
-    
-            const selectList = selectHead.next('.new-select__list');
-            for (let i = 1; i < selectOptionLength; i++) {
-                $('<div>', {
-                    class: 'new-select__item',
-                    html: $('<span>', {
-                        text: selectOption.eq(i).text()
-                    })
-                })
-                    .attr('data-value', selectOption.eq(i).val())
-                    .appendTo(selectList);
-            }
-    
-            const selectItem = selectList.find('.new-select__item');
-            selectList.slideUp(0);
-            selectHead.on('click', function() {
-                if ( !$(this).hasClass('on') ) {
-                    $(this).addClass('on');
-    
-                    $(this).parent('.c-select').addClass('c-select-rotate');
-                    selectList.slideDown(duration);
-                    selectItem.on('click', function() {
-                        let chooseItem = $(this).data('value');
-                        $('select').val(chooseItem).attr('selected', 'selected');
-                        selectHead.text( $(this).find('span').text() );
-    
-                        selectList.slideUp(duration);
-                        selectHead.removeClass('on');
-    
-                    });
-    
-                } else {
-                    $(this).removeClass('on');
-                    $(this).parent('.c-select').removeClass('c-select-rotate');
-                    selectList.slideUp(duration);
-                }
-            });
-        });
-    </script>
     <script src="./js/script.min.js"></script>
 </body>

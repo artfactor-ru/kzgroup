@@ -101,7 +101,7 @@
   }
   .tabs-common {
     position: relative;
-    height: 43px;
+    // height: 43px;
     // overflow-x: scroll;
     width: 100%;
     overflow: hidden;
@@ -119,16 +119,12 @@
     padding-bottom: 10px;
   }
 
-  .tabs-common {
-    height: 35px;
-  }
+  
   .tabs-common-links:not(:last-child){
     margin-right: 20px;
 
   }
-  // .tabs-common a.active {
-  //   border-bottom: 4px solid $red-color;
-  // }
+
   .tabs-common-links:before {
    
     height: 4px;
@@ -143,9 +139,7 @@
 
 
 @media screen and (max-width: 480px) {
-  .tabs-common {
-    height: 29px;
-  }
+ 
   .tabs-common a {
    
     border-bottom: 4px solid transparent;
