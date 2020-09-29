@@ -3,11 +3,68 @@
     padding-bottom: 40px;
 }
 
+.uni-bg {
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08)),  url(../img/university/main-bg_360.jpg);
+    background-blend-mode: multiply, normal, normal;
+    background-position: 23%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
 .center__title{
     @extend %block-title;
     padding-bottom: 20px;
     position: relative;
     color: #FFFFFF;
+}
+
+.rent_noinfo-paragraph {
+    font-weight: bold;
+}
+
+.uni-org__text {
+    font-family: $font-text-light;
+    font-size: 18px;
+}
+
+.uni-org__list {
+    list-style: none;
+    font-family: $font-text-light;
+    font-size: 18px;
+}
+
+.uni-contacts {
+    font-family: $font-text-light;
+}
+
+.uni-contacts__subtitle {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    color: #616161;
+}
+
+.uni-contacts__title {
+    margin-bottom: 30px;
+}
+
+.uni-contacts__text {
+    font-size: 24px;
+    color: #171c28;
+    margin-bottom: 8px;
+}
+
+.uni-contacts__text  a {
+    color: unset;
+}
+.uni-contacts__text  a:hover {
+    opacity: 0.5;
+}
+
+.uni-contacts__block {
+    margin-bottom: 20px;
 }
 
 .center__desc{
@@ -160,5 +217,147 @@
         padding-top: 40px;
         display: flex;
         flex-direction: column;
+    }
+}
+
+
+.uni-about{
+    background-image: url(../img/university/uni-about-bg.svg);
+    background-position: bottom center;
+    background-size: contain;
+}
+
+
+.parallax__img--main_about{
+
+    background-position: bottom center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+
+    position: absolute;
+    // z-index: -1;
+    height: 370px;
+    // background-size: 100% auto;
+}
+.main_about__flag{
+    display: none;
+}
+
+
+@media(min-width: 767px){
+    .uni-bg {
+        background:linear-gradient(0deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08)),  url(../img/university/main-bg_768.jpg);
+        background-size: cover;
+    }
+    .uni-about{
+
+        background-size: cover;
+    }
+    .parallax__img--main_about{
+
+        background-position: bottom center;
+        background-size: auto 505px;
+        background-repeat: no-repeat;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        height: 505px;
+
+    }
+
+    .main_about__flag{
+        display: block;
+        width: 90px;
+        height: 90px;
+        margin-right: 20px;
+    }
+    .main_about__desc-wrap{
+        display: flex;
+        padding-top: 20px;
+    }
+    .main_about__desc{
+        padding-top: 0px;
+        width: 85%;
+    }
+
+}
+
+@media(min-width: 1280px){
+    .uni-bg {
+        background:linear-gradient(0deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08)),  url(../img/university/main-bg_1280.jpg);
+        background-size: cover;
+    }
+    .parallax__img--uni-1{
+        background-image: url(../img/university/img-parallax-1-uni.svg);
+        background-position: bottom  center;
+        --overflow: -70px;
+        // --overflow: -20%;
+        height: calc(660px + (2 * var(--overflow)));
+        top: calc( -1 * var(--overflow));
+
+    }
+    .parallax__img--uni-2{
+        background-image: url(../img/university/img-parallax-2-uni.svg);
+        // --overflow: -15%;
+        // --overflow: -150px;
+        height: calc(660px + (2 * var(--overflow)));
+        top: calc( -1 * var(--overflow));
+
+    }
+    .parallax__img--uni-3{
+        background-image: url(../img/university/img-parallax-3-uni.svg);
+        --overflow: -50px;
+        // --overflow: 50px;
+        // --overflow: -50%;
+        height: calc(660px + (2 * var(--overflow)));
+        top: calc( -1 * var(--overflow));
+
+    }
+    .parallax__img--uni-4{
+        background-image: url(../img/university/img-parallax-4-uni.svg);
+        // --overflow: -25%;
+        // --overflow: -150px;
+        height: calc(660px + (2 * var(--overflow)));
+        top: calc( -1 * var(--overflow));
+    }
+}
+
+@media(min-width: 1680px){
+    .uni-bg {
+        background:linear-gradient(0deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08)),  url(../img/university/main-bg_1920х1080.jpg);
+        background-size: cover;
+    }
+    .about__title{
+
+        width: 90%;
+    }
+    .main_about__flag{
+        display: block;
+        width: 190px;
+        height: 190px;
+        margin-right: 70px;
+        margin-left: 5px;
+    }
+    .main_about__desc-wrap{
+        display: flex;
+        padding-top: 80px;
+    }
+    .main_about__desc{
+        padding-top: 0px;
+        width: 50%;
+    }
+
+    .parallax__img--main_about{
+        height: 960px;
+        // background-size: 100% auto;
+    }
+    .parallax__img--main-1{
+        background-image: url(../img/main/img-parallax-1-main.svg);
+        background-position: bottom  center;
+        --overflow: -100px;
+        // --overflow: -20%;
+        height: calc(960px + (2 * var(--overflow)));
+        top: calc( -1 * var(--overflow));
     }
 }

@@ -78,12 +78,12 @@
                   </li>
                </ul>
             </nav>
-            <main class="actioner-container">
+            <main class="actioner-container" id="actioners-sec">
                <section class="actioner-content-container">
                   <h2 class="contacts__contacts-info__main">Информация, подлежащая раскрытию ПАО «Кировский завод»</h2>
                   <div class="actioner-accordion">
                      <section id="accordion" class="accordion">
-                        <article class="accordion-item show">
+                        <article class="accordion-item">
                            <h3 class="accordion-item-header">
                               Общие собрания акционеров
                            </h3>
@@ -433,67 +433,76 @@
          }
       </script>
       <script>
+         let accItem = $('#actioners-sec .accordion-item');
+         console.log(
+                 'wokr'
+         )
+         accItem.on('click', function () {
+            let _this = $(this);
+            _this.toggleClass('active');
+            _this.children('.accordion-item-content').toggle();
+         });
          // Accordion
-         let accordion = (function (element) {
-           let _getItem = function (elements, className) {
-             // функция для получения элемента с указанным классом
-             let element;
-             elements.forEach(function (item) {
-               if (item.classList.contains(className)) {
-                 element = item;
-               }
-             });
-             return element;
-           };
-         
-           return function () {
-             let _mainElement = {}, // .accordion
-               _items = {}, // .accordion-item
-               _contents = {}; // .accordion-item-content
-         
-             let _actionClick = function (e) {
-                 if (!e.target.classList.contains("accordion-item-header")) {
-                   // прекращаем выполнение функции если кликнули не по заголовку
-                   return;
-                 }
-                 e.preventDefault(); // Отменям стандартное действие
-                 // получаем необходимые данные
-                 let header = e.target,
-                   item = header.parentElement,
-                   itemActive = _getItem(_items, "show");
-         
-                 if (itemActive === undefined) {
-                   // добавляем класс show к элементу (в зависимости от выбранного заголовка)
-                   item.classList.add("show");
-                 } else {
-                   // удаляем класс show у ткущего элемента
-                   itemActive.classList.remove("show");
-                   // если следующая вкладка не равна активной
-                   if (itemActive !== item) {
-                     // добавляем класс show к элементу (в зависимости от выбранного заголовка)
-                     item.classList.add("show");
-                   }
-                 }
-               },
-               _setupListeners = function () {
-                 // добавим к элементу аккордиона обработчик события click
-                 _mainElement.addEventListener("click", _actionClick);
-               };
-         
-             return {
-               init: function (element) {
-                 _mainElement =
-                   typeof element === "string" ? document.querySelector(element) : element;
-                 _items = _mainElement.querySelectorAll(".accordion-item");
-                 _setupListeners();
-               }
-             };
-           };
-         })();
-         
-         let accordion1 = accordion();
-         accordion1.init("#accordion");
-         
+         // let accordion = (function (element) {
+         //   let _getItem = function (elements, className) {
+         //     // функция для получения элемента с указанным классом
+         //     let element;
+         //     elements.forEach(function (item) {
+         //       if (item.classList.contains(className)) {
+         //         element = item;
+         //       }
+         //     });
+         //     return element;
+         //   };
+         //
+         //   return function () {
+         //     let _mainElement = {}, // .accordion
+         //       _items = {}, // .accordion-item
+         //       _contents = {}; // .accordion-item-content
+         //
+         //     let _actionClick = function (e) {
+         //         if (!e.target.classList.contains("accordion-item-header")) {
+         //           // прекращаем выполнение функции если кликнули не по заголовку
+         //           return;
+         //         }
+         //         e.preventDefault(); // Отменям стандартное действие
+         //         // получаем необходимые данные
+         //         let header = e.target,
+         //           item = header.parentElement,
+         //           itemActive = _getItem(_items, "show");
+         //
+         //         if (itemActive === undefined) {
+         //           // добавляем класс show к элементу (в зависимости от выбранного заголовка)
+         //           item.classList.add("show");
+         //         } else {
+         //           // удаляем класс show у ткущего элемента
+         //           itemActive.classList.remove("show");
+         //           // если следующая вкладка не равна активной
+         //           if (itemActive !== item) {
+         //             // добавляем класс show к элементу (в зависимости от выбранного заголовка)
+         //             item.classList.add("show");
+         //           }
+         //         }
+         //       },
+         //       _setupListeners = function () {
+         //         // добавим к элементу аккордиона обработчик события click
+         //         _mainElement.addEventListener("click", _actionClick);
+         //       };
+         //
+         //     return {
+         //       init: function (element) {
+         //         _mainElement =
+         //           typeof element === "string" ? document.querySelector(element) : element;
+         //         _items = _mainElement.querySelectorAll(".accordion-item");
+         //         _setupListeners();
+         //       }
+         //     };
+         //   };
+         // })();
+         //
+         // let accordion1 = accordion();
+         // accordion1.init("#accordion");
+
       </script>
    </body>
 </html>
