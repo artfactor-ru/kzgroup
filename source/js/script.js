@@ -74,22 +74,27 @@ if(document.querySelector('.barbapage')){
 			scrollbar.addListener(ScrollTrigger.update);
 		
 		}
-		if(containerYearScroll){
-			scrollbarYear = ScrollbarSmoth.init(containerYearScroll, options4);
-		}
+	
 		setTimeout(initAnimation, 10);
 	
 		initSlider();
 		
 		
-		if(socialContainer){
+		
 			socialInteraction()
-		}
+		
 				
-	
-		if(yearSelect){
+		
 			yearSelection()
-		}
+			let containerAside = document.querySelector('.sidebar__inner');
+			let scrollbarAside;
+			
+			// if(containerAside){
+			// 	scrollbarAside = ScrollbarSmoth.init(containerAside, options);
+			// 	console.log(scrollbarAside)
+			
+			// }
+			// scrollbarAside.update();
 		breakpoint.addListener(breakpointChecker);
 		breakpointChecker();
 		
@@ -107,7 +112,7 @@ if(document.querySelector('.barbapage')){
 	
 
 		customSelect();
-
+		
 	
 		if(document.getElementById('accordion')){
 			 accordion();
@@ -124,6 +129,8 @@ if(document.querySelector('.barbapage')){
 barba.hooks.once(() => {
 	breakpointOnlyForDesktop.addListener(breakpointCheckerForDesktop);
 	breakpointCheckerForDesktop();
+
+
 });
 
 // import $ from "jquery";
@@ -329,52 +336,65 @@ function parallax(items) {
 }
 
 function yearSelection(){
-	let dropdown = document.getElementById("myDropdown");
-	let btnSelect = document.querySelector('.press-rigt-side-bar-date-button-drop')
-	
 
-	btnSelect.addEventListener('click', function(){
-			dropdown.classList.add("show");
+	let yearSelect = document.querySelector('.press-dropdown-list');
+	if(yearSelect){
+
+		let containerYearScroll = document.querySelector('.press-dropdown-list-content');
+		let scrollbarYear;
+		if(containerYearScroll){
+			scrollbarYear = ScrollbarSmoth.init(containerYearScroll, options4);
+		}
+		let dropdown = document.getElementById("myDropdown");
+		let btnSelect = document.querySelector('.press-rigt-side-bar-date-button-drop')
+		
+
+		btnSelect.addEventListener('click', function(){
+				dropdown.classList.add("show");
 
 
-			console.log('Произошел клик по годам')
-	})
-	
-	document.addEventListener('click', function(event){
-				if ( !event.target.classList.contains('press-rigt-side-bar-date-button-drop') ) {
-						// console.log(dropdown)
-						dropdown.classList.remove("show");
-				}
-			
-	})
+				console.log('Произошел клик по годам')
+		})
+		
+		document.addEventListener('click', function(event){
+					if ( !event.target.classList.contains('press-rigt-side-bar-date-button-drop') ) {
+							// console.log(dropdown)
+							dropdown.classList.remove("show");
+					}
+				
+		})
+	}	
 }
 
 
 // Соц.сети
 
 function socialInteraction() {
-	let socialBtn = document.querySelectorAll('.social__btn');
-	let socialDrop = document.querySelectorAll('.social__dropdown');
-	let btnWrap = document.querySelectorAll('.social__btn-item');
-	for(let i = 0; i<socialBtn.length; i++){
-		socialBtn[i].addEventListener('click', function(){
-			socialDrop[i].classList.toggle('active');
-			btnWrap[i].classList.toggle('active');
+	let socialContainer = document.querySelector('.social__btn-list');
+	if(socialContainer){
+		let socialBtn = document.querySelectorAll('.social__btn');
+		let socialDrop = document.querySelectorAll('.social__dropdown');
+		let btnWrap = document.querySelectorAll('.social__btn-item');
+		for(let i = 0; i<socialBtn.length; i++){
+			socialBtn[i].addEventListener('click', function(){
+				socialDrop[i].classList.toggle('active');
+				btnWrap[i].classList.toggle('active');
 
 
-			let socialWrap = document.querySelectorAll('.social__btn-item');
+				let socialWrap = document.querySelectorAll('.social__btn-item');
 
-			document.addEventListener('click', function(event){
-				for(let i = 0; i<socialWrap.length; i++){
-					let isClickInside = socialWrap[i].contains(event.target);
-					if (!isClickInside) {
-						socialDrop[i].classList.remove('active');
-						btnWrap[i].classList.remove('active');
+				document.addEventListener('click', function(event){
+					for(let i = 0; i<socialWrap.length; i++){
+						let isClickInside = socialWrap[i].contains(event.target);
+						if (!isClickInside) {
+							socialDrop[i].classList.remove('active');
+							btnWrap[i].classList.remove('active');
+						}
 					}
-				}
+				})
 			})
-		})
 
+		}
 	}
 }
 
@@ -530,6 +550,12 @@ let options4  = {
 	// continuousScrolling: false
 	// delegateTo: document
 }
+let options5 = {
+	damping: 0.09,
+	renderByPixels: true,
+	continuousScrolling: true,
+	// delegateTo: document
+}
 
 const breakpoint = window.matchMedia( '(min-width:767px)' );
 const header = document.querySelector('.header');
@@ -569,11 +595,8 @@ if(containerTabsScroll){
 	scrollbarTabs = ScrollbarSmoth.init(containerTabsScroll, options4);
 }
 
-let containerYearScroll = document.querySelector('.press-dropdown-list-content');
-let scrollbarYear;
-if(containerYearScroll){
-	scrollbarYear = ScrollbarSmoth.init(containerYearScroll, options4);
-}
+
+
 
 
 
@@ -661,6 +684,7 @@ let scrollbar;
 			spyScrolling ('.vac-f__form-title' , '.vac-f__nav-item.active');
 			
 			fixedNav(offset, '.traktors__nav');
+			
 			fixedNavForm(offset, '.vac-f__nav-list');
 		
 			if(document.querySelector('.museum-nav')){
@@ -675,9 +699,19 @@ let scrollbar;
 	
 	}
 	
+	var body = document.body,
+    timer;
 	function eventOnScroll(){
 		scrollbar.addListener(({ offset }) => {
-	
+			
+			clearTimeout(timer);
+				if(!body.classList.contains('disable-hover')) {
+					body.classList.add('disable-hover')
+				}
+				
+				timer = setTimeout(function(){
+					body.classList.remove('disable-hover')
+				},500);
 			// Анимация для кнопки подробнее нужно инициализировать чтобы появлялась при клике на табе
 			gsap.utils.toArray('.button-more').forEach(element => {
 				ScrollTrigger.create({
@@ -747,7 +781,10 @@ let scrollbar;
 			spyScrolling ('.traktors' , '.traktors__nav-link.active');
 			spyScrolling ('.article' , '.history__nav-link.active');
 			spyScrolling ('.vac-f__form-title' , '.vac-f__nav-item.active');
-			
+
+
+			// fixedNav(offset, '.press-rigt-side-bar');
+
 			fixedNav(offset, '.traktors__nav');
 			fixedNavForm(offset, '.vac-f__nav-list');
 	
@@ -781,7 +818,7 @@ let scrollbar;
 	
 	
 			}
-		});
+		}, false);
 		
 	}
 	
@@ -1022,16 +1059,17 @@ let scrollbar;
 
 			companiesThumbs = new Swiper('.swiper-container--companies-thumbs', {
 				direction: 'vertical',
-				spaceBetween: 20,
+				spaceBetween: 10,
 				slidesPerView: 'auto',
 				autoHeight: true,
 				// observer: true,
 				// 	observeParents: true,
 				watchSlidesVisibility: true,
 				watchSlidesProgress: true,
+				threshold: 50,
 				breakpoints: {
 					1680: {
-						spaceBetween: 45,
+						spaceBetween: 20,
 					},
 				},
 			});
@@ -1985,10 +2023,10 @@ let initAnimation = function(){
 				rotateX: 0,
 				opacity: 1,
 
-				duration: 2,
+				duration: 1.5,
 				stagger: .13,
 				ease: "power3.out",
-				delay: .2,
+				// delay: 0,
 				// force3D: true,
 				scrollTrigger: {
 					trigger: element,
@@ -2145,15 +2183,11 @@ let initAnimation = function(){
 	
 
 
-let socialContainer = document.querySelector('.social__btn-list');
-if(socialContainer){
 	socialInteraction()
-}
 
-let yearSelect = document.querySelector('.press-dropdown-list');
-if(yearSelect){
+
 	yearSelection()
-}
+
 
 // Меню
 
@@ -2422,6 +2456,64 @@ let tabsEvent = document.getElementById('tabs_event');
 
 
 function customSelect(){
+	if(document.querySelector('.c-select')) {
+		$('.c-select').each(function() {
+			const _this = $(this),
+				selectOption = _this.find('option'),
+				selectOptionLength = selectOption.length,
+				selectedOption = selectOption.filter(':selected'),
+				duration = 450; // длительность анимации
+
+			_this.hide();
+			_this.wrap('<div class="c-select"></div>');
+			$('<div>', {
+				class: 'new-select',
+				text: _this.children('option:disabled').text()
+			}).insertAfter(_this);
+
+			const selectHead = _this.next('.new-select');
+			$('<div>', {
+				class: 'new-select__list'
+			}).insertAfter(selectHead);
+
+			const selectList = selectHead.next('.new-select__list');
+			for (let i = 1; i < selectOptionLength; i++) {
+				$('<div>', {
+					class: 'new-select__item',
+					html: $('<span>', {
+						text: selectOption.eq(i).text()
+					})
+				})
+					.attr('data-value', selectOption.eq(i).val())
+					.appendTo(selectList);
+			}
+
+			const selectItem = selectList.find('.new-select__item');
+			selectList.slideUp(0);
+			selectHead.on('click', function() {
+				if ( !$(this).hasClass('on') ) {
+					$(this).addClass('on');
+
+					$(this).parent('.c-select').addClass('c-select-rotate');
+					selectList.slideDown(duration);
+					selectItem.on('click', function() {
+						let chooseItem = $(this).data('value');
+						$('select').val(chooseItem).attr('selected', 'selected');
+						selectHead.text( $(this).find('span').text() );
+
+						selectList.slideUp(duration);
+						selectHead.removeClass('on');
+
+					});
+
+				} else {
+					$(this).removeClass('on');
+					$(this).parent('.c-select').removeClass('c-select-rotate');
+					selectList.slideUp(duration);
+				}
+			});
+		});
+	}
 //Кастомный select и option
 	if(document.querySelector('.select')) {
 		$('.select').each(function() {
@@ -2536,7 +2628,10 @@ function customSelect(){
 		});
 	}
 
+
+
 }
+
 
 
 // Создание яндекс карты
@@ -2738,3 +2833,10 @@ if ($('.rent-form__main-form')) {
 		}
 	})
 }
+
+
+// window.addEventListener("unload", function() {
+// 	if(videoMain){
+// 		videoMain.style.display = "none";
+// 	}
+// });

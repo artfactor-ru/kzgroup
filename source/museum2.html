@@ -1,0 +1,1305 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="./css/style.min.css">
+        <title>Музей</title>
+    </head>
+    <body class="museum">
+
+        <style>
+            .preloader{
+                background-color: #ffffff;
+                width: 100vw;
+                z-index: 20000;
+                height: 100vh;
+                height: calc(var(--vh, 1vh) * 100);
+                position: fixed;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            
+            }
+            .preloader__icon{
+                width: 130px;
+                height: 130px;
+                fill: none;
+                stroke-dasharray: 1000;
+                stroke-dashoffset: 1000;
+                animation: dash 6s linear 3s forwards infinite alternate;
+            }
+        </style>
+        <div class="preloader">
+            <svg class="preloader__icon"><use xlink:href="./img/sprite.svg#icon-logo-company"></use></svg>
+        </div>
+        <div class="forheader">
+    
+            <header class="header">
+                <div class="container--header container--header--main">
+    
+                    <div class="header__wrapper">
+                        
+                        <button class="c-nav-button js-nav-toggle" type="button">
+                            <div class="c-nav-button_wrap">
+                                <div class="c-nav-button_icon">
+                                    <span class="c-nav-button_line"></span>
+                                    <span class="c-nav-button_line"></span>
+                                    <span class="c-nav-button_line"></span>
+                                </div>
+                            </div>
+                        </button>
+                        <a class="header__logo" href="index.html">
+                            <svg class="header__logo-icon"  viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0)">
+                                    <path d="M29.684 17.9667L17.9667 29.684L6.32028 17.9667L17.9667 6.32028L29.684 17.9667ZM27.7666 8.16666L23.3637 0H12.5696L8.16666 8.16666L0 12.5696V23.3637L8.16666 27.7666L12.5696 35.9333H23.3637L27.7666 27.7666L35.9333 23.3637V12.5696L27.7666 8.16666Z" fill="#ED1C24"/>
+                                    <path d="M20.4522 6.32031L34.087 13.7058V19.9551L20.4522 6.32031ZM22.2986 34.158H16.0493L29.6841 20.5232L22.2986 34.158ZM1.77539 22.2986V15.9783L15.4102 29.613L1.77539 22.2986ZM13.6348 1.77539H19.8841L6.32031 15.4812L13.6348 1.77539Z" fill="#FFDD00"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0">
+                                        <rect width="35.9333" height="35.9333" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+        
+                            <p class="header__logo-text">Кировский<br> завод</p>
+                        </a>
+                    </div>
+    
+                    
+                
+    
+                
+    
+                </div>
+            </header>
+            
+             <nav class="nav">
+                <div class="nav_background"></div>
+    
+    
+                 <div class="nav_list-wrap">
+                    <article class="nav_list-scroll">
+                        <div class="nav_list-left scrollbar-inner">
+                            <div class="nav_list-content">
+    
+    
+                                <div class="js-search-button">
+                                    <div class="js-search-text">Поиск</div>
+                                </div>
+                                <ul class="nav_list">
+                                    <li class="nav_item -dropdown js-dropdown">
+                                        <div class="nav_link js-nav-link js-dropdown-toggle">
+                                            <span class="nav_link_text">Компания</span>
+                                            <svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+                                            
+                                        </div>
+                                        <span class="nav_link_line"></span>
+                                        <div class="nav_dropdown js-dropdown-list">
+                                            <div class="nav_dropdown_wrap">
+                                                <ul class="nav_dropdown_list">
+                                                    <li class="nav_dropdown_item">
+                                                        <a class="nav_dropdown_link" href="about.html">О компании</a>
+                                                    </li>
+                                                    <li class="nav_dropdown_item">
+                                                        <a class="nav_dropdown_link" href="leadership.html">Руководство</a>
+                                                    </li>
+                                                    <li class="nav_dropdown_item">
+                                                        <a class="nav_dropdown_link" href="history.html">История</a>
+                                                    </li>
+                                                    <li class="nav_dropdown_item">
+                                                        <a class="nav_dropdown_link" href="museum.html">Музей</a>
+                                                    </li>
+                                                    <li class="nav_dropdown_item">
+                                                        <a class="nav_dropdown_link" href="production-system.html">Производственная система</a>
+                                                    </li>
+                                                    <li class="nav_dropdown_item">
+                                                        <a class="nav_dropdown_link" href="#">Охрана труда</a>
+                                                    </li>
+                                                    <li class="nav_dropdown_item">
+                                                        <a class="nav_dropdown_link" href="#">Профсоюз</a>
+                                                    </li>
+                                                    <li class="nav_dropdown_item">
+                                                        <a class="nav_dropdown_link" href="#">Реквизиты</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav_item -dropdown js-dropdown">
+                                        <div class="nav_link js-nav-link js-dropdown-toggle">
+                                            <span class="nav_link_text">Дочерние предприятия</span>
+                                            <svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+                                            
+                                        </div>
+                                        <span class="nav_link_line"></span>
+                                        <div class="nav_dropdown js-dropdown-list">
+                                            <div class="nav_dropdown_wrap">
+                                                <ul class="nav_dropdown_list">
+                                                    <li class="nav_dropdown_item">
+                                                        <a class="nav_dropdown_link" href="company_group.html">Основные предприятия</a>
+                                                    </li>
+                                                    <li class="nav_dropdown_item">
+                                                        <a class="nav_dropdown_link" href="ptz.html">АО «Петербургский тракторный завод»</a>
+                                                    </li>
+                                                    <li class="nav_dropdown_item">
+                                                        <a class="nav_dropdown_link" href="#">АО «Завод «Киров-Энергомаш»</a>
+                                                    </li>
+                                                    <li class="nav_dropdown_item">
+                                                        <a class="nav_dropdown_link" href="#">АО «Металлургический завод «Петросталь»</a>
+                                                    </li>
+                                                    <li class="nav_dropdown_item">
+                                                        <a class="nav_dropdown_link" href="#">ООО «Объединенные заводы буровой техники им. В. В. Воровского»</a>
+                                                    </li>
+                                                    <li class="nav_dropdown_item">
+                                                        <a class="nav_dropdown_link" href="#">ООО «Кировский завод Газовые Технологии»</a>
+                                                    </li>
+                                                    <li class="nav_dropdown_item">
+                                                        <a class="nav_dropdown_link" href="energy-department.html">Энергодепартамент</a>
+                                                    </li>
+                                                    <li class="nav_dropdown_item">
+                                                        <a class="nav_dropdown_link" href="#">АО «Тетрамет»</a>
+                                                    </li>
+                                                    <li class="nav_dropdown_item">
+                                                        <a class="nav_dropdown_link" href="#">АО «Локомотив»</a>
+                                                    </li>
+                                                    <li class="nav_dropdown_item">
+                                                        <a class="nav_dropdown_link" href="#">АО «Проектно-конструкторское бюро «Автоматика»</a>
+                                                    </li>
+                                                    <li class="nav_dropdown_item">
+                                                        <a class="nav_dropdown_link" href="#"> Предприятия социальной сферы</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+    
+    
+                                    <li class="nav_item">
+                                        <a class="nav_link js-nav-link" href="university.html">
+                                            <span class="nav_link_text">Корпоративный университет</span>
+                                            <span class="nav_link_line"></span>
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="nav_item">
+                                        <a class="nav_link js-nav-link" href="vacancies.html">
+                                            <span class="nav_link_text">Вакансии</span>
+                                            <span class="nav_link_line"></span>
+                                        </a>
+                                    </li>
+                            
+                                    <li class="nav_item -dropdown js-dropdown">
+    
+                                    
+                                        <div class="nav_link js-nav-link js-dropdown-toggle">
+                                            <span class="nav_link_text">Пресс-Центр</span>
+                                            <svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+                                        </div>
+                                        <div class="nav_dropdown js-dropdown-list">
+                                            <div class="nav_dropdown_wrap">
+                                                <ul class="nav_dropdown_list">
+                                                    <li class="nav_dropdown_item">
+                                                        <a class="nav_dropdown_link" href="press.html">Пресс-Центр</a>
+                                                    </li>
+                                                    <li class="nav_dropdown_item">
+                                                        <a class="nav_dropdown_link" href="press-news.html">Новости</a>
+                                                    </li>
+                                                    <li class="nav_dropdown_item">
+                                                        <a class="nav_dropdown_link" href="press-videogallery.html">Видеогалерея</a>
+                                                    </li>
+                                                    <li class="nav_dropdown_item">
+                                                        <a class="nav_dropdown_link" href="press-about-us.html">Пресса о нас</a>
+                                                    </li>
+                                                    <li class="nav_dropdown_item">
+                                                        <a class="nav_dropdown_link" href="press-photogallery.html">Фотогалерея</a>
+                                                    </li>
+                                                    <li class="nav_dropdown_item">
+                                                        <a class="nav_dropdown_link" href="press-contacts.html">Контакты</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+    
+                                    <li class="nav_item -dropdown js-dropdown">
+    
+                                    
+                                        <div class="nav_link js-nav-link js-dropdown-toggle">
+                                            <span class="nav_link_text">Акционерам и инвесторам</span>
+                                            <svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+                                        </div>
+                                        <div class="nav_dropdown js-dropdown-list">
+                                            <div class="nav_dropdown_wrap">
+                                                <ul class="nav_dropdown_list">
+                                                    <li class="nav_dropdown_item">
+                                                        <a class="nav_dropdown_link" href="#">Информация, подлежащая раскрытию ПАО «Кировский завод»</a>
+                                                    </li>
+                                                    <li class="nav_dropdown_item">
+                                                        <a class="nav_dropdown_link" href="#">Раскрытие информации дочерними обществами</a>
+                                                    </li>
+                                                        
+                                            
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+    
+                                
+    
+                                    <li class="nav_item">
+                                        <a class="nav_link js-nav-link" href="#">
+                                            <span class="nav_link_text">Продажа активов</span>
+                                            <span class="nav_link_line"></span>
+                                        </a>
+                                    </li>
+                                    <li class="nav_item">
+                                        <a class="nav_link js-nav-link" href="tenders.html">
+                                            <span class="nav_link_text">Тендеры</span>
+                                            <span class="nav_link_line"></span>
+                                        </a>
+                                    </li>
+                                    <li class="nav_item">
+                                        <a class="nav_link js-nav-link" href="rent.html">
+                                            <span class="nav_link_text">Аренда помещений	</span>
+                                            <span class="nav_link_line"></span>
+                                        </a>
+                                    </li>
+                                    <li class="nav_item">
+                                        <a class="nav_link js-nav-link" href="contacts.html">
+                                            <span class="nav_link_text">Контакты</span>
+                                            <span class="nav_link_line"></span>
+                                        </a>
+                                    </li>
+                                
+    
+    
+                                    <li class="nav_item">
+                                        <a class="nav_link nav_link--policy js-nav-link" href="#">
+                                            <span class="nav_link_text">Использование сайта</span>
+                                            <span class="nav_link_line"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+    
+    
+                                <div class="nav_lang nav_lang--mobile">
+                                    <div class="nav_lang-wrap">
+                                        <ul class="nav_lang-list">
+                                            <li class="nav_lang-item">
+                                                <a class="nav_lang-link" href="">En</a>
+                                            </li>
+                                            <li class="nav_lang-item">
+                                                <a class="nav_lang-link" href="">Ru</a>
+                                            </li>
+                                            <li class="nav_lang-item">
+                                                <a class="nav_lang-link" href="">De</a>
+                                            </li>
+                                    
+                                        </ul>
+                                    </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+    
+    
+    
+                </div>
+                <div class="nav_search">
+                    <article class="search-wrap">
+                        <div class="search">
+                            <input class="search_input o-input -search js-search-input" type="text" placeholder="Поиск" value=""> 
+                            <div class="search_results js-search-results"></div>
+                        </div>
+                    </article>
+                </div>
+                <aside class="nav_aside">
+                    <ul class="nav_social">
+                        <li class="nav_social_item">
+                            <a class="nav_social_link" href="#" target="_blank">
+                                
+    
+                                <svg class="nav_social_icon" ><use xlink:href="./img/sprite.svg#icon-fb"></use></svg>
+                            </a>
+                        </li>
+                        <li class="nav_social_item">
+                            <a class="nav_social_link" href="#" target="_blank">
+                                <svg class="nav_social_icon" ><use xlink:href="./img/sprite.svg#icon-vk"></use></svg>
+                                
+                            </a>
+                        </li>
+                        <li class="nav_social_item">
+                            <a class="nav_social_link" href="#" target="_blank">
+                                <svg class="nav_social_icon" ><use xlink:href="./img/sprite.svg#icon-youtube"></use></svg>
+                            
+                            </a>
+                        </li>
+                        <li class="nav_social_item">
+                            <a class="nav_social_link" href="#" target="_blank">
+                                
+                                <svg class="nav_social_icon" ><use xlink:href="./img/sprite.svg#icon-inst"></use></svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="nav_lang nav_lang--desktop">
+                        <div class="nav_lang-wrap">
+                            <ul class="nav_lang-list">
+                                <li class="nav_lang-item">
+                                    <a class="nav_lang-link" href="">Ru</a>
+                                </li>
+                                <li class="nav_lang-item">
+                                    <a class="nav_lang-link" href="">En</a>
+                                </li>
+                                <li class="nav_lang-item">
+                                    <a class="nav_lang-link" href="">De</a>
+                                </li>
+                            
+                            </ul>
+                        </div>
+                    
+                    </div>
+                </aside>
+            </nav>  
+    
+
+           
+            <div class="scroll">
+                <div class="wrapper">
+                    <section class="hero-common parallax__item">
+                            <div class="parallax__img-wrap parallax__img-wrap--hero-inner">
+                                <div class="parallax__img" data-speed="-40">
+                                    <div class="parallax__img-inner--hero parallax__img-inner--hero--desktop" style="background-image: url(./img/museum/bg-museum.jpg);"></div>
+                                    <div class="parallax__img-inner--hero parallax__img-inner--hero--mobile" style="background-image: url(./img/museum/bg-museum.jpg);"></div>
+                                    <video loop="" class="parallax__img-video" playsinline="" muted="">
+                                        <source src="./video/video-main.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+
+                               
+                            </div>
+                            <div class="container">
+                                <div class="hero-common__block">
+                                    <h1 class="hero-common__title">
+                          
+                                        <div class="title--inner">Музей истории </div>
+                                        <div class="title--inner">и техники</div>
+                                        <div class="title--inner">Кировского</div>
+                                        <div class="title--inner">завода</div>
+                                    </h1>
+                                    <a href="№" class="button--details hero-common__btn">
+                                        Записаться на экскурсию
+                                        <div class=" button-line button-line--first"></div>
+                                        <div class=" button-line button-line--two"></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="hero-common__layer"></div>
+                            <div class="hero-common__info">
+                                <div class="container">
+                                    <ul class="hero-common_info__list">
+                                        <li class="hero-common_info__item hero-common_info__item--museum">
+                                            <svg class="hero-common_info__icon"  viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.96385 2.32919C1.45688 2.88551 1 3.8167 1 5.38198C1 8.91059 3.66459 11.6324 5.20711 13.1749C6.74962 14.7174 9.47139 17.382 13 17.382C14.5653 17.382 15.4965 16.9251 16.0528 16.4181C16.5808 15.937 16.8464 15.3417 16.949 14.8438L14.0938 12.7024L12.2168 14.5794C11.6124 15.1838 10.6476 15.3618 9.85567 14.8837C9.06269 14.405 7.67928 13.4755 6.29289 12.0891C4.9065 10.7027 3.97701 9.31929 3.49826 8.52632C3.02016 7.73443 3.19819 6.76958 3.80255 6.16522L5.67962 4.28815L3.53822 1.43295C3.04024 1.53554 2.44497 1.80123 1.96385 2.32919ZM3.50291 0.423143C2.09827 0.64617 0 1.8338 0 5.38198C0 9.38198 3 12.382 4.5 13.882C6 15.382 9 18.382 13 18.382C16.5482 18.382 17.7358 16.2837 17.9588 14.8791C18.0082 14.5682 17.8518 14.2708 17.6 14.082L14.6938 11.9024C14.2957 11.6038 13.7386 11.6434 13.3867 11.9953L11.5097 13.8723C11.2053 14.1767 10.741 14.2501 10.3725 14.0277C9.62531 13.5765 8.31266 12.6946 7 11.382C5.68734 10.0693 4.80545 8.75667 4.35433 8.00947C4.13186 7.64098 4.20529 7.17669 4.50965 6.87233L6.38673 4.99525C6.73862 4.64336 6.77821 4.08627 6.47962 3.68815L4.3 0.781985C4.11115 0.530179 3.81378 0.373785 3.50291 0.423143Z" fill="#E0E0E0"/>
+                                            </svg>
+                
+                                            <a href="tel:+78126476468" class="hero-common_info__link">+7 (812) 647-64-68</a>
+                                        </li>
+                                        <li class="hero-common_info__item hero-common_info__item--museum" style="flex-shrink: 1; flex-grow: 0;">
+                                            <svg class="hero-common_info__icon" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10 19.9375C14.9706 19.9375 19 15.9081 19 10.9375C19 5.96694 14.9706 1.9375 10 1.9375C5.02944 1.9375 1 5.96694 1 10.9375C1 15.9081 5.02944 19.9375 10 19.9375ZM10 20.9375C15.5228 20.9375 20 16.4603 20 10.9375C20 5.41465 15.5228 0.9375 10 0.9375C4.47715 0.9375 0 5.41465 0 10.9375C0 16.4603 4.47715 20.9375 10 20.9375Z" fill="#E0E0E0"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9 5.4375H10V10.2304L14.8536 15.0839L14.1464 15.7911L9 10.6446V5.4375Z" fill="#E0E0E0"/>
+                                            </svg>
+                                            <a class="hero-common_info__link">09:00 - 17:30 обед с 14:00 - 14:30
+                                                выходной – воскресенье</a>
+                                        </li>
+                                        <li class="hero-common_info__item hero-common_info__item--museum" style="flex-shrink: 1; flex-grow: 0;">
+                                            <svg class="hero-common_info__icon" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 20.3828C8 20.3828 16 13.7175 16 8.36406C16 4.01062 12.3636 0.382812 8 0.382812C3.53247 0.382812 0 3.90697 0 8.36406C0 13.8211 8 20.3828 8 20.3828ZM8 1.38281C4.08254 1.38281 1 4.46147 1 8.36406C1 9.49579 1.41949 10.7595 2.129 12.0674C2.83331 13.3657 3.78507 14.6377 4.75777 15.7673C5.72776 16.8937 6.70076 17.858 7.43254 18.5414C7.64257 18.7376 7.83219 18.9101 7.99551 19.0561C8.15997 18.9072 8.35124 18.7311 8.56328 18.5308C9.29572 17.8389 10.2696 16.8643 11.2404 15.7305C12.2141 14.5936 13.1668 13.3173 13.8717 12.0223C14.5826 10.7165 15 9.46701 15 8.36406C15 4.56512 11.8136 1.38281 8 1.38281Z" fill="#E0E0E0"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 10.3828C9.10457 10.3828 10 9.48738 10 8.38281C10 7.27824 9.10457 6.38281 8 6.38281C6.89543 6.38281 6 7.27824 6 8.38281C6 9.48738 6.89543 10.3828 8 10.3828ZM8 11.3828C9.65685 11.3828 11 10.0397 11 8.38281C11 6.72596 9.65685 5.38281 8 5.38281C6.34315 5.38281 5 6.72596 5 8.38281C5 10.0397 6.34315 11.3828 8 11.3828Z" fill="#E0E0E0"/>
+                                            </svg>
+                                            <a href="https://yandex.ru/maps/2/saint-petersburg/house/prospekt_stachek_47sh/Z0kYdAJpT0AFQFtjfXR2eHprZw==/?ll=30.259651%2C59.879683&z=17.03" class="hero-common_info__link">198097, г. Санкт-Петербург, метро «Кировский завод»,  пр. Стачек, д.47 Ш.</a>
+                                        </li>
+
+                                        <li class="hero-common_info__item hero-common_info__item--museum hero-common_info__item--phone" style="flex-shrink: 1; flex-grow: 0;">
+                                            <svg class="hero-common_info__icon" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 20.3828C8 20.3828 16 13.7175 16 8.36406C16 4.01062 12.3636 0.382812 8 0.382812C3.53247 0.382812 0 3.90697 0 8.36406C0 13.8211 8 20.3828 8 20.3828ZM8 1.38281C4.08254 1.38281 1 4.46147 1 8.36406C1 9.49579 1.41949 10.7595 2.129 12.0674C2.83331 13.3657 3.78507 14.6377 4.75777 15.7673C5.72776 16.8937 6.70076 17.858 7.43254 18.5414C7.64257 18.7376 7.83219 18.9101 7.99551 19.0561C8.15997 18.9072 8.35124 18.7311 8.56328 18.5308C9.29572 17.8389 10.2696 16.8643 11.2404 15.7305C12.2141 14.5936 13.1668 13.3173 13.8717 12.0223C14.5826 10.7165 15 9.46701 15 8.36406C15 4.56512 11.8136 1.38281 8 1.38281Z" fill="#E0E0E0"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 10.3828C9.10457 10.3828 10 9.48738 10 8.38281C10 7.27824 9.10457 6.38281 8 6.38281C6.89543 6.38281 6 7.27824 6 8.38281C6 9.48738 6.89543 10.3828 8 10.3828ZM8 11.3828C9.65685 11.3828 11 10.0397 11 8.38281C11 6.72596 9.65685 5.38281 8 5.38281C6.34315 5.38281 5 6.72596 5 8.38281C5 10.0397 6.34315 11.3828 8 11.3828Z" fill="#E0E0E0"/>
+                                            </svg>
+                                            <a href="#contact" class="hero-common_info__link ">Контакты</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                
+                            </div>
+
+                            <div class="button__video-controls-wrap">
+                                <button class="button__video-controls button__video-controls--play"></button>
+            
+                            </div>
+                    </section>
+
+                </div>
+                <main class="museum">
+                    <section class="about about--museum two-screen">
+                        <!-- <div class="parallax__img parallax__img--about parallax__img--about-4" data-type="parallax" data-speed="-60"></div>
+                        <div class="parallax__img parallax__img--about parallax__img--about-3" data-type="parallax" data-speed="-55">	</div>
+                        <div class="parallax__img parallax__img--about parallax__img--about-2" data-type="parallax" data-speed="-25"></div>
+                        <div class="parallax__img parallax__img--about parallax__img--about-1" data-type="parallax" data-speed="0"></div>   -->
+                        <div class="container">
+                                        <h2 class="about__title about__title is-animate" data-speed="0.5">
+                                          
+                                            Музей Кировского завода – один из самых крупных промышленных   <span class="red-accent">музеев России </span>
+
+                                        </h2>
+    
+                                        <p class="about__desc about__desc is-animate" data-speed="0.2">Фонды насчитывают более 12 тысяч единиц хранения. 
+                                            Экспозиция размещена во Дворце культуры и техники им. И. И. Газа, в шести залах общей площадью более 600 кв. м. В музее представлены материалы, освещающие 220 лет истории Кировского завода.  </p>
+
+                                        <p class="about__descsmall is-animate" data-speed="0.1">Музею присвоены звания «Выставка года» на Всероссийском конкурсе «Корпоративный музей» (2018 и 2019 годы) и «Лучшая экспозиция корпоративного музея» на конкурсе «Серебряные нити Северо-Запад» (2019 год). </p>
+                                    </div>
+    
+                                    <ul class="social__btn-list">
+                                        <li class="social__btn-item social__btn-item--share">
+                                            <button class="social__btn" style="background-image: url(./img/social-share.svg);"></button>
+                                            
+                                            <div class="social__dropdown">
+                                                <h5 class="social__title">Поделиться:</h5>
+                                                <ul class="social__link-list">
+                                                    <li class="social__link-item">
+                                                        <a class="social__link" href="" target="_blank">
+                                                            <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-vk"></use></svg>
+                                                            <span class="visually-hidden">Vk</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="social__link-item">
+                                                        <a class="social__link" href="" target="_blank">
+                                                            <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-inst"></use></svg>
+                                                            <span class="visually-hidden">Instagram</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="social__link-item">
+                                                        <a class="social__link" href="" target="_blank">
+                                                            <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-fb"></use></svg>
+                                                            <span class="visually-hidden">Facebook</span>
+                                                        </a>
+                                                    </li>
+    
+                                                    <li class="social__link-item">
+                                                        <a class="social__link" href="" target="_blank">
+                                                            <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-youtube"></use></svg>
+                                                            <span class="visually-hidden">Youtube</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="social__btn-item social__btn-item--message">
+                                            <button class="social__btn" style="background-image: url(./img/social-message.svg);"></button>
+                                            <div class="social__dropdown">
+                                                <h5 class="social__title">Подписаться на новости</h5>
+                                                <ul class="social__link-list">
+                                                    <li class="social__link-item">
+                                                        <a class="social__link" href="" target="_blank">
+                                                            <svg class="social__icon"><use xlink:href="./img/sprite.svg#icon-news"></use></svg>
+                                                            <span class="visually-hidden">Подписаться</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+    
+                                    </ul>
+                                </section>
+                </main>
+
+                <section class="news news--grey">
+								
+                    <div class="container ">
+                        <h2 class="news__title">Новости музея</h2>
+                    </div>
+                    
+                    <div class="container container--news">
+                
+                        <div class="swiper-container news__container">
+    
+                            
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide news__item  news__item--video">
+                                        <a class="news__link" href=""></a>
+                                        <div class="parallax__item--news parallax__item">
+                                            <div class="parallax__img-wrap">
+                                                <div class="parallax__img parallax__img--news" data-speed="-20">
+                                                    <div class="parallax__img-inner" style="background-image: url(./img/ptz/news1.jpg);"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="news__date">12.09.2019</p>
+                                        <h3 class="news__subtitle">Петербургский тракторный завод провел парад тракторов «Кировец»</h3>
+                                    </div>
+                            
+                                    
+                                    <div class="swiper-slide news__item">
+                                        <a class="news__link" href=""></a>
+                                        <div class="parallax__item--news parallax__item">
+                                            <div class="parallax__img-wrap">
+                                                <div class="parallax__img parallax__img--news" data-speed="-20">
+                                                    <div class="parallax__img-inner" style="background-image: url(./img/ptz/news2.jpg);"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="news__date">12.09.2019</p>
+                                        <h3 class="news__subtitle">200 алых тракторов ко Дню Победы выпустил Кировский завод</h3>
+                                    </div>
+                                    <div class="swiper-slide news__item">
+                                        <a class="news__link" href=""></a>
+                                        <div class="parallax__item--news parallax__item">
+                                            <div class="parallax__img-wrap">
+                                                <div class="parallax__img parallax__img--news" data-speed="-20">
+                                                    <div class="parallax__img-inner" style="background-image: url(./img/ptz/news3.jpg);"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="news__date">12.09.2019</p>
+                                        <h3 class="news__subtitle">Петербургский тракторный завод обновил линейку самых мощных тракторов</h3>
+                                    </div>
+                                    <div class="swiper-slide news__item">
+                                        <a class="news__link" href=""></a>
+                                        <div class="parallax__item--news parallax__item">
+                                            <div class="parallax__img-wrap">
+                                                <div class="parallax__img parallax__img--news" data-speed="-20">
+                                                    <div class="parallax__img-inner" style="background-image: url(./img/ptz/news3.jpg);"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="news__date">12.09.2019</p>
+                                        <h3 class="news__subtitle">ОАО «Промышленный комплекс «Энергия» отметила 20-летие со дня создания и успешной деятельности. </h3>
+                                    </div>
+                                    <div class="swiper-slide news__item">
+                                        <a class="news__link" href=""></a>
+                                        <div class="parallax__item--news parallax__item">
+                                            <div class="parallax__img-wrap">
+                                                <div class="parallax__img parallax__img--news" data-speed="-20">
+                                                    <div class="parallax__img-inner" style="background-image: url(./img/ptz/news3.jpg);"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="news__date">12.09.2019</p>
+                                        <h3 class="news__subtitle">Кировский завод отгрузил главный турбогенератор для ледокола «Урал»</h3>
+                                    </div>
+    
+    
+                                </div>
+    
+                                <div class="swiper-scrollbar swiper-scrollbar--news"></div>
+                        
+                                <div class="news__controls">
+                                    
+                                    <div class="swiper-button-prev">
+                                        <svg class="news__controls-icon"><use xlink:href="./img/sprite.svg#icon-arrow-prev"></use></svg>
+                                    </div>
+                                    <div class="swiper-button-next">
+                                        <svg class="news__controls-icon"><use xlink:href="./img/sprite.svg#icon-arrow-next"></use></svg>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+            
+                
+                
+                
+                </section>
+
+            
+
+                <div class="museum-zal__wrap">
+                    <section class="museum-nav">
+                        <div class="museum-nav-wrap">
+                            <div class="container">
+                                <h2 class="museum-nav__title">Залы<br> музея</h2>
+                                <ul class="museum-nav__list">
+                                    <li class="museum-nav__item">
+                                        <a class="museum-nav__link active" href="#zal-1">
+                                            <div class="museum-nav__link-number-wrap">
+                                                <span class="museum-nav__link-number">1</span>
+                                                <div class="museum-nav__link-number-wrap-active">
+                                                    <span class="museum-nav__link-number-active">1</span>
+                                                </div>
+                                            </div>
+                                        
+                                        
+                                            <span class="museum-nav__link-year">1801<br>1940</span>
+                                        </a>
+                                    </li>
+                                    <li class="museum-nav__item">
+                                        <a class="museum-nav__link" href="#zal-2">
+                                            <div class="museum-nav__link-number-wrap">
+                                                <span class="museum-nav__link-number">2</span>
+                                                <div class="museum-nav__link-number-wrap-active">
+                                                    <span class="museum-nav__link-number-active">2</span>
+                                                </div>
+                                            </div>
+                                            <span class="museum-nav__link-year">1940<br>1950</span>
+                                        </a>
+                                    </li>
+                                    <li class="museum-nav__item">
+                                        <a class="museum-nav__link" href="#zal-3">
+                                            <div class="museum-nav__link-number-wrap">
+                                                <span class="museum-nav__link-number">3</span>
+                                                <div class="museum-nav__link-number-wrap-active">
+                                                    <span class="museum-nav__link-number-active">3</span>
+                                                </div>
+                                            </div>
+                                            <span class="museum-nav__link-year">1950<br>1960</span>
+                                        </a>
+                                    </li>
+                                    <li class="museum-nav__item">
+                                        <a class="museum-nav__link" href="#zal-4">
+                                            <div class="museum-nav__link-number-wrap">
+                                                <span class="museum-nav__link-number">4</span>
+                                                <div class="museum-nav__link-number-wrap-active">
+                                                    <span class="museum-nav__link-number-active">4</span>
+                                                </div>
+                                            </div>
+                                            <span class="museum-nav__link-year">1960<br>1990</span>
+                                        </a>
+                                    </li>
+                                    <li class="museum-nav__item">
+                                        <a class="museum-nav__link" href="#zal-5">
+                                            <div class="museum-nav__link-number-wrap">
+                                                <span class="museum-nav__link-number">5</span>
+                                                <div class="museum-nav__link-number-wrap-active">
+                                                    <span class="museum-nav__link-number-active">5</span>
+                                                </div>
+                                            </div>
+                                            <span class="museum-nav__link-year">Международные<br>связи</span>
+                                        </a>
+                                    </li>
+        
+                                    <li class="museum-nav__item">
+                                        <a class="museum-nav__link" href="#zal-6">
+                                            <div class="museum-nav__link-number-wrap">
+                                                <span class="museum-nav__link-number">6</span>
+                                                <div class="museum-nav__link-number-wrap-active">
+                                                    <span class="museum-nav__link-number-active">6</span>
+                                                </div>
+                                            </div>
+                                            <span class="museum-nav__link-year">Новейшая<br>история</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="museum-zal" id="zal-1">
+                        <div class="container">
+                            <h2 class="muzeum-zal__title">История завода со дня основания 
+                                до Великой Отечественной войны</h2>
+                            <p class="muzeum-zal__desc">В первом зале посетителей встречают свидетели зарождения Кировского завода: документы, фотографии, модели техники, нумизматика, вещи, связанные со значимыми событиями в жизни России с 1801 по 1940 год. Многочисленные экспонаты этого зала можно рассматривать часами. Наиболее ценными с исторической точки зрения считаются чугунные пушечные ядра и рельсы, выпущенные на Путиловском заводе в 1872 году. Также большой интерес представляют образцы техники, изготовленной в 1868–1880 годы. В это время заводом владел талантливый российский инженер и предприниматель Николай Иванович Путилов, который поднял его производство на новый уровень.
+                                Первый зал музея был открыт в 1962 году.
+                            </p>
+                        </div>
+
+                            <div class="swiper-container swiper-container--gallery">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <a href="./img/ptz/photo-slide1.jpg" data-fancybox="gallery" data-caption="Первый российский трактор «Фордзон-Путиловец»">
+                                                <img class="gallery__img" src="./img/ptz/photo-slide1.jpg" alt="">
+                                            </a>
+                                            <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption>
+                                        </figure>
+                                    
+                                    </div>
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <a href="./img/ptz/photo-slide2.png" data-fancybox="gallery">
+                                                <img class="gallery__img" src="./img/ptz/photo-slide2.png" alt="">
+                                            </a>
+                                            <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <a href="./img/ptz/photo-slide3.png" data-fancybox="gallery">
+                                                <img class="gallery__img" src="./img/ptz/photo-slide3.png" alt="">
+                                            </a>
+                                            <!-- <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption> -->
+                                        </figure>
+                                    </div>
+            
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <img class="gallery__img" src="./img/ptz/photo-slide1.jpg" alt="">
+                                            <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption>
+                                        </figure>
+                                    
+                                    </div>
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <img class="gallery__img" src="./img/ptz/photo-slide2.png" alt="">
+                                            <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <img class="gallery__img" src="./img/ptz/photo-slide3.png" alt="">
+                                            <!-- <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption> -->
+                                        </figure>
+                                    </div>
+                                
+                                </div>
+                                
+                                <!-- If we need scrollbar -->
+                                <div class="swiper-scrollbar swiper-scrollbar--gallery"></div>
+                            </div>
+                      
+                    </section>
+
+                    <section class="museum-zal" id="zal-2">
+                        <div class="container">
+                            <h2 class="muzeum-zal__title">Кировский завод во время 
+                                Великой Отечественной войны</h2>
+                            <p class="muzeum-zal__desc">Под экспозицию о работе Кировского завода во время Великой Отечественной войны выделен отдельный зал. Посетители увидят экспонаты, связанные с историей Кировского завода в этот период, узнают всё о моделях выпускаемой техники и событиях послевоенного времени. С приближением фронта к Ленинграду большая часть оборудования и сотрудников Кировского завода были эвакуированы на Урал, в знаменитый Танкоград. Во втором зале представлены модели танка ИС-2, артиллерийской самоходной установки на базе танка ИС и других видов техники. Отдельно стоят экспонаты из осажденного Ленинграда. Ведь оставшиеся в нем сотрудники также не прекращали работать: ремонтировали танки и выпускали боеприпасы для фронтовых нужд. Сам Кировский завод во времена блокады называли «завод-фронт». Получить наглядное представление о блокадном городе поможет диорама проспекта Стачек и корпусов завода. Второй зал музея был открыт в 1962 году.
+                                
+                            </p>
+                        </div>
+
+                            <div class="swiper-container swiper-container--gallery">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <a href="./img/ptz/photo-slide1.jpg" data-fancybox="gallery" data-caption="Первый российский трактор «Фордзон-Путиловец»">
+                                                <img class="gallery__img" src="./img/ptz/photo-slide1.jpg" alt="">
+                                            </a>
+                                            <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption>
+                                        </figure>
+                                    
+                                    </div>
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <a href="./img/ptz/photo-slide2.png" data-fancybox="gallery">
+                                                <img class="gallery__img" src="./img/ptz/photo-slide2.png" alt="">
+                                            </a>
+                                            <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <a href="./img/ptz/photo-slide3.png" data-fancybox="gallery">
+                                                <img class="gallery__img" src="./img/ptz/photo-slide3.png" alt="">
+                                            </a>
+                                            <!-- <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption> -->
+                                        </figure>
+                                    </div>
+            
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <img class="gallery__img" src="./img/ptz/photo-slide1.jpg" alt="">
+                                            <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption>
+                                        </figure>
+                                    
+                                    </div>
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <img class="gallery__img" src="./img/ptz/photo-slide2.png" alt="">
+                                            <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <img class="gallery__img" src="./img/ptz/photo-slide3.png" alt="">
+                                            <!-- <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption> -->
+                                        </figure>
+                                    </div>
+                                
+                                </div>
+                                
+                                <!-- If we need scrollbar -->
+                                <div class="swiper-scrollbar swiper-scrollbar--gallery"></div>
+                            </div>
+                      
+                    </section>
+
+                    <section class="museum-zal" id="zal-3">
+                        <div class="container">
+                            <h2 class="muzeum-zal__title">Послевоенный период истории Кировского завода</h2>
+                            <p class="muzeum-zal__desc">Для Кировского завода это было время подъема и интенсивной работы над созданием новых моделей техники, актуальных для страны, оправляющейся от послевоенного кризиса. В третьем зале представлены модели техники, подробно рассказывается о тех людях, благодаря которым она появилась. Также здесь находится модель уникального вездехода «Пингвин», покорителя Арктики. Особенно впечатляют масштабные модели главного турбогенератора для атомного ледокола «Ленин» и главного турбозубчатого агрегата ТС-2 для танкера «София» (типа «Варшава»). 
+
+                                Зал, посвященный послевоенному периоду истории, открылся в 1964 году.
+                            </p>
+                        </div>
+
+                            <div class="swiper-container swiper-container--gallery">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <a href="./img/ptz/photo-slide1.jpg" data-fancybox="gallery" data-caption="Первый российский трактор «Фордзон-Путиловец»">
+                                                <img class="gallery__img" src="./img/ptz/photo-slide1.jpg" alt="">
+                                            </a>
+                                            <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption>
+                                        </figure>
+                                    
+                                    </div>
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <a href="./img/ptz/photo-slide2.png" data-fancybox="gallery">
+                                                <img class="gallery__img" src="./img/ptz/photo-slide2.png" alt="">
+                                            </a>
+                                            <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <a href="./img/ptz/photo-slide3.png" data-fancybox="gallery">
+                                                <img class="gallery__img" src="./img/ptz/photo-slide3.png" alt="">
+                                            </a>
+                                            <!-- <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption> -->
+                                        </figure>
+                                    </div>
+            
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <img class="gallery__img" src="./img/ptz/photo-slide1.jpg" alt="">
+                                            <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption>
+                                        </figure>
+                                    
+                                    </div>
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <img class="gallery__img" src="./img/ptz/photo-slide2.png" alt="">
+                                            <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <img class="gallery__img" src="./img/ptz/photo-slide3.png" alt="">
+                                            <!-- <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption> -->
+                                        </figure>
+                                    </div>
+                                
+                                </div>
+                                
+                                <!-- If we need scrollbar -->
+                                <div class="swiper-scrollbar swiper-scrollbar--gallery"></div>
+                            </div>
+                      
+                    </section>
+
+                    <section class="museum-zal" id="zal-4">
+                        <div class="container">
+                            <h2 class="muzeum-zal__title">Историческая гостиная музея</h2>
+                            <p class="muzeum-zal__desc">Пятый зал музея совмещает в себе функции Исторической гостиной для проведения мероприятий и выставочного зала. На его стенах выставлены исторические документы и фотографии, рассказывающие о международных связях завода. В Исторической гостиной проходят встречи ветеранов со школьниками и студентами и различные мероприятия. Кроме того, для учащихся проводятся тематические экскурсии по музею и киносеансы в Исторической гостиной.
+
+                                Историческая гостиная музея принимает гостей с 1972 года.
+                            </p>
+                        </div>
+
+                            <div class="swiper-container swiper-container--gallery">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <a href="./img/ptz/photo-slide1.jpg" data-fancybox="gallery" data-caption="Первый российский трактор «Фордзон-Путиловец»">
+                                                <img class="gallery__img" src="./img/ptz/photo-slide1.jpg" alt="">
+                                            </a>
+                                            <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption>
+                                        </figure>
+                                    
+                                    </div>
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <a href="./img/ptz/photo-slide2.png" data-fancybox="gallery">
+                                                <img class="gallery__img" src="./img/ptz/photo-slide2.png" alt="">
+                                            </a>
+                                            <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <a href="./img/ptz/photo-slide3.png" data-fancybox="gallery">
+                                                <img class="gallery__img" src="./img/ptz/photo-slide3.png" alt="">
+                                            </a>
+                                            <!-- <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption> -->
+                                        </figure>
+                                    </div>
+            
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <img class="gallery__img" src="./img/ptz/photo-slide1.jpg" alt="">
+                                            <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption>
+                                        </figure>
+                                    
+                                    </div>
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <img class="gallery__img" src="./img/ptz/photo-slide2.png" alt="">
+                                            <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <img class="gallery__img" src="./img/ptz/photo-slide3.png" alt="">
+                                            <!-- <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption> -->
+                                        </figure>
+                                    </div>
+                                
+                                </div>
+                                
+                                <!-- If we need scrollbar -->
+                                <div class="swiper-scrollbar swiper-scrollbar--gallery"></div>
+                            </div>
+                      
+                    </section>
+
+                    <section class="museum-zal" id="zal-5">
+                        <div class="container">
+                            <h2 class="muzeum-zal__title">Кировский завод после реорганизации 
+                                в акционерное общество</h2>
+                            <p class="muzeum-zal__desc">Последний зал музея – это взгляд на современный Кировский завод, его новейшую историю и перспективы развития. Представленные экспонаты посвящены истории создания и деятельности Открытого акционерного общества «Кировский завод», образованного в 1992 году.
+
+                                В зале посетители увидят образцы новой техники предприятия, узнают о сегодняшнем дне и планах компании на ближайшее время. Экспозиция этого зала постоянно пополняется.
+                        </div>
+
+                            <div class="swiper-container swiper-container--gallery">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <a href="./img/ptz/photo-slide1.jpg" data-fancybox="gallery" data-caption="Первый российский трактор «Фордзон-Путиловец»">
+                                                <img class="gallery__img" src="./img/ptz/photo-slide1.jpg" alt="">
+                                            </a>
+                                            <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption>
+                                        </figure>
+                                    
+                                    </div>
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <a href="./img/ptz/photo-slide2.png" data-fancybox="gallery">
+                                                <img class="gallery__img" src="./img/ptz/photo-slide2.png" alt="">
+                                            </a>
+                                            <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <a href="./img/ptz/photo-slide3.png" data-fancybox="gallery">
+                                                <img class="gallery__img" src="./img/ptz/photo-slide3.png" alt="">
+                                            </a>
+                                            <!-- <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption> -->
+                                        </figure>
+                                    </div>
+            
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <img class="gallery__img" src="./img/ptz/photo-slide1.jpg" alt="">
+                                            <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption>
+                                        </figure>
+                                    
+                                    </div>
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <img class="gallery__img" src="./img/ptz/photo-slide2.png" alt="">
+                                            <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <img class="gallery__img" src="./img/ptz/photo-slide3.png" alt="">
+                                            <!-- <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption> -->
+                                        </figure>
+                                    </div>
+                                
+                                </div>
+                                
+                                <!-- If we need scrollbar -->
+                                <div class="swiper-scrollbar swiper-scrollbar--gallery"></div>
+                            </div>
+                      
+                    </section>
+
+                    <section class="museum-zal" id="zal-6">
+                        <div class="container">
+                            <h2 class="muzeum-zal__title">История завода со дня основания 
+                                до Великой Отечественной войны</h2>
+                            <p class="muzeum-zal__desc">В первом зале посетителей встречают свидетели зарождения Кировского завода: документы, фотографии, модели техники, нумизматика, вещи, связанные со значимыми событиями в жизни России с 1801 по 1940 год. Многочисленные экспонаты этого зала можно рассматривать часами. Наиболее ценными с исторической точки зрения считаются чугунные пушечные ядра и рельсы, выпущенные на Путиловском заводе в 1872 году. Также большой интерес представляют образцы техники, изготовленной в 1868–1880 годы. В это время заводом владел талантливый российский инженер и предприниматель Николай Иванович Путилов, который поднял его производство на новый уровень.
+                                Первый зал музея был открыт в 1962 году.
+                            </p>
+                        </div>
+
+                            <div class="swiper-container swiper-container--gallery">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <a href="./img/ptz/photo-slide1.jpg" data-fancybox="gallery" data-caption="Первый российский трактор «Фордзон-Путиловец»">
+                                                <img class="gallery__img" src="./img/ptz/photo-slide1.jpg" alt="">
+                                            </a>
+                                            <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption>
+                                        </figure>
+                                    
+                                    </div>
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <a href="./img/ptz/photo-slide2.png" data-fancybox="gallery">
+                                                <img class="gallery__img" src="./img/ptz/photo-slide2.png" alt="">
+                                            </a>
+                                            <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <a href="./img/ptz/photo-slide3.png" data-fancybox="gallery">
+                                                <img class="gallery__img" src="./img/ptz/photo-slide3.png" alt="">
+                                            </a>
+                                            <!-- <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption> -->
+                                        </figure>
+                                    </div>
+            
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <img class="gallery__img" src="./img/ptz/photo-slide1.jpg" alt="">
+                                            <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption>
+                                        </figure>
+                                    
+                                    </div>
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <img class="gallery__img" src="./img/ptz/photo-slide2.png" alt="">
+                                            <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide--gallery">
+                                        <figure>
+                                            <img class="gallery__img" src="./img/ptz/photo-slide3.png" alt="">
+                                            <!-- <figcaption class="gallery__desc">Первый российский трактор «Фордзон-Путиловец»</figcaption> -->
+                                        </figure>
+                                    </div>
+                                
+                                </div>
+                                
+                                <!-- If we need scrollbar -->
+                                <div class="swiper-scrollbar swiper-scrollbar--gallery"></div>
+                            </div>
+                      
+                    </section>
+                </div>
+
+                <section class="museum-history">
+                    <div class="container">
+                        <div class="museum-history__wrap">
+                            <h2 class="museum-history__title">
+                                <span class="red-accent">История создания</span>
+                                 музея
+                            </h2>
+                            <div class="museum-history__about">
+                                <p class="museum-history__desc">Первоначально идея открытия музея возникла еще в 20-е годы прошлого века. О необходимости сбора и упорядочения исторических материалов первым заговорил Иван Иванович Газа – организатор партийного комитета на заводе «Красный путиловец». Уже тогда начали собирать документы, фотографии, воспоминания, различные реликвии. Директор завода выделил специальное помещение для хранения поступавших материалов. В это время активно проводились вечера с участием ветеранов труда, стенографировались выступления участников и очевидцев революционных событий – в прямом смысле «писалась История завода».</p>
+                                <a href="#" class="button-more--museum-history button-more">
+                                    <span>подробнее</span>
+                                </a>
+                            </div>
+                        </div>
+                       
+
+                    </div>
+                </section>
+
+
+                <section class="contact-block contact-block--more3">
+                    <div class="container">
+                      
+                        <ul class="contact-block__list">
+                            <li class="contact-block-item contact-block-item--more3">
+                                <h3 class="contact-block__subtitle">Контакты</h3>
+                                <div class="contact-block__wrap">
+                                    <ul class="contact-block__sublist">
+                                        <li class="contact-block__subitem">
+                                            <p class="contact-block__label">Телефон</p>
+    
+                                            <a class="contact-block__link" href="tel:+78126476468">
+                                                
+                                                +7 (812) 647-64-68
+                                            </a>
+                                        </li>
+                                        <li class="contact-block__subitem">
+                                            <p class="contact-block__label">E-mail</p>
+    
+                                            <a class="contact-block__link" href="mailto:museum@kzgroup.ru">
+                                                
+                                                museum@kzgroup.ru
+                                            </a>
+                                        </li>
+                                        <li class="contact-block__subitem contact-block__subitem--adress">
+                                            <p class="contact-block__label">Адрес</p>
+    
+                                            <a class="contact-block__link">
+                                               
+                                                198188, Россия, Санкт-Петербург, пр. Стачек, д. 72, литера «А» (3-й этаж ДКиТ им. И. И. Газа, вход с правого крыла)
+                                            </a>
+                                        </li>
+    
+                                    </ul>
+                                    
+                                </div>
+                            </li>
+                            <li class="contact-block-item contact-block-item--more3">
+                                <h3 class="contact-block__subtitle">Расписание<br>работы музея</h3>
+                                <div class="contact-block__wrap">
+                                    <ul class="contact-block__sublist">
+                                        <li class="contact-block__subitem">
+                                            <p class="contact-block__label">Понедельник-суббота</p>
+    
+                                            <a class="contact-block__link">
+                                                с 09:00 до 17:30
+                                            </a>
+                                        </li>
+                                      
+                                        <li class="contact-block__subitem">
+                                            <p class="contact-block__label">Обед</p>
+    
+                                            <a class="contact-block__link" >
+                                                
+                                                с 14:00 до 14:30
+                                            </a>
+                                        </li>
+    
+                                        <li class="contact-block__subitem contact-block__subitem--adress">
+                                            <p class="contact-block__label">Выходной</p>
+    
+                                            <a class="contact-block__link" >
+                                                воскресенье
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <footer class="footer">
+
+                    <div class="footer__outer">
+                        <div class="container">
+    
+                            <div class="footer__row">
+                                <nav class="footer__nav">
+                                    <ul class="footer__nav-list">
+                                        <li class="footer__nav-item">
+                                            <a class="footer__nav-link" href="about.html">Компания</a>
+                                        </li>
+                                        <li class="footer__nav-item">
+                                            <a class="footer__nav-link" href="company_group.html">Дочерние предприятия</a>
+                                        </li>
+                                        <li class="footer__nav-item">
+                                            <a class="footer__nav-link" href="">Карта сайта</a>
+                                        </li>
+                                    
+                                        <li class="footer__nav-item">
+                                            <a class="footer__nav-link" href="press.html">Пресс-центр</a>
+                                        </li>
+                                        <li class="footer__nav-item">
+                                            <a class="footer__nav-link" href="">Акционерам и инвесторам</a>
+                                        </li>
+                                        <li class="footer__nav-item">
+                                            <a class="footer__nav-link" href="contacts.html">Контакты</a>
+                                        </li>
+                                        <li class="footer__nav-item">
+                                            <a class="footer__nav-link" href="vacancies.html">Вакансии</a>
+                                        </li>
+                                        <li class="footer__nav-item">
+                                            <a class="footer__nav-link" href="tenders.html">Тендеры</a>
+                                        </li>
+                                        <li class="footer__nav-item">
+                                            <a class="footer__nav-link" href="rent-details.html">Аренда помещений</a>
+                                        </li>
+                                
+                                
+                                        <li class="footer__nav-item">
+                                            <a class="footer__nav-link" href="">Реквизиты</a>
+                                        </li>
+                                        <li class="footer__nav-item footer__nav-item--last">
+                                        
+                                        </li>
+                                    </ul>
+    
+                                    <p class="footer__adress">198097, Россия, Санкт-Петербург, пр. Стачек, 47</p>
+                                </nav>
+    
+    
+                                <div class="footer__contact">
+    
+                                    <div class="footer__contact-feedback">
+                                        <h6 class="footer__contact-title">Подписаться на наши новости</h6>
+                                        <form class="footer__contact-form" action="">
+                                            <div class="footer__contact-form__wrap">
+                                                <input class="footer__contact-input" type="mail" placeholder="E-mail">
+                                                <button class="footer__contact-submit" type="submit"><svg class="footer__contact-submit-icon" width="40"><use xlink:href="./img/sprite.svg#icon-mail-submit"></use></svg></button>
+                                            </div>
+                                        </form>
+                                        
+                                    </div>
+                                        
+                                        <ul class="footer__social-list">
+                                            <li class="footer__social-item" style="background-image: url(./img/social-youtube.svg);">
+                                                <a class="footer__social-link" href="">
+                                                    <span class="visually-hidden">Youtube</span>
+                                                </a>
+                                            </li>
+        
+                                            <li class="footer__social-item" style="background-image: url(./img/social-vk.svg);">
+                                                <a class="footer__social-link" href="">
+                                                    <span class="visually-hidden">Vk</span>
+                                                </a>
+                                            </li>
+        
+                                            <li class="footer__social-item" style="background-image: url(./img/social-inst.svg);">
+                                                <a class="footer__social-link" href="">
+                                                    <span class="visually-hidden">Instagram</span>
+                                                </a>
+                                            </li>
+        
+                                            <li class="footer__social-item" style="background-image: url(./img/social-fb.svg);">
+                                                <a class="footer__social-link" href="">
+                                                    <span class="visually-hidden">Facebook</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    
+                            
+                                </div>
+    
+    
+                            </div>
+                        
+                        
+                
+    
+                            <section class="copyright">
+                                <h6 class="copyright__title">Copyrights © ПАО "Кировский завод"</h6>
+                                <a class="copyright__link" href="">Правила использования сайта</a>
+                                <a class="copyright__link" href="">Политика в области обработки персональных данных</a>
+                            </section>
+    
+                        </div>
+                    
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <script src="./js/script.min.js"></script>
+    </body>
+</html>

@@ -201,8 +201,8 @@
 	}
 	.parallax__img-video{
 	
-		height: auto;
-		width: 100%;
+		height: 100%;
+    		width: 100%;
 	}
 	.parallax__img--inner--mobile{
 		display: none;
@@ -235,6 +235,15 @@
 		padding: 20px 60px;
 	}
 	
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active),
+@supports (-ms-accelerator:true) or (-ms-ime-align:auto) {
+    .parallax__img-video{
+	
+		height: auto;
+    		width: 100%;
+	}
 }
 @media(min-width: 1680px){
 
