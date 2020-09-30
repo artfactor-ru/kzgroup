@@ -10,14 +10,16 @@
 
 .press-newspage-container{
   padding-top: 50px;
+  width: 73%;
   @media (max-width: 1279px) {
     padding-top: 35px;
+    width: 100%;
   }
   @media (max-width: 767px) {
     padding-top: 35px;
   }
 }
-.press-newspage__item-container{
+.press-newspage__item-container, .press-contact{
   padding-top: 30px;
   @media (min-width: 767px){
     padding-top: 40px;
@@ -30,6 +32,15 @@
   }
 }
 
+.press-newspage__item-container--video{
+  padding-right: 12%;
+  @media(max-width: 1279px){
+    padding-right: 8%;
+  }
+  @media(max-width: 767px){
+      padding-right: 0%;
+  }
+}
 .press {
 
     &-searchbar {

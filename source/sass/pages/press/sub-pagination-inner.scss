@@ -1,0 +1,94 @@
+.press-internal-pages-pagination-subscribe {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0px;
+    margin-bottom: 160px;
+    // margin-top: -20px;
+    // padding-left: 2%;
+    // padding-right: 5%;
+    // margin-bottom: 200px;
+
+    @media(max-width:1279px){
+        margin-bottom: 60px;
+        // padding-right: 8%;
+    }
+    @media(max-width: 767px){
+        padding-right: 0%;
+    }
+    @media(max-width: 620px) {
+        flex-direction: column;
+        // margin-bottom: 60px;
+        margin-right: 0%;
+        padding-right: 0%;
+    }
+}
+.pagination__wrapper{
+     padding-right: 5%;
+     @media(max-width: 1279px){
+         padding-right: 8%;
+     }
+     @media(max-width: 767px){
+        padding-right: 0%;
+    }
+}
+.press-internal-pages-pagination-container .common-pagination__list{
+    margin: 0;
+}
+
+
+.press-internal-pages-pagination__list {
+    margin: 0% ;
+}
+
+.press-internal-pages-subscribe-button {
+    @extend %btn-bordered;
+    //padding-bottom: 27px;
+    //padding-left: 70px;
+    //padding-right: 70px;
+    //padding-top: 27px;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    
+
+    &-container {
+        // padding-top: 40px;
+        width: 352px;
+        height: 76px;
+
+        @media only screen and(max-width: 1679px) {
+            width: 336px;
+            height: 65px;
+        }
+
+        @media only screen and(max-width: 1100px) {
+            width: 336px;
+            height: 65px;
+        }
+
+        @media only screen and(max-width: 767px) {
+            // margin-right: 40px;
+           
+        }
+
+      
+
+        @media only screen and(max-width: 620px) {
+            width: 100%;
+            height: 62px;
+            margin-right: 0;
+            // padding-right: 4%;
+            // padding-left: 4%;
+            box-sizing: border-box;
+            margin-top: 48px;
+        }
+        
+    }
+
+    // @media only screen and(max-width: 550px) {
+    //     padding-left: 20px;
+    //     padding-right: 20px;
+    // }
+}
