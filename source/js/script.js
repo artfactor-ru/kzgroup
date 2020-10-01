@@ -118,15 +118,6 @@ if(document.querySelector('.barbapage')){
 			 accordion();
 		}
 
-		// if(document.getElementsByClassName('university-accordion')){
-		// 	let accItem = $('.university-accordion .accordion-item');
-		// 	accItem.on('click', function () {
-		// 		let _this = $(this);
-		// 		_this.toggleClass('active');
-		// 		_this.children('.accordion-item-content').toggle();
-		// 	});
-		// }
-
 		createMap();
 			
 	
@@ -2852,10 +2843,10 @@ if (panorama) {
 		let scr = $(".frame");
 		scr.mousedown(function () {
 			let startX = this.scrollLeft + event.pageX;
-			let startY = this.scrollTop + event.pageY;
+			// let startY = this.scrollTop + event.pageY;
 			scr.mousemove(function () {
 				this.scrollLeft = startX - event.pageX;
-				this.scrollTop = startY - event.pageY;
+				// this.scrollTop = startY - event.pageY;
 				return false;
 			});
 		});
@@ -2889,11 +2880,4 @@ if (panorama) {
 }
 
 
-
-let accItem = $('.university-accordion .accordion-item');
-accItem.on('click', function () {
-	let _this = $(this);
-	_this.toggleClass('active');
-	_this.children('.accordion-item-content').toggle();
-});
 

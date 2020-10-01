@@ -3,6 +3,8 @@
     overflow-x: hidden;
     overflow-y: hidden;
     position: relative;
+    cursor: grab;
+  
 }
 
 .frame::-webkit-scrollbar {
@@ -24,7 +26,7 @@
 
 .frame-container {
     position: relative;
-    height: 610px;
+    height: 626px;
 }
 
 .pin-link {
@@ -36,8 +38,10 @@
 .panorama {
     width: 2460px;
     height: 100%;
-    object-fit: cover;
+    // object-fit: cover;
     max-width: unset;
+    position: relative;
+    
 }
 
 .pin-popup:after, .pin-popup:before {
