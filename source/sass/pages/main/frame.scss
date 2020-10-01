@@ -27,6 +27,12 @@
     height: 610px;
 }
 
+.pin-link {
+    width: 25px;
+    height: 34px;
+    display: block;
+}
+
 .panorama {
     width: 2460px;
     height: 100%;
@@ -42,9 +48,9 @@
 }
 
 .pin-popup__1:after {
-    right: -34px;
+    right: -33px;
     top: 16px;
-    width: 33px;
+    width: 32px;
     height: 1px;
 }
 
@@ -307,76 +313,76 @@
 }
 
 .pin-popup__1 {
-    top: 50px;
-    right: 520px;
+    top: 21px;
+    right: 519px;
 }
 
 .pin-popup__0 {
-    bottom: 300px;
+    bottom: 334px;
     left: -40px;
 }
 
 .pin-popup__2 {
-    bottom: -78px;
+    bottom: -52px;
     left: -400px;
 }
 
 .pin-popup__3 {
-    bottom: -78px;
+    bottom: -52px;
     left: -400px;
 }
 
 .pin-popup__4 {
-    bottom: -85px;
+    bottom: -52px;
     left: -450px;
 }
 
 .pin-popup__5 {
-    bottom: -85px;
+    bottom: -52px;
     left: -450px;
 }
 
 .pin-popup__6 {
-    bottom: -85px;
+    bottom: -52px;
     left: -450px;
 }
 
 .pin-popup__7 {
-    bottom: -85px;
+    bottom: -52px;
     left: -450px;
 }
 
 .pin-popup__8 {
-    bottom: -15px;
+    bottom: 16px;
     left: -546px;
 }
 
 .pin-popup__9 {
-    bottom: -15px;
+    bottom: 16px;
     left: -546px;
 }
 
 .pin-popup__10 {
-    bottom: -15px;
+    bottom: 16px;
     left: -546px;
 }
 
 .pin-popup__11 {
-    bottom: -86px;
+    bottom: -51px;
     left: -450px;
 }
 
 .pin-popup__12 {
-    bottom: -86px;
+    bottom: -51px;
     left: -450px;
 }
 
 .pin-popup__13 {
-    bottom: -86px;
+    bottom: -51px;
     left: -450px;
 }
 .pin-popup__14 {
-    bottom: -86px;
+    bottom: -51px;
     left: -450px;
 }
 
@@ -405,5 +411,47 @@
     .frame {
         display: flex;
         justify-content: center;
+    }
+}
+@media screen and (max-width: 480px) {
+    .pin-popup h4 {
+        font-size: 18px;
+    }
+    .pin-popup__link {
+        height: 30px;
+        font-size: 15px;
+        & img {
+            height: 100%;
+        }
+    }
+    .pin-popup {
+        width: 300px;
+        height: 210px;
+    }
+    .pin-popup__0 {
+        bottom: 286px;
+    }
+    .pin-popup__0:after {
+        right: 214px;
+    }
+    .pin-popup__1 {
+        right: 319px;
+    }
+    .pin-popup__2, .pin-popup__3 {
+        bottom: -52px;
+        left: -200px;
+    }
+    .pin-popup__4, .pin-popup__5, .pin-popup__6, .pin-popup__7 {
+        left: -250px;
+    }
+    .pin-popup__10, .pin-popup__8, .pin-popup__9 {
+        bottom: 22px;
+        left: -346px;
+    }
+    .pin-popup__8:before {
+        display: none;
+    }
+    .pin-popup__11, .pin-popup__12, .pin-popup__13, .pin-popup__14 {
+        left: -250px;
     }
 }

@@ -2848,7 +2848,7 @@ if ($('.rent-form__main-form')) {
 let panorama = document.querySelector('.frame');
 if (panorama) {
 	window.onload = function () {
-		let pin = $('.pin');
+		let pin = $('.pin-link');
 		let scr = $(".frame");
 		scr.mousedown(function () {
 			let startX = this.scrollLeft + event.pageX;
