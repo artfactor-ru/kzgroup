@@ -80,14 +80,15 @@
     &-content
       color: $black-grey
       transition: height .5s linear
-      height: unset
+      // height: unset
+      display: block !important;
       overflow: hidden
 
     &.active .accordion-item-content
       // max-height: 1000px
       padding-bottom: 40px
-      height: unset !important
-      display: none
+      // height: unset !important
+      // display: none
       @media(max-width: 767px)
         padding-bottom: 20px
 

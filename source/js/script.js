@@ -118,14 +118,14 @@ if(document.querySelector('.barbapage')){
 			 accordion();
 		}
 
-		if(document.getElementsByClassName('university-accordion')){
-			let accItem = $('.university-accordion .accordion-item');
-			accItem.on('click', function () {
-				let _this = $(this);
-				_this.toggleClass('active');
-				_this.children('.accordion-item-content').toggle();
-			});
-		}
+		// if(document.getElementsByClassName('university-accordion')){
+		// 	let accItem = $('.university-accordion .accordion-item');
+		// 	accItem.on('click', function () {
+		// 		let _this = $(this);
+		// 		_this.toggleClass('active');
+		// 		_this.children('.accordion-item-content').toggle();
+		// 	});
+		// }
 
 		createMap();
 			
