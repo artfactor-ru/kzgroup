@@ -3,13 +3,7 @@
     padding-bottom: 40px;
 }
 
-.uni-bg {
-    background:linear-gradient(0deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08)),  url(../img/university/main-bg_360.jpg);
-    background-blend-mode: multiply, normal, normal;
-    background-position: 23%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+
 
 
 .center__title{
@@ -19,53 +13,19 @@
     color: #FFFFFF;
 }
 
-.rent_noinfo-paragraph {
-    font-weight: bold;
+
+
+.uni_noinfo-heading{
+   @extend %block-title-inlist;
+   width: 90%;
+}
+.block_text__smalllist--uni{
+    padding-top: 20px;
+}
+.block_text__paragraph--uni{
+    padding-top: 0px;
 }
 
-.uni-org__text {
-    font-family: $font-text-light;
-    font-size: 18px;
-}
-
-.uni-org__list {
-    list-style: none;
-    font-family: $font-text-light;
-    font-size: 18px;
-}
-
-.uni-contacts {
-    font-family: $font-text-light;
-}
-
-.uni-contacts__subtitle {
-    font-style: normal;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 28px;
-    color: #616161;
-}
-
-.uni-contacts__title {
-    margin-bottom: 30px;
-}
-
-.uni-contacts__text {
-    font-size: 24px;
-    color: #171c28;
-    margin-bottom: 8px;
-}
-
-.uni-contacts__text  a {
-    color: unset;
-}
-.uni-contacts__text  a:hover {
-    opacity: 0.5;
-}
-
-.uni-contacts__block {
-    margin-bottom: 20px;
-}
 
 .center__desc{
     @extend %block-text;
