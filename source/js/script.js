@@ -14,6 +14,7 @@ import ScrollbarSmoth from 'smooth-scrollbar';
 
 import barba from '@barba/core';
 
+let scrollbarAside;
 
 
 function delay(n) {
@@ -85,16 +86,10 @@ if(document.querySelector('.barbapage')){
 		
 				
 		
-			yearSelection()
-			let containerAside = document.querySelector('.sidebar__inner');
-			let scrollbarAside;
 			
-			// if(containerAside){
-			// 	scrollbarAside = ScrollbarSmoth.init(containerAside, options);
-			// 	console.log(scrollbarAside)
 			
-			// }
-			// scrollbarAside.update();
+
+
 		breakpoint.addListener(breakpointChecker);
 		breakpointChecker();
 		
@@ -119,8 +114,10 @@ if(document.querySelector('.barbapage')){
 		}
 
 		createMap();
-			
-	
+		
+		
+		
+		
 	});
 
 	
@@ -130,7 +127,13 @@ barba.hooks.once(() => {
 	breakpointOnlyForDesktop.addListener(breakpointCheckerForDesktop);
 	breakpointCheckerForDesktop();
 
+	
+});
 
+barba.hooks.after(() => {
+	scrollbarAside.update();
+	initSmoothScrollbarAside();
+	yearSelection()
 });
 
 // import $ from "jquery";
@@ -550,10 +553,12 @@ let options4  = {
 	// continuousScrolling: false
 	// delegateTo: document
 }
-let options5 = {
+
+let options5  = {
 	damping: 0.09,
 	renderByPixels: true,
-	continuousScrolling: true,
+	alwaysShowTracks: true
+	// continuousScrolling: false
 	// delegateTo: document
 }
 
@@ -598,6 +603,20 @@ if(containerTabsScroll){
 
 
 
+
+	
+
+	function initSmoothScrollbarAside(){
+		let containerAsideScroll = document.querySelector('.sidebar__inner');
+		if(containerAsideScroll){
+			scrollbarAside = ScrollbarSmoth.init(containerAsideScroll, options5);
+		}
+		console.log(scrollbarAside);
+	}
+	
+
+
+	initSmoothScrollbarAside();
 
 
 	
@@ -783,7 +802,7 @@ let scrollbar;
 			spyScrolling ('.vac-f__form-title' , '.vac-f__nav-item.active');
 
 
-			// fixedNav(offset, '.press-rigt-side-bar');
+			fixedNav(offset, '.press-rigt-side-bar');
 
 			fixedNav(offset, '.traktors__nav');
 			fixedNavForm(offset, '.vac-f__nav-list');
@@ -2682,6 +2701,8 @@ function accordion(){
 			if (active.length && active[0] !== item) {
 				active[0].querySelector('.accordion-item-content').style.height = 0 + 'px';
 				active[0].classList.remove('show');
+				scrollbar.update();
+				scrollbar.track.update();
 			}
 
 			let content = item.querySelector('.accordion-item-wrap');
@@ -2689,9 +2710,13 @@ function accordion(){
 			if(item.classList.contains('show')){
 				item.classList.remove('show');
 				item.querySelector('.accordion-item-content').style.height = 0 + 'px';
+				scrollbar.update();
+				scrollbar.track.update();
 			}else if(!item.classList.contains('show')){
 				item.classList.add('show');
 				item.querySelector('.accordion-item-content').style.height = contentHeight + 'px';
+				scrollbar.update();
+				scrollbar.track.update();
 			}
 
 
@@ -2843,10 +2868,9 @@ if (panorama) {
 		let scr = $(".frame");
 		scr.mousedown(function () {
 			let startX = this.scrollLeft + event.pageX;
-			// let startY = this.scrollTop + event.pageY;
 			scr.mousemove(function () {
 				this.scrollLeft = startX - event.pageX;
-				// this.scrollTop = startY - event.pageY;
+
 				return false;
 			});
 		});
@@ -2879,5 +2903,39 @@ if (panorama) {
 	}
 }
 
+function hideGalleryImage(image){
+	for(let i=0; i<image.length; i++){
+		if(i>=6){
+			
+			image[i].classList.add('gallery-hide')
+		}
+	}
+}
 
+function showGalleryImage(image){
+	
 
+	for(let i=0; i<image.length; i++){
+		
+		if(i>=6){
+			image[i].classList.toggle('gallery-hide')
+			btnGallery.classList.toggle('gallery-in-close')
+			if(btnGallery.classList.contains('gallery-in-close')){
+				btnGallery.style.display = "none";
+			}
+		}
+	}
+}
+
+let galleryImage = document.querySelectorAll('.press-photogallery-item');
+
+document.addEventListener('DOMContentLoaded', function(){
+	hideGalleryImage(galleryImage);
+})
+
+let btnGallery = document.querySelector('.button--galleryin');
+if(btnGallery){
+	btnGallery.addEventListener('click', function(event){
+		showGalleryImage(galleryImage);
+	});
+}

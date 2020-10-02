@@ -438,3 +438,13 @@
         background-size: 70px 70px;
      }
  }
+ .press-news-in-video{
+     position: relative;
+ }
+ .press-news-in-video--link{
+     position: absolute;
+     display: block;
+     width: 100%;
+     height: 100%;
+     z-index: 200;
+ }

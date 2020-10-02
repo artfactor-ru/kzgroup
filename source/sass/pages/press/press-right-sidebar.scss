@@ -1,23 +1,25 @@
 
-// .sidebar__inner{
-   
-    
-// }
+.sidebar__inner{
+    // width: 100%;
+    margin-right: 8% !important;
+    box-sizing: border-box;
+  
+}
 
 .press-rigt-side-bar {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
-    width: 27%;
+    width: 37%;
     top: 0;
-    // position: sticky;
-    // height: 100vh;
-    padding-bottom: 150px;
+    position: sticky !important;
+    height: 100vh;
     
+    padding-bottom: 80px;
     padding-top: 90px;
-    box-sizing: content-box;
+    box-sizing: border-box;
     background-color: $bg-color-light-grey;
     margin-left: auto;
-    padding-right: 8% !important;
+    
     
     &-filters {
         height: 700px;
@@ -68,7 +70,7 @@
             padding-left: 20px;
             padding-bottom: 23px;
             position: relative;
-
+            cursor: pointer;
 
             &:hover {
                 color: #c30215 ;

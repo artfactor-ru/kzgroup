@@ -81,7 +81,7 @@
         margin-left: 0;
         //margin-bottom: 90px;
         margin-bottom: 3.5%;
-
+        
         @media(max-width: 1279px) {
             width: 48%;
         }
@@ -123,9 +123,17 @@
 
 
 
-
-.parallax__item-photogallery-in {
+.press-photogallery-link{
     width: 100%;
+    height: 100%;
+    display: block;
+}
+.parallax__item-photogallery-in{
+    width: 100%;
+    height: 100%;
+}
+.press-photogallery-item{
+    
     height: 323px;
 
     @media only screen and(max-width: 1850px) {
@@ -271,3 +279,12 @@
      pointer-events: none;
  
  }
+ .press-photogallery-item{
+    transition: height 1s ease;
+ }
+
+.gallery-hide{
+    height: 0;
+    transition: height 1s ease;
+    overflow: hidden;
+}
