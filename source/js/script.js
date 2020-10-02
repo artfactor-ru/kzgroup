@@ -2867,6 +2867,7 @@ if (panorama) {
 	window.onload = function () {
 		let pin = $('.pin-link');
 		let scr = $(".frame");
+
 		scr.mousedown(function () {
 			let startX = this.scrollLeft + event.pageX;
 			scr.mousemove(function () {
@@ -2877,6 +2878,17 @@ if (panorama) {
 		});
 		$(window).mouseup(function () {
 			scr.off("mousemove");
+		});
+
+		scr.on('touchstart', function () {
+			let startX = $(this).scrollLeft + event.pageX;
+			scr.on('touchmove', function () {
+				$(this).scrollLeft = startX - event.pageX;
+				return false;
+			});
+		})
+		$(window).on('touchend', function () {
+			scr.off('touchmove');
 		});
 
 		let panoramaW = $('.panorama').width();
@@ -2903,6 +2915,16 @@ if (panorama) {
 		});
 	}
 }
+
+//центрирование панорамы на главной
+function panoramaCentral(e) {
+	let frame = $('.frame');
+	frame.scrollLeft(400);
+}
+panoramaCentral();
+
+
+
 
 function hideGalleryImage(image){
 	for(let i=0; i<image.length; i++){
@@ -2940,3 +2962,4 @@ if(btnGallery){
 		showGalleryImage(galleryImage);
 	});
 }
+
