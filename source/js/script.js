@@ -126,12 +126,13 @@ if(document.querySelector('.barbapage')){
 barba.hooks.once(() => {
 	breakpointOnlyForDesktop.addListener(breakpointCheckerForDesktop);
 	breakpointCheckerForDesktop();
-
+	initSmoothScrollbarAside();
+	yearSelection()
 	
 });
 
 barba.hooks.after(() => {
-	scrollbarAside.update();
+	// scrollbarAside.update();
 	initSmoothScrollbarAside();
 	yearSelection()
 });
