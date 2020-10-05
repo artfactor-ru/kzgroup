@@ -121,6 +121,7 @@
 @import 'pages/university/center';
 
 @import 'pages/prod-system/prod-sys-common';
+@import 'pages/prod-system/prod-about';
 @import 'pages/sitemap/sitemap';
 body {
     margin: 0;
@@ -206,6 +207,9 @@ figure {
     // box-sizing: border-box;
 }
 .b-table .scrollbar-track-x {
+    display: block !important;
+}
+.p-table__wrapper .scrollbar-track-x {
     display: block !important;
 }
 @media(min-width: 767px) {
@@ -322,7 +326,8 @@ figure {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	pointer-events: none;
+    pointer-events: none;
+    z-index: 10;
 }
 .barba_background--next{
 	opacity: 0;

@@ -96,6 +96,10 @@ if(document.querySelector('.barbapage')){
 		mobileBreakpoint.addListener(breakpointCheckerForMobile);
 
 		breakpointCheckerForMobile();
+
+		breakpointOnlyForDesktop.addListener(breakpointCheckerForDesktop);
+
+		breakpointCheckerForDesktop();
 		
 		checkUrl('.tabs-common-links--barba');
 		checkUrl('.contacts-sidebar__nav-link');
@@ -667,7 +671,12 @@ if(containerTabsScroll){
 
 	initSmoothScrollbarTable();
 
-	
+
+	let containerTableProdScroll = document.querySelector('.p-table__wrapper');
+		if(containerTableProdScroll){
+			let scrollbarTableProd = ScrollbarSmoth.init(containerTableProdScroll, options6);
+		}
+
 
 let containerScroll = document.querySelector('.scroll');
 
@@ -928,7 +937,7 @@ let scrollbar;
 	let swiperPress = [];
 	
 	let swiperAchieves;
-	let swiperPurchase;
+	let  swiperPurchase;
 	const transitionSlide = 15000;
 
 	const enableSwiper = function(){
@@ -1033,13 +1042,13 @@ let scrollbar;
 			});
 			
 		}
-
+	
 		if(document.querySelector('.swiper-purchase')){
 
-			let purchaseSlider = document.querySelectorAll('.swiper-purchase');
+			
 		
 		
-				let swiperPurchase = new Swiper('.swiper-purchase',{
+				 swiperPurchase = new Swiper('.swiper-purchase',{
 					slidesPerView: 'auto',
 					// spaceBetween: 22,
 					// loop:true,
