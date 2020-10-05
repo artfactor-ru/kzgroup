@@ -205,7 +205,9 @@ figure {
     height: 100%;
     // box-sizing: border-box;
 }
-
+.b-table .scrollbar-track-x {
+    display: block !important;
+}
 @media(min-width: 767px) {
     .container {
         padding-left: 8%;
@@ -219,6 +221,10 @@ figure {
     .tabs-common__wrapper .scrollbar-track-y {
         display: none !important;
     }
+    .b-table .scrollbar-track-y {
+        display: none !important;
+    }
+    
 }
 .sidebar__inner  .scrollbar-track-y{
     width: 4px;
