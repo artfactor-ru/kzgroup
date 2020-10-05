@@ -8,8 +8,16 @@
     overflow: hidden;
     position: relative;
     padding-bottom: 40px;
+    margin-bottom: 35px;
+    // position: relative;
+    
 }
-
+.purchase_card{
+    margin-right: 4%;
+    margin-left: 4%;
+    width: 92%;
+    box-sizing: border-box;
+}
 .purchase__wrapper {
     padding-top: 45px;
     position: relative;
@@ -27,7 +35,7 @@
     margin-right: 0px;
     margin-bottom: 15px;
     flex-basis: 45%;
-    min-height: 305px;
+    min-height: 225px;
     transition: transform .9s ease;
 }
 
@@ -58,7 +66,9 @@
     & .button {
         display: inline-block;
         margin: 0 0 30px;
-        font-size: 11px;
+        font-size: 13px;
+        padding-top: 16px;
+        padding-bottom: 16px;
     }
 }
 
@@ -72,6 +82,23 @@
         color: $grey-light-purchase;
         font-size: 14px;
         line-height: 24px;
+        position: relative;
+        display: inline-block;
+        &:before {
+            position: absolute;
+            display: inline-block;
+            content: "";
+            width: 0;
+            height: 1px;
+            bottom: 3px;
+            background-color: $grey-text-paragraf;
+            transition: width .5s linear;
+          }
+          &:hover {
+            &:before{
+              width: 100%;
+            }
+          }
     }
 }
 
@@ -97,6 +124,7 @@
     display: flex;
     flex-direction: column;
     padding-left: 7px;
+    align-items: flex-start;
 }
 
 .purchase-inform__contacts--title {
@@ -107,11 +135,75 @@
     font-family: $font-text-regular;
     color: $black-grey;
     line-height: 22px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    &:before {
+        position: absolute;
+        display: inline-block;
+        content: "";
+        width: 0;
+        height: 1px;
+        bottom: 3px;
+        background-color: $grey-text-paragraf;
+        transition: width .5s linear;
+      }
+      &:hover {
+        &:before{
+          width: 100%;
+        }
+      }
 }
-
+@media(min-width: 500px){
+   
+    .purchase_card{
+        width:60%;
+        margin-right: 0%;
+        margin-left: 0%;
+    }
+    .parallax__item--purchase{
+        min-height: 225px;
+    }
+    .swiper-wrapper--purchase{
+        margin-left: 8%;
+    }
+}
+@media(min-width: 600px){
+    .purchase_card{
+        width:45%;
+    }
+    .parallax__item--purchase{
+        min-height: 225px;
+    }
+}
 @media(min-width: 768px) {
+    // .purchase__wrapper .container{
+    //     padding-right: 0px;
+    // }
+    .swiper-container-horizontal>.swiper-scrollbar--purchase{
+        // margin-right: 8%;
+        left: 0%;
+        width: 93%;
+    }
+    .parallax__item--purchase{
+        width:100%
+    }
+    .purchase_card{
+        width: 40.5% !important;
+    }
     .tab__descr {
         margin-bottom: 35px;
+    }
+    .swiper-purchase{
+        
+        padding-bottom: 50px;
+        margin-bottom: 65px;
+    }
+    .purchase__order{
+        padding-bottom: 50px;
+    }
+    .purchase__order .button{
+        padding: 15px 30px;
     }
 }
 
@@ -125,14 +217,15 @@
         padding-top: 60px;
     }
     .purchase__list {
-        margin-bottom: 80px;
+        margin-bottom: 70px;
+       
         // padding-top: 60px;
         & .cards {
             display: flex;
             justify-content: space-between;
             width: 100%;
             & .purchase_card {
-                width: 31.3%;
+                
                 & .parallax__item--purchase {
                     min-height: 244px;
                     margin-bottom: 24px;
@@ -158,6 +251,9 @@
             padding: 27px 53px;
         }
     }
+    .parallax__item--purchase{
+        min-height: 245px;
+    }
     .purchase_heading {
         font-size: 24px;
     }
@@ -181,24 +277,53 @@
     }
     .swiper-purchase{
         padding-bottom: 0px;
+     
     }
+    .swiper-wrapper--purchase{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-right: 0%;
+        margin-left: 0%;
+    }
+    .swiper-purchase{
+        margin-right: 8%;
+        margin-left: 8%;
+        margin-bottom: 85px;
+    }
+    .purchase_card {
+        width: 31.5% !important;
+    }
+    .purchase-inform__text{
+        width: 90%;
+    }
+    
 }
 
 @media(min-width: 1680px) {
+    .swiper-purchase{
+        margin-right: 9%;
+        margin-left: 9%;
+        margin-bottom: 75px;
+    }
     .tab__descr {
         font-size: 24px;
     }
     .parallax__item--purchase {
-        margin-bottom: 30px;
+        margin-bottom: 15px;
+    }
+    .parallax__item--purchase{
+        min-height: 365px;
     }
     .purchase__wrapper {
-        padding-top: 160px;
+        padding-top: 70px;
     }
     .purchase_heading {
         font-size: 36px;
     }
     .purchase__list {
-        margin-bottom: 95px;
+        margin-bottom: 70px;
+        width: 80%;
         & .cards {
             & .purchase_card {
                 width: 32%;
@@ -219,7 +344,7 @@
         }
         & .button {
             margin: 0 0 45px;
-            padding: 27px 32px;
+            padding: 27px 60px;
         }
     }
     .purchase-inform {
@@ -235,4 +360,30 @@
         font-size: 24px;
         line-height: 28px;
     }
+    .purchase-inform__contacts--item {
+        width: 25%;
+    }
+}
+
+
+.swiper-container-horizontal>.swiper-scrollbar.swiper-scrollbar--purchase {
+    @extend %scroll-line;
+    bottom: 0px;
+    box-sizing: border-box;
+    width: 100%;
+    left: 0;
+   
+    @media(min-width: 1280px) {
+        left: 8%;
+        width: 84%;
+        display: none;
+    }
+    @media(min-width: 1680px) {
+        left: 9%;
+        width: 82%;
+    }
+}
+
+.swiper-scrollbar--purchase .swiper-scrollbar-drag {
+    @extend %scroll-drag;
 }
