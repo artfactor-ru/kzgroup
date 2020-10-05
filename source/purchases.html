@@ -7,181 +7,164 @@
       <link rel="stylesheet" href="./css/style.min.css">
       <title>Постоянные закупки</title>
    </head>
-   <body class="purchase">
+   <body class="purchase barbapage" data-barba="wrapper">
       <!-- Прелоадер -->
       <include src="components/preloader.html"></include>
       <!-- Шапка и меню -->
       <include src="components/header.html"></include>
       <div class="scroll">
-         <section class="main parallax__item">
-            <div class="parallax__img-wrap">
-               <div class="parallax__img parallax__img--company_group " data-speed="-40">
-                  <div class="parallax__img--inner" style="background-image: url(./img/purchases/bg-purchases.jpg);
-                     background-position: center;
-                     background-size: cover;">
-                  </div>
-               </div>
-            </div>
-            <div class="container">
-               <div class="main__wrapper">
-                  <h1 class="main__title">
-                     <div class="title--inner-main">Постоянные</div>
-                     <br>
-                     <div class="title--inner-main">закупки</div>
-                  </h1>
-               </div>
-            </div>
-         </section>
-         <div class="purchase__wrapper">
-            <div class="tabs-common__wrapper">
-               <div class="container">
-                  <div class="tabs-common">
-                     <div class="tabs-common-container tabs-common-container--rent">
-                        <a href="tenders.html" class="tabs-common-links-js tabs-common-links">Тендеры</a>
-                        <a class="tabs-common-links-js tabs-common-links active">Постоянные закупки</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="container">
-               <main class="purchase__list two-screen">
-                  <p class="tab__descr">Для обеспечения производства дочерние общества ПАО «Кировский завод» на постоянной основе закупают следующие материалы и продукцию:</p>
-                  <div class="cards swiper-purchase">
-                     <div class="swiper-wrapper">
-                        <div class="purchase_card swiper-slide">
-                           <div class="parallax__item--purchase parallax__item">
-                              <div class="parallax__img-wrap">
-                                 <div class="parallax__img parallax__img--purchase" data-speed="-20">
-                                    <div class="parallax__img-inner" style="background-image: url(./img/purchases/purchase-1.jpg);"></div>
+         <include src="components/tender-purchase/main-screen.html"></include>
+        <include src="components/tender-purchase/tabs.html"></include>
+        <div class="barbacontainer">
+				
+            <div  class="barbawrapper" data-barba="container" data-barba-namespace="home" data-barba-prevent="all">
+
+               <div class="barba_background"></div>
+               <div class="barba_background--next"></div>
+               <div class="barba_background-in">
+                  <div class="purchase__wrapper">
+                     <div class="container">
+                        <main class="purchase__list two-screen">
+                           <p class="tab__descr">Для обеспечения производства дочерние общества ПАО «Кировский завод» на постоянной основе закупают следующие материалы и продукцию:</p>
+                           <div class="cards swiper-purchase swiper-container">
+                              <div class="swiper-wrapper">
+                                 <div class="purchase_card swiper-slide">
+                                    <div class="parallax__item--purchase parallax__item">
+                                       <div class="parallax__img-wrap">
+                                          <div class="parallax__img parallax__img--purchase" data-speed="-20">
+                                             <div class="parallax__img-inner" style="background-image: url(./img/purchases/purchase-1.jpg);"></div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="rent_card-info">
+                                       <h5 class="purchase_heading">Огнеупорная продукция</h5>
+                                       <a class="rent_link button-more" href="#">
+                                       <span>подробнее</span>
+                                       </a>
+                                    </div>
+                                 </div>
+                                 <div class="purchase_card swiper-slide">
+                                    <div class="parallax__item--purchase parallax__item">
+                                       <div class="parallax__img-wrap">
+                                          <div class="parallax__img parallax__img--purchase" data-speed="-20">
+                                             <div class="parallax__img-inner" style="background-image: url(./img/purchases/purchase-2.jpg);"></div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="rent_card-info">
+                                       <h5 class="purchase_heading">Основные материалы</h5>
+                                       <a class="rent_link button-more" href="#">
+                                       <span>подробнее</span>
+                                       </a>
+                                    </div>
+                                 </div>
+                                 <div class="purchase_card swiper-slide">
+                                    <div class="parallax__item--purchase parallax__item">
+                                       <div class="parallax__img-wrap">
+                                          <div class="parallax__img parallax__img--purchase" data-speed="-20">
+                                             <div class="parallax__img-inner" style="background-image: url(./img/purchases/purchase-3.jpg);"></div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="rent_card-info">
+                                       <h5 class="purchase_heading">Все виды ломов</h5>
+                                       <a class="rent_link button-more" href="#">
+                                       <span>подробнее</span>
+                                       </a>
+                                    </div>
                                  </div>
                               </div>
+                              <div class="swiper-scrollbar swiper-scrollbar--purchase"></div>
                            </div>
-                           <div class="rent_card-info">
-                              <h5 class="purchase_heading">Огнеупорная продукция</h5>
-                              <a class="rent_link button-more" href="#">
-                              <span>подробнее</span>
-                              </a>
-                           </div>
-                        </div>
-                        <div class="purchase_card swiper-slide">
-                           <div class="parallax__item--purchase parallax__item">
-                              <div class="parallax__img-wrap">
-                                 <div class="parallax__img parallax__img--purchase" data-speed="-20">
-                                    <div class="parallax__img-inner" style="background-image: url(./img/purchases/purchase-2.jpg);"></div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="rent_card-info">
-                              <h5 class="purchase_heading">Основные материалы</h5>
-                              <a class="rent_link button-more" href="#">
-                              <span>подробнее</span>
-                              </a>
-                           </div>
-                        </div>
-                        <div class="purchase_card swiper-slide">
-                           <div class="parallax__item--purchase parallax__item">
-                              <div class="parallax__img-wrap">
-                                 <div class="parallax__img parallax__img--purchase" data-speed="-20">
-                                    <div class="parallax__img-inner" style="background-image: url(./img/purchases/purchase-3.jpg);"></div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="rent_card-info">
-                              <h5 class="purchase_heading">Все виды ломов</h5>
-                              <a class="rent_link button-more" href="#">
-                              <span>подробнее</span>
-                              </a>
-                           </div>
+                        </main>
+                        <div class="purchase__order">
+                           <a href="#" class="button--details button" download>
+                              Скачать единый список материалов
+                              <div class="button-line button-line--first is-inview"></div>
+                              <div class="button-line button-line--two is-inview"></div>
+                           </a>
+                           <p class="purchase__order--text">В случае заинтересованности коммерческие предложения направлять по адресу: <a href="mailto:tender@kzgroup.ru">tender@kzgroup.ru</a></p>
                         </div>
                      </div>
-                     <div class="swiper-scrollbar swiper-scrollbar--statictics"></div>
+                     <!-- <ul class="social__btn-list">
+                        <li class="social__btn-item social__btn-item--share">
+                           <button class="social__btn" style="background-image: url(./img/social-share.svg);"></button>
+                           <div class="social__dropdown">
+                              <h5 class="social__title">Поделиться:</h5>
+                              <ul class="social__link-list">
+                                 <li class="social__link-item">
+                                    <a class="social__link" href="" target="_blank">
+                                       <svg class="social__icon">
+                                          <use xlink:href="./img//sprite.svg#icon-vk"></use>
+                                       </svg>
+                                       <span class="visually-hidden">Vk</span>
+                                    </a>
+                                 </li>
+                                 <li class="social__link-item">
+                                    <a class="social__link" href="" target="_blank">
+                                       <svg class="social__icon">
+                                          <use xlink:href="./img//sprite.svg#icon-inst"></use>
+                                       </svg>
+                                       <span class="visually-hidden">Instagram</span>
+                                    </a>
+                                 </li>
+                                 <li class="social__link-item">
+                                    <a class="social__link" href="" target="_blank">
+                                       <svg class="social__icon">
+                                          <use xlink:href="./img//sprite.svg#icon-fb"></use>
+                                       </svg>
+                                       <span class="visually-hidden">Facebook</span>
+                                    </a>
+                                 </li>
+                                 <li class="social__link-item">
+                                    <a class="social__link" href="" target="_blank">
+                                       <svg class="social__icon">
+                                          <use xlink:href="./img//sprite.svg#icon-youtube"></use>
+                                       </svg>
+                                       <span class="visually-hidden">Youtube</span>
+                                    </a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </li>
+                        <li class="social__btn-item social__btn-item--message">
+                           <button class="social__btn" style="background-image: url(./img/social-message.svg);"></button>
+                           <div class="social__dropdown">
+                              <h5 class="social__title">Подписаться на новости</h5>
+                              <ul class="social__link-list">
+                                 <li class="social__link-item">
+                                    <a class="social__link" href="" target="_blank">
+                                       <svg class="social__icon">
+                                          <use xlink:href="./img//sprite.svg#icon-news"></use>
+                                       </svg>
+                                       <span class="visually-hidden">Подписаться</span>
+                                    </a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </li>
+                        </ul> -->
                   </div>
-               </main>
-               <div class="purchase__order">
-                  <a href="#" class="button--details button" download>
-                     Скачать единый список материалов
-                     <div class="button-line button-line--first is-inview"></div>
-                     <div class="button-line button-line--two is-inview"></div>
-                  </a>
-                  <p class="purchase__order--text">В случае заинтересованности коммерческие предложения направлять по адресу: <a href="mailto:tender@kzgroup.ru">tender@kzgroup.ru</a></p>
+                  <section class="purchase-inform">
+                     <div class="container">
+                        <p class="purchase-inform__text">В целях обеспечения прозрачности и объективности процедур закупки продукции для нужд группы компаний «Кировский завод», на предприятии действует телефон доверия. При выявлении недобросовестных действий со стороны участников торгов
+                           просьба сообщать о подобных фактах
+                        </p>
+                        <div class="purchase-inform__contacts">
+                           <div class="purchase-inform__contacts--item">
+                              <span class="purchase-inform__contacts--title">Телефон/Факс:</span>
+                              <a class="purchase-inform__contacts--content" href="tel:+78127020102">+7 (812) 702-01-02</a>
+                           </div>
+                           <div class="purchase-inform__contacts--item">
+                              <span class="purchase-inform__contacts--title">E-mail:</span>
+                              <a class="purchase-inform__contacts--content" href="mailto:doverie@kzgroup.ru">doverie@kzgroup.ru</a>
+                           </div>
+                        </div>
+                     </div>
+                  </section>
                </div>
             </div>
-            <!-- <ul class="social__btn-list">
-               <li class="social__btn-item social__btn-item--share">
-                  <button class="social__btn" style="background-image: url(./img/social-share.svg);"></button>
-                  <div class="social__dropdown">
-                     <h5 class="social__title">Поделиться:</h5>
-                     <ul class="social__link-list">
-                        <li class="social__link-item">
-                           <a class="social__link" href="" target="_blank">
-                              <svg class="social__icon">
-                                 <use xlink:href="./img//sprite.svg#icon-vk"></use>
-                              </svg>
-                              <span class="visually-hidden">Vk</span>
-                           </a>
-                        </li>
-                        <li class="social__link-item">
-                           <a class="social__link" href="" target="_blank">
-                              <svg class="social__icon">
-                                 <use xlink:href="./img//sprite.svg#icon-inst"></use>
-                              </svg>
-                              <span class="visually-hidden">Instagram</span>
-                           </a>
-                        </li>
-                        <li class="social__link-item">
-                           <a class="social__link" href="" target="_blank">
-                              <svg class="social__icon">
-                                 <use xlink:href="./img//sprite.svg#icon-fb"></use>
-                              </svg>
-                              <span class="visually-hidden">Facebook</span>
-                           </a>
-                        </li>
-                        <li class="social__link-item">
-                           <a class="social__link" href="" target="_blank">
-                              <svg class="social__icon">
-                                 <use xlink:href="./img//sprite.svg#icon-youtube"></use>
-                              </svg>
-                              <span class="visually-hidden">Youtube</span>
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-               </li>
-               <li class="social__btn-item social__btn-item--message">
-                  <button class="social__btn" style="background-image: url(./img/social-message.svg);"></button>
-                  <div class="social__dropdown">
-                     <h5 class="social__title">Подписаться на новости</h5>
-                     <ul class="social__link-list">
-                        <li class="social__link-item">
-                           <a class="social__link" href="" target="_blank">
-                              <svg class="social__icon">
-                                 <use xlink:href="./img//sprite.svg#icon-news"></use>
-                              </svg>
-                              <span class="visually-hidden">Подписаться</span>
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-               </li>
-               </ul> -->
          </div>
-         <section class="purchase-inform">
-            <div class="container">
-               <p class="purchase-inform__text">В целях обеспечения прозрачности и объективности процедур закупки продукции для нужд группы компаний «Кировский завод», на предприятии действует телефон доверия. При выявлении недобросовестных действий со стороны участников торгов
-                  просьба сообщать о подобных фактах
-               </p>
-               <div class="purchase-inform__contacts">
-                  <div class="purchase-inform__contacts--item">
-                     <span class="purchase-inform__contacts--title">Телефон/Факс:</span>
-                     <a class="purchase-inform__contacts--content" href="tel:+78127020102">+7 (812) 702-01-02</a>
-                  </div>
-                  <div class="purchase-inform__contacts--item">
-                     <span class="purchase-inform__contacts--title">E-mail:</span>
-                     <a class="purchase-inform__contacts--content" href="mailto:doverie@kzgroup.ru">doverie@kzgroup.ru</a>
-                  </div>
-               </div>
-            </div>
-         </section>
          <!-- Футер  -->
          <include src="components/footer.html"></include>
       </div>

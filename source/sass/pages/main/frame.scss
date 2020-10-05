@@ -1,14 +1,22 @@
 .frame{
     height: 626px;
+    width: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
     position: relative;
-    cursor: grab;
-  
+    // background-image: url(../img/main/panorama.png);
+    // background-size: cover;
+    // backdrop-filter: blur(8.55368px);
+    // cursor: grab;
 }
+
 
 .frame::-webkit-scrollbar {
     width: 0;
+}
+
+.frame .swiper-scrollbar{
+    display: none !important;
 }
 
 .frame__layer {
@@ -27,8 +35,16 @@
 .frame-container {
     position: relative;
     height: 626px;
+    width: 100%;
+    transition: all 1s linear !important;
+    
+ 
 }
 
+.frame-container .swiper-slide{
+    width: auto;
+    max-width: none !important;
+}
 .pin-link {
     width: 25px;
     height: 34px;
@@ -283,7 +299,8 @@
 }
 
 .map-arrows {
-    position: sticky;
+    z-index: 10;
+    position: absolute;
     bottom: 10%;
     left: 50%;
     transform: translateX(-50%);

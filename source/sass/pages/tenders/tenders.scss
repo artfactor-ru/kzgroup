@@ -1,3 +1,16 @@
+.tender-header-title{
+  display: none;
+}
+.tender-header-title.active{
+  display: block;
+}
+.parallax__img--inner-tender{
+ opacity: 0;
+ transition: all 0.5s ease;
+}
+.parallax__img--inner-tender.active{
+  opacity: 1;
+}
 .tenders__main {
   padding: 45px 0 10px 0;
   overflow: hidden;
@@ -80,9 +93,13 @@
   display: none;
   z-index: 500;
 }
-
-.b-table {
+.b-table__wrap{
   width: 1100px;
+}
+.b-table {
+  // width: 1100px;
+  margin-left: 4%;
+  height: 100%;
   &__header {
     background-color: #171C28;
     height: 64px;
@@ -153,6 +170,7 @@
 
     &::-webkit-input-placeholder {
       color: #F2F4F7;
+      opacity: 0;
     }
 
     &::-moz-placeholder {
@@ -238,8 +256,16 @@
   top: 50%;
   transform: translateY(-50%);
 }
-
+.input-search-tenders:focus ~ .b-table__item--search-icon{
+  display: none;
+}
 @media(min-width: 767px){
+  .input-search-tenders:focus ~ .b-table__item--search-icon{
+    display: block;
+  }
+  .b-table__label .input-search-tenders{
+    padding-left: 35px;
+  }
   .tab-tenders {
     margin-right: 10%!important;
   }
@@ -253,8 +279,12 @@
     width: 53%;
   }
   .b-table {
+    margin-left: 8%;
+  }
+  .b-table__wrap{
     width: 1100px;
   }
+
   .b-table__row {
     font-size: 12px;
   }
@@ -267,9 +297,9 @@
   .b-table__item--search-icon {
     width: unset;
     height: unset;
-    position: relative;
-    top: unset;
-    transform: unset;
+    // position: relative;
+    // top: unset;
+    // transform: unset;
   }
   .b-table {
     &__item {
@@ -333,7 +363,10 @@
 }
 
 @media(min-width: 1279px){
-  .b-table {
+  // .b-table {
+  //   width: 1155px;
+  // }
+  .b-table__wrap{
     width: 1155px;
   }
   .tenders--container .common-pagination__list {
@@ -367,17 +400,27 @@
   .b-table__row-4 {
     width: 12%;
   }
+  .b-table__label .input-search-tenders::-webkit-input-placeholder {
+    color: #F2F4F7;
+    opacity: 1;
+  }
+  .tender-header-title br{
+    display: block;
+  }
 }
 
 @media(min-width: 1364px){
-  .b-table {
+  // .b-table {
+  //   width: 1250px;
+  // }
+  .b-table__wrap{
     width: 1250px;
   }
-
 }
 
 @media(min-width: 1559px){
-  .b-table {
+  
+  .b-table__wrap{
     width: 100%;
   }
   .tenders__main .tenders--container {
@@ -398,7 +441,10 @@
   }
 }
 
-@media(min-width: 1679px){
+@media(min-width: 1680px){
+  .b-table__wrap{
+    margin-right: 9%;
+  }
   .b-table__item {
     font-size: 14px;
   }
