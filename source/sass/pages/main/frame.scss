@@ -21,22 +21,31 @@
 
 .frame__layer {
     position: absolute;
-    width: 100%;
+    width: 1970px;
     height: 100%;
     background: rgba(40, 58, 103, 0.56);
     background-blend-mode: multiply;
     backdrop-filter: blur(8.55368px);
     top: 0;
     left: 0;
-    display: none;
-    z-index: 2;
+    // transform: translate3d(400px, 0px, 0px);
+    
+    // display: none;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 3;
+    transition: all 0.5s ease;
+}
+.frame.active  .frame__layer{
+    opacity: 0.99;
+    pointer-events: auto;
 }
 
 .frame-container {
     position: relative;
     height: 626px;
     width: 100%;
-    transition: all 1s linear !important;
+    transition: all 0.8s linear!important;
     
  
 }
@@ -49,6 +58,11 @@
     width: 25px;
     height: 34px;
     display: block;
+    transition: all 0.5s ease;
+    z-index: 3;
+    &:hover{
+        transform: scale(1.1)
+    }
 }
 
 .panorama {
@@ -60,12 +74,9 @@
     
 }
 
-.pin-popup:after, .pin-popup:before {
-    position: absolute;
-    content: "";
-    display: block;
-    background-color: #fff;
-}
+
+
+
 
 .pin-popup__1:after {
     right: -33px;
@@ -207,6 +218,15 @@
     height: 54px;
 }
 
+.pin-popup:after, .pin-popup:before {
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: #fff;
+    z-index: 3;
+}
+
+
 
 .pin {
     position: absolute;
@@ -299,11 +319,19 @@
 }
 
 .map-arrows {
-    z-index: 10;
+    z-index: 2;
     position: absolute;
     bottom: 10%;
     left: 50%;
+    width: 50%;
     transform: translateX(-50%);
+    @media(min-width: 768px){
+        width: 30%;
+    }
+}
+
+.frame.active .map-arrows{
+    z-index: -1;
 }
 
 .pin-popup h4 {
@@ -313,7 +341,7 @@
 }
 
 .pin-popup {
-    display: none;
+    // display: none;
     padding: 30px 10px;
     text-align: center;
     width: 500px;
@@ -324,8 +352,17 @@
     box-shadow: 0 4px 4px rgba(255, 255, 255, 0.25);
     border-radius: 9.77563px;
     position: relative;
-}
+    transition: all 0.3s ease;
+    // visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
 
+}
+.pin-popup.popup-hidden{
+    // visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
 .pin-popup div {
     height: 100%;
     display: flex;
@@ -434,9 +471,10 @@
         justify-content: center;
     }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     .pin-popup h4 {
-        font-size: 18px;
+        font-size: 14px;
+        margin-bottom: 10px;
     }
     .pin-popup__link {
         height: 30px;
@@ -446,33 +484,35 @@
         }
     }
     .pin-popup {
-        width: 300px;
-        height: 210px;
+        width: 250px;
+        height: 150px;
+        padding: 20px 5px;
     }
     .pin-popup__0 {
-        bottom: 286px;
+        bottom: 226px;
     }
     .pin-popup__0:after {
-        right: 214px;
+        right: 165px;
     }
     .pin-popup__1 {
-        right: 319px;
+        right: 269px;
     }
     .pin-popup__2, .pin-popup__3 {
         bottom: -52px;
-        left: -200px;
+        left: -151px;
     }
     .pin-popup__4, .pin-popup__5, .pin-popup__6, .pin-popup__7 {
-        left: -250px;
+        left: -200px;
     }
     .pin-popup__10, .pin-popup__8, .pin-popup__9 {
         bottom: 22px;
-        left: -346px;
+        left: -297px;
     }
-    .pin-popup__8:before {
-        display: none;
+   
+    .pin-popup__8:after{
+        bottom:80px;
     }
     .pin-popup__11, .pin-popup__12, .pin-popup__13, .pin-popup__14 {
-        left: -250px;
+        left: -201px;
     }
 }
