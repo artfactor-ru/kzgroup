@@ -4,7 +4,9 @@
   &-item
     position: relative
     border-bottom: 1px solid $grey-light-border
-
+  &-item-noinner
+    position: relative
+    border-bottom: 1px solid $grey-light-border
     &.active
       border-bottom: 1px solid $red-color
 
@@ -70,16 +72,16 @@
         margin-left: 21px
         transition: background-image 0.5s, transform 0.5s
         //order: 1
-        @media(max-width: 767px)
-          width: 15px
-          min-width: 15px
-          height: 8px
-          min-height: 8px
-          background-size: 15px 8px
+          @media(min-width: 767px)
+            width: 15px
+            min-width: 15px
+            height: 8px
+            min-height: 8px
+            background-size: 15px 8px
 
     &-content
       color: $black-grey
-      transition: height .5s linear
+      // transition: height .5s linear
       // height: unset
       display: block !important;
       overflow: hidden
@@ -181,12 +183,14 @@
 
     &-content
       color: $black-grey
-      transition: height .5s linear
+      transition: opacity 1s linear
       height: 0
+      opacity: 0
       overflow: hidden
 
     &.show .accordion-item-content
       // max-height: 1000px
+      opacity: 1
       padding-bottom: 40px
       @media(max-width: 767px)
         padding-bottom: 20px
