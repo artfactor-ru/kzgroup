@@ -1,0 +1,135 @@
+.cookie{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.68);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    // visibility: hidden;
+    transform: translateY(100%);
+    transition: all 1s ease;
+}
+.cookie.show{
+    transform: translateY(0%);
+}
+
+
+.cookie__title{
+    @extend %block-text;
+    color: #ffffff;
+}
+
+.cookie__ok{
+    @include btn-destroy;
+    @extend %btn-bordered;
+}
+
+.cookie__ok{
+    margin-left: 50px;
+    padding: 15px;
+    width: 120px;
+    box-sizing: border-box;
+    color: $blue-color;
+    border: 1px solid $light-grey-color;
+    overflow: hidden;
+    &::after{
+        width: 100%;
+        background: $light-grey-color;
+    }
+    &:hover{
+		color: $light-grey-color;
+    }
+    &:hover::after{
+        transform: translateX(100%);
+    }
+
+}
+.cookie__detail{
+    margin-left: 20px;
+    display: inline-block;
+    @extend %btn-bordered;
+
+    color: $light-grey-color;
+    border: 1px solid $light-grey-color;
+    overflow: hidden;
+    &::after{
+        background: $light-grey-color;
+    }
+    &:hover{
+		color: $blue-color;
+    }
+   
+}
+
+@media(max-width: 1279px){
+    .cookie{
+        padding-left: 8%;
+        padding-right: 8%;
+        box-sizing: border-box;
+    }
+
+    .cookie{
+ 
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .cookie__title{
+       width: 50%;
+    }
+    
+    
+    
+    .cookie__ok{
+        margin-left: 50px;
+        padding: 13px;
+        width: 80px;
+    }
+    .cookie__detail{
+        margin-left: 20px;
+ 
+    }
+}
+
+
+@media(max-width: 767px){
+    .cookie{
+        padding-left: 4%;
+        padding-right: 4%;
+        flex-wrap: wrap;
+    }
+
+    .cookie{
+ 
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .cookie__title{
+       width: 100%;
+       text-align: center;
+       margin-bottom: 5px;
+    }
+    
+    
+    
+    .cookie__ok{
+        margin-left: 0px;
+        padding: 13px;
+        width: 80px;
+    }
+    .cookie__detail{
+        margin-left: 20px;
+        width: auto;
+        padding-left: 30px;
+        padding-right: 30px;
+        
+    }
+}
