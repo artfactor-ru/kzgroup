@@ -4,12 +4,19 @@
 	font-size: 30px;
 	line-height: 30px;
 }
-
+.burovie .main__title--about{
+	font-size: 20px;
+	line-height: 20px;
+}
 
 @media(max-width: 359px){
 	.main__title--about{
 		font-size: 22px;
 		line-height: 22px;
+	}
+	.burovie .main__title--about{
+		font-size: 19px;
+		line-height: 19px;
 	}
 }
 
@@ -18,10 +25,19 @@
 		font-size: 48px;
 		line-height: 48px;
 	}
+
+	.burovie .main__title--about{
+		font-size: 38px;
+		line-height: 38px;
+	}
 }
 
 @media(min-width: 1280px){
 	.main__title--about{
+		font-size: 64px;
+		line-height: 64px;
+	}
+	.burovie .main__title--about{
 		font-size: 64px;
 		line-height: 64px;
 	}
@@ -32,4 +48,10 @@
 		font-size: 90px;
 		line-height: 90px;
 	}
+	.burovie .main__title--about{
+		font-size: 80px;
+		line-height: 80px;
+	}
 }
+
+
