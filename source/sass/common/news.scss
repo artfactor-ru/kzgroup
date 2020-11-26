@@ -37,6 +37,7 @@
     height: 100%;
     background-size: cover;
     background-position: center;
+    object-fit: cover;
 }
 .news__date{
     margin: 0;
@@ -270,7 +271,7 @@
         background-size: cover;
         background-position: center;
         
-        --overflow: 100px;
+        --overflow: 50px;
        
             height: calc(100% + (2 * var(--overflow))) !important;
             top: calc( -1 * var(--overflow));

@@ -1,0 +1,141 @@
+
+
+.soc-sfera_about{
+
+	background-image: url(../img/soc-sfera/parallax-mobile.svg);
+
+	background-size: contain ;
+}
+
+
+
+
+.parallax__img--soc-sfera  {
+
+	background-position: bottom center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+ 
+  position: absolute;
+	// z-index: -1;
+	height: 370px;
+	// background-size: 100% auto;
+}
+
+
+
+@media(min-width: 767px){
+	
+	.soc-sfera_about{
+		background-size: cover ;
+	}
+	
+	.parallax__img--soc-sfera{
+
+		background-position: bottom center;
+		background-size: auto 505px;
+		background-repeat: no-repeat;
+		width: 100%;
+		position: absolute;
+		z-index: -1;
+		height: 505px;
+
+	}
+
+}
+
+@media(min-width: 1280px){
+    
+    .soc-sfera_about{
+		// padding-bottom: 0;
+        background-image: none;
+    }
+	
+	.parallax__img--soc-sfera{
+
+		background-position: bottom  center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		width: 100%;
+		position: absolute;
+		z-index: -1;
+	
+		
+	}
+	.parallax__img--soc-sfera-1{
+		background-image: url(../img/soc-sfera/parallax-1.svg);
+		background-position: bottom  center;
+		--overflow: -80px;
+		// --overflow: -20%;
+		height: calc(660px + (2 * var(--overflow)));
+		top: calc( -1 * var(--overflow));
+		
+	}
+	.parallax__img--soc-sfera-2{
+		background-image: url(../img/soc-sfera/parallax-2.svg);
+		// --overflow: -15%;
+		--overflow: -4px;
+		height: calc(660px + (2 * var(--overflow)));
+		top: calc( -1 * var(--overflow));
+		
+	}
+	.parallax__img--soc-sfera-3{
+		background-image: url(../img/soc-sfera/parallax-3.svg);
+		// --overflow: -150px;
+		--overflow: 70px;
+		// --overflow: -50%;
+		height: calc(660px + (2 * var(--overflow)));
+		top: calc( -1 * var(--overflow));
+	
+    }
+   
+
+
+
+	
+
+}
+@media(min-width: 1400px){
+	.parallax__img--soc-sfera-1{
+		// background-image: url(../img/about/about-parallax-first-1.svg);
+		background-position: bottom  center;
+		--overflow: -80px;
+		// --overflow: -20%;
+		height: calc(660px + (2 * var(--overflow)));
+		top: calc( -1 * var(--overflow));
+		
+	}
+}
+
+@media(min-width: 1680px){
+	
+	.parallax__img--soc-sfera-1{
+		// background-image: url(../img/about/about-parallax-first-1.svg);
+		background-position: bottom  center;
+		--overflow: -110px;
+		// --overflow: -20%;
+		height: calc(660px + (2 * var(--overflow)));
+		top: calc( -1 * var(--overflow));
+		
+	}
+	.parallax__img--soc-sfera-2{
+		// background-image: url(../img/about/about-parallax-first-2.svg);
+		// --overflow: -15%;
+		--overflow: -8px;
+		height: calc(660px + (2 * var(--overflow)));
+		top: calc( -1 * var(--overflow));
+		
+	}
+	.parallax__img--soc-sfera-3{
+		// background-image: url(../img/about/about-parallax-first-3.svg);
+		// --overflow: -150px;
+		--overflow: 80px;
+		// --overflow: -50%;
+		height: calc(660px + (2 * var(--overflow)));
+		top: calc( -1 * var(--overflow));
+	
+    }
+  
+
+}

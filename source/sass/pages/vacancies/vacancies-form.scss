@@ -198,16 +198,19 @@
 .vac-f__main-form {
   width: 75%;
 }
-
+.field__file-wrapper{
+  align-items: center;
+}
 .vac-f__form-education-btn {
   @extend %link-underline;
   cursor: pointer;
+  flex-shrink: 0;
   font-family: $font-regular;
-  font-size: 18px;
+  font-size: 16px;
   text-transform: uppercase;
   color: #616161;
   border: none;
-  margin: 0 30px 20px 0;
+  margin: 0 10px 20px 0;
   outline: none;
 }
 
@@ -500,10 +503,10 @@
   .vac-f__form-education-btn {
     margin-right: 0;
     text-align: left;
-    font-size: 12px;
+    font-size: 10px;
   }
   .vac-f__form-download-status {
-    font-size: 12px;
+    font-size: 10px;
   }
   .vac-f__resume {
     & button {
@@ -601,7 +604,7 @@
     margin-top: 0;
   }
   .vac-f__resume-download {
-    margin: 0 15px 0 0;
+    margin: 0 10px 0 0;
   }
   .vac-f__information {
     padding-top: 65px;

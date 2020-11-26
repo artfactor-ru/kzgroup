@@ -4,6 +4,7 @@
 }
 .statistics__number-text{
    font-size:  20px;
+   line-height: initial;
 }
 
 @media(min-width:767px){
@@ -24,6 +25,7 @@
     }
     .statistics__number-text{
         font-size:  32px;
+        line-height: initial;
      }
    
 }
@@ -35,6 +37,7 @@
     }
     .statistics__number-text{
         font-size:  40px;
+        line-height: initial;
      }
    
 }

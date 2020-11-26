@@ -15,9 +15,9 @@
     width: 0;
 }
 
-.frame .swiper-scrollbar{
-    display: none !important;
-}
+// .frame .swiper-scrollbar{
+//     // display: none !important;
+// }
 
 .frame__layer {
     position: absolute;
@@ -34,11 +34,13 @@
     pointer-events: none;
     opacity: 0;
     z-index: 3;
-    transition: all 0.5s ease;
+    transition: all 1s ease 0.5s;
+    
 }
 .frame.active  .frame__layer{
     opacity: 0.99;
     pointer-events: auto;
+    transition: all 1s ease 0s;
 }
 
 .frame-container {
@@ -325,6 +327,9 @@
     left: 50%;
     width: 50%;
     transform: translateX(-50%);
+    opacity: 1;
+   
+    transition: all 1s ease 1s;
     @media(min-width: 768px){
         width: 30%;
     }
@@ -332,6 +337,9 @@
 
 .frame.active .map-arrows{
     z-index: -1;
+    opacity: 0;
+    transition: all 0.3s ease;
+   
 }
 
 .pin-popup h4 {
@@ -352,7 +360,7 @@
     box-shadow: 0 4px 4px rgba(255, 255, 255, 0.25);
     border-radius: 9.77563px;
     position: relative;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease 0.5s;
     // visibility: visible;
     opacity: 1;
     pointer-events: auto;
@@ -360,6 +368,7 @@
 }
 .pin-popup.popup-hidden{
     // visibility: hidden;
+    transition: all 0.5s ease 0s;
     opacity: 0;
     pointer-events: none;
 }
@@ -454,15 +463,23 @@
     color: #fff;
     text-transform: none;
     transition: .3s;
+    
+}
+.pin-popup__link::before{
+    content: "";
+    // position: absolute;
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/play-btn.svg);
+    background-size: 50px 50px;
+    display: inline-block;
 }
 
 .pin-popup__link:hover {
     opacity: 0.6;
 }
 
-.pin-popup__link img {
-    margin-right: 15px;
-}
 
 
 @media screen and (min-width: 2460px) {
@@ -482,6 +499,16 @@
         & img {
             height: 100%;
         }
+    }
+    .pin-popup__link::before{
+        content: "";
+        // position: absolute;
+        margin-right: 15px;
+        width: 35px;
+        height: 35px;
+    
+        background-size: 35px 35px;
+
     }
     .pin-popup {
         width: 250px;

@@ -39,9 +39,20 @@
     color: #FFFFFF;
     white-space: nowrap;
 }
+.personnel-policy__statisctics-number i{
+    font-style: normal;
+    font-size: 20px;
+    letter-spacing: normal;
+    line-height: initial;
+}
+
+
 .personnel-policy__statisctics-data--inner .personnel-policy__statisctics-number{
     font-size: 76px;
     line-height: 81px; 
+}
+.tetramet .personnel-policy__statisctics-data--inner .personnel-policy__statisctics-number{
+    font-size: 65px;
 }
 .personnel-policy__statisctics-percent{
     font-size: 94px;
@@ -97,7 +108,10 @@
 }
 
 @media(min-width:767px){
-        
+    .personnel-policy__statisctics-number i{
+        font-style: normal;
+        font-size: 40px;
+    }
     .personnel-policy{
         background-color: $blue-color;
         padding-top: 70px;
@@ -132,10 +146,16 @@
     .personnel-policy__statisctics-item:not(:last-child){
         margin-right: 60px;
     }
+    .tetramet .personnel-policy__statisctics-item:not(:last-child){
+        margin-right: 20px;
+    } 
     .personnel-policy__statisctics-number{
         font-size: 94px;
         line-height: 94px;  
       
+    }
+    .tetramet .personnel-policy__statisctics-data--inner .personnel-policy__statisctics-number{
+        font-size: 70px;
     }
     .personnel-policy__statisctics-percent{
         font-size: 94px;
@@ -164,7 +184,10 @@
 
 
 @media(min-width:1280px){
-        
+    .personnel-policy__statisctics-number i{
+        font-style: normal;
+        font-size: 60px;
+    }
     .personnel-policy{
      
         padding-top: 80px;
@@ -197,10 +220,16 @@
     .personnel-policy__statisctics-item:not(:last-child){
         margin-right: 80px;
     }
+    .tetramet .personnel-policy__statisctics-item:not(:last-child){
+        margin-right: 50px;
+    }
     .personnel-policy__statisctics-number{
         font-size: 125px;
         line-height: 125px;
       
+    }
+    .tetramet .personnel-policy__statisctics-data--inner .personnel-policy__statisctics-number {
+        font-size: 110px;
     }
     .personnel-policy__statisctics-percent{
         font-size: 125px;
@@ -230,7 +259,10 @@
 
 
 @media(min-width:1680px){
-        
+    .personnel-policy__statisctics-number i{
+        font-style: normal;
+        font-size: 80px;
+    }
     .personnel-policy{
      
         padding-top: 90px;
@@ -260,6 +292,10 @@
     .personnel-policy__statisctics-item:not(:last-child){
         margin-right: 135px;
     }
+
+    .tetramet .personnel-policy__statisctics-item:not(:last-child){
+        margin-right: 100px;
+    }
     .personnel-policy__statisctics-number{
         font-size: 149px;
         line-height: 149px;
@@ -269,6 +305,9 @@
         font-size: 149px;
         line-height: 149px;
      
+    }
+    .tetramet .personnel-policy__statisctics-data--inner .personnel-policy__statisctics-number {
+        font-size: 120px;
     }
     .personnel-policy__subtitle{
     

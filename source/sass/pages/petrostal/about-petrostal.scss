@@ -1,0 +1,141 @@
+
+
+.petrostal_about{
+
+	background-image: url(../img/petrostal/parallax-mobile.svg);
+
+	background-size: contain ;
+}
+
+
+
+
+.parallax__img--petrostal  {
+
+	background-position: bottom center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+ 
+  position: absolute;
+	// z-index: -1;
+	height: 370px;
+	// background-size: 100% auto;
+}
+
+
+
+@media(min-width: 767px){
+	
+	.petrostal_about{
+		background-size: cover ;
+	}
+	
+	.parallax__img--petrostal{
+
+		background-position: bottom center;
+		background-size: auto 505px;
+		background-repeat: no-repeat;
+		width: 100%;
+		position: absolute;
+		z-index: -1;
+		height: 505px;
+
+	}
+
+}
+
+@media(min-width: 1280px){
+    
+    .petrostal_about{
+		// padding-bottom: 0;
+        background-image: none;
+    }
+	
+	.parallax__img--petrostal{
+
+		background-position: bottom  center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		width: 100%;
+		position: absolute;
+		z-index: -1;
+	
+		
+	}
+	.parallax__img--petrostal-1{
+		background-image: url(../img/petrostal/parallax-1.svg);
+		background-position: bottom  center;
+		--overflow: -88px;
+		// --overflow: -20%;
+		height: calc(660px + (2 * var(--overflow)));
+		top: calc( -1 * var(--overflow));
+		
+	}
+	.parallax__img--petrostal-2{
+		background-image: url(../img/petrostal/parallax-2.svg);
+		// --overflow: -15%;
+		--overflow: -70px;
+		height: calc(660px + (2 * var(--overflow)));
+		top: calc( -1 * var(--overflow));
+		
+	}
+	.parallax__img--petrostal-3{
+		background-image: url(../img/petrostal/parallax-3.svg);
+		// --overflow: -150px;
+		--overflow: 70px;
+		// --overflow: -50%;
+		height: calc(660px + (2 * var(--overflow)));
+		top: calc( -1 * var(--overflow));
+	
+    }
+   
+
+
+
+	
+
+}
+@media(min-width: 1400px){
+	.parallax__img--petrostal-1{
+		// background-image: url(../img/about/about-parallax-first-1.svg);
+		background-position: bottom  center;
+		--overflow: -80px;
+		// --overflow: -20%;
+		height: calc(660px + (2 * var(--overflow)));
+		top: calc( -1 * var(--overflow));
+		
+	}
+}
+
+@media(min-width: 1680px){
+	
+	.parallax__img--petrostal-1{
+		// background-image: url(../img/about/about-parallax-first-1.svg);
+		background-position: bottom  center;
+		--overflow: -110px;
+		// --overflow: -20%;
+		height: calc(660px + (2 * var(--overflow)));
+		top: calc( -1 * var(--overflow));
+		
+	}
+	.parallax__img--petrostal-2{
+		// background-image: url(../img/about/about-parallax-first-2.svg);
+		// --overflow: -15%;
+		--overflow: -80px;
+		height: calc(660px + (2 * var(--overflow)));
+		top: calc( -1 * var(--overflow));
+		
+	}
+	.parallax__img--petrostal-3{
+		// background-image: url(../img/about/about-parallax-first-3.svg);
+		// --overflow: -150px;
+		--overflow: 80px;
+		// --overflow: -50%;
+		height: calc(660px + (2 * var(--overflow)));
+		top: calc( -1 * var(--overflow));
+	
+    }
+  
+
+}

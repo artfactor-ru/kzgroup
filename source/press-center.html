@@ -358,5 +358,53 @@
          <!-- Футер  -->
          <include src="components/footer.html"></include>
       </div>
+
+
+      <include src="components/btn-up.html"></include>
+
+      <div class="vacancies-d__form-wrapper vacancies-d__form-container vacancies-d__form-wrapper--feedback">
+        <div class="vacancies-d__form-layer"></div>
+        <form id="vac-d-form" class="vacancies-d__form">
+            <svg class="vacancies-d__form-close vac-d-form-test" width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7109 15.1292L0.355601 29.4845L1.06271 30.1916L15.418 15.8363L29.0663 29.4845L29.7734 28.7774L16.1251 15.1292L29.7756 1.47873L29.0685 0.771619L15.418 14.4221L1.06049 0.0645121L0.353381 0.771619L14.7109 15.1292Z" fill="black"/>
+            </svg>
+            <h2>Подписаться на рассылку<br>
+                и узнавать первым актуальные  новости
+                компании</h2>
+            <div class="vacancies-d__form-inputs">
+                <label class="vacancies-d__form-label">
+                    <span>Имя</span>
+                    <div class="vac-d-form__input-container">
+                        <input name="name" id="vac-d-form__name" type="text" onkeyup="this.value = this.value.replace(/[0-9]/i, '')">
+                    </div>
+                </label>
+             
+                <label class="vacancies-d__form-label">
+                    <span>E-mail</span>
+                    <div class="vac-d-form__input-container">
+                        <input name="email" type="text">
+                    </div>
+                </label>
+             
+    
+                <div class="vacancies-d__form-label  vacancies-d__form-label--footer">
+                    <div class="vac-d-form__input-container">
+                        <div class="vacancies-d__form-buttons--block">
+                            <button class="button vacancies-d__response vacancies-d__submit" type="submit">
+                                Отправить
+                                <!-- <div class=" button-line button-line--first"></div>
+                                <div class=" button-line button-line--two"></div> -->
+                            </button>
+                            <p class="vacancies-d__license">Нажимая на кнопку откликнуться, вы принимаете <a href="#0">согласие на обработку персональных данных</a></p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+     
+           
+        </form>
+    </div>
       <script src="./js/script.min.js"></script>
+   
    </body>

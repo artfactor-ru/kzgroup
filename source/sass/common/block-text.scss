@@ -30,10 +30,31 @@
         padding-bottom: 60px;
     }
 }
-
-
+.block_text__arcticle{
+    padding-top: 50px;
+  
+    @media(min-width: 768px) {
+        padding-top: 50px;
+        
+    }
+    @media(min-width:1280px){
+        padding-top: 70px;
+    }
+    @media(min-width:1680px){
+    
+        padding-top: 90px;
+       
+    }
+}
+.block_text--center{
+     padding-top: 0;
+}
 .block_text__title {
     @extend %block-title;
+  
+}
+.block_text__title--main{
+    padding-bottom: 40px;
 }
 
 .block_text__list {
@@ -70,13 +91,19 @@
     @extend %block-text;
     padding-top: 10px;
 }
-
+.block_text__smalllist--white{
+    color: #fff;
+}
 .block_text__smalllist li {
+    @extend %block-text;
     margin-bottom: 5px;
     position: relative;
     padding-left: 28px;
 }
-
+.block_text__smalllist--white li{
+    color: #fff;
+    margin-bottom: 5px;
+}
 .block_text__smalllist li::before {
     content: "";
     position: absolute;
@@ -87,7 +114,9 @@
     top: 50%;
     transform: translateY(-50%);
 }
-
+.block_text__smalllist--white li::before {
+    background-color: #fff;
+}
 @media(min-width: 768px) {
     .block_text__list {
         margin-top: 35px;
@@ -99,7 +128,7 @@
         margin-bottom: 22px;
     }
     .block_text__paragraph {
-        padding-top: 30px;
+        padding-top: 25px;
         width: 95%;
     }
     .block_text__smalllist {
@@ -119,7 +148,7 @@
         margin-bottom: 40px;
     }
     .block_text__paragraph {
-        padding-top: 45px;
+        padding-top: 25px;
         width: 95%;
     }
     .block_text__smalllist {
@@ -127,6 +156,9 @@
     }
     .block_text__smalllist li {
         margin-bottom: 20px;
+    }
+    .block_text__smalllist--white li{
+        margin-bottom: 5px;
     }
     .block_text__title {
         width: 90%;
@@ -146,14 +178,21 @@
         margin-bottom: 40px;
     }
     .block_text__paragraph {
-        padding-top: 45px;
+        padding-top: 35px;
         width: 80%;
     }
     .block_text__smalllist {
         padding-top: 65px;
-        padding-left: 50px;
+        // padding-left: 50px;
     }
     .block_text__smalllist li::before {
         width: 13px;
     }
+}
+
+.block_text__title--small{
+    @extend %block-title;
+    font-weight: normal;
+    font-family: $font-text-regular;
+    
 }

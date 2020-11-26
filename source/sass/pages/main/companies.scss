@@ -5,6 +5,7 @@
     background-color: #242a3a;
     position: relative;
 }
+
 .swiper-slide--companies{
     width: 100%;
     
@@ -15,12 +16,22 @@
     min-height: 448px;
 }
 
-
 .swiper-slide--companies{
     transition: opacity 3s ease !important;
     overflow: visible !important;
     // transition-delay: 2s;
 }
+.swiper-slide--companies .parallax__img--slide::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.13);
+    // background: linear-gradient(0deg, rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.23)); 
+    background-blend-mode: multiply, normal, normal;
+}
+
 .swiper-slide--companies .swiper-slide-active{
     transition: opacity 3s ease!important;
     // z-index: 20;
@@ -31,10 +42,10 @@
     height: 100%;
     top:0;
     left: 0;
-
+  
     transform: scale(1.2);
     transition: all 3s ease;
-    will-change: transform;
+    // will-change: transform;
 }
 .swiper-slide-active .swiper-slide--companies-bg{
     transform: scale(1);
@@ -45,6 +56,7 @@
     color: #FFFFFF;
     position: relative;
     perspective: 600px;
+    width: 80%;
 	overflow:hidden
 }
 
@@ -56,6 +68,27 @@
     position: relative;
     width: 80%;
    
+}
+ul.companies__desc{
+    list-style: none;
+    // margin: 0;
+    width: 100%;
+    // padding: 0;
+}
+ul.companies__desc li{
+    margin-bottom:20px;
+    padding-left: 20px;
+    position: relative;
+}
+ul.companies__desc li::before{
+    content: "";
+    position: absolute;
+    width:10px;
+    height: 1px;
+    background: #FFFFFF;
+    top: 12px;
+    transform: translateY(0%);
+    left: 0%;
 }
 .button-more--companies{
     display: none;
@@ -101,6 +134,7 @@
     font-weight: normal;
     position: relative;
     color: #FFFFFF;
+    width: 100%;
 }
 
 
@@ -111,6 +145,7 @@
 .companies--inner .swiper-wrapper{
     overflow: hidden;
     background-color: #242a3a;
+    // height: auto !important;
     
 
 
@@ -120,12 +155,16 @@
     padding-top: 219px;
     padding-bottom: 22px;
 }
+.energomash .companies--inner .swiper-slide--companies{
+    padding-top: 62px;
+}
+
 .companies--inner .swiper-container-horizontal>.swiper-scrollbar.swiper-scrollbar--companies{
     bottom: 40px;
 }
 @media(min-width:767px){
    
-
+ 
     .swiper-slide--companies{
         width: 100%;
         min-height: 515px;
@@ -139,6 +178,7 @@
    
         color: #FFFFFF;
         position: relative;
+        width: 80%;
     }
     .companies__desc{
 
@@ -174,10 +214,12 @@
     .companies--inner .swiper-container-horizontal>.swiper-scrollbar.swiper-scrollbar--companies{
         bottom: 40px;
     }
- 
+  
 }
 @media(min-width: 1280px){
-
+    ul.companies__desc{
+        width: 60%;
+    }
     .swiper-container--companies-thumbs__subtitle{
         margin: 0;
         padding: 0;
@@ -212,6 +254,7 @@
  
        
     }
+   
     .companies--inner  .swiper-wrapper{
         overflow: hidden;
         padding-bottom: 80px;
@@ -221,8 +264,13 @@
    
         color: #FFFFFF;
         position: relative;
-        // width: 50%;
+        width: 50%;
     }
+    .companies__title--production{
+
+        width: 60%;
+    }
+
     .companies__desc{
 
         color: #FFFFFF;
@@ -316,7 +364,7 @@
         padding-left: 35px;
         
         color: #949494;
-        margin-bottom: 7px;
+        padding-bottom: 10px;
         cursor: pointer;
         position: relative;
         transition: all 1s ease;
@@ -326,9 +374,9 @@
             width: 0;
             height: 1px;
             background-color: #FFFFFF;
-            top: 50%;
+            top: 30%;
             left: 0;
-            transform: translateY(-50%);
+            transform: translateY(-30%);
             transition: all 0.5s ease;
         }
         
@@ -353,7 +401,7 @@
         padding-bottom: 0px;
         background-color: #242a3a;
     }
-    .companies .swiper-wrapper{
+    .companies__thumbs .swiper-wrapper{
         overflow: visible;
         background-color: transparent;
         height: auto !important;
@@ -362,6 +410,13 @@
         // height: 90%;
         padding-top: 410px;
         padding-bottom: 95px;
+    }
+    .energomash .swiper-slide--companies{
+        min-height: 610;
+    }
+    .energomash .companies--inner .swiper-slide--companies {
+        padding-top: 215px;
+        padding-bottom: 0px;
     }
  
 }
@@ -435,7 +490,7 @@
 
         padding-left: 75px;
     
-        margin-bottom: 45px;
+        padding-bottom: 20px;
 
         
     }
@@ -452,5 +507,9 @@
         // height: 90%;
         padding-top: 622px;
         padding-bottom: 155px;
+    }
+    .energomash .companies--inner .swiper-slide--companies {
+        padding-top: 315px;
+        padding-bottom: 0px;
     }
 }

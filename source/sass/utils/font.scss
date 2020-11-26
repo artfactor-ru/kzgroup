@@ -1,3 +1,6 @@
+
+
+
 @font-face {
   font-family: 'HeliosExtBlack';
   src: url("../fonts/heliosextblack_22347-webfont.eot");
@@ -8,6 +11,7 @@
     url('../fonts/HeliosExtBlack_22347.ttf') format('truetype');
 
   font-weight: 400;
+  font-display: swap;
   font-style: normal;
 }
 @font-face {
@@ -21,6 +25,7 @@
 
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: 'HeliosExt';
@@ -32,6 +37,7 @@
     url('../fonts/HeliosExt.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 
@@ -45,6 +51,7 @@
       url('../fonts/MullerLight.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: 'MullerRegular';
@@ -56,6 +63,7 @@
       url('../fonts/MullerRegular.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 
 
@@ -67,7 +75,8 @@
 		url('../fonts/GothamPro-Black.woff') format('woff'),
 		url('../fonts/GothamPro-Black.ttf') format('truetype');
 	font-weight: 900;
-	font-style: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -75,4 +84,13 @@
   src: url("../fonts/GothamPro.ttf");
   // font-weight: 400;
   font-style: normal;
+  font-display: swap;
+}
+
+h4 {
+  display: block;
+  font-size: 1.17em;
+
+  font-weight: bold;
+
 }

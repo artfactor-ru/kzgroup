@@ -90,14 +90,17 @@
       font-size: 36px;
       font-family: $font-bold-2-title;
       margin-bottom: 25px;
+      width: 95%;
       @media screen and (max-width: 1680px) {
         // width: 120px;
         // height: 120px;
         font-size: 30px;
         margin-bottom: 15px;
+        width: 80%;
       }
       @media screen and (max-width: 1280px) {
         font-size: 30px;
+        width: 80%;
       }
 
       @media screen and (max-width: 1280px) {
@@ -183,9 +186,12 @@
       &--item {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
         flex-shrink: 0;
-
+        width: 33%;
+        @media screen and (max-width: 520px) {
+          width: 100%;
+        }
         @media screen and (max-width: 320px) {
           margin: 0;
           padding: 0;
@@ -201,13 +207,19 @@
             display: none;
           }
         }
-
+        &--item:nth-child(2){
+          justify-content: center;
+        }
+        &--item:nth-child(3){
+          justify-content: flex-end;
+        }
         &-text {
           color: #828282;
           text-decoration: none;
           font-style: normal;
         }
 
+   
 
         &>p, &p>a {
           font-family: $font-text-light;

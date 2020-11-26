@@ -57,21 +57,24 @@
    }
   
 }
-@media(max-width: 1440px){
+@media(max-width: 1679px){
   .section-geography__map-planet {
     width: 470px;
     height: 470px;
   }
-  .geography::before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    bottom: -10px;
-   
-    height: 55px;
-    background: #1D1E25;
-  }
 }
+// @media(max-width: 1440px){
+  
+//   .geography::before{
+//     content: "";
+//     position: absolute;
+//     width: 100%;
+//     bottom: -10px;
+   
+//     height: 55px;
+//     background: #1D1E25;
+//   }
+// }
 @media (max-width: 1279px) {
   .section-geography__title-wrapper{
     display: block;
@@ -162,52 +165,8 @@
   .section-geography__title:before {
     left: 38px;
   }
-  .map-item__india {
-    top: 38%;
-    left: 72%;
-  }
-  .map-item__usa {
-    top: 26%;
-    left: 6%;
-  }
-  .map-item__canada {
-    top: 18%;
-    left: 11%;
-  }
-  .map-item__mongolia {
-    top: 19%;
-    left: 72%;
-  }
-  .map-item__kazakhstan {
-    top: 21%;
-    left: 64%;
-  }
-  .map-item__uzbekistan {
-    top: 25%;
-    left: 61%;
-  }
+  
 }
-/*2 макет от 768 до 1023*/
-
-// @media (max-width: 960px) {
-//   .section-geography__map-planet {
-//     width: 640px;
-//     height: 640px;
-//     margin: 0 auto;
-//  }
-//   .section-geography__map {
-//     width: 100%;
-//     height: 100%;
-//     display: block;
-//     margin: 0 auto;
-//     padding: 0;
-//   }
-//   .section-geography__wrapper {
-//     display: block;
-//     max-width: 680px;
-//     margin: 0 auto;
-//   }
-// }
 
 
 /*1 макет от 375 до 767*/
@@ -359,23 +318,8 @@
   }
 }
 
-@media (max-width: 750px) and (orientation: landscape) {
-  .section-geography__map,
-  .section-geography__map-planet {
-    width: 400px;
-    height: 400px;
 
-  }
-}
-@media (max-width: 640px) and (orientation: landscape) {
-  .section-geography__map,
-  .section-geography__map-planet {
-    width: 380px;
-    height: 380px;
-
-  }
-}
-@media (max-width: 600px) and (orientation: landscape) {
+@media (max-width:767px){
   .section-geography__map, 
   .section-geography__map-planet {
     width: 300px;
@@ -383,7 +327,7 @@
   }
 }
 
-@media (max-width: 767px) and (orientation: portrait) {
+@media (max-width: 767px) {
   .geography{
     position: relative;
     width: 100%;
@@ -407,11 +351,7 @@
   .section-geography__footer{
     order: 1;
   }
-  .section-geography__map, 
-  .section-geography__map-planet {
-    width: 350px;
-    height: 350px;
-  }
+ 
   .section-geography__title-wrapper {
     padding: 0 10px;
   }

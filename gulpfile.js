@@ -80,7 +80,7 @@ gulp.task("minifyjs", function () {
         .pipe(source('app.js'))
         .pipe(buffer())
         .pipe(sourcemaps.init())
-        // .pipe(minifyjs())
+        .pipe(minifyjs())
         .pipe(sourcemaps.write('./maps'))
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("./build/js"));
@@ -140,12 +140,12 @@ gulp.task("sprite2", function () {
 });
 
 gulp.task("sprite3", function () {
-  return gulp.src("./source/img/**/picicon_about*.svg")
+  return gulp.src("./source/img/**/about-icon*.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))
     .pipe(rename("sprite-about.svg"))
-    .pipe(gulp.dest("./build/img"));
+    .pipe(gulp.dest("./build/img/sprite"));
 });
 
 // Копируем файлы в build
@@ -172,6 +172,7 @@ gulp.task("build", gulp.series(
   "copy",   // копируем необходимые файлы в папку build
   "sprite", // создаем svg спрайт
   "sprite2",
+  "sprite3",
   "image",  // оптимизируем изображения
   // "webp",   // конвертируем в webp
 
@@ -192,12 +193,14 @@ gulp.task("server", function () {
   });
 
   gulp.watch("./source/img/**/icon-*.svg", gulp.series("sprite", "html")).on("change", browserSync.reload);
+  gulp.watch("./source/img/**/about-icon*.svg", gulp.series("sprite3", "html")).on("change", browserSync.reload);
   gulp.watch("./source/img/**/number-icon*.svg", gulp.series("sprite2", "html")).on("change", browserSync.reload);
-  gulp.watch("./source/img/**/picicon_about*.svg", gulp.series("sprite3", "html")).on("change", browserSync.reload);
+
   gulp.watch("./source/img/**/*.{png,jpg,svg}", gulp.series("image")).on("change", browserSync.reload);
   gulp.watch("./source/js/*.js", {usePolling: true}, gulp.series("minifyjs")).on("change", browserSync.reload);
   gulp.watch("./source/sass/**/*.{sass,scss}", {usePolling: true}, gulp.series("css"));
-  gulp.watch("./source/**/**", gulp.series("html")).on("change", browserSync.reload);
+  gulp.watch("./source/components/**", gulp.series("html")).on("change", browserSync.reload);
+  gulp.watch("./source/*.html", gulp.series("html")).on("change", browserSync.reload);
   gulp.watch("./source/video/**/**", gulp.series("copy")).on("change", browserSync.reload);
 });
 

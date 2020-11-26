@@ -35,7 +35,7 @@
 // }
 
 .parallax__img--video-bg{
-    background-image: url(../img/companies/hero-bg-video.jpg);
+   
     background-size: cover;
 }
 
@@ -170,28 +170,19 @@
     animation-fill-mode: forwards;
     
 }
+.swiper-slide--hero__bg--mobile{
+    display: block;
+}
+.swiper-slide--hero__bg--tablet{
+    display: none;
+}
+.swiper-slide--hero__bg--laptop{
+    display: none;
+}
+.swiper-slide--hero__bg--desktop{
+    display: none;
+}
 
-.swiper-slide--hero__bg--1{
-    background-image: url(../img/companies/hero-bg.jpg);
-}
-.swiper-slide--hero__bg--2{
-    background-image: url(../img/companies/hero-bg-2.jpg);
-}
-.swiper-slide--hero__bg--3{
-    background-image: url(../img/companies/hero-bg-3.jpg);
-}
-.swiper-slide--hero__bg--4{
-    background-image: url(../img/companies/hero-bg-4.jpg);
-}
-.swiper-slide--hero__bg--5{
-    background-image: url(../img/companies/hero-bg-5.jpg);
-}
-.swiper-slide--hero__bg--6{
-    background-image: url(../img/companies/hero-bg-6.jpg);
-}
-.swiper-slide--hero__bg--7{
-    background-image: url(../img/companies/hero-bg-7.jpg);
-}
 @keyframes animate-line{
     100%{
         width: 100%;
@@ -254,10 +245,18 @@
     
     }
 
-    .swiper-slide--hero__bg--1{
-        background-image: url(../img/companies/hero-bg-tablet.jpg);
+    .swiper-slide--hero__bg--mobile{
+        display: none;
     }
-
+    .swiper-slide--hero__bg--tablet{
+        display: block;
+    }
+    .swiper-slide--hero__bg--laptop{
+        display: none;
+    }
+    .swiper-slide--hero__bg--desktop{
+        display: none;
+    }
     .button__video-controls--other{
         @include btn-destroy;
 
@@ -267,7 +266,7 @@
         background-image: url(../img/btn-play.svg);
         background-size: 30px 30px;
     }
- 
+   
 
 }
 @media(min-width:1280px){
@@ -304,10 +303,7 @@
         
     }
     
-    .swiper-slide--hero__bg--1{
-        background-image: url(../img/companies/hero-bg-laptop.jpg);
-    }
-  
+
     .hero__slider-controls{
         display: block;
         width: 8%;
@@ -380,6 +376,19 @@
         object-fit: cover;
        
     }
+
+    .swiper-slide--hero__bg--mobile{
+        display: none;
+    }
+    .swiper-slide--hero__bg--tablet{
+        display: none;
+    }
+    .swiper-slide--hero__bg--laptop{
+        display: block;
+    }
+    .swiper-slide--hero__bg--desktop{
+        display: none;
+    }
 }
 
 @media(min-width:1680px){
@@ -408,9 +417,7 @@
         margin-bottom: 140px;
         
     }
-    .swiper-slide--hero__bg--1{
-        background-image: url(../img/companies/hero-bg-desktop.jpg);
-    }
+ 
  
 
     .hero__subtitle{
@@ -422,7 +429,7 @@
 
     .hero__slider-controls{
  
-        
+        left: 3%;
         bottom: 190px;
   
     }
@@ -430,5 +437,17 @@
         width: 65px;
 		height: 65px;
 		background-size: 65px 65px;
+    }
+    .swiper-slide--hero__bg--mobile{
+        display: none;
+    }
+    .swiper-slide--hero__bg--tablet{
+        display: none;
+    }
+    .swiper-slide--hero__bg--laptop{
+        display: none;
+    }
+    .swiper-slide--hero__bg--desktop{
+        display: block;
     }
 }

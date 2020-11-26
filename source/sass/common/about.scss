@@ -22,6 +22,53 @@
 	width: 90%;
 	position: relative;
 }
+.gas_about .about__desc{
+	width: 100%;
+}
+.about__desc ul{
+	font-size: 12px;
+	list-style: none;
+	margin: 0;
+	padding:0;
+	@media(min-width: 768px){
+		font-size: 14px;
+	}
+	@media(min-width: 1280px){
+		font-size: 20px;
+	}
+	@media(min-width: 1680px){
+		font-size: 24px;
+	}
+}
+.about__desc ul li{
+	padding-left: 30px;
+	position: relative;
+}
+.about__desc ul li::before{
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background-image: url(../img/marker.svg);
+	top:5px;
+	left: 0;
+	background-size: contain;
+	background-repeat: no-repeat;
+	// transform: translateY(-50%);
+	// background-color: #000;
+	@media(min-width: 768px){
+		top:10px;
+	}
+
+	@media(min-width: 1280px){
+		width: 14px;
+		height: 14px;
+		top:14px;
+	}
+	@media(min-width: 1680px){
+		// top:14px;
+	}
+}
 .about__desc span{
 	display: inline-block;
 	margin-bottom: 10px;
@@ -65,7 +112,10 @@
 	.about__desc{
 		
 		padding-top: 20px;
-		width: 85%;
+		width: 80%;
+	}
+	.gas_about .about__desc{
+		width: 90%;
 	}
 	.about__title--ptz{
 		width: 100%;
@@ -91,6 +141,9 @@
 	.about__desc{
 		
 		padding-top: 30px;
+		width: 80%;
+	}
+	.gas_about .about__desc{
 		width: 92%;
 	}
 	.about__title--ptz{
@@ -120,7 +173,9 @@
 	
 		width: 70%;
 	}
-
+	.gas_about .about__desc{
+		width: 90%;
+	}
 	.about__descsmall{
 		width: 85%;
 		font-size: 30px;

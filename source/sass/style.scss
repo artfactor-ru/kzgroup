@@ -23,7 +23,7 @@
 @import 'common/contact-block-more3';
 @import 'common/gallery';
 @import 'common/activity';
-
+@import 'common/coockie';
 
 @import 'pages/main/frame';
 @import 'pages/about/main-about';
@@ -124,11 +124,28 @@
 @import 'pages/prod-system/prod-sys-common';
 @import 'pages/prod-system/prod-about';
 @import 'pages/sitemap/sitemap';
+
+
+@import 'pages/petrostal/about-petrostal';
+@import 'pages/kirov-energo/about-kirov-energo';
+@import 'pages/auto/about-auto';
+@import 'pages/tetramet/about-tetramet';
+@import 'pages/burovie/about-burovie';
+@import 'pages/gas/about-gas';
+@import 'pages/loko/about-loko';
+@import 'pages/soc-sfera/about-soc';
+
+
+@import 'common/modal-form';
+
+@import 'pages/purchases/purchases-details-table';
 body {
     margin: 0;
     padding: 0;
     min-width: 320px;
     background-color: #ffffff;
+    overflow: hidden;
+    
 }
 
 .scroll {
@@ -187,13 +204,13 @@ figure {
 }
 
 // Контейтер
-.scrollbar-track-y {
-    display: none !important;
-}
+// .scrollbar-track-y {
+//     display: none !important;
+// }
 
-.scrollbar-track-x {
-    display: none !important;
-}
+// .scrollbar-track-x {
+//     display: none !important;
+// }
 
 .nav_list-wrap .scrollbar-track-y {
     display: block !important;
@@ -204,14 +221,79 @@ figure {
     padding-left: 4%;
     padding-right: 4%;
     box-sizing: border-box;
-    height: 100%;
+    // height: 100%;
     // box-sizing: border-box;
 }
-.b-table .scrollbar-track-x {
-    display: block !important;
+// .b-table .scrollbar-track-x {
+//     display: block !important;
+// }
+// .p-table__wrapper .scrollbar-track-x {
+//     display: block !important;
+// }
+// .dp-table__wrapper .scrollbar-track-x {
+//     display: block !important;
+// }
+.b-table .scrollbar-track-y {
+    display: none !important;
 }
-.p-table__wrapper .scrollbar-track-x {
-    display: block !important;
+.p-table__wrapper .scrollbar-track-y {
+    display: none !important;
+}
+.dp-table__wrapper .scrollbar-track-y {
+    display: none !important;
+}
+.leadership-person__text .scrollbar-track{
+    display: none !important;
+}
+.btn-up{
+    @include btn-destroy;
+    position: fixed;
+    z-index: -5;
+    // background-color: red;
+    background: transparent;
+    right: 2%;
+    bottom: 2%;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #E6E6E6;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    opacity: 0;
+    &::before{
+        transition: all .5s ease;
+        content: "";
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top:0;
+        height: 100%;
+        background-color: #a29797;
+        transform: translateY(-100%);
+
+    }
+    &:hover::before{
+        transform: translateY(0%);
+        
+    }
+}
+.btn-up .hero__controls-icon{
+    width: 15px;
+    height: 15px;
+    z-index: 5;
+    position: relative;
+    fill: #a29797;
+    transform: rotate(90deg);
+}
+.btn-up:hover .hero__controls-icon{
+    fill: #ffffff;
+}
+.btn-up.btn-show{
+    z-index: 1000;
+    opacity: 1;
+}
+.has-nav-open .btn-up{
+    z-index: -5;
+    opacity: 0;
 }
 @media(min-width: 767px) {
     .container {
@@ -231,12 +313,7 @@ figure {
     }
     
 }
-.sidebar__inner  .scrollbar-track-y{
-    width: 4px;
-}
-.sidebar__inner  .scrollbar-track-y .scrollbar-thumb-y{
-    width: 100%;
-}
+
 
 @media(min-width: 1280px) {
     .container {
@@ -255,7 +332,12 @@ figure {
         margin: 0 auto;
     }
 }
-
+.sidebar__inner  .scrollbar-track-y{
+    width: 4px;
+}
+.sidebar__inner  .scrollbar-track-y .scrollbar-thumb-y{
+    width: 100%;
+}
 .red-accent {
     color: $red-color;
 }
@@ -328,10 +410,15 @@ figure {
 	bottom: 0;
 	left: 0;
     pointer-events: none;
-    z-index: 10;
+    z-index: 1000;
 }
 .barba_background--next{
 	opacity: 0;
+}
+.swiper-lazy-preloader-black{
+    border: 4px solid $grey-text-table;
+    border-radius: 50%;
+    border-top-color: transparent;
 }
 
 

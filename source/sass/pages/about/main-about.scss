@@ -2,12 +2,14 @@
 
 .main__title--about{
 	font-size: 30px;
+	line-height: 30px;
 }
 
 
 @media(max-width: 359px){
 	.main__title--about{
-		font-size: 25px;
+		font-size: 22px;
+		line-height: 22px;
 	}
 }
 

@@ -27,7 +27,7 @@
 
                 <div class="barbacontainer">
 				
-                    <div  class="barbawrapper" data-barba="container" data-barba-namespace="home" data-barba-prevent="all">
+                    <div  class="barbawrapper" data-barba="container" data-barba-namespace="home">
         
                         <div class="barba_background"></div>
                         <div class="barba_background--next"></div>
@@ -44,7 +44,7 @@
                                         <include src="components/press/filter.html"></include>
 
                                         <div class="">
-                                            <div class="press-newspage">
+                                            <div class="press-newspage" data-barba-prevent="all">
                                                 <div class="press-newspage__item-container">
                                                     <ul>
                                                         <li class="press-newspage__item">
@@ -66,7 +66,7 @@
                                                         </li>
                                                         
                                                         <li class="press-newspage__item">
-                                                            <a  href="#" class="press-newspage-link"></a>
+                                                            <a  href="index.html" class="press-newspage-link"></a>
                                                             <div class="press-newspage__item-img-container news__item--video"">
                                                                 <div class="parallax-item-press-news parallax__item">
                                                                     <div class="parallax__img-wrap">
@@ -100,7 +100,7 @@
                                                             </div>
                                                         </li>
                                                         <li class="press-newspage__item">
-                                                            <a  href="#" class="press-newspage-link"></a>
+                                                            <a  href="" class="press-newspage-link"></a>
                                                             <div class="press-newspage__item-img-container">
                                                                 <div class="parallax-item-press-news parallax__item">
                                                                     <div class="parallax__img-wrap">
@@ -210,6 +210,6 @@
            <!-- Футер  -->
          <include src="components/footer.html"></include>
         </div>
-    
+        <include src="components/btn-up.html"></include>
     <script src="./js/script.min.js"></script>
 </body>

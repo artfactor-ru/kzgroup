@@ -21,12 +21,12 @@
 .p-table__col {
     color: #f2f4f7;
     font-family: "MullerLight";
-    font-size: 14px;
+    font-size: 13px;
     height: 100%;
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 .p-table__col--1 {
@@ -34,11 +34,11 @@
 }
 
 .p-table__col--2 {
-    width: 15%;
+    width: 16%;
 }
 
 .p-table__col--3{
-    width: 11%;
+    width: 13%;
 }
 
 .p-table__col--4 {
@@ -50,11 +50,11 @@
 }
 
 .p-table__col--6 {
-    width: 13%;
+    width: 16%;
 }
 
 .p-table__col--7 {
-    width: 11%;
+    width: 8%;
     padding-right: 18px;
 }
 
@@ -75,14 +75,14 @@
     align-items: center;
     font-family: "MullerRegular";
     color: #616161;
-    padding: 20px;
+    padding: 20px 10px;
     box-sizing: border-box;
-    font-size: 18px;
+    font-size: 13px;
 }
 
 .p-table__row:first-child {
     font-weight: 600;
-    font-size: 24px;
+    font-size: 18px;
     letter-spacing: 0.01em;
     color: #171C28;
 }
@@ -134,10 +134,11 @@
 
 @media screen and (max-width: 1440px) {
     .p-table__row:first-child {
-        font-size: 20px;
+        font-size: 18px;
     }
     .p-table__row {
-        font-size: 16px;
+        font-size: 13px;
+
     }
     .p-table__download {
         width: 55%;
@@ -179,13 +180,13 @@
         width: 100%;
     }
     .p-table {
-        width: 1140px;
+        // width: 1140px;
     }
     .p-table__row:first-child {
         font-size: 16px;
     }
     .p-table__row {
-        font-size: 14px;
+        font-size: 13px;
         padding: 15px;
     }
 }
@@ -227,7 +228,7 @@
         font-size: 13px;
     }
     .p-table__row {
-        font-size: 12px;
+        font-size: 13px;
     }
     .p-table {
         width: 958px;

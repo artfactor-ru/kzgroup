@@ -68,18 +68,20 @@
 
 .button__video-controls-wrap{
 	position: absolute;
-	right: 4%;
+	left: 4%;
 	bottom: 15px;
+	width: 35px;
+	height: 35px;
 
 }
 .button__video-controls{
 	@include btn-destroy;
 
 
-	width: 30px;
-	height: 30px;
+	width: 35px;
+	height: 35px;
 	background-image: url(../img/btn-play.svg);
-	background-size: 30px 30px;
+	background-size: 35px 35px;
 }
 
 
@@ -133,6 +135,22 @@
 
 
 // }
+.btn-down{
+	display: none;
+}
+
+
+@keyframes anim-btn{
+	0%{
+		transform:translateY(-3px);
+	}
+	50%{
+		transform:translateY(0px);
+	}
+	100%{
+		transform:translateY(3px);
+	}
+}
 @media(max-width: 359px){
 	.main__title{
 		font-size: 25px;
@@ -181,16 +199,51 @@
 	}
 
 	.button__video-controls-wrap{
-		right: 2%;
+		left: 2%;
 		bottom: 20px;
+		width: 35px;
+		height: 35px;
 		
+	}
+	.btn-down{
+		position: absolute;
+		bottom: 20px;
+		// background-color: red;
+		width: 35px;
+		height: 35px;
+		border: 1px solid #e6e6e6;
+		background: transparent;
+		right: 2%;
+		// transform: translateX(-50%);
+		cursor: pointer;
+		outline: none;
+		display: block;
+		z-index: 1000;
+	}
+	.btn-down::after{
+		content: "";
+		position: absolute;
+		background-image: url(../img/main/arrow-button-vertical.svg);
+		width: 35px;
+		height: 35px;
+		background-position: center;
+		background-size: 5px 15px;
+		top:0;
+		left: 0;
+		background-repeat: no-repeat;
+		animation-iteration-count: infinite;
+		animation-name: anim-btn;
+		animation-duration: 0.7s;
+		animation-direction: alternate;
+		animation-timing-function: linear;
+	
 	}
 	
 	
 }
 
 @media(min-width: 1280px){
-
+	
 	.title--inner-main br{
 		display: none;
 	}
@@ -220,13 +273,30 @@
 	
 
 		bottom: 25px;
-		width: 35px;
-		height: 35px;
-		background-size: 35px 35px;
+		width: 50px;
+		height: 50px;
+		background-size: 50px 50px;
 	
 	}
 	.button__video-controls-wrap{
+		left: 2%;
+		width: 50px;
+		height: 50px;
+	}
+	.btn-down{
 		right: 2%;
+		width: 50px;
+		height: 50px;
+
+	}
+	.btn-down::after{
+		
+		width: 50px;
+		height: 50px;
+
+		background-size: 5px 25px;
+
+	
 	}
 	.hero-common__btn--main{
 		margin-top: 30px;
@@ -261,16 +331,20 @@
 		display: none;
 	}
 
-	.button__video-controls{
+	// .button__video-controls{
 
-		width: 65px;
-		height: 65px;
-		background-size: 65px 65px;
-	}
+	// 	width: 65px;
+	// 	height: 65px;
+	// 	background-size: 65px 65px;
+	// }
 	.button__video-controls-wrap{
-		right: 3%;
-		bottom: 25px;
+		left: 3%;
+		bottom: 20px;
 		
+	}
+	.btn-down{
+		right: 3%;
+		bottom: 20px;
 	}
 	.hero-common__btn--main{
 		margin-top: 30px;

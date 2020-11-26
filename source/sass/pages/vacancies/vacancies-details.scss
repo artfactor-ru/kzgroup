@@ -121,22 +121,35 @@
 }
 
 
-
 .vacancies-d__form {
   font-family: $font-text-regular;
-  width: 950px;
-  height: 700px;
   background-color: #fff;
   position: fixed;
   top: 50%;
   left: 50%;
-  z-index: 990;
+  width: 60%;
+  max-width: 1000px;
+  min-width: 659px;
+  padding: 4% 4%;
+  z-index: 1000;
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
-  justify-content: center;
+  // justify-content: center;
   flex-direction: column;
   animation: showBlock .2s linear forwards;
+  @media(max-width: 1679px){
+    padding: 4% 3%;
+  }
+  @media(max-width: 767px){
+    width: 100%;
+    min-width: auto;
+    box-sizing: border-box;
+    // height: 90%;
+    padding: 55px 3%;
+    top:0;
+    transform: translate(-50%, 0%);
+  }
   &-close {
     position: absolute;
     top: 4%;
@@ -151,11 +164,12 @@
   &-wrapper {
     width: 100%;
     height: 100%;
+    // height: auto;
     top: 0;
     left: 0;
     position: absolute;
     display: none;
-    z-index: 900;
+    z-index: 1000;
     animation: showBlock .2s linear forwards;
     opacity: 0;
   }
@@ -163,7 +177,7 @@
     width: 100%;
     height: 100%;
     background-color: #000000ab;
-    z-index: 900;
+    z-index: 1000;
     animation: showBlock .2s linear forwards;
   }
   &-buttons {
@@ -175,32 +189,54 @@
     align-items: center;
   }
   & h2 {
+    font-family: $font-bold-2-title;
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
     color: #000000;
-    margin-bottom: 30px;
+    margin-bottom: 2%;
+    @media(max-width: 1679px){
+      font-size: 24px;
+    }
+    @media(max-width: 767px){
+      text-align: left;
+    }
   }
   &-inputs {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 80%;
+    @media(max-width: 1679px){
+      width: 90%;
+    }
+    @media(max-width: 1279px){
+      width: 100%;
+    }
   }
   &-label {
     display: flex;
     justify-content: space-between;
     margin-bottom: 23px;
     align-items: center;
+
+    
     &:last-child {
       align-items: baseline;
+      margin-bottom: 0;
     }
     & span {
       font-size: 18px;
       text-transform: uppercase;
       color: #616161;
+      @media(max-width: 1279px){
+        font-size: 16px;
+      }
     }
     & input {
-      width: 468px;
+      width: 100%;
       height: 62px;
       border-radius: 3px;
       background-color: #F6F6F6;
@@ -212,7 +248,8 @@
     }
     & textarea {
       box-sizing: border-box;
-      width: 468px;
+      // width: 468px;
+      width: 100%;
       height: 105px;
       border-radius: 3px;
       background-color: #F6F6F6;
@@ -226,6 +263,12 @@
   }
 }
 
+
+.vacancies-d__form-label--footer{
+  justify-content: flex-end;
+}
+
+
 @keyframes showBlock {
   0% {
     opacity: 0;
@@ -237,10 +280,17 @@
 
 .vac-d-form__input-container {
   position: relative;
-  width: 468px;
+  // width: 468px;
+  width: 70%;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  @media(max-width: 1679px){
+    width: 78%;
+  }
+  @media(max-width: 1279px){
+    width: 78%;
+  }
 }
 
 .vacancies-d__submit {
@@ -253,7 +303,7 @@
 .vacancies-d__download-status {
 
   font-family: $font-regular;
-  font-size: 18px;
+  font-size: 15px;
   color: #616161;
 }
 
@@ -279,6 +329,10 @@
   }
   display: flex;
   align-items: center;
+}
+
+.vacancies-d__form-buttons--block--feedback{
+  align-items: center !important;
 }
 
 .vacancies-d__contacts {
@@ -319,6 +373,7 @@
       margin-top: 30px;
     }
   }
+  
   &-icon {
     margin-right: 20px;
     width: 20px;
@@ -380,19 +435,12 @@
     padding-bottom: 0;
     margin-bottom: 9px;
   }
-  .vac-d-form__input-container {
-    width: 433px;
-  }
-  .vacancies-d__form {
-    height: 530px;
-    width: 860px;
-  }
+
+ 
   .vacancies-d__form-label textarea {
     height: 80px;
   }
-  .vacancies-d__form-label input, .vacancies-d__form-label textarea {
-    width: 433px;
-  }
+ 
   .vacancies-d__form-buttons--block:first-child {
     margin-bottom: 10px;
   }
@@ -404,10 +452,8 @@
   }
 }
 
-@media screen and (max-width: 1281px) {
-  .vacancies-d__form {
-    height: 580px;
-  }
+@media screen and (max-width: 1679px) {
+  
   .vacancies-d__form-buttons {
     padding-left: 299px;
     padding-right: 68px;
@@ -454,7 +500,7 @@
   }
 }
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1279px) {
   .vacancies-d__response {
     margin-top: 25px;
   }
@@ -480,16 +526,10 @@
   }
 }
 
-@media screen and (max-width: 992px) {
-  .vacancies-d__form {
-    height: 550px;
-  }
-}
 
-@media screen and (max-width: 801px) {
-  .vac-d-form__input-container {
-    width: 425px;
-  }
+
+@media screen and (max-width: 1279px) {
+ 
   .vacancies-d__response {
     padding: 20px 50px;
   }
@@ -500,20 +540,15 @@
     right: 14%;
     top: 8%;
   }
-  .vacancies-d__form {
-    width: 650px;
-    height: 665px;
-  }
+
   .vacancies-d__form-inputs {
     width: 90%;
   }
   .vacancies-d__form-label input {
-    width: 425px;
+   
     height: 50px;
   }
-  .vacancies-d__form-label textarea {
-    width: 425px;
-  }
+ 
   .vacancies-d__form-buttons {
     padding-left: 193px;
     padding-right: 32px;
@@ -527,7 +562,7 @@
   }
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1279px) {
   .vacancies-d__title {
     font-size: 26px;
     width: 85%;
@@ -598,9 +633,7 @@
     margin: 20px auto;
     display: block;
   }
-}
 
-@media screen and (max-width: 600px) {
   .vacancies-d__form {
     width: 100%;
   }
@@ -615,7 +648,10 @@
   }
 }
 
-@media screen and (max-width: 481px) {
+@media screen and (max-width: 767px) {
+  .vacancies-d__form-inputs {
+    width: 100%;
+  }
   .vac-d-form__input-container {
     width: 100%;
   }
@@ -722,10 +758,7 @@
       left: 23px;
     }
   }
-  .vacancies-d__form {
-    width: 100%;
-    height: 85%;
-  }
+  
   .vacancies-d__form-label input {
     width: 320px;
     height: 45px;
@@ -780,10 +813,10 @@
   }
 }
 
-@media screen and (max-width: 415px) {
-  .vacancies-d__form {
-    height: 95%;
-  }
+
+
+
+@media(max-width:767px){
   .vacancies-d__contacts-icon--locate {
     margin-right: 21px;
     width: 40px;
@@ -809,9 +842,6 @@
   .vacancies-d__response {
     padding: 15px 55px;
   }
-}
-
-@media screen and (max-width: 376px) {
   .vacancies-d__form h2 {
     margin-left: 17px;
   }
@@ -828,19 +858,16 @@
   .vacancies-d__form-label input {
     height: 35px;
   }
-}
-
-@media screen and (max-width: 361px) {
   .vacancies-d__contacts-icon--locate {
     margin-right: 21px;
   }
   .vacancies-d__form  {
-    height: 650px;
+    // height: 650px;
     & h2 {
       font-size: 18px;
       margin-left: 0;
       width: 100%;
-      padding-left: 35px;
+      // padding-left: 35px;
     }
   }
   .vacancies-d__download-status {
@@ -853,18 +880,18 @@
   .vacancies-d__form-buttons--block:first-child {
     margin-bottom: 15px;
   }
-}
 
-@media screen and (max-width: 321px) {
-  .vacancies-d__contacts-icon--locate {
-    margin-right: 23px;
-  }
   .vacancies-d__form {
     & h2 {
       font-size: 17px;
       align-self: start;
     }
   }
+
+  .vacancies-d__contacts-icon--locate {
+    margin-right: 23px;
+  }
+  
   .vacancies-d__form-buttons--block .vacancies-d__download {
     margin-right: 15px;
     font-size: 10px;
@@ -883,6 +910,13 @@
     height: 80px;
   }
   .vacancies-d__form-close {
-    top: 8%;
+    top: 4%;
   }
+}
+p.vacancies-d__contacts-link:hover{
+  opacity: 1;
+}
+
+div.vacancies-d__contacts-link:hover{
+  opacity: 1;
 }

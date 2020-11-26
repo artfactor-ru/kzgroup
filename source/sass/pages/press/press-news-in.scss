@@ -1,6 +1,6 @@
 .press-news-in {
 
-    &-title {
+    &-title h1{
         @extend %block-title;
         margin-bottom: 20px;
 
@@ -103,7 +103,7 @@
             //     line-height: 22px;
             // }
 
-            &-item {
+            & p {
                 margin-bottom: 26px;
             }
         }
@@ -121,7 +121,7 @@
             min-width: 300px;
         }
 
-        &-item {
+        & p {
             margin-bottom: 26px;
         }
     }
@@ -129,7 +129,7 @@
     &-video {
         width: 86%;
         min-width: 1351px;
-        margin-bottom: 45px;
+        // margin-bottom: 45px;
 
         @media only screen and(max-width: 1600px) {
             width: 100%;
@@ -390,7 +390,69 @@
         height: 165px;
     }
 }
+.parallax__item-news-in--small{
+    max-width: 600px;
+    height: 450px;
+    @media only screen and(max-width: 950px) {
+        height: 440px;
+    }
 
+    @media only screen and(max-width: 900px) {
+        height: 417px;
+    }
+
+    @media only screen and(max-width: 850px) {
+        height: 394px;
+    }
+
+    @media only screen and(max-width: 800px) {
+        height: 371px;
+    }
+
+    @media only screen and(max-width: 768px) {
+        height: 359px;
+    }
+
+    @media only screen and(max-width: 750px) {
+        height: 380px;
+    }
+
+    @media only screen and(max-width: 700px) {
+        height: 355px;
+    }
+
+    @media only screen and(max-width: 650px) {
+        height: 330px;
+    }
+
+    @media only screen and(max-width: 600px) {
+        height: 304px;
+    }
+
+    @media only screen and(max-width: 550px) {
+        height: 279px;
+    }
+
+    @media only screen and(max-width: 500px) {
+        height: 254px;
+    }
+
+    @media only screen and(max-width: 450px) {
+        height: 228px;
+    }
+
+    @media only screen and(max-width: 400px) {
+        height: 203px;
+    }
+
+    @media only screen and(max-width: 360px) {
+        height: 183px;
+    }
+
+    @media only screen and(max-width: 320px) {
+        height: 165px;
+    }
+}
 .press-svg-icon {
     fill: #333333;
     width: 30px;
@@ -448,3 +510,7 @@
      height: 100%;
      z-index: 200;
  }
+
+.gallery--news-in{
+    padding-top: 0;
+}

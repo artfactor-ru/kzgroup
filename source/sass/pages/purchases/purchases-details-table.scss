@@ -1,0 +1,118 @@
+.dp-table table{
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .dp-table  thead{
+    background-color: #171c28;
+    // height: 64px;
+  }
+  .dp-table thead td{
+    color: #f2f4f7;
+    font-family: "MullerLight";
+    font-size: 14px;
+    height: 64px;
+    // height: 100%;
+    // display: flex;
+    // align-items: center;
+    // text-align: center;
+    box-sizing: border-box;
+    padding: 0 20px;
+  }
+  .dp-table thead tr{
+    border: none;
+  }
+  
+  .dp-table tr{
+    border-bottom: 2px solid #e2e2e2;
+    transition: .3s;
+    position: relative;
+  }
+  .dp-table td{
+    font-family: "MullerRegular";
+    color: #616161;
+    padding: 20px;
+    font-size: 12px;
+  }
+
+  .dp-table tr td:first-child{
+    font-size: 16px;
+    font-weight: 600;
+    color: #171C28;
+  }
+  .dp-table thead tr td:first-child{
+    color: #f2f4f7;
+    font-family: "MullerLight";
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  .dp-table tr:nth-child(odd) td {
+    background-color: #F6F6F6;
+  }
+  .dp-table table thead tr td{
+    background-color: #171c28 !important;
+  }
+
+
+  .dp-table td:first-child{
+    width: 30%;
+  }
+  .dp-table td:nth-child(2){
+    width: 20%;
+  }
+  .dp-table td:nth-child(3){
+    width: 50%;
+  }
+  @media screen and (min-width: 480px) {
+    .dp-table  td:first-child {
+        width: 33%;
+      }
+      .dp-table  td:nth-child(2){
+        width: 22%;
+      }
+      .dp-table  td:nth-child(3){
+        width: 45%;
+      }
+  }
+  @media screen and (min-width: 768px){
+    .dp-table .td {
+        padding: 20px 10px;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+
+    .dp-table td {
+        padding: 30px 20px;
+        font-size: 12px;
+      }
+      .dp-table td:first-child {
+        font-size: 18px;
+      }
+      
+  }
+
+  @media screen and (min-width: 1280px) {
+
+  }
+
+  @media screen and (min-width: 1440px) {
+    .dp-table td {
+        padding: 40px 20px;
+        font-size: 14px;
+      }
+      .dp-table td:first-child {
+        font-size: 24px;
+      }
+
+      .dp-table td:first-child{
+        width: 35%;
+      }
+      .dp-table  td:nth-child(2){
+        width: 15%;
+      }
+      .dp-table td:nth-child(3){ 
+           width: 50%;
+      }
+  }

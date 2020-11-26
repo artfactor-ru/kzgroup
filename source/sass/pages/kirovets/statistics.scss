@@ -12,6 +12,12 @@
 .statistics__list{
 	@include list-destroy;
 }
+.statistics__list .swiper-wrapper{
+	height: auto;
+}
+.statistics__list .swiper-slide{
+	height: auto;
+}
 .statistics__item{
 	width: 100%;
 	padding-bottom: 80px;

@@ -16,8 +16,8 @@
 }
 
 .zavod-img-wrap--inner{
-	width: 55px;
-	height: 55px;
+	width: 30%;
+	// height: 55px;
 	margin-bottom: 25px;
 }
 .zavod__title--desktop{
@@ -33,7 +33,8 @@
 }
 
 .zavod-text p{
-	margin-top: 15px;
+	box-sizing: border-box;
+	padding-top: 15px;
 	@extend %block-text;
 }
 
@@ -67,7 +68,7 @@
 		margin-top: 50px;
 	}
 	.zavod-text p{
-		margin-top: 25px;
+		padding-top: 25px;
 
 	}
 	.zavod-img-wrap--inner{
@@ -121,7 +122,7 @@
 		margin-top: 30px;
 	}
 	.zavod-text p{
-		margin-top: 25px;
+		padding-top: 25px;
 
 	}
 }
@@ -149,7 +150,7 @@
 
 		font-size: 46px;
 		line-height: 49px;
-		width: 75%;
+		width: 95%;
 	
 	}
 	.zavod-wrapper{
@@ -177,7 +178,7 @@
 		margin-top: 35px;
 	}
 	.zavod-text p{
-		margin-top: 35px;
+		padding-top: 35px;
 
 	}
 }
