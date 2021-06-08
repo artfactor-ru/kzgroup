@@ -1,14 +1,11 @@
 .press-rigt-side-bar-hide {
-    
     @media only screen and(max-width: 1279px) {
         display: none !important;
     }
 }
 
 .press-hidden-sidebar {
-    
     display: none;
-
     @media only screen and(max-width: 1279px) {
         display: flex;
         flex-direction: row;
@@ -24,50 +21,51 @@
     width: 100%;
     max-width: 650px;
     height: 64px;
-  
     @media only screen and(max-width: 767px) {
         max-width: none;
         height: 50px;
     }
-  
-  }
-  
-  .press-hidden-sidebar-select-theme {
+}
+
+.press-hidden-sidebar-select-theme {
     position: relative;
     width: 57%;
-    font-family: 'MullerRegular';
+    font-family: $font-text-regular;
     font-size: 18px;
     line-height: 143.55%;
     color: #000000;
-
-    @media(max-width:767px){
+    @media(max-width: 767px) {
         font-size: 14px;
     }
-  }
-  
-  .press-hidden-sidebar-select-date {
+}
+
+.press-hidden-sidebar-select-theme .new-select {
+    @media(max-width: 767px) {
+        padding-right: 25px;
+    }
+}
+
+.press-hidden-sidebar-select-date {
     position: relative;
     width: 43%;
-    font-family: 'MullerRegular';
+    font-family: $font-text-regular;
     font-size: 18px;
     line-height: 143.55%;
     color: #000000;
-    @media(max-width:767px){
+    @media(max-width: 767px) {
         font-size: 14px;
     }
-  }
-  
-  .press-form-select-arrow {
+}
+
+.press-form-select-arrow {
     position: absolute;
     right: 7%;
     top: 40%;
     z-index: 11;
-  }
-  
-  .press-hidden-sidebar-select-theme-hidden-title {
-  
+}
+
+.press-hidden-sidebar-select-theme-hidden-title {
     @media only screen and(max-width: 550px) {
-      display:none;
+        display: none;
     }
-    
-  }
+}

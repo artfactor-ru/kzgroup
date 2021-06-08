@@ -1,141 +1,140 @@
 <!doctype html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport"
-         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Обратная связь</title>
-      <link rel="stylesheet" href="./css/style.min.css">
-   </head>
-   <body class="contact barbapage" data-barba="wrapper">
-      <section id="alert" class="contacts_popup">
-         <div class="contacts_popup_container">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Обратная связь</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="contact barbapage" data-barba="wrapper">
+    <section id="alert" class="contacts_popup">
+        <div class="contacts_popup_container">
             <p class="contacts_popup_text">
-               Ваш вопрос получен и передан в профильное подразделение
+                Ваш вопрос получен и передан в профильное подразделение
             </p>
             <button class="button button--details contacts_popup_btn" type="button" value="Понятно">
                Понятно
                <div class="button-line button-line--first"></div>
                <div class="button-line button-line--two"></div>
             </button>
-         </div>
-      </section>
-      <!-- Прелоадер -->
-      <include src="components/preloader.html"></include>
-      <!-- Шапка и меню -->
-      <include src="components/header.html"></include>
-      <div class="scroll">
-         <!-- Первый экран контактов -->
-         <include src="components/contact/mainScreen.html"></include>
-         <!-- Табы контактов -->
-         <include src="components/contact/tabs.html"></include>
-         <div class="contacts-container two-screen">
+        </div>
+    </section>
+    <!-- Прелоадер -->
+    <include src="components/preloader.html"></include>
+    <!-- Шапка и меню -->
+    <include src="components/header.html"></include>
+    <div class="scroll">
+        <!-- Первый экран контактов -->
+        <include src="components/contact/mainScreen.html"></include>
+        <!-- Табы контактов -->
+        <include src="components/contact/tabs.html"></include>
+        <div class="contacts-container two-screen">
             <main class="contacts__content-container">
-               <div  class="barbawrapper contacts-info-container contacts-info__contacts-container"" data-barba="container" data-barba-namespace="home">
-                  <div class="barba_background"></div>
-                  <div class="barba_background--next"></div>
-                  <div class="barba_background-in">
-                     <section>
-                        <div class="contacts-mobile_container">
-                           <article class="contacts_form_text">
-                              <h2 class="contacts__contacts-info__main">Написать нам</h2>
-                              <p class="contacts_form_description">Вы можете написать нам через форму обратной связи. Мы адресуем ваш
-                                 вопрос
-                                 специалисту, который при необходимости свяжется с вами напрямую или направит ответ по электронной
-                                 почте
-                              </p>
-                           </article>
-                           <form action="">
-                              <div class="contacts_form_group">
-                                 <label class="contacts_form_group_select">
-                                    <select class="select-contact" name="question" required>
-                                       <option value="choose" disabled>Выбрать тему вопроса</option>
-                                       <option value="topic1">Руководство</option>
-                                       <option value="topic2">Пресс-центр</option>
-                                       <option value="topic3">Дочерние компании</option>
-                                       <option value="topic3">Трудоустройство</option>
-                                       <option value="topic3">Аренда</option>
-                                       <option value="topic3">Музей</option>
-                                    </select>
-                                 </label>
-                                 <label class="contacts_form_group_select">
-                                    <select class="select-contact" name="society" required>
-                                       <option value="choose" disabled>Выбрать дочернее общество или подразделение Кировского завода</option>
-                                       <option value="topic1">1</option>
-                                       <option value="topic2">2</option>
-                                       <option value="topic3">3</option>
-                                       <option value="topic3">4</option>
-                                       <option value="topic3">5</option>
-                                       <option value="topic3">6</option>
-                                    </select>
-                                 </label>
-                              </div>
-                              <div class="contacts_form_group">
-                                 <div class="contacts_form_group_input">
-                                    <label class="contacts_form_label" for="name">Имя</label>
-                                    <input class="contacts_form_input" id="name" type="name" required>
-                                 </div>
-                                 <div class="contacts_form_group_input">
-                                    <label class="contacts_form_label" for="email">E-mail</label>
-                                    <input class="contacts_form_input" id="email" type="email" required>
-                                 </div>
-                                 <div class="contacts_form_group_input">
-                                    <label class="contacts_form_label" for="textarea">Сообщение</label>
-                                    <textarea class="contacts_form_input" name="textarea" id="textarea" rows="5" required></textarea>
-                                 </div>
-                                 <div class="contacts_form_group_input">
-                                    <p class="contacts_form_group_info">Все поля обязательны для заполнения</p>
-                                 </div>
-                                 <div class="contacts_form_group_input">
-                                    <div class="contacts_form_group_button">
-                                       <button class="button button--details" type="submit" value="Отправить" onclick="alert()">
-                                          Отправить
-                                          <div class="button-line button-line--first"></div>
-                                          <div class="button-line button-line--two"></div>
-                                       </button>
-                                    </div>
-                                    <p class="contacts_form_group_agreement">
-                                       Нажимая на кнопку &laquo;отправить&raquo; вы принимаете
-                                       <a href="#0">согласие на обработку персональных данных</a>
+                <div class="barbawrapper contacts-info-container contacts-info__contacts-container" data-barba="container" data-barba-namespace="home ">
+                    <div class="barba_background "></div>
+                    <div class="barba_background--next "></div>
+                    <div class="barba_background-in ">
+                        <section>
+                            <div class="contacts-mobile_container ">
+                                <article class="contacts_form_text ">
+                                    <h2 class="contacts__contacts-info__main ">Написать нам</h2>
+                                    <p class="contacts_form_description ">Вы можете написать нам через форму обратной связи. Мы адресуем ваш вопрос специалисту, который при необходимости свяжется с вами напрямую или направит ответ по электронной почте
                                     </p>
-                                 </div>
-                              </div>
-                           </form>
-                        </div>
-                     </section>
-                  </div>
-               </div>
-               <!-- боковое меню -->
-               <include src="components/contact/aside.html"></include>
+                                </article>
+                                <form action=" ">
+                                    <div class="contacts_form_group ">
+                                        <label class="contacts_form_group_select ">
+                                    <select class="select-contact " name="question " required>
+                                       <option value="choose " disabled>Выбрать тему вопроса</option>
+                                       <option value="topic1 ">Руководство</option>
+                                       <option value="topic2 ">Пресс-центр</option>
+                                       <option value="topic3 ">Дочерние компании</option>
+                                       <option value="topic3 ">Трудоустройство</option>
+                                       <option value="topic3 ">Аренда</option>
+                                       <option value="topic3 ">Музей</option>
+                                    </select>
+                                 </label>
+                                        <label class="contacts_form_group_select ">
+                                    <select class="select-contact " name="society " required>
+                                       <option value="choose " disabled>Выбрать дочернее общество или подразделение Кировского завода</option>
+                                       <option value="topic1 ">1</option>
+                                       <option value="topic2 ">2</option>
+                                       <option value="topic3 ">3</option>
+                                       <option value="topic3 ">4</option>
+                                       <option value="topic3 ">5</option>
+                                       <option value="topic3 ">6</option>
+                                    </select>
+                                 </label>
+                                    </div>
+                                    <div class="contacts_form_group ">
+                                        <div class="contacts_form_group_input ">
+                                            <label class="contacts_form_label " for="name ">Имя</label>
+                                            <input class="contacts_form_input " id="name " type="name " required>
+                                        </div>
+                                        <div class="contacts_form_group_input ">
+                                            <label class="contacts_form_label " for="email ">E-mail</label>
+                                            <input class="contacts_form_input " id="email " type="email " required>
+                                        </div>
+                                        <div class="contacts_form_group_input ">
+                                            <label class="contacts_form_label " for="textarea ">Сообщение</label>
+                                            <textarea class="contacts_form_input " name="textarea " id="textarea " rows="5 " required></textarea>
+                                        </div>
+                                        <div class="contacts_form_group_input ">
+                                            <p class="contacts_form_group_info ">Все поля обязательны для заполнения</p>
+                                        </div>
+                                        <div class="contacts_form_group_input ">
+                                            <div class="contacts_form_group_button ">
+                                                <button class="button button--details " type="submit " value="Отправить " onclick="alert() ">
+                                          Отправить
+                                          <div class="button-line button-line--first "></div>
+                                          <div class="button-line button-line--two "></div>
+                                       </button>
+                                            </div>
+                                            <p class="contacts_form_group_agreement ">
+                                                Нажимая на кнопку &laquo;отправить&raquo; вы принимаете
+                                                <a href="#0 ">согласие на обработку персональных данных</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <!-- боковое меню -->
+                <include src="components/contact/aside.html"></include>
             </main>
-         </div>
-         <!-- Футер  -->
-         <include src="components/footer.html"></include>
-      </div>
+        </div>
+        <!-- Футер  -->
+        <include src="components/footer.html"></include>
+    </div>
 
 
 
-      <article class="modal-ok modal-form hidden" id="modal-ok">
-         <h4>Ваш вопрос получен и передан в профильное подразделение</h4>
-         <button class="modal-form--btnok">ОК</button>
-      </article>
-      <article class="modal-success modal-form hidden" id="modal-success">
-         <button>
-            <svg class="vacancies-d__form-close vac-d-form-test" width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7109 15.1292L0.355601 29.4845L1.06271 30.1916L15.418 15.8363L29.0663 29.4845L29.7734 28.7774L16.1251 15.1292L29.7756 1.47873L29.0685 0.771619L15.418 14.4221L1.06049 0.0645121L0.353381 0.771619L14.7109 15.1292Z" fill="black"/>
+    <article class="modal-ok modal-form hidden " id="modal-ok ">
+        <h4>Ваш вопрос получен и передан в профильное подразделение</h4>
+        <button class="modal-form--btnok ">ОК</button>
+    </article>
+    <article class="modal-success modal-form hidden " id="modal-success ">
+        <button>
+            <svg class="vacancies-d__form-close vac-d-form-test " width="30 " height="31 " viewBox="0 0 30 31 " fill="none " xmlns="http://www.w3.org/2000/svg ">
+               <path fill-rule="evenodd " clip-rule="evenodd " d="M14.7109 15.1292L0.355601 29.4845L1.06271 30.1916L15.418 15.8363L29.0663 29.4845L29.7734 28.7774L16.1251 15.1292L29.7756 1.47873L29.0685 0.771619L15.418 14.4221L1.06049 0.0645121L0.353381
+                    0.771619L14.7109 15.1292Z " fill="black "/>
            </svg>
          </button>
-         
-         <h4>Спасибо за Ваше обращение.<br>
-            Мы свяжемся с Вами в ближайшее время!</h4>
-      </article>
 
-      <div class="overlay hidden"></div>
+        <h4>Спасибо за Ваше обращение.<br> Мы свяжемся с Вами в ближайшее время!</h4>
+    </article>
+
+    <div class="overlay hidden "></div>
 
 
-      <include src="components/btn-up.html"></include>
-      <script src='https://api-maps.yandex.ru/2.1/?lang=ru_RU'></script>
-      <script src="./js/script.min.js"></script>
-   </body>
+    <include src="components/btn-up.html"></include>
+    <!-- <script src='https://api-maps.yandex.ru/2.1/?lang=ru_RU'></script> -->
+    <script src="./js/script.min.js"></script>
+</body>
+
 </html>

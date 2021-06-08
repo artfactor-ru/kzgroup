@@ -1,109 +1,109 @@
-.main__hero{
-
-	height: 435px;
+.main__hero {
+    height: 435px;
     position: relative;
     background-color: #171C28;
-
 }
 
-.parallax__img-wrap--hero{
-
-     pointer-events: none;
+.parallax__img-wrap--hero {
+    pointer-events: none;
     height: 100%;
-
 }
-.parallax__img-video--hero{
+
+.parallax__img-video--hero {
     display: block;
     opacity: 1;
     position: absolute;
     pointer-events: none;
-    height: 100%;
-    min-width: 100%;
+    // height: 100%;
+    // min-width: 100%;
     min-height: 100%;
     object-fit: cover;
-   
 }
+
 // .parallax__img-video--hero{
 //     display: block;
 //     height: 100%;
 //     width: 100%;
 //     position: relative;
-  
 // }
 // .swiper-slide--hero-video{
 //     display: none;
 // }
-
-.parallax__img--video-bg{
-   
+.parallax__img--video-bg {
     background-size: cover;
 }
 
-.swiper-container--hero{
+.swiper-container--hero {
     width: 100%;
     height: 100%;
 }
 
-.swiper-slide--hero__bg{
-   
+.swiper-slide--hero__bg {
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     width: 100%;
     height: 100%;
-    
 }
-.swiper-slide--hero{
-    transition: opacity 3s ease !important;
-    
+
+.swiper-slide--hero {
+    // transition: opacity 3s ease !important;
     // transition-delay: 2s;
 }
-.swiper-container--hero .swiper-slide-active{
-    transition: opacity 3s ease 1s!important;
+
+.swiper-container--hero:not(:first-child) {
+    transition: opacity 3s ease !important;
+    transition-delay: 2s;
+}
+
+// .swiper-container--hero .swiper-slide-next {
+//     transition: opacity 3s ease !important;
+//     transition-delay: 2s;
+// }
+.swiper-container--hero .swiper-slide-active {
+    transition: opacity 3s ease !important;
+    transition-delay: 2s;
     // z-index: 20;
 }
-.swiper-container--hero .parallax__img-wrap{
 
+.swiper-container--hero .parallax__img-wrap {
     transform: scale(1);
-    transition: all 5s ease;
+    transition: transform 5s ease;
     will-change: transform;
 }
-.swiper-container--hero .swiper-slide-active .parallax__img-wrap{
-    transform: scale(1.05);
 
+.swiper-container--hero .swiper-slide-active .parallax__img-wrap {
+    transform: scale(1.05);
 }
 
-
-.swiper-slide--hero .container{
+.swiper-slide--hero .container {
     width: 100%;
     height: 100%;
 }
-.hero__wrap{
+
+.hero__wrap {
     width: 100%;
-    height: 100%; 
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
 }
 
-.hero__title{
+.hero__title {
     @extend %title-main-screen;
     position: relative;
     padding-bottom: 25px;
     font-size: 16px;
     line-height: 18px;
     perspective: 600px;
-    
-    
-	overflow:hidden
+    overflow: hidden
 }
 
-.hero__title .title--inner{
-   
+.hero__title .title--inner {
     opacity: 0
 }
- 
-.hero__subtitle{
+
+.hero__subtitle {
     margin: 0;
     padding: 0;
     font-family: $font-regular;
@@ -111,42 +111,49 @@
     font-weight: normal;
     font-size: 12px;
     line-height: 14px;
-    
     position: relative;
     text-transform: uppercase;
-
     color: #FFFFFF;
     padding-bottom: 10px;
 }
-.hero__title--first{
+
+.hero__title--first {
     text-transform: uppercase;
     font-size: 22px;
     line-height: 28px;
 }
-.button__video-controls-wrap--hero{
+
+.button__video-controls-wrap--hero {
     z-index: 20;
+    // display: none;
+    /* display: none; */
+    bottom: 34px;
+}
+
+.button__video-controls-wrap--other {
     display: none;
 }
-.button__video-controls-wrap--other{
+
+.hero__slider-controls {
     display: none;
 }
-.hero__slider-controls{
-    display: none;
-}
-.hero__slider-controls .swiper-button-next,.hero__slider-controls .swiper-button-prev{
-   
+
+.hero__slider-controls .swiper-button-next,
+.hero__slider-controls .swiper-button-prev {
     @extend %btn-slider;
     border: 1px solid #F2F2F2;
+}
 
+.hero__controls-icon {
+    fill: #F2F2F2;
 }
-.hero__controls-icon{
-    fill:#F2F2F2;
-}
-.hero__slider-controls .swiper-button-next::after,.hero__slider-controls .swiper-button-prev::after{
+
+.hero__slider-controls .swiper-button-next::after,
+.hero__slider-controls .swiper-button-prev::after {
     display: none;
+}
 
- }
-.hero__slide-line{
+.hero__slide-line {
     position: relative;
     width: 100%;
     height: 2px;
@@ -154,218 +161,286 @@
     background: #494949;
 }
 
-.hero__slide-line-time{
+.hero__slide-line-time {
     position: absolute;
     width: 0;
     height: 100%;
     background-color: $red-color;
-
 }
-.load .swiper-container--hero .swiper-slide-active .hero__slide-line-time{
+
+.load .swiper-container--hero .swiper-slide-active .hero__slide-line-time {
     width: 0%;
     animation-name: animate-line;
-    animation-duration: 15000ms;
+    animation-duration: 10000ms;
     // animation-delay: 3s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
-    
 }
-.swiper-slide--hero__bg--mobile{
+
+.load .swiper-container--hero .swiper-slide-active.swiper-slide--hero-video .hero__slide-line-time {
+    animation-duration: 51000ms;
+}
+
+.swiper-slide--hero__bg--mobile {
     display: block;
 }
-.swiper-slide--hero__bg--tablet{
-    display: none;
-}
-.swiper-slide--hero__bg--laptop{
-    display: none;
-}
-.swiper-slide--hero__bg--desktop{
+
+.swiper-slide--hero__bg--tablet {
     display: none;
 }
 
-@keyframes animate-line{
-    100%{
+.swiper-slide--hero__bg--laptop {
+    display: none;
+}
+
+.swiper-slide--hero__bg--desktop {
+    display: none;
+}
+
+@keyframes animate-line {
+    100% {
         width: 100%;
     }
 }
 
-@media(min-width:768px){
-    .swiper-slide--hero-video{
+@media(min-width: 600px) {
+    .main__hero .swiper-slide--hero-video .swiper-slide--hero__bg {
+        background-position: center top;
+        // background-size: contain;
+    }
+}
+
+@media(max-width:600px) {
+    .parallax__img-video {
+        // width: 100%;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width:768px) and (orientation: landscape) {
+    .parallax__img-video {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// @media (max-width:500px) and (orientation: landscape) {
+//     .parallax__img-video {
+//         height: 100%;
+//     }
+// }
+@media(min-width:768px) {
+    .swiper-slide--hero-video {
         display: block;
     }
-    .button__video-controls-wrap--hero{
+    .button__video-controls-wrap--hero {
         display: block;
         z-index: 1000;
-
     }
-    .main__hero{
-
+    .main__hero {
         // height: 512px;
-        height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+        height: 100vh;
+        /* Fallback for browsers that do not support Custom Properties */
         height: calc(var(--vh, 1vh) * 100);
-
     }
-
-    .hero__title{
+    .hero__title {
         position: relative;
         padding-bottom: 40px;
         font-size: 32px;
         line-height: 32px;
     }
-    .hero__title--first{
+    .hero__title--first {
         text-transform: uppercase;
         font-size: 38px;
         line-height: 40px;
     }
-    .hero__subtitle{
-      
+    .hero__subtitle {
         font-size: 18px;
         line-height: 22px;
-     
         padding-bottom: 15px;
     }
-    .button__video-controls-wrap--hero{
+    .button__video-controls-wrap--hero {
         z-index: 20;
         display: block;
     }
-
-    .hero__slide-line{
+    .hero__slide-line {
         position: relative;
         width: 370px;
         height: 3px;
         margin-bottom: 95px;
-        
     }
-    
-    .hero__slide-line-time{
+    .hero__slide-line-time {
         position: absolute;
         width: 0;
         height: 100%;
         background-color: $red-color;
-    
     }
-
-    .swiper-slide--hero__bg--mobile{
+    .swiper-slide--hero__bg--mobile {
         display: none;
     }
-    .swiper-slide--hero__bg--tablet{
+    .swiper-slide--hero__bg--tablet {
         display: block;
     }
-    .swiper-slide--hero__bg--laptop{
+    .swiper-slide--hero__bg--laptop {
         display: none;
     }
-    .swiper-slide--hero__bg--desktop{
+    .swiper-slide--hero__bg--desktop {
         display: none;
     }
-    .button__video-controls--other{
+    .button__video-controls--other {
         @include btn-destroy;
-
-
         width: 30px;
         height: 30px;
         background-image: url(../img/btn-play.svg);
         background-size: 30px 30px;
     }
-   
-
-}
-@media(min-width:1280px){
-    .main__hero{
-
-        height: 100vh;
-
+    .hero__slider-controls {
+        display: block;
+        width: 8%;
+        position: absolute;
+        bottom: 176px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        left: 2%;
+        height: 82px;
+        right: auto;
     }
+    .hero__controls-icon {
+        width: 15px;
+        height: 15px;
+        z-index: 5;
+        position: relative;
+    }
+    .hero__slider-controls .swiper-button-next,
+    .hero__slider-controls .swiper-button-prev {
+        position: relative;
+        top: auto;
+        left: auto;
+        bottom: auto;
+        right: auto;
+        margin-top: 0;
+    }
+    .hero__slider-controls .swiper-button-next {
+        top: auto;
+        bottom: auto;
+    }
+    .hero__slider-controls .swiper-button-next::before,
+    .hero__slider-controls .swiper-button-prev::before {
+        transition: all 0.5s ease;
+        content: "";
+        position: absolute;
+        width: 0%;
+        top: 0;
+        left: -1px;
+        z-index: 1;
+        height: 100%;
+        background-color: #ffffff;
+    }
+    .hero__slider-controls .swiper-button-next:hover::before,
+    .hero__slider-controls .swiper-button-prev:hover::before {
+        content: "";
+        position: absolute;
+        width: 105%;
+        height: 100%;
+        background-color: #ffffff;
+    }
+    .hero__slider-controls .swiper-button-next:hover .hero__controls-icon,
+    .hero__slider-controls .swiper-button-prev:hover .hero__controls-icon {
+        fill: $grey-text-paragraf;
+    }
+}
 
-   
-    .hero__title{
+@media(min-width:1280px) {
+    .main__hero {
+        height: 100vh;
+    }
+    .hero__title {
         position: relative;
         padding-bottom: 115px;
         font-size: 48px;
         line-height: 50px;
     }
-    .hero__title--first{
+    .hero__title--first {
         text-transform: uppercase;
         font-size: 66px;
         line-height: 68px;
     }
-    .hero__subtitle{
-      
+    .hero__subtitle {
         font-size: 25px;
         line-height: 28px;
         padding-bottom: 10px;
     }
-
-    .hero__slide-line{
+    .hero__slide-line {
         position: relative;
         width: 370px;
         height: 3px;
         margin-bottom: 50px;
-        
     }
-    
-
-    .hero__slider-controls{
+    .hero__slider-controls {
         display: block;
         width: 8%;
         position: absolute;
-        
         bottom: 176px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        left:2%;
+        left: 2%;
         height: 112px;
         right: auto;
     }
-    .hero__controls-icon{
+    .hero__controls-icon {
         width: 15px;
         height: 15px;
         z-index: 5;
         position: relative;
-        
     }
-    .hero__slider-controls .swiper-button-next,.hero__slider-controls .swiper-button-prev{
+    .hero__slider-controls .swiper-button-next,
+    .hero__slider-controls .swiper-button-prev {
         position: relative;
-       top:auto;
-       left: auto;
-       bottom:auto;
-       right: auto;
-      margin-top: 0;
+        top: auto;
+        left: auto;
+        bottom: auto;
+        right: auto;
+        margin-top: 0;
     }
-    .hero__slider-controls .swiper-button-next{
+    .hero__slider-controls .swiper-button-next {
         top: auto;
         bottom: auto;
     }
-
-    .hero__slider-controls .swiper-button-next::before,.hero__slider-controls .swiper-button-prev::before{
+    .hero__slider-controls .swiper-button-next::before,
+    .hero__slider-controls .swiper-button-prev::before {
         transition: all 0.5s ease;
         content: "";
         position: absolute;
         width: 0%;
-        left: 0;
+        top: 0;
+        left: -1px;
         z-index: 1;
         height: 100%;
         background-color: #ffffff;
-
     }
-    .hero__slider-controls .swiper-button-next:hover::before, .hero__slider-controls .swiper-button-prev:hover::before{
-       content: "";
-       position: absolute;
-       width: 100%;
-       height: 100%;
-       background-color: #ffffff;
-   }
-   .hero__slider-controls .swiper-button-next:hover .hero__controls-icon, .hero__slider-controls .swiper-button-prev:hover .hero__controls-icon{
+    .hero__slider-controls .swiper-button-next:hover::before,
+    .hero__slider-controls .swiper-button-prev:hover::before {
+        content: "";
+        position: absolute;
+        width: 105%;
+        height: 100%;
+        background-color: #ffffff;
+    }
+    .hero__slider-controls .swiper-button-next:hover .hero__controls-icon,
+    .hero__slider-controls .swiper-button-prev:hover .hero__controls-icon {
         fill: $grey-text-paragraf;
     }
-
-    .button__video-controls--other{
+    .button__video-controls--other {
         bottom: 25px;
-		width: 35px;
-		height: 35px;
-		background-size: 35px 35px;
+        width: 35px;
+        height: 35px;
+        background-size: 35px 35px;
     }
-    .parallax__img-video--hero{
+    .parallax__img-video--hero {
         display: block;
         opacity: 1;
         position: absolute;
@@ -374,80 +449,66 @@
         // min-width: 100%;
         min-height: auto;
         object-fit: cover;
-       
     }
-
-    .swiper-slide--hero__bg--mobile{
+    .swiper-slide--hero__bg--mobile {
         display: none;
     }
-    .swiper-slide--hero__bg--tablet{
+    .swiper-slide--hero__bg--tablet {
         display: none;
     }
-    .swiper-slide--hero__bg--laptop{
+    .swiper-slide--hero__bg--laptop {
         display: block;
     }
-    .swiper-slide--hero__bg--desktop{
+    .swiper-slide--hero__bg--desktop {
         display: none;
     }
 }
 
-@media(min-width:1680px){
-    .main__hero{
-
+@media(min-width:1680px) {
+    .main__hero {
         height: 100vh;
-
     }
-
-    .hero__title{
+    .hero__title {
         position: relative;
         padding-bottom: 42px;
         font-size: 72px;
         line-height: 72px;
     }
-    .hero__title--first{
+    .hero__title--first {
         text-transform: uppercase;
         font-size: 85px;
         line-height: 87px;
     }
-    
-    .hero__slide-line{
+    .hero__slide-line {
         position: relative;
         width: 535px;
         height: 3px;
         margin-bottom: 140px;
-        
     }
- 
- 
-
-    .hero__subtitle{
-      
+    .hero__subtitle {
         font-size: 25px;
         line-height: 69px;
         padding-bottom: 10px;
     }
-
-    .hero__slider-controls{
- 
+    .hero__slider-controls {
         left: 3%;
         bottom: 190px;
-  
     }
-    .button__video-controls--other{
+    .button__video-controls--other {
         width: 65px;
-		height: 65px;
-		background-size: 65px 65px;
+        height: 65px;
+        background-size: 65px 65px;
     }
-    .swiper-slide--hero__bg--mobile{
+    .swiper-slide--hero__bg--mobile {
         display: none;
     }
-    .swiper-slide--hero__bg--tablet{
+    .swiper-slide--hero__bg--tablet {
         display: none;
     }
-    .swiper-slide--hero__bg--laptop{
+    .swiper-slide--hero__bg--laptop {
         display: none;
     }
-    .swiper-slide--hero__bg--desktop{
+    .swiper-slide--hero__bg--desktop {
         display: block;
     }
 }

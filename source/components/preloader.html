@@ -1,35 +1,87 @@
+<!-- Прелоадер -->
+
 <style>
-   
-    .preloader{
+    .preloader {
         background-color: #ffffff;
         width: 100vw;
         z-index: 20000;
         height: 100vh;
-        height: calc(var(--vh, 1vh) * 100);
+        /* height: calc(var(--vh, 1vh) * 100); */
         position: fixed;
-        transition: all 1.5s linear 0s;
+        transition: all 2s linear 0.5s;
         display: flex;
         justify-content: center;
         align-items: center;
         opacity: 1;
-    
     }
-    .preloader__icon{
+    
+    .preloader__wrap {
+        transition: all 0.5s linear;
+    }
+    
+    .preloader__icon {
         width: 130px;
         height: 130px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         fill: none;
-        stroke-dasharray: 1000;
-        stroke-dashoffset: 1000;
-        animation: dash 5s linear forwards 2s;
+        stroke-dasharray: 1000px;
+        stroke-dashoffset: 1000px;
+        animation: dashpre 2s linear forwards;
         animation-iteration-count: infinite;
-    }  
+    }
+    /* .preloader__icon--grey {
+            opacity: 0.2;
+            stroke-dashoffset: 0;
+            fill: rgba(97, 97, 97, 1);
+        }
+         */
+    
     @keyframes dashpre {
         to {
-            stroke-dashoffset: 0;
+            stroke-dashoffset: 0px;
         }
     }
-
+    
+    @media all and (-ms-high-contrast: none),
+    (-ms-high-contrast: active) {
+        .preloader__icon {
+            stroke-dashoffset: 0px;
+        }
+    }
 </style>
 <div class="preloader">
-    <svg  class="preloader__icon" xmlns="http://www.w3.org/2000/svg"><path d="M107.656 65.265l.265-.266-.266-.264L65.264 22.6l-.265-.263-.264.264-42.134 42.134-.264.264.263.265 42.135 42.391.264.266.266-.265 42.391-42.391zm-7.531-35.542l.053.099.099.053 29.349 15.823v38.604l-29.349 15.823-.099.053-.053.099-15.823 29.349H45.698l-15.823-29.349-.053-.099-.099-.053L.374 84.302V45.698l29.35-15.823.098-.053.053-.099L45.698.374h38.604l15.823 29.35z" stroke="#616161" stroke-width=".749"/><path d="M76.517 22.31l47.918 25.898v21.915L76.517 22.309zm30.469 52.89L81.03 123.013H59.068L106.986 75.2zM53.74 105.104L5.796 79.44V57.265l47.944 47.839zM23.753 52.448L49.465 4.374h21.968l-47.68 48.074z" stroke="#616161" stroke-width=".749"/></svg>
+    <div class="preloader__wrap">
+
+        <!-- <svg class="preloader__icon preloader__icon--grey" xmlns="http://www.w3.org/2000/svg" ><path d="M107.656 65.265l.265-.266-.266-.264L65.264 22.6l-.265-.263-.264.264-42.134 42.134-.264.264.263.265 42.135 42.391.264.266.266-.265 42.391-42.391zm-7.531-35.542l.053.099.099.053 29.349 15.823v38.604l-29.349 15.823-.099.053-.053.099-15.823 29.349H45.698l-15.823-29.349-.053-.099-.099-.053L.374 84.302V45.698l29.35-15.823.098-.053.053-.099L45.698.374h38.604l15.823 29.35z" stroke="#616161" stroke-width=".749"/><path d="M76.517 22.31l47.918 25.898v21.915L76.517 22.309zm30.469 52.89L81.03 123.013H59.068L106.986 75.2zM53.74 105.104L5.796 79.44V57.265l47.944 47.839zM23.753 52.448L49.465 4.374h21.968l-47.68 48.074z" stroke="#616161"  stroke-width=".749"/></svg> -->
+        <svg class="preloader__icon" xmlns="http://www.w3.org/2000/svg"><path d="M107.656 65.265l.265-.266-.266-.264L65.264 22.6l-.265-.263-.264.264-42.134 42.134-.264.264.263.265 42.135 42.391.264.266.266-.265 42.391-42.391zm-7.531-35.542l.053.099.099.053 29.349 15.823v38.604l-29.349 15.823-.099.053-.053.099-15.823 29.349H45.698l-15.823-29.349-.053-.099-.099-.053L.374 84.302V45.698l29.35-15.823.098-.053.053-.099L45.698.374h38.604l15.823 29.35z" stroke="#616161" stroke-width=".749"/><path d="M76.517 22.31l47.918 25.898v21.915L76.517 22.309zm30.469 52.89L81.03 123.013H59.068L106.986 75.2zM53.74 105.104L5.796 79.44V57.265l47.944 47.839zM23.753 52.448L49.465 4.374h21.968l-47.68 48.074z" stroke="#616161" stroke-width=".749"/></svg>
+
+
+        <!-- <svg class="preloader__icon preloader__icon--grey" xmlns="http://www.w3.org/2000/svg"><path d="M107.656 65.265l.265-.266-.266-.264L65.264 22.6l-.265-.263-.264.264-42.134 42.134-.264.264.263.265 42.135 42.391.264.266.266-.265 42.391-42.391zm-7.531-35.542l.053.099.099.053 29.349 15.823v38.604l-29.349 15.823-.099.053-.053.099-15.823 29.349H45.698l-15.823-29.349-.053-.099-.099-.053L.374 84.302V45.698l29.35-15.823.098-.053.053-.099L45.698.374h38.604l15.823 29.35z" stroke="#616161" stroke-width=".749" fill="rgba(97, 97, 97, 1)"/><path d="M76.517 22.31l47.918 25.898v21.915L76.517 22.309zm30.469 52.89L81.03 123.013H59.068L106.986 75.2zM53.74 105.104L5.796 79.44V57.265l47.944 47.839zM23.753 52.448L49.465 4.374h21.968l-47.68 48.074z" stroke="#616161" fill="rgba(97, 97, 97, 1)" stroke-width=".749"/></svg>
+            <svg class="preloader__icon" xmlns="http://www.w3.org/2000/svg"><path d="M107.656 65.265l.265-.266-.266-.264L65.264 22.6l-.265-.263-.264.264-42.134 42.134-.264.264.263.265 42.135 42.391.264.266.266-.265 42.391-42.391zm-7.531-35.542l.053.099.099.053 29.349 15.823v38.604l-29.349 15.823-.099.053-.053.099-15.823 29.349H45.698l-15.823-29.349-.053-.099-.099-.053L.374 84.302V45.698l29.35-15.823.098-.053.053-.099L45.698.374h38.604l15.823 29.35z" stroke="#616161" stroke-width=".749" fill="rgba(97, 97, 97, 0)"/><path d="M76.517 22.31l47.918 25.898v21.915L76.517 22.309zm30.469 52.89L81.03 123.013H59.068L106.986 75.2zM53.74 105.104L5.796 79.44V57.265l47.944 47.839zM23.753 52.448L49.465 4.374h21.968l-47.68 48.074z" stroke="#616161" fill="rgba(97, 97, 97, 0)" stroke-width=".749"/></svg> -->
+    </div>
+
 </div>
+
+<article class="cookie">
+    <h5 class="cookie__title">Продолжая использовать сайт, вы соглашаетесь на сбор файлов cookie</h5>
+    <button class="cookie__ok">
+		Ок
+	</button>
+    <a class="cookie__detail" href="/pravila-ispolzovaniya-sayta/ispolzovanie-faylov-cookie/">Подробнее</a>
+</article>
+<script>
+    // document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        // if (window.localStorage.getItem('preloaderIsShown')) {
+        document.querySelector('.preloader').style.display = "none";
+        document.querySelector('.cookie').style.display = "none";
+        // document.querySelector('.preloader').style.display = "none";
+        // } else {
+        // document.querySelector('.preloader').style.display = "block";
+        // }
+        // });
+    }, 200);
+</script>

@@ -3,20 +3,21 @@
     // padding-top: 50px;
 }
 
-.swiper-purchase{
+.swiper-purchase {
     overflow: hidden;
     position: relative;
     padding-bottom: 40px;
     margin-bottom: 35px;
     // position: relative;
-    
 }
-.purchase_card{
+
+.purchase_card {
     margin-right: 4%;
     margin-left: 4%;
     width: 92%;
     box-sizing: border-box;
 }
+
 .purchase__wrapper {
     padding-top: 45px;
     position: relative;
@@ -92,12 +93,12 @@
             bottom: 3px;
             background-color: $grey-text-paragraf;
             transition: width .5s linear;
-          }
-          &:hover {
-            &:before{
-              width: 100%;
+        }
+        &:hover {
+            &:before {
+                width: 100%;
             }
-          }
+        }
     }
 }
 
@@ -146,62 +147,63 @@
         bottom: 3px;
         background-color: $grey-text-paragraf;
         transition: width .5s linear;
-      }
-      &:hover {
-        &:before{
-          width: 100%;
+    }
+    &:hover {
+        &:before {
+            width: 100%;
         }
-      }
+    }
 }
-@media(min-width: 500px){
-   
-    .purchase_card{
-        width:60%;
+
+@media(min-width: 500px) {
+    .purchase_card {
+        width: 60%;
         margin-right: 0%;
         margin-left: 0%;
     }
-    .parallax__item--purchase{
+    .parallax__item--purchase {
         min-height: 225px;
     }
-    .swiper-wrapper--purchase{
+    .swiper-wrapper--purchase {
         margin-left: 8%;
     }
 }
-@media(min-width: 600px){
-    .purchase_card{
-        width:45%;
+
+@media(min-width: 600px) {
+    .purchase_card {
+        width: 45%;
     }
-    .parallax__item--purchase{
+    .parallax__item--purchase {
         min-height: 225px;
     }
 }
+
 @media(min-width: 768px) {
     // .purchase__wrapper .container{
     //     padding-right: 0px;
     // }
-    .swiper-container-horizontal>.swiper-scrollbar--purchase{
+    .swiper-container-horizontal>.swiper-scrollbar--purchase {
         // margin-right: 8%;
         left: 0%;
         width: 93%;
     }
-    .parallax__item--purchase{
-        width:100%
+    .parallax__item--purchase {
+        width: 100%
     }
-    .purchase_card{
+    .purchase_card {
         width: 40.5% !important;
     }
     .tab__descr {
         margin-bottom: 35px;
     }
-    .swiper-purchase{
-        
+    .swiper-purchase {
         padding-bottom: 50px;
         margin-bottom: 65px;
     }
-    .purchase__order{
+    .purchase__order {
         padding-bottom: 50px;
     }
-    .purchase__order .button{
+    .purchase__order .button {
         padding: 15px 30px;
     }
 }
@@ -217,19 +219,17 @@
     }
     .purchase__list {
         margin-bottom: 70px;
-       
         // padding-top: 60px;
         & .cards {
             display: flex;
             justify-content: space-between;
             width: 100%;
             & .purchase_card {
-                
                 & .parallax__item--purchase {
                     min-height: 244px;
                     margin-bottom: 24px;
                 }
-                & .rent_link{
+                & .rent_link {
                     margin-top: 22px;
                 }
             }
@@ -240,7 +240,7 @@
         font-size: 22px;
         & .purchase__order--text {
             font-size: 22px;
-            & a{
+            & a {
                 font-size: 22px;
             }
         }
@@ -250,7 +250,7 @@
             padding: 27px 53px;
         }
     }
-    .parallax__item--purchase{
+    .parallax__item--purchase {
         min-height: 245px;
     }
     .purchase_heading {
@@ -274,33 +274,31 @@
     .purchase-inform__contacts--content {
         font-size: 22px;
     }
-    .swiper-purchase{
+    .swiper-purchase {
         padding-bottom: 0px;
-     
     }
-    .swiper-wrapper--purchase{
+    .swiper-wrapper--purchase {
         display: flex;
         justify-content: space-between;
         width: 100%;
         margin-right: 0%;
         margin-left: 0%;
     }
-    .swiper-purchase{
+    .swiper-purchase {
         margin-right: 8%;
         margin-left: 8%;
         margin-bottom: 85px;
     }
     .purchase_card {
-        width: 31.5% !important;
+        width: 24% !important;
     }
-    .purchase-inform__text{
+    .purchase-inform__text {
         width: 90%;
     }
-    
 }
 
 @media(min-width: 1680px) {
-    .swiper-purchase{
+    .swiper-purchase {
         margin-right: 9%;
         margin-left: 9%;
         margin-bottom: 75px;
@@ -311,7 +309,7 @@
     .parallax__item--purchase {
         margin-bottom: 15px;
     }
-    .parallax__item--purchase{
+    .parallax__item--purchase {
         min-height: 365px;
     }
     .purchase__wrapper {
@@ -325,7 +323,7 @@
         width: 80%;
         & .cards {
             & .purchase_card {
-                width: 32%;
+                width: 24%;
                 & .parallax__item--purchase {
                     min-height: 365px;
                 }
@@ -364,14 +362,12 @@
     }
 }
 
-
 .swiper-container-horizontal>.swiper-scrollbar.swiper-scrollbar--purchase {
     @extend %scroll-line;
     bottom: 0px;
     box-sizing: border-box;
     width: 100%;
     left: 0;
-   
     @media(min-width: 1280px) {
         left: 8%;
         width: 84%;

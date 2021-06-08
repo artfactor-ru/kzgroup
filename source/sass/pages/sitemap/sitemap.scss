@@ -115,9 +115,11 @@
         }
     }
 }
-.sitemap .accordion-item-wrap{
+
+.sitemap .accordion-item-wrap {
     padding-bottom: 20px;
 }
+
 @media(min-width: 767px) {
     .sitemap {
         padding: 45px 0 70px;
@@ -230,13 +232,25 @@
         margin-bottom: 24px;
     }
     .sitemap__list--part {
-        width: 60%;
+        width: 50%;
         &:nth-child(2) {
-            width: 40%;
+            width: 50%;
             padding-left: 0px;
         }
     }
     .sitemap__item--list {
         font-size: 15px;
+    }
+}
+
+.sitemap__list--part--menu {
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.sitemap__list--part--menu .sitemap__item {
+    width: 50%;
+    @media(max-width: 1279px) {
+        width: 100%;
     }
 }

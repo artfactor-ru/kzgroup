@@ -1,4 +1,4 @@
-.frame{
+.frame {
     height: 626px;
     width: 100%;
     overflow-x: hidden;
@@ -10,7 +10,6 @@
     // cursor: grab;
 }
 
-
 .frame::-webkit-scrollbar {
     width: 0;
 }
@@ -18,7 +17,6 @@
 // .frame .swiper-scrollbar{
 //     // display: none !important;
 // }
-
 .frame__layer {
     position: absolute;
     width: 1970px;
@@ -29,15 +27,14 @@
     top: 0;
     left: 0;
     // transform: translate3d(400px, 0px, 0px);
-    
     // display: none;
     pointer-events: none;
     opacity: 0;
-    z-index: 3;
+    z-index: 2;
     transition: all 1s ease 0.5s;
-    
 }
-.frame.active  .frame__layer{
+
+.frame.active .frame__layer {
     opacity: 0.99;
     pointer-events: auto;
     transition: all 1s ease 0s;
@@ -45,24 +42,28 @@
 
 .frame-container {
     position: relative;
-    height: 626px;
-    width: 100%;
+    // height: 626px;
+    // width: 100%;
     transition: all 0.8s linear!important;
-    
- 
 }
 
-.frame-container .swiper-slide{
+.frame-container.init {
+    transform: translate3d(-900px, 0px, 0px) !important;
+}
+
+.frame-container .swiper-slide {
     width: auto;
+    object-fit: cover;
     max-width: none !important;
 }
+
 .pin-link {
     width: 25px;
     height: 34px;
     display: block;
     transition: all 0.5s ease;
     z-index: 3;
-    &:hover{
+    &:hover {
         transform: scale(1.1)
     }
 }
@@ -73,12 +74,7 @@
     // object-fit: cover;
     max-width: unset;
     position: relative;
-    
 }
-
-
-
-
 
 .pin-popup__1:after {
     right: -33px;
@@ -94,13 +90,13 @@
     height: 39px;
 }
 
-
 .pin-popup__0:after {
     right: 413px;
     bottom: -77px;
     width: 33px;
     height: 1px;
 }
+
 .pin-popup__0:before {
     width: 1px;
     bottom: -77px;
@@ -114,6 +110,7 @@
     right: 86px;
     height: 54px;
 }
+
 .pin-popup__3:before {
     width: 1px;
     top: -54px;
@@ -149,7 +146,6 @@
     height: 54px;
 }
 
-
 .pin-popup__8:after {
     right: -60px;
     bottom: 187px;
@@ -157,14 +153,12 @@
     height: 1px;
 }
 
-
 .pin-popup__8:before {
     width: 1px;
     top: 14px;
     right: -60px;
     height: 54px;
 }
-
 
 .pin-popup__9:before {
     height: 1px;
@@ -186,6 +180,7 @@
     right: -59px;
     width: 59px;
 }
+
 .pin-popup__10:after {
     width: 1px;
     top: 14px;
@@ -213,6 +208,7 @@
     right: 36px;
     height: 54px;
 }
+
 .pin-popup__14:before {
     width: 1px;
     top: -54px;
@@ -220,15 +216,14 @@
     height: 54px;
 }
 
-.pin-popup:after, .pin-popup:before {
+.pin-popup:after,
+.pin-popup:before {
     position: absolute;
     content: "";
     display: block;
     background-color: #fff;
     z-index: 3;
 }
-
-
 
 .pin {
     position: absolute;
@@ -256,23 +251,23 @@
 }
 
 .pin-block-2 {
-    left: 1049px;
-    top: 77px;
+    left: 886px;
+    top: 84px;
 }
 
 .pin-block-3 {
-    left: 1132px;
-    top: 70px;
+    left: 972px;
+    top: 78px;
 }
 
 .pin-block-4 {
-    left: 1169px;
+    left: 947px;
     top: 65px;
 }
 
 .pin-block-5 {
-    left: 1138px;
-    top: 122px;
+    left: 953px;
+    top: 89px;
 }
 
 .pin-block-6 {
@@ -286,38 +281,53 @@
 }
 
 .pin-block-8 {
-    left: 1377px;
-    top: 290px;
+    left: 1110px;
+    top: 313px;
 }
 
 .pin-block-9 {
-    left: 1406px;
-    top: 107px;
+    left: 1199px;
+    top: 88px;
 }
 
 .pin-block-10 {
-    left: 1435px;
-    top: 307px;
+    left: 1135px;
+    top: 267px;
 }
 
 .pin-block-11 {
-    left: 1439px;
-    top: 113px;
+    left: 1199px;
+    top: 118px;
 }
 
 .pin-block-12 {
-    left: 1564px;
+    left: 1232px;
     top: 103px;
 }
 
 .pin-block-13 {
-    left: 1665px;
+    left: 1359px;
     top: 109px;
 }
 
 .pin-block-14 {
-    left: 1790px;
+    left: 1212px;
     top: 156px;
+}
+
+.pin-block-15 {
+    left: 1082px;
+    top: 82px;
+}
+
+.pin-block-16 {
+    left: 1595px;
+    top: 162px;
+}
+
+.pin-block-17 {
+    left: 1012px;
+    top: 140px;
 }
 
 .map-arrows {
@@ -328,18 +338,16 @@
     width: 50%;
     transform: translateX(-50%);
     opacity: 1;
-   
     transition: all 1s ease 1s;
-    @media(min-width: 768px){
+    @media(min-width: 768px) {
         width: 30%;
     }
 }
 
-.frame.active .map-arrows{
+.frame.active .map-arrows {
     z-index: -1;
     opacity: 0;
     transition: all 0.3s ease;
-   
 }
 
 .pin-popup h4 {
@@ -364,14 +372,15 @@
     // visibility: visible;
     opacity: 1;
     pointer-events: auto;
-
 }
-.pin-popup.popup-hidden{
+
+.pin-popup.popup-hidden {
     // visibility: hidden;
     transition: all 0.5s ease 0s;
     opacity: 0;
     pointer-events: none;
 }
+
 .pin-popup div {
     height: 100%;
     display: flex;
@@ -448,11 +457,11 @@
     bottom: -51px;
     left: -450px;
 }
+
 .pin-popup__14 {
     bottom: -51px;
     left: -450px;
 }
-
 
 .pin-popup__link {
     position: relative;
@@ -463,9 +472,9 @@
     color: #fff;
     text-transform: none;
     transition: .3s;
-    
 }
-.pin-popup__link::before{
+
+.pin-popup__link::before {
     content: "";
     // position: absolute;
     margin-right: 15px;
@@ -480,14 +489,13 @@
     opacity: 0.6;
 }
 
-
-
 @media screen and (min-width: 2460px) {
     .frame {
         display: flex;
         justify-content: center;
     }
 }
+
 @media screen and (max-width: 768px) {
     .pin-popup h4 {
         font-size: 14px;
@@ -500,15 +508,13 @@
             height: 100%;
         }
     }
-    .pin-popup__link::before{
+    .pin-popup__link::before {
         content: "";
         // position: absolute;
         margin-right: 15px;
         width: 35px;
         height: 35px;
-    
         background-size: 35px 35px;
-
     }
     .pin-popup {
         width: 250px;
@@ -524,22 +530,78 @@
     .pin-popup__1 {
         right: 269px;
     }
-    .pin-popup__2, .pin-popup__3 {
+    .pin-popup__2,
+    .pin-popup__3 {
         bottom: -52px;
         left: -151px;
     }
-    .pin-popup__4, .pin-popup__5, .pin-popup__6, .pin-popup__7 {
+    .pin-popup__4,
+    .pin-popup__5,
+    .pin-popup__6,
+    .pin-popup__7 {
         left: -200px;
     }
-    .pin-popup__10, .pin-popup__8, .pin-popup__9 {
+    .pin-popup__10,
+    .pin-popup__8,
+    .pin-popup__9 {
         bottom: 22px;
         left: -297px;
     }
-   
-    .pin-popup__8:after{
-        bottom:80px;
+    .pin-popup__8:after {
+        bottom: 80px;
     }
-    .pin-popup__11, .pin-popup__12, .pin-popup__13, .pin-popup__14 {
+    .pin-popup__11,
+    .pin-popup__12,
+    .pin-popup__13,
+    .pin-popup__14 {
         left: -201px;
+    }
+}
+
+@media(min-width:768px) {
+    .frame-container .swiper-wrapper {
+        transform: translate3d(-400px, 0px, 0px);
+    }
+    .frame-container.init {
+        transform: translate3d(-400px, 0px, 0px) !important;
+    }
+}
+
+.pin-wrap {
+    width: 1970px;
+    position: absolute;
+    height: 100%;
+}
+
+@media(min-width:1970px) {
+    .panorama {
+        margin: 0 auto;
+    }
+    .pin-wrap {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        // transform: translateX(-50%);
+    }
+    .frame .swiper-scrollbar {
+        display: none;
+    }
+    .map-arrows {
+        display: none;
+    }
+}
+
+@media(min-width:1920px) {
+    .frame-container .swiper-wrapper {
+        transform: translate3d(0px, 0px, 0px);
+    }
+    .frame-container.init {
+        transform: translate3d(0px, 0px, 0px) !important;
+    }
+    .frame__layer {
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

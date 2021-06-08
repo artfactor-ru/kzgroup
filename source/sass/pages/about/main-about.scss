@@ -1,57 +1,88 @@
-
-
-.main__title--about{
-	font-size: 30px;
-	line-height: 30px;
-}
-.burovie .main__title--about{
-	font-size: 20px;
-	line-height: 20px;
+.main__title--about {
+    font-size: 30px;
+    line-height: 30px;
 }
 
-@media(max-width: 359px){
-	.main__title--about{
-		font-size: 22px;
-		line-height: 22px;
-	}
-	.burovie .main__title--about{
-		font-size: 19px;
-		line-height: 19px;
-	}
+.title--inner-main--sub {
+    font-size: 14px;
+    line-height: 14px;
 }
 
-@media(min-width: 767px){
-	.main__title--about{
-		font-size: 48px;
-		line-height: 48px;
-	}
-
-	.burovie .main__title--about{
-		font-size: 38px;
-		line-height: 38px;
-	}
+.burovie .main__title--about {
+    font-size: 20px;
+    line-height: 20px;
 }
 
-@media(min-width: 1280px){
-	.main__title--about{
-		font-size: 64px;
-		line-height: 64px;
-	}
-	.burovie .main__title--about{
-		font-size: 64px;
-		line-height: 64px;
-	}
+@media(max-width: 520px) {
+    .petrostal .main__title--about {
+        font-size: 25px;
+        line-height: 25px;
+    }
+    .prod .main__title--about {
+        font-size: 24px;
+        line-height: 24px;
+    }
+    .title--inner-main--sub {
+        font-size: 14px;
+        line-height: 14px;
+    }
+    @media(max-width: 400px) {
+        .main__title--about {
+            font-size: 22px;
+            line-height: 22px;
+        }
+        .burovie .main__title--about {
+            font-size: 19px;
+            line-height: 19px;
+        }
+        .petrostal .main__title--about {
+            font-size: 22px;
+            line-height: 22px;
+        }
+    }
 }
 
-@media(min-width: 1680px){
-	.main__title--about{
-		font-size: 90px;
-		line-height: 90px;
-	}
-	.burovie .main__title--about{
-		font-size: 80px;
-		line-height: 80px;
-	}
+@media(min-width: 767px) {
+    .main__title--about {
+        font-size: 48px;
+        line-height: 48px;
+    }
+    .burovie .main__title--about {
+        font-size: 38px;
+        line-height: 38px;
+    }
+    .title--inner-main--sub {
+        font-size: 24px;
+        line-height: 24px;
+    }
 }
 
+@media(min-width: 1280px) {
+    .main__title--about {
+        font-size: 64px;
+        line-height: 64px;
+    }
+    .burovie .main__title--about {
+        font-size: 64px;
+        line-height: 64px;
+    }
+    .title--inner-main--sub {
+        font-size: 30px;
+        line-height: 30px;
+    }
+}
 
+@media(min-width: 1680px) {
+    .main__title--about {
+        font-size: 90px;
+        line-height: 90px;
+    }
+    .burovie .main__title--about {
+        font-size: 80px;
+        line-height: 80px;
+    }
+    .title--inner-main--sub {
+        font-size: 40px;
+        line-height: 40px;
+    }
+}

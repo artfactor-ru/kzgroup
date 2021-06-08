@@ -1,922 +1,919 @@
 .vacancies-d__hero {
-  padding: 129px 0;
-  height: 100%;
+    padding: 129px 0;
+    height: 100%;
 }
 
-
 .vacancies-d__breadcrumb {
-  display: block;
-  font-family: $font-regular;
-  font-size: 18px;
-  color: #616161;
-  transition: .4s;
-  svg path {
+    display: block;
+    font-family: $font-regular;
+    font-size: 18px;
+    color: #616161;
     transition: .4s;
-  }
+    margin-top: 20px;
+    svg path {
+        transition: .4s;
+    }
 }
 
 .vacancies-d__title {
-  @extend %block-title;
-  width: 45%;
-  margin: 50px 0 20px 0;
+    @extend %block-title;
+    width: 45%;
+    margin: 50px 0 20px 0;
 }
 
 .vacancies-d__date {
-  font-family: $font-regular;
-  font-size: 18px;
-  color: #67676A;
-  opacity: 0.45;
-  margin-bottom: 60px;
-  display: block;
+    font-family: $font-regular;
+    font-size: 18px;
+    color: #67676A;
+    opacity: 0.45;
+    margin-bottom: 60px;
+    display: block;
 }
 
 .vacancies-d__name {
-  font-family: $font-regular;
-  font-size: 18px;
-  color: #1A1D29;
+    font-family: $font-regular;
+    font-size: 18px;
+    color: #1A1D29;
 }
 
 .vacancies-d__list {
-  list-style: none;
-  position: relative;
-  margin-bottom: 30px;
-  width: 100%;
+    list-style: none;
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
 }
 
 .vacancies-d__item {
-  font-family: $font-text-light;
-  color: #3C3D40;
-  font-size: 18px;
-  display: flex;
-  margin-left: 292px;
-  & p {
-    margin: 5px 0 5px 10px;
-    position: relative;
-    width: 80%;
-    line-height: 1.4;
-    &:before {
-      position: absolute;
-      display: block;
-      content: "—";
-      left: -35px;
+    font-family: $font-text-light;
+    color: #3C3D40;
+    font-size: 18px;
+    display: flex;
+    margin-left: 292px;
+    & p {
+        margin: 5px 0 5px 10px;
+        position: relative;
+        width: 80%;
+        line-height: 1.4;
+        &:before {
+            position: absolute;
+            display: block;
+            content: "—";
+            left: -35px;
+        }
     }
-  }
-  & h6 {
-    position: absolute;
-    left: 0;
-    top: 9px;
-  }
+    & h6 {
+        position: absolute;
+        left: 0;
+        top: 9px;
+    }
 }
 
-
 .vacancies-d__description {
-  display: flex;
+    display: flex;
 }
 
 .vacancies-d__buttons {
-  margin-left: 265px;
+    margin-left: 265px;
 }
 
 .vacancies-d__response {
-  color: #171C28;
-  font-family: $font-text-regular;
-  font-weight: bold;
-  font-size: 14px;
-  margin-top: 11px;
-  padding: 28px 80px;
+    color: #171C28;
+    font-family: $font-text-regular;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 11px;
+    padding: 28px 80px;
 }
 
 //hover кнопки загрузить резюме
-
-
 .vacancies-d__download {
-  @extend %link-underline;
-  position: relative;
-  cursor: pointer;
-  font-family: $font-regular;
-  font-size: 18px;
-  text-transform: uppercase;
-  color: #616161;
-  border: none;
-  background-color: transparent;
-  margin-left: 50px;
-  transition: .8s;
-  padding-bottom: 12px;
-  outline: none;
+    @extend %link-underline;
+    position: relative;
+    cursor: pointer;
+    font-family: $font-regular;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #616161;
+    border: none;
+    background-color: transparent;
+    margin-left: 50px;
+    transition: .8s;
+    padding-bottom: 12px;
+    outline: none;
 }
 
 .vacancies-d__download:before {
-  content:'';
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: #616161;
-  transition: all 0.6s ease;
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #616161;
+    transition: all 0.6s ease;
 }
 
 .vacancies-d__download:hover:before {
-  width: 100%;
+    width: 100%;
 }
 
+.vac-d-form__wrap {
+    position: fixed !important;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 60%;
+    max-width: 1000px;
+    min-width: 700px;
+    max-height: 100%;
+    // max-height: calc(var(--vh, 1vh) * 100);
+    height: 100%;
+    @media(max-width: 767px) {
+        width: 100%;
+        min-width: auto;
+        top: 0;
+        transform: translate(-50%, 0%);
+    }
+}
 
 .vacancies-d__form {
-  font-family: $font-text-regular;
-  background-color: #fff;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 60%;
-  max-width: 1000px;
-  min-width: 659px;
-  padding: 4% 4%;
-  z-index: 1000;
-  transform: translate(-50%, -50%);
-  display: flex;
-  align-items: center;
-  // justify-content: center;
-  flex-direction: column;
-  animation: showBlock .2s linear forwards;
-  @media(max-width: 1679px){
-    padding: 4% 3%;
-  }
-  @media(max-width: 767px){
+    font-family: $font-text-regular;
+    background-color: #fff;
     width: 100%;
-    min-width: auto;
     box-sizing: border-box;
-    // height: 90%;
-    padding: 55px 3%;
-    top:0;
-    transform: translate(-50%, 0%);
-  }
-  &-close {
-    position: absolute;
-    top: 4%;
-    right: 3%;
-    cursor: pointer;
-    transition: .3s;
-    transform: scale(1);
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-  &-wrapper {
-    width: 100%;
-    height: 100%;
-    // height: auto;
-    top: 0;
-    left: 0;
-    position: absolute;
-    display: none;
+    padding: 4% 4%;
     z-index: 1000;
-    animation: showBlock .2s linear forwards;
-    opacity: 0;
-  }
-  &-layer {
-    width: 100%;
-    height: 100%;
-    background-color: #000000ab;
-    z-index: 1000;
-    animation: showBlock .2s linear forwards;
-  }
-  &-buttons {
-    padding-left: 300px;
-    padding-right: 30px;
-  }
-  &-buttons--block {
     display: flex;
     align-items: center;
-  }
-  & h2 {
-    font-family: $font-bold-2-title;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    text-align: center;
-    width: 100%;
-    box-sizing: border-box;
-    color: #000000;
-    margin-bottom: 2%;
-    @media(max-width: 1679px){
-      font-size: 24px;
-    }
-    @media(max-width: 767px){
-      text-align: left;
-    }
-  }
-  &-inputs {
-    display: flex;
+    // justify-content: center;
     flex-direction: column;
-    width: 80%;
-    @media(max-width: 1679px){
-      width: 90%;
+    animation: showBlock .2s linear forwards;
+    @media(max-width: 1679px) {
+        padding: 4% 3%;
     }
-    @media(max-width: 1279px){
-      width: 100%;
+    @media(max-width: 767px) {
+        // width: 100%;
+        // min-width: auto;
+        box-sizing: border-box;
+        // height: 90%;
+        padding: 55px 3%;
     }
-  }
-  &-label {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 23px;
-    align-items: center;
-
-    
-    &:last-child {
-      align-items: baseline;
-      margin-bottom: 0;
+    &-close {
+        position: absolute;
+        top: 4%;
+        right: 3%;
+        cursor: pointer;
+        transition: .3s;
+        transform: scale(1);
+        &:hover {
+            transform: scale(1.1);
+        }
     }
-    & span {
-      font-size: 18px;
-      text-transform: uppercase;
-      color: #616161;
-      @media(max-width: 1279px){
-        font-size: 16px;
-      }
+    &-wrapper {
+        width: 100%;
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
+        // height: auto;
+        top: 0;
+        left: 0;
+        position: fixed !important;
+        display: none;
+        z-index: 50000;
+        animation: showBlock .2s linear forwards;
+        opacity: 0;
     }
-    & input {
-      width: 100%;
-      height: 62px;
-      border-radius: 3px;
-      background-color: #F6F6F6;
-      box-sizing: border-box;
-      border: 1px solid #DCE0E3;
-      padding-left: 10px;
-      font-family: $font-text-regular;
-      font-size: 18px;
+    &-layer {
+        width: 100%;
+        height: 100%;
+        background-color: #000000ab;
+        z-index: 1000;
+        animation: showBlock .2s linear forwards;
     }
-    & textarea {
-      box-sizing: border-box;
-      // width: 468px;
-      width: 100%;
-      height: 105px;
-      border-radius: 3px;
-      background-color: #F6F6F6;
-      border: 1px solid #DCE0E3;
-      resize: none;
-      padding-left: 10px;
-      font-family: $font-text-regular;
-      font-size: 18px;
-      padding-top: 10px;
+    &-buttons {
+        padding-left: 300px;
+        padding-right: 30px;
     }
-  }
+    &-buttons--block {
+        display: flex;
+        align-items: center;
+    }
+    & h2 {
+        font-family: $font-bold-2-title;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+        color: #000000;
+        margin-bottom: 2%;
+        @media(max-width: 1679px) {
+            font-size: 24px;
+        }
+        @media(max-width: 767px) {
+            text-align: left;
+        }
+    }
+    &-inputs {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        @media(max-width: 1679px) {
+            width: 90%;
+        }
+        @media(max-width: 1279px) {
+            width: 100%;
+        }
+    }
+    &-label {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 23px;
+        align-items: center;
+        &:last-child {
+            align-items: baseline;
+            margin-bottom: 0;
+        }
+        & span {
+            font-size: 18px;
+            text-transform: uppercase;
+            color: #616161;
+            @media(max-width: 1279px) {
+                font-size: 16px;
+            }
+        }
+        & input {
+            width: 100%;
+            height: 62px;
+            border-radius: 3px;
+            background-color: #F6F6F6;
+            box-sizing: border-box;
+            border: 1px solid #DCE0E3;
+            padding-left: 10px;
+            font-family: $font-text-regular;
+            font-size: 18px;
+        }
+        & textarea {
+            box-sizing: border-box;
+            // width: 468px;
+            width: 100%;
+            height: 105px;
+            border-radius: 3px;
+            background-color: #F6F6F6;
+            border: 1px solid #DCE0E3;
+            resize: none;
+            padding-left: 10px;
+            font-family: $font-text-regular;
+            font-size: 18px;
+            padding-top: 10px;
+        }
+    }
 }
 
-
-.vacancies-d__form-label--footer{
-  justify-content: flex-end;
+.vacancies-d__form-label--footer {
+    justify-content: flex-end;
 }
-
 
 @keyframes showBlock {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .vac-d-form__input-container {
-  position: relative;
-  // width: 468px;
-  width: 70%;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  @media(max-width: 1679px){
-    width: 78%;
-  }
-  @media(max-width: 1279px){
-    width: 78%;
-  }
+    position: relative;
+    // width: 468px;
+    width: 70%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-shrink: 0;
+    @media(max-width: 1679px) {
+        width: 78%;
+    }
+    @media(max-width: 1279px) {
+        width: 78%;
+    }
 }
 
 .vacancies-d__submit {
-  padding: 15px 70px;
-  margin-top: 0;
-  margin-right: 30px;
-  border: 1px solid #171c28;
+    padding: 15px 70px;
+    margin-top: 0;
+    margin-right: 30px;
+    border: 1px solid #171c28;
 }
 
 .vacancies-d__download-status {
-
-  font-family: $font-regular;
-  font-size: 15px;
-  color: #616161;
+    font-family: $font-regular;
+    font-size: 15px;
+    color: #616161;
 }
 
 .vacancies-d__license {
-  font-family: $font-text-regular;
-  font-size: 16px;
-  color: #616161;
-  & a {
-    text-decoration: underline;
+    font-family: $font-text-regular;
+    font-size: 16px;
     color: #616161;
-  }
+    & a {
+        text-decoration: underline;
+        color: #616161;
+    }
 }
 
 .vacancies-d__form-buttons--block .vacancies-d__download {
-  margin-right: 30px;
-  margin-left: 0;
+    margin-right: 30px;
+    margin-left: 0;
 }
 
 .vacancies-d__form-buttons--block {
-  &:first-child {
-    align-items: baseline;
-    margin-bottom: 25px;
-  }
-  display: flex;
-  align-items: center;
+    &:first-child {
+        align-items: baseline;
+        margin-bottom: 25px;
+    }
+    display: flex;
+    align-items: center;
 }
 
-.vacancies-d__form-buttons--block--feedback{
-  align-items: center !important;
+.vacancies-d__form-buttons--block--feedback {
+    align-items: center !important;
 }
 
 .vacancies-d__contacts {
-  background-color: #F2F2F2;
-  padding: 80px 0 50px 0;
-  &-title {
-    font-family: $font-regular;
-    font-size: 36px;
-    color: #1A1D29;
-    margin-bottom: 60px;
-  }
-  &-content {
-    display: flex;
-  }
-  &-list {
-    list-style: none;
-    width: 50%;
-  }
-  &-item {
-    width: 75%;
-    margin-top: 15px;
-    margin-bottom: 35px;
-  }
-  &-link {
-    color: #171C28;
-    font-size: 24px;
-    font-family: $font-text-regular;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: end;
-    transition: .4s;
-    line-height: 34px;
-    width: 84%;
-    &:hover {
-      opacity: 0.5;
+    background-color: #F2F2F2;
+    padding: 80px 0 50px 0;
+    &-title {
+        font-family: $font-regular;
+        font-size: 36px;
+        color: #1A1D29;
+        margin-bottom: 60px;
     }
-    & div p {
-      margin-top: 30px;
+    &-content {
+        display: flex;
     }
-  }
-  
-  &-icon {
-    margin-right: 20px;
-    width: 20px;
-    height: 20px;
-    margin-top: 5px;
-  }
-  &-map {
-    width: 50%;
-  }
+    &-list {
+        list-style: none;
+        width: 50%;
+    }
+    &-item {
+        width: 75%;
+        margin-top: 15px;
+        margin-bottom: 35px;
+    }
+    &-link {
+        color: #171C28;
+        font-size: 24px;
+        font-family: $font-text-regular;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: end;
+        transition: .4s;
+        line-height: 34px;
+        width: 84%;
+        &:hover {
+            opacity: 0.5;
+        }
+        & div p {
+            margin-top: 30px;
+        }
+    }
+    &-icon {
+        margin-right: 20px;
+        width: 20px;
+        height: 20px;
+        margin-top: 5px;
+        flex-shrink: 0;
+    }
+    &-map {
+        width: 50%;
+        height: 450px;
+        // width: 300px;
+        // height: 200px;
+    }
 }
 
 .vacancies-d__contacts-icon--locate {
-  height: 22px;
-  width: 41px;
-  margin-right: 18px;
+    height: 22px;
+    // width: 41px;
+    margin-right: 18px;
 }
 
 .vacancies-d__main-building {
-  margin-top: 40px;
-  position: relative;
+    margin-top: 40px;
+    position: relative;
 }
 
 .vacancies-d__build-point {
-  width: 108px;
-  height: 128px;
-  position: absolute;
-  right: 19%;
-  top: 29%;
-  & img {
-    z-index: 9;
+    width: 108px;
+    height: 128px;
     position: absolute;
-  }
-  & span {
-    font-size: 18px;
-    font-family: $font-text-regular;
-    text-align: center;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    z-index: 10;
-    position: absolute;
-    top: 34px;
-    left: 28px;
-  }
+    right: 19%;
+    top: 29%;
+    & img {
+        z-index: 9;
+        position: absolute;
+    }
+    & span {
+        font-size: 18px;
+        font-family: $font-text-regular;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        z-index: 10;
+        position: absolute;
+        top: 34px;
+        left: 28px;
+    }
 }
 
-
 @media screen and (max-width: 1561px) {
-
-  .vacancies-d__build-point {
-    right: 18%;
-  }
+    .vacancies-d__build-point {
+        right: 18%;
+    }
 }
 
 @media screen and (max-width: 1366px) {
-  .vacancies-d__form-label input, .vacancies-d__form-label textarea {
-    height: 50px;
-  }
-  .vacancies-d__form-buttons--block .vacancies-d__download {
-    padding-bottom: 0;
-    margin-bottom: 9px;
-  }
-
- 
-  .vacancies-d__form-label textarea {
-    height: 80px;
-  }
- 
-  .vacancies-d__form-buttons--block:first-child {
-    margin-bottom: 10px;
-  }
-  .vacancies-d__submit {
-    margin-right: 20px;
-  }
-  .vacancies-d__form-label {
-    margin-bottom: 20px;
-  }
+    .vacancies-d__form-label input,
+    .vacancies-d__form-label textarea {
+        height: 50px;
+    }
+    .vacancies-d__form-buttons--block .vacancies-d__download {
+        padding-bottom: 0;
+        margin-bottom: 9px;
+    }
+    .vacancies-d__form-label textarea {
+        height: 80px;
+    }
+    .vacancies-d__form-buttons--block:first-child {
+        margin-bottom: 10px;
+    }
+    .vacancies-d__submit {
+        margin-right: 20px;
+    }
+    .vacancies-d__form-label {
+        margin-bottom: 20px;
+    }
 }
 
 @media screen and (max-width: 1679px) {
-  
-  .vacancies-d__form-buttons {
-    padding-left: 299px;
-    padding-right: 68px;
-  }
-  .vacancies-d__hero {
-    padding: 90px 0;
-  }
-  .vacancies-d__title {
-    font-size: 36px;
-    width: 60%;
-    margin: 40px 0 65px;
-  }
-  .vacancies-d__date {
-    margin-bottom: 25px;
-  }
-  .vacancies-d__item {
-    margin-left: 212px;
-  }
-  .vacancies-d__buttons {
-    margin-left: 187px;
-  }
-  .vacancies-d__item p {
-    width: 100%;
-  }
-  .vacancies-d__contacts-link {
-    font-size: 22px;
-  }
-  .vacancies-d__yandex-map {
-    height: 350px;
-  }
-  .vacancies-d__contacts-item {
-    width: 90%;
-  }
-  .vacancies-d__build-point {
-    right: 17%;
-    top: 24%;
-  }
-  .vacancies-d__form-buttons {
-    padding-left: 281px;
-    padding-right: 138px;
-  }
-  .vacancies-d__contacts-title {
-    margin-bottom: 27px;
-  }
-}
-
-@media screen and (max-width: 1279px) {
-  .vacancies-d__response {
-    margin-top: 25px;
-  }
-  .vacancies-d__hero {
-    padding: 100px 0;
-    height: 100%;
-  }
-  .vacancies-d__contacts-title {
-    margin-bottom: 40px;
-  }
-  .vacancies-d__contacts-link {
-    font-size: 20px;
-  }
-  .vacancies-d__build-point {
-    right: 16%;
-    top: 17%;
-  }
-  .vacancies-d__form-buttons--block:first-child {
-    align-items: baseline;
-  }
-  .vacancies-d__submit {
-    margin-top: 0;
-  }
-}
-
-
-
-@media screen and (max-width: 1279px) {
- 
-  .vacancies-d__response {
-    padding: 20px 50px;
-  }
-  .vacancies-d__download {
-    font-size: 14px;
-  }
-  .vacancies-d__build-point {
-    right: 14%;
-    top: 8%;
-  }
-
-  .vacancies-d__form-inputs {
-    width: 90%;
-  }
-  .vacancies-d__form-label input {
-   
-    height: 50px;
-  }
- 
-  .vacancies-d__form-buttons {
-    padding-left: 193px;
-    padding-right: 32px;
-  }
-  .vacancies-d__form h2 {
-    font-size: 26px;
-  }
-  .vacancies-d__license {
-    font-size: 12px;
-    line-height: 1.3;
-  }
-}
-
-@media screen and (max-width: 1279px) {
-  .vacancies-d__title {
-    font-size: 26px;
-    width: 85%;
-    margin: 40px 0 42px;
-  }
-  .vacancies-d__date {
-    font-size: 14px;
-    margin-bottom: 42px;
-  }
-  .vacancies-d__breadcrumb {
-    font-size: 16px;
-    display: block;
-    align-items: center;
-    & svg {
-      width: 48px;
-      margin-right: 10px;
+    .vacancies-d__form-buttons {
+        padding-left: 299px;
+        padding-right: 68px;
     }
-  }
-  .vacancies-d__name {
-    font-size: 14px;
-  }
-  .vacancies-d__response {
-    padding: 18px 55px;
-  }
-  .vacancies-d__download {
-    margin-left: 30px;
-    font-size: 14px;
-  }
-  .vacancies-d__contacts-title {
-    font-size: 26px;
-  }
-  .vacancies-d__contacts-link {
-    font-size: 14px;
-    width: 100%;
-    line-height: 30px;
-    margin-bottom: 5px;
-    & div p {
-      margin-top: 20px;
+    .vacancies-d__hero {
+        padding: 90px 0;
     }
-  }
-  .vacancies-d__item {
-    margin-left: 180px;
-  }
-  .vacancies-d__contacts-item {
-    width: 95%;
-    margin: 0;
-  }
-  .vacancies-d__yandex-map {
-    height: 217px;
-  }
-  .vacancies-d__item p {
-    margin: 10px 0 5px 10px;
-    font-size: 14px;
-  }
-  .vacancies-d__main-building {
-    margin-top: 10px;
-  }
-  .vacancies-d__buttons {
-    margin-left: 150px;
-  }
-  .vacancies-d__response {
-    margin-top: 5px;
-    padding: 18px 65px;
-  }
+    .vacancies-d__title {
+        font-size: 36px;
+        width: 60%;
+        margin: 40px 0 65px;
+    }
+    .vacancies-d__date {
+        margin-bottom: 25px;
+    }
+    .vacancies-d__item {
+        margin-left: 212px;
+    }
+    .vacancies-d__buttons {
+        margin-left: 187px;
+    }
+    .vacancies-d__item p {
+        width: 100%;
+    }
+    .vacancies-d__contacts-link {
+        font-size: 22px;
+    }
+    .vacancies-d__yandex-map {
+        height: 350px;
+    }
+    .vacancies-d__contacts-item {
+        width: 90%;
+    }
+    .vacancies-d__build-point {
+        right: 17%;
+        top: 24%;
+    }
+    .vacancies-d__form-buttons {
+        padding-left: 281px;
+        padding-right: 138px;
+    }
+    .vacancies-d__contacts-title {
+        margin-bottom: 27px;
+    }
 }
-@media screen and (max-width: 767px){
-  .vacancies-d__download {
-    margin: 20px auto;
-    display: block;
-  }
 
-  .vacancies-d__form {
-    width: 100%;
-  }
-  .vacancies-d__form-label input, .vacancies-d__form-label textarea {
-    width: 390px;
-  }
-  .vac-d-form__input-container {
-    width: 390px;
-  }
-  .vacancies-d__form-buttons {
-    padding-left: 180px;
-  }
+@media screen and (max-width: 1279px) {
+    .vacancies-d__response {
+        margin-top: 25px;
+    }
+    .vacancies-d__hero {
+        padding: 100px 0;
+        height: 100%;
+    }
+    .vacancies-d__contacts-title {
+        margin-bottom: 40px;
+    }
+    .vacancies-d__contacts-link {
+        font-size: 20px;
+    }
+    .vacancies-d__build-point {
+        right: 16%;
+        top: 17%;
+    }
+    .vacancies-d__form-buttons--block:first-child {
+        align-items: baseline;
+    }
+    .vacancies-d__submit {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .vacancies-d__response {
+        padding: 20px 50px;
+    }
+    .vacancies-d__download {
+        font-size: 14px;
+    }
+    .vacancies-d__build-point {
+        right: 14%;
+        top: 8%;
+    }
+    .vacancies-d__form-inputs {
+        width: 90%;
+    }
+    .vacancies-d__form-label input {
+        height: 50px;
+    }
+    .vacancies-d__form-buttons {
+        padding-left: 193px;
+        padding-right: 32px;
+    }
+    .vacancies-d__form h2 {
+        font-size: 26px;
+    }
+    .vacancies-d__license {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .vacancies-d__title {
+        font-size: 26px;
+        width: 85%;
+        margin: 40px 0 42px;
+    }
+    .vacancies-d__date {
+        font-size: 14px;
+        margin-bottom: 42px;
+    }
+    .vacancies-d__breadcrumb {
+        font-size: 16px;
+        display: block;
+        align-items: center;
+        & svg {
+            width: 48px;
+            margin-right: 10px;
+        }
+    }
+    .vacancies-d__name {
+        font-size: 14px;
+    }
+    .vacancies-d__response {
+        padding: 18px 55px;
+    }
+    .vacancies-d__download {
+        margin-left: 30px;
+        font-size: 14px;
+    }
+    .vacancies-d__contacts-title {
+        font-size: 26px;
+    }
+    .vacancies-d__contacts-link {
+        font-size: 14px;
+        width: 100%;
+        line-height: 30px;
+        margin-bottom: 5px;
+        & div p {
+            margin-top: 20px;
+        }
+    }
+    .vacancies-d__item {
+        margin-left: 180px;
+    }
+    .vacancies-d__contacts-item {
+        width: 95%;
+        margin: 0;
+    }
+    .vacancies-d__yandex-map {
+        height: 217px;
+    }
+    .vacancies-d__item p {
+        margin: 10px 0 5px 10px;
+        font-size: 14px;
+    }
+    .vacancies-d__main-building {
+        margin-top: 10px;
+    }
+    .vacancies-d__buttons {
+        margin-left: 150px;
+    }
+    .vacancies-d__response {
+        margin-top: 5px;
+        padding: 18px 65px;
+    }
 }
 
 @media screen and (max-width: 767px) {
-  .vacancies-d__form-inputs {
-    width: 100%;
-  }
-  .vac-d-form__input-container {
-    width: 100%;
-  }
-  .vacancies-d__item p:before {
-    left: -25px;
-  }
-  .vacancies-d__contacts-icon--locate {
-    height: 22px;
-    width: 28px;
-  }
-  .vacancies-d__contacts-icon--locate {
-    margin-right: 18px;
-    width: 32px;
-  }
-  .vacancies-d__title {
-    font-size: 22px;
-    width: 100%;
-  }
-  .vacancies-d__date {
-    font-size: 14px;
-    margin-bottom: 16px;
-  }
+    .vacancies-d__download {
+        margin: 20px auto;
+        display: block;
+    }
+    .vacancies-d__form {
+        width: 100%;
+    }
+    .vacancies-d__form-label input,
+    .vacancies-d__form-label textarea {
+        width: 390px;
+    }
+    .vac-d-form__input-container {
+        width: 390px;
+    }
+    .vacancies-d__form-buttons {
+        padding-left: 180px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .vacancies-d__form-inputs {
+        width: 100%;
+    }
+    .vac-d-form__input-container {
+        width: 100%;
+    }
+    .vacancies-d__item p:before {
+        left: -25px;
+    }
+    .vacancies-d__contacts-icon--locate {
+        height: 22px;
+        // width: 28px;
+    }
+    .vacancies-d__contacts-icon--locate {
+        margin-right: 18px;
+        // width: 32px;
+    }
+    .vacancies-d__title {
+        font-size: 22px;
+        width: 100%;
+    }
+    .vacancies-d__date {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
     .vacancies-d__item {
-    margin-left: 14px;
-    font-size: 14px;
-
-    & h6 {
-      font-size: 14px;
+        margin-left: 14px;
+        font-size: 14px;
+        & h6 {
+            font-size: 14px;
+        }
+        & p {
+            margin: 10px 0 0 10px;
+        }
+        &:first-child {
+            margin-left: 0;
+            margin-bottom: 10px;
+        }
     }
-
-    & p {
-      margin: 10px 0 0 10px;
+    .vacancies-d__item h6 {
+        position: relative;
+        top: unset;
+        left: unset;
     }
-
-    &:first-child {
-      margin-left: 0;
-      margin-bottom: 10px;
+    .vacancies-d__breadcrumb {
+        display: none;
     }
-  }
-  .vacancies-d__item h6 {
-    position: relative;
-    top: unset;
-    left: unset;
-  }
-  .vacancies-d__breadcrumb {
-    display: none;
-  }
-  .vacancies-d__hero {
-    padding: 40px 0;
-    height: 100%;
-  }
-  .vacancies-d__buttons {
-    margin-left: 0;
-    display: flex;
-    flex-direction: column;
-  }
-  .vacancies-d__response {
-    margin-top: 0;
-    padding: 19px 55px;
-  }
-  .vacancies-d__download {
-    margin: 20px auto 0 auto;
-  }
-  .vacancies-d__contacts-content {
-    flex-direction: column;
-  }
-  .vacancies-d__contacts-list {
-    width: 100%;
-  }
-  .vacancies-d__contacts {
-    background-color: #f2f2f2;
-    padding: 50px 0 50px;
-  }
-  .vacancies-d__contacts-item {
-    margin: 10px 0;
-
-    &:first-child a {
-      align-items: end;
+    .vacancies-d__hero {
+        padding: 40px 0;
+        height: 100%;
     }
-  }
-  .vacancies-d__contacts-link div p {
-    margin-top: 10px;
-  }
-  .vacancies-d__contacts-link {
-    display: flex;
-    align-items: center;
-  }
-  .vacancies-d__contacts-title {
-    font-weight: 500;
-    margin-bottom: 20px;
-  }
-  .vacancies-d__contacts-map {
-    width: 100%;
-    margin: 10px 0 20px 0;
-  }
-  .vacancies-d__build-point {
-    width: 80px;
-    right: 13%;
-    top: 3%;
-
-    & span {
-      font-size: 12px;
-      top: 27px;
-      left: 23px;
+    .vacancies-d__buttons {
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
     }
-  }
-  
-  .vacancies-d__form-label input {
-    width: 320px;
-    height: 45px;
-  }
-  .vacancies-d__form-label {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 23px;
-    align-items: start;
-    flex-direction: column;
-    & input {
-      width: 100%;
+    .vacancies-d__response {
+        margin-top: 0;
+        padding: 19px 55px;
     }
-    & span {
-      margin-bottom: 10px;
-      font-size: 14px;
+    .vacancies-d__download {
+        margin: 20px auto 0 auto;
     }
-    & textarea {
-      width: 100%;
+    .vacancies-d__contacts-content {
+        flex-direction: column;
     }
-  }
-  .vacancies-d__form-buttons {
-    padding-left: 22px;
-    padding-right: 20px;
-  }
-  .vacancies-d__download-status {
-    font-size: 14px;
-  }
-  .vacancies-d__form-buttons--block .vacancies-d__download {
-    margin-right: 50px;
-    margin-top: 0;
-  }
-  .vacancies-d__form-buttons--block:last-child {
-    flex-direction: column-reverse;
-  }
-  .vacancies-d__response {
-    margin-right: 0;
-  }
-  .vacancies-d__license {
-    font-size: 12px;
-    line-height: 1.3;
-    margin-bottom: 15px;
-  }
-  .vacancies-d__form h2 {
-    margin-bottom: 30px;
-  }
-  .vacancies-d__form-close {
-    top: 2%;
-    right: 3%;
-    width: 25px;
-    height: 25px;
-  }
+    .vacancies-d__contacts-list {
+        width: 100%;
+    }
+    .vacancies-d__contacts {
+        background-color: #f2f2f2;
+        padding: 50px 0 50px;
+    }
+    .vacancies-d__contacts-item {
+        margin: 10px 0;
+        &:first-child a {
+            align-items: end;
+        }
+    }
+    .vacancies-d__contacts-link div p {
+        margin-top: 10px;
+    }
+    .vacancies-d__contacts-link {
+        display: flex;
+        align-items: center;
+    }
+    .vacancies-d__contacts-title {
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    .vacancies-d__contacts-map {
+        width: 100%;
+        margin: 10px 0 20px 0;
+    }
+    .vacancies-d__build-point {
+        width: 80px;
+        right: 13%;
+        top: 3%;
+        & span {
+            font-size: 12px;
+            top: 27px;
+            left: 23px;
+        }
+    }
+    .vacancies-d__form-label input {
+        width: 320px;
+        height: 45px;
+    }
+    .vacancies-d__form-label {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 23px;
+        align-items: start;
+        flex-direction: column;
+        & input {
+            width: 100%;
+        }
+        & span {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        & textarea {
+            width: 100%;
+        }
+    }
+    .vacancies-d__form-buttons {
+        padding-left: 22px;
+        padding-right: 20px;
+    }
+    .vacancies-d__download-status {
+        font-size: 14px;
+    }
+    .vacancies-d__form-buttons--block .vacancies-d__download {
+        margin-right: 50px;
+        margin-top: 0;
+    }
+    .vacancies-d__form-buttons--block:last-child {
+        flex-direction: column-reverse;
+    }
+    .vacancies-d__response {
+        margin-right: 0;
+    }
+    .vacancies-d__license {
+        font-size: 12px;
+        line-height: 1.3;
+        margin-bottom: 15px;
+    }
+    .vacancies-d__form h2 {
+        margin-bottom: 30px;
+    }
+    .vacancies-d__form-close {
+        top: 2%;
+        right: 3%;
+        width: 25px;
+        height: 25px;
+    }
 }
 
-
-
-
-@media(max-width:767px){
-  .vacancies-d__contacts-icon--locate {
-    margin-right: 21px;
-    width: 40px;
-  }
-  .vacancies-d__build-point {
-    width: 69px;
-    right: 13%;
-    top: 3%;
-  }
-  .vacancies-d__build-point span {
-    font-size: 10px;
-    top: 23px;
-    left: 20px;
-  }
-  .vacancies-d__form-label {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-  }
-  .vacancies-d__form h2 {
-    margin-bottom: 15px;
-  }
-  .vacancies-d__response {
-    padding: 15px 55px;
-  }
-  .vacancies-d__form h2 {
-    margin-left: 17px;
-  }
-  .vacancies-d__contacts-icon--locate {
-    margin-right: 20px;
-  }
-  .vacancies-d__form-label span {
-    margin-bottom: 6px;
-    font-size: 12px;
-  }
-  .vacancies-d__download {
-    font-size: 12px;
-  }
-  .vacancies-d__form-label input {
-    height: 35px;
-  }
-  .vacancies-d__contacts-icon--locate {
-    margin-right: 21px;
-  }
-  .vacancies-d__form  {
-    // height: 650px;
-    & h2 {
-      font-size: 18px;
-      margin-left: 0;
-      width: 100%;
-      // padding-left: 35px;
+@media(max-width:767px) {
+    .vacancies-d__contacts-icon--locate {
+        margin-right: 21px;
+        // width: 40px;
     }
-  }
-  .vacancies-d__download-status {
-    font-size: 10px;
-  }
-  .vacancies-d__form-buttons--block .vacancies-d__download {
-    margin-right: 30px;
-    padding-bottom: 5px;
-  }
-  .vacancies-d__form-buttons--block:first-child {
-    margin-bottom: 15px;
-  }
-
-  .vacancies-d__form {
-    & h2 {
-      font-size: 17px;
-      align-self: start;
+    .vacancies-d__build-point {
+        width: 69px;
+        right: 13%;
+        top: 3%;
     }
-  }
-
-  .vacancies-d__contacts-icon--locate {
-    margin-right: 23px;
-  }
-  
-  .vacancies-d__form-buttons--block .vacancies-d__download {
-    margin-right: 15px;
-    font-size: 10px;
-  }
-  .vacancies-d__form-label input {
-    height: 28px;
-    font-size: 12px;
-  }
-  .vacancies-d__download-status {
-    font-size: 12px;
-  }
-  .vacancies-d__response {
-    padding: 10px 55px;
-  }
-  .vacancies-d__form-label textarea {
-    height: 80px;
-  }
-  .vacancies-d__form-close {
-    top: 4%;
-  }
-}
-p.vacancies-d__contacts-link:hover{
-  opacity: 1;
+    .vacancies-d__build-point span {
+        font-size: 10px;
+        top: 23px;
+        left: 20px;
+    }
+    .vacancies-d__form-label {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+    .vacancies-d__form h2 {
+        margin-bottom: 15px;
+    }
+    .vacancies-d__response {
+        padding: 15px 55px;
+    }
+    .vacancies-d__form h2 {
+        margin-left: 17px;
+    }
+    .vacancies-d__contacts-icon--locate {
+        margin-right: 20px;
+    }
+    .vacancies-d__form-label span {
+        margin-bottom: 6px;
+        font-size: 12px;
+    }
+    .vacancies-d__download {
+        font-size: 12px;
+    }
+    .vacancies-d__form-label input {
+        height: 35px;
+    }
+    .vacancies-d__contacts-icon--locate {
+        margin-right: 21px;
+    }
+    .vacancies-d__form {
+        // height: 650px;
+        & h2 {
+            font-size: 18px;
+            margin-left: 0;
+            width: 100%;
+            // padding-left: 35px;
+        }
+    }
+    .vacancies-d__download-status {
+        font-size: 10px;
+    }
+    .vacancies-d__form-buttons--block .vacancies-d__download {
+        margin-right: 30px;
+        padding-bottom: 5px;
+    }
+    .vacancies-d__form-buttons--block:first-child {
+        margin-bottom: 15px;
+    }
+    .vacancies-d__form {
+        & h2 {
+            font-size: 17px;
+            align-self: start;
+        }
+    }
+    .vacancies-d__contacts-icon--locate {
+        margin-right: 23px;
+    }
+    .vacancies-d__form-buttons--block .vacancies-d__download {
+        margin-right: 15px;
+        font-size: 10px;
+    }
+    .vacancies-d__form-label input {
+        height: 28px;
+        font-size: 12px;
+    }
+    .vacancies-d__download-status {
+        font-size: 12px;
+    }
+    .vacancies-d__response {
+        padding: 10px 55px;
+    }
+    .vacancies-d__form-label textarea {
+        height: 80px;
+    }
+    .vacancies-d__form-close {
+        top: 4%;
+    }
 }
 
-div.vacancies-d__contacts-link:hover{
-  opacity: 1;
+p.vacancies-d__contacts-link:hover {
+    opacity: 1;
+}
+
+div.vacancies-d__contacts-link:hover {
+    opacity: 1;
+}
+
+.vacancies-d__form-wrapper .scrollbar-track {
+    display: none !important;
+}
+
+@media(max-width:1280px) {
+    .vacancies-d__form-wrapper {
+        overflow: auto;
+    }
 }

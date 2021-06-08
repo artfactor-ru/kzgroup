@@ -1,76 +1,85 @@
-
 .section-geography {
-	height: 100%;
+    height: 100%;
 }
-.section-geography__body {
-	height: 70%;
-	margin-top: 155px;
-}
-.section-geography__footer {
 
-	text-align: center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.section-geography__body {
+    height: 70%;
+    margin-top: 155px;
 }
-.geography{
+
+.section-geography__footer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.geography {
     position: relative;
     width: 100%;
-  }
-  .geography::before{
+}
+
+.geography::before {
     content: "";
     position: absolute;
     width: 100%;
     bottom: -10px;
-   
     height: 75px;
     background: #1D1E25;
-  }
+}
+
 .section-geography__map,
 .section-geography__wrapper .section-geography__desc {
-	// width: 50%;
-	padding: 0 50px;
+    // width: 50%;
+    padding: 0 50px;
 }
+
 .section-geography__wrapper {
-	display: flex;
-	flex-wrap: nowrap;
-	padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 0;
 }
+
 .section-geography__map {
-	position: relative;
+    position: relative;
 }
+
 .section-geography__map-item {
-	display: flex;
-	align-items: center;
-	font-size: 12px;
-	line-height: 14px;
-	color: #000;
-	text-decoration: none;
-	position: absolute;
-	font-family:'HeliosExt';
-	/*z-index: 20;*/
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 14px;
+    color: #000;
+    text-decoration: none;
+    position: absolute;
+    font-family: 'HeliosExt';
+    /*z-index: 20;*/
 }
+
 .section-geography__map-item .section-geography__map-item-label {
-	opacity: 0;
-	background-color: #fafafa;
+    opacity: 0;
+    background-color: #fafafa;
     padding: 5px;
     margin-left: 5px;
 }
+
 .section-geography__map-item.active .section-geography__map-item-label,
 .section-geography__map-item:hover .section-geography__map-item-label {
-	opacity: 1;
-	color: #E51C26;
-	font-weight: bold;
-	z-index: 10;
-	-webkit-transition: opacity .8s cubic-bezier(.25, .46, .45, .94);
+    opacity: 1;
+    color: #E51C26;
+    font-weight: bold;
+    z-index: 10;
+    -webkit-transition: opacity .8s cubic-bezier(.25, .46, .45, .94);
     -o-transition: opacity .8s cubic-bezier(.25, .46, .45, .94);
     transition: opacity .8s cubic-bezier(.25, .46, .45, .94);
-    -webkit-box-shadow: 10px 10px 10px 0px rgba(196,194,196,0.72);
-	-moz-box-shadow: 10px 10px 10px 0px rgba(196,194,196,0.72);
-	box-shadow: 10px 10px 10px 0px rgba(196,194,196,0.72);
+    -webkit-box-shadow: 10px 10px 10px 0px rgba(196, 194, 196, 0.72);
+    -moz-box-shadow: 10px 10px 10px 0px rgba(196, 194, 196, 0.72);
+    box-shadow: 10px 10px 10px 0px rgba(196, 194, 196, 0.72);
 }
+
 .section-geography__map-item .map-marker-icon {
-	display: block;
+    display: block;
     width: 22px;
     height: 40px;
     background-image: url(../img/geography/map.svg);
@@ -78,11 +87,13 @@
     background-repeat: no-repeat;
     background-position-y: center;
 }
+
 .section-geography__map-item.active .map-marker-icon,
 .section-geography__map-item:hover .map-marker-icon {
-	background-image: url(../img/geography/map2.svg);
-	z-index: 10;
+    background-image: url(../img/geography/map2.svg);
+    z-index: 10;
 }
+
 .map-item__england .map-marker-icon,
 .map-item__ireland .map-marker-icon,
 .map-item__netherlands .map-marker-icon,
@@ -95,7 +106,7 @@
 .map-item__liechtenstein .map-marker-icon,
 .map-item__switzerland .map-marker-icon,
 .map-item__finland .map-marker-icon,
-.map-item__estonia .map-marker-icon, 
+.map-item__estonia .map-marker-icon,
 .map-item__latvia .map-marker-icon,
 .map-item__lithuania .map-marker-icon,
 .map-item__poland .map-marker-icon,
@@ -106,9 +117,10 @@
 .map-item__moldova .map-marker-icon,
 .map-item__ukraine .map-marker-icon,
 .map-item__belarus .map-marker-icon {
-	width: 15px;
+    width: 15px;
     height: 33px;
 }
+
 
 /*.section-geography__map-item.active .map-marker-icon{
 	fill: #E51C26;
@@ -120,714 +132,730 @@
 .section-geography__map-item.active .map-marker-icon svg path {
 	fill:  red;
 }*/
-.map-item__canada {
-	top: 15%;
-	left: 15%;
-	@media(max-width: 1279px){
-		top: 18%;
-		left: 9%;
-	}
-	@media(max-width: 767px){
-		top: 9%;
-		left: 8%;
-	}
 
+.map-item__canada {
+    top: 15%;
+    left: 15%;
+    @media(max-width: 1279px) {
+        top: 18%;
+        left: 9%;
+    }
+    @media(max-width: 767px) {
+        top: 9%;
+        left: 8%;
+    }
 }
 
 .map-item__usa {
-	top: 26%;
-	left: 9%;
-	@media(max-width: 1679px){
-		top: 22%;
-    	left: 12%;
-	}
-	@media(max-width: 1279px){
-		top: 26%;
-		left: 3%;
-	}
-	@media(max-width: 767px){
-		top: 20%;
-		left: 2%;
-	}
+    top: 26%;
+    left: 9%;
+    @media(max-width: 1679px) {
+        top: 22%;
+        left: 12%;
+    }
+    @media(max-width: 1279px) {
+        top: 26%;
+        left: 3%;
+    }
+    @media(max-width: 767px) {
+        top: 20%;
+        left: 2%;
+    }
 }
+
 .map-item__england {
-	top: 12%;
+    top: 12%;
     left: 37%;
-
-	@media(max-width: 1679px){
-		top: 14%;
-		left: 37%;
-	}
-
-	@media(max-width: 1279px){
-		top: 14%;
-		left: 35%;
-	}
-	@media(max-width: 767px){
-		top: 6%;
-		left: 34%;
-	}
+    @media(max-width: 1679px) {
+        top: 14%;
+        left: 37%;
+    }
+    @media(max-width: 1279px) {
+        top: 14%;
+        left: 35%;
+    }
+    @media(max-width: 767px) {
+        top: 6%;
+        left: 34%;
+    }
 }
+
 .map-item__ireland {
-	top: 14%;
+    top: 14%;
     left: 35%;
-
-	@media(max-width: 1679px){
-		top: 14%;
-		left: 35%;
-	}
-	@media(max-width: 1279px){
-		top: 14%;
-		left: 32%;
-	}
-	@media(max-width: 767px){
-		top: 10%;
-		left: 31%;
-	}
+    @media(max-width: 1679px) {
+        top: 14%;
+        left: 35%;
+    }
+    @media(max-width: 1279px) {
+        top: 14%;
+        left: 32%;
+    }
+    @media(max-width: 767px) {
+        top: 10%;
+        left: 31%;
+    }
 }
+
 .map-item__netherlands {
-	top: 8%;
+    top: 8%;
     left: 47%;
-	
-	@media(max-width: 1679px){
-		top: 7%;
-    	left: 45%;
-	}
-	@media(max-width: 1279px){
-		top: 7%;
-    	left: 45%;
-	}
-	@media(max-width: 767px){
-		top: 2%;
-    	left: 45%;
-	}
+    @media(max-width: 1679px) {
+        top: 7%;
+        left: 45%;
+    }
+    @media(max-width: 1279px) {
+        top: 7%;
+        left: 45%;
+    }
+    @media(max-width: 767px) {
+        top: 2%;
+        left: 45%;
+    }
 }
+
 .map-item__belgium {
-	top: 16%;
+    top: 16%;
     left: 40%;
-	
-	@media(max-width: 1679px){
-		top: 15%;
-		left: 40%;
-	}
-	@media(max-width: 1279px){
-		top: 16%;
-		left: 38%;
-	}
-	@media(max-width: 767px){
-		top: 11%;
-		left: 37%;
-	}
+    @media(max-width: 1679px) {
+        top: 15%;
+        left: 40%;
+    }
+    @media(max-width: 1279px) {
+        top: 16%;
+        left: 38%;
+    }
+    @media(max-width: 767px) {
+        top: 11%;
+        left: 37%;
+    }
 }
+
 .map-item__france {
-	top: 19%;
+    top: 19%;
     left: 38%;
-	@media(max-width: 1679px){
-		top: 18%;
-    	left: 38%;
-	}
-	@media(max-width: 1279px){
-		top: 18%;
-    	left: 36%;
-	}
-	@media(max-width: 767px){
-		top: 13%;
-		left: 35%;
-	}
+    @media(max-width: 1679px) {
+        top: 18%;
+        left: 38%;
+    }
+    @media(max-width: 1279px) {
+        top: 18%;
+        left: 36%;
+    }
+    @media(max-width: 767px) {
+        top: 13%;
+        left: 35%;
+    }
 }
+
 .map-item__denmark {
-	top: 14%;
-	left: 41%;
-	@media(max-width: 1679px){
-		top: 12%;
-		left: 42%;
-	}
-	@media(max-width: 1279px){
-		top: 14%;
-		left: 40%;
-	}
-	@media(max-width: 767px){
-		top: 9%;
-		left: 40%;
-	}
-}
-.map-item__germany {
-	top: 18%;
+    top: 14%;
     left: 41%;
-	@media(max-width: 1679px){
-		top: 15%;
-		left: 42%;
-	}
-	@media(max-width: 1279px){
-		top: 16%;
-    	left: 41%;
-	}
-	@media(max-width: 767px){
-		top: 12%;
-    	left: 41%;
-	}
+    @media(max-width: 1679px) {
+        top: 12%;
+        left: 42%;
+    }
+    @media(max-width: 1279px) {
+        top: 14%;
+        left: 40%;
+    }
+    @media(max-width: 767px) {
+        top: 9%;
+        left: 40%;
+    }
 }
+
+.map-item__germany {
+    top: 18%;
+    left: 41%;
+    @media(max-width: 1679px) {
+        top: 15%;
+        left: 42%;
+    }
+    @media(max-width: 1279px) {
+        top: 16%;
+        left: 41%;
+    }
+    @media(max-width: 767px) {
+        top: 12%;
+        left: 41%;
+    }
+}
+
 .map-item__czech {
-	top: 19%;
-	left: 43%;
-	@media(max-width: 1679px){
-		top: 17%;
-		left: 44%;
-	}
-	@media(max-width: 1279px){
-		top: 17%;
-		left: 44%;
-	}
-	@media(max-width: 767px){
-		top: 12%;
-    	left: 43%;
-	}
+    top: 19%;
+    left: 43%;
+    @media(max-width: 1679px) {
+        top: 17%;
+        left: 44%;
+    }
+    @media(max-width: 1279px) {
+        top: 17%;
+        left: 44%;
+    }
+    @media(max-width: 767px) {
+        top: 12%;
+        left: 43%;
+    }
 }
+
 .map-item__austria {
-	top: 19%;
-	left: 42%;
-	@media(max-width: 1679px){
-		top: 17%;
-		left: 42%;
-	}
-	@media(max-width: 1279px){
-		top: 18%;
-		left: 41%;
-	}
-	@media(max-width: 767px){
-		top: 13%;
-		left: 39%;
-	}
+    top: 19%;
+    left: 42%;
+    @media(max-width: 1679px) {
+        top: 17%;
+        left: 42%;
+    }
+    @media(max-width: 1279px) {
+        top: 18%;
+        left: 41%;
+    }
+    @media(max-width: 767px) {
+        top: 13%;
+        left: 39%;
+    }
 }
+
 .map-item__liechtenstein {
-	top: 19%;
+    top: 19%;
     left: 40%;
-	@media(max-width: 1679px){
-		top: 17%;
-		left: 40%;
-	}
-	@media(max-width: 1279px){
-		top: 18%;
-		left: 39%;
-	}
-	@media(max-width: 767px){
-	    top: 12%;
-    	left: 37%;
-	}
+    @media(max-width: 1679px) {
+        top: 17%;
+        left: 40%;
+    }
+    @media(max-width: 1279px) {
+        top: 18%;
+        left: 39%;
+    }
+    @media(max-width: 767px) {
+        top: 12%;
+        left: 37%;
+    }
 }
+
 .map-item__switzerland {
-	top: 20%;
+    top: 20%;
     left: 40%;
-	@media(max-width: 1679px){
-		top: 18%;
-    	left: 40%;
-	}
-	@media(max-width: 1279px){
-		top: 19%;
-    	left: 39%;
-	}
-	@media(max-width: 767px){
-		top: 13%;
-    	left: 37%;
-	}
+    @media(max-width: 1679px) {
+        top: 18%;
+        left: 40%;
+    }
+    @media(max-width: 1279px) {
+        top: 19%;
+        left: 39%;
+    }
+    @media(max-width: 767px) {
+        top: 13%;
+        left: 37%;
+    }
 }
+
 .map-item__finland {
-	top: 11%;
-	left: 47%;
-	@media(max-width: 1679px){
-		top: 9%;
-    	left: 46%;
-	}
-	@media(max-width: 1279px){
-		top: 9%;
-    	left: 45%;
-	}
-	@media(max-width: 767px){
-		top: 5%;
-    	left: 45%;
-	}
+    top: 11%;
+    left: 47%;
+    @media(max-width: 1679px) {
+        top: 9%;
+        left: 46%;
+    }
+    @media(max-width: 1279px) {
+        top: 9%;
+        left: 45%;
+    }
+    @media(max-width: 767px) {
+        top: 5%;
+        left: 45%;
+    }
 }
+
 .map-item__estonia {
-	top: 13%;
-	left: 46%;
-	@media(max-width: 1279px){
-		top: 12%;
-    	left: 46%;
-	}
-	@media(max-width: 767px){
-		top: 7%;
-		left: 44%;
-	}
-}
-.map-item__latvia {
-	top: 14%;
-	left: 45%;
-	@media(max-width: 1679px){
-		top: 12%;
-    	left: 45%;
-	}
-	@media(max-width: 1279px){
-		top: 14%;
-		left: 45%;
-	}
-	@media(max-width: 767px){
-		top: 8%;
-		left: 43%;
-	}
-}
-.map-item__lithuania {
-	top: 16%;
-	left: 45%;
-	@media(max-width: 767px){
-		top: 12%;
-   		 left: 45%;
-
-	}
-}
-.map-item__poland {
-	top: 15%;
-	left: 47%;
-	@media(max-width: 767px){
-		top: 11%;
-    	left: 45%;
-	}
-}
-.map-item__slovakia {
-	top: 17%;
-	left: 48%;
-	@media(max-width: 767px){
-		top: 13%;
-		left: 45%;
-	}
-}
-.map-item__hungary {
-	top: 19%;
+    top: 13%;
     left: 46%;
-	@media(max-width: 767px){
-		top: 16%;
-		left: 44%;
-	}
-}
-.map-item__romania {
-	top: 20%;
-	left: 47%;
-	@media(max-width: 767px){
-		top: 16%;
-		left: 45%;
-	}
-}
-.map-item__bulgaria {
-	top: 23%;
-	left: 47%;
-	@media(max-width: 1279px){
-		top: 21%;
-    	left: 46%;
-	}
-	@media(max-width: 767px){
-		top: 17%;
-		left: 46%;
-	}
-}
-.map-item__moldova {
-	top: 20%;
-	left: 48%;
-	@media(max-width: 767px){
-		top: 15%;
-		left: 45%;
-	}
+    @media(max-width: 1279px) {
+        top: 12%;
+        left: 46%;
+    }
+    @media(max-width: 767px) {
+        top: 7%;
+        left: 44%;
+    }
 }
 
+.map-item__latvia {
+    top: 14%;
+    left: 45%;
+    @media(max-width: 1679px) {
+        top: 12%;
+        left: 45%;
+    }
+    @media(max-width: 1279px) {
+        top: 14%;
+        left: 45%;
+    }
+    @media(max-width: 767px) {
+        top: 8%;
+        left: 43%;
+    }
+}
+
+.map-item__lithuania {
+    top: 16%;
+    left: 45%;
+    @media(max-width: 767px) {
+        top: 12%;
+        left: 45%;
+    }
+}
+
+.map-item__poland {
+    top: 15%;
+    left: 47%;
+    @media(max-width: 767px) {
+        top: 11%;
+        left: 45%;
+    }
+}
+
+.map-item__slovakia {
+    top: 17%;
+    left: 48%;
+    @media(max-width: 767px) {
+        top: 13%;
+        left: 45%;
+    }
+}
+
+.map-item__hungary {
+    top: 19%;
+    left: 46%;
+    @media(max-width: 767px) {
+        top: 16%;
+        left: 44%;
+    }
+}
+
+.map-item__romania {
+    top: 20%;
+    left: 47%;
+    @media(max-width: 767px) {
+        top: 16%;
+        left: 45%;
+    }
+}
+
+.map-item__bulgaria {
+    top: 23%;
+    left: 47%;
+    @media(max-width: 1279px) {
+        top: 21%;
+        left: 46%;
+    }
+    @media(max-width: 767px) {
+        top: 17%;
+        left: 46%;
+    }
+}
+
+.map-item__moldova {
+    top: 20%;
+    left: 48%;
+    @media(max-width: 767px) {
+        top: 15%;
+        left: 45%;
+    }
+}
 
 .map-item__ukraine {
-	top: 18%;
-	left: 50%;
-	@media(max-width: 1279px){
-		top: 17%;
-		left: 50%;
-	}
-	@media(max-width: 767px){
-		top: 12%;
-    	left: 49%;
-	}
+    top: 18%;
+    left: 50%;
+    @media(max-width: 1279px) {
+        top: 17%;
+        left: 50%;
+    }
+    @media(max-width: 767px) {
+        top: 12%;
+        left: 49%;
+    }
 }
+
 .map-item__belarus {
-	top: 15%;
-	left: 50%;
-	@media(max-width: 1279px){
-		top: 15%;
-		left: 50%;
-	}
-	@media(max-width: 767px){
-		top: 7%;
-		left: 50%;
-	}
+    top: 15%;
+    left: 50%;
+    @media(max-width: 1279px) {
+        top: 15%;
+        left: 50%;
+    }
+    @media(max-width: 767px) {
+        top: 7%;
+        left: 50%;
+    }
 }
+
 .map-item__kazakhstan {
-	top: 21%;
-	left: 60%;
-	@media(max-width: 1679px){
-		top: 17%;
-		left: 60%;
-	}
-	@media(max-width: 1279px){
-		top: 18%;
-		left: 60%;
-	}
-	@media(max-width: 767px){
-		top: 14%;
-    	left: 59%;
-	}
+    top: 21%;
+    left: 60%;
+    @media(max-width: 1679px) {
+        top: 17%;
+        left: 60%;
+    }
+    @media(max-width: 1279px) {
+        top: 18%;
+        left: 60%;
+    }
+    @media(max-width: 767px) {
+        top: 14%;
+        left: 59%;
+    }
 }
+
 .map-item__uzbekistan {
-	top: 25%;
-	left: 58%;
-	@media(max-width: 1279px){
-		top: 22%;
-		left: 62%;
-	}
-	@media(max-width: 767px){
-		top: 13%;
-    	left: 61%;
-	}
+    top: 25%;
+    left: 58%;
+    @media(max-width: 1279px) {
+        top: 22%;
+        left: 62%;
+    }
+    @media(max-width: 767px) {
+        top: 13%;
+        left: 61%;
+    }
 }
+
 .map-item__mongolia {
-	top: 21%;
-	left: 67%;
-	@media(max-width: 767px){
-		top: 11%;
-    	left: 69%;
-	}
+    top: 21%;
+    left: 67%;
+    @media(max-width: 767px) {
+        top: 11%;
+        left: 69%;
+    }
 }
+
 .map-item__india {
-	top: 40%;
-	left: 70%;
-	@media(max-width: 1279px){
-		top: 40%;
-		left: 72%;
-	}
-	@media(max-width: 767px){
-		top: 32%;
-    	left: 71%;
-	}
+    top: 40%;
+    left: 70%;
+    @media(max-width: 1279px) {
+        top: 40%;
+        left: 72%;
+    }
+    @media(max-width: 767px) {
+        top: 32%;
+        left: 71%;
+    }
 }
+
 .map-item__australia {
-	top: 70%;
+    top: 70%;
     left: 68%;
-	display: flex;
-	@media(max-width: 767px){
-		top: 70%;
-    	left: 50%;
-	}
+    display: flex;
+    @media(max-width: 767px) {
+        top: 70%;
+        left: 50%;
+    }
 }
+
 .map-item__australia .map-marker-icon {
-	order: 2;
+    order: 2;
 }
 
-.map-item__georgia{
-	top: 20%;
+.map-item__georgia {
+    top: 20%;
     left: 53%;
-	@media(max-width: 1679px){
-		top: 20%;
-		left: 53%;
-	}
-	@media(max-width: 1279px){
-		top: 20%;
-		left: 53%;
-	}
-	@media(max-width: 767px){
-		top: 14%;
-		left: 52%;
-	}
+    @media(max-width: 1679px) {
+        top: 20%;
+        left: 53%;
+    }
+    @media(max-width: 1279px) {
+        top: 20%;
+        left: 53%;
+    }
+    @media(max-width: 767px) {
+        top: 14%;
+        left: 52%;
+    }
 }
-.map-item__iran{
-	top: 28%;
+
+.map-item__iran {
+    top: 28%;
     left: 57%;
-	@media(max-width: 1279px){
-		top: 28%;
-    	left: 57%;
-	}
-	@media(max-width: 767px){
-		top: 20%;
-    	left: 57%;
-	}
+    @media(max-width: 1279px) {
+        top: 28%;
+        left: 57%;
+    }
+    @media(max-width: 767px) {
+        top: 20%;
+        left: 57%;
+    }
 }
-.map-item__pakstan{
-	top: 31%;
+
+.map-item__pakstan {
+    top: 31%;
     left: 66%;
-	@media(max-width: 1279px){
-		top: 31%;
-		left: 66%;
-	}
-	@media(max-width: 767px){
-		top: 25%;
-		left: 66%;
-	}
+    @media(max-width: 1279px) {
+        top: 31%;
+        left: 66%;
+    }
+    @media(max-width: 767px) {
+        top: 25%;
+        left: 66%;
+    }
 }
-.map-item__siria{
-	top: 24%;
+
+.map-item__siria {
+    top: 24%;
     left: 51%;
-	@media(max-width: 1279px){
-		top: 24%;
-		left: 51%;
-	}
-	@media(max-width: 767px){
-		top: 20%;
-		left: 51%;
-	}
+    @media(max-width: 1279px) {
+        top: 24%;
+        left: 51%;
+    }
+    @media(max-width: 767px) {
+        top: 20%;
+        left: 51%;
+    }
 }
-.map-item__kolumbia{
-	top: 47%;
+
+.map-item__kolumbia {
+    top: 47%;
     left: 8%;
-	@media(max-width: 1679px){
-		top: 47%;
-		left: 10%;
-	}
-	@media(max-width: 1279px){
-		top: 47%;
-		left: 2%;
-	}
-	@media(max-width: 767px){
-		top: 43%;
-		left: 0%;
-	}
+    @media(max-width: 1679px) {
+        top: 47%;
+        left: 10%;
+    }
+    @media(max-width: 1279px) {
+        top: 47%;
+        left: 2%;
+    }
+    @media(max-width: 767px) {
+        top: 43%;
+        left: 0%;
+    }
 }
 
-.map-item__venesuela{
-	top: 44%;
+.map-item__venesuela {
+    top: 44%;
     left: 11%;
-	@media(max-width: 1679px){
-		top: 43%;
-		left: 12%;
-	}
-	@media(max-width: 1279px){
-		top: 44%;
-		left: 5%;
-	}
-	@media(max-width: 767px){
-		top: 39%;
-    	left: 3%;
-	}
-}
-.map-item__aljir{
-	top: 30%;
-    left: 36%;
-	@media(max-width: 1679px){
-		top: 28%;
-    left: 36%;
-	}
-	@media(max-width: 1279px){
-		top: 30%;
-    left: 34%;
-	}
-	@media(max-width: 767px){
-		top: 24%;
-		left: 32%;
-	}
+    @media(max-width: 1679px) {
+        top: 43%;
+        left: 12%;
+    }
+    @media(max-width: 1279px) {
+        top: 44%;
+        left: 5%;
+    }
+    @media(max-width: 767px) {
+        top: 39%;
+        left: 3%;
+    }
 }
 
-.map-item__egipt{
-	
+.map-item__aljir {
+    top: 30%;
+    left: 36%;
+    @media(max-width: 1679px) {
+        top: 28%;
+        left: 36%;
+    }
+    @media(max-width: 1279px) {
+        top: 30%;
+        left: 34%;
+    }
+    @media(max-width: 767px) {
+        top: 24%;
+        left: 32%;
+    }
+}
+
+.map-item__egipt {
     top: 31%;
     left: 47%;
-
-	@media(max-width: 1679px){
-		
-		top: 31%;
-		left: 47%;
-	
-	}
-	@media(max-width: 1279px){
-		
-		top: 31%;
-		left: 46%;
-	
-	}
-	@media(max-width: 767px){
-		
-		top: 25%;
-		left: 43%;
-	
-	}
+    @media(max-width: 1679px) {
+        top: 31%;
+        left: 47%;
+    }
+    @media(max-width: 1279px) {
+        top: 31%;
+        left: 46%;
+    }
+    @media(max-width: 767px) {
+        top: 25%;
+        left: 43%;
+    }
 }
-.map-item__mali{
-	top: 36%;
+
+.map-item__mali {
+    top: 36%;
     left: 33%;
-
-	@media(max-width: 1679px){
-	    top: 36%;
-    	left: 33%;
-	
-	}
-	@media(max-width: 1279px){
-		top: 36%;
-		left: 30%;
-	}
-	@media(max-width: 767px){
-	    top: 30%;
-    	left: 28%;
-	}
+    @media(max-width: 1679px) {
+        top: 36%;
+        left: 33%;
+    }
+    @media(max-width: 1279px) {
+        top: 36%;
+        left: 30%;
+    }
+    @media(max-width: 767px) {
+        top: 30%;
+        left: 28%;
+    }
 }
-.map-item__yuar{
-	top: 70%;
-    left: 43%;
 
-	@media(max-width: 1679px){
-		top: 70%;
-		left: 43%;
-	
-	}
-	@media(max-width: 1279px){
-	    top: 70%;
+.map-item__yuar {
+    top: 70%;
     left: 43%;
-	}
-	@media(max-width: 767px){
-		top: 64%;
-		left: 40%;
-	}
+    @media(max-width: 1679px) {
+        top: 70%;
+        left: 43%;
+    }
+    @media(max-width: 1279px) {
+        top: 70%;
+        left: 43%;
+    }
+    @media(max-width: 767px) {
+        top: 64%;
+        left: 40%;
+    }
 }
-.map-item__kot-d-vuar{
-	top: 45%;
+
+.map-item__kot-d-vuar {
+    top: 45%;
     left: 32%;
-
-	@media(max-width: 1679px){
-		top: 43%;
-		left: 32%;
-	
-	}
-	@media(max-width: 1279px){
-		top: 44%;
-    	left: 29%;
-	}
-	@media(max-width: 767px){
-	    top: 36%;
-    	left: 26%;
-	}
+    @media(max-width: 1679px) {
+        top: 43%;
+        left: 32%;
+    }
+    @media(max-width: 1279px) {
+        top: 44%;
+        left: 29%;
+    }
+    @media(max-width: 767px) {
+        top: 36%;
+        left: 26%;
+    }
 }
-.map-item__kenia{
-	top: 52%;
+
+.map-item__kenia {
+    top: 52%;
     left: 51%;
-
-	@media(max-width: 1679px){
-		top: 52%;
-		left: 50%;
-	
-	}
-	@media(max-width: 1279px){
-		top: 52%;
-		left: 51%;
-	}
-	@media(max-width: 767px){
-		top: 43%;
-    	left: 49%;
-	}
+    @media(max-width: 1679px) {
+        top: 52%;
+        left: 50%;
+    }
+    @media(max-width: 1279px) {
+        top: 52%;
+        left: 51%;
+    }
+    @media(max-width: 767px) {
+        top: 43%;
+        left: 49%;
+    }
 }
-.map-item__lione{
-	top: 46%;
+
+.map-item__lione {
+    top: 46%;
     left: 29%;
-
-	@media(max-width: 1679px){
-		top: 43%;
-		left: 29%;
-	
-	}
-	@media(max-width: 1279px){
-		
-		top: 43%;
-		left: 24%;
-	
-	}
-	@media(max-width: 767px){
-		top: 36%;
-		left: 21%;
-	}
+    @media(max-width: 1679px) {
+        top: 43%;
+        left: 29%;
+    }
+    @media(max-width: 1279px) {
+        top: 43%;
+        left: 24%;
+    }
+    @media(max-width: 767px) {
+        top: 36%;
+        left: 21%;
+    }
 }
-.map-item__guiana{
-	top: 46%;
+
+.map-item__guiana {
+    top: 46%;
     left: 12%;
-	@media(max-width: 1679px){
-		top: 46%;
-		left: 12%;
-	}
-	@media(max-width: 1279px){
-		top: 46%;
-		left: 7%;
-	}
-	@media(max-width: 767px){
-		top: 41%;
-		left: 5%;
-	}
+    @media(max-width: 1679px) {
+        top: 46%;
+        left: 12%;
+    }
+    @media(max-width: 1279px) {
+        top: 46%;
+        left: 7%;
+    }
+    @media(max-width: 767px) {
+        top: 41%;
+        left: 5%;
+    }
 }
-.map-item__kuba{
-	top: 33%;
+
+.map-item__kuba {
+    top: 33%;
     left: 8%;
-	@media(max-width: 1679px){
-		top: 31%;
-    left: 10%;
-	}
-	@media(max-width: 1279px){
-		top: 33%;
-		left: 2%;
-	}
-	@media(max-width: 767px){
-		
-		top: 27%;
-		left: 1%;
-	
-	}
+    @media(max-width: 1679px) {
+        top: 31%;
+        left: 10%;
+    }
+    @media(max-width: 1279px) {
+        top: 33%;
+        left: 2%;
+    }
+    @media(max-width: 767px) {
+        top: 27%;
+        left: 1%;
+    }
 }
+
 .section-geography__map-item-label {
-	order: 1;
+    order: 1;
 }
 
-
-.section-geography__wrapper .section-geography__desc  {
-	display: flex;
+.section-geography__wrapper .section-geography__desc {
+    display: flex;
     align-items: center;
 }
 
-.section-geography__title-wrapper{
-	display: none;
+.section-geography__title-wrapper {
+    display: none;
 }
+
 .section-geography__desc p {
-	font-family: $font-bold-2-title;
-	font-weight: bold;
-	font-size: 37px;
-	line-height: 54px;
-	text-transform: uppercase;
-	text-align: center;
-	width: 100%;
+    font-family: $font-bold-2-title;
+    font-weight: bold;
+    font-size: 37px;
+    line-height: 54px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
     margin: 0 auto;
     position: relative;
-	padding-top: 30px;
-	color: $black-grey;
+    padding-top: 30px;
+    color: $black-grey;
 }
+
 .section-geography__desc p:before {
-	position: absolute;
+    position: absolute;
     top: 0;
     left: calc(50% - 50px);
     content: '';
     width: 100px;
     height: 5px;
-	background-color: $red-color;
-	font-family: $font-regular;
+    background-color: $red-color;
+    font-family: $font-regular;
 }
-.section-geography__desc span {
-	display: block;
-	color: $red-color;
-	font-size: 36px;
-	line-height: 144%;
-	font-weight: bold;
-	font-family: $font-bold-2-title;
-}
-.section-geography__desc span > span {
-	font-size: 114px;
-	line-height: 130px;
 
-	font-weight: bold;
+.section-geography__desc span {
+    display: block;
+    color: $red-color;
+    font-size: 36px;
+    line-height: 144%;
+    font-weight: bold;
+    font-family: $font-bold-2-title;
 }
+
+.section-geography__desc span>span {
+    font-size: 114px;
+    line-height: 130px;
+    font-weight: bold;
+}
+
 .section-geography__footer .section-geography__desc {
-	display: none;
+    display: none;
 }
+
 .section-geography__map-planet {
     -webkit-transition: opacity .8s cubic-bezier(.25, .46, .45, .94);
     -o-transition: opacity .8s cubic-bezier(.25, .46, .45, .94);
@@ -836,14 +864,16 @@
     overflow: hidden;
     width: 640px;
     height: 640px;
-	position: relative;
-	-webkit-mask-image: -webkit-radial-gradient(white, black);
-   /* margin: 0 auto;*/
-   /* z-index: 5;*/
+    position: relative;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    /* margin: 0 auto;*/
+    /* z-index: 5;*/
 }
+
 .section-geography__map-planet img {
-	width: 100%;
+    width: 100%;
 }
+
 .section-geography__map-planet:after {
     position: absolute;
     display: block;
@@ -854,21 +884,18 @@
     height: 100%;
     /*height: 501px;*/
     /*height: 258px;*/
-	/*z-index: 10;*/
-	
-
+    /*z-index: 10;*/
     background: url(../img/geography/bg-nuage-1.png) repeat-x;
-    -webkit-transition: opacity .8s cubic-bezier(.25,.46,.45,.94);
-    -o-transition: opacity .8s cubic-bezier(.25,.46,.45,.94);
-    transition: opacity .8s cubic-bezier(.25,.46,.45,.94);
+    -webkit-transition: opacity .8s cubic-bezier(.25, .46, .45, .94);
+    -o-transition: opacity .8s cubic-bezier(.25, .46, .45, .94);
+    transition: opacity .8s cubic-bezier(.25, .46, .45, .94);
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     -webkit-animation: moveCloud1 30s linear infinite;
     animation: moveCloud1 30s linear infinite;
 }
-.section-geography__map-planet:before {
 
-	
+.section-geography__map-planet:before {
     position: absolute;
     display: block;
     content: "";
@@ -882,116 +909,121 @@
     background: url(../img/geography/bg-nuage-1.png) repeat-x;
     -webkit-transform: translateZ(0) scaleY(-1);
     transform: translateZ(0) scaleY(-1);
-    -webkit-transition: opacity .8s cubic-bezier(.25,.46,.45,.94);
-    -o-transition: opacity .8s cubic-bezier(.25,.46,.45,.94);
-    transition: opacity .8s cubic-bezier(.25,.46,.45,.94);
+    -webkit-transition: opacity .8s cubic-bezier(.25, .46, .45, .94);
+    -o-transition: opacity .8s cubic-bezier(.25, .46, .45, .94);
+    transition: opacity .8s cubic-bezier(.25, .46, .45, .94);
     -webkit-animation: moveCloud2 30s linear infinite;
     animation: moveCloud2 30s linear infinite;
 }
 
 @-webkit-keyframes moveCloud1 {
     0% {
-    opacity: 1;
-    background-position: 0 0;
-	}
-	30% {
-	    opacity: .5;
-	}
-	60% {
-	    opacity: 1;
-	}
-	80% {
-	    opacity: .5;
-	}
-	100% {
-	    opacity: 1;
-	    background-position: 817px 0;
-	}
+        opacity: 1;
+        background-position: 0 0;
+    }
+    30% {
+        opacity: .5;
+    }
+    60% {
+        opacity: 1;
+    }
+    80% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+        background-position: 817px 0;
+    }
 }
+
 @keyframes moveCloud1 {
     0% {
-    opacity: 1;
-    background-position: 0 0;
-	}
-	30% {
-	    opacity: .5;
-	}
-	60% {
-	    opacity: 1;
-	}
-	80% {
-	    opacity: .5;
-	}
-	100% {
-	    opacity: 1;
-	    background-position: 817px 0;
-	}
+        opacity: 1;
+        background-position: 0 0;
+    }
+    30% {
+        opacity: .5;
+    }
+    60% {
+        opacity: 1;
+    }
+    80% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+        background-position: 817px 0;
+    }
 }
+
 @-webkit-keyframes moveCloud2 {
     0% {
-    opacity: 1;
-    background-position: 408px 0;
-	}
-	30% {
-	    opacity: .5;
-	}
-	60% {
-	    opacity: 1;
-	}
-	80% {
-	    opacity: .5;
-	}
-	100% {
-	    opacity: 1;
-	    background-position: 1225px 0;
-	}
-}
-	@keyframes moveCloud2 {
-	    0% {
-	    opacity: 1;
-	    background-position: 408px 0;
-	}
-	30% {
-	    opacity: .5;
-	}
-	60% {
-	    opacity: 1;
-	}
-	80% {
-	    opacity: .5;
-	}
-	100% {
-	    opacity: 1;
-	    background-position: 1225px 0;
-	}
+        opacity: 1;
+        background-position: 408px 0;
+    }
+    30% {
+        opacity: .5;
+    }
+    60% {
+        opacity: 1;
+    }
+    80% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+        background-position: 1225px 0;
+    }
 }
 
+@keyframes moveCloud2 {
+    0% {
+        opacity: 1;
+        background-position: 408px 0;
+    }
+    30% {
+        opacity: .5;
+    }
+    60% {
+        opacity: 1;
+    }
+    80% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+        background-position: 1225px 0;
+    }
+}
 
 .home-map-right__text {
-	width: 356px;
-	text-align: center;
-	position: relative;
-	margin: 70px auto 0 auto;
+    width: 356px;
+    text-align: center;
+    position: relative;
+    margin: 70px auto 0 auto;
 }
 
 .home-map-right__text p {
-	font-family: 'HeliosExt';
-	font-weight: bold;
-	font-size: 28px;
-	line-height: 40px;
-	text-transform: uppercase;
+    font-family: 'HeliosExt';
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 40px;
+    text-transform: uppercase;
 }
+
 .home-map-right__text span {
-	display: block;
-	color: #E51C26;
+    display: block;
+    color: #E51C26;
 }
-.home-map-right__text span > span {
-	font-size: 85px;
-	line-height: 105px;
+
+.home-map-right__text span>span {
+    font-size: 85px;
+    line-height: 105px;
 }
+
 .home-map-left,
 .home-map-right {
-	width: 50%;
+    width: 50%;
 }
 
 .home-map-content {
@@ -999,10 +1031,12 @@
     display: -ms-flexbox;
     display: flex;
 }
+
 .home-map-left {
     display: inline-block;
     position: relative;
 }
+
 .home-map-left-world {
     -webkit-transition: opacity .8s cubic-bezier(.25, .46, .45, .94);
     -o-transition: opacity .8s cubic-bezier(.25, .46, .45, .94);
@@ -1015,9 +1049,11 @@
     z-index: 5;
     margin: 0 auto;
 }
+
 .home-map-left-world img {
     width: 100%;
 }
+
 .home-map-left-world:after {
     position: absolute;
     display: block;
@@ -1035,6 +1071,7 @@
     -webkit-animation: moveCloud1 30s linear infinite;
     animation: moveCloud1 30s linear infinite;
 }
+
 .home-map-left-world:before {
     position: absolute;
     display: block;
@@ -1052,8 +1089,9 @@
     -webkit-animation: moveCloud2 30s linear infinite;
     animation: moveCloud2 30s linear infinite;
 }
+
 .home-map-left-item {
-	position: absolute;
+    position: absolute;
     font-size: 12px;
     z-index: 20;
     width: 15px;
@@ -1062,110 +1100,113 @@
     color: #000;
     text-decoration: none;
 }
+
 .home-map-left-item-strana1 {
-	top: 17%;
+    top: 17%;
     left: 14%;
 }
+
 .home-map-left-item-strana2 {
-	top: 24%;
+    top: 24%;
     left: 8%;
 }
+
 .home-map-left-item-strana3 {
-	top: 36%;
+    top: 36%;
     left: 5%;
 }
+
 .home-map-left-item-strana4 {
-	top: 44%;
+    top: 44%;
     left: 3%;
 }
+
 .home-map-left-item-strana5 {
-	top: 48%;
+    top: 48%;
     left: 2%;
 }
+
 .home-map-left-item-strana6 {
-	top: 48%;
+    top: 48%;
     left: 7%;
 }
 
-
-
-
 @-webkit-keyframes moveCloud1 {
     0% {
-    opacity: 1;
-    background-position: 0 0;
-	}
-	30% {
-	    opacity: .5;
-	}
-	60% {
-	    opacity: 1;
-	}
-	80% {
-	    opacity: .5;
-	}
-	100% {
-	    opacity: 1;
-	    background-position: 817px 0;
-	}
+        opacity: 1;
+        background-position: 0 0;
+    }
+    30% {
+        opacity: .5;
+    }
+    60% {
+        opacity: 1;
+    }
+    80% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+        background-position: 817px 0;
+    }
 }
+
 @keyframes moveCloud1 {
     0% {
-    opacity: 1;
-    background-position: 0 0;
-	}
-	30% {
-	    opacity: .5;
-	}
-	60% {
-	    opacity: 1;
-	}
-	80% {
-	    opacity: .5;
-	}
-	100% {
-	    opacity: 1;
-	    background-position: 817px 0;
-	}
+        opacity: 1;
+        background-position: 0 0;
+    }
+    30% {
+        opacity: .5;
+    }
+    60% {
+        opacity: 1;
+    }
+    80% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+        background-position: 817px 0;
+    }
 }
+
 @-webkit-keyframes moveCloud2 {
     0% {
-    opacity: 1;
-    background-position: 408px 0;
-	}
-	30% {
-	    opacity: .5;
-	}
-	60% {
-	    opacity: 1;
-	}
-	80% {
-	    opacity: .5;
-	}
-	100% {
-	    opacity: 1;
-	    background-position: 1225px 0;
-	}
-}
-	@keyframes moveCloud2 {
-	    0% {
-	    opacity: 1;
-	    background-position: 408px 0;
-	}
-	30% {
-	    opacity: .5;
-	}
-	60% {
-	    opacity: 1;
-	}
-	80% {
-	    opacity: .5;
-	}
-	100% {
-	    opacity: 1;
-	    background-position: 1225px 0;
-	}
+        opacity: 1;
+        background-position: 408px 0;
+    }
+    30% {
+        opacity: .5;
+    }
+    60% {
+        opacity: 1;
+    }
+    80% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+        background-position: 1225px 0;
+    }
 }
 
-
-
+@keyframes moveCloud2 {
+    0% {
+        opacity: 1;
+        background-position: 408px 0;
+    }
+    30% {
+        opacity: .5;
+    }
+    60% {
+        opacity: 1;
+    }
+    80% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+        background-position: 1225px 0;
+    }
+}

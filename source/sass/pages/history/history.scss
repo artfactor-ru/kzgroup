@@ -1,43 +1,43 @@
-.about--history{
+.about--history {
     min-height: 180px;
     // margin-bottom: 40px;
     box-sizing: border-box;
-    & .social__btn-list{
+    & .social__btn-list {
         top: 50px;
     }
 }
-.about__title--history{
+
+.about__title--history {
     width: 80%;
 }
-.history__wrapper{
+
+.history__wrapper {
     // display: flex;
-    position: relative;  
-    & .history__bg{
-            display: none;
-            position: absolute;
-         
-            left: 0;
-            top: 0;
-            z-index: -1;
-            width: 100%;
-            height: 100%;
-            background-color: $blue-color;
-            opacity: 0;
-            transition: all 1s ease 0.2s;
-        }
+    position: relative;
+    & .history__bg {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background-color: $blue-color;
+        opacity: 0;
+        transition: all 1s ease 0.2s;
+    }
 }
 
-
-
 .history_light,
-.history_dark{
+.history_dark {
     padding: 50px 0 40px 0;
     position: relative;
 }
-.history_dark{
+
+.history_dark {
     position: relative;
     color: #f4f3f4;
-    &::before{
+    &::before {
         display: block;
         position: absolute;
         content: '';
@@ -52,56 +52,56 @@
     }
     & .history__entry--text-title,
     & .history__entry--text-content,
-    & .history__photos__item-descr{
+    & .history__photos__item-descr {
         color: #f4f3f4;
     }
 }
 
-
-.history__year{
+.history__year {
     width: 320px;
     height: 120px;
-    
     display: flex;
     margin-bottom: 28px;
 }
 
-.history__year .traktors__number-icon{
+.history__year .traktors__number-icon {
     width: 70px;
     margin-right: 2px;
 }
 
-.history__year .traktors__number-icon--one{
+.history__year .traktors__number-icon--one {
     width: 44px;
-
-
     margin-right: 5px;
 }
-.history__year .traktors__number-icon--four{
-    width: 80px;
 
+.history__year .traktors__number-icon--four {
+    width: 80px;
 }
-.history__year .traktors__number-icon--big{
+
+.history__year .traktors__number-icon--big {
     width: 85px;
 }
 
-.history__entry--text{
+.history__entry--text {
     margin-bottom: 63px;
-    & ul{
+    & ul {
+        margin-top: 10px;
         list-style-type: '—';
-        font-family: $font-text-light;
-        font-size: 14px;
-        line-height: 1.6;
+        @extend %block-text;
         padding-left: 10px;
-        & li{
+        color: #fff;
+        & li {
             padding-left: 10px;
+            margin-bottom: 15px;
         }
     }
 }
-.history__entry--text--two{
+
+.history__entry--text--two {
     margin-top: 25px;
 }
-.history__entry--text-title{
+
+.history__entry--text-title {
     font-family: $font-bold-2-title;
     color: #000;
     margin-bottom: 14px;
@@ -109,7 +109,7 @@
     line-height: 1.25;
     // letter-spacing: 2.2px;///
     // padding-left: 7px;
-    & span{
+    & span {
         background-color: $accent-text-bg-color;
         display: inline-block;
         color: #fff;
@@ -118,28 +118,27 @@
     }
 }
 
-.history__entry--text-subtitle{
+.history__entry--text-subtitle {
     font-family: $font-text-regular;
     margin: 40px 0 20px;
     font-size: 18px;
     line-height: 22px;
-
 }
 
-.history__entry--text-content{
+.history__entry--text-content {
     font-family: $font-text-light;
     color: $grey-text-paragraf;
     font-size: 14px;
     line-height: 1.6;
 }
 
-.history__photos--container{
+.history__photos--container {
     display: flex;
     // flex-direction: column;
     // padding-left: 26px;
 }
 
-.history__photos__item{
+.history__photos__item {
     padding-bottom: 20px;
     padding-left: 26px;
     padding-top: 28px;
@@ -149,291 +148,285 @@
     position: absolute;
     position: relative;
     // box-sizing: border-box;
-  
 }
-.history__photos__item.swiper-slide{
+
+.history__photos__item.swiper-slide {
     width: 100% !important;
     box-sizing: border-box;
 }
 
-.history__photos__item-pic{
+.history__photos__item-pic {
     position: relative;
     margin-bottom: 10px;
     font-size: 0;
     display: inline-block;
- 
-}
-.history__photos__item-pic img{
-    height: 260px;
 }
 
-.history__photos__item-year{
+.history__photos__item-pic img {
+    height: 260px;
+    object-fit: cover;
+}
+
+.history__photos__item-year {
     @extend %pic__frame;
     display: block;
 }
 
-.history__photos__item-descr{
+.history__photos__item-descr {
     font-family: $font-text-light;
     color: $grey-text-paragraf;
     font-size: 14px;
     line-height: 1.2;
 }
+
 .history__photos__item.swiper-slide {
     height: auto !important;
 }
-.history__parallax{
+
+.history__parallax {
     display: none;
 }
-@media(min-width: 767px){
-    .history__wrapper{
+
+@media(min-width: 767px) {
+    .history__wrapper {
         display: block;
     }
-    .history__wrapper{
+    .history__wrapper {
         display: flex;
         box-sizing: border-box;
     }
-   
-    .history__photos__item-pic img{
+    .history__photos__item-pic img {
         height: auto;
     }
-
-    .about--history{
+    .about--history {
         min-height: 200px;
         // margin-bottom: 40px;
         box-sizing: border-box;
-        & .social__btn-list{
+        & .social__btn-list {
             top: 50px;
         }
     }
-    .about__title--history{
+    .about__title--history {
         width: 90%;
     }
-  
     .history_light,
-    .history_dark{
+    .history_dark {
         padding: 60px 0;
     }
-    .history_light:first-child{
+    .history_light:first-child {
         padding-top: 20px;
     }
-    .history__year{
+    .history__year {
         height: 210px;
         width: 645px;
- 
     }
-
-    .history__year .traktors__number-icon{
+    .history__year .traktors__number-icon {
         width: 140px;
     }
-
-    .history__year .traktors__number-icon--one{
-		width: 85px;
-	
-	
-		margin-right: 10px;
-	}
-	.history__year .traktors__number-icon--four{
-		width: 165px;
-	
-	}
-	.history__year .traktors__number-icon--big{
-		width: 170px;
+    .history__year .traktors__number-icon--one {
+        width: 85px;
+        margin-right: 10px;
     }
-    
-    .history__entry--text-title{
+    .history__year .traktors__number-icon--four {
+        width: 165px;
+    }
+    .history__year .traktors__number-icon--big {
+        width: 170px;
+    }
+    .history__entry--text-title {
         font-size: 30px;
         letter-spacing: 0;
         padding-left: 0;
-        & span{
+        & span {
             padding: 5px 8px 8px;
         }
     }
-    .history__entry--text-subtitle{
+    .history__entry--text-subtitle {
         margin: 40px 0 20px;
         font-size: 30px;
         line-height: 36px;
     }
-    .history__photos--container{
+    .history__photos--container {
         padding-left: 0px;
         flex-direction: column;
     }
-    .history__photos{
-        & .history__photos__item{
+    .history__photos {
+        & .history__photos__item {
             margin-bottom: 0;
-            &.history__photos__item-1{
+            &.history__photos__item-1 {
                 width: 31%;
             }
-            &.history__photos__item-2{
+            &.history__photos__item-2 {
                 align-self: flex-end;
                 margin-top: -204px;
                 width: 40%;
             }
-            &.history__photos__item-3{
+            &.history__photos__item-3 {
                 margin-top: -5px;
                 width: 48%;
             }
-            &.history__photos__item-4{
+            &.history__photos__item-4 {
                 margin-top: -65px;
                 max-width: 315px;
             }
         }
-        &.history__photos-1{
-            & .history__photos__item-2{
-                & .history__photos__item-pic{
+        &.history__photos-1 {
+            & .history__photos__item-2 {
+                & .history__photos__item-pic {
                     padding-right: 55px;
                 }
             }
         }
-        &.history__photos-2{
-            & .history__photos--container{
+        &.history__photos-2 {
+            & .history__photos--container {
                 flex-direction: row;
                 justify-content: space-between;
                 flex-wrap: wrap;
             }
-            & .history__photos__item{
-                &:nth-child(odd){
+            & .history__photos__item {
+                &:nth-child(odd) {
                     width: 40%;
                 }
-                &.history__photos__item-2{
+                &.history__photos__item-2 {
                     width: 40%;
                     margin-top: 0;
                     margin-bottom: 100px;
-                    & .history__photos__item-pic{
+                    & .history__photos__item-pic {
                         padding-right: 55px;
                     }
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     margin-top: -66px;
                 }
-                &.history__photos__item-4{
+                &.history__photos__item-4 {
                     margin-top: 50px;
                     width: 49%;
                     max-width: inherit;
                 }
-                &.history__photos__item-5{
+                &.history__photos__item-5 {
                     margin-top: -50px;
                 }
-                &.history__photos__item-6{
+                &.history__photos__item-6 {
                     margin-top: 140px;
                     width: 41%;
                 }
             }
         }
-        &.history__photos-3{
-            & .history__photos--container{
+        &.history__photos-3 {
+            & .history__photos--container {
                 flex-direction: row;
                 justify-content: space-between;
                 flex-wrap: wrap;
             }
-            & .history__photos__item{
-                &:nth-child(even){
+            & .history__photos__item {
+                &:nth-child(even) {
                     max-width: inherit;
                     width: 40%;
                 }
-                &.history__photos__item-1{
+                &.history__photos__item-1 {
                     order: 2;
                 }
-                &.history__photos__item-2{
+                &.history__photos__item-2 {
                     order: 1;
                     margin-top: 0;
                     margin-bottom: 100px;
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     order: 4;
                     margin-top: 120px;
                 }
-                &.history__photos__item-4{
+                &.history__photos__item-4 {
                     order: 3;
                     margin-top: 0;
                 }
             }
         }
-        &.history__photos-4{
+        &.history__photos-4 {
             margin-bottom: 100px;
-            & .history__photos--container{
+            & .history__photos--container {
                 flex-direction: column;
                 align-items: flex-end;
             }
-            & .history__photos__item{
-                &:nth-child(odd){
+            & .history__photos__item {
+                &:nth-child(odd) {
                     width: 40%;
                 }
-                &.history__photos__item-1{
-                    & .history__photos__item-pic{
+                &.history__photos__item-1 {
+                    & .history__photos__item-pic {
                         width: 65%;
                     }
                 }
-                &.history__photos__item-2{
+                &.history__photos__item-2 {
                     align-self: flex-start;
                     width: 45%;
                     max-width: 100%;
                     margin-top: -60px;
-                    & img{
+                    & img {
                         max-width: 100%;
                     }
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     margin-top: -50px;
                 }
             }
         }
-        &.history__photos-5{
-            & .history__photos--container{
+        &.history__photos-5 {
+            & .history__photos--container {
                 flex-direction: column;
                 align-items: flex-end;
             }
-            & .history__photos__item{
-                &.history__photos__item-1{
-                    & .history__photos__item-pic{
+            & .history__photos__item {
+                &.history__photos__item-1 {
+                    & .history__photos__item-pic {
                         width: 40%;
                     }
                 }
-                &.history__photos__item-2{
+                &.history__photos__item-2 {
                     align-self: flex-start;
                     width: 45%;
                     margin-top: 100px;
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     margin-top: -290px;
                     width: 40%;
                 }
-                &.history__photos__item-4{
+                &.history__photos__item-4 {
                     width: 40%;
                     margin-right: 5%;
                     margin-top: 70px;
                 }
             }
         }
-        &.history__photos-6{
+        &.history__photos-6 {
             margin-top: 0;
-            & .history__photos--container{
+            & .history__photos--container {
                 flex-direction: row;
                 align-items: flex-start;
                 flex-wrap: wrap;
                 justify-content: space-between;
             }
-            & .history__photos__item{
-                &:nth-child(even){
+            & .history__photos__item {
+                &:nth-child(even) {
                     max-width: 100%;
                     width: 40%;
                 }
-                &.history__photos__item-1{
+                &.history__photos__item-1 {
                     order: 2;
                     margin-bottom: 80px;
                     max-width: 100%;
                 }
-                &.history__photos__item-2{
+                &.history__photos__item-2 {
                     margin-top: 0;
                     margin-bottom: 0px;
                     order: 1;
                     align-self: flex-start;
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     margin-top: 0px;
                     order: 4;
                     width: 39%;
                 }
-                &.history__photos__item-4{
+                &.history__photos__item-4 {
                     margin-top: 90px;
                     order: 3;
                     width: 30%;
@@ -441,251 +434,235 @@
                 }
             }
         }
-        &.history__photos-7{
-            & .history__photos--container{
+        &.history__photos-7 {
+            & .history__photos--container {
                 align-items: flex-end;
             }
-            & .history__photos__item-1{
+            & .history__photos__item-1 {
                 width: 41%;
             }
-            & .history__photos__item-2{
+            & .history__photos__item-2 {
                 align-self: flex-start;
                 margin-top: -100px;
                 width: 40%;
             }
-            & .history__photos__item-3{
+            & .history__photos__item-3 {
                 width: 31%;
                 margin-top: -40px;
             }
         }
-        &.history__photos-8{
-            & .history__photos--container{
+        &.history__photos-8 {
+            & .history__photos--container {
                 align-items: flex-end;
             }
-            & .history__photos__item:nth-child(even){
+            & .history__photos__item:nth-child(even) {
                 align-self: flex-start;
             }
-            & .history__photos__item-1{
+            & .history__photos__item-1 {
                 width: 41%;
             }
-            & .history__photos__item-2{
+            & .history__photos__item-2 {
                 align-self: flex-start;
                 margin-top: -100px;
                 width: 44%;
             }
-            & .history__photos__item-3{
+            & .history__photos__item-3 {
                 width: 31%;
                 margin-top: 0px;
             }
-            & .history__photos__item-4{
+            & .history__photos__item-4 {
                 width: 31%;
                 margin-top: -80px;
             }
         }
-        &.history__photos-9{
-            & .history__photos--container{
+        &.history__photos-9 {
+            & .history__photos--container {
                 align-items: flex-end;
             }
-            & .history__photos__item:nth-child(even){
+            & .history__photos__item:nth-child(even) {
                 align-self: flex-start;
             }
-            & .history__photos__item-1{
+            & .history__photos__item-1 {
                 width: 41%;
             }
-            & .history__photos__item-2{
+            & .history__photos__item-2 {
                 margin-top: -100px;
                 width: 35%;
             }
-            & .history__photos__item-3{
+            & .history__photos__item-3 {
                 width: 50%;
                 margin-top: -10px;
             }
-            & .history__photos__item-4{
+            & .history__photos__item-4 {
                 width: 40%;
                 margin-top: -80px;
             }
         }
     }
-
-    .history__nav-link{
-		text-decoration: none;
-		font-family: $font-text-regular;
-		font-family: MullerRegular;
-		font-size: 12px;
-		line-height: 14px;
-		text-align: center;
-		color: #ADADAD;
-		display: block;
-		position: relative;
-		transition: all 0.3s ease;
-
+    .history__nav-link {
+        text-decoration: none;
+        font-family: $font-text-regular;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        color: #ADADAD;
+        display: block;
+        position: relative;
+        transition: all 0.3s ease;
     }
-    .traktors__nav-item:not(:last-child) .history__nav-link{
-		padding-bottom: 20px;
-		margin-bottom: 5px;
+    .traktors__nav-item:not(:last-child) .history__nav-link {
+        padding-bottom: 20px;
+        margin-bottom: 5px;
     }
-    
-    .history__nav-link.active{
-		color: #000000;
-	}
-	.traktors__nav-item:not(:last-child) .history__nav-link::after{
-		content: '';
-		position: absolute;
-		width: 1px;
-		height: 15px;
-		bottom: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		background: #C6BEBE;
-		transition: all 0.3s ease;
-	}
-	.traktors__nav-item:not(:last-child) .history__nav-link.active::after{
-		background: #000000;
-	}
-    
+    .history__nav-link.active {
+        color: #000000;
+    }
+    .traktors__nav-item:not(:last-child) .history__nav-link::after {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 15px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #C6BEBE;
+        transition: all 0.3s ease;
+    }
+    .traktors__nav-item:not(:last-child) .history__nav-link.active::after {
+        background: #000000;
+    }
 }
 
-@media(min-width: 1280px){
-    .history__wrapper .history__bg{
+@media(min-width: 1280px) {
+    .history__wrapper .history__bg {
         display: block;
     }
-    .history__parallax{
+    .history__parallax {
         display: block;
     }
-    .history_dark{
-        &::before{
-           display: none;
+    .history_dark {
+        &::before {
+            display: none;
         }
     }
-    .history__img--mobile{
+    .history__img--mobile {
         display: none;
     }
-    .history__parallax--horizontal{
+    .history__parallax--horizontal {
         width: 400px;
         height: 300px;
     }
-    .history__parallax--vertical{
+    .history__parallax--vertical {
         width: 330px;
         height: 400px;
     }
-    .history__parallax--img{
-        --overflow: 50px; 
-        height: calc(100% + (2 * var(--overflow))) !important; 
+    .history__parallax--img {
+        --overflow: 50px;
+        height: calc(100% + (2 * var(--overflow))) !important;
         top: calc( -1 * var(--overflow));
     }
-
-
-    .about--history{
+    .about--history {
         min-height: 305px;
         // margin-bottom: 40px;
         box-sizing: border-box;
-        & .social__btn-list{
+        & .social__btn-list {
             top: 50px;
         }
     }
-    .about__title--history{
+    .about__title--history {
         width: 80%;
     }
-  
     .history_light,
-    .history_dark{
+    .history_dark {
         padding: 250px 0 60px 0;
     }
-    .history__year{
+    .history__year {
         height: 330px;
         width: 986px;
-     
     }
-
-    .history__year .traktors__number-icon{
+    .history__year .traktors__number-icon {
         width: 260px;
     }
-
-    .history__year .traktors__number-icon--one{
-		width: 180px;
-	
-	
-		margin-right: 10px;
-	}
-	.history__year .traktors__number-icon--four{
-		width: 280px;
-	
-	}
-	.history__year .traktors__number-icon--big{
-		width: 280px;
+    .history__year .traktors__number-icon--one {
+        width: 180px;
+        margin-right: 10px;
     }
-    
-    .history__entry--text-content{
-        font-size: 16px;
+    .history__year .traktors__number-icon--four {
+        width: 280px;
     }
-    .history__entry--text{
+    .history__year .traktors__number-icon--big {
+        width: 280px;
+    }
+    .history__entry--text-content {
+        font-size: 15px;
+    }
+    .history__entry--text {
         max-width: 612px;
     }
-    .history__entry--text-title{
+    .history__entry--text-title {
         font-size: 36px;
         line-height: 40px;
     }
-    .history__entry--text-subtitle{
+    .history__entry--text-subtitle {
         margin: 40px 0 20px;
         font-size: 30px;
         line-height: 36px;
     }
-    .history__entry--text ul{
+    .history__entry--text ul {
         padding-right: 60px;
     }
-    .history__photos__item-descr{
-        font-size: 16px;
+    .history__photos__item-descr {
+        font-size: 14px;
     }
-    .history__photos{
+    .history__photos {
         margin-top: -240px;
     }
-    .history__photos--container{
+    .history__photos--container {
         align-items: flex-end;
     }
-    .history__photos{
-        & .history__photos__item{
-            &.history__photos__item-1{
+    .history__photos {
+        & .history__photos__item {
+            &.history__photos__item-1 {
                 max-width: 340px;
                 order: 2;
                 align-self: flex-start;
                 margin-top: -120px;
             }
-            &.history__photos__item-2{
+            &.history__photos__item-2 {
                 max-width: 340px;
                 order: 1;
                 margin-top: -14px;
-                & img{
+                & img {
                     max-width: 250px;
                 }
             }
-            &.history__photos__item-3{
+            &.history__photos__item-3 {
                 max-width: 500px;
                 margin-top: -192px;
-                order:3;
+                order: 3;
             }
-            &.history__photos__item-4{
+            &.history__photos__item-4 {
                 margin-top: -100px;
                 max-width: 500px;
                 order: 4;
             }
-            
         }
-        &.history__photos-2{
+        &.history__photos-2 {
             margin-top: -520px;
-            & .history__photos--container{
+            & .history__photos--container {
                 flex-direction: column;
                 align-items: flex-start;
             }
-            & .history__photos__item{
-                &:nth-child(odd){
+            & .history__photos__item {
+                &:nth-child(odd) {
                     margin-top: 0;
                 }
-                &.history__photos__item-1{
+                &.history__photos__item-1 {
                     max-width: inherit;
                     order: 2;
                     margin-top: 120px;
                 }
-                &.history__photos__item-2{
+                &.history__photos__item-2 {
                     order: 1;
                     margin-top: 18px;
                     margin-bottom: 0;
@@ -693,30 +670,30 @@
                     align-self: flex-end;
                     max-width: inherit;
                     width: 31%;
-                    & img{
+                    & img {
                         max-width: 100%;
                     }
-                    & .history__photos__item-pic{
+                    & .history__photos__item-pic {
                         padding-right: 90px;
                     }
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     order: 4;
                     margin-right: 0;
                     margin-top: -60px;
                 }
-                &.history__photos__item-4{
+                &.history__photos__item-4 {
                     align-self: flex-end;
                     width: 40%;
                     order: 3;
                     margin-top: -220px;
                 }
-                &.history__photos__item-5{
+                &.history__photos__item-5 {
                     order: 6;
                     margin-top: -75px;
                     width: 31.5%;
                 }
-                &.history__photos__item-6{
+                &.history__photos__item-6 {
                     align-self: flex-end;
                     order: 5;
                     margin-top: -73px;
@@ -724,123 +701,123 @@
                 }
             }
         }
-        &.history__photos-3{
+        &.history__photos-3 {
             margin-top: -130px;
-            & .history__photos--container{
+            & .history__photos--container {
                 flex-direction: column;
                 align-items: flex-start;
             }
-            & .history__photos__item{
-                &:nth-child(odd){
+            & .history__photos__item {
+                &:nth-child(odd) {
                     align-self: flex-end;
                 }
-                &:nth-child(even){
+                &:nth-child(even) {
                     align-self: flex-start;
                     width: 40%;
                     margin-right: 0;
                 }
-                &.history__photos__item-1{
+                &.history__photos__item-1 {
                     order: 1;
                 }
-                &.history__photos__item-2{
+                &.history__photos__item-2 {
                     order: 2;
                     margin-bottom: 0;
-                    & img{
+                    & img {
                         max-width: 100%;
                     }
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     order: 3;
                     margin-top: 0px;
                 }
-                &.history__photos__item-4{
+                &.history__photos__item-4 {
                     order: 4;
                     margin-top: -170px;
                     width: 40%;
                 }
             }
         }
-        &.history__photos-4{
+        &.history__photos-4 {
             margin-bottom: 120px;
             margin-top: -320px;
-            & .history__photos__item{
-                &:nth-child(odd){
+            & .history__photos__item {
+                &:nth-child(odd) {
                     width: 40%;
                 }
-                &.history__photos__item-1{
+                &.history__photos__item-1 {
                     align-self: flex-end;
                     margin-top: 0;
                     order: 1;
-                    & .history__photos__item-pic{
+                    & .history__photos__item-pic {
                         width: 65%;
                     }
                 }
-                &.history__photos__item-2{
+                &.history__photos__item-2 {
                     margin-top: 160px;
                     order: 2;
                     margin-right: 0;
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     margin-top: -290px;
                     width: 36%;
                 }
             }
         }
-        &.history__photos-5{
+        &.history__photos-5 {
             margin-top: -110px;
-            & .history__photos--container{
+            & .history__photos--container {
                 flex-direction: column;
                 align-items: flex-end;
             }
-            & .history__photos__item{
-                &.history__photos__item-1{
+            & .history__photos__item {
+                &.history__photos__item-1 {
                     align-self: flex-end;
                     order: 1;
-                    & .history__photos__item-pic{
+                    & .history__photos__item-pic {
                         width: 70%;
                     }
                 }
-                &.history__photos__item-2{
+                &.history__photos__item-2 {
                     order: 2;
                     max-width: 100%;
                     margin-right: 0;
                     margin-top: 120px;
-                    & img{
+                    & img {
                         max-width: 100%;
                     }
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     width: 36%;
                     margin-top: -390px;
                 }
-                &.history__photos__item-4{
+                &.history__photos__item-4 {
                     margin-top: 100px;
                 }
             }
         }
-        &.history__photos-6{
+        &.history__photos-6 {
             margin-top: 0;
-            & .history__photos--container{
+            & .history__photos--container {
                 flex-direction: row;
                 align-items: flex-start;
                 flex-wrap: wrap;
                 justify-content: space-between;
             }
-            & .history__photos__item{
-                &:nth-child(even){
+            & .history__photos__item {
+                &:nth-child(even) {
                     max-width: 100%;
                     width: 40%;
                 }
-                &.history__photos__item-2{
-                    & img{
+                &.history__photos__item-2 {
+                    & img {
                         max-width: 100%;
                     }
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     margin-top: 0px;
                     order: 4;
                 }
-                &.history__photos__item-4{
+                &.history__photos__item-4 {
                     margin-top: 90px;
                     order: 3;
                     width: 30%;
@@ -848,387 +825,372 @@
                 }
             }
         }
-        &.history__photos-7{
+        &.history__photos-7 {
             margin-top: -60px;
-            & .history__photos__item-1{
+            & .history__photos__item-1 {
                 order: 1;
                 align-self: flex-end;
                 max-width: 100%;
                 width: 38%;
             }
-            & .history__photos__item-2{
+            & .history__photos__item-2 {
                 order: 2;
                 margin-right: 0;
                 max-width: 100%;
-                & img{
+                & img {
                     max-width: 100%;
                 }
             }
-            & .history__photos__item-3{
+            & .history__photos__item-3 {
                 width: 31%;
                 margin-top: -120px;
             }
         }
-        &.history__photos-8{
+        &.history__photos-8 {
             margin-top: -50px;
-            & .history__photos__item-1{
+            & .history__photos__item-1 {
                 order: 1;
                 align-self: flex-end;
                 max-width: 100%;
                 width: 39%;
             }
-            & .history__photos__item-2{
+            & .history__photos__item-2 {
                 order: 2;
                 max-width: 100%;
                 margin-top: -150px;
-                & img{
+                & img {
                     max-width: 100%;
                 }
             }
-            & .history__photos__item-3{
+            & .history__photos__item-3 {
                 order: 3;
                 margin-top: -80px;
             }
-            & .history__photos__item-4{
+            & .history__photos__item-4 {
                 order: 4;
                 width: 35%;
             }
         }
-        &.history__photos-9{
+        &.history__photos-9 {
             margin-top: -330px;
-            & .history__photos__item-1{
+            & .history__photos__item-1 {
                 align-self: flex-end;
                 order: 1;
                 margin-top: 0;
                 max-width: 100%;
                 width: 35%;
             }
-            & .history__photos__item-2{
+            & .history__photos__item-2 {
                 order: 2;
                 margin-top: 100px;
                 margin-right: 0;
                 max-width: 100%;
                 width: 38%;
-                & img{
+                & img {
                     max-width: 100%;
                 }
             }
-            & .history__photos__item-3{
+            & .history__photos__item-3 {
                 margin-top: -160px;
                 max-width: 100%;
             }
-            & .history__photos__item-4{
+            & .history__photos__item-4 {
                 width: 41%;
                 margin-top: 0px;
                 max-width: 100%;
             }
         }
     }
-    .history__nav-link{
-
-		font-size: 12px;
-		line-height: 14px;
-
-
-	}
-	.traktors__nav-item:not(:last-child) .history__nav-link{
-		padding-bottom: 20px;
-		margin-bottom: 5px;
-	}
-
-	.traktors__nav-item:not(:last-child) .history__nav-link::after{
-
-		height: 15px;
-
+    .history__nav-link {
+        font-size: 12px;
+        line-height: 14px;
     }
-   
+    .traktors__nav-item:not(:last-child) .history__nav-link {
+        padding-bottom: 20px;
+        margin-bottom: 5px;
+    }
+    .traktors__nav-item:not(:last-child) .history__nav-link::after {
+        height: 15px;
+    }
 }
 
-@media(min-width: 1680px){
-
-    .history__parallax--horizontal{
+@media(min-width: 1680px) {
+    .history__parallax--horizontal {
         width: 600px;
         height: 370px;
     }
-    .history__parallax--vertical{
+    .history__parallax--vertical {
         width: 430px;
         height: 558px;
     }
-    .history__parallax--img{
-        --overflow: 50px; 
-        height: calc(100% + (2 * var(--overflow))) !important; 
+    .history__parallax--img {
+        --overflow: 50px;
+        height: calc(100% + (2 * var(--overflow))) !important;
         top: calc( -1 * var(--overflow));
     }
-    .history .traktors__nav{
+    .history .traktors__nav {
         margin-left: 35px;
     }
-    .about--history{
+    .about--history {
         min-height: 335px;
         // margin-bottom: 40px;
         box-sizing: border-box;
-        & .social__btn-list{
+        & .social__btn-list {
             top: 120px;
         }
     }
-    .about__title--history{
+    .about__title--history {
         width: 70%;
     }
-
-    .history__year{
+    .history__year {
         height: 430px;
         width: 1275px;
     }
-
-    .history__year .traktors__number-icon{
+    .history__year .traktors__number-icon {
         width: 320px;
     }
-
-    .history__year .traktors__number-icon--one{
-		width: 195px;
-	
-	
-		margin-right: 10px;
-	}
-	.history__year .traktors__number-icon--four{
-		width: 365px;
-	
-	}
-	.history__year .traktors__number-icon--big{
-		width: 370px;
+    .history__year .traktors__number-icon--one {
+        width: 195px;
+        margin-right: 10px;
     }
-
-    .history__entry--text-title{
+    .history__year .traktors__number-icon--four {
+        width: 365px;
+    }
+    .history__year .traktors__number-icon--big {
+        width: 370px;
+    }
+    .history__entry--text-title {
         font-size: 46px;
         line-height: 42px;
         margin-bottom: 28px;
     }
-    .history__entry--text-title span{
+    .history__entry--text-title span {
         padding: 10px 12px 13px;
         margin-left: -8px;
     }
-    .history__entry--text-content{
-        font-size: 18px;
+    .history__entry--text-content {
+        font-size: 17px;
     }
-    .history__entry--text{
+    .history__entry--text {
         max-width: 742px;
-        & ul{
+        & ul {
             font-size: 18px;
             padding-right: 0px;
         }
     }
-    .history__entry--text-subtitle{
+    .history__entry--text-subtitle {
         font-size: 36px;
         line-height: 49px;
     }
-    .history__photos__item-descr{
-        font-size: 20px;
+    .history__photos__item-descr {
+        font-size: 17px;
     }
-    .history__photos{
+    .history__photos {
         margin-top: -295px;
-        & .history__photos__item{
-            &.history__photos__item-1{
+        & .history__photos__item {
+            &.history__photos__item-1 {
                 max-width: 458px;
                 margin-top: -149px;
                 width: 33%;
             }
-            &.history__photos__item-2{
+            &.history__photos__item-2 {
                 max-width: 442px;
                 margin-top: 23px;
-                & img{
+                & img {
                     max-width: 320px;
                 }
-                .history__photos__item-pic{
+                .history__photos__item-pic {
                     margin-bottom: 23px;
                 }
             }
-            &.history__photos__item-3{
+            &.history__photos__item-3 {
                 max-width: 639px;
                 margin-top: -365px;
                 margin-right: -60px;
                 width: 47%;
             }
-            &.history__photos__item-4{
+            &.history__photos__item-4 {
                 max-width: 639px;
                 margin-top: -230px;
             }
         }
-        &.history__photos-2{
+        &.history__photos-2 {
             margin-top: -550px;
-            & .history__photos__item{
-                &.history__photos__item-1{
+            & .history__photos__item {
+                &.history__photos__item-1 {
                     margin-top: 130px;
                     width: 47%;
                 }
-                &.history__photos__item-2{
+                &.history__photos__item-2 {
                     width: 36%;
                     margin-top: -118px;
                     margin-right: -70px;
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     margin-top: -140px;
                     width: 47%;
                 }
-                &.history__photos__item-4{
+                &.history__photos__item-4 {
                     width: 45%;
                     margin-right: -62px;
                     margin-top: -295px;
                 }
-                &.history__photos__item-5{
+                &.history__photos__item-5 {
                     margin-top: -136px;
                     width: 38%;
                 }
-                &.history__photos__item-6{
+                &.history__photos__item-6 {
                     width: 36%;
                     margin-top: -66px;
                     margin-right: -74px;
                 }
             }
         }
-        &.history__photos-3{
+        &.history__photos-3 {
             margin-top: -133px;
-            & .history__photos__item{
-                &.history__photos__item-1{
+            & .history__photos__item {
+                &.history__photos__item-1 {
                     margin-top: 0px;
                     width: 36%;
                     max-width: 100%;
                     margin-right: -82px;
                 }
-                &.history__photos__item-2{
+                &.history__photos__item-2 {
                     margin-top: -205px;
                     max-width: 100%;
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     margin-top: 25px;
                 }
-                &.history__photos__item-4{
+                &.history__photos__item-4 {
                     margin-top: -283px;
                 }
             }
         }
-        &.history__photos-4{
-            & .history__photos__item{
-                &.history__photos__item-1{
+        &.history__photos-4 {
+            & .history__photos__item {
+                &.history__photos__item-1 {
                     margin-right: -58px;
                     margin-top: -70px;
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     margin-top: -375px;
                 }
             }
         }
-        &.history__photos-5{
+        &.history__photos-5 {
             margin-top: -140px;
-            & .history__photos__item{
-                &.history__photos__item-1{
+            & .history__photos__item {
+                &.history__photos__item-1 {
                     max-width: 100%;
                     width: 29%;
                 }
-                &.history__photos__item-2{
+                &.history__photos__item-2 {
                     margin-top: 155px;
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     margin-top: -517px;
                 }
-                &.history__photos__item-4{
+                &.history__photos__item-4 {
                     width: 43%;
                     margin-right: -1%;
                 }
             }
         }
-        &.history__photos-6{
+        &.history__photos-6 {
             margin-top: 145px;
-            & .history__photos__item{
-                &.history__photos__item-1{
+            & .history__photos__item {
+                &.history__photos__item-1 {
                     margin-right: -64px;
                     width: 37%;
                 }
-                &.history__photos__item-2{
+                &.history__photos__item-2 {
                     margin-top: 46px;
                     width: 47%;
                 }
-                &.history__photos__item-3{
+                &.history__photos__item-3 {
                     margin-top: 42px;
                     width: 45%;
                 }
-                &.history__photos__item-4{
+                &.history__photos__item-4 {
                     margin-top: 191px;
                     width: 37%;
                     margin-left: 0%;
                 }
             }
         }
-        &.history__photos-7{
+        &.history__photos-7 {
             margin-top: -216px;
-            & .history__photos__item-1{
+            & .history__photos__item-1 {
                 width: 45%;
                 max-width: 100%;
                 margin-top: 0px;
                 margin-right: -67px;
-                & img{
+                & img {
                     max-width: 100%;
                 }
             }
-            & .history__photos__item-2{
+            & .history__photos__item-2 {
                 width: 47%;
                 max-width: 100%;
                 margin-top: -150px;
-                & img{
+                & img {
                     max-width: 100%;
                 }
             }
-            & .history__photos__item-3{
+            & .history__photos__item-3 {
                 margin-top: -180px;
                 // margin-right: -206px;
             }
         }
-        &.history__photos-8{
+        &.history__photos-8 {
             margin-top: -12px;
-            & .history__photos__item-1{
+            & .history__photos__item-1 {
                 margin-right: -80px;
                 width: 46%;
                 max-width: 100%;
             }
-            & .history__photos__item-2{
+            & .history__photos__item-2 {
                 margin-top: -154px;
                 width: 47%;
                 max-width: 100%;
-                & img{
+                & img {
                     max-width: 100%;
                 }
             }
-            & .history__photos__item-3{
+            & .history__photos__item-3 {
                 width: 38%;
                 margin-top: -104px;
                 margin-right: -82px;
             }
-            & .history__photos__item-4{
+            & .history__photos__item-4 {
                 max-width: 100%;
                 width: 39%;
                 margin-top: -194px;
             }
         }
-        &.history__photos-9{
+        &.history__photos-9 {
             margin-top: -345px;
-            & .history__photos__item-1{
+            & .history__photos__item-1 {
                 max-width: 100%;
                 width: 46%;
                 margin-top: -145px;
                 margin-right: -78px;
             }
-            & .history__photos__item-2{
+            & .history__photos__item-2 {
                 width: 43%;
                 margin-top: 106px;
                 max-width: 100%;
-                & img{
+                & img {
                     max-width: 100%;
                 }
             }
-            & .history__photos__item-3{
+            & .history__photos__item-3 {
                 width: 55%;
                 max-width: 100%;
                 margin-top: -280px;
             }
-            & .history__photos__item-4{
+            & .history__photos__item-4 {
                 width: 46%;
                 max-width: 100%;
                 margin-top: 36px;
@@ -1237,76 +1199,68 @@
     }
 }
 
-
 .swiper-container-horizontal>.swiper-scrollbar.swiper-scrollbar--history {
-	@extend %scroll-line;
+    @extend %scroll-line;
 }
 
-.swiper-scrollbar--history .swiper-scrollbar-drag{
-	@extend %scroll-drag;
+.swiper-scrollbar--history .swiper-scrollbar-drag {
+    @extend %scroll-drag;
 }
 
-@media(min-width: 768px){
-    .swiper-scrollbar--history{
+@media(min-width: 768px) {
+    .swiper-scrollbar--history {
         display: none;
     }
-
 }
-@media(min-width: 1280px){
-    .history__bg{
+
+@media(min-width: 1280px) {
+    .history__bg {
         display: block;
     }
-    .history__photos--animate{
+    .history__photos--animate {
         position: absolute;
-
         // will-change: transform;
         top: 0;
     }
-    .history__photos__item{
+    .history__photos__item {
         position: relative;
     }
 }
-.history__number-icon{
+
+.history__number-icon {
     fill: none;
     stroke: #808080;
-
     width: 80px;
-
     // stroke-dasharray: 4000;
     //     stroke-dashoffset: 4000;
-        flex-shrink: 0;
-        margin-right: 2px;
+    flex-shrink: 0;
+    margin-right: 2px;
 }
 
-.history__number-icon--one{
+.history__number-icon--one {
     width: 50px;
-
-
     margin-right: 5px;
 }
-.history__number-icon--four{
-    width: 95px;
 
+.history__number-icon--four {
+    width: 95px;
 }
 
-.history__nav-link.active{
+.history__nav-link.active {
     color: $red-color;
 }
-.traktors__nav-item:not(:last-child) .history__nav-link.active::after{
+
+.traktors__nav-item:not(:last-child) .history__nav-link.active::after {
     background-color: $red-color;
 }
 
 // .history__parallax{
 //     overflow: hidden;
-   
-
-
 // .history__parallax__wrap{
 //     // transform: translateY(100%);
 //     height: 0;
 //     transition: height 1s ease;
 // }
-
 // .is-inview .history__parallax--img{
 //     height: auto;
 //     // transform: translateY(0%);

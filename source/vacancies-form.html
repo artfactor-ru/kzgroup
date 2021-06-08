@@ -1,48 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Анкета вакансии</title>
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/style.min.css">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
 </head>
+
 <body>
 
-<style>
-    .preloader{
-        background-color: #ffffff;
-        width: 100vw;
-        z-index: 20000;
-        height: 100vh;
-        height: calc(var(--vh, 1vh) * 100);
-        position: fixed;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    <include src="components/preloader.html"></include>
 
-    }
-    .preloader__icon{
-        width: 130px;
-        height: 130px;
-        fill: none;
-        stroke-dasharray: 1000;
-        stroke-dashoffset: 1000;
-        animation: dash 6s linear 3s forwards infinite alternate;
-    }
-</style>
-<div class="preloader">
-    <svg class="preloader__icon"><use xlink:href="./img/sprite.svg#icon-logo-company"></use></svg>
-</div>
+    <header class="header">
+        <div class="container--header container--header--main">
 
-<header class="header">
-    <div class="container--header container--header--main">
+            <div class="header__wrapper">
 
-        <div class="header__wrapper">
-
-            <button class="c-nav-button js-nav-toggle" type="button">
+                <button class="c-nav-button js-nav-toggle" type="button">
                 <div class="c-nav-button_wrap">
                     <div class="c-nav-button_icon">
                         <span class="c-nav-button_line"></span>
@@ -51,8 +28,8 @@
                     </div>
                 </div>
             </button>
-            <a class="header__logo" href="index.html">
-                <svg class="header__logo-icon"  viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a class="header__logo" href="index.html">
+                    <svg class="header__logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0)">
                         <path d="M29.684 17.9667L17.9667 29.684L6.32028 17.9667L17.9667 6.32028L29.684 17.9667ZM27.7666 8.16666L23.3637 0H12.5696L8.16666 8.16666L0 12.5696V23.3637L8.16666 27.7666L12.5696 35.9333H23.3637L27.7666 27.7666L35.9333 23.3637V12.5696L27.7666 8.16666Z" fill="#ED1C24"/>
                         <path d="M20.4522 6.32031L34.087 13.7058V19.9551L20.4522 6.32031ZM22.2986 34.158H16.0493L29.6841 20.5232L22.2986 34.158ZM1.77539 22.2986V15.9783L15.4102 29.613L1.77539 22.2986ZM13.6348 1.77539H19.8841L6.32031 15.4812L13.6348 1.77539Z" fill="#FFDD00"/>
@@ -64,354 +41,352 @@
                     </defs>
                 </svg>
 
-                <p class="header__logo-text">Кировский<br> завод</p>
-            </a>
+                    <p class="header__logo-text">Кировский<br> завод</p>
+                </a>
+            </div>
+
+
+
+
+
+
         </div>
+    </header>
+
+    <nav class="nav">
+        <div class="nav_background"></div>
 
 
+        <div class="nav_list-wrap">
+            <article class="nav_list-scroll">
+                <div class="nav_list-left scrollbar-inner">
+                    <div class="nav_list-content">
 
 
-
-
-    </div>
-</header>
-
-<nav class="nav">
-    <div class="nav_background"></div>
-
-
-    <div class="nav_list-wrap">
-        <article class="nav_list-scroll">
-            <div class="nav_list-left scrollbar-inner">
-                <div class="nav_list-content">
-
-
-                    <div class="js-search-button">
-                        <div class="js-search-text">Поиск</div>
-                    </div>
-                    <ul class="nav_list">
-                        <li class="nav_item -dropdown js-dropdown">
-                            <div class="nav_link js-nav-link js-dropdown-toggle">
-                                <span class="nav_link_text">Компания</span>
-                                <svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
-
-                            </div>
-                            <span class="nav_link_line"></span>
-                            <div class="nav_dropdown js-dropdown-list">
-                                <div class="nav_dropdown_wrap">
-                                    <ul class="nav_dropdown_list">
-                                        <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="about.html">О компании</a>
-                                        </li>
-                                        <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="leadership.html">Руководство</a>
-                                        </li>
-                                        <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="history.html">История</a>
-                                        </li>
-                                        <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="museum.html">Музей</a>
-                                        </li>
-                                        <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="production-system.html">Производственная система</a>
-                                        </li>
-                                        <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="#">Охрана труда</a>
-                                        </li>
-                                        <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="#">Профсоюз</a>
-                                        </li>
-                                        <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="#">Реквизиты</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nav_item -dropdown js-dropdown">
-                            <div class="nav_link js-nav-link js-dropdown-toggle">
-                                <span class="nav_link_text">Дочерние предприятия</span>
-                                <svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
-
-                            </div>
-                            <span class="nav_link_line"></span>
-                            <div class="nav_dropdown js-dropdown-list">
-                                <div class="nav_dropdown_wrap">
-                                    <ul class="nav_dropdown_list">
-                                        <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="company_group.html">Основные предприятия</a>
-                                        </li>
-                                        <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="ptz.html">АО «Петербургский тракторный завод»</a>
-                                        </li>
-                                        <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="#">АО «Завод «Киров-Энергомаш»</a>
-                                        </li>
-                                        <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="#">АО «Металлургический завод «Петросталь»</a>
-                                        </li>
-                                        <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="#">ООО «Объединенные заводы буровой техники им. В. В. Воровского»</a>
-                                        </li>
-                                        <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="#">ООО «Кировский завод Газовые Технологии»</a>
-                                        </li>
-                                        <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="energy-department.html">Энергодепартамент</a>
-                                        </li>
-                                        <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="#">АО «Тетрамет»</a>
-                                        </li>
-                                        <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="#">АО «Локомотив»</a>
-                                        </li>
-                                        <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="#">АО «Проектно-конструкторское бюро «Автоматика»</a>
-                                        </li>
-                                        <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="#"> Предприятия социальной сферы</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-
-
-                        <li class="nav_item">
-                            <a class="nav_link js-nav-link" href="university.html">
-                                <span class="nav_link_text">Корпоративный университет</span>
-                                <span class="nav_link_line"></span>
-                            </a>
-                        </li>
-
-                        <li class="nav_item">
-                            <a class="nav_link js-nav-link" href="vacancies.html">
-                                <span class="nav_link_text">Вакансии</span>
-                                <span class="nav_link_line"></span>
-                            </a>
-                        </li>
-
-                        <li class="nav_item -dropdown js-dropdown">
-
-
-                            <div class="nav_link js-nav-link js-dropdown-toggle">
-                                <span class="nav_link_text">Пресс-Центр</span>
-                                <svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
-                            </div>
-                            <div class="nav_dropdown js-dropdown-list">
-                                <div class="nav_dropdown_wrap">
-                                    <ul class="nav_dropdown_list">
-                                        <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="press.html">Пресс-Центр</a>
-                                        </li>
-                                        <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="press-news.html">Новости</a>
-                                        </li>
-                                        <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="press-videogallery.html">Видеогалерея</a>
-                                        </li>
-                                        <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="press-about-us.html">Пресса о нас</a>
-                                        </li>
-                                        <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="press-photogallery.html">Фотогалерея</a>
-                                        </li>
-                                        <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="press-contacts.html">Контакты</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="nav_item -dropdown js-dropdown">
-
-
-                            <div class="nav_link js-nav-link js-dropdown-toggle">
-                                <span class="nav_link_text">Акционерам и инвесторам</span>
-                                <svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
-                            </div>
-                            <div class="nav_dropdown js-dropdown-list">
-                                <div class="nav_dropdown_wrap">
-                                    <ul class="nav_dropdown_list">
-                                        <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="#">Информация, подлежащая раскрытию ПАО «Кировский завод»</a>
-                                        </li>
-                                        <li class="nav_dropdown_item">
-                                            <a class="nav_dropdown_link" href="#">Раскрытие информации дочерними обществами</a>
-                                        </li>
-
-
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-
-
-
-                        <li class="nav_item">
-                            <a class="nav_link js-nav-link" href="#">
-                                <span class="nav_link_text">Продажа активов</span>
-                                <span class="nav_link_line"></span>
-                            </a>
-                        </li>
-                        <li class="nav_item">
-                            <a class="nav_link js-nav-link" href="tenders.html">
-                                <span class="nav_link_text">Тендеры</span>
-                                <span class="nav_link_line"></span>
-                            </a>
-                        </li>
-                        <li class="nav_item">
-                            <a class="nav_link js-nav-link" href="rent.html">
-                                <span class="nav_link_text">Аренда помещений	</span>
-                                <span class="nav_link_line"></span>
-                            </a>
-                        </li>
-                        <li class="nav_item">
-                            <a class="nav_link js-nav-link" href="contacts.html">
-                                <span class="nav_link_text">Контакты</span>
-                                <span class="nav_link_line"></span>
-                            </a>
-                        </li>
-
-
-
-                        <li class="nav_item">
-                            <a class="nav_link nav_link--policy js-nav-link" href="#">
-                                <span class="nav_link_text">Использование сайта</span>
-                                <span class="nav_link_line"></span>
-                            </a>
-                        </li>
-                    </ul>
-
-
-                    <div class="nav_lang nav_lang--mobile">
-                        <div class="nav_lang-wrap">
-                            <ul class="nav_lang-list">
-                                <li class="nav_lang-item">
-                                    <a class="nav_lang-link" href="">En</a>
-                                </li>
-                                <li class="nav_lang-item">
-                                    <a class="nav_lang-link" href="">Ru</a>
-                                </li>
-                                <li class="nav_lang-item">
-                                    <a class="nav_lang-link" href="">De</a>
-                                </li>
-
-                            </ul>
+                        <div class="js-search-button">
+                            <div class="js-search-text">Поиск</div>
                         </div>
+                        <ul class="nav_list">
+                            <li class="nav_item -dropdown js-dropdown">
+                                <div class="nav_link js-nav-link js-dropdown-toggle">
+                                    <span class="nav_link_text">Компания</span>
+                                    <svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
 
+                                </div>
+                                <span class="nav_link_line"></span>
+                                <div class="nav_dropdown js-dropdown-list">
+                                    <div class="nav_dropdown_wrap">
+                                        <ul class="nav_dropdown_list">
+                                            <li class="nav_dropdown_item">
+                                                <a class="nav_dropdown_link" href="about.html">О компании</a>
+                                            </li>
+                                            <li class="nav_dropdown_item">
+                                                <a class="nav_dropdown_link" href="leadership.html">Руководство</a>
+                                            </li>
+                                            <li class="nav_dropdown_item">
+                                                <a class="nav_dropdown_link" href="history.html">История</a>
+                                            </li>
+                                            <li class="nav_dropdown_item">
+                                                <a class="nav_dropdown_link" href="museum.html">Музей</a>
+                                            </li>
+                                            <li class="nav_dropdown_item">
+                                                <a class="nav_dropdown_link" href="production-system.html">Производственная система</a>
+                                            </li>
+                                            <li class="nav_dropdown_item">
+                                                <a class="nav_dropdown_link" href="#">Охрана труда</a>
+                                            </li>
+                                            <li class="nav_dropdown_item">
+                                                <a class="nav_dropdown_link" href="#">Профсоюз</a>
+                                            </li>
+                                            <li class="nav_dropdown_item">
+                                                <a class="nav_dropdown_link" href="#">Реквизиты</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav_item -dropdown js-dropdown">
+                                <div class="nav_link js-nav-link js-dropdown-toggle">
+                                    <span class="nav_link_text">Дочерние предприятия</span>
+                                    <svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+
+                                </div>
+                                <span class="nav_link_line"></span>
+                                <div class="nav_dropdown js-dropdown-list">
+                                    <div class="nav_dropdown_wrap">
+                                        <ul class="nav_dropdown_list">
+                                            <li class="nav_dropdown_item">
+                                                <a class="nav_dropdown_link" href="company_group.html">Основные предприятия</a>
+                                            </li>
+                                            <li class="nav_dropdown_item">
+                                                <a class="nav_dropdown_link" href="ptz.html">АО «Петербургский тракторный завод»</a>
+                                            </li>
+                                            <li class="nav_dropdown_item">
+                                                <a class="nav_dropdown_link" href="#">АО «Завод «Киров-Энергомаш»</a>
+                                            </li>
+                                            <li class="nav_dropdown_item">
+                                                <a class="nav_dropdown_link" href="#">АО «Металлургический завод «Петросталь»</a>
+                                            </li>
+                                            <li class="nav_dropdown_item">
+                                                <a class="nav_dropdown_link" href="#">ООО «Объединенные заводы буровой техники им. В. В. Воровского»</a>
+                                            </li>
+                                            <li class="nav_dropdown_item">
+                                                <a class="nav_dropdown_link" href="#">ООО «Кировский завод Газовые Технологии»</a>
+                                            </li>
+                                            <li class="nav_dropdown_item">
+                                                <a class="nav_dropdown_link" href="energy-department.html">Энергодепартамент</a>
+                                            </li>
+                                            <li class="nav_dropdown_item">
+                                                <a class="nav_dropdown_link" href="#">АО «Тетрамет»</a>
+                                            </li>
+                                            <li class="nav_dropdown_item">
+                                                <a class="nav_dropdown_link" href="#">АО «Локомотив»</a>
+                                            </li>
+                                            <li class="nav_dropdown_item">
+                                                <a class="nav_dropdown_link" href="#">АО «Проектно-конструкторское бюро «Автоматика»</a>
+                                            </li>
+                                            <li class="nav_dropdown_item">
+                                                <a class="nav_dropdown_link" href="#"> Предприятия социальной сферы</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+
+                            <li class="nav_item">
+                                <a class="nav_link js-nav-link" href="university.html">
+                                    <span class="nav_link_text">Корпоративный университет</span>
+                                    <span class="nav_link_line"></span>
+                                </a>
+                            </li>
+
+                            <li class="nav_item">
+                                <a class="nav_link js-nav-link" href="vacancies.html">
+                                    <span class="nav_link_text">Вакансии</span>
+                                    <span class="nav_link_line"></span>
+                                </a>
+                            </li>
+
+                            <li class="nav_item -dropdown js-dropdown">
+
+
+                                <div class="nav_link js-nav-link js-dropdown-toggle">
+                                    <span class="nav_link_text">Пресс-Центр</span>
+                                    <svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+                                </div>
+                                <div class="nav_dropdown js-dropdown-list">
+                                    <div class="nav_dropdown_wrap">
+                                        <ul class="nav_dropdown_list">
+                                            <li class="nav_dropdown_item">
+                                                <a class="nav_dropdown_link" href="press.html">Пресс-Центр</a>
+                                            </li>
+                                            <li class="nav_dropdown_item">
+                                                <a class="nav_dropdown_link" href="press-news.html">Новости</a>
+                                            </li>
+                                            <li class="nav_dropdown_item">
+                                                <a class="nav_dropdown_link" href="press-videogallery.html">Видеогалерея</a>
+                                            </li>
+                                            <li class="nav_dropdown_item">
+                                                <a class="nav_dropdown_link" href="press-about-us.html">Пресса о нас</a>
+                                            </li>
+                                            <li class="nav_dropdown_item">
+                                                <a class="nav_dropdown_link" href="press-photogallery.html">Фотогалерея</a>
+                                            </li>
+                                            <li class="nav_dropdown_item">
+                                                <a class="nav_dropdown_link" href="press-contacts.html">Контакты</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="nav_item -dropdown js-dropdown">
+
+
+                                <div class="nav_link js-nav-link js-dropdown-toggle">
+                                    <span class="nav_link_text">Акционерам и инвесторам</span>
+                                    <svg class="nav_link__icon"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+                                </div>
+                                <div class="nav_dropdown js-dropdown-list">
+                                    <div class="nav_dropdown_wrap">
+                                        <ul class="nav_dropdown_list">
+                                            <li class="nav_dropdown_item">
+                                                <a class="nav_dropdown_link" href="#">Информация, подлежащая раскрытию ПАО «Кировский завод»</a>
+                                            </li>
+                                            <li class="nav_dropdown_item">
+                                                <a class="nav_dropdown_link" href="#">Раскрытие информации дочерними обществами</a>
+                                            </li>
+
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+
+
+                            <li class="nav_item">
+                                <a class="nav_link js-nav-link" href="#">
+                                    <span class="nav_link_text">Продажа активов</span>
+                                    <span class="nav_link_line"></span>
+                                </a>
+                            </li>
+                            <li class="nav_item">
+                                <a class="nav_link js-nav-link" href="tenders.html">
+                                    <span class="nav_link_text">Тендеры</span>
+                                    <span class="nav_link_line"></span>
+                                </a>
+                            </li>
+                            <li class="nav_item">
+                                <a class="nav_link js-nav-link" href="rent.html">
+                                    <span class="nav_link_text">Аренда помещений	</span>
+                                    <span class="nav_link_line"></span>
+                                </a>
+                            </li>
+                            <li class="nav_item">
+                                <a class="nav_link js-nav-link" href="contacts.html">
+                                    <span class="nav_link_text">Контакты</span>
+                                    <span class="nav_link_line"></span>
+                                </a>
+                            </li>
+
+
+
+                            <li class="nav_item">
+                                <a class="nav_link nav_link--policy js-nav-link" href="#">
+                                    <span class="nav_link_text">Использование сайта</span>
+                                    <span class="nav_link_line"></span>
+                                </a>
+                            </li>
+                        </ul>
+
+
+                        <div class="nav_lang nav_lang--mobile">
+                            <div class="nav_lang-wrap">
+                                <ul class="nav_lang-list">
+                                    <li class="nav_lang-item">
+                                        <a class="nav_lang-link" href="">En</a>
+                                    </li>
+                                    <li class="nav_lang-item">
+                                        <a class="nav_lang-link" href="">Ru</a>
+                                    </li>
+                                    <li class="nav_lang-item">
+                                        <a class="nav_lang-link" href="">De</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-            </div>
-        </article>
+            </article>
 
 
-
-    </div>
-    <div class="nav_search">
-        <article class="search-wrap">
-            <div class="search">
-                <input class="search_input o-input -search js-search-input" type="text" placeholder="Поиск" value="">
-                <div class="search_results js-search-results"></div>
-            </div>
-        </article>
-    </div>
-    <aside class="nav_aside">
-        <ul class="nav_social">
-            <li class="nav_social_item">
-                <a class="nav_social_link" href="#" target="_blank">
-
-
-                    <svg class="nav_social_icon" ><use xlink:href="./img/sprite.svg#icon-fb"></use></svg>
-                </a>
-            </li>
-            <li class="nav_social_item">
-                <a class="nav_social_link" href="#" target="_blank">
-                    <svg class="nav_social_icon" ><use xlink:href="./img/sprite.svg#icon-vk"></use></svg>
-
-                </a>
-            </li>
-            <li class="nav_social_item">
-                <a class="nav_social_link" href="#" target="_blank">
-                    <svg class="nav_social_icon" ><use xlink:href="./img/sprite.svg#icon-youtube"></use></svg>
-
-                </a>
-            </li>
-            <li class="nav_social_item">
-                <a class="nav_social_link" href="#" target="_blank">
-
-                    <svg class="nav_social_icon" ><use xlink:href="./img/sprite.svg#icon-inst"></use></svg>
-                </a>
-            </li>
-        </ul>
-        <div class="nav_lang nav_lang--desktop">
-            <div class="nav_lang-wrap">
-                <ul class="nav_lang-list">
-                    <li class="nav_lang-item">
-                        <a class="nav_lang-link" href="">Ru</a>
-                    </li>
-                    <li class="nav_lang-item">
-                        <a class="nav_lang-link" href="">En</a>
-                    </li>
-                    <li class="nav_lang-item">
-                        <a class="nav_lang-link" href="">De</a>
-                    </li>
-
-                </ul>
-            </div>
 
         </div>
-    </aside>
-</nav>
-<div class="scroll">
-    <div class="vac-form__wrapper two-screen">
-        <div class="container">
-            <a href="vacancies.html" class="popup_kirovets__back vacancies-d__breadcrumb">
-                <svg class="popup_kirovets__back-icon"><use xlink:href="./img/sprite.svg#icon-arrow-popup"></use></svg>
-                вернуться к списку вакансий
-            </a>
-            <h1 class="vac-f__main-title">Контролер станочных и слесарных работ</h1>
-            <div class="vac-f__content">
-                <div class="vac-f__nav">
-                    <div class="vac-f__nav-list">
-                        <a data-scroll="" href="#personal-data" class="vac-f__nav-item active">
-                            <div class="vac-f__nav-item__circle">
-                                <span>1</span>
-                            </div>
-                            <div>Личные данные</div>
-                        </a>
-                        <a data-scroll="" href="#education" class="vac-f__nav-item">
-                            <div class="vac-f__nav-item__circle">
-                                <span>2</span>
-                            </div>
-                            <div>Образование</div>
-                        </a>
-                        <a data-scroll="" href="#experience" class="vac-f__nav-item">
-                            <div class="vac-f__nav-item__circle">
-                                <span>3</span>
-                            </div>
-                            <div>Опыт работы</div>
-                        </a>
-                    </div>
+        <div class="nav_search">
+            <article class="search-wrap">
+                <div class="search">
+                    <input class="search_input o-input -search js-search-input" type="text" placeholder="Поиск" value="">
+                    <div class="search_results js-search-results"></div>
                 </div>
-                <div class="vac-f__form vac-f__form-selector">
-                    <div class="vac-f__form-desc">Уважаемый кандидат, заполните, пожалуйста, приведенную ниже форму. Благодарим Вас за проявленный интерес к нашей компании.
-                        Ваше резюме будет обязательно рассмотрено в ближайшее время.
-                        Если уровень квалификации соответствует имеющимся на данный момент вакансиям, то сотрудник дирекции по персоналу обязательно с Вами свяжется.
+            </article>
+        </div>
+        <aside class="nav_aside">
+            <ul class="nav_social">
+                <li class="nav_social_item">
+                    <a class="nav_social_link" href="#" target="_blank">
+
+
+                        <svg class="nav_social_icon"><use xlink:href="./img/sprite.svg#icon-fb"></use></svg>
+                    </a>
+                </li>
+                <li class="nav_social_item">
+                    <a class="nav_social_link" href="#" target="_blank">
+                        <svg class="nav_social_icon"><use xlink:href="./img/sprite.svg#icon-vk"></use></svg>
+
+                    </a>
+                </li>
+                <li class="nav_social_item">
+                    <a class="nav_social_link" href="#" target="_blank">
+                        <svg class="nav_social_icon"><use xlink:href="./img/sprite.svg#icon-youtube"></use></svg>
+
+                    </a>
+                </li>
+                <li class="nav_social_item">
+                    <a class="nav_social_link" href="#" target="_blank">
+
+                        <svg class="nav_social_icon"><use xlink:href="./img/sprite.svg#icon-inst"></use></svg>
+                    </a>
+                </li>
+            </ul>
+            <div class="nav_lang nav_lang--desktop">
+                <div class="nav_lang-wrap">
+                    <ul class="nav_lang-list">
+                        <li class="nav_lang-item">
+                            <a class="nav_lang-link" href="">Ru</a>
+                        </li>
+                        <li class="nav_lang-item">
+                            <a class="nav_lang-link" href="">En</a>
+                        </li>
+                        <li class="nav_lang-item">
+                            <a class="nav_lang-link" href="">De</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </aside>
+    </nav>
+    <div class="scroll">
+        <div class="vac-form__wrapper two-screen">
+            <div class="container">
+                <a href="vacancies.html" class="popup_kirovets__back vacancies-d__breadcrumb">
+                    <svg class="popup_kirovets__back-icon"><use xlink:href="./img/sprite.svg#icon-arrow-popup"></use></svg> вернуться к списку вакансий
+                </a>
+                <h1 class="vac-f__main-title">Контролер станочных и слесарных работ</h1>
+                <div class="vac-f__content">
+                    <div class="vac-f__nav">
+                        <div class="vac-f__nav-list">
+                            <a data-scroll="" href="#personal-data" class="vac-f__nav-item active">
+                                <div class="vac-f__nav-item__circle">
+                                    <span>1</span>
+                                </div>
+                                <div>Личные данные</div>
+                            </a>
+                            <a data-scroll="" href="#education" class="vac-f__nav-item">
+                                <div class="vac-f__nav-item__circle">
+                                    <span>2</span>
+                                </div>
+                                <div>Образование</div>
+                            </a>
+                            <a data-scroll="" href="#experience" class="vac-f__nav-item">
+                                <div class="vac-f__nav-item__circle">
+                                    <span>3</span>
+                                </div>
+                                <div>Опыт работы</div>
+                            </a>
+                        </div>
                     </div>
-                    <form action="" method="get" class="vac-f__main-form" id="vac-form">
-                        <div class="vac-f__form-block">
-                            <h5 class="vac-f__form-title" id="personal-data">
-                                1. Личные данные
-                            </h5>
-                            <label class="vac-f__form-label">
+                    <div class="vac-f__form vac-f__form-selector">
+                        <div class="vac-f__form-desc">Уважаемый кандидат, заполните, пожалуйста, приведенную ниже форму. Благодарим Вас за проявленный интерес к нашей компании. Ваше резюме будет обязательно рассмотрено в ближайшее время. Если уровень квалификации соответствует имеющимся
+                            на данный момент вакансиям, то сотрудник дирекции по персоналу обязательно с Вами свяжется.
+                        </div>
+                        <form action="" method="get" class="vac-f__main-form" id="vac-form">
+                            <div class="vac-f__form-block">
+                                <h5 class="vac-f__form-title" id="personal-data">
+                                    1. Личные данные
+                                </h5>
+                                <label class="vac-f__form-label">
                                 <span>Фамилия</span>
                                 <div class="vac-f__input-container vac-f__input-container--req">
                                     <input name="sec-name" onkeyup="this.value = this.value.replace(/[0-9]/i, '')" class="vac-f__second-name" type="text" placeholder="Петров">
                                 </div>
                             </label>
-                            <label class="vac-f__form-label">
+                                <label class="vac-f__form-label">
                                 <span>Имя</span>
                                 <div class="vac-f__input-container  vac-f__input-container--req">
                                     <input  name="first-name"
@@ -422,31 +397,31 @@
                                             id="form-name-input">
                                 </div>
                             </label>
-                            <label class="vac-f__form-label">
+                                <label class="vac-f__form-label">
                                 <span>Отчество</span>
                                 <div class="vac-f__input-container">
                                     <input name="patronymic" type="text" placeholder="Петрович">
                                 </div>
                             </label>
-                            <label class="vac-f__form-label">
+                                <label class="vac-f__form-label">
                                 <span>Город проживания</span>
                                 <div class="vac-f__input-container">
                                     <input name="city" type="text" placeholder="Санкт-Петербург">
                                 </div>
                             </label>
-                            <label class="vac-f__form-label">
+                                <label class="vac-f__form-label">
                                 <span>Гражданство</span>
                                 <div class="vac-f__input-container">
                                     <input name="citizenship" type="text" placeholder="РФ">
                                 </div>
                             </label>
-                            <label class="vac-f__form-label">
+                                <label class="vac-f__form-label">
                                 <span>E-mail</span>
                                 <div class="vac-f__input-container">
                                     <input name="mail" type="email" placeholder="Санкт-Петербург">
                                 </div>
                             </label>
-                            <label class="vac-f__form-label">
+                                <label class="vac-f__form-label">
                                 <span>Телефон</span>
                                 <div class="vac-f__input-container  vac-f__input-container--req">
                                     <input type="phone"
@@ -457,13 +432,13 @@
                                            placeholder="+7 (___)___-__-__">
                                 </div>
                             </label>
-                        </div>
-                        <div class="vac-f__form-block vac-f__form-block--education">
-                            <h5 class="vac-f__form-title" id="education">
-                                2. Образование
-                            </h5>
-                            <div class="education-block">
-                                <label class="vac-f__form-label vac-f__form-label-educ">
+                            </div>
+                            <div class="vac-f__form-block vac-f__form-block--education">
+                                <h5 class="vac-f__form-title" id="education">
+                                    2. Образование
+                                </h5>
+                                <div class="education-block">
+                                    <label class="vac-f__form-label vac-f__form-label-educ">
                                     <span>Образование</span>
                                     <div class="custom-select vac-f__input-container">
                                         <select name="education-level" class="c-select">
@@ -475,25 +450,25 @@
                                         </select>
                                     </div>
                                 </label>
-                                <label class="vac-f__form-label">
+                                    <label class="vac-f__form-label">
                                     <span>Учебное заведение </span>
                                     <div class="vac-f__input-container">
                                         <input name="institution" type="text">
                                     </div>
                                 </label>
-                                <label class="vac-f__form-label">
+                                    <label class="vac-f__form-label">
                                     <span>Факультет</span>
                                     <div class="vac-f__input-container">
                                         <input name="faculty" type="text">
                                     </div>
                                 </label>
-                                <label class="vac-f__form-label">
+                                    <label class="vac-f__form-label">
                                     <span>Специализация</span>
                                     <div class="vac-f__input-container">
                                         <input name="specialization" type="text">
                                     </div>
                                 </label>
-                                <label class="vac-f__form-label vac-f__form-label--short">
+                                    <label class="vac-f__form-label vac-f__form-label--short">
                                     <span>Год окончания</span>
                                     <div class="vac-f__input-container">
                                         <div>
@@ -501,26 +476,26 @@
                                         </div>
                                     </div>
                                 </label>
-                            </div>
+                                </div>
 
-                            <div class="vac-f__input-container--separate vac-f__input-container--adding add-education">
-                                <a class="vac-f__form-education-btn vac-f__form-education-adding" data-click="0">
-                                    <span class="label">Указать ещё одно место обучения</span>
-                                </a>
+                                <div class="vac-f__input-container--separate vac-f__input-container--adding add-education">
+                                    <a class="vac-f__form-education-btn vac-f__form-education-adding" data-click="0">
+                                        <span class="label">Указать ещё одно место обучения</span>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="vac-f__form-block">
-                            <h5 class="vac-f__form-title" id="experience">
-                                3. Опыт работы
-                            </h5>
-                            <label class="vac-f__form-label">
+                            <div class="vac-f__form-block">
+                                <h5 class="vac-f__form-title" id="experience">
+                                    3. Опыт работы
+                                </h5>
+                                <label class="vac-f__form-label">
                                 <span>Профессиональный стаж</span>
                                 <div class="vac-f__input-container">
                                     <input name="experience" type="text">
                                 </div>
                             </label>
-                            <div class="working-main-block">
-                                <label class="vac-f__form-label">
+                                <div class="working-main-block">
+                                    <label class="vac-f__form-label">
                                     <span>Начало работы</span>
                                     <div class="vac-f__form-date">
                                         <div class="vac-f__input-container">
@@ -543,14 +518,14 @@
                                         </div>
                                     </div>
                                 </label>
-                                <div class="vac-f__input-container--separate2 vac-f__checkbox-custom">
-                                    <label class="vac-f__form-checkbox">
+                                    <div class="vac-f__input-container--separate2 vac-f__checkbox-custom">
+                                        <label class="vac-f__form-checkbox">
                                         <input class="vac-f__form-checkbox-basic" type="checkbox">
                                         <p class="vac-f__form-checkbox--style"></p>
                                         <div class="checked__title ">По настоящее время</div>
                                     </label>
-                                </div>
-                                <label class="vac-f__form-label">
+                                    </div>
+                                    <label class="vac-f__form-label">
                                     <span>Окончание</span>
                                     <div class="vac-f__form-date">
                                         <div class="vac-f__input-container">
@@ -573,414 +548,414 @@
                                         </div>
                                     </div>
                                 </label>
-                                <label class="vac-f__form-label">
+                                    <label class="vac-f__form-label">
                                     <span>Организация</span>
                                     <div class="vac-f__input-container">
                                         <input name="organization" type="text">
                                     </div>
                                 </label>
-                                <label class="vac-f__form-label">
+                                    <label class="vac-f__form-label">
                                     <span>Должность</span>
                                     <div class="vac-f__input-container">
                                         <input type="text" name="position">
                                     </div>
                                 </label>
-                                <label class="vac-f__form-label vac-f__form-label--high">
+                                    <label class="vac-f__form-label vac-f__form-label--high">
                                     <span>Обязанности на работе</span>
                                     <div class="vac-f__input-container vac-f__input-container--area">
                                         <textarea name="work-duties"></textarea>
                                     </div>
                                 </label>
-                            </div>
-                            <div class="vac-f__input-container--separate vac-f__input-container--adding add-work">
-                                <a class="vac-f__form-education-btn vac-f__form-works-btn" data-click="0">Добавить место работы</a>
-                            </div>
-                            <label class="vac-f__form-label vac-f__form-label--high">
+                                </div>
+                                <div class="vac-f__input-container--separate vac-f__input-container--adding add-work">
+                                    <a class="vac-f__form-education-btn vac-f__form-works-btn" data-click="0">Добавить место работы</a>
+                                </div>
+                                <label class="vac-f__form-label vac-f__form-label--high">
                                 <span>Ключевые навыки</span>
                                 <div class="vac-f__input-container vac-f__input-container--area">
                                     <textarea name="work-skills"></textarea>
                                 </div>
                             </label>
-                            <label class="vac-f__form-label vac-f__form-label--high">
+                                <label class="vac-f__form-label vac-f__form-label--high">
                                 <span>Дополнительная информация</span>
                                 <div class="vac-f__input-container vac-f__input-container--area">
                                     <textarea name="work-more-info"></textarea>
                                 </div>
                             </label>
-                            <div class="vac-f__input-container--separate vac-f__resume">
-                                <button class="vac-f__form-education-btn  vac-f__resume-download">Загрузить резюме</button>
-                                <p class="vacancies-d__download-status vac-f__form-download-status">Файл не выбран</p>
-                            </div>
-                            <div class="vac-f__input-container--separate2 vac-f__click">
-                                <button class="button vacancies-d__response vac-f__form-submit" type="submit">
+                                <div class="vac-f__input-container--separate vac-f__resume">
+                                    <button class="vac-f__form-education-btn  vac-f__resume-download">Загрузить резюме</button>
+                                    <p class="vacancies-d__download-status vac-f__form-download-status">Файл не выбран</p>
+                                </div>
+                                <div class="vac-f__input-container--separate2 vac-f__click">
+                                    <button class="button vacancies-d__response vac-f__form-submit" type="submit">
                                     Откликнуться
                                     <div class=" button-line button-line--first"></div>
                                     <div class=" button-line button-line--two"></div>
                                 </button>
-                                <p class="vac-f__license">Нажимая на кнопку откликнуться, вы принимаете <a href="#0">согласие на обработку персональных данных</a></p>
-                            </div>
+                                    <p class="vac-f__license">Нажимая на кнопку откликнуться, вы принимаете <a href="#0">согласие на обработку персональных данных</a></p>
+                                </div>
 
-                        </div>
-                    </form>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </div>
-            <div class="vac-f__information">
-                <div>
-                    <h3>Отправить резюме</h3>
-                    <p>Вы можете направить свое резюме по электронной почте <b><a href="mailto:hr@kzgroup.ru">hr@kzgroup.ru</a></b>.</p>
-                </div>
-                <div>
-                    <h3>Согласие на обработку персональных данных</h3>
-                    <p>Направляя резюме, Вы тем самым выражаете ПАО «Кировский завод» и его дочерним и зависимым обществам согласие на обработку Ваших персональных данных в соответствии с Трудовым кодексом Российской Федерации и Федеральным законом «О персональных данных» в течение трех лет в целях содействия Вашему трудоустройству.</p>
+                <div class="vac-f__information">
+                    <div>
+                        <h3>Отправить резюме</h3>
+                        <p>Вы можете направить свое резюме по электронной почте <b><a href="mailto:hr@kzgroup.ru">hr@kzgroup.ru</a></b>.</p>
+                    </div>
+                    <div>
+                        <h3>Согласие на обработку персональных данных</h3>
+                        <p>Направляя резюме, Вы тем самым выражаете ПАО «Кировский завод» и его дочерним и зависимым обществам согласие на обработку Ваших персональных данных в соответствии с Трудовым кодексом Российской Федерации и Федеральным законом «О
+                            персональных данных» в течение трех лет в целях содействия Вашему трудоустройству.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <footer class="footer">
+        <footer class="footer">
 
-        <div class="footer__outer">
-            <div class="container">
+            <div class="footer__outer">
+                <div class="container">
 
-                <div class="footer__row">
-                    <nav class="footer__nav">
-                        <ul class="footer__nav-list">
-                            <li class="footer__nav-item">
-                                <a class="footer__nav-link" href="about.html">Компания</a>
-                            </li>
-                            <li class="footer__nav-item">
-                                <a class="footer__nav-link" href="company_group.html">Дочерние предприятия</a>
-                            </li>
-                            <li class="footer__nav-item">
-                                <a class="footer__nav-link" href="">Карта сайта</a>
-                            </li>
+                    <div class="footer__row">
+                        <nav class="footer__nav">
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="about.html">Компания</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="company_group.html">Дочерние предприятия</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="">Карта сайта</a>
+                                </li>
 
-                            <li class="footer__nav-item">
-                                <a class="footer__nav-link" href="press.html">Пресс-центр</a>
-                            </li>
-                            <li class="footer__nav-item">
-                                <a class="footer__nav-link" href="">Акционерам и инвесторам</a>
-                            </li>
-                            <li class="footer__nav-item">
-                                <a class="footer__nav-link" href="contacts.html">Контакты</a>
-                            </li>
-                            <li class="footer__nav-item">
-                                <a class="footer__nav-link" href="vacancies.html">Вакансии</a>
-                            </li>
-                            <li class="footer__nav-item">
-                                <a class="footer__nav-link" href="tenders.html">Тендеры</a>
-                            </li>
-                            <li class="footer__nav-item">
-                                <a class="footer__nav-link" href="rent-details.html">Аренда помещений</a>
-                            </li>
-
-
-                            <li class="footer__nav-item">
-                                <a class="footer__nav-link" href="">Реквизиты</a>
-                            </li>
-                            <li class="footer__nav-item footer__nav-item--last">
-
-                            </li>
-                        </ul>
-
-                        <p class="footer__adress">198097, Россия, Санкт-Петербург, пр. Стачек, 47</p>
-                    </nav>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="press.html">Пресс-центр</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="">Акционерам и инвесторам</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="contacts.html">Контакты</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="vacancies.html">Вакансии</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="tenders.html">Тендеры</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="rent-details.html">Аренда помещений</a>
+                                </li>
 
 
-                    <div class="footer__contact">
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="">Реквизиты</a>
+                                </li>
+                                <li class="footer__nav-item footer__nav-item--last">
 
-                        <div class="footer__contact-feedback">
-                            <h6 class="footer__contact-title">Подписаться на наши новости</h6>
-                            <form class="footer__contact-form" action="">
-                                <div class="footer__contact-form__wrap">
-                                    <input class="footer__contact-input" type="mail" placeholder="E-mail">
-                                    <button class="footer__contact-submit" type="submit"><svg class="footer__contact-submit-icon" width="40"><use xlink:href="./img/sprite.svg#icon-mail-submit"></use></svg></button>
-                                </div>
-                            </form>
+                                </li>
+                            </ul>
+
+                            <p class="footer__adress">198097, Россия, Санкт-Петербург, пр. Стачек, 47</p>
+                        </nav>
+
+
+                        <div class="footer__contact">
+
+                            <div class="footer__contact-feedback">
+                                <h6 class="footer__contact-title">Подписаться на наши новости</h6>
+                                <form class="footer__contact-form" action="">
+                                    <div class="footer__contact-form__wrap">
+                                        <input class="footer__contact-input" type="mail" placeholder="E-mail">
+                                        <button class="footer__contact-submit" type="submit"><svg class="footer__contact-submit-icon" width="40"><use xlink:href="./img/sprite.svg#icon-mail-submit"></use></svg></button>
+                                    </div>
+                                </form>
+
+                            </div>
+
+                            <ul class="footer__social-list">
+                                <li class="footer__social-item" style="background-image: url(./img/social-youtube.svg);">
+                                    <a class="footer__social-link" href="">
+                                        <span class="visually-hidden">Youtube</span>
+                                    </a>
+                                </li>
+
+                                <li class="footer__social-item" style="background-image: url(./img/social-vk.svg);">
+                                    <a class="footer__social-link" href="">
+                                        <span class="visually-hidden">Vk</span>
+                                    </a>
+                                </li>
+
+                                <li class="footer__social-item" style="background-image: url(./img/social-inst.svg);">
+                                    <a class="footer__social-link" href="">
+                                        <span class="visually-hidden">Instagram</span>
+                                    </a>
+                                </li>
+
+                                <li class="footer__social-item" style="background-image: url(./img/social-fb.svg);">
+                                    <a class="footer__social-link" href="">
+                                        <span class="visually-hidden">Facebook</span>
+                                    </a>
+                                </li>
+                            </ul>
+
 
                         </div>
-
-                        <ul class="footer__social-list">
-                            <li class="footer__social-item" style="background-image: url(./img/social-youtube.svg);">
-                                <a class="footer__social-link" href="">
-                                    <span class="visually-hidden">Youtube</span>
-                                </a>
-                            </li>
-
-                            <li class="footer__social-item" style="background-image: url(./img/social-vk.svg);">
-                                <a class="footer__social-link" href="">
-                                    <span class="visually-hidden">Vk</span>
-                                </a>
-                            </li>
-
-                            <li class="footer__social-item" style="background-image: url(./img/social-inst.svg);">
-                                <a class="footer__social-link" href="">
-                                    <span class="visually-hidden">Instagram</span>
-                                </a>
-                            </li>
-
-                            <li class="footer__social-item" style="background-image: url(./img/social-fb.svg);">
-                                <a class="footer__social-link" href="">
-                                    <span class="visually-hidden">Facebook</span>
-                                </a>
-                            </li>
-                        </ul>
 
 
                     </div>
 
 
+
+
+                    <section class="copyright">
+                        <h6 class="copyright__title">Copyrights © ПАО "Кировский завод"</h6>
+                        <a class="copyright__link" href="">Правила использования сайта</a>
+                        <a class="copyright__link" href="">Политика в области обработки персональных данных</a>
+                    </section>
+
                 </div>
 
-
-
-
-                <section class="copyright">
-                    <h6 class="copyright__title">Copyrights © ПАО "Кировский завод"</h6>
-                    <a class="copyright__link" href="">Правила использования сайта</a>
-                    <a class="copyright__link" href="">Политика в области обработки персональных данных</a>
-                </section>
-
             </div>
+        </footer>
+    </div>
+    <include src="components/btn-up.html"></include>
+    <script src="./js/script.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js"></script> -->
+    <!-- <script>
+        $('.c-select').each(function() {
+            const _this = $(this),
+                selectOption = _this.find('option'),
+                selectOptionLength = selectOption.length,
+                selectedOption = selectOption.filter(':selected'),
+                duration = 450; // длительность анимации
 
-        </div>
-    </footer>
-</div>
-<include src="components/btn-up.html"></include>
-<script src="./js/script.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js"></script>
-<script>
-
-    $('.c-select').each(function() {
-        const _this = $(this),
-            selectOption = _this.find('option'),
-            selectOptionLength = selectOption.length,
-            selectedOption = selectOption.filter(':selected'),
-            duration = 450; // длительность анимации
-
-        _this.hide();
-        _this.wrap('<div class="c-select"></div>');
-        $('<div>', {
-            class: 'new-select',
-            text: _this.children('option:disabled').text()
-        }).insertAfter(_this);
-
-        const selectHead = _this.next('.new-select');
-        $('<div>', {
-            class: 'new-select__list'
-        }).insertAfter(selectHead);
-
-        const selectList = selectHead.next('.new-select__list');
-        for (let i = 1; i < selectOptionLength; i++) {
+            _this.hide();
+            _this.wrap('<div class="c-select"></div>');
             $('<div>', {
-                class: 'new-select__item',
-                html: $('<span>', {
-                    text: selectOption.eq(i).text()
-                })
-            })
-                .attr('data-value', selectOption.eq(i).val())
-                .appendTo(selectList);
-        }
+                class: 'new-select',
+                text: _this.children('option:disabled').text()
+            }).insertAfter(_this);
 
-        const selectItem = selectList.find('.new-select__item');
-        selectList.slideUp(0);
-        selectHead.on('click', function() {
-            if ( !$(this).hasClass('on') ) {
-                $(this).addClass('on');
-                $(this).parent('.c-select').addClass('c-select-rotate');
-                selectList.slideDown(duration);
-                selectItem.on('click', function() {
-                    let chooseItem = $(this).data('value');
-                    $('select').val(chooseItem).attr('selected', 'selected');
-                    selectHead.text( $(this).find('span').text() );
-
-                    selectList.slideUp(duration);
-                    selectHead.removeClass('on');
-
-                });
-
-            } else {
-                $(this).removeClass('on');
-                $(this).parent('.c-select').removeClass('c-select-rotate');
-                selectList.slideUp(duration);
-            }
-        });
-    });
-
-    let clickCounter = 0,
-        newPrefix = 2,
-        newPrefixW = 2,
-        copyNumber = 1,
-        mainEducBlock = $('.education-block'),
-        mainWorkBlock = $('.working-main-block'),
-        addEducationBtn = $('.vac-f__form-education-adding'),
-        addWorkBtn = $('.vac-f__form-works-btn'),
-        copyBlockName = 'education-block-copy' + '-' + copyNumber,
-        copyBlockNameWork = 'working-block-copy' + '-' + copyNumber;
-
-    //функция создания новый атрибутов name при добавлении повторных блоков
-    let setAttrNames = function (block) {
-        let newNameFunc = function (old) {
-            if (newPrefix === 2) {
-                return old + '-' + newPrefix;
-            } else if (newPrefix > 2) {
-                return old.substring(0, old.length - 1) + newPrefix
-            }
-        };
-        block.children('label').children().find('input').each(function (i, el) {
-            let firstName = $(el).attr('name');
-            $(el).attr('name', newNameFunc(firstName));
-        });
-        block.children('label').children().find('select').each(function (i, el) {
-            let firstName = $(el).attr('name');
-            $(el).attr('name', newNameFunc(firstName));
-        });
-        block.children('label').children().find('textarea').each(function (i, el) {
-            let firstName = $(el).attr('name');
-            $(el).attr('name', newNameFunc(firstName));
-        });
-        newPrefix++;
-    };
-    let setAttrNamesWorks = function (block) {
-        let newNameFunc = function (old) {
-            if (newPrefixW === 2) {
-                return old + '-' + newPrefix;
-            } else if (newPrefixW > 2) {
-                return old.substring(0, old.length - 1) + newPrefixW
-            }
-        };
-        block.children('label').children().find('input').each(function (i, el) {
-            let firstName = $(el).attr('name');
-            $(el).attr('name', newNameFunc(firstName));
-        });
-        block.children('label').children().find('select').each(function (i, el) {
-            let firstName = $(el).attr('name');
-            $(el).attr('name', newNameFunc(firstName));
-        });
-
-        newPrefixW++;
-    };
-    //инициализация кастомных селектов
-    let selectInit = function (selector) {
-        const _this = $(selector),
-            selectOption = _this.find('option'),
-            selectOptionLength = selectOption.length,
-            selectedOption = selectOption.filter(':selected'),
-            duration = 450;
-        const selectHead = _this.next('.new-select');
-        $('<div>', {
-            class: 'new-select__list'
-        }).insertAfter(selectHead);
-        const selectList = selectHead.next('.new-select__list');
-        for (let i = 1; i < selectOptionLength; i++) {
+            const selectHead = _this.next('.new-select');
             $('<div>', {
-                class: 'new-select__item',
-                html: $('<span>', {
-                    text: selectOption.eq(i).text()
-                })
-            })
-                .attr('data-value', selectOption.eq(i).val())
-                .appendTo(selectList);
-        }
-        const selectItem = selectList.find('.new-select__item');
-        selectList.slideUp(0);
-        selectHead.on('click', function() {
-            if ( !$(this).hasClass('on') ) {
-                $(this).addClass('on');
-                $(this).parent('.c-select').addClass('c-select-rotate');
-                selectList.slideDown(duration);
-                selectItem.on('click', function() {
-                    let chooseItem = $(this).data('value');
-                    $('select').val(chooseItem).attr('selected', 'selected');
-                    selectHead.text( $(this).find('span').text() );
-                    selectList.slideUp(duration);
-                    selectHead.removeClass('on');
-                });
-            } else {
-                $(this).removeClass('on');
-                $(this).parent('.c-select').removeClass('c-select-rotate');
-                selectList.slideUp(duration);
-            }
-        });
-    };
+                class: 'new-select__list'
+            }).insertAfter(selectHead);
 
-    addEducationBtn.on('click', function () {
-        let newBlockNameSelector = '.' + copyBlockName + ' ' + '.c-select';
-        if (addEducationBtn.attr('data-click') === '0') {
-            let copy = mainEducBlock.clone();
-            copy.addClass(copyBlockName);
-            copy.removeClass('education-block');
-            setAttrNames(copy);
-            copy.find('.new-select__list').detach();
-            $.each(copy.find('input'), function (index, elem) {
-                $(elem).html();
+            const selectList = selectHead.next('.new-select__list');
+            for (let i = 1; i < selectOptionLength; i++) {
+                $('<div>', {
+                        class: 'new-select__item',
+                        html: $('<span>', {
+                            text: selectOption.eq(i).text()
+                        })
+                    })
+                    .attr('data-value', selectOption.eq(i).val())
+                    .appendTo(selectList);
+            }
+
+            const selectItem = selectList.find('.new-select__item');
+            selectList.slideUp(0);
+            selectHead.on('click', function() {
+                if (!$(this).hasClass('on')) {
+                    $(this).addClass('on');
+                    $(this).parent('.c-select').addClass('c-select-rotate');
+                    selectList.slideDown(duration);
+                    selectItem.on('click', function() {
+                        let chooseItem = $(this).data('value');
+                        $('select').val(chooseItem).attr('selected', 'selected');
+                        selectHead.text($(this).find('span').text());
+
+                        selectList.slideUp(duration);
+                        selectHead.removeClass('on');
+
+                    });
+
+                } else {
+                    $(this).removeClass('on');
+                    $(this).parent('.c-select').removeClass('c-select-rotate');
+                    selectList.slideUp(duration);
+                }
             });
-            copy.insertBefore('.add-education');
-            selectInit(newBlockNameSelector);
-            addEducationBtn.attr('data-click', ++clickCounter);
-            ++copyNumber;
-        } else if (addEducationBtn.attr('data-click') > '0') {
-            let closestBlock = addEducationBtn.closest('.add-education').prev('.' + copyBlockName);
-            let copy = closestBlock.clone();
-            copy.removeClass(copyBlockName);
-            copyBlockName = copyBlockName.substring(0, copyBlockName.length - 1) + copyNumber;
-            copy.addClass(copyBlockName);
-            newBlockNameSelector = '.' + copyBlockName + ' ' + '.c-select';
-            setAttrNames(copy);
-            copy.find('.new-select__list').detach();
-            copy.insertBefore('.add-education');
-            selectInit(newBlockNameSelector);
-            addEducationBtn.attr('data-click', ++clickCounter);
-            ++copyNumber;
-        }
-    });
+        });
 
-    addWorkBtn.on('click', function () {
-        let thisNewBlock = '.' + copyBlockNameWork;
-        let firstSelect = thisNewBlock + ' ' + '.c-select-1',
-            secondSelect = thisNewBlock + ' ' + '.c-select-2';
-        if (addWorkBtn.attr('data-click') === '0') {
-            let copy = mainWorkBlock.clone();
-            copy.removeClass('working-main-block');
-            copy.addClass(copyBlockNameWork);
-            setAttrNamesWorks(copy);
-            copy.find('.new-select__list').detach();
-            copy.insertBefore('.add-work');
-            selectInit(firstSelect);
-            selectInit(secondSelect);
-            addWorkBtn.attr('data-click', ++clickCounter);
-            ++copyNumber;
-        } else if (addWorkBtn.attr('data-click') > '0') {
-            let closestBlock = addWorkBtn.closest('.add-work').prev('.' + copyBlockNameWork);
-            console.log(closestBlock);
-            let copy = closestBlock.clone();
-            copy.removeClass(copyBlockNameWork);
-            copyBlockNameWork = copyBlockNameWork.substring(0, copyBlockNameWork.length - 1) + copyNumber;
-            copy.addClass(copyBlockNameWork);
-            firstSelect = '.' + copyBlockNameWork + ' ' + '.c-select-1';
-            secondSelect = '.' + copyBlockNameWork + ' ' + '.c-select-2';
-            setAttrNamesWorks(copy);
-            copy.find('.new-select__list').detach();
-            copy.insertBefore('.add-work');
-            selectInit(firstSelect);
-            selectInit(secondSelect);
-            addWorkBtn.attr('data-click', ++clickCounter);
-            ++copyNumber;
-        }
-    });
+        let clickCounter = 0,
+            newPrefix = 2,
+            newPrefixW = 2,
+            copyNumber = 1,
+            mainEducBlock = $('.education-block'),
+            mainWorkBlock = $('.working-main-block'),
+            addEducationBtn = $('.vac-f__form-education-adding'),
+            addWorkBtn = $('.vac-f__form-works-btn'),
+            copyBlockName = 'education-block-copy' + '-' + copyNumber,
+            copyBlockNameWork = 'working-block-copy' + '-' + copyNumber;
 
-    $('.input-phone-field').inputmask("+7 (999)999-99-99");
-    jQuery.validator.addMethod("checkMaskPhone", function(value, element) {
-        return /\+\d{1}\(\d{3}\)\d{3}-\d{4}/g.test(value);
-    });
-    let form = $('.vac-f__main-form');
-    form.validate();
-    $.validator.addClassRules({
-        'input-phone-field': {
-            checkMaskPhone: true,
-        }
-    });
+        //функция создания новый атрибутов name при добавлении повторных блоков
+        let setAttrNames = function(block) {
+            let newNameFunc = function(old) {
+                if (newPrefix === 2) {
+                    return old + '-' + newPrefix;
+                } else if (newPrefix > 2) {
+                    return old.substring(0, old.length - 1) + newPrefix
+                }
+            };
+            block.children('label').children().find('input').each(function(i, el) {
+                let firstName = $(el).attr('name');
+                $(el).attr('name', newNameFunc(firstName));
+            });
+            block.children('label').children().find('select').each(function(i, el) {
+                let firstName = $(el).attr('name');
+                $(el).attr('name', newNameFunc(firstName));
+            });
+            block.children('label').children().find('textarea').each(function(i, el) {
+                let firstName = $(el).attr('name');
+                $(el).attr('name', newNameFunc(firstName));
+            });
+            newPrefix++;
+        };
+        let setAttrNamesWorks = function(block) {
+            let newNameFunc = function(old) {
+                if (newPrefixW === 2) {
+                    return old + '-' + newPrefix;
+                } else if (newPrefixW > 2) {
+                    return old.substring(0, old.length - 1) + newPrefixW
+                }
+            };
+            block.children('label').children().find('input').each(function(i, el) {
+                let firstName = $(el).attr('name');
+                $(el).attr('name', newNameFunc(firstName));
+            });
+            block.children('label').children().find('select').each(function(i, el) {
+                let firstName = $(el).attr('name');
+                $(el).attr('name', newNameFunc(firstName));
+            });
 
-</script>
+            newPrefixW++;
+        };
+        //инициализация кастомных селектов
+        let selectInit = function(selector) {
+            const _this = $(selector),
+                selectOption = _this.find('option'),
+                selectOptionLength = selectOption.length,
+                selectedOption = selectOption.filter(':selected'),
+                duration = 450;
+            const selectHead = _this.next('.new-select');
+            $('<div>', {
+                class: 'new-select__list'
+            }).insertAfter(selectHead);
+            const selectList = selectHead.next('.new-select__list');
+            for (let i = 1; i < selectOptionLength; i++) {
+                $('<div>', {
+                        class: 'new-select__item',
+                        html: $('<span>', {
+                            text: selectOption.eq(i).text()
+                        })
+                    })
+                    .attr('data-value', selectOption.eq(i).val())
+                    .appendTo(selectList);
+            }
+            const selectItem = selectList.find('.new-select__item');
+            selectList.slideUp(0);
+            selectHead.on('click', function() {
+                if (!$(this).hasClass('on')) {
+                    $(this).addClass('on');
+                    $(this).parent('.c-select').addClass('c-select-rotate');
+                    selectList.slideDown(duration);
+                    selectItem.on('click', function() {
+                        let chooseItem = $(this).data('value');
+                        $('select').val(chooseItem).attr('selected', 'selected');
+                        selectHead.text($(this).find('span').text());
+                        selectList.slideUp(duration);
+                        selectHead.removeClass('on');
+                    });
+                } else {
+                    $(this).removeClass('on');
+                    $(this).parent('.c-select').removeClass('c-select-rotate');
+                    selectList.slideUp(duration);
+                }
+            });
+        };
+
+        addEducationBtn.on('click', function() {
+            let newBlockNameSelector = '.' + copyBlockName + ' ' + '.c-select';
+            if (addEducationBtn.attr('data-click') === '0') {
+                let copy = mainEducBlock.clone();
+                copy.addClass(copyBlockName);
+                copy.removeClass('education-block');
+                setAttrNames(copy);
+                copy.find('.new-select__list').detach();
+                $.each(copy.find('input'), function(index, elem) {
+                    $(elem).html();
+                });
+                copy.insertBefore('.add-education');
+                selectInit(newBlockNameSelector);
+                addEducationBtn.attr('data-click', ++clickCounter);
+                ++copyNumber;
+            } else if (addEducationBtn.attr('data-click') > '0') {
+                let closestBlock = addEducationBtn.closest('.add-education').prev('.' + copyBlockName);
+                let copy = closestBlock.clone();
+                copy.removeClass(copyBlockName);
+                copyBlockName = copyBlockName.substring(0, copyBlockName.length - 1) + copyNumber;
+                copy.addClass(copyBlockName);
+                newBlockNameSelector = '.' + copyBlockName + ' ' + '.c-select';
+                setAttrNames(copy);
+                copy.find('.new-select__list').detach();
+                copy.insertBefore('.add-education');
+                selectInit(newBlockNameSelector);
+                addEducationBtn.attr('data-click', ++clickCounter);
+                ++copyNumber;
+            }
+        });
+
+        addWorkBtn.on('click', function() {
+            let thisNewBlock = '.' + copyBlockNameWork;
+            let firstSelect = thisNewBlock + ' ' + '.c-select-1',
+                secondSelect = thisNewBlock + ' ' + '.c-select-2';
+            if (addWorkBtn.attr('data-click') === '0') {
+                let copy = mainWorkBlock.clone();
+                copy.removeClass('working-main-block');
+                copy.addClass(copyBlockNameWork);
+                setAttrNamesWorks(copy);
+                copy.find('.new-select__list').detach();
+                copy.insertBefore('.add-work');
+                selectInit(firstSelect);
+                selectInit(secondSelect);
+                addWorkBtn.attr('data-click', ++clickCounter);
+                ++copyNumber;
+            } else if (addWorkBtn.attr('data-click') > '0') {
+                let closestBlock = addWorkBtn.closest('.add-work').prev('.' + copyBlockNameWork);
+                console.log(closestBlock);
+                let copy = closestBlock.clone();
+                copy.removeClass(copyBlockNameWork);
+                copyBlockNameWork = copyBlockNameWork.substring(0, copyBlockNameWork.length - 1) + copyNumber;
+                copy.addClass(copyBlockNameWork);
+                firstSelect = '.' + copyBlockNameWork + ' ' + '.c-select-1';
+                secondSelect = '.' + copyBlockNameWork + ' ' + '.c-select-2';
+                setAttrNamesWorks(copy);
+                copy.find('.new-select__list').detach();
+                copy.insertBefore('.add-work');
+                selectInit(firstSelect);
+                selectInit(secondSelect);
+                addWorkBtn.attr('data-click', ++clickCounter);
+                ++copyNumber;
+            }
+        });
+
+        $('.input-phone-field').inputmask("+7 (999)999-99-99");
+        jQuery.validator.addMethod("checkMaskPhone", function(value, element) {
+            return /\+\d{1}\(\d{3}\)\d{3}-\d{4}/g.test(value);
+        });
+        let form = $('.vac-f__main-form');
+        form.validate();
+        $.validator.addClassRules({
+            'input-phone-field': {
+                checkMaskPhone: true,
+            }
+        });
+    </script> -->
 </body>
+
 </html>

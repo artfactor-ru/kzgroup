@@ -1,4 +1,4 @@
-.preloader{
+.preloader {
     background-color: #ffffff;
     width: 100vw;
     z-index: 20000;
@@ -8,11 +8,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    transition: all 0.5s ease;
-   
+    transition: opacity 0.5s ease;
 }
-.preloader__icon{
+
+.preloader__icon {
     width: 130px;
     height: 130px;
     fill: none;
@@ -26,5 +25,3 @@
     // animation-direction: alternate;
     // animation-fill-mode: forwards;
 }
-
-

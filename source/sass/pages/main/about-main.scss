@@ -1,188 +1,141 @@
-
-
-
-.main_about{
-
-	background-image: url(../img/main/about-main-bg.svg);
-	background-position: bottom center;
-  background-size: contain;
+.main_about {
+    background-image: url(../img/main/about-main-bg.svg);
+    background-position: bottom center;
+    background-size: contain;
 }
 
-
-
-
-.parallax__img--main_about{
-
-	background-position: bottom center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 100%;
- 
-  position: absolute;
-	// z-index: -1;
-	height: 370px;
-	// background-size: 100% auto;
-}
-.main_about__flag{
-	display: none;
+.parallax__img--main_about {
+    background-position: bottom center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: absolute;
+    // z-index: -1;
+    height: 370px;
+    // background-size: 100% auto;
 }
 
-
-@media(min-width: 767px){
-	.main_about{
-
-	  background-size: cover;
-	}
-	.parallax__img--main_about{
-
-		background-position: bottom center;
-		background-size: auto 505px;
-		background-repeat: no-repeat;
-		width: 100%;
-		position: absolute;
-		z-index: -1;
-		height: 505px;
-
-	}
-
-	.main_about__flag{
-		display: block;
-		width: 90px;
-		height: 90px;
-		margin-right: 20px;
-	}
-	.main_about__desc-wrap{
-		display: flex;
-		padding-top: 20px;
-	}
-	.main_about__desc{
-		padding-top: 0px;
-		width: 85%;
-	}
-
+.main_about__flag {
+    display: none;
 }
 
-@media(min-width: 1280px){
-    
-    .main_about{
+@media(min-width: 767px) {
+    .main_about {
+        background-size: cover;
+    }
+    .parallax__img--main_about {
+        background-position: bottom center;
+        background-size: auto 505px;
+        background-repeat: no-repeat;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        height: 505px;
+    }
+    .main_about__flag {
+        display: block;
+        width: 90px;
+        height: 90px;
+        margin-right: 20px;
+    }
+    .main_about__desc-wrap {
+        display: flex;
+        padding-top: 20px;
+    }
+    .main_about__desc {
+        padding-top: 0px;
+        width: 85%;
+    }
+}
 
+@media(min-width: 1280px) {
+    .main_about {
         background-image: none;
     }
-	
-	.parallax__img--main{
-
-		background-position: bottom  center;
-		background-size: contain;
-		background-repeat: no-repeat;
-		width: 100%;
-		position: absolute;
-		z-index: -1;
-	
-		
-	}
-
-
-
-	.main_about__flag{
-		display: block;
-		width: 125px;
-		height: 125px;
-		margin-right: 35px;
-		margin-left: 5px;
-	}
-	.main_about__desc-wrap{
-		display: flex;
-		padding-top: 45px;
-	}
-	.main_about__desc{
-		padding-top: 0px;
-		width: 65%;
-	}
-
-
-
-	.parallax__img--main-1{
-		background-image: url(../img/main/img-parallax-1-main.svg);
-		background-position: bottom  center;
-		--overflow: -70px;
-		// --overflow: -20%;
-		height: calc(660px + (2 * var(--overflow)));
-		top: calc( -1 * var(--overflow));
-		
-	}
-	.parallax__img--main-2{
-		background-image: url(../img/main/img-parallax-2-main.svg);
-		// --overflow: -15%;
-		// --overflow: -150px;
-		height: calc(660px + (2 * var(--overflow)));
-		top: calc( -1 * var(--overflow));
-		
-	}
-	.parallax__img--main-3{
-		background-image: url(../img/main/img-parallax-3-main.svg);
-		--overflow: -50px;
-		// --overflow: 50px;
-		// --overflow: -50%;
-		height: calc(660px + (2 * var(--overflow)));
-		top: calc( -1 * var(--overflow));
-	
-	}
-	.parallax__img--main-4{
-		background-image: url(../img/main/img-parallax-4-main.svg);
-		// --overflow: -25%;
-		// --overflow: -150px;
-		height: calc(660px + (2 * var(--overflow)));
-		top: calc( -1 * var(--overflow));
-	}
-
-
-
-	
-
+    .parallax__img--main {
+        background-position: bottom center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+    .main_about__flag {
+        display: block;
+        width: 125px;
+        height: 125px;
+        margin-right: 35px;
+        margin-left: 5px;
+    }
+    .main_about__desc-wrap {
+        display: flex;
+        padding-top: 45px;
+    }
+    .main_about__desc {
+        padding-top: 0px;
+        width: 65%;
+    }
+    .parallax__img--main-1 {
+        background-image: url(../img/main/img-parallax-1-main.svg);
+        background-position: bottom center;
+        --overflow: -75px;
+        // --overflow: -20%;
+        height: calc(560px + (2 * var(--overflow)));
+        top: calc( -1 * var(--overflow));
+    }
+    .parallax__img--main-2 {
+        background-image: url(../img/main/img-parallax-2-main.svg);
+        // --overflow: -15%;
+        --overflow: -50px;
+        height: calc(560px + (2 * var(--overflow)));
+        top: calc( -1 * var(--overflow));
+    }
+    .parallax__img--main-3 {
+        background-image: url(../img/main/img-parallax-3-main.svg);
+        --overflow: -50px;
+        // --overflow: 50px;
+        // --overflow: -50%;
+        height: calc(560px + (2 * var(--overflow)));
+        top: calc( -1 * var(--overflow));
+    }
+    .parallax__img--main-4 {
+        background-image: url(../img/main/img-parallax-4-main.svg);
+        --overflow: -50px;
+        // --overflow: -150px;
+        height: calc(560px + (2 * var(--overflow)));
+        top: calc( -1 * var(--overflow));
+    }
 }
 
-@media(min-width: 1680px){
-	
-
-	.about__title{
-	
-		width: 90%;
-	}
-
-	.main_about__flag{
-		display: block;
-		width: 190px;
-		height: 190px;
-		margin-right: 70px;
-		margin-left: 5px;
-	}
-	.main_about__desc-wrap{
-		display: flex;
-		padding-top: 80px;
-	}
-	.main_about__desc{
-		padding-top: 0px;
-		width: 50%;
-	}
-
-
-
-	.parallax__img--main_about{
-	
-		height: 960px;
-		// background-size: 100% auto;
-	}
-
-	.parallax__img--main-1{
-		background-image: url(../img/main/img-parallax-1-main.svg);
-		background-position: bottom  center;
-		--overflow: -100px;
-		// --overflow: -20%;
-		height: calc(960px + (2 * var(--overflow)));
-		top: calc( -1 * var(--overflow));
-		
-	}
-
-
-
+@media(min-width: 1680px) {
+    .about__title {
+        width: 90%;
+    }
+    .main_about__flag {
+        display: block;
+        width: 190px;
+        height: 190px;
+        margin-right: 70px;
+        margin-left: 5px;
+    }
+    .main_about__desc-wrap {
+        display: flex;
+        padding-top: 80px;
+    }
+    .main_about__desc {
+        padding-top: 0px;
+        width: 50%;
+    }
+    .parallax__img--main_about {
+        height: 960px;
+        // background-size: 100% auto;
+    }
+    .parallax__img--main-1 {
+        background-image: url(../img/main/img-parallax-1-main.svg);
+        background-position: bottom center;
+        --overflow: -100px;
+        // --overflow: -20%;
+        height: calc(960px + (2 * var(--overflow)));
+        top: calc( -1 * var(--overflow));
+    }
 }

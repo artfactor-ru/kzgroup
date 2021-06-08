@@ -1,21 +1,16 @@
-.video-block{
-    height: 220px;
-    background-color: $blue-color;
+.video-block {
+    height: 130px;
+    // background-color: $blue-color;
     position: relative;
 }
-.parallax__img-wrap--inner-block-video{
-    --overflow: 100px;
-   width: auto;
-    height: calc(100% + (2 * var(--overflow))) !important;
-    top: calc( -1 * var(--overflow));
-}
-.parallax__img--inner-video{
+
+.parallax__img--inner-video {
     // width: 100%;
     // height: 100%;
     position: absolute;
- 
 }
-.button__video-controls-wrap--video-block{
+
+.button__video-controls-wrap--video-block {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -24,51 +19,71 @@
     height: 60px;
     z-index: 10;
 }
-.button__video-controls--inner{
+
+.button__video-controls--inner {
     @include btn-destroy;
     width: 100%;
     height: 100%;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    
 }
-.button__video-controls-inner--play{
+
+.button__video-controls-inner--play {
     background-image: url(../img/news/icon-play.svg);
 }
-.button__video-controls-inner--play.active{
+
+.button__video-controls-inner--play.active {
     background-image: url(../img/news/icon-pause.svg);
 }
 
-
-@media(min-width: 767px){
-    .video-block{
-        height: 280px;
+@media(min-width: 487px) {
+    .video-block {
+        height: 210px;
     }
-    .button__video-controls-wrap--video-block{
+}
+
+@media(min-width: 767px) {
+    .video-block {
+        height: 380px;
+    }
+    .button__video-controls-wrap--video-block {
         width: 80px;
         height: 80px;
-      
     }
 }
 
-@media(min-width: 1280px){
-    .video-block{
-        height: 415px;
+@media(min-width: 1280px) {
+    .parallax__img-wrap--inner-block-video {
+        --overflow: 130px;
+        width: auto;
+        height: calc(100% + (2 * var(--overflow))) !important;
+        top: calc( -1 * var(--overflow));
     }
-    .button__video-controls-wrap--video-block{
+    .video-block {
+        height: 580px;
+    }
+    .button__video-controls-wrap--video-block {
         width: 120px;
         height: 120px;
-      
+    }
+    .video-block .parallax__img--inner {
+        background-size: auto !important;
+        // background-repeat: repeat-y !important;
     }
 }
 
-@media(min-width: 1680px){
-    .video-block{
-        height: 510px;
+@media(min-width: 1680px) {
+    .video-block {
+        height: 580px;
     }
-    .button__video-controls-wrap--video-block{
+    .button__video-controls-wrap--video-block {
         width: 135px;
         height: 135px;
-      
+    }
+}
+
+@media(min-width:1921px) {
+    .video-block .parallax__img--inner {
+        background-size: cover !important;
     }
 }

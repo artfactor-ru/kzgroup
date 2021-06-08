@@ -1,741 +1,748 @@
 <!DOCTYPE html>
 <html lang="ru">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Петербургский тракторный завод</title>
-      <link rel="stylesheet" href="./css/style.min.css">
-   </head>
-   <body class="about">
-      <!-- Прелоадер -->
-      <include src="components/preloader.html"></include>
-      <!-- Шапка и меню -->
-      <include src="components/header.html"></include>
-      <div class="scroll">
-         <section class="main parallax__item">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Петербургский тракторный завод</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+    <!-- Прелоадер -->
+    <include src="components/preloader.html"></include>
+    <!-- Шапка и меню -->
+    <include src="components/header.html"></include>
+    <div class="scroll">
+        <section class="main parallax__item">
             <div class="parallax__img-wrap">
-               <div class="parallax__img  " data-speed="-40">
-                  <div class="parallax__img--inner" style="
+                <div class="parallax__img  " data-speed="-40">
+                    <div class="parallax__img--inner" style="
                      background:linear-gradient(0deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08)),  url(./img/ptz/bg-ptz.jpg); 	
                      background-blend-mode: multiply, normal, normal;
                      background-position: 23%;
                      background-size: cover;
                      background-repeat: no-repeat;">
-                  </div>
-                  <video poster="./video/video-ptz-poster.jpg" loop="" class="parallax__img-video" playsinline="" muted="">
-                     <source src="./video/video-ptz.mp4" type="video/mp4">
+                    </div>
+                    <video data-src="./video/video-ptz.mp4" data-src-mob="./video/video-ptz.mp4" poster="./video/video-ptz-poster.jpg" loop="" class="parallax__img-video" playsinline="" muted="">
+                     <source src="" type="video/mp4">
                   </video>
-                  <div class="video-overlay"></div>
-               </div>
+                    <div class="video-overlay"></div>
+                </div>
             </div>
             <div class="container">
-               <div class="main__wrapper">
-                  <h1 class="main__title main__title--about">
-                     <div class="title--inner-main">Петербургский</div>
-                     <br>
-                     <div class="title--inner-main">тракторный</div>
-                     <br>
-                     <div class="title--inner-main">завод</div>
-                  </h1>
-                  <a href="kirovets.html" class="hero-common__btn hero-common__btn--main">
+                <div class="main__wrapper">
+                    <h1 class="main__title main__title--about">
+                        <div class="title--inner-main">Петербургский</div>
+                        <br>
+                        <div class="title--inner-main">тракторный</div>
+                        <br>
+                        <div class="title--inner-main">завод</div>
+                    </h1>
+                    <a href="kirovets.html" class="hero-common__btn hero-common__btn--main">
                      Трактор Кировец
                      <div class=" button-line button-line--first"></div>
                      <div class=" button-line button-line--two"></div>
                   </a>
-               </div>
+                </div>
             </div>
             <div class="button__video-controls-wrap">
-               <button class="button__video-controls button__video-controls--play"></button>
+                <button class="button__video-controls button__video-controls--play"></button>
             </div>
-         </section>
-         <section class="ptz_about about two-screen">
-            <div class="parallax__img parallax__img--ptz parallax__img--ptz-3" data-type="parallax" data-speed="-60">	</div>
+        </section>
+        <section class="ptz_about about two-screen">
+            <div class="parallax__img parallax__img--ptz parallax__img--ptz-3" data-type="parallax" data-speed="-60"> </div>
             <div class="parallax__img parallax__img--ptz parallax__img--ptz-2" data-type="parallax" data-speed="-15"></div>
             <div class="parallax__img parallax__img--ptz parallax__img--ptz-1" data-type="parallax" data-speed="0"></div>
             <div class="container">
-               <h2 class="about__title about__title--ptz is-animate" data-speed="0.3">
-                  <span class="red-accent">АО «Петербургский тракторный завод»</span><br> – лидер среди отечественных производителей мощных энергонасыщенных тракторов
-               </h2>
-               <p class="about__desc about__desc--ptz is-animate" data-speed="0.8">
-                  Входит в число ведущих изготовителей сельскохозяйственной и дорожно-строительной техники 
-               </p>
+                <h2 class="about__title about__title--ptz is-animate" data-speed="0.3">
+                    <span class="red-accent">АО «Петербургский тракторный завод»</span><br> – лидер среди отечественных производителей мощных энергонасыщенных тракторов
+                </h2>
+                <p class="about__desc about__desc--ptz is-animate" data-speed="0.8">
+                    Входит в число ведущих изготовителей сельскохозяйственной и дорожно-строительной техники
+                </p>
             </div>
             <!-- Блок соц-сетей -->
             <include src="components/social-list.html"></include>
             <!-- Блок соц-сетей -->
-         </section>
-         <section class="statistics statistics--about">
+        </section>
+        <section class="statistics statistics--about">
             <div class="container">
-               <h2 class="statistics__title">
-                  <div class="title--inner">Цифры и факты</div>
-               </h2>
-               <div class="swiper-container statistics__slider">
-                  <ul class="statistics__list swiper-wrapper">
-                     <li class="statistics__item swiper-slide">
-                        <div class="statistics__number-wrap">
-                           <span class="statistics__number statictics--inner">1924
+                <h2 class="statistics__title">
+                    <div class="title--inner">Цифры и факты</div>
+                </h2>
+                <div class="swiper-container statistics__slider">
+                    <ul class="statistics__list swiper-wrapper">
+                        <li class="statistics__item swiper-slide">
+                            <div class="statistics__number-wrap">
+                                <span class="statistics__number statictics--inner">1924
                            <span class="statistics__number-text">год</span>
+                                </span>
+                            </div>
+                            <h3 class="statistics__subtitle statistics__subtitle--huge3">начало тракторостроения</h3>
+                            <p class="statistics__desc">дата выпуска первого трактора «Фордзон-Путиловец» на заводе</p>
+                        </li>
+                        <li class="statistics__item swiper-slide">
+                            <div class="statistics__number-wrap">
+                                <span class="statistics__number statictics--inner">600 000
                            </span>
-                        </div>
-                        <h3 class="statistics__subtitle statistics__subtitle--huge3">начало тракторостроения</h3>
-                        <p class="statistics__desc">дата выпуска первого трактора «Фордзон-Путиловец» на заводе</p>
-                     </li>
-                     <li class="statistics__item swiper-slide">
-                        <div class="statistics__number-wrap">
-                           <span class="statistics__number statictics--inner">600 000
-                           </span>
-                        </div>
-                        <h3 class="statistics__subtitle">тракторов</h3>
-                        <p class="statistics__desc"> было выпущено на Петербургском тракторном заводе с 1924 года</p>
-                     </li>
-                     <li class="statistics__item swiper-slide">
-                        <div class="statistics__number-wrap">
-                           <span class="statistics__number statictics--inner">195
+                            </div>
+                            <h3 class="statistics__subtitle">тракторов</h3>
+                            <p class="statistics__desc"> было выпущено на Петербургском тракторном заводе с 1924 года</p>
+                        </li>
+                        <li class="statistics__item swiper-slide">
+                            <div class="statistics__number-wrap">
+                                <span class="statistics__number statictics--inner">195
                            <span class="statistics__number-text">тыс. кв. м</span>
+                                </span>
+                            </div>
+                            <h3 class="statistics__subtitle statistics__subtitle--huge3">площадь</h3>
+                            <p class="statistics__desc">логистических и производственных помещений, включая 10 цехов </p>
+                        </li>
+                        <li class="statistics__item swiper-slide">
+                            <div class="statistics__number-wrap">
+                                <span class="statistics__number statictics--inner">2 500
                            </span>
-                        </div>
-                        <h3 class="statistics__subtitle statistics__subtitle--huge3">площадь</h3>
-                        <p class="statistics__desc">логистических и производственных помещений, включая 10 цехов </p>
-                     </li>
-                     <li class="statistics__item swiper-slide">
-                        <div class="statistics__number-wrap">
-                           <span class="statistics__number statictics--inner">2 500
-                           </span>
-                        </div>
-                        <h3 class="statistics__subtitle">тракторов и другой техники</h3>
-                        <p class="statistics__desc">Ежегодно производится на заводе </p>
-                     </li>
-                  </ul>
-                  <div class="swiper-scrollbar swiper-scrollbar--statictics"></div>
-               </div>
+                            </div>
+                            <h3 class="statistics__subtitle">тракторов и другой техники</h3>
+                            <p class="statistics__desc">Ежегодно производится на заводе </p>
+                        </li>
+                    </ul>
+                    <div class="swiper-scrollbar swiper-scrollbar--statictics"></div>
+                </div>
             </div>
-         </section>
-         <a data-fancybox href="./video/video-ptz-inner.mp4">
+        </section>
+        <a data-fancybox href="./video/video-ptz-inner.mp4">
             <section class="video-block parallax__item">
-               <div class="button__video-controls-wrap--video-block">
-                  <button class="button__video-controls--inner button__video-controls-inner--play"></button>
-               </div>
-               <div class="parallax__img-wrap parallax__img-wrap--inner-block-video">
-                  <div class="parallax__img parallax__img--inner-block-video " data-speed="-20">
-                     <div class="parallax__img--inner " style="
+                <div class="button__video-controls-wrap--video-block">
+                    <button class="button__video-controls--inner button__video-controls-inner--play"></button>
+                </div>
+                <div class="parallax__img-wrap parallax__img-wrap--inner-block-video">
+                    <div class="parallax__img parallax__img--inner-block-video " data-speed="-20">
+                        <div class="parallax__img--inner " style="
                         background: url(./img/ptz/bg-video-ptz.jpg); 	
                         background-position: center;
                         background-size: cover;
                         background-repeat: no-repeat;"></div>
-                  </div>
-               </div>
+                    </div>
+                </div>
             </section>
-         </a>
-         <section class="news news--grey">
+        </a>
+        <section class="news news--grey">
             <div class="container ">
-               <h2 class="news__title">Новости компании </h2>
+                <h2 class="news__title">Новости компании </h2>
             </div>
             <div class="container container--news">
-               <div class="swiper-container news__container">
-                  <div class="swiper-wrapper">
-                     <!-- Slides -->
-                     <div class="swiper-slide news__item  news__item--video">
-                        <a data-fancybox class="news__link" href="https://www.youtube.com/watch?v=hSGd8HI7-z0&feature=emb_logo"></a>
-                        <div class="parallax__item--news parallax__item">
-                           <div class="parallax__img-wrap">
-                              <div class="parallax__img parallax__img--news" data-speed="-20">
-                                 <div class="parallax__img-inner" style="background-image: url(./img/ptz/news-1.jpg);"></div>
-                              </div>
-                           </div>
+                <div class="swiper-container news__container">
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide news__item  news__item--video">
+                            <a data-fancybox class="news__link" href="https://www.youtube.com/watch?v=hSGd8HI7-z0&feature=emb_logo"></a>
+                            <div class="parallax__item--news parallax__item">
+                                <div class="parallax__img-wrap">
+                                    <div class="parallax__img parallax__img--news" data-speed="-20">
+                                        <div class="parallax__img-inner" style="background-image: url(./img/ptz/news-1.jpg);"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="news__date">12.09.2019</p>
+                            <h3 class="news__subtitle">Петербургский тракторный завод провел парад тракторов «Кировец»</h3>
                         </div>
-                        <p class="news__date">12.09.2019</p>
-                        <h3 class="news__subtitle">Петербургский тракторный завод провел парад тракторов «Кировец»</h3>
-                     </div>
-                     <div class="swiper-slide news__item">
-                        <a class="news__link" href=""></a>
-                        <div class="parallax__item--news parallax__item">
-                           <div class="parallax__img-wrap">
-                              <div class="parallax__img parallax__img--news" data-speed="-20">
-                                 <div class="parallax__img-inner" style="background-image: url(./img/ptz/new-2.jpg);"></div>
-                              </div>
-                           </div>
+                        <div class="swiper-slide news__item">
+                            <a class="news__link" href=""></a>
+                            <div class="parallax__item--news parallax__item">
+                                <div class="parallax__img-wrap">
+                                    <div class="parallax__img parallax__img--news" data-speed="-20">
+                                        <div class="parallax__img-inner" style="background-image: url(./img/ptz/new-2.jpg);"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="news__date">12.09.2019</p>
+                            <h3 class="news__subtitle">Тракторы «Кировец» на «Дне поля Рязанской области»</h3>
                         </div>
-                        <p class="news__date">12.09.2019</p>
-                        <h3 class="news__subtitle">Тракторы «Кировец» на «Дне поля Рязанской области»</h3>
-                     </div>
-                     <div class="swiper-slide news__item">
-                        <a class="news__link" href=""></a>
-                        <div class="parallax__item--news parallax__item">
-                           <div class="parallax__img-wrap">
-                              <div class="parallax__img parallax__img--news" data-speed="-20">
-                                 <div class="parallax__img-inner" style="background-image: url(./img/ptz/new-3.jpg);"></div>
-                              </div>
-                           </div>
+                        <div class="swiper-slide news__item">
+                            <a class="news__link" href=""></a>
+                            <div class="parallax__item--news parallax__item">
+                                <div class="parallax__img-wrap">
+                                    <div class="parallax__img parallax__img--news" data-speed="-20">
+                                        <div class="parallax__img-inner" style="background-image: url(./img/ptz/new-3.jpg);"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="news__date">12.09.2019</p>
+                            <h3 class="news__subtitle">Петербургский тракторный завод на «Всероссийском дне поля — 2020»</h3>
                         </div>
-                        <p class="news__date">12.09.2019</p>
-                        <h3 class="news__subtitle">Петербургский тракторный завод на «Всероссийском дне поля — 2020»</h3>
-                     </div>
-                     <div class="swiper-slide news__item">
-                        <a class="news__link" href=""></a>
-                        <div class="parallax__item--news parallax__item">
-                           <div class="parallax__img-wrap">
-                              <div class="parallax__img parallax__img--news" data-speed="-20">
-                                 <div class="parallax__img-inner" style="background-image: url(./img/ptz/news-1.jpg);"></div>
-                              </div>
-                           </div>
+                        <div class="swiper-slide news__item">
+                            <a class="news__link" href=""></a>
+                            <div class="parallax__item--news parallax__item">
+                                <div class="parallax__img-wrap">
+                                    <div class="parallax__img parallax__img--news" data-speed="-20">
+                                        <div class="parallax__img-inner" style="background-image: url(./img/ptz/news-1.jpg);"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="news__date">12.09.2019</p>
+                            <h3 class="news__subtitle">Петербургский тракторный завод провел парад тракторов «Кировец»</h3>
                         </div>
-                        <p class="news__date">12.09.2019</p>
-                        <h3 class="news__subtitle">Петербургский тракторный завод провел парад тракторов «Кировец»</h3>
-                     </div>
-                     <div class="swiper-slide news__item">
-                        <a class="news__link" href=""></a>
-                        <div class="parallax__item--news parallax__item">
-                           <div class="parallax__img-wrap">
-                              <div class="parallax__img parallax__img--news" data-speed="-20">
-                                 <div class="parallax__img-inner" style="background-image: url(./img/ptz/new-2.jpg);"></div>
-                              </div>
-                           </div>
+                        <div class="swiper-slide news__item">
+                            <a class="news__link" href=""></a>
+                            <div class="parallax__item--news parallax__item">
+                                <div class="parallax__img-wrap">
+                                    <div class="parallax__img parallax__img--news" data-speed="-20">
+                                        <div class="parallax__img-inner" style="background-image: url(./img/ptz/new-2.jpg);"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="news__date">12.09.2019</p>
+                            <h3 class="news__subtitle">Тракторы «Кировец» на «Дне поля Рязанской области»</h3>
                         </div>
-                        <p class="news__date">12.09.2019</p>
-                        <h3 class="news__subtitle">Тракторы «Кировец» на «Дне поля Рязанской области»</h3>
-                     </div>
-                  </div>
-                  <div class="swiper-scrollbar swiper-scrollbar--news"></div>
-                  <div class="news__controls">
-                     <div class="swiper-button-prev">
-                        <svg class="news__controls-icon">
+                    </div>
+                    <div class="swiper-scrollbar swiper-scrollbar--news"></div>
+                    <div class="news__controls">
+                        <div class="swiper-button-prev">
+                            <svg class="news__controls-icon">
                            <use xlink:href="./img/sprite.svg#icon-arrow-prev"></use>
                         </svg>
-                     </div>
-                     <div class="swiper-button-next">
-                        <svg class="news__controls-icon">
+                        </div>
+                        <div class="swiper-button-next">
+                            <svg class="news__controls-icon">
                            <use xlink:href="./img/sprite.svg#icon-arrow-next"></use>
                         </svg>
-                     </div>
-                  </div>
-               </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </section>
-         <section class="zavod zavod--main">
+        </section>
+        <section class="zavod zavod--main">
             <div class="container">
-               <div class="zavod-wrapper">
-                  <div class="zavod-img-wrap zavod-img-wrap--main zavod-img-wrap--inner" data-speed="0.6">
-                     <img class="zavod-img" src="./img/logo-big.svg" alt="">
-                  </div>
-                  <div class="zavod-text zavod-text--main">
-                     <h2 class="zavod__title" data-speed="0.5"> АО «Петербургский тракторный завод»</h2>
-                     <p data-speed="0.4">АО «Петербургский тракторный завод» входит в группу компаний «Кировский завод». Это ведущий российский производитель энергонасыщенных тракторов мощностью от 250 л. с. Производит около 65 % тракторов в этом сегменте (данные по итогам 2019 года). Также завод является крупнейшим российским производителем дорожно-транспортной техники. Компания поставляет свою продукцию нефтегазодобывающим компаниям, угледобывающим, металлургическим холдингам и сельскохозяйственным предприятиям, производящим до 70% основных продовольственных товаров России.</p>
-                     <p data-speed="0.2">Мощности завода позволяют ежегодно выпускать более 2 500 машин. С главного сборочного конвейера ежедневно сходят 9-10 машин. Предприятие производит технику, соответствующую высоким мировым стандартам. Продукция Петербургского тракторного завода экспортируется в 14 стран мира. Тракторы предприятия широко востребованы на рынке Казахстана, поставляются в ряд западноевропейских стран (Франция, Германия, Чехия, Болгария и т. д.), а также в Австралию, Канаду и США.</p>
-                     <p data-speed="0.1">Отличительные черты техники, производимой на АО «Петербургский тракторный завод», – это высокий уровень качества и надежность техники, европейский дизайн и комфорт для оператора.</p>
-                     <p data-speed="0.2">Компания активно развивает новые направления. Так в 2019 году на Петербургском тракторном заводе открылся Центр компетенций по разработке и производству трансмиссий для сельскохозяйственной, строительно-дорожной, коммунальной и железнодорожной техники мощностью 6,5 тыс. коробок перемены передач (КПП) в год. Проект реализован при поддержке Минпромторга России с использованием льготного займа Фонда развития промышленности.</p>
-                  </div>
-                  <a href="#" class="button-more--zavod button-more">
-                  <span>подробнее</span>
-                  </a>
-               </div>
+                <div class="zavod-wrapper">
+                    <div class="zavod-img-wrap zavod-img-wrap--main zavod-img-wrap--inner" data-speed="0.6">
+                        <img class="zavod-img" src="./img/logo-big.svg" alt="">
+                    </div>
+                    <div class="zavod-text zavod-text--main">
+                        <h2 class="zavod__title" data-speed="0.5"> АО «Петербургский тракторный завод»</h2>
+                        <p data-speed="0.4">АО «Петербургский тракторный завод» входит в группу компаний «Кировский завод». Это ведущий российский производитель энергонасыщенных тракторов мощностью от 250 л. с. Производит около 65 % тракторов в этом сегменте (данные по итогам
+                            2019 года). Также завод является крупнейшим российским производителем дорожно-транспортной техники. Компания поставляет свою продукцию нефтегазодобывающим компаниям, угледобывающим, металлургическим холдингам и сельскохозяйственным
+                            предприятиям, производящим до 70% основных продовольственных товаров России.</p>
+                        <p data-speed="0.2">Мощности завода позволяют ежегодно выпускать более 2 500 машин. С главного сборочного конвейера ежедневно сходят 9-10 машин. Предприятие производит технику, соответствующую высоким мировым стандартам. Продукция Петербургского тракторного
+                            завода экспортируется в 14 стран мира. Тракторы предприятия широко востребованы на рынке Казахстана, поставляются в ряд западноевропейских стран (Франция, Германия, Чехия, Болгария и т. д.), а также в Австралию, Канаду и США.</p>
+                        <p data-speed="0.1">Отличительные черты техники, производимой на АО «Петербургский тракторный завод», – это высокий уровень качества и надежность техники, европейский дизайн и комфорт для оператора.</p>
+                        <p data-speed="0.2">Компания активно развивает новые направления. Так в 2019 году на Петербургском тракторном заводе открылся Центр компетенций по разработке и производству трансмиссий для сельскохозяйственной, строительно-дорожной, коммунальной и
+                            железнодорожной техники мощностью 6,5 тыс. коробок перемены передач (КПП) в год. Проект реализован при поддержке Минпромторга России с использованием льготного займа Фонда развития промышленности.</p>
+                    </div>
+                    <a href="#" class="button-more--zavod button-more">
+                        <span>подробнее</span>
+                    </a>
+                </div>
             </div>
-         </section>
-         <section class="personnel-policy parallax__item">
+        </section>
+        <section class="personnel-policy parallax__item">
             <div class="parallax__img-wrap parallax__img-wrap--personnel-policy ">
-               <div class="parallax__img" data-speed="-30" >
-                  <!-- <img src="./img/bg-advant-tablet.jpg" alt="" width="100%"> -->
-                  <div class="parallax__img--inner parallax__img--inner--all-not-mobile" 
-                     style="background: linear-gradient(65.95deg, #0F0F0F 0.6%, #000000 0.6%, rgba(0, 0, 0, 0) 42.86%), linear-gradient(0deg, rgba(0, 0, 0, 0.43), rgba(0, 0, 0, 0.43)), url(./img/ptz/production-ptz.png);
+                <div class="parallax__img" data-speed="-30">
+                    <!-- <img src="./img/bg-advant-tablet.jpg" alt="" width="100%"> -->
+                    <div class="parallax__img--inner parallax__img--inner--all-not-mobile" style="background: linear-gradient(65.95deg, #0F0F0F 0.6%, #000000 0.6%, rgba(0, 0, 0, 0) 42.86%), linear-gradient(0deg, rgba(0, 0, 0, 0.43), rgba(0, 0, 0, 0.43)), url(./img/ptz/production-ptz.png);
                      background-blend-mode: multiply, normal, normal;
                      background-position: center;
                      background-size: cover;
                      background-repeat: no-repeat;">
-                  </div>
-               </div>
+                    </div>
+                </div>
             </div>
             <div class="container">
-               <h2 class="personnel-policy__title">Продукция завода</h2>
-               <p class="personnel-policy__desc">Компания предлагает клиентам высококачественные промышленные тракторы, бульдозеры, погрузчики, машины для коммунального и лесного хозяйства, спецтехнику для нефтегазовой отрасли. Вся техника обеспечивается гарантийным и сервисным обслуживанием в широкой сети представительств и дилерских центров: сейчас их более 100 в России и странах СНГ. На некоторые модели срок гарантии увеличен в два раза.</p>
-               <p class="personnel-policy__desc">Легендарный трактор «Кировец» был и остается самым востребованным российским трактором для масштабных сельскохозяйственных работ.</p>
-               <a href="kirovets.html" class="button--details button--about">
+                <h2 class="personnel-policy__title">Продукция завода</h2>
+                <p class="personnel-policy__desc">Компания предлагает клиентам высококачественные промышленные тракторы, бульдозеры, погрузчики, машины для коммунального и лесного хозяйства, спецтехнику для нефтегазовой отрасли. Вся техника обеспечивается гарантийным и сервисным обслуживанием
+                    в широкой сети представительств и дилерских центров: сейчас их более 100 в России и странах СНГ. На некоторые модели срок гарантии увеличен в два раза.</p>
+                <p class="personnel-policy__desc">Легендарный трактор «Кировец» был и остается самым востребованным российским трактором для масштабных сельскохозяйственных работ.</p>
+                <a href="kirovets.html" class="button--details button--about">
                   О тракторе «Кировец»
                   <div class=" button-line button-line--first"></div>
                   <div class=" button-line button-line--two"></div>
                </a>
-               <ul class="personnel-policy__statisctics">
-                  <li class="personnel-policy__statisctics-item">
-                     <div class="personnel-policy__statisctics-data personnel-policy__statisctics-data--inner">
-                        <span class="personnel-policy__statisctics-number">К-7 М </span>
-                     </div>
-                     <h3 class="personnel-policy__subtitle">8 модификаций серии тракторов <br> мощностью 300–428 л. с.</h3>
-                  </li>
-                  <li class="personnel-policy__statisctics-item">
-                     <div class="personnel-policy__statisctics-data personnel-policy__statisctics-data--inner">
-                        <span class="personnel-policy__statisctics-number">К-5</span>
-                     </div>
-                     <h3 class="personnel-policy__subtitle">серия тракторов<br> мощностью 250 л. с.</h3>
-                  </li>
-                  <li class="personnel-policy__statisctics-item">
-                     <div class="personnel-policy__statisctics-data personnel-policy__statisctics-data--inner">
-                        <span class="personnel-policy__statisctics-number">17</span>
-                     </div>
-                     <h3 class="personnel-policy__subtitle">видов дорожно- <br> строительной техники</h3>
-                  </li>
-               </ul>
+                <ul class="personnel-policy__statisctics">
+                    <li class="personnel-policy__statisctics-item">
+                        <div class="personnel-policy__statisctics-data personnel-policy__statisctics-data--inner">
+                            <span class="personnel-policy__statisctics-number">К-7 М </span>
+                        </div>
+                        <h3 class="personnel-policy__subtitle">8 модификаций серии тракторов <br> мощностью 300–428 л. с.</h3>
+                    </li>
+                    <li class="personnel-policy__statisctics-item">
+                        <div class="personnel-policy__statisctics-data personnel-policy__statisctics-data--inner">
+                            <span class="personnel-policy__statisctics-number">К-5</span>
+                        </div>
+                        <h3 class="personnel-policy__subtitle">серия тракторов<br> мощностью 250 л. с.</h3>
+                    </li>
+                    <li class="personnel-policy__statisctics-item">
+                        <div class="personnel-policy__statisctics-data personnel-policy__statisctics-data--inner">
+                            <span class="personnel-policy__statisctics-number">17</span>
+                        </div>
+                        <h3 class="personnel-policy__subtitle">видов дорожно- <br> строительной техники</h3>
+                    </li>
+                </ul>
             </div>
-         </section>
-         <section class="block_text">
+        </section>
+        <section class="block_text">
             <div class="container">
-               <h2 class="block_text__title">Сферы применения техники «Кировец»</h2>
-               <ul class="block_text__list">
-                  <li class="block_text__item">
-                     <h3 class="block_text__subtitle">Сельское хозяйство</h3>
-                     <p class="block_text__desc">Обработка земли, посев сельскохозяйственных культур, внесение удобрений, сбор урожая и его транспортировка к месту хранения.</p>
-                  </li>
-                  <li class="block_text__item">
-                     <h3 class="block_text__subtitle">Дорожное строительство</h3>
-                     <p class="block_text__desc">Строительство, ремонт и обслуживание автомагистралей, взлетных полос, технологических, карьерных, лесных и временных зимних дорог.</p>
-                  </li>
-                  <li class="block_text__item">
-                     <h3 class="block_text__subtitle">Логистика</h3>
-                     <p class="block_text__desc">Тракторы «Кировец» обеспечивают транспортировку грузов в сложных дорожных условиях (грунтовые, размытые дороги, с высокой колеей, бездорожье, переход водных преград и т. п.).</p>
-                  </li>
-                  <li class="block_text__item">
-                     <h3 class="block_text__subtitle">Нефтегазовая отрасль</h3>
-                     <p class="block_text__desc">Промышленные тракторы и спецтехника «Кировец» применяются  при прокладке нефтяных и газовых трубопроводов.</p>
-                  </li>
-                  <li class="block_text__item">
-                     <h3 class="block_text__subtitle">Добыча природных строительных материалов</h3>
-                     <p class="block_text__desc">Высокая проходимость «Кировцев» позволяет использовать их при добыче природных строительных материалов в карьерах, вскрышных работах, перемещении материалов на товарных складах ГОКов и перегрузочных терминалах портов и железнодорожных базах.</p>
-                  </li>
-                  <li class="block_text__item">
-                     <h3 class="block_text__subtitle">Лесное хозяйство</h3>
-                     <p class="block_text__desc">Лесозащитные мероприятия по предотвращению пожаров и их тушению, строительные и мелиоративные работы.</p>
-                  </li>
-               </ul>
+                <h2 class="block_text__title">Сферы применения техники «Кировец»</h2>
+                <ul class="block_text__list">
+                    <li class="block_text__item">
+                        <h3 class="block_text__subtitle">Сельское хозяйство</h3>
+                        <p class="block_text__desc">Обработка земли, посев сельскохозяйственных культур, внесение удобрений, сбор урожая и его транспортировка к месту хранения.</p>
+                    </li>
+                    <li class="block_text__item">
+                        <h3 class="block_text__subtitle">Дорожное строительство</h3>
+                        <p class="block_text__desc">Строительство, ремонт и обслуживание автомагистралей, взлетных полос, технологических, карьерных, лесных и временных зимних дорог.</p>
+                    </li>
+                    <li class="block_text__item">
+                        <h3 class="block_text__subtitle">Логистика</h3>
+                        <p class="block_text__desc">Тракторы «Кировец» обеспечивают транспортировку грузов в сложных дорожных условиях (грунтовые, размытые дороги, с высокой колеей, бездорожье, переход водных преград и т. п.).</p>
+                    </li>
+                    <li class="block_text__item">
+                        <h3 class="block_text__subtitle">Нефтегазовая отрасль</h3>
+                        <p class="block_text__desc">Промышленные тракторы и спецтехника «Кировец» применяются при прокладке нефтяных и газовых трубопроводов.</p>
+                    </li>
+                    <li class="block_text__item">
+                        <h3 class="block_text__subtitle">Добыча природных строительных материалов</h3>
+                        <p class="block_text__desc">Высокая проходимость «Кировцев» позволяет использовать их при добыче природных строительных материалов в карьерах, вскрышных работах, перемещении материалов на товарных складах ГОКов и перегрузочных терминалах портов и железнодорожных
+                            базах.
+                        </p>
+                    </li>
+                    <li class="block_text__item">
+                        <h3 class="block_text__subtitle">Лесное хозяйство</h3>
+                        <p class="block_text__desc">Лесозащитные мероприятия по предотвращению пожаров и их тушению, строительные и мелиоративные работы.</p>
+                    </li>
+                </ul>
             </div>
-         </section>
-         <section class="companies companies--inner">
+        </section>
+        <section class="companies companies--inner">
             <div class="companies__thumbs">
-               <h2 class="swiper-container--companies-thumbs__title">Продукция</h2>
-               <div class="swiper-container swiper-container--companies-thumbs">
-                  <div class="swiper-wrapper">
-
-                    
-                     <div class="swiper-slide swiper-slide--thumbs  swiper-slide--thumbs--sub">
-                         <h3 class="swiper-container--companies-thumbs__subtitle">Агротехника</h3>
-                        Новинка Кировец К-5
-                     </div>
-                     <div class="swiper-slide swiper-slide--thumbs">
-                        Новая серия Кировец К-7М
-                     </div>
-                     <div class="swiper-slide swiper-slide--thumbs">
-                        Трамбовщик силоса Кировец ТСН-5
-                     </div>
+                <h2 class="swiper-container--companies-thumbs__title">Продукция</h2>
+                <div class="swiper-container swiper-container--companies-thumbs">
+                    <div class="swiper-wrapper">
 
 
-                   
-                     <div class="swiper-slide swiper-slide--thumbs swiper-slide--thumbs--sub">
-                        <h3 class="swiper-container--companies-thumbs__subtitle">Строительная техника</h3>
-                        Кировец К-708ПК7
-                     </div>
-                     <div class="swiper-slide swiper-slide--thumbs">
-                        Кировец К-708УДМ
-                     </div>
-                     <div class="swiper-slide swiper-slide--thumbs">
-                        Кировец К-703МА-ДМ15
-                     </div>
-                     <div class="swiper-slide swiper-slide--thumbs">
-                        Кировец К-702МБА-01-БКУ
-                     </div>
-                     <div class="swiper-slide swiper-slide--thumbs">
-                        Кировец К-702МА-ПК6
-                     </div>
+                        <div class="swiper-slide swiper-slide--thumbs  swiper-slide--thumbs--sub">
+                            <h3 class="swiper-container--companies-thumbs__subtitle">Агротехника</h3>
+                            Новинка Кировец К-5
+                        </div>
+                        <div class="swiper-slide swiper-slide--thumbs">
+                            Новая серия Кировец К-7М
+                        </div>
+                        <div class="swiper-slide swiper-slide--thumbs">
+                            Трамбовщик силоса Кировец ТСН-5
+                        </div>
 
 
-                     <div class="swiper-slide swiper-slide--thumbs swiper-slide--thumbs--sub">
-                        <h3 class="swiper-container--companies-thumbs__subtitle">Тягачи и спецтехника</h3>
-                        Кировец К-703МА
-                     </div>
-                     <div class="swiper-slide swiper-slide--thumbs">
-                        Кировец К-703МА-12-ОП
-                     </div> 
-                     <div class="swiper-slide swiper-slide--thumbs">
-                        Кировец К-703МА-ОС-2
-                     </div>
-                     <div class="swiper-slide swiper-slide--thumbs">
-                        Кировец К-703МА-АС100
-                     </div>
-                     <div class="swiper-slide swiper-slide--thumbs">
-                        Кировец К-703М
-                     </div>
-                     <div class="swiper-slide swiper-slide--thumbs">
-                        Кировец К-703М-АС8-200
-                     </div>
-                  </div>
-               </div>
+
+                        <div class="swiper-slide swiper-slide--thumbs swiper-slide--thumbs--sub">
+                            <h3 class="swiper-container--companies-thumbs__subtitle">Строительная техника</h3>
+                            Кировец К-708ПК7
+                        </div>
+                        <div class="swiper-slide swiper-slide--thumbs">
+                            Кировец К-708УДМ
+                        </div>
+                        <div class="swiper-slide swiper-slide--thumbs">
+                            Кировец К-703МА-ДМ15
+                        </div>
+                        <div class="swiper-slide swiper-slide--thumbs">
+                            Кировец К-702МБА-01-БКУ
+                        </div>
+                        <div class="swiper-slide swiper-slide--thumbs">
+                            Кировец К-702МА-ПК6
+                        </div>
+
+
+                        <div class="swiper-slide swiper-slide--thumbs swiper-slide--thumbs--sub">
+                            <h3 class="swiper-container--companies-thumbs__subtitle">Тягачи и спецтехника</h3>
+                            Кировец К-703МА
+                        </div>
+                        <div class="swiper-slide swiper-slide--thumbs">
+                            Кировец К-703МА-12-ОП
+                        </div>
+                        <div class="swiper-slide swiper-slide--thumbs">
+                            Кировец К-703МА-ОС-2
+                        </div>
+                        <div class="swiper-slide swiper-slide--thumbs">
+                            Кировец К-703МА-АС100
+                        </div>
+                        <div class="swiper-slide swiper-slide--thumbs">
+                            Кировец К-703М
+                        </div>
+                        <div class="swiper-slide swiper-slide--thumbs">
+                            Кировец К-703М-АС8-200
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="swiper-container swiper-container--companies">
-               <div class="swiper-wrapper" >
-                  <!-- Slides -->
-                  <div class="swiper-slide swiper-slide--companies parallax__item">
-                     <div class="parallax__img-wrap">
-                        <div class="parallax__img--slide" data-speed="-60">
-                           <div class=" swiper-slide--companies-bg swiper-lazy" data-background="./img/ptz/production-slide-1.jpg"></div>
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide swiper-slide--companies parallax__item">
+                        <div class="parallax__img-wrap">
+                            <div class="parallax__img--slide" data-speed="-60">
+                                <div class=" swiper-slide--companies-bg swiper-lazy" data-background="./img/ptz/production-slide-1.jpg"></div>
+                            </div>
                         </div>
-                     </div>
-                     <div class="container">
-                        <h2 class="companies__title--production">НОВИНКА КИРОВЕЦ К-5<br>
-                        </h2>
-                        <p class="companies__desc">Сельскохозяйственный трактор общего назначения, полноприводный, шарнирно-сочлененная рама</p>
-                     </div>
-                  </div>
-                  <div class="swiper-slide swiper-slide--companies parallax__item">
-                     <div class="parallax__img-wrap">
-                        <div class="parallax__img--slide" data-speed="-60">
-                           <div class=" swiper-slide--companies-bg swiper-lazy" data-background="./img/ptz/production-slide-2.jpg"></div>
+                        <div class="container">
+                            <h2 class="companies__title--production">НОВИНКА КИРОВЕЦ К-5<br>
+                            </h2>
+                            <p class="companies__desc">Сельскохозяйственный трактор общего назначения, полноприводный, шарнирно-сочлененная рама</p>
                         </div>
-                     </div>
-                     <div class="container">
-                        <h2 class="companies__title--production">Новая серия КИРОВЕЦ К-7М<br>
-                        </h2>
-                        <p class="companies__desc">Сельскохозяйственный трактор общего назначения, полноприводный, шарнирно-сочлененная рама</p>
-                     </div>
-                  </div>
-                  <div class="swiper-slide swiper-slide--companies parallax__item">
-                     <div class="parallax__img-wrap">
-                        <div class="parallax__img--slide" data-speed="-60">
-                           <div class=" swiper-slide--companies-bg swiper-lazy" data-background="./img/ptz/production-slide-3.jpg"></div>
+                    </div>
+                    <div class="swiper-slide swiper-slide--companies parallax__item">
+                        <div class="parallax__img-wrap">
+                            <div class="parallax__img--slide" data-speed="-60">
+                                <div class=" swiper-slide--companies-bg swiper-lazy" data-background="./img/ptz/production-slide-2.jpg"></div>
+                            </div>
                         </div>
-                     </div>
-                     <div class="container">
-                        <h2 class="companies__title--production">Трамбовщик силоса Кировец ТСН-5<br>
-                        </h2>
-                        <p class="companies__desc">Идеальное решение для заготовки силоса</p>
-                     </div>
-                  </div>
+                        <div class="container">
+                            <h2 class="companies__title--production">Новая серия КИРОВЕЦ К-7М<br>
+                            </h2>
+                            <p class="companies__desc">Сельскохозяйственный трактор общего назначения, полноприводный, шарнирно-сочлененная рама</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide--companies parallax__item">
+                        <div class="parallax__img-wrap">
+                            <div class="parallax__img--slide" data-speed="-60">
+                                <div class=" swiper-slide--companies-bg swiper-lazy" data-background="./img/ptz/production-slide-3.jpg"></div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <h2 class="companies__title--production">Трамбовщик силоса Кировец ТСН-5<br>
+                            </h2>
+                            <p class="companies__desc">Идеальное решение для заготовки силоса</p>
+                        </div>
+                    </div>
 
 
 
-                  <div class="swiper-slide swiper-slide--companies parallax__item">
-                     <div class="parallax__img-wrap">
-                        <div class="parallax__img--slide" data-speed="-60">
-                           <div class=" swiper-slide--companies-bg swiper-lazy" data-background="./img/ptz/production-slide-4.jpg"></div>
+                    <div class="swiper-slide swiper-slide--companies parallax__item">
+                        <div class="parallax__img-wrap">
+                            <div class="parallax__img--slide" data-speed="-60">
+                                <div class=" swiper-slide--companies-bg swiper-lazy" data-background="./img/ptz/production-slide-4.jpg"></div>
+                            </div>
                         </div>
-                     </div>
-                     <div class="container">
-                        <h2 class="companies__title--production">Кировец К-708ПК7<br>
-                        </h2>
-                        <p class="companies__desc">Новый фронтальный погрузчик</p>
-                     </div>
-                  </div>
+                        <div class="container">
+                            <h2 class="companies__title--production">Кировец К-708ПК7<br>
+                            </h2>
+                            <p class="companies__desc">Новый фронтальный погрузчик</p>
+                        </div>
+                    </div>
 
-                  <div class="swiper-slide swiper-slide--companies parallax__item">
-                     <div class="parallax__img-wrap">
-                        <div class="parallax__img--slide" data-speed="-60">
-                           <div class=" swiper-slide--companies-bg swiper-lazy" data-background="./img/ptz/production-slide-5.jpg"></div>
+                    <div class="swiper-slide swiper-slide--companies parallax__item">
+                        <div class="parallax__img-wrap">
+                            <div class="parallax__img--slide" data-speed="-60">
+                                <div class=" swiper-slide--companies-bg swiper-lazy" data-background="./img/ptz/production-slide-5.jpg"></div>
+                            </div>
                         </div>
-                     </div>
-                     <div class="container">
-                        <h2 class="companies__title--production">Кировец К-708УДМ<br>
-                        </h2>
-                        <p class="companies__desc">Фронтальный колесный погрузчик с бульдозерным оборудованием. До  2-х раз производительнее и комфортнее предыдущего поколения
-                        </p>
-                     </div>
-                  </div>
-                  <div class="swiper-slide swiper-slide--companies parallax__item">
-                     <div class="parallax__img-wrap">
-                        <div class="parallax__img--slide" data-speed="-60">
-                           <div class=" swiper-slide--companies-bg swiper-lazy" data-background="./img/ptz/production-slide-6.jpg" ></div>
+                        <div class="container">
+                            <h2 class="companies__title--production">Кировец К-708УДМ<br>
+                            </h2>
+                            <p class="companies__desc">Фронтальный колесный погрузчик с бульдозерным оборудованием. До 2-х раз производительнее и комфортнее предыдущего поколения
+                            </p>
                         </div>
-                     </div>
-                     <div class="container">
-                        <h2 class="companies__title--production">Кировец К-703МА-ДМ15<br>
-                        </h2>
-                        <p class="companies__desc">Дорожная машина
-                        </p>
-                     </div>
-                  </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide--companies parallax__item">
+                        <div class="parallax__img-wrap">
+                            <div class="parallax__img--slide" data-speed="-60">
+                                <div class=" swiper-slide--companies-bg swiper-lazy" data-background="./img/ptz/production-slide-6.jpg"></div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <h2 class="companies__title--production">Кировец К-703МА-ДМ15<br>
+                            </h2>
+                            <p class="companies__desc">Дорожная машина
+                            </p>
+                        </div>
+                    </div>
 
-                  <div class="swiper-slide swiper-slide--companies parallax__item">
-                     <div class="parallax__img-wrap">
-                        <div class="parallax__img--slide" data-speed="-60">
-                           <div class=" swiper-slide--companies-bg swiper-lazy" data-background="./img/ptz/production-slide-7.jpg" ></div>
+                    <div class="swiper-slide swiper-slide--companies parallax__item">
+                        <div class="parallax__img-wrap">
+                            <div class="parallax__img--slide" data-speed="-60">
+                                <div class=" swiper-slide--companies-bg swiper-lazy" data-background="./img/ptz/production-slide-7.jpg"></div>
+                            </div>
                         </div>
-                     </div>
-                     <div class="container">
-                        <h2 class="companies__title--production">КИРОВЕЦ К-702МБА-01-БКУ<br>
-                        </h2>
-                        <p class="companies__desc">Бульдозер колесный
+                        <div class="container">
+                            <h2 class="companies__title--production">КИРОВЕЦ К-702МБА-01-БКУ<br>
+                            </h2>
+                            <p class="companies__desc">Бульдозер колесный
 
-                        </p>
-                     </div>
-                  </div>
-                  <div class="swiper-slide swiper-slide--companies parallax__item">
-                     <div class="parallax__img-wrap">
-                        <div class="parallax__img--slide" data-speed="-60">
-                           <div class=" swiper-slide--companies-bg swiper-lazy" data-background="./img/ptz/production-slide-1.jpg"
-                           ></div>
+                            </p>
                         </div>
-                     </div>
-                     <div class="container">
-                        <h2 class="companies__title--production">Кировец К-702МА-ПК6<br>
-                        </h2>
-                        <p class="companies__desc">Фронтальный колесный односовковый погрузчик. Предназначен для использования на погрузочно-разгрузочных работах с сыпучими и кусковыми материалами без предварительного их рыхления. 
-                        </p>
-                     </div>
-                  </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide--companies parallax__item">
+                        <div class="parallax__img-wrap">
+                            <div class="parallax__img--slide" data-speed="-60">
+                                <div class=" swiper-slide--companies-bg swiper-lazy" data-background="./img/ptz/production-slide-1.jpg"></div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <h2 class="companies__title--production">Кировец К-702МА-ПК6<br>
+                            </h2>
+                            <p class="companies__desc">Фронтальный колесный односовковый погрузчик. Предназначен для использования на погрузочно-разгрузочных работах с сыпучими и кусковыми материалами без предварительного их рыхления.
+                            </p>
+                        </div>
+                    </div>
 
-                  <div class="swiper-slide swiper-slide--companies parallax__item">
-                     <div class="parallax__img-wrap">
-                        <div class="parallax__img--slide" data-speed="-60">
-                           <div class=" swiper-slide--companies-bg swiper-lazy" data-background="./img/ptz/production-slide-8.jpg" ></div>
+                    <div class="swiper-slide swiper-slide--companies parallax__item">
+                        <div class="parallax__img-wrap">
+                            <div class="parallax__img--slide" data-speed="-60">
+                                <div class=" swiper-slide--companies-bg swiper-lazy" data-background="./img/ptz/production-slide-8.jpg"></div>
+                            </div>
                         </div>
-                     </div>
-                     <div class="container">
-                        <h2 class="companies__title--production">Кировец К-703МА<br>
-                        </h2>
-                        <p class="companies__desc">Промышленный трактор
+                        <div class="container">
+                            <h2 class="companies__title--production">Кировец К-703МА<br>
+                            </h2>
+                            <p class="companies__desc">Промышленный трактор
 
-                        </p>
-                     </div>
-                  </div>
+                            </p>
+                        </div>
+                    </div>
 
-                  <div class="swiper-slide swiper-slide--companies parallax__item">
-                     <div class="parallax__img-wrap">
-                        <div class="parallax__img--slide" data-speed="-60">
-                           <div class=" swiper-slide--companies-bg swiper-lazy" data-background="./img/ptz/production-slide-9.jpg" ></div>
+                    <div class="swiper-slide swiper-slide--companies parallax__item">
+                        <div class="parallax__img-wrap">
+                            <div class="parallax__img--slide" data-speed="-60">
+                                <div class=" swiper-slide--companies-bg swiper-lazy" data-background="./img/ptz/production-slide-9.jpg"></div>
+                            </div>
                         </div>
-                     </div>
-                     <div class="container">
-                        <h2 class="companies__title--production">Кировец К-703МА-12-ОП<br>
-                        </h2>
-                        <p class="companies__desc">Опороперевочзик для обслуживания линий электропередачи
-                        </p>
-                     </div>
-                  </div>
+                        <div class="container">
+                            <h2 class="companies__title--production">Кировец К-703МА-12-ОП<br>
+                            </h2>
+                            <p class="companies__desc">Опороперевочзик для обслуживания линий электропередачи
+                            </p>
+                        </div>
+                    </div>
 
-                  <div class="swiper-slide swiper-slide--companies parallax__item">
-                     <div class="parallax__img-wrap">
-                        <div class="parallax__img--slide" data-speed="-60">
-                           <div class=" swiper-slide--companies-bg swiper-lazy" data-background="./img/ptz/production-slide-10.jpg" ></div>
+                    <div class="swiper-slide swiper-slide--companies parallax__item">
+                        <div class="parallax__img-wrap">
+                            <div class="parallax__img--slide" data-speed="-60">
+                                <div class=" swiper-slide--companies-bg swiper-lazy" data-background="./img/ptz/production-slide-10.jpg"></div>
+                            </div>
                         </div>
-                     </div>
-                     <div class="container">
-                        <h2 class="companies__title--production">Кировец К-703МА-ОС-2<br>
-                        </h2>
-                        <p class="companies__desc">Фрезерно-роторный снегоочиститель на базе промышленного трактора Кировец К-703МА
-                        </p>
-                     </div>
-                  </div>
+                        <div class="container">
+                            <h2 class="companies__title--production">Кировец К-703МА-ОС-2<br>
+                            </h2>
+                            <p class="companies__desc">Фрезерно-роторный снегоочиститель на базе промышленного трактора Кировец К-703МА
+                            </p>
+                        </div>
+                    </div>
 
-                  <div class="swiper-slide swiper-slide--companies parallax__item">
-                     <div class="parallax__img-wrap">
-                        <div class="parallax__img--slide" data-speed="-60">
-                           <div class=" swiper-slide--companies-bg swiper-lazy" data-background="./img/ptz/production-slide-11.jpg" >
-                              background-repeat: no-repeat;
-                              background-position: center center;"></div>
+                    <div class="swiper-slide swiper-slide--companies parallax__item">
+                        <div class="parallax__img-wrap">
+                            <div class="parallax__img--slide" data-speed="-60">
+                                <div class=" swiper-slide--companies-bg swiper-lazy" data-background="./img/ptz/production-slide-11.jpg">
+                                    background-repeat: no-repeat; background-position: center center;"></div>
+                            </div>
                         </div>
-                     </div>
-                     <div class="container">
-                        <h2 class="companies__title--production">Кировец К-703МА-АС100<br>
-                        </h2>
-                        <p class="companies__desc">Мобильный сварочный агрегат на базе промышленного трактора Кировец К-703МА
-                        </p>
-                     </div>
-                  </div>
-                  
-                  <div class="swiper-slide swiper-slide--companies parallax__item">
-                     <div class="parallax__img-wrap">
-                        <div class="parallax__img--slide" data-speed="-60">
-                           <div class=" swiper-slide--companies-bg swiper-lazy" data-background="./img/ptz/production-slide-5.jpg"></div>
+                        <div class="container">
+                            <h2 class="companies__title--production">Кировец К-703МА-АС100<br>
+                            </h2>
+                            <p class="companies__desc">Мобильный сварочный агрегат на базе промышленного трактора Кировец К-703МА
+                            </p>
                         </div>
-                     </div>
-                     <div class="container">
-                        <h2 class="companies__title--production">Кировец К-703М<br>
-                        </h2>
-                        <p class="companies__desc">Промышленный трактор. Мощность - 350 л. с. Отличительные особенности – маневренность, высокая проходимость и большая тяга.
-                        </p>
-                     </div>
-                  </div>
+                    </div>
 
-                  <div class="swiper-slide swiper-slide--companies parallax__item">
-                     <div class="parallax__img-wrap">
-                        <div class="parallax__img--slide" data-speed="-60">
-                           <div class=" swiper-slide--companies-bg swiper-lazy" data-background="./img/ptz/production-slide-11.jpg" ></div>
+                    <div class="swiper-slide swiper-slide--companies parallax__item">
+                        <div class="parallax__img-wrap">
+                            <div class="parallax__img--slide" data-speed="-60">
+                                <div class=" swiper-slide--companies-bg swiper-lazy" data-background="./img/ptz/production-slide-5.jpg"></div>
+                            </div>
                         </div>
-                     </div>
-                     <div class="container">
-                        <h2 class="companies__title--production">К-703М-АС8-200<br>
-                        </h2>
-                        <p class="companies__desc">Мобильный сварочный агрегат на базе промышленного трактора Кировец К-703М</p>
-                     </div>
-                  </div>
-                 
-               </div>
-               <!-- If we need scrollbar -->
-               <div class="swiper-scrollbar swiper-scrollbar--companies"></div>
+                        <div class="container">
+                            <h2 class="companies__title--production">Кировец К-703М<br>
+                            </h2>
+                            <p class="companies__desc">Промышленный трактор. Мощность - 350 л. с. Отличительные особенности – маневренность, высокая проходимость и большая тяга.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide swiper-slide--companies parallax__item">
+                        <div class="parallax__img-wrap">
+                            <div class="parallax__img--slide" data-speed="-60">
+                                <div class=" swiper-slide--companies-bg swiper-lazy" data-background="./img/ptz/production-slide-11.jpg"></div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <h2 class="companies__title--production">К-703М-АС8-200<br>
+                            </h2>
+                            <p class="companies__desc">Мобильный сварочный агрегат на базе промышленного трактора Кировец К-703М</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar swiper-scrollbar--companies"></div>
             </div>
-         </section>
-         <section class="clients">
+        </section>
+        <section class="clients">
             <div class="container">
-               <h2 class="clients__title">Клиенты</h2>
-               <ul class="clients__list">
-                  <li class="clients__item">
-                     <img src="./img/ptz/client-1.png" alt="Газпром">
-                  </li>
-                  <li class="clients__item">
-                     <img src="./img/ptz/client-2.png" alt="Роснефть">
-                  </li>
-                  <li class="clients__item">
-                     <img src="./img/ptz/client-3.png" alt="Лукойл">
-                  </li>
-                  <li class="clients__item">
-                     <img src="./img/ptz/client-4.png" alt="Останкино">
-                  </li>
-                  <li class="clients__item">
-                     <img src="./img/ptz/client-5.png" alt="Северсталь">
-                  </li>
-                  <li class="clients__item">
-                     <img src="./img/ptz/client-6.png" alt="Норникель">
-                  </li>
-                  <li class="clients__item">
-                     <img src="./img/ptz/client-7.png" alt="Полиметалл">
-                  </li>
-                  <li class="clients__item">
-                     <img src="./img/ptz/client-8.png" alt="Илим">
-                  </li>
-                  <li class="clients__item">
-                     <img src="./img/ptz/client-9.png" alt="СНГ">
-                  </li>
-                  <li class="clients__item">
-                     <img src="./img/ptz/client-10.png" alt="Авангард-агро">
-                  </li>
-                  <li class="clients__item">
-                     <img src="./img/ptz/client-11.png" alt="Иволга холдинг">
-                  </li>
-                  <li class="clients__item">
-                     <img src="./img/ptz/client-12.png" alt="Группа Разгуляй">
-                  </li>
-                  <li class="clients__item">
-                     <img src="./img/ptz/client-13.png" alt="Белоруснефть">
-                  </li>
-                  <li class="clients__item">
-                     <img src="./img/ptz/client-14.png" alt="НЛМК">
-                  </li>
-                  <li class="clients__item">
-                     <img src="./img/ptz/client-15.png" alt="НЛМК">
-                  </li>
-               </ul>
+                <h2 class="clients__title">Клиенты</h2>
+                <ul class="clients__list">
+                    <li class="clients__item">
+                        <img src="./img/ptz/client-1.png" alt="Газпром">
+                    </li>
+                    <li class="clients__item">
+                        <img src="./img/ptz/client-2.png" alt="Роснефть">
+                    </li>
+                    <li class="clients__item">
+                        <img src="./img/ptz/client-3.png" alt="Лукойл">
+                    </li>
+                    <li class="clients__item">
+                        <img src="./img/ptz/client-4.png" alt="Останкино">
+                    </li>
+                    <li class="clients__item">
+                        <img src="./img/ptz/client-5.png" alt="Северсталь">
+                    </li>
+                    <li class="clients__item">
+                        <img src="./img/ptz/client-6.png" alt="Норникель">
+                    </li>
+                    <li class="clients__item">
+                        <img src="./img/ptz/client-7.png" alt="Полиметалл">
+                    </li>
+                    <li class="clients__item">
+                        <img src="./img/ptz/client-8.png" alt="Илим">
+                    </li>
+                    <li class="clients__item">
+                        <img src="./img/ptz/client-9.png" alt="СНГ">
+                    </li>
+                    <li class="clients__item">
+                        <img src="./img/ptz/client-10.png" alt="Авангард-агро">
+                    </li>
+                    <li class="clients__item">
+                        <img src="./img/ptz/client-11.png" alt="Иволга холдинг">
+                    </li>
+                    <li class="clients__item">
+                        <img src="./img/ptz/client-12.png" alt="Группа Разгуляй">
+                    </li>
+                    <li class="clients__item">
+                        <img src="./img/ptz/client-13.png" alt="Белоруснефть">
+                    </li>
+                    <li class="clients__item">
+                        <img src="./img/ptz/client-14.png" alt="НЛМК">
+                    </li>
+                    <li class="clients__item">
+                        <img src="./img/ptz/client-15.png" alt="НЛМК">
+                    </li>
+                </ul>
             </div>
-         </section>
-         <section class="gallery">
+        </section>
+        <section class="gallery">
             <div class="container">
-               <h2 class="gallery__title">Фото и видео</h2>
+                <h2 class="gallery__title">Фото и видео</h2>
             </div>
             <div class="swiper-container swiper-container--gallery">
-               <!-- Additional required wrapper -->
-               <div class="swiper-wrapper">
-                  <!-- Slides -->
-                  <div class="swiper-slide swiper-slide--gallery">
-                     <figure>
-                        <a href="./img/ptz/gallery-1.jpg" data-fancybox="gallery" data-caption="Трактор К-5">
-                        <img class="gallery__img swiper-lazy" data-src="./img/ptz/gallery-1.jpg" alt="">
-                        </a>
-                        <figcaption class="gallery__desc">Трактор К-5</figcaption>
-                     </figure>
-                     <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
-                  </div>
-                  <div class="swiper-slide swiper-slide--gallery">
-                     <figure>
-                        <a href="./img/ptz/gallery-2.jpg" data-fancybox="gallery" data-caption="Трактор К-5">
-                        <img class="gallery__img swiper-lazy" data-src="./img/ptz/gallery-2.jpg" alt="">
-                        </a>
-                        <figcaption class="gallery__desc">Трактор К-5</figcaption>
-                     </figure>
-                     <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
-                  </div>
-                  <div class="swiper-slide swiper-slide--gallery">
-                     <figure>
-                        <a href="./img/ptz/gallery-3.jpg" data-fancybox="gallery" data-caption="К-7М в полях">
-                        <img class="gallery__img swiper-lazy" data-src="./img/ptz/gallery-3.jpg" alt="">
-                        </a>
-                        <figcaption class="gallery__desc">К-7М в полях</figcaption>
-                     </figure>
-                     <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
-                  </div>
-                  <div class="swiper-slide swiper-slide--gallery">
-                     <figure>
-                        <a href="./img/ptz/gallery-3.jpg" data-fancybox="gallery" data-caption="К-7М в полях">
-                        <img class="gallery__img swiper-lazy" data-src="./img/ptz/gallery-4.jpg" alt="">
-                        </a>
-                        <figcaption class="gallery__desc">К-7М в полях</figcaption>
-                     </figure>
-                     <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
-                  </div>
-               </div>
-               <!-- If we need scrollbar -->
-               <div class="swiper-scrollbar swiper-scrollbar--gallery"></div>
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide swiper-slide--gallery">
+                        <figure>
+                            <a href="./img/ptz/gallery-1.jpg" data-fancybox="gallery" data-caption="Трактор К-5">
+                                <img class="gallery__img swiper-lazy" data-src="./img/ptz/gallery-1.jpg" alt="">
+                            </a>
+                            <figcaption class="gallery__desc">Трактор К-5</figcaption>
+                        </figure>
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                    </div>
+                    <div class="swiper-slide swiper-slide--gallery">
+                        <figure>
+                            <a href="./img/ptz/gallery-2.jpg" data-fancybox="gallery" data-caption="Трактор К-5">
+                                <img class="gallery__img swiper-lazy" data-src="./img/ptz/gallery-2.jpg" alt="">
+                            </a>
+                            <figcaption class="gallery__desc">Трактор К-5</figcaption>
+                        </figure>
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                    </div>
+                    <div class="swiper-slide swiper-slide--gallery">
+                        <figure>
+                            <a href="./img/ptz/gallery-3.jpg" data-fancybox="gallery" data-caption="К-7М в полях">
+                                <img class="gallery__img swiper-lazy" data-src="./img/ptz/gallery-3.jpg" alt="">
+                            </a>
+                            <figcaption class="gallery__desc">К-7М в полях</figcaption>
+                        </figure>
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                    </div>
+                    <div class="swiper-slide swiper-slide--gallery">
+                        <figure>
+                            <a href="./img/ptz/gallery-3.jpg" data-fancybox="gallery" data-caption="К-7М в полях">
+                                <img class="gallery__img swiper-lazy" data-src="./img/ptz/gallery-4.jpg" alt="">
+                            </a>
+                            <figcaption class="gallery__desc">К-7М в полях</figcaption>
+                        </figure>
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                    </div>
+                </div>
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar swiper-scrollbar--gallery"></div>
             </div>
-         </section>
-         <section class="contact-block">
+        </section>
+        <section class="contact-block">
             <div class="container">
-               <h2 class="contact-block__title">Директор АО «Петербургский тракторный завод» — Серебряков Сергей Александрович </h2>
-               <ul class="contact-block__list">
-                  <li class="contact-block-item">
-                     <h3 class="contact-block__subtitle">Адрес</h3>
-                     <div class="contact-block__wrap">
-                        <p class="contact-block__label">Адрес</p>
-                        <a class="contact-block__link" href="https://yandex.ru/maps/-/CCQxrBGcXB">
+                <h2 class="contact-block__title">Директор АО «Петербургский тракторный завод» — Серебряков Сергей Александрович </h2>
+                <ul class="contact-block__list">
+                    <li class="contact-block-item">
+                        <h3 class="contact-block__subtitle">Адрес</h3>
+                        <div class="contact-block__wrap">
+                            <p class="contact-block__label">Адрес</p>
+                            <a class="contact-block__link" href="https://yandex.ru/maps/-/CCQxrBGcXB">
                         198097, Санкт-Петербург, пр. Стачек, д. 47, лит. АВ, каб. 615
                         </a>
-                     </div>
-                  </li>
-                  <li class="contact-block-item contact-block-item--phone">
-                     <h3 class="contact-block__subtitle">Телефоны</h3>
-                     <div class="contact-block__wrap">
-                        <ul class="contact-block__sublist">
-                           <li class="contact-block__subitem">
-                              <p class="contact-block__label">Приемная директора</p>
-                              <a class="contact-block__link" href="tel:+78123265615">
+                        </div>
+                    </li>
+                    <li class="contact-block-item contact-block-item--phone">
+                        <h3 class="contact-block__subtitle">Телефоны</h3>
+                        <div class="contact-block__wrap">
+                            <ul class="contact-block__sublist">
+                                <li class="contact-block__subitem">
+                                    <p class="contact-block__label">Приемная директора</p>
+                                    <a class="contact-block__link" href="tel:+78123265615">
                               +7 (812) 326-56-15
                               </a>
-                           </li>
-                           <li class="contact-block__subitem">
-                              <p class="contact-block__label">Продажи</p>
-                              <a class="contact-block__link" href="tel:+78123265615">
+                                </li>
+                                <li class="contact-block__subitem">
+                                    <p class="contact-block__label">Продажи</p>
+                                    <a class="contact-block__link" href="tel:+78123265615">
                               +7 (812) 363-46-96
                               </a>
-                           </li>
-                           <li class="contact-block__subitem">
-                              <p class="contact-block__label">Снабжение</p>
-                              <a class="contact-block__link" href="tel:+78123265615">
+                                </li>
+                                <li class="contact-block__subitem">
+                                    <p class="contact-block__label">Снабжение</p>
+                                    <a class="contact-block__link" href="tel:+78123265615">
                               +7 (812) 331-08-35
                               </a>
-                           </li>
-                           <li class="contact-block__subitem">
-                              <p class="contact-block__label">Канцелярия</p>
-                              <a class="contact-block__link" href="tel:+78123265615">
+                                </li>
+                                <li class="contact-block__subitem">
+                                    <p class="contact-block__label">Канцелярия</p>
+                                    <a class="contact-block__link" href="tel:+78123265615">
                               +7 (812) 305-20-38
                               </a>
-                           </li>
-                        </ul>
-                     </div>
-                  </li>
-                  <li class="contact-block-item">
-                     <h3 class="contact-block__subtitle">Сайт</h3>
-                     <div class="contact-block__wrap">
-                        <a class="contact-block__link" href="www.kirovets-ptz.com">
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="contact-block-item">
+                        <h3 class="contact-block__subtitle">Сайт</h3>
+                        <div class="contact-block__wrap">
+                            <a class="contact-block__link" href="www.kirovets-ptz.com">
                         kirovets-ptz.com
                         </a>
-                     </div>
-                  </li>
-                  <li class="contact-block-item">
-                     <h3 class="contact-block__subtitle">MAil</h3>
-                     <div class="contact-block__wrap">
-                        <a class="contact-block__link " href="kirovets-ptz@gmail.com">
+                        </div>
+                    </li>
+                    <li class="contact-block-item">
+                        <h3 class="contact-block__subtitle">MAil</h3>
+                        <div class="contact-block__wrap">
+                            <a class="contact-block__link " href="kirovets-ptz@gmail.com">
                         kirovets-ptz@gmail.com
                         </a>
-                     </div>
-                  </li>
-               </ul>
+                        </div>
+                    </li>
+                </ul>
             </div>
-         </section>
-         <!-- Футер  -->
-         <include src="components/footer.html"></include>
-      </div>
-      </div>
-      <include src="components/btn-up.html"></include>
-      <script src="./js/script.min.js"></script>
-   </body>
+        </section>
+        <!-- Футер  -->
+        <include src="components/footer.html"></include>
+    </div>
+    </div>
+    <include src="components/btn-up.html"></include>
+    <script src="./js/script.min.js"></script>
+</body>
+
 </html>

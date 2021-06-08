@@ -1,14 +1,24 @@
-.table_prodsystem__title{
+.table_prodsystem__title {
     @extend %block-title;
 }
 
 .p-table {
     width: 100%;
+    position: relative;
 }
 
 .p-table__header {
-    background-color: #171c28;
+    background-color: rgb(23, 28, 40);
     height: 64px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0px 11px 15px 0px rgba(23, 28, 40, 0.4);
+}
+
+.p-table__rows {
+    padding-top: 64px;
 }
 
 .p-table__list {
@@ -20,7 +30,7 @@
 
 .p-table__col {
     color: #f2f4f7;
-    font-family: "MullerLight";
+    font-family: $font-text-light;
     font-size: 13px;
     height: 100%;
     display: flex;
@@ -37,7 +47,7 @@
     width: 16%;
 }
 
-.p-table__col--3{
+.p-table__col--3 {
     width: 13%;
 }
 
@@ -73,7 +83,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-family: "MullerRegular";
+    font-family: $font-text-regular;
     color: #616161;
     padding: 20px 10px;
     box-sizing: border-box;
@@ -88,7 +98,7 @@
 }
 
 .p-table__link-text {
-    font-family: "MullerRegular";
+    font-family: $font-text-regular;
     font-style: normal;
     font-weight: 300;
     font-size: 18px;
@@ -131,14 +141,12 @@
     padding: 50px 0;
 }
 
-
 @media screen and (max-width: 1440px) {
     .p-table__row:first-child {
         font-size: 18px;
     }
     .p-table__row {
         font-size: 13px;
-
     }
     .p-table__download {
         width: 55%;
@@ -160,12 +168,16 @@
     .p-table__wrapper {
         position: relative;
         overflow-x: scroll;
+        max-height: calc(100vh - 200px);
     }
     .p-table {
-        width: 1300px;
+        width: 1200px;
     }
     .table_prodsystem__container {
         padding-right: unset !important;
+    }
+    .p-table__wrapper .scrollbar-thumb {
+        background: #171c28;
     }
 }
 
@@ -180,7 +192,7 @@
         width: 100%;
     }
     .p-table {
-        // width: 1140px;
+        width: 1140px;
     }
     .p-table__row:first-child {
         font-size: 16px;
@@ -198,6 +210,9 @@
     .p-table__col--2 {
         width: 22%;
     }
+    .p-table__col--7 {
+        width: 10%;
+    }
     .p-table__col {
         padding: 15px;
     }
@@ -212,7 +227,7 @@
         font-size: 14px;
         line-height: 1.25;
     }
-    .p-table__link-text span{
+    .p-table__link-text span {
         font-size: 12px;
     }
     .p-table__download-link {
@@ -222,18 +237,25 @@
 
 @media screen and (max-width: 414px) {
     .p-table__col {
-        font-size: 13px;
+        font-size: 12px;
     }
     .p-table__row:first-child {
-        font-size: 13px;
+        font-size: 12px;
     }
     .p-table__row {
-        font-size: 13px;
+        font-size: 12px;
     }
     .p-table {
-        width: 958px;
+        width: 880px;
     }
     .p-table__header {
         height: 55px;
+    }
+    .p-table__rows {
+        padding-top: 55px;
+    }
+    .p-table__row {
+        // padding-left: 5px;
+        // padding-right: 5px;
     }
 }

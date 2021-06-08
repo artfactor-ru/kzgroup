@@ -1,49 +1,37 @@
 .press-newspage {
-    
     &__item {
         display: flex;
         flex-direction: row;
         margin-bottom: 85px;
         position: relative;
-
-        @media(max-width:1279px) {
-            padding-right: 8% ;
+        @media(max-width: 1279px) {
+            padding-right: 8%;
             margin-bottom: 45px;
         }
-
         @media(max-width:767px) {
             padding-right: 4%;
         }
-
         @media(max-width:620px) {
             flex-direction: column;
-            padding-right: 0% ;
+            padding-right: 0%;
         }
-
-
         &-container {
-        //display: block;
-        flex-direction: column;
-        position: relative;
-
-
-          ul li {
+            //display: block;
+            flex-direction: column;
+            position: relative;
+            ul li {
                 list-style-type: none;
             }
-
         }
-
         &-img {
             width: 100%;
-            height :100%;
+            height: 100%;
             object-fit: cover;
-
             &-container {
                 width: 43%;
                 min-width: 310px;
                 margin-right: 35px;
-
-                @media(max-width:1679px) {
+                @media(max-width: 1679px) {
                     width: 40%;
                     margin-right: 20px;
                 }
@@ -52,7 +40,6 @@
                     width: 30%;
                     margin-right: 20px;
                 }
-
                 @media(max-width:767px) {
                     width: 40%;
                     min-width: auto;
@@ -64,39 +51,31 @@
                     height: 220px;
                     margin-right: 0px;
                 }
-
-                
             }
         }
-
-        &-text{
+        &-text {
             width: 51%;
-
-            @media(max-width:620px) {
+            @media(max-width: 620px) {
                 width: 100%;
             }
-
             @media(max-width:405px) {
                 width: 95%;
             }
         }
-
         &-date {
-            font-family: 'MullerRegular';
+            font-family: $font-text-regular;
             font-size: 18px;
             line-height: 26px;
             display: flex;
             align-items: center;
             color: #A6A2A2;
             padding-bottom: 10px;
-
-            @media(max-width:1679px) {
+            @media(max-width: 1679px) {
                 font-size: 16px;
                 line-height: 26px;
                 padding-bottom: 10px;
             }
             @media(max-width:1279px) {
-              
                 padding-bottom: 5px;
             }
             @media(max-width:767px) {
@@ -104,9 +83,8 @@
                 padding-bottom: 5px;
             }
         }
-
         &-title {
-            font-family: 'HeliosExtBold';
+            font-family: $font-bold-2-title;
             font-style: normal;
             font-weight: bold;
             font-size: 24px;
@@ -114,76 +92,65 @@
             color: #171C28;
             padding-bottom: 10px;
             transition: all 0.5s ease;
-            @media(max-width:1600px) {
+            @media(max-width: 1600px) {
                 font-size: 20px;
                 line-height: 125.1%;
                 padding-bottom: 10px;
             }
-
             @media(max-width:1100px) {
                 font-size: 18px;
                 line-height: 125.1%;
                 padding-bottom: 10px;
             }
         }
-
         &-description {
-            font-family: 'MullerRegular';
+            font-family: $font-text-regular;
             font-style: normal;
             font-weight: 300;
             font-size: 18px;
             line-height: 28px;
             color: #616161;
-
-            @media(max-width:1679px) {
+            @media(max-width: 1679px) {
                 font-size: 16px;
                 line-height: 130%;
-            
             }
-
             @media(max-width:1279px) {
                 font-size: 14px;
                 line-height: 130%;
                 padding-bottom: 5px;
             }
-
         }
     }
-
 }
 
 .press-newspage-main-container {
     //margin-right: 50px;
-        display: flex;
-        flex-direction: row;
-        padding-right: 0% !important;
-
-        @media(max-width:767px) {
-            padding-right: 4% !important;
-            display: block;
-        }
-
-
+    display: flex;
+    flex-direction: row;
+    padding-right: 0% !important;
+    @media(max-width: 767px) {
+        padding-right: 4% !important;
+        display: block;
+    }
 }
 
 .parallax_item-newspage {
     width: 100% !important;
     height: 100% !important;
-   // margin-right: 30px;
+    // margin-right: 30px;
 }
 
 .news-parallax-container {
     height: 336px;
     width: 550px;
-
 }
 
-.press-newspage-link:hover ~ .press-newspage__item-img-container .parallax__item--news .parallax__img-wrap{
+.press-newspage-link:hover~.press-newspage__item-img-container .parallax__item--news .parallax__img-wrap {
     transform: scale(1.1);
     transform-origin: center;
 }
 
-.press-newspage-link{
+.press-newspage-link {
     cursor: pointer;
     position: absolute;
     display: block;
@@ -193,14 +160,13 @@
     z-index: 200;
 }
 
-.press-newspage-link:hover ~ .press-newspage__item-text .press-newspage__item-title {
+.press-newspage-link:hover~.press-newspage__item-text .press-newspage__item-title {
     color: #c30215;
 }
 
 // .press-right-news-sidebar {
 //     width: 60% !important;
 // }
-
 .press-rigt-side-bar-news-filters {
     padding-left: 10px;
     padding-top: 10px;
@@ -218,36 +184,29 @@
 
 .press-hidden-instagram {
     margin-bottom: 50px;
-
-    @media(min-width:1150px) {
+    @media(min-width: 1150px) {
         display: none;
     }
-
     @media(max-width:1150px) {
         //padding-left: 8%;
         margin-right: 8%;
         width: 95%;
     }
-
     @media(max-width:767px) {
         margin-right: 4%;
         width: 100%;
     }
-
 }
 
 .press-instagram-hide-gallery-img {
-
-    @media(max-width:1150px) {
+    @media(max-width: 1150px) {
         width: 15%;
         //padding-right: 4%;
     }
-
     @media(max-width:560px) {
         width: 23%;
         //padding-right: 4%;
     }
-
     @media(max-width:440px) {
         width: 32.3%;
         //padding-right: 4%;
@@ -255,19 +214,13 @@
 }
 
 .parallax-item-press-news {
-
     width: 100%;
     height: 100%;
     min-height: 335px;
-
     @media(max-width: 1679px) {
         min-height: 210px;
     }
-
     @media(max-width: 1279px) {
         min-height: 180px;
     }
-
-  
-
 }

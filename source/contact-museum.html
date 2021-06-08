@@ -1,35 +1,36 @@
 <!doctype html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport"
-         content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Контакты</title>
-      <link rel="stylesheet" href="./css/style.min.css">
-   </head>
-   <body class="contact barbapage" data-barba="wrapper">
-      <!-- Прелоадер -->
-      <include src="components/preloader.html"></include>
-      <!-- Шапка и меню -->
-      <include src="components/header.html"></include>
-      <div class="scroll">
-         <!-- Первый экран контактов -->
-         <include src="components/contact/mainScreen.html"></include>
-         <!-- Табы контактов -->
-         <include src="components/contact/tabs.html"></include>
-         <div class="contacts-container two-screen">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="contact barbapage" data-barba="wrapper">
+    <!-- Прелоадер -->
+    <include src="components/preloader.html"></include>
+    <!-- Шапка и меню -->
+    <include src="components/header.html"></include>
+    <div class="scroll">
+        <!-- Первый экран контактов -->
+        <include src="components/contact/mainScreen.html"></include>
+        <!-- Табы контактов -->
+        <include src="components/contact/tabs.html"></include>
+        <div class="contacts-container two-screen">
             <main class="contacts__content-container">
-               <div  class="barbawrapper contacts-info-container contacts-info__contacts-container contacts_tabs tab_contacts-main" data-barba="container" data-barba-namespace="home">
-                  <div class="barba_background"></div>
-                  <div class="barba_background--next"></div>
-                  <div class="barba_background-in">
-                     <section class="" data-barba-prevent="all">
-                        <div class="contacts-mobile_container">
-                           <h2 class="contacts__contacts-info__main">Музей</h2>
-                           <article class="contacts__contacts-info__pressc">
-                              <h3>Директор музея</h3>
-                              <address>
+                <div class="barbawrapper contacts-info-container contacts-info__contacts-container contacts_tabs tab_contacts-main" data-barba="container" data-barba-namespace="home">
+                    <div class="barba_background"></div>
+                    <div class="barba_background--next"></div>
+                    <div class="barba_background-in">
+                        <section class="" data-barba-prevent="all">
+                            <div class="contacts-mobile_container">
+                                <h2 class="contacts__contacts-info__main">Музей</h2>
+                                <article class="contacts__contacts-info__pressc">
+                                    <h3>Директор музея</h3>
+                                    <address>
                                  <p>Саврасов Игорь Юрьевич</p>
                                  <div class="contacts__contacts-info">
                                     <h2 class="contacts__contacts-info__title">Адрес:</h2>
@@ -37,53 +38,51 @@
                               198097, г. Санкт-Петербург, пр. Стачек, пр. Стачек, д. 72, литера «А»<br>
                               (3-й этаж ДКиТ им. И. И. Газа, вход с правого крыла). Метро «Кировский завод»
                               </address>
-                              </div>
-                              <div class="contacts__contacts-info">
-                                 <h2 class="contacts__contacts-info__title">Часы работы:</h2>
-                                 <div class="contacts__contacts-info__paragraph">
+                            </div>
+                            <div class="contacts__contacts-info">
+                                <h2 class="contacts__contacts-info__title">Часы работы:</h2>
+                                <div class="contacts__contacts-info__paragraph">
                                     Пн – сб с
-                                    <time>09:00</time>
-                                    до
+                                    <time>09:00</time> до
                                     <time>17:30</time>
-                                    <br>
-                                    Выходной день - воскресенье Обед - с
-                                    <time>14:00</time>
-                                    до
+                                    <br> Выходной день - воскресенье Обед - с
+                                    <time>14:00</time> до
                                     <time>14:30</time>
-                                 </div>
-                              </div>
-                              </address>
-                           </article>
-                           <article class="contacts__contacts-info__pressc">
-                              <h3>ЗАПИСЬ НА ЭКСКУРСИЮ</h3>
-                              <address>
+                                </div>
+                            </div>
+                            </address>
+                            </article>
+                            <article class="contacts__contacts-info__pressc">
+                                <h3>ЗАПИСЬ НА ЭКСКУРСИЮ</h3>
+                                <address>
                                  <div class="contacts__contacts-info">
                                     <h2 class="contacts__contacts-info__title">Телефон/Факс:</h2>
                               <address class="contacts__contacts-info__paragraph">
                               <a href="tel:+7(812)6476468">+7 (812) 647-64-68</a>
                               </address>
-                              </div>
-                              <div class="contacts__contacts-info">
-                                 <h2 class="contacts__contacts-info__title">E-mail:</h2>
-                                 <address class="contacts__contacts-info__paragraph">
+                    </div>
+                    <div class="contacts__contacts-info">
+                        <h2 class="contacts__contacts-info__title">E-mail:</h2>
+                        <address class="contacts__contacts-info__paragraph">
                                     <a href="mailto:museum@kzgroup.ru">museum@kzgroup.ru</a>
                                  </address>
-                              </div>
-                              </address>
-                           </article>
-                        </div>
-                     </section>
-                  </div>
-               </div>
-               <!-- боковое меню -->
-               <include src="components/contact/aside.html"></include>
-            </main>
-         </div>
-         <!-- Футер  -->
-         <include src="components/footer.html"></include>
-      </div>
-      <include src="components/btn-up.html"></include>
-      <script src='https://api-maps.yandex.ru/2.1/?lang=ru_RU'></script>
-      <script src="./js/script.min.js"></script>
-   </body>
+                    </div>
+                    </address>
+                    </article>
+                </div>
+                </section>
+        </div>
+    </div>
+    <!-- боковое меню -->
+    <include src="components/contact/aside.html"></include>
+    </main>
+    </div>
+    <!-- Футер  -->
+    <include src="components/footer.html"></include>
+    </div>
+    <include src="components/btn-up.html"></include>
+    <!-- <script src='https://api-maps.yandex.ru/2.1/?lang=ru_RU'></script> -->
+    <script src="./js/script.min.js"></script>
+</body>
+
 </html>

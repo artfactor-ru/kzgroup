@@ -1,45 +1,51 @@
-.news--grey{
+.news--grey {
     background-color: $bg-color-light-grey;
     padding-top: 20px;
 }
-.news{
-    padding-bottom:40px;
+
+.news {
+    padding-bottom: 40px;
 }
 
-.news__title{
-    
+.news__title {
     @extend %block-title;
     padding-top: 10px;
 }
-.news__container, .press__container{
+
+.news__container,
+.press__container {
     margin-top: 25px;
     width: 100%;
     // height: 220px;
 }
-.press__container{
+
+.press__container {
     display: flex;
 }
-.news__item{
+
+.news__item {
     width: 100%;
     position: relative;
-
 }
-.parallax__item--news{
+
+.parallax__item--news {
     width: 100%;
     height: 220px;
 }
-.news__controls{
+
+.news__controls {
     display: none;
 }
 
-.parallax__img-inner{
+.parallax__img-inner {
     width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center;
     object-fit: cover;
 }
-.news__date{
+
+.news__date {
     margin: 0;
     padding: 0;
     padding-top: 25px;
@@ -48,41 +54,41 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-
     color: rgba(60, 61, 64, 0.39);
 }
-.news__subtitle{
-   @extend %block-text;
-   color: $black-grey;
-   font-family: $font-text-regular;
-   padding-bottom: 60px;
-   transition: all 0.5s ease;
+
+.news__subtitle {
+    @extend %block-text;
+    color: $black-grey;
+    font-family: $font-text-regular;
+    padding-bottom: 60px;
+    transition: all 0.5s ease;
 }
 
 .swiper-container-horizontal>.swiper-scrollbar.swiper-scrollbar--news {
-	@extend %scroll-line;
+    @extend %scroll-line;
 }
 
-.swiper-scrollbar--news .swiper-scrollbar-drag{
-	@extend %scroll-drag;
+.swiper-scrollbar--news .swiper-scrollbar-drag {
+    @extend %scroll-drag;
 }
 
-.news__item--video .parallax__item--news::before{
-   content: "";
-   position: absolute;
+.news__item--video .parallax__item--news::before {
+    content: "";
+    position: absolute;
     width: 55px;
     height: 55px;
     background-size: 55px 55px;
     background-image: url(../img/news/icon-play.svg);
     background-position: center center;
     z-index: 200;
-    top:50%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
-
 }
-.news__link{
+
+.news__link {
     position: absolute;
     display: block;
     width: 100%;
@@ -90,162 +96,148 @@
     text-decoration: none;
     z-index: 200;
 }
-.parallax__item--news .parallax__img-wrap{
+
+.parallax__item--news .parallax__img-wrap {
     transition: transform 0.9s ease;
     // will-change: transform;
     backface-visibility: hidden;
 }
 
-
-.news__link:hover  ~ .news__subtitle{
+.news__link:hover~.news__subtitle {
     color: $red-color;
 }
-.news__container .swiper-wrapper{
+
+.news__container .swiper-wrapper {
     transition: transform 1s ease !important;
 }
-.press__container .swiper-wrapper{
+
+.press__container .swiper-wrapper {
     transition: transform 1s ease !important;
 }
 
-.news__link:hover ~ .parallax__item--news .parallax__img-wrap{
-    transform: scale(1.1) translateZ(0);
- 
-}
-
-
-@media(min-width: 500px){
-    .news__item{
+@media(min-width: 500px) {
+    .news__item {
         width: 315px;
-
     }
-  
 }
-@media(min-width: 767px){
-    
-    .news{
-        padding-bottom:60px;
+
+@media(min-width: 767px) {
+    .news {
+        padding-bottom: 60px;
     }
-    
-    .news--grey{
+    .news--grey {
         background-color: $bg-color-light-grey;
     }
-
-    .news__title{
+    .news__title {
         padding-top: 40px;
     }
-    .news__container{
+    .news__container {
         margin-top: 40px;
         display: flex;
-
         box-sizing: border-box;
         overflow: hidden;
     }
-    .press__container{
+    .press__container {
         margin-top: 40px;
         display: flex;
-
         box-sizing: border-box;
         overflow: hidden;
     }
-    .news__container .swiper-wrapper{
+    .news__container .swiper-wrapper {
         order: 2;
     }
-    .press__container .swiper-wrapper{
+    .press__container .swiper-wrapper {
         order: 2;
     }
-    .container--news{
+    .container--news {
         padding-right: 8% !important;
         padding-left: 0 !important;
     }
-    .swiper-scrollbar--news{
+    .swiper-scrollbar--news {
         display: none;
     }
-    .news__controls{
+    .news__controls {
         z-index: 100;
         position: relative;
         display: block;
         width: 8%;
+        margin-top: -1px;
         flex-shrink: 0;
         display: flex;
-     
         flex-direction: column;
         order: 1;
         background-color: #ffffff;
         box-sizing: border-box;
-       
     }
-    .news__controls--blue{
+    .container--news--eng .news__controls {
+        margin-top: -10px;
+    }
+    .news__controls--blue {
         background-color: $blue-color;
     }
-    .news__controls .swiper-button-next,.news__controls .swiper-button-prev{
+    .news__controls .swiper-button-next,
+    .news__controls .swiper-button-prev {
         position: relative;
         top: 190px;
         bottom: auto;
         left: 20%;
         right: auto;
         @extend %btn-slider;
-        overflow: hidden;
-    
-
+        // overflow: hidden;
     }
-     .news__controls .swiper-button-next::before,.news__controls .swiper-button-prev::before{
-         transition: all 0.5s ease;
-         content: "";
-         position: absolute;
-         width: 0%;
-         left: 0;
-         height: 100%;
-         background-color: #A29797;
-
-     }
-    .news__controls .swiper-button-next:hover::before,.news__controls .swiper-button-prev:hover::before{
+    .news__controls .swiper-button-next::before,
+    .news__controls .swiper-button-prev::before {
+        transition: all 0.5s ease;
         content: "";
         position: absolute;
-        width: 100%;
-        height: 100%;
+        width: 0%;
+        top: -1px;
+        left: -1px;
+        height: 105%;
+        background-color: #A29797;
+    }
+    .news__controls .swiper-button-next:hover::before,
+    .news__controls .swiper-button-prev:hover::before {
+        content: "";
+        position: absolute;
+        width: 105%;
+        height: 105%;
         background-color: #A29797;
         z-index: 1;
-
     }
-  
-    .news__controls .swiper-button-prev{
+    .news__controls .swiper-button-prev {
         top: 160px;
     }
-    .news__controls .swiper-button-next::after,.news__controls .swiper-button-prev::after{
-       display: none;
-
+    .news__controls .swiper-button-next::after,
+    .news__controls .swiper-button-prev::after {
+        display: none;
     }
-
-    .news__controls-icon{
+    .news__controls-icon {
         width: 10px;
         height: 10px;
         fill: #B3B2B3;
         z-index: 5;
         position: relative;
     }
-    .news__controls .swiper-button-next:hover .news__controls-icon, .news__controls .swiper-button-prev:hover .news__controls-icon{
+    .news__controls .swiper-button-next:hover .news__controls-icon,
+    .news__controls .swiper-button-prev:hover .news__controls-icon {
         fill: #ffffff;
     }
-    .news__date{
-     
+    .news__date {
         padding-top: 15px;
-      
         font-size: 14px;
         line-height: 20px;
-
     }
-    .news__subtitle{
-     
-       color: $black-grey;
-       font-family: $font-text-regular;
-       padding-bottom: 40px;
-       padding-top: 10px;
+    .news__subtitle {
+        color: $black-grey;
+        font-family: $font-text-regular;
+        padding-bottom: 40px;
+        padding-top: 10px;
     }
-    .news__item{
-        overflow:hidden;
+    .news__item {
+        overflow: hidden;
     }
-  
-    .news__item::after{
+    .news__item::after {
         content: "";
         position: absolute;
         bottom: 0;
@@ -255,174 +247,181 @@
         transform: translateX(-105%);
         transition: all 0.5s ease;
     }
-   
-    .news--grey .news__controls{
+    .news--grey .news__controls {
         background-color: $bg-color-light-grey;
     }
- 
 }
 
-@media(min-width: 1280px){
-    .news__item:hover::after{
+@media(min-width: 1280px) {
+    .news__item:hover::after {
         transform: translateX(0px);
-
     }
-    .parallax__img--news{
+    .parallax__img--news {
         background-size: cover;
         background-position: center;
-        
         --overflow: 50px;
-       
-            height: calc(100% + (2 * var(--overflow))) !important;
-            top: calc( -1 * var(--overflow));
-
+        height: calc(100% + (2 * var(--overflow))) !important;
+        top: calc( -1 * var(--overflow));
     }
-   
-    .swiper-wrapper--press{
+    .press__container {
+        width: 100%;
+    }
+    .swiper-wrapper--press {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+        width: 100%;
     }
-
-    .news--grey{
+    .news--grey {
         background-color: $bg-color-light-grey;
         padding-bottom: 80px;
-    
     }
- 
-    .news__title{
+    .news__title {
         padding-top: 75px;
     }
-    .news__container{
+    .news__container {
         margin-top: 60px;
     }
-    .press__container{
+    .press__container {
         margin-top: 60px;
     }
-
-    .press-news .container--news{
+    .press-news .container--news {
         padding-right: 8% !important;
         padding-left: 8% !important;
     }
-    
-    .news__item{
+    .news__item {
         width: 340px;
     }
-    .news__controls{
+    .news__controls {
         z-index: 100;
         position: relative;
         display: block;
         width: 8%;
         flex-shrink: 0;
         display: flex;
-     
         flex-direction: column;
         order: 1;
+        margin-top: -1px;
         background-color: #ffffff;
         box-sizing: border-box;
-       
     }
-    .news__controls .swiper-button-next,.news__controls .swiper-button-prev{
+    .container--news--eng .news__controls {
+        margin-top: -10px;
+    }
+    .news__controls .swiper-button-next,
+    .news__controls .swiper-button-prev {
         position: relative;
         top: 160px;
-       
-     
-    
-
     }
-    .news__controls .swiper-button-prev{
+    .news__controls .swiper-button-prev {
         top: 120px;
     }
-    .news__controls-icon{
+    .news__controls-icon {
         width: 15px;
         height: 15px;
     }
-    .press-news .news__controls{
+    .press-news .news__controls {
         display: none;
     }
-    .news__date{
-     
+    .news__date {
         padding-top: 20px;
-      
         font-size: 18px;
         line-height: 26px;
-
     }
-  
-   
+    .news__link:hover~.parallax__item--news .parallax__img-wrap {
+        transform: scale(1.1) translateZ(0);
+    }
+    .container--news--eng .parallax__item--news {
+        height: 320px;
+    }
 }
 
-@media(min-width: 1680px){
-    .press-news .container--news{
+@media(min-width: 1680px) {
+    .press-news .container--news {
         padding-right: 9% !important;
         padding-left: 9% !important;
     }
-    .news{
- 
-        padding-bottom:105px;
-    
+    .news {
+        padding-bottom: 105px;
     }
-    .news__title{
+    .news__title {
         padding-top: 105px;
     }
-    .news__container{
+    .news__container {
         margin-top: 50px;
     }
-    .press__container{
+    .press__container {
         margin-top: 50px;
     }
-    .news__item{
+    .news__item {
         width: 504px;
     }
-    .news__controls{
+    .news__controls {
         z-index: 100;
         position: relative;
         display: block;
         width: 9%;
+        margin-top: -1px;
         flex-shrink: 0;
         display: flex;
-     
         flex-direction: column;
         order: 1;
         background-color: #ffffff;
         box-sizing: border-box;
-       
     }
-    .parallax__item--news{
+    .parallax__item--news {
         width: 100%;
         height: 335px;
     }
-    .news__controls .swiper-button-next,.news__controls .swiper-button-prev{
+    .news__controls .swiper-button-next,
+    .news__controls .swiper-button-prev {
         position: relative;
-        top: 260px;
-       
-    
-    
-
+        top: 221px;
     }
-    .news__controls .swiper-button-prev{
-        top: 220px;
+    .news__controls .swiper-button-prev {
+        top: 180px;
     }
-   
-    .news__subtitle{
-     
+    .news__subtitle {
         padding-bottom: 35px;
         font-size: 24px;
-        line-height: 34px;     
+        line-height: 34px;
     }
-    .news__controls .swiper-button-next,.news__controls .swiper-button-prev{
-      
+    .news__controls .swiper-button-next,
+    .news__controls .swiper-button-prev {
         left: 35%;
     }
-
     .news__item--video .parallax__item--news::before {
-      
         width: 82px;
         height: 82px;
         background-size: 82px 82px;
-       
-       
     }
-   
+    .container--news {
+        padding-right: 9% !important;
+        padding-left: 0 !important;
+    }
+    .container--news--eng .parallax__item--news {
+        height: 340px !important;
+    }
 }
 
+@media(min-width:1280px) {
+    .container--news--eng {
+        padding-left: 10px !important;
+    }
+    .container--news--eng .news__container {
+        margin-top: 30px;
+    }
+}
+
+@media(min-width:1680px) {
+    .container--news--eng .news__controls .swiper-button-prev {
+        top: 135px;
+    }
+    .container--news--eng .news__controls .swiper-button-next {
+        top: 180px;
+    }
+}
+
+.parallax__img--news {
+    height: 100%;
+}

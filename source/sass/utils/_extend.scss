@@ -214,28 +214,28 @@
     font-family: $font-text-light;
     font-style: normal;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 22px;
     color: $grey-text-paragraf;
 }
 
 @media(min-width: 767px) {
     %block-text {
-        font-size: 15px;
+        font-size: 14px;
         line-height: 22px;
     }
 }
 
 @media(min-width: 1280px) {
     %block-text {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 24px;
     }
 }
 
 @media(min-width: 1680px) {
     %block-text {
-        font-size: 18px;
+        font-size: 17px;
         line-height: 28px;
     }
 }
@@ -249,7 +249,7 @@
     border: none;
     // border: 1px solid #000000;
     color: #000000;
-    font-family: $font-regular;
+    font-family: $font-text-regular;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
@@ -286,16 +286,22 @@
         height: 100%;
         left: 0;
         top: 0;
+        box-sizing: border-box;
         &::before {
             content: "";
             position: absolute;
             width: 1px;
+            @media(min-width: 1280px) {
+                width: 1px;
+            }
             height: 0%;
             bottom: 0;
+            box-sizing: border-box;
             left: 0;
             background-color: #000000;
             transition: all 0.3s ease;
             transition-delay: 0.9s;
+            transform: scaleX(0.9);
         }
         &.is-inview::before {
             height: 100%;
@@ -305,10 +311,15 @@
             position: absolute;
             width: 0%;
             height: 1px;
+            @media(min-width: 1280px) {
+                height: 1px;
+            }
+            box-sizing: border-box;
             top: 0;
             left: 0;
             background-color: #000000;
             transition: all 0.3s ease;
+            transform: scaleY(0.9);
         }
         &.is-inview::after {
             width: 100%;
@@ -320,16 +331,22 @@
         height: 100%;
         left: 0;
         top: 0;
+        box-sizing: border-box;
         &::before {
             content: "";
             position: absolute;
             width: 1px;
+            @media(min-width: 1280px) {
+                width: 1px;
+            }
             height: 0%;
             top: 0;
-            right: 0;
+            box-sizing: border-box;
+            right: -1px;
             background-color: #000000;
             transition: all 0.3s ease;
             transition-delay: 0.3s;
+            transform: scaleX(0.9);
         }
         &.is-inview::before {
             height: 100%;
@@ -339,11 +356,16 @@
             position: absolute;
             width: 0%;
             height: 1px;
-            bottom: 0;
+            @media(min-width: 1280px) {
+                height: 1px;
+            }
+            box-sizing: border-box;
+            bottom: -1px;
             right: 0;
             background-color: #000000;
             transition: all 0.3s ease;
             transition-delay: 0.6s;
+            transform: scaleY(0.9);
         }
         &.is-inview::after {
             width: 100%;
@@ -811,21 +833,21 @@
     font-family: $font-text-light;
     font-style: normal;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 16px;
     color: $grey-text-paragraf;
 }
 
 @media(min-width: 1280px) {
     %block-text-smallest {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 22px;
     }
 }
 
 @media(min-width: 1680px) {
     %block-text-smallest {
-        font-size: 18px;
+        font-size: 17px;
         line-height: 24px;
     }
 }
@@ -1044,13 +1066,13 @@
     }
 }
 
-%block-date{
+%block-date {
     font-family: $font-text-regular;
     font-size: 18px;
     line-height: 136.6%;
     color: $grey-text-table;
-    @media(max-width: 1279px){
-        font-size: 14px;    
+    @media(max-width: 1279px) {
+        font-size: 14px;
         line-height: 26px;
     }
 }

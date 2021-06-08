@@ -1,146 +1,119 @@
 .press-contacts {
-
-      &__title {
+    &__title {
         font-family: 'HeliosExt';
         font-style: normal;
         font-weight: normal;
         font-size: 36px;
         line-height: 36px;
         color: #171C28;
-        margin-bottom: 50px;       
+        margin-bottom: 50px;
         //margin-left: 10px;
-
         @media only screen and(max-width: 1680px) {
-          font-size: 30px;
-          line-height: 41px;
+            font-size: 30px;
+            line-height: 41px;
         }
-
         @media only screen and(max-width: 1100px) {
             font-size: 24px;
             line-height: 33px;
         }
-
         @media only screen and(max-width: 560px) {
             font-size: 18px;
             line-height: 25px;
         }
-      }
-
-      &__name {
-        font-family: 'MullerRegular';
+    }
+    &__name {
+        font-family: $font-text-regular;
         font-size: 24px;
         line-height: 22px;
         color: #171C28;
         margin-bottom: 20px;
         //margin-left: 10px;
-
         @media only screen and(max-width: 1680px) {
-          font-size: 20px;
+            font-size: 20px;
         }
-
         @media only screen and(max-width: 1100px) {
             font-size: 18px;
         }
-
         @media only screen and(max-width: 560px) {
             font-size: 16px;
         }
-      }
-
-      &__phone {
-        font-family: 'MullerRegular';
+    }
+    &__phone {
+        font-family: $font-text-regular;
         font-size: 24px;
         line-height: 22px;
         color: #171C28 !important;
         margin-bottom: 20px;
         //margin-left: 10px;
-
         @media only screen and(max-width: 1680px) {
-          font-size: 20px;
+            font-size: 20px;
         }
-
         @media only screen and(max-width: 1100px) {
             font-size: 18px;
         }
-
         @media only screen and(max-width: 560px) {
             font-size: 16px;
         }
-      }
-
-      &__phone-title {
-        font-family: 'MullerRegular';
+    }
+    &__phone-title {
+        font-family: $font-text-regular;
         font-style: normal;
         font-weight: 300;
         font-size: 18px;
         line-height: 28px;
         color: #616161;
-
         @media only screen and(max-width: 1680px) {
-          font-size: 20px;
+            font-size: 20px;
         }
-
         @media only screen and(max-width: 1100px) {
             font-size: 18px;
         }
-
         @media only screen and(max-width: 560px) {
             font-size: 16px;
         }
-      }
-
-      &__mail {
-        font-family: 'MullerRegular';
+    }
+    &__mail {
+        font-family: $font-text-regular;
         font-size: 24px;
         line-height: 30px;
         color: #171C28 !important;
         margin-bottom: 90px;
         //margin-left: 10px;
-
         @media only screen and(max-width: 1680px) {
-          font-size: 20px;
+            font-size: 20px;
         }
-
         @media only screen and(max-width: 1100px) {
             font-size: 18px;
         }
-
         @media only screen and(max-width: 560px) {
             font-size: 16px;
         }
-
         &-title {
-            font-family: 'MullerRegular';
+            font-family: $font-text-regular;
             font-style: normal;
             font-weight: 300;
             font-size: 18px;
             line-height: 28px;
             color: #616161;
-
             @media only screen and(max-width: 1680px) {
-              font-size: 20px;
+                font-size: 20px;
             }
-    
             @media only screen and(max-width: 1100px) {
                 font-size: 18px;
             }
-    
             @media only screen and(max-width: 560px) {
                 font-size: 16px;
             }
         }
-      }
-
-      &-fields {
+    }
+    &-fields {
         margin-bottom: 150px;
         //margin-left: 10px;
-        
         a {
-            text-decoration:none;
+            text-decoration: none;
             color: #171C28;
-          }
-      }
-
+        }
+    }
 }
 
 .press-search-bar-contacts-container {
@@ -149,7 +122,6 @@
     //margin-top: 65px;
 }
 
-
 .press-nav-bar-contacts {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }

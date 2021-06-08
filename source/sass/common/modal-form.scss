@@ -1,13 +1,10 @@
-.modal-form{
+.modal-form {
     position: fixed;
-    top:50%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: #FFFFFF;
     width: 55%;
-
-
-
     padding-top: 5%;
     padding-bottom: 5%;
     padding-left: 5%;
@@ -19,54 +16,175 @@
     z-index: 1000;
     transition: all 1s ease;
     opacity: 1;
-
 }
-.modal-form.modal-hidden{
-     opacity: 0;
+
+.modal-form.modal-hidden {
+    opacity: 0;
     pointer-events: none;
 }
-.modal-form h4{
+
+.modal-form h4 {
     color: $black-grey;
     text-align: center;
-
     @extend %block-title-light;
 }
-.overlay{
+
+.overlay {
     position: fixed;
     width: 100%;
-    height: 100%; 
+    height: 100%;
     z-index: 999;
     background: rgba(0, 0, 0, 0.57);
-    top:0;
+    top: 0;
     left: 0;
     transition: all 1s ease;
     opacity: 1;
 }
-.overlay.modal-hidden{
-   opacity: 0;
-   pointer-events: none;
 
+.overlay.modal-hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
-.modal-form .modal-form--btnok{
+.modal-form .modal-form--btnok {
     margin-top: 2.5%;
     display: inline-block;
     @extend %btn-bordered;
-
     color: $black-grey;
     border: 1px solid $black-grey;
     overflow: hidden;
-    &::after{
+    &::after {
         background: $black-grey
     }
-    &:hover{
-		color: #FFFFFF;
+    &:hover {
+        color: #FFFFFF;
     }
-   
 }
 
-@media(max-width:767px){
-    .modal-form{
+@media(max-width:767px) {
+    .modal-form {
         width: 80%;
     }
 }
+
+// ПОДЕЛИТЬСЯ
+.fond {
+    position: absolute;
+    padding-top: 0px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1289aa;
+}
+
+
+/* Стили для оформления кнопок поделиться */
+
+#share {
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    text-align: center;
+}
+
+.like {
+    font-size: 16px;
+    font-weight: 700;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.push {
+    display: inline-block;
+    min-width: 100px;
+    margin: 5px 2px 10px 2px;
+    font-size: 15px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.facebook:hover {
+    background-color: #2d4373;
+    color: #fff;
+    text-decoration: none;
+}
+
+.google {
+    background-color: #dd4b39;
+}
+
+.google:hover {
+    background-color: #c23321;
+    color: #fff;
+    text-decoration: none;
+}
+
+.pinterest {
+    background-color: #bd081c;
+}
+
+.pinterest:hover {
+    background-color: #881f12;
+    color: #fff;
+    text-decoration: none;
+}
+
+.viber {
+    background-color: #665cac;
+}
+
+.viber:hover {
+    background-color: #881f12;
+    color: #fff;
+    text-decoration: none;
+}
+
+.twitter {
+    background-color: #55acee;
+}
+
+.twitter:hover {
+    background-color: #2795e9;
+    color: #fff;
+    text-decoration: none;
+}
+
+.vkontakte {
+    background-color: #587ea3;
+}
+
+.vkontakte:hover {
+    background-color: #466482;
+    color: #fff;
+    text-decoration: none;
+}
+
+.ok {
+    background-color: #ee8208;
+}
+
+.ok:hover {
+    background-color: #a05f20;
+    color: #fff;
+    text-decoration: none;
+}
+
+.whatsapp {
+    background-color: #5cbe4a;
+}
+
+.whatsapp:hover {
+    background-color: #a05f20;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* Стили для оформления кнопок поделиться */

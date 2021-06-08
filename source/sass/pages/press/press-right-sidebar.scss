@@ -1,9 +1,7 @@
-
-.sidebar__inner{
+.sidebar__inner {
     // width: 100%;
     margin-right: 8% !important;
     box-sizing: border-box;
-  
 }
 
 .press-rigt-side-bar {
@@ -13,18 +11,15 @@
     // top: 0;
     // position: sticky !important;
     // height: 100vh;
-    
+    margin-top: 1px;
     padding-bottom: 80px;
     padding-top: 90px;
     box-sizing: border-box;
     background-color: $bg-color-light-grey;
     margin-left: auto;
-    
-    
     &-filters {
         margin-bottom: 30px;
     }
-
     &-filters-date {
         display: flex;
         flex-direction: column;
@@ -33,12 +28,8 @@
         padding-bottom: 30px;
         position: relative;
     }
-
-   
-
     &-theme {
         height: 45%;
-
         &-list {
             display: flex;
             flex-direction: column;
@@ -47,12 +38,10 @@
             align-items: flex-start;
             border-bottom: 1px solid #E2E2E2;
             padding-bottom: 15px;
-
-            @media(max-width: 1679px){
+            @media(max-width: 1679px) {
                 padding-bottom: 12px;
             }
         }
-
         &-button {
             font-family: 'HeliosExt';
             font-style: normal;
@@ -60,11 +49,11 @@
             text-transform: uppercase;
             font-size: 18px;
             line-height: 120%;
-            border:none; 
-            padding:0; 
-            margin:0; 
+            border: none;
+            padding: 0;
+            margin: 0;
             color: #616161;
-            background-color:transparent; 
+            background-color: transparent;
             border-radius: 50px;
             width: 300px;
             text-align: left;
@@ -72,9 +61,8 @@
             padding-bottom: 23px;
             position: relative;
             cursor: pointer;
-
             &:hover {
-                color: #c30215 ;
+                color: #c30215;
                 -webkit-transition: 0.5s;
                 transition: 0.5s;
             }
@@ -86,36 +74,26 @@
                 height: 0px;
                 transition: height .8s;
                 left: 0;
-        
                 background-color: $red-color;
-                
             }
-            &:hover::before{
+            &:hover::before {
                 height: 20px;
             }
-            @media(max-width: 1679px){
+            @media(max-width: 1679px) {
                 padding-left: 30px;
                 font-size: 16px;
                 padding-bottom: 25px;
             }
         }
     }
-
-
-
 }
+
 .rigt-side-bar-theme-button-active {
     color: #c30215 !important;
-    
     &::before {
-        height: 20px;    
+        height: 20px;
     }
 }
-
-
-
-
-
 
 .press-rigt-side-bar-date-button {
     font-family: 'HeliosExt';
@@ -123,11 +101,11 @@
     font-weight: normal;
     font-size: 18px;
     line-height: 120%;
-    border:none; 
-    padding:0; 
-    margin:0; 
+    border: none;
+    padding: 0;
+    margin: 0;
     color: #616161;
-    background-color:transparent; 
+    background-color: transparent;
     border-radius: 50px;
     width: 300px;
     text-align: left;
@@ -135,11 +113,11 @@
     margin-bottom: 28px;
     cursor: pointer;
     &:hover {
-        color: #c30215 ;
+        color: #c30215;
         -webkit-transition: 0.5s;
         transition: 0.5s;
     }
-    @media(max-width: 1679px){
+    @media(max-width: 1679px) {
         padding-left: 30px;
         font-size: 16px;
         margin-bottom: 20px;
@@ -150,11 +128,9 @@
     color: #c30215;
 }
 
-
 .press-dropdown-list {
     // position: relative;
     display: inline-block;
-    
 }
 
 .press-dropdown-list-content {
@@ -167,15 +143,17 @@
     width: 100%;
     left: 2px;
     //max-height: 300px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     transition: all 0.5s ease;
 }
-.press-dropdown-list-content.show{
+
+.press-dropdown-list-content.show {
     max-height: 475px !important;
-    max-width:  92%;
+    max-width: 92%;
     opacity: 1;
 }
+
 .press-dropdown-list-content__item {
     font-family: 'HeliosExt';
     font-style: normal;
@@ -187,16 +165,15 @@
     text-decoration: none;
     display: block;
     cursor: pointer;
-
     &:hover {
         background-color: #a6a2a2;
         color: #ffffff;
     }
-    &.active{
+    &.active {
         background-color: #a6a2a2;
         color: #ffffff;
     }
-    @media(max-width: 1679px){
+    @media(max-width: 1679px) {
         padding-left: 30px;
         font-size: 16px;
         // margin-bottom: 20px;
