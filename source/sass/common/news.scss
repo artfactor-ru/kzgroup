@@ -259,7 +259,7 @@
     .parallax__img--news {
         background-size: cover;
         background-position: center;
-        --overflow: 50px;
+        --overflow: 8%;
         height: calc(100% + (2 * var(--overflow))) !important;
         top: calc( -1 * var(--overflow));
     }
