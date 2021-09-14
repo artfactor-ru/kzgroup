@@ -41,7 +41,7 @@
 
 .parallax__img--purchase {
     width: 100%;
-    --overflow: 50px;
+    --overflow: 7%;
     height: calc(100% + (2*var(--overflow)))!important;
     top: calc(-1*var(--overflow));
 }

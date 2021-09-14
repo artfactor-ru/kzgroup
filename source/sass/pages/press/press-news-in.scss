@@ -195,6 +195,7 @@
     }
     @media(max-width: 767px) {
         width: auto;
+        padding: 15px 20px;
     }
 }
 
@@ -391,6 +392,10 @@
     @media(max-width: 1279px) {
         width: 32px;
         height: 35px;
+    }
+    @media(max-width: 767px) {
+        width: 22px;
+        height: 25px;
     }
 }
 

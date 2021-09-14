@@ -4,7 +4,7 @@
     height: calc(var(--vh, 1vh) * 100);
     box-sizing: border-box;
     position: fixed;
-    z-index: 901;
+    z-index: 10001;
     overflow: hidden;
     visibility: hidden;
     transition: visibility 0s 0.85s;
@@ -567,14 +567,13 @@
     display: none;
 }
 
-.nav_lang--mobile {
-    display: none;
-}
-
+// .nav_lang--mobile {
+//     display: none;
+// }
 @media(min-width: 767px) {
-    // .nav_lang--desktop {
-    //     display: block;
-    // }
+    .nav_lang--desktop {
+        display: block;
+    }
     .nav_lang--mobile {
         display: none;
     }
