@@ -107,9 +107,13 @@ body {
     padding: 0;
     min-width: 320px;
     background-color: #ffffff;
+    // overflow-y: scroll;
     overflow: hidden;
 }
 
+// .vac-f__nav-list {
+//     top: 81px !important;
+// }
 @media(max-width:1280px) {
     body {
         overflow-y: scroll;
@@ -146,9 +150,11 @@ html {
 a {
     text-decoration: none;
 }
-sup{
+
+sup {
     line-height: 0;
 }
+
 .has-nav-open .scroll .scrollbar-track {
     display: none !important;
 }
