@@ -14,7 +14,8 @@ Swiper.use([Scrollbar, Thumbs, EffectFade, Pagination, Navigation, Autoplay, Mou
 
 gsap.registerPlugin(ScrollTrigger);
 
-
+var resolvedPromise = typeof Promise == 'undefined' ? null : Promise.resolve();
+var nextTick = resolvedPromise ? function(fn) { resolvedPromise.then(fn); } : function(fn) { setTimeout(fn); };
 
 function ajaxSearch() {
     function get_result() {
@@ -510,22 +511,20 @@ function parallaxRemove(layer) {
     // }
 }
 let layerTop;
-let speed;
-let yPos;
 
 function parallax(layer) {
     // let layers = items;
-    // let speed;
-    // let yPos;
+    let speed;
+    let yPos;
     // for (let i = 0; i < layers.length; i++) {
     // let layer = layers[i];
     layerTop = getCoords(layer).top;
 
 
-    speed = (layer.getAttribute('data-speed')) * 1.5;
+    speed = layer.getAttribute('data-speed');
     top = scrollProgress - layerTop;
     yPos = -(top * speed / 100);
-    if (scrollbar.isVisible(layer)) {
+    if (Visible(layer)) {
         layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
     }
 
@@ -534,34 +533,33 @@ function parallax(layer) {
 
 function parallaxSlide(layer, firstChild) {
     // let layers = items;
-    // let speed;
-    // let yPos;
+    let speed;
+    let yPos;
     // for (let i = 0; i < layers.length; i++) {
     // let layer = layers[i];
     layerTop = getCoords(firstChild).top;
     speed = firstChild.getAttribute('data-speed');
     top = scrollProgress - layerTop;
     yPos = -(top * speed / 100);
-    if (scrollbar.isVisible(firstChild)) {
+    if (Visible(firstChild)) {
         layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
     }
 
     // }
 }
-let news = document.querySelector('.news');
 
 function parallaxSlideNews(layer, firstChild) {
     // let layers = items;
-    // let speed;
-    // let yPos;
+    let speed;
+    let yPos;
     // for (let i = 0; i < layers.length; i++) {
     // let layer = layers[i];
     layerTop = getCoords(firstChild).top;
     speed = firstChild.getAttribute('data-speed');
     top = scrollProgress - layerTop;
     yPos = -(top * speed / 100);
-
-    if (scrollbar.isVisible(news)) {
+    let news = document.querySelector('.news')
+    if (Visible(news)) {
         layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
     }
 
@@ -579,7 +577,7 @@ function parallaxSlideCompanies(layer, firstChild) {
     top = scrollProgress - layerTop;
     yPos = -(top * speed / 100);
     // let news = document.querySelector('.companies-news')
-    if (scrollbar.isVisible(firstChild)) {
+    if (Visible(firstChild)) {
         layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
     }
 
@@ -597,7 +595,7 @@ function parallaxSlideTwo(layer, firstChild) {
     speed = layer.getAttribute('data-speed');
     top = scrollProgress - layerTop;
     yPos = -(top * speed / 100);
-    if (scrollbar.isVisible(firstChild)) {
+    if (Visible(firstChild)) {
         layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
     }
 
@@ -781,14 +779,10 @@ function headerShowAndHideDesktop() {
         }
     }
 
-
-
-
-
 }
 
 function fixedNavForm(offsetscroll, navigation) {
-    let fixed = document.querySelector(navigation);
+    let fixed = navigation;
     if (fixed) {
         let _headerHeight = header.offsetHeight;
         let top = offsetscroll + _headerHeight + 30;
@@ -938,176 +932,174 @@ const spyScrolling = (container, link) => {
 
 // Вся анимация при скролле 
 let initAnimation = function() {
-    nextTick(function() {
-        gsap.utils.toArray('.traktors__number-icon').forEach(element => {
-            ScrollTrigger.create({
-                trigger: element,
-                scrub: true,
-                toggleClass: 'is-inview',
-                // this toggles the class again when you scroll back up:
-                // toggleActions: 'play none none none',
-                // this removes the class when the scrolltrigger is passed:
-                once: true,
-            });
+    gsap.utils.toArray('.traktors__number-icon').forEach(element => {
+        ScrollTrigger.create({
+            trigger: element,
+            scrub: true,
+            toggleClass: 'is-inview',
+            // this toggles the class again when you scroll back up:
+            // toggleActions: 'play none none none',
+            // this removes the class when the scrolltrigger is passed:
+            once: true,
         });
+    });
 
 
-        gsap.utils.toArray('.company_group__item-icon').forEach(element => {
-            ScrollTrigger.create({
-                trigger: element,
-                scrub: true,
-                toggleClass: 'is-inview',
-                // this toggles the class again when you scroll back up:
-                // toggleActions: 'play none none none',
-                // this removes the class when the scrolltrigger is passed:
-                once: true,
-            });
+    gsap.utils.toArray('.company_group__item-icon').forEach(element => {
+        ScrollTrigger.create({
+            trigger: element,
+            scrub: true,
+            toggleClass: 'is-inview',
+            // this toggles the class again when you scroll back up:
+            // toggleActions: 'play none none none',
+            // this removes the class when the scrolltrigger is passed:
+            once: true,
         });
+    });
 
-        gsap.utils.toArray('.property__pic').forEach(element => {
-            ScrollTrigger.create({
+    gsap.utils.toArray('.property__pic').forEach(element => {
+        ScrollTrigger.create({
+            trigger: element,
+            // scrub: true,
+            toggleClass: 'is-inview',
+            // this toggles the class again when you scroll back up:
+            // toggleActions: 'play none none none',
+            // this removes the class when the scrolltrigger is passed:
+            once: true,
+        });
+    });
+
+    gsap.utils.toArray('.traktors__info-wrap').forEach(element => {
+        ScrollTrigger.create({
+            trigger: element,
+            start: 'top center',
+            scrub: true,
+            toggleClass: 'is-inview-line',
+            // this toggles the class again when you scroll back up:
+            // toggleActions: 'play none none none',
+            // this removes the class when the scrolltrigger is passed:
+            once: true,
+        });
+    });
+
+
+    gsap.utils.toArray('.title--inner-main').forEach(element => {
+        gsap.fromTo(element, {
+            y: '130%',
+            rotateX: "-40deg",
+            opacity: 0
+        }, {
+            y: "0%",
+            rotateX: 0,
+            opacity: 1,
+
+            duration: 2,
+            stagger: .13,
+            ease: "power3.out",
+            delay: .2,
+
+        });
+    });
+
+    gsap.utils.toArray('.title--inner').forEach(element => {
+        gsap.fromTo(element, {
+            y: '110%',
+            rotateX: "-40deg",
+            opacity: 0
+        }, {
+            y: "0%",
+            rotateX: 0,
+            opacity: 1,
+
+            duration: 1.5,
+            stagger: .13,
+            ease: "power3.out",
+            // delay: 0,
+            // force3D: true,
+            scrollTrigger: {
                 trigger: element,
                 // scrub: true,
-                toggleClass: 'is-inview',
-                // this toggles the class again when you scroll back up:
-                // toggleActions: 'play none none none',
-                // this removes the class when the scrolltrigger is passed:
-                once: true,
-            });
+                start: "bottom bottom",
+                // once: true,
+            }
         });
+    });
 
-        gsap.utils.toArray('.traktors__info-wrap').forEach(element => {
-            ScrollTrigger.create({
-                trigger: element,
-                start: 'bottom bottom',
-                scrub: true,
-                toggleClass: 'is-inview-line',
-                // this toggles the class again when you scroll back up:
-                // toggleActions: 'play none none none',
-                // this removes the class when the scrolltrigger is passed:
-                once: true,
-            });
-        });
-
-
-        gsap.utils.toArray('.title--inner-main').forEach(element => {
-            gsap.fromTo(element, {
-                y: '130%',
-                rotateX: "-40deg",
-                opacity: 0
-            }, {
-                y: "0%",
-                rotateX: 0,
-                opacity: 1,
-
-                duration: 2,
-                stagger: .13,
-                ease: "power3.out",
-                delay: .2,
-
-            });
-        });
-
-        gsap.utils.toArray('.title--inner').forEach(element => {
-            gsap.fromTo(element, {
-                y: '110%',
-                rotateX: "-40deg",
-                opacity: 0
-            }, {
-                y: "0%",
-                rotateX: 0,
-                opacity: 1,
-
-                duration: 1.5,
-                stagger: .13,
-                ease: "power3.out",
-                // delay: 0,
-                // force3D: true,
-                scrollTrigger: {
-                    trigger: element,
-                    // scrub: true,
-                    start: "bottom bottom",
-                    // once: true,
-                }
-            });
-        });
-
-        gsap.utils.toArray('.statictics--inner').forEach(element => {
-            gsap.fromTo(element, {
-                opacity: 0,
-                y: "25px"
-            }, {
-                y: "0%",
-                duration: 5,
-                opacity: 1,
-                // stagger: .2,
-                ease: "Power3.easeOut",
-                scrollTrigger: {
-                    trigger: element,
-                    once: true,
-                    // scrub: true,
-                    // start: "bottom bottom"
-                }
-            });
-        });
-
-
-
-        gsap.utils.toArray('.hero__subtitle').forEach(element => {
-            gsap.fromTo(element, {
-                y: '-50%',
-                // rotateX: "-40deg",
-                opacity: 0
-            }, {
-                y: "0%",
-                // rotateX: 0,
-                opacity: 1,
-
-                duration: 2,
-                // stagger: .13,
-                ease: "power3.out",
-                delay: 2,
-
-            });
-        });
-
-
-
-        gsap.utils.toArray('.button-more').forEach(element => {
-            ScrollTrigger.create({
-                trigger: element,
-                start: 'bottom bottom',
-                scrub: true,
-                toggleClass: 'is-inview-line',
-                // this toggles the class again when you scroll back up:
-                // toggleActions: 'play none none none',
-                // this removes the class when the scrolltrigger is passed:
-                once: true,
-            });
-        });
-
-
-
-
-        gsap.utils.toArray('.button-line').forEach(element => {
-            ScrollTrigger.create({
+    gsap.utils.toArray('.statictics--inner').forEach(element => {
+        gsap.fromTo(element, {
+            opacity: 0,
+            y: "25px"
+        }, {
+            y: "0%",
+            duration: 5,
+            opacity: 1,
+            // stagger: .2,
+            ease: "Power3.easeOut",
+            scrollTrigger: {
                 trigger: element,
                 once: true,
-                toggleClass: 'is-inview',
-                // toggleActions: 'play none none none',
-            });
+                // scrub: true,
+                // start: "bottom bottom"
+            }
+        });
+    });
 
+
+
+    gsap.utils.toArray('.hero__subtitle').forEach(element => {
+        gsap.fromTo(element, {
+            y: '-50%',
+            // rotateX: "-40deg",
+            opacity: 0
+        }, {
+            y: "0%",
+            // rotateX: 0,
+            opacity: 1,
+
+            duration: 2,
+            // stagger: .13,
+            ease: "power3.out",
+            delay: 2,
 
         });
-
-        gsap.utils.toArray('.pic__frame--line').forEach(element => {
-            ScrollTrigger.create({
-                trigger: element,
-                toggleClass: 'is-inview',
-            });
+    });
 
 
+
+    gsap.utils.toArray('.button-more').forEach(element => {
+        ScrollTrigger.create({
+            trigger: element,
+            start: 'bottom bottom',
+            scrub: true,
+            toggleClass: 'is-inview-line',
+            // this toggles the class again when you scroll back up:
+            // toggleActions: 'play none none none',
+            // this removes the class when the scrolltrigger is passed:
+            once: true,
         });
+    });
+
+
+
+
+    gsap.utils.toArray('.button-line').forEach(element => {
+        ScrollTrigger.create({
+            trigger: element,
+            once: true,
+            toggleClass: 'is-inview',
+            // toggleActions: 'play none none none',
+        });
+
+
+    });
+
+    gsap.utils.toArray('.pic__frame--line').forEach(element => {
+        ScrollTrigger.create({
+            trigger: element,
+            toggleClass: 'is-inview',
+        });
+
+
     });
 
 }
@@ -1649,7 +1641,6 @@ function eventOnScrollStartWithTablet() {
 
 // События на десктопе  Media(min-width:1280px)
 function eventOnScrollDesktop() {
-
     clearTimeout(timer);
     if (!body.classList.contains('disable-hover')) {
         body.classList.add('disable-hover')
@@ -1691,12 +1682,12 @@ function eventOnScrollDesktop() {
 
     if (historyBg) {
         for (let i = 0; i < light.length; i++) {
-            if (scrollbar.isVisible(light[i])) {
+            if (Visible(light[i])) {
                 historyBg.style.opacity = "0"
             }
         }
         for (let i = 0; i < dark.length; i++) {
-            if (scrollbar.isVisible(dark[i])) {
+            if (Visible(dark[i])) {
                 historyBg.style.opacity = "1"
             }
 
@@ -1739,13 +1730,12 @@ let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-var resolvedPromise = typeof Promise == 'undefined' ? null : Promise.resolve();
-var nextTick = resolvedPromise ? function(fn) { resolvedPromise.then(fn); } : function(fn) { setTimeout(fn); };
+
 // Опции плавного скролла
 let options = {
-    damping: 0.1,
-    // renderByPixels: true,
-    // continuousScrolling: true,
+    damping: 0.09,
+    renderByPixels: true,
+    continuousScrolling: true,
     delegateTo: document
 }
 let options2 = {
@@ -2766,26 +2756,26 @@ const breakpointCheckerForDesktopAndLower = function() {
 
 
         if (containerScroll) {
-            scrollbar = ScrollbarSmoth.init(containerScroll, options);
+            scrollbar = undefined;
         }
 
 
 
 
         // Определения координат для GSAP относительно плавного скролла
-        ScrollTrigger.scrollerProxy(document.body, {
-            scrollTop(value) {
-                if (arguments.length) {
-                    scrollbar.scrollTop = value;
-                }
-                return scrollbar.scrollTop;
-            },
-            // getBoundingClientRect() {
-            //   return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
-            // }
-        });
+        // ScrollTrigger.scrollerProxy(document.body, {
+        //     scrollTop(value) {
+        //         if (arguments.length) {
+        //             scrollbar.scrollTop = value;
+        //         }
+        //         return scrollbar.scrollTop;
+        //     },
+        //     // getBoundingClientRect() {
+        //     //   return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
+        //     // }
+        // });
 
-        scrollbar.addListener(ScrollTrigger.update);
+        // scrollbar.addListener(ScrollTrigger.update);
         eventAllOnScroll();
 
         // document.addEventListener('DOMContentLoaded', function() {
@@ -3220,19 +3210,18 @@ function eventAllOnScroll() {
     if (document.querySelector('.vac-f__nav-list')) {
         makeNavLinksSmooth('.vac-f__form-title', '.vac-f__nav-item');
     }
-    let hero = document.querySelector('.swiper-container--hero');
-    let body = document.body;
-    let vacMenu = document.querySelector('.vac-f__nav-list');
-    let musNav = document.querySelector('.museum-nav');
-    const startTime = performance.now();
     nextTick(function() {
-        // your code
 
-        scrollbar.addListener(({ offset }) => {
+        window.addEventListener('scroll', function(event) {
+            const startTime = performance.now();
+            scrollProgress = Math.round(pageYOffset);
+            let hero = document.querySelector('.swiper-container--hero');
+
+
+            let vacNav = document.querySelector('.vac-f__nav-list');
             if (!ticking) {
-
                 window.requestAnimationFrame(function() {
-                    scrollProgress = offset.y;
+                    // scrollProgress = Math.round(pageYOffset);
                     if (header) {
                         headerShowAndHideDesktop();
                     }
@@ -3240,7 +3229,7 @@ function eventAllOnScroll() {
 
                     // Поставить видео на паузе если при скролле его стало не видно
                     if (videoMain) {
-                        let flagScrollVideo = scrollbar.isVisible(videoMain);
+                        let flagScrollVideo = Visible(videoMain);
                         if (!flagScrollVideo) {
                             if (!videoMain.paused) {
                                 videoMain.pause();
@@ -3252,49 +3241,52 @@ function eventAllOnScroll() {
 
                     // Прекратить автоплей у свайпера на главной странице если его не видно
                     if (hero) {
-                        let flagScrollHero = scrollbar.isVisible(hero);
+                        let flagScrollHero = Visible(hero);
                         if (flagScrollHero) {
                             swiperHero.autoplay.start();
-                            body.classList.add('load')
+                            document.body.classList.add('load')
                         } else {
                             swiperHero.autoplay.stop();
-                            body.classList.remove('load')
+                            document.body.classList.remove('load')
                         }
                     }
 
 
-                    // Плавные ссылки для вакансий
-                    if (vacMenu) {
-                        makeNavLinksSmooth('.vac-f__form-title', '.vac-f__nav-item');
-                        spyScrolling('.vac-f__form-title', '.vac-f__nav-item.active');
-                        fixedNavForm(scrollProgress, '.vac-f__nav-list');
-                    }
-
-                    // Фиксированное меню в музеях
-                    if (musNav) {
-                        stickyNav('.museum-nav');
-                        makeNavLinksSmoothMuseum('.museum-zal', '.museum-nav__link');
-                        spyScrolling('.museum-zal', '.museum-nav__link.active');
-                    }
                     nextTick(function() {
-                        eventOnScrollDesktop();
-                    })
-                    if (flagBreakPointForMobileScroll) {
-                        eventOnScrollStartWithTablet();
+                        // Плавные ссылки для вакансий
+                        if (vacNav) {
+                            makeNavLinksSmooth('.vac-f__form-title', '.vac-f__nav-item');
+                            spyScrolling('.vac-f__form-title', '.vac-f__nav-item.active');
+                            fixedNavForm(scrollProgress, vacNav);
+                        }
 
-                    }
+                        // Фиксированное меню в музеях
+                        if (document.querySelector('.museum-nav')) {
+                            stickyNav('.museum-nav');
+                            makeNavLinksSmoothMuseum('.museum-zal', '.museum-nav__link');
+                            spyScrolling('.museum-zal', '.museum-nav__link.active');
+                        }
+                    })
+                    nextTick(function() {
+                        eventOnScrollDesktop()
+                    })
+                    nextTick(function() {
+                        if (flagBreakPointForMobileScroll) {
+                            eventOnScrollStartWithTablet();
+
+                        }
+                    })
 
                     ticking = false;
-
+                    const duration = performance.now() - startTime;
+                    console.log(`someMethodIThinkMightBeSlow took ${duration}ms`);
                 });
 
                 ticking = true;
             }
-            const duration = performance.now() - startTime;
-            console.log(`someMethodIThinkMightBeSlow took ${duration}ms`);
-        }, true);
+        })
+    })
 
-    });
 }
 
 function eventAllOnScrollMobile() {
@@ -3582,7 +3574,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     setTimeout(function() {
-
         initAnimation();
 
 
@@ -4692,7 +4683,6 @@ window.addEventListener("resize", function() {
 
 
 function scrollTable() {
-
     initAnimation();
 
     if (scrollbar) {
